@@ -29,15 +29,10 @@ def derive_key(password: str) -> bytes:
 
 def extract_lsb_image(img: Image.Image) -> bytes:
     arr = np.array(img.convert("RGB")).reshape(-1)
-    # First 32 bits = length
-    length_bits = arr[:32] & 1
-    length = int(np.packbits(length_bits).tobytes().hex(), 16)  # safer way
     length = struct.unpack(">I", np.packbits(arr[:32] & 1).tobytes())[0]
-
     total_bits = 32 + length * 8
     if total_bits > len(arr):
         raise ValueError("Declared length exceeds image capacity")
-
     bits = arr[:total_bits] & 1
     data = np.packbits(bits[32:]).tobytes()[:length]
     return data
@@ -46,15 +41,10 @@ def extract_lsb_audio(path: str) -> bytes:
     with wave.open(path, "rb") as wf:
         frames = wf.readframes(wf.getnframes())
         samples = np.frombuffer(frames, dtype=np.int16)
-
-    # First 32 bits = length
-    length_bits = samples[:32] & 1
-    length = struct.unpack(">I", np.packbits(length_bits).tobytes())[0]
-
+    length = struct.unpack(">I", np.packbits(samples[:32] & 1).tobytes())[0]
     total_bits = 32 + length * 8
     if total_bits > len(samples):
         raise ValueError("Declared length exceeds audio capacity")
-
     bits = samples[:total_bits] & 1
     data = np.packbits(bits[32:]).tobytes()[:length]
     return data

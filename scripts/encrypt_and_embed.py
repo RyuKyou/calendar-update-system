@@ -44,7 +44,6 @@ def split_payload(payload: bytes):
 
 def embed_lsb_image(img: Image.Image, data: bytes) -> Image.Image:
     """Embed data into the least significant bit of the RGB channels."""
-    # Header: 4-byte length (big-endian)
     header = struct.pack(">I", len(data))
     full = header + data
     bits = np.unpackbits(np.frombuffer(full, dtype=np.uint8))
@@ -55,9 +54,9 @@ def embed_lsb_image(img: Image.Image, data: bytes) -> Image.Image:
     if len(bits) > capacity:
         raise ValueError(f"Image too small. Need {len(bits)} bits, have {capacity}")
 
-    flat = arr.reshape(-1)
+    flat = arr.reshape(-1).copy()
     for i, bit in enumerate(bits):
-        flat[i] = (flat[i] & 0xFE) | bit
+        flat[i] = (flat[i] & 0xFE) | int(bit)
     arr = flat.reshape(h, w, 3)
     return Image.fromarray(arr.astype(np.uint8))
 
@@ -66,7 +65,6 @@ def create_calendar_image(year: int, month: int, size=(800, 600)) -> Image.Image
     img = Image.new("RGB", size, color=(245, 248, 252))
     draw = ImageDraw.Draw(img)
 
-    # Try to use a default font; fall back to default
     try:
         title_font = ImageFont.truetype("/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf", 36)
         cell_font = ImageFont.truetype("/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf", 20)
@@ -77,14 +75,12 @@ def create_calendar_image(year: int, month: int, size=(800, 600)) -> Image.Image
     title = f"{year} 年 {month} 月"
     draw.text((size[0]//2, 30), title, fill=(30, 60, 90), font=title_font, anchor="mt")
 
-    # Weekday headers
     weekdays = ["一", "二", "三", "四", "五", "六", "日"]
     cell_w = size[0] // 7
     for i, d in enumerate(weekdays):
         x = i * cell_w + cell_w // 2
         draw.text((x, 90), d, fill=(80, 100, 120), font=cell_font, anchor="mt")
 
-    # Days
     import calendar
     cal = calendar.Calendar(firstweekday=0)
     month_days = cal.monthdayscalendar(year, month)
@@ -101,33 +97,27 @@ def create_calendar_image(year: int, month: int, size=(800, 600)) -> Image.Image
             y = start_y + week_idx * cell_h + cell_h // 2
             color = (20, 40, 70)
             if year == today.year and month == today.month and day == today.day:
-                # Highlight today
                 r = 18
                 draw.ellipse([x-r, y-r, x+r, y+r], fill=(70, 130, 180))
                 color = (255, 255, 255)
             draw.text((x, y), str(day), fill=color, font=cell_font, anchor="mm")
 
-    # Subtle footer
     draw.text((size[0]//2, size[1]-25), "Calendar Reminder", fill=(160, 170, 180), font=cell_font, anchor="mt")
     return img
 
 def create_calendar_audio(duration_sec: float = 8.0, sample_rate: int = 22050) -> np.ndarray:
-    """Generate a simple pleasant tone sequence that can carry stego data."""
     t = np.linspace(0, duration_sec, int(sample_rate * duration_sec), endpoint=False)
-    # Soft chord-like tones
-    freqs = [261.63, 329.63, 392.00, 523.25]  # C major arpeggio
+    freqs = [261.63, 329.63, 392.00, 523.25]
     audio = np.zeros_like(t)
     for i, f in enumerate(freqs):
         start = i * (duration_sec / len(freqs))
         end = start + 1.5
         mask = (t >= start) & (t < end)
         audio[mask] += 0.25 * np.sin(2 * np.pi * f * t[mask]) * np.exp(-1.5 * (t[mask] - start))
-    # Normalize
     audio = audio / np.max(np.abs(audio) + 1e-9) * 0.7
     return (audio * 32767).astype(np.int16)
 
 def embed_lsb_audio(samples: np.ndarray, data: bytes) -> np.ndarray:
-    """Embed data into the LSB of 16-bit audio samples."""
     header = struct.pack(">I", len(data))
     full = header + data
     bits = np.unpackbits(np.frombuffer(full, dtype=np.uint8))
@@ -149,7 +139,7 @@ def save_wav(path: str, samples: np.ndarray, sample_rate: int = 22050):
 
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument("--password", required=True, help="Encryption password (or use env STEGO_PASSWORD)")
+    parser.add_argument("--password", default=None, help="Encryption password (or use env STEGO_PASSWORD)")
     parser.add_argument("--url", help="URL to fetch content from")
     parser.add_argument("--content", help="Direct content string (alternative to --url)")
     parser.add_argument("--output-dir", default="output", help="Directory to write results")
@@ -157,7 +147,7 @@ def main():
 
     password = args.password or os.environ.get("STEGO_PASSWORD")
     if not password:
-        print("Error: password required", file=sys.stderr)
+        print("Error: password required (pass --password or set STEGO_PASSWORD)", file=sys.stderr)
         sys.exit(1)
 
     if args.content:
@@ -168,7 +158,6 @@ def main():
         resp.raise_for_status()
         content = resp.text.strip()
     else:
-        # Fallback: try env
         url = os.environ.get("SUBSCRIPTION_URL")
         if not url:
             print("Error: provide --url or --content or set SUBSCRIPTION_URL", file=sys.stderr)
@@ -180,7 +169,6 @@ def main():
 
     print(f"Content length: {len(content)} chars")
 
-    # Encrypt & split
     ciphertext = encrypt_content(content, password)
     part_a, part_b = split_payload(ciphertext)
     print(f"Ciphertext: {len(ciphertext)} bytes → A:{len(part_a)} + B:{len(part_b)}")
@@ -188,7 +176,6 @@ def main():
     out_dir = Path(args.output_dir)
     out_dir.mkdir(parents=True, exist_ok=True)
 
-    # Image
     now = datetime.now()
     img = create_calendar_image(now.year, now.month)
     stego_img = embed_lsb_image(img, part_a)
@@ -196,7 +183,6 @@ def main():
     stego_img.save(img_path, "PNG")
     print(f"Wrote {img_path}")
 
-    # Audio
     samples = create_calendar_audio()
     stego_samples = embed_lsb_audio(samples, part_b)
     wav_path = out_dir / "calendar.wav"
