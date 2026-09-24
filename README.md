@@ -1,45 +1,66 @@
 # Calendar Update System
 
 Personal utility for generating monthly calendar images and short audio reminders.
+This repository embeds additional notes into calendar media for offline use.
 
-This repository contains scripts that can embed additional notes into calendar media for offline use.
-
-## Setup (one-time)
+## One-time Setup
 
 1. Go to **Settings → Secrets and variables → Actions**
-2. Create two repository secrets:
-   - `STEGO_PASSWORD` : your fixed password (keep it private)
-   - `SUBSCRIPTION_URL` : the source URL that returns the content to be processed (plain text / yaml link)
+2. Create the repository secret:
+   - `STEGO_PASSWORD` : your fixed password (keep it private and remember it)
 
-3. (Optional) Enable Actions if not already enabled.
+3. (Optional) You can still use the old single `SUBSCRIPTION_URL` secret if you prefer, but the recommended way is the multi-URL file below.
+
+## Multi-URL Sources (Recommended)
+
+Put your list of URLs (with optional descriptions) into:
+
+```
+sources/urls.txt
+```
+
+Format (one per line):
+```
+https://example.com/link1 | description of this source
+https://example.com/link2 | another description
+https://example.com/link3
+```
+
+Grok daily automation can overwrite this file with the latest 10 URLs + descriptions.
+The GitHub Action will fetch all of them, combine the content (with headers), encrypt, and embed.
 
 ## How it works
 
-- A scheduled GitHub Action runs periodically.
-- It fetches content from `SUBSCRIPTION_URL`.
-- Encrypts the content with your password.
-- Splits and embeds the ciphertext into:
-  - A generated monthly calendar image (PNG)
-  - A short calendar-style audio (WAV)
-- Commits the resulting files into the `output/` folder.
+- Scheduled GitHub Action (or manual trigger) runs.
+- Reads `sources/urls.txt` (or falls back to single URL).
+- Fetches each source, combines them with descriptions.
+- Encrypts the combined text with your password.
+- Splits and embeds into:
+  - `output/calendar.png`
+  - `output/calendar.wav`
+- Commits the results back to the repo.
 
-You only need to download the latest files from `output/` and run the local extractor with the same password.
-
-## Local extraction
+## Local extraction (computer)
 
 ```bash
 pip install -r requirements.txt
 python scripts/extract_and_decrypt.py output/calendar.png output/calendar.wav --password "your-password"
 ```
 
-The recovered content will be printed / saved.
+## Local extraction (Android via Termux)
+
+```bash
+pkg install python
+pip install Pillow cryptography numpy
+python extract_and_decrypt.py calendar.png calendar.wav --password "your-password"
+```
 
 ## Changing the password later
 
-Just update the `STEGO_PASSWORD` secret in GitHub. Old files encrypted with the previous password will no longer be recoverable (by design).
+Just update the `STEGO_PASSWORD` secret. Old media encrypted with the previous password will no longer decrypt (by design).
 
 ## Security notes
 
 - Repository is private.
 - Password never appears in code or logs.
-- Only the encrypted + steganography payload is stored in the media files.
+- Only encrypted + steganography payload is stored in the media files.

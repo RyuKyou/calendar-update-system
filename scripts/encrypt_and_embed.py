@@ -2,6 +2,10 @@
 """
 Encrypt content with a password, split the ciphertext,
 and embed the two parts into a calendar PNG and a calendar WAV via LSB steganography.
+
+Supports:
+- Multiple URLs from sources/urls.txt (format: url  or  url | description)
+- Single --url / --content / SUBSCRIPTION_URL for backward compatibility
 """
 
 import os
@@ -20,7 +24,6 @@ from cryptography.fernet import Fernet
 import wave
 import requests
 
-# Fixed salt (public, but password is secret). Change only if you want to invalidate all old files.
 SALT = b"calendar-stego-v1-salt-2026"
 
 def derive_key(password: str) -> bytes:
@@ -30,8 +33,7 @@ def derive_key(password: str) -> bytes:
         salt=SALT,
         iterations=480000,
     )
-    key = base64.urlsafe_b64encode(kdf.derive(password.encode("utf-8")))
-    return key
+    return base64.urlsafe_b64encode(kdf.derive(password.encode("utf-8")))
 
 def encrypt_content(content: str, password: str) -> bytes:
     key = derive_key(password)
@@ -43,7 +45,6 @@ def split_payload(payload: bytes):
     return payload[:mid], payload[mid:]
 
 def embed_lsb_image(img: Image.Image, data: bytes) -> Image.Image:
-    """Embed data into the least significant bit of the RGB channels."""
     header = struct.pack(">I", len(data))
     full = header + data
     bits = np.unpackbits(np.frombuffer(full, dtype=np.uint8))
@@ -61,7 +62,6 @@ def embed_lsb_image(img: Image.Image, data: bytes) -> Image.Image:
     return Image.fromarray(arr.astype(np.uint8))
 
 def create_calendar_image(year: int, month: int, size=(800, 600)) -> Image.Image:
-    """Generate a simple, clean monthly calendar image."""
     img = Image.new("RGB", size, color=(245, 248, 252))
     draw = ImageDraw.Draw(img)
 
@@ -137,11 +137,44 @@ def save_wav(path: str, samples: np.ndarray, sample_rate: int = 22050):
         wf.setframerate(sample_rate)
         wf.writeframes(samples.tobytes())
 
+def load_urls_from_file(path: Path):
+    """Parse sources/urls.txt. Each line: url  or  url | description"""
+    entries = []
+    if not path.exists():
+        return entries
+    for line in path.read_text(encoding="utf-8").splitlines():
+        line = line.strip()
+        if not line or line.startswith("#"):
+            continue
+        if "|" in line:
+            url, desc = line.split("|", 1)
+            entries.append((url.strip(), desc.strip()))
+        else:
+            entries.append((line, ""))
+    return entries
+
+def fetch_and_combine(entries):
+    """Fetch each URL and build a combined text with descriptions."""
+    parts = []
+    for i, (url, desc) in enumerate(entries, 1):
+        try:
+            print(f"[{i}/{len(entries)}] Fetching {url} ...")
+            resp = requests.get(url, timeout=20)
+            resp.raise_for_status()
+            body = resp.text.strip()
+            header = f"### [{i}] {desc or url}\n"
+            parts.append(header + body)
+        except Exception as e:
+            print(f"  Warning: failed to fetch {url}: {e}")
+            parts.append(f"### [{i}] {desc or url}\n[FETCH FAILED: {e}]")
+    return "\n\n".join(parts)
+
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument("--password", default=None, help="Encryption password (or use env STEGO_PASSWORD)")
-    parser.add_argument("--url", help="URL to fetch content from")
-    parser.add_argument("--content", help="Direct content string (alternative to --url)")
+    parser.add_argument("--password", default=None, help="Encryption password (or env STEGO_PASSWORD)")
+    parser.add_argument("--url", help="Single URL (legacy)")
+    parser.add_argument("--content", help="Direct content string")
+    parser.add_argument("--sources", default="sources/urls.txt", help="Path to multi-URL list file")
     parser.add_argument("--output-dir", default="output", help="Directory to write results")
     args = parser.parse_args()
 
@@ -150,24 +183,32 @@ def main():
         print("Error: password required (pass --password or set STEGO_PASSWORD)", file=sys.stderr)
         sys.exit(1)
 
+    content = None
     if args.content:
         content = args.content
     elif args.url:
-        print(f"Fetching from {args.url} ...")
+        print(f"Fetching single URL {args.url} ...")
         resp = requests.get(args.url, timeout=30)
         resp.raise_for_status()
         content = resp.text.strip()
     else:
-        url = os.environ.get("SUBSCRIPTION_URL")
-        if not url:
-            print("Error: provide --url or --content or set SUBSCRIPTION_URL", file=sys.stderr)
-            sys.exit(1)
-        print(f"Fetching from env URL ...")
-        resp = requests.get(url, timeout=30)
-        resp.raise_for_status()
-        content = resp.text.strip()
+        sources_path = Path(args.sources)
+        entries = load_urls_from_file(sources_path)
+        if entries:
+            print(f"Found {len(entries)} sources in {sources_path}")
+            content = fetch_and_combine(entries)
+        else:
+            url = os.environ.get("SUBSCRIPTION_URL")
+            if url:
+                print(f"Fetching from env SUBSCRIPTION_URL ...")
+                resp = requests.get(url, timeout=30)
+                resp.raise_for_status()
+                content = resp.text.strip()
+            else:
+                print("Error: no sources/urls.txt, no --url/--content, no SUBSCRIPTION_URL", file=sys.stderr)
+                sys.exit(1)
 
-    print(f"Content length: {len(content)} chars")
+    print(f"Total content length: {len(content)} chars")
 
     ciphertext = encrypt_content(content, password)
     part_a, part_b = split_payload(ciphertext)

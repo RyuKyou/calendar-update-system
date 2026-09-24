@@ -1,0 +1,10 @@
+# One URL per line. Optional description after |
+# Example format:
+# https://example.com/sub1 | Node group A - stable
+# https://example.com/sub2 | Node group B - high speed
+#
+# Grok automation will overwrite this file daily with the latest 10 URLs + descriptions.
+# Leave empty or keep examples for testing.
+
+https://httpbin.org/uuid | Test source 1 - random UUID
+https://httpbin.org/uuid | Test source 2 - random UUID
