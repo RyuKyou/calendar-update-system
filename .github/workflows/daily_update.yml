@@ -1,10 +1,14 @@
 name: Daily Calendar Update
 
 on:
+  # Triggered when Grok (or anyone) updates the source list
+  push:
+    paths:
+      - 'sources/urls.txt'
   schedule:
-    # Runs at 02:00 UTC every day (adjust as needed)
+    # Backup schedule (02:00 UTC). Can be changed or removed later.
     - cron: "0 2 * * *"
-  workflow_dispatch:  # allow manual trigger
+  workflow_dispatch:  # manual trigger
 
 jobs:
   generate:
@@ -29,7 +33,6 @@ jobs:
       - name: Generate stego calendar files
         env:
           STEGO_PASSWORD: ${{ secrets.STEGO_PASSWORD }}
-          SUBSCRIPTION_URL: ${{ secrets.SUBSCRIPTION_URL }}
         run: |
           python scripts/encrypt_and_embed.py --output-dir output
 
