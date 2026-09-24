@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """
 Extract hidden payload from calendar.png + calendar.wav and decrypt with password.
+Also supports reconstructing from the scrambled Base64 backup text.
 """
 
 import argparse
@@ -49,18 +50,47 @@ def extract_lsb_audio(path: str) -> bytes:
     data = np.packbits(bits[32:]).tobytes()[:length]
     return data
 
+def reconstruct_from_scrambled(text: str) -> bytes:
+    """Parse the scrambled Base64 lines (000:chunk ...) and rebuild ciphertext."""
+    lines = []
+    for line in text.splitlines():
+        line = line.strip()
+        if not line or line.startswith("#"):
+            continue
+        if ":" not in line:
+            continue
+        idx_str, chunk = line.split(":", 1)
+        try:
+            idx = int(idx_str)
+            lines.append((idx, chunk))
+        except ValueError:
+            continue
+    if not lines:
+        raise ValueError("No valid scrambled chunks found")
+    lines.sort(key=lambda x: x[0])
+    b64 = "".join(chunk for _, chunk in lines)
+    return base64.b64decode(b64)
+
 def main():
     parser = argparse.ArgumentParser(description="Extract and decrypt hidden calendar payload")
-    parser.add_argument("image", help="Path to calendar.png")
-    parser.add_argument("audio", help="Path to calendar.wav")
+    parser.add_argument("image", nargs="?", help="Path to calendar.png")
+    parser.add_argument("audio", nargs="?", help="Path to calendar.wav")
+    parser.add_argument("--scrambled", help="Path to backup_scrambled.txt (alternative to image+audio)")
     parser.add_argument("--password", required=True, help="The same password used for encryption")
     parser.add_argument("-o", "--output", help="Optional file to write recovered content")
     args = parser.parse_args()
 
     try:
-        part_a = extract_lsb_image(Image.open(args.image))
-        part_b = extract_lsb_audio(args.audio)
-        ciphertext = part_a + part_b
+        if args.scrambled:
+            text = Path(args.scrambled).read_text(encoding="utf-8")
+            ciphertext = reconstruct_from_scrambled(text)
+        elif args.image and args.audio:
+            part_a = extract_lsb_image(Image.open(args.image))
+            part_b = extract_lsb_audio(args.audio)
+            ciphertext = part_a + part_b
+        else:
+            print("Error: provide either image+audio or --scrambled", file=sys.stderr)
+            sys.exit(1)
 
         key = derive_key(args.password)
         f = Fernet(key)

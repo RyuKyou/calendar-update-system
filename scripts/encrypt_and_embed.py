@@ -3,6 +3,8 @@
 Encrypt content with a password, split the ciphertext,
 and embed the two parts into a calendar PNG and a calendar WAV via LSB steganography.
 
+Also produces a scrambled Base64 backup text (for email body).
+
 Supports:
 - Multiple URLs from sources/urls.txt (format: url  or  url | description)
 - Single --url / --content / SUBSCRIPTION_URL for backward compatibility
@@ -13,6 +15,7 @@ import sys
 import argparse
 import base64
 import struct
+import random
 from datetime import datetime
 from pathlib import Path
 
@@ -43,6 +46,22 @@ def encrypt_content(content: str, password: str) -> bytes:
 def split_payload(payload: bytes):
     mid = len(payload) // 2
     return payload[:mid], payload[mid:]
+
+def make_scrambled_b64(ciphertext: bytes, chunk_size: int = 48) -> str:
+    """Base64 encode, split into chunks, shuffle order, prefix with index.
+    Reconstruct by sorting on index then joining.
+    """
+    b64 = base64.b64encode(ciphertext).decode("ascii")
+    chunks = [b64[i:i+chunk_size] for i in range(0, len(b64), chunk_size)]
+    indices = list(range(len(chunks)))
+    # Deterministic shuffle using a fixed seed so output is stable for same input
+    rng = random.Random(20260923)
+    rng.shuffle(indices)
+    lines = []
+    for new_pos, orig_idx in enumerate(indices):
+        lines.append(f"{orig_idx:03d}:{chunks[orig_idx]}")
+    header = f"# SCRAMBLED_B64 v1 chunks={len(chunks)} size={chunk_size}\n"
+    return header + "\n".join(lines)
 
 def embed_lsb_image(img: Image.Image, data: bytes) -> Image.Image:
     header = struct.pack(">I", len(data))
@@ -138,7 +157,6 @@ def save_wav(path: str, samples: np.ndarray, sample_rate: int = 22050):
         wf.writeframes(samples.tobytes())
 
 def load_urls_from_file(path: Path):
-    """Parse sources/urls.txt. Each line: url  or  url | description"""
     entries = []
     if not path.exists():
         return entries
@@ -154,7 +172,6 @@ def load_urls_from_file(path: Path):
     return entries
 
 def fetch_and_combine(entries):
-    """Fetch each URL and build a combined text with descriptions."""
     parts = []
     for i, (url, desc) in enumerate(entries, 1):
         try:
@@ -229,6 +246,15 @@ def main():
     wav_path = out_dir / "calendar.wav"
     save_wav(str(wav_path), stego_samples)
     print(f"Wrote {wav_path}")
+
+    # Scrambled Base64 backup for email body
+    scrambled = make_scrambled_b64(ciphertext)
+    scrambled_path = out_dir / "backup_scrambled.txt"
+    scrambled_path.write_text(scrambled, encoding="utf-8")
+    print(f"Wrote {scrambled_path}")
+    print("--- SCRAMBLED_B64_START ---")
+    print(scrambled)
+    print("--- SCRAMBLED_B64_END ---")
 
     print("Done.")
 
