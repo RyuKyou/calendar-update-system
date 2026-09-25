@@ -1,0 +1,144 @@
+# Selected single nodes 2026-09-25
+# Priority: longevity > Reality/Hysteria2 > UDP > avoid TW/JP/US/VN/TH
+# Format: Clash Meta proxy YAML block + one-line note
+
+# 1 SG VLESS-Reality Vision UDP
+- name: SG-VLESS-Reality-206
+  type: vless
+  server: 206.206.76.75
+  port: 443
+  uuid: 1e3d3634-36ac-43ac-a439-9665d885238f
+  network: tcp
+  tls: true
+  udp: true
+  flow: xtls-rprx-vision
+  client-fingerprint: firefox
+  servername: www.cloudflare.com
+  reality-opts:
+    public-key: TqIFzUEEI1pIOR8BEpkNKEXcJ6cPfE5EzHb5joIivig
+    short-id: 9930177816ab09da
+# note: SG Reality Vision / UDP / 伪装CF
+
+# 2 SG VLESS-Reality Apple SNI
+- name: SG-VLESS-Reality-3-0-111-82
+  type: vless
+  server: 3.0.111.82
+  port: 10574
+  uuid: 814bd064-544d-4255-a070-5705c03f6da9
+  network: tcp
+  tls: true
+  udp: true
+  flow: xtls-rprx-vision
+  client-fingerprint: chrome
+  servername: www.apple.com
+  reality-opts:
+    public-key: k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0
+    short-id: 48050fab
+# note: SG Reality Vision / UDP / Apple SNI
+
+# 3 SG Hysteria2
+- name: SG-Hysteria2-138-2-73-238
+  type: hysteria2
+  server: 138.2.73.238
+  port: 50160
+  password: f87376e17da040ed04c9665ce8972930
+  sni: www.bing.com
+  skip-cert-verify: true
+# note: SG Hysteria2 / UDP本质 / 强混淆
+
+# 4 SG Hysteria2 domain
+- name: SG-Hysteria2-hyhuawei
+  type: hysteria2
+  server: b891fbc2-tm96o0-tnhquc-1j0a4.sg7.hyhuawei.com
+  port: 443
+  password: 4eedcde6-d16a-11ef-973a-f23c913c8d2b
+  sni: b891fbc2-tm96o0-tnhquc-1j0a4.sg7.hyhuawei.com
+  skip-cert-verify: true
+# note: SG Hysteria2 / 443 / 域名入口
+
+# 5 SG VLESS-Reality dpdns
+- name: SG-VLESS-Reality-sg2-8sb
+  type: vless
+  server: sg2-8sb.6121999.dpdns.org
+  port: 19825
+  uuid: 2d1ad594-80a4-4bfb-87a6-038e39701f51
+  network: tcp
+  tls: true
+  udp: true
+  flow: xtls-rprx-vision
+  client-fingerprint: chrome
+  servername: sg2-8sb.6121999.dpdns.org
+  reality-opts:
+    public-key: GvvkY8xYb9QjvwvzYq_uNC4tOGd0DCxRnz6770-xgkI
+    short-id: 6ba85179e30d4fc2
+# note: SG Reality / UDP
+
+# 6 DE VLESS-Reality DeepL SNI
+- name: DE-VLESS-Reality-193-202-10-2
+  type: vless
+  server: 193.202.10.2
+  port: 40443
+  uuid: bb0f1ed0-0298-40a1-adb1-1f5d6ab33d54
+  network: tcp
+  tls: true
+  udp: true
+  flow: xtls-rprx-vision
+  client-fingerprint: chrome
+  servername: deepl.com
+  reality-opts:
+    public-key: w4AYHvQnQS6olDqoG9ptLOtgehaWOsv9HQhDax5bLA4
+    short-id: db46e2946fc466fd
+# note: DE Reality Vision / UDP / DeepL伪装
+
+# 7 DE Hysteria2
+- name: DE-Hysteria2-h2corp
+  type: hysteria2
+  server: de.1.23.h2corp.org
+  port: 443
+  password: mkL3AfdSZIpTWRB9TcWPn9vywPGN89MRHg3ToRDj
+  sni: germany3.h2corp.local
+  skip-cert-verify: true
+# note: DE Hysteria2 / 443 / 欧洲备用
+
+# 8 DE VLESS-Reality Amazon SNI
+- name: DE-VLESS-Reality-jumpernode
+  type: vless
+  server: defrnode.jumpernode.online
+  port: 443
+  uuid: 8af93649-403b-46d8-9966-923d4c58402c
+  network: tcp
+  tls: true
+  udp: true
+  flow: xtls-rprx-vision
+  client-fingerprint: chrome
+  servername: buckeye-retail-website.amazon.com
+  reality-opts:
+    public-key: XTarABsaaFbjYNk6lRKnUzGavHzeqMIP7B8dZGNCvkE
+    short-id: 5c6481cdd4
+# note: DE Reality / Amazon SNI
+
+# 9 NL VLESS-Reality gRPC
+- name: NL-VLESS-Reality-grpc-31-56-184-132
+  type: vless
+  server: 31.56.184.132
+  port: 8443
+  uuid: 11f21602-47aa-42e2-9149-69120f2e6df6
+  network: grpc
+  tls: true
+  udp: true
+  client-fingerprint: chrome
+  servername: cloudflare.com
+  reality-opts:
+    public-key: bzbe7QdD633ew_Er1_YWEhuCEHWurmDpxpz3fRzXr0A
+    short-id: b4e3b0b55b8dc75b
+# note: NL Reality gRPC / UDP / CF伪装
+
+# 10 NL Hysteria2
+- name: NL-Hysteria2-72-56-102-31
+  type: hysteria2
+  server: 72.56.102.31
+  port: 443
+  password: BWAFlp8g53
+  sni: 72.56.102.31
+  skip-cert-verify: true
+# note: NL Hysteria2 / 443 / 欧洲混淆
