@@ -1,10 +1,10 @@
-# One URL per line. Optional description after |
-# Example format:
-# https://example.com/sub1 | Node group A - stable
-# https://example.com/sub2 | Node group B - high speed
-#
-# Grok automation will overwrite this file daily with the latest 10 URLs + descriptions.
-# Leave empty or keep examples for testing.
-
-https://httpbin.org/uuid | Test source 1 - random UUID
-https://httpbin.org/uuid | Test source 2 - random UUID
+https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/by-country/clash-SG.yaml | Clash YAML / SG / Reality+Hysteria2 每小时活测池
+https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/by-country/clash-KR.yaml | Clash YAML / KR / 亚洲备用 避开TW-JP-US
+https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/by-country/clash-HK.yaml | Clash YAML / HK / 亚洲近距离 含VLESS-Reality
+https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/by-country/clash-NL.yaml | Clash YAML / NL / 欧洲稳池 Hysteria2较多
+https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/by-country/clash-DE.yaml | Clash YAML / DE / Reality+Hysteria2 集中封锁压力较低
+https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/by-country/clash-FR.yaml | Clash YAML / FR / 欧洲备用 寿命优先
+https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/by-country/clash-GB.yaml | Clash YAML / GB / 欧洲备用 UDP支持
+https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/by-country/clash-CA.yaml | Clash YAML / CA / 北美非US 降低被钉概率
+https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/by-protocol/clash-hysteria2.yaml | Clash YAML / 混合 / Hysteria2强混淆专辑
+https://raw.githubusercontent.com/yy1588133/proxy-pool/main/clash.yaml | Clash YAML / 汇聚池 / 6h更新 增益镜像可备
