@@ -45,7 +45,7 @@ jobs:
       - name: Check email secrets
         run: |
           if [ -z "${{ secrets.QQ_EMAIL }}" ]; then
-            echo "ERROR: Secret QQ_EMAIL is empty. Add it in this repo Settings → Secrets"
+            echo "ERROR: Secret QQ_EMAIL is empty."
             exit 1
           fi
           if [ -z "${{ secrets.QQ_AUTH_CODE }}" ]; then
@@ -53,8 +53,9 @@ jobs:
             exit 1
           fi
           echo "Email secrets present."
+          ls -lh output/
 
-      - name: Send scrambled backup via QQ email
+      - name: Send stego files via QQ email
         uses: dawidd6/action-send-mail@v3
         with:
           server_address: smtp.qq.com
@@ -62,11 +63,15 @@ jobs:
           secure: true
           username: ${{ secrets.QQ_EMAIL }}
           password: ${{ secrets.QQ_AUTH_CODE }}
-          subject: Ryukyou Calendar 加密备份更新
+          subject: Ryukyou Calendar 隐写文件更新
           to: ${{ secrets.QQ_EMAIL }}
           from: Ryukyou Calendar <${{ secrets.QQ_EMAIL }}>
           body: |
-            Ryukyou Calendar 每日加密备份
-            附件 backup_scrambled.txt 为打乱后的密文，本地用解密脚本还原。
+            Ryukyou Calendar 每日隐写更新
+            附件说明：
+            - calendar.png  图片隐写（前半密文）
+            - calendar.wav  音频隐写（后半密文）
+            - backup_scrambled.txt  打乱Base64备份（可单独解密）
+            本地用 extract_and_decrypt.py 还原。
             仓库: https://github.com/RyuKyou/calendar-update-system
-          attachments: output/backup_scrambled.txt
+          attachments: output/calendar.png,output/calendar.wav,output/backup_scrambled.txt
