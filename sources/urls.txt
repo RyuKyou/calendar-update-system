@@ -1,10 +1,10 @@
-https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/by-country/clash-SG.yaml | Clash YAML / SG / Reality+Hysteria2 每小时活测池
-https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/by-country/clash-KR.yaml | Clash YAML / KR / 亚洲备用 避开TW-JP-US
-https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/by-country/clash-HK.yaml | Clash YAML / HK / 亚洲近距离 含VLESS-Reality
-https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/by-country/clash-NL.yaml | Clash YAML / NL / 欧洲稳池 Hysteria2较多
-https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/by-country/clash-DE.yaml | Clash YAML / DE / Reality+Hysteria2 集中封锁压力较低
-https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/by-country/clash-FR.yaml | Clash YAML / FR / 欧洲备用 寿命优先
-https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/by-country/clash-GB.yaml | Clash YAML / GB / 欧洲备用 UDP支持
-https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/by-country/clash-CA.yaml | Clash YAML / CA / 北美非US 降低被钉概率
-https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/by-protocol/clash-hysteria2.yaml | Clash YAML / 混合 / Hysteria2强混淆专辑
-https://raw.githubusercontent.com/yy1588133/proxy-pool/main/clash.yaml | Clash YAML / 汇聚池 / 6h更新 增益镜像可备
+https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/by-country/clash-SG.yaml | Clash YAML / SG / Reality主力 每小时活测
+https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/by-country/clash-KR.yaml | Clash YAML / KR / Hysteria2+Reality 避开TW-JP-US
+https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/by-country/clash-HK.yaml | Clash YAML / HK / 亞洲近距離 含Hy2
+https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/by-country/clash-NL.yaml | Clash YAML / NL / 歐洲穩池 Hy2較多
+https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/by-country/clash-DE.yaml | Clash YAML / DE / Reality主力 集中封鎖壓力較低
+https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/by-country/clash-FR.yaml | Clash YAML / FR / Reality+Hy2 壽命優先
+https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/by-country/clash-GB.yaml | Clash YAML / GB / 歐洲備用 UDP
+https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/by-country/clash-CA.yaml | Clash YAML / CA / 北美非US 降低被針機率
+https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/by-protocol/clash-hysteria2.yaml | Clash YAML / 混合 / Hysteria2強混淆專輯
+https://gh-proxy.com/raw.githubusercontent.com/Ruk1ng001/freeSub/main/clash.yaml | Clash YAML / 汇聚测速池 / 國內鏡像可用
