@@ -1,29 +1,46 @@
-# Selected single nodes 2026-09-25
-# Priority: longevity > Reality/Hysteria2 > UDP > avoid TW/JP/US/VN/TH
-# Format: Clash Meta proxy YAML block + one-line note
+# Daily selected single nodes 2026-09-27
+# Priority: longevity + obfuscation; avoid TW/JP/US/VN/TH
+# Format: Clash Meta YAML snippet + URI
 
-# 1 SG VLESS-Reality Vision UDP
-- name: SG-VLESS-Reality-206
+1) SG | VLESS-Reality-Vision | UDP | SNI www.apple.com
+vless://1a049739-b873-4242-9a2b-239951eb2dd3@163.128.99.57:443?encryption=none&flow=xtls-rprx-vision&security=reality&sni=www.apple.com&fp=safari&pbk=4S52pKhsJA4gK-_MLW8_R8TTeZsS4pH7ef6St-aKVBQ&sid=ab1df8505f6e0072&type=tcp#SG-Reality-Apple
+- name: SG-Reality-Apple
   type: vless
-  server: 206.206.76.75
+  server: 163.128.99.57
   port: 443
-  uuid: 1e3d3634-36ac-43ac-a439-9665d885238f
+  uuid: 1a049739-b873-4242-9a2b-239951eb2dd3
   network: tcp
   tls: true
   udp: true
   flow: xtls-rprx-vision
+  client-fingerprint: safari
+  servername: www.apple.com
+  reality-opts:
+    public-key: 4S52pKhsJA4gK-_MLW8_R8TTeZsS4pH7ef6St-aKVBQ
+    short-id: ab1df8505f6e0072
+
+2) SG | VLESS-Reality | UDP | SNI www.cloudflare.com
+vless://cb15cce9-73ed-4928-b38c-462f0732cbe9@217.217.254.126:2053?encryption=none&security=reality&sni=www.cloudflare.com&fp=firefox&pbk=VzRjuHwcY-nLqkEIJS4S1CpButKc90Bh0gDbphyZ0Tw&sid=87829de0e2bb82cb&type=tcp#SG-Reality-CF
+- name: SG-Reality-CF
+  type: vless
+  server: 217.217.254.126
+  port: 2053
+  uuid: cb15cce9-73ed-4928-b38c-462f0732cbe9
+  network: tcp
+  tls: true
+  udp: true
   client-fingerprint: firefox
   servername: www.cloudflare.com
   reality-opts:
-    public-key: TqIFzUEEI1pIOR8BEpkNKEXcJ6cPfE5EzHb5joIivig
-    short-id: 9930177816ab09da
-# note: SG Reality Vision / UDP / 伪装CF
+    public-key: VzRjuHwcY-nLqkEIJS4S1CpButKc90Bh0gDbphyZ0Tw
+    short-id: 87829de0e2bb82cb
 
-# 2 SG VLESS-Reality Apple SNI
-- name: SG-VLESS-Reality-3-0-111-82
+3) KR | VLESS-Reality-Vision | UDP | SNI www.apple.com
+vless://814bd064-544d-4255-a070-5705c03f6da9@3.39.4.109:13672?encryption=none&flow=xtls-rprx-vision&security=reality&sni=www.apple.com&fp=chrome&pbk=k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0&sid=48050fab&type=tcp#KR-Reality-Apple
+- name: KR-Reality-Apple
   type: vless
-  server: 3.0.111.82
-  port: 10574
+  server: 3.39.4.109
+  port: 13672
   uuid: 814bd064-544d-4255-a070-5705c03f6da9
   network: tcp
   tls: true
@@ -34,111 +51,106 @@
   reality-opts:
     public-key: k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0
     short-id: 48050fab
-# note: SG Reality Vision / UDP / Apple SNI
 
-# 3 SG Hysteria2
-- name: SG-Hysteria2-138-2-73-238
+4) KR | Hysteria2 | UDP
+hysteria2://maintell@152.70.237.123:2053?insecure=1&sni=bing.com#KR-Hy2-Bing
+- name: KR-Hy2-Bing
   type: hysteria2
-  server: 138.2.73.238
-  port: 50160
-  password: f87376e17da040ed04c9665ce8972930
-  sni: www.bing.com
+  server: 152.70.237.123
+  port: 2053
+  password: maintell
+  sni: bing.com
   skip-cert-verify: true
-# note: SG Hysteria2 / UDP本质 / 强混淆
 
-# 4 SG Hysteria2 domain
-- name: SG-Hysteria2-hyhuawei
-  type: hysteria2
-  server: b891fbc2-tm96o0-tnhquc-1j0a4.sg7.hyhuawei.com
-  port: 443
-  password: 4eedcde6-d16a-11ef-973a-f23c913c8d2b
-  sni: b891fbc2-tm96o0-tnhquc-1j0a4.sg7.hyhuawei.com
-  skip-cert-verify: true
-# note: SG Hysteria2 / 443 / 域名入口
-
-# 5 SG VLESS-Reality dpdns
-- name: SG-VLESS-Reality-sg2-8sb
+5) DE | VLESS-Reality-gRPC | UDP | SNI hetzner.com
+vless://aac5beba-02a7-4cf0-8d33-f724c1bda5c6@140.150.238.49:8445?encryption=none&security=reality&sni=hetzner.com&fp=safari&pbk=_UazRMiBq9RqMaVrHeLsvUuoBkGFo9Gm-A4ivuZ6ZS8&sid=6ba85179e30d4fc2&type=grpc#DE-Reality-Hetzner
+- name: DE-Reality-Hetzner
   type: vless
-  server: sg2-8sb.6121999.dpdns.org
-  port: 19825
-  uuid: 2d1ad594-80a4-4bfb-87a6-038e39701f51
-  network: tcp
+  server: 140.150.238.49
+  port: 8445
+  uuid: aac5beba-02a7-4cf0-8d33-f724c1bda5c6
+  network: grpc
   tls: true
   udp: true
-  flow: xtls-rprx-vision
-  client-fingerprint: chrome
-  servername: sg2-8sb.6121999.dpdns.org
+  client-fingerprint: safari
+  servername: hetzner.com
   reality-opts:
-    public-key: GvvkY8xYb9QjvwvzYq_uNC4tOGd0DCxRnz6770-xgkI
+    public-key: _UazRMiBq9RqMaVrHeLsvUuoBkGFo9Gm-A4ivuZ6ZS8
     short-id: 6ba85179e30d4fc2
-# note: SG Reality / UDP
 
-# 6 DE VLESS-Reality DeepL SNI
-- name: DE-VLESS-Reality-193-202-10-2
+6) DE | VLESS-Reality-Vision | UDP | SNI deepl.com
+vless://bb0f1ed0-0298-40a1-adb1-1f5d6ab33d54@arcturus.yokkastars.com:40443?encryption=none&flow=xtls-rprx-vision&security=reality&sni=deepl.com&fp=safari&pbk=w4AYHvQnQS6olDqoG9ptLOtgehaWOsv9HQhDax5bLA4&sid=db46e2946fc466fd&type=tcp#DE-Reality-DeepL
+- name: DE-Reality-DeepL
   type: vless
-  server: 193.202.10.2
+  server: arcturus.yokkastars.com
   port: 40443
   uuid: bb0f1ed0-0298-40a1-adb1-1f5d6ab33d54
   network: tcp
   tls: true
   udp: true
   flow: xtls-rprx-vision
-  client-fingerprint: chrome
+  client-fingerprint: safari
   servername: deepl.com
   reality-opts:
     public-key: w4AYHvQnQS6olDqoG9ptLOtgehaWOsv9HQhDax5bLA4
     short-id: db46e2946fc466fd
-# note: DE Reality Vision / UDP / DeepL伪装
 
-# 7 DE Hysteria2
-- name: DE-Hysteria2-h2corp
-  type: hysteria2
-  server: de.1.23.h2corp.org
-  port: 443
-  password: mkL3AfdSZIpTWRB9TcWPn9vywPGN89MRHg3ToRDj
-  sni: germany3.h2corp.local
-  skip-cert-verify: true
-# note: DE Hysteria2 / 443 / 欧洲备用
-
-# 8 DE VLESS-Reality Amazon SNI
-- name: DE-VLESS-Reality-jumpernode
+7) FR | VLESS-Reality-Vision | UDP | SNI www.icloud.com
+vless://aaec4e42-a095-44b6-a239-f16d234a0798@137.74.16.237:443?encryption=none&flow=xtls-rprx-vision&security=reality&sni=www.icloud.com&fp=random&pbk=7LSzvilTVKGMtBDuKGeMrLtlhY7tQf5YcG566dEgO0I&sid=b390e0a721d242b0&type=tcp#FR-Reality-iCloud
+- name: FR-Reality-iCloud
   type: vless
-  server: defrnode.jumpernode.online
+  server: 137.74.16.237
   port: 443
-  uuid: 8af93649-403b-46d8-9966-923d4c58402c
+  uuid: aaec4e42-a095-44b6-a239-f16d234a0798
+  network: tcp
+  tls: true
+  udp: true
+  flow: xtls-rprx-vision
+  client-fingerprint: random
+  servername: www.icloud.com
+  reality-opts:
+    public-key: 7LSzvilTVKGMtBDuKGeMrLtlhY7tQf5YcG566dEgO0I
+    short-id: b390e0a721d242b0
+
+8) FR | Hysteria2 | UDP
+hysteria2://github.com/Alvin9999-newpac/fanqiang@62.210.7.139:60111?insecure=1&sni=www.bing.com#FR-Hy2-Bing
+- name: FR-Hy2-Bing
+  type: hysteria2
+  server: 62.210.7.139
+  port: 60111
+  password: github.com/Alvin9999-newpac/fanqiang
+  sni: www.bing.com
+  skip-cert-verify: true
+
+9) CA | VLESS-Reality-Vision | UDP | SNI google.com
+vless://a71c8954-66a8-4321-bedb-2336230d81ce@130.107.73.148:41373?encryption=none&flow=xtls-rprx-vision&security=reality&sni=google.com&fp=chrome&pbk=m0GsZOAwvAJEaqh9aH6qfOmBKo0KW0jY_tJEC6KaDEU&sid=0e&type=tcp#CA-Reality-Google
+- name: CA-Reality-Google
+  type: vless
+  server: 130.107.73.148
+  port: 41373
+  uuid: a71c8954-66a8-4321-bedb-2336230d81ce
   network: tcp
   tls: true
   udp: true
   flow: xtls-rprx-vision
   client-fingerprint: chrome
-  servername: buckeye-retail-website.amazon.com
+  servername: google.com
   reality-opts:
-    public-key: XTarABsaaFbjYNk6lRKnUzGavHzeqMIP7B8dZGNCvkE
-    short-id: 5c6481cdd4
-# note: DE Reality / Amazon SNI
+    public-key: m0GsZOAwvAJEaqh9aH6qfOmBKo0KW0jY_tJEC6KaDEU
+    short-id: "0e"
 
-# 9 NL VLESS-Reality gRPC
-- name: NL-VLESS-Reality-grpc-31-56-184-132
+10) FI | VLESS-Reality-gRPC | UDP | SNI dl.google.com
+vless://5d16ac22-6eea-426f-b778-6f4c2961faef@85.208.86.91:9872?encryption=none&security=reality&sni=dl.google.com&fp=firefox&pbk=sm3E3hjmT6_Gmg_O9rBz4nfXYrHpnl6-LvcCp6T6_xc&type=grpc#FI-Reality-gRPC
+- name: FI-Reality-gRPC
   type: vless
-  server: 31.56.184.132
-  port: 8443
-  uuid: 11f21602-47aa-42e2-9149-69120f2e6df6
+  server: 85.208.86.91
+  port: 9872
+  uuid: 5d16ac22-6eea-426f-b778-6f4c2961faef
   network: grpc
   tls: true
   udp: true
-  client-fingerprint: chrome
-  servername: cloudflare.com
+  client-fingerprint: firefox
+  servername: dl.google.com
   reality-opts:
-    public-key: bzbe7QdD633ew_Er1_YWEhuCEHWurmDpxpz3fRzXr0A
-    short-id: b4e3b0b55b8dc75b
-# note: NL Reality gRPC / UDP / CF伪装
-
-# 10 NL Hysteria2
-- name: NL-Hysteria2-72-56-102-31
-  type: hysteria2
-  server: 72.56.102.31
-  port: 443
-  password: BWAFlp8g53
-  sni: 72.56.102.31
-  skip-cert-verify: true
-# note: NL Hysteria2 / 443 / 欧洲混淆
+    public-key: sm3E3hjmT6_Gmg_O9rBz4nfXYrHpnl6-LvcCp6T6_xc
+    short-id: ""
