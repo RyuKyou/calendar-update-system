@@ -4,10 +4,6 @@ Encrypt content with a password, split the ciphertext,
 and embed the two parts into a calendar PNG and a calendar WAV via LSB steganography.
 
 Also produces a scrambled Base64 backup text (for email body).
-
-Supports:
-- Multiple URLs from sources/urls.txt (format: url  or  url | description)
-- Single --url / --content / SUBSCRIPTION_URL for backward compatibility
 """
 
 import os
@@ -29,6 +25,10 @@ import requests
 
 SALT = b"calendar-stego-v1-salt-2026"
 
+# Larger carriers so multi-URL payloads fit
+IMAGE_SIZE = (1600, 1200)   # capacity ~ 5.76M bits
+AUDIO_DURATION = 90.0       # seconds @ 22050 Hz ~ 1.98M samples
+
 def derive_key(password: str) -> bytes:
     kdf = PBKDF2HMAC(
         algorithm=hashes.SHA256(),
@@ -48,17 +48,13 @@ def split_payload(payload: bytes):
     return payload[:mid], payload[mid:]
 
 def make_scrambled_b64(ciphertext: bytes, chunk_size: int = 48) -> str:
-    """Base64 encode, split into chunks, shuffle order, prefix with index.
-    Reconstruct by sorting on index then joining.
-    """
     b64 = base64.b64encode(ciphertext).decode("ascii")
     chunks = [b64[i:i+chunk_size] for i in range(0, len(b64), chunk_size)]
     indices = list(range(len(chunks)))
-    # Deterministic shuffle using a fixed seed so output is stable for same input
     rng = random.Random(20260923)
     rng.shuffle(indices)
     lines = []
-    for new_pos, orig_idx in enumerate(indices):
+    for orig_idx in indices:
         lines.append(f"{orig_idx:03d}:{chunks[orig_idx]}")
     header = f"# SCRAMBLED_B64 v1 chunks={len(chunks)} size={chunk_size}\n"
     return header + "\n".join(lines)
@@ -80,32 +76,32 @@ def embed_lsb_image(img: Image.Image, data: bytes) -> Image.Image:
     arr = flat.reshape(h, w, 3)
     return Image.fromarray(arr.astype(np.uint8))
 
-def create_calendar_image(year: int, month: int, size=(800, 600)) -> Image.Image:
+def create_calendar_image(year: int, month: int, size=IMAGE_SIZE) -> Image.Image:
     img = Image.new("RGB", size, color=(245, 248, 252))
     draw = ImageDraw.Draw(img)
 
     try:
-        title_font = ImageFont.truetype("/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf", 36)
-        cell_font = ImageFont.truetype("/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf", 20)
+        title_font = ImageFont.truetype("/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf", 48)
+        cell_font = ImageFont.truetype("/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf", 28)
     except Exception:
         title_font = ImageFont.load_default()
         cell_font = ImageFont.load_default()
 
     title = f"{year} 年 {month} 月"
-    draw.text((size[0]//2, 30), title, fill=(30, 60, 90), font=title_font, anchor="mt")
+    draw.text((size[0]//2, 40), title, fill=(30, 60, 90), font=title_font, anchor="mt")
 
     weekdays = ["一", "二", "三", "四", "五", "六", "日"]
     cell_w = size[0] // 7
     for i, d in enumerate(weekdays):
         x = i * cell_w + cell_w // 2
-        draw.text((x, 90), d, fill=(80, 100, 120), font=cell_font, anchor="mt")
+        draw.text((x, 110), d, fill=(80, 100, 120), font=cell_font, anchor="mt")
 
     import calendar
     cal = calendar.Calendar(firstweekday=0)
     month_days = cal.monthdayscalendar(year, month)
 
-    start_y = 130
-    cell_h = (size[1] - start_y - 20) // 6
+    start_y = 160
+    cell_h = (size[1] - start_y - 30) // 6
     today = datetime.now()
 
     for week_idx, week in enumerate(month_days):
@@ -116,24 +112,28 @@ def create_calendar_image(year: int, month: int, size=(800, 600)) -> Image.Image
             y = start_y + week_idx * cell_h + cell_h // 2
             color = (20, 40, 70)
             if year == today.year and month == today.month and day == today.day:
-                r = 18
+                r = 24
                 draw.ellipse([x-r, y-r, x+r, y+r], fill=(70, 130, 180))
                 color = (255, 255, 255)
             draw.text((x, y), str(day), fill=color, font=cell_font, anchor="mm")
 
-    draw.text((size[0]//2, size[1]-25), "Calendar Reminder", fill=(160, 170, 180), font=cell_font, anchor="mt")
+    draw.text((size[0]//2, size[1]-30), "Calendar Reminder", fill=(160, 170, 180), font=cell_font, anchor="mt")
     return img
 
-def create_calendar_audio(duration_sec: float = 8.0, sample_rate: int = 22050) -> np.ndarray:
+def create_calendar_audio(duration_sec: float = AUDIO_DURATION, sample_rate: int = 22050) -> np.ndarray:
     t = np.linspace(0, duration_sec, int(sample_rate * duration_sec), endpoint=False)
-    freqs = [261.63, 329.63, 392.00, 523.25]
+    freqs = [261.63, 329.63, 392.00, 523.25, 587.33, 659.25]
     audio = np.zeros_like(t)
+    segment = duration_sec / len(freqs)
     for i, f in enumerate(freqs):
-        start = i * (duration_sec / len(freqs))
-        end = start + 1.5
+        start = i * segment
+        end = start + min(2.0, segment * 0.8)
         mask = (t >= start) & (t < end)
-        audio[mask] += 0.25 * np.sin(2 * np.pi * f * t[mask]) * np.exp(-1.5 * (t[mask] - start))
-    audio = audio / np.max(np.abs(audio) + 1e-9) * 0.7
+        audio[mask] += 0.2 * np.sin(2 * np.pi * f * t[mask]) * np.exp(-0.8 * (t[mask] - start))
+    # soft background hum so file is not mostly silence
+    audio += 0.03 * np.sin(2 * np.pi * 110 * t)
+    peak = np.max(np.abs(audio)) + 1e-9
+    audio = audio / peak * 0.7
     return (audio * 32767).astype(np.int16)
 
 def embed_lsb_audio(samples: np.ndarray, data: bytes) -> np.ndarray:
@@ -247,14 +247,10 @@ def main():
     save_wav(str(wav_path), stego_samples)
     print(f"Wrote {wav_path}")
 
-    # Scrambled Base64 backup for email body
     scrambled = make_scrambled_b64(ciphertext)
     scrambled_path = out_dir / "backup_scrambled.txt"
     scrambled_path.write_text(scrambled, encoding="utf-8")
     print(f"Wrote {scrambled_path}")
-    print("--- SCRAMBLED_B64_START ---")
-    print(scrambled)
-    print("--- SCRAMBLED_B64_END ---")
 
     print("Done.")
 
