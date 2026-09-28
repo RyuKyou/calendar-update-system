@@ -1,10 +1,10 @@
-https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/by-country/clash-SG.yaml | Clash YAML / SG / Reality主力 每小时活测
-https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/by-country/clash-KR.yaml | Clash YAML / KR / Hysteria2+Reality 避开TW-JP-US
-https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/by-country/clash-HK.yaml | Clash YAML / HK / 亞洲近距離 含Hy2
-https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/by-country/clash-NL.yaml | Clash YAML / NL / 歐洲穩池 Hy2較多
-https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/by-country/clash-DE.yaml | Clash YAML / DE / Reality主力 集中封鎖壓力較低
-https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/by-country/clash-FR.yaml | Clash YAML / FR / Reality+Hy2 壽命優先
-https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/by-country/clash-GB.yaml | Clash YAML / GB / 歐洲備用 UDP
-https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/by-country/clash-CA.yaml | Clash YAML / CA / 北美非US 降低被針機率
-https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/by-protocol/clash-hysteria2.yaml | Clash YAML / 混合 / Hysteria2強混淆專輯
-https://gh-proxy.com/raw.githubusercontent.com/Ruk1ng001/freeSub/main/clash.yaml | Clash YAML / 汇聚测速池 / 國內鏡像可用
+https://raw.githubusercontent.com/Au1rxx/free-vpn-subscriptions/main/output/by-country/clash-SG.yaml | Clash/SG/每小时实测，VLESS-Reality+其他协议混合
+https://raw.githubusercontent.com/Au1rxx/free-vpn-subscriptions/main/output/by-country/clash-HK.yaml | Clash/HK/每小时实测，Hysteria2/混淆优先
+https://raw.githubusercontent.com/Au1rxx/free-vpn-subscriptions/main/output/by-country/clash-KR.yaml | Clash/KR/每小时实测，Reality+Hysteria2
+https://raw.githubusercontent.com/Au1rxx/free-vpn-subscriptions/main/output/by-country/clash-NL.yaml | Clash/NL/欧洲比较不易被集中封锁，Hysteria2较多
+https://raw.githubusercontent.com/Au1rxx/free-vpn-subscriptions/main/output/by-country/clash-DE.yaml | Clash/DE/德国节点池，Hysteria2+Reality
+https://raw.githubusercontent.com/Au1rxx/free-vpn-subscriptions/main/output/by-country/clash-CA.yaml | Clash/CA/加拿大，Reality 主要
+https://raw.githubusercontent.com/Au1rxx/free-vpn-subscriptions/main/output/by-country/clash-GB.yaml | Clash/GB/英国，VLESS-Reality
+https://gh-proxy.com/raw.githubusercontent.com/yy1588133/proxy-pool/main/clash.yaml | Clash/聚合池/约兦小时更新，墙内镜像
+https://gh-proxy.com/raw.githubusercontent.com/Ruk1ng001/freeSub/main/clash.yaml | Clash/自动测速评分池，墙内镜像
+https://raw.githubusercontent.com/zhulinghuanyu/BestSub/main/clash.yaml | Clash/日更抓取池，固定地址
