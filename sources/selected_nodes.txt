@@ -1,43 +1,92 @@
-# Daily selected single nodes 2026-09-27
-# Priority: longevity + obfuscation; avoid TW/JP/US/VN/TH
-# Format: Clash Meta YAML snippet + URI
+# Selected nodes 2026-09-28
+# Priority: longevity + Reality/Hysteria2 + UDP; avoided TW/JP/US/VN/TH
 
-1) SG | VLESS-Reality-Vision | UDP | SNI www.apple.com
-vless://1a049739-b873-4242-9a2b-239951eb2dd3@163.128.99.57:443?encryption=none&flow=xtls-rprx-vision&security=reality&sni=www.apple.com&fp=safari&pbk=4S52pKhsJA4gK-_MLW8_R8TTeZsS4pH7ef6St-aKVBQ&sid=ab1df8505f6e0072&type=tcp#SG-Reality-Apple
-- name: SG-Reality-Apple
+# 1 SG VLESS-Reality Vision UDP
+- name: SG-VLESS-Reality-54.251.239.81
   type: vless
-  server: 163.128.99.57
+  server: 54.251.239.81
+  port: 26415
+  uuid: d00d9d18-20cf-4191-be76-6f73d43a27ec
+  network: tcp
+  tls: true
+  udp: true
+  flow: xtls-rprx-vision
+  client-fingerprint: chrome
+  servername: www.cloudflare.com
+  reality-opts:
+    public-key: eC5S3o9uFN6i_YjDjiALCXbc_dzh3kEm2C5zduDGtS8
+    short-id: b7dd999667b0406e
+
+# 2 SG VLESS-Reality Vision UDP
+- name: SG-VLESS-Reality-18.143.191.201
+  type: vless
+  server: 18.143.191.201
+  port: 21464
+  uuid: d00d9d18-20cf-4191-be76-6f73d43a27ec
+  network: tcp
+  tls: true
+  udp: true
+  flow: xtls-rprx-vision
+  client-fingerprint: chrome
+  servername: www.cloudflare.com
+  reality-opts:
+    public-key: 7TVqIgOMgFzxjYG4nSSQxWWTE7cBPXjpoZwCsd337lY
+    short-id: 52f8
+
+# 3 NL Hysteria2 UDP-native
+- name: NL-Hysteria2-72.56.116.57
+  type: hysteria2
+  server: 72.56.116.57
   port: 443
-  uuid: 1a049739-b873-4242-9a2b-239951eb2dd3
+  password: wrSuBorIlf
+  sni: off
+  skip-cert-verify: true
+
+# 4 NL Hysteria2
+- name: NL-Hysteria2-nl4-6vkfut
+  type: hysteria2
+  server: nl4-6vkfut.vpvr4ib84nuv6hdkt.ru
+  port: 3489
+  password: cf83b611-6cba-4535-adcb-8da06c6a9146
+  sni: nl4-6vkfut.vpvr4ib84nuv6hdkt.ru
+  skip-cert-verify: false
+
+# 5 DE Hysteria2
+- name: DE-Hysteria2-162.249.127.135
+  type: hysteria2
+  server: 162.249.127.135
+  port: 8443
+  password: 9Me_Jx935gnHx13_Nx45M_NYXe037js_Be4z
+  sni: hop-germany-september.dynuddns.com
+  skip-cert-verify: false
+
+# 6 DE VLESS-Reality Vision UDP
+- name: DE-VLESS-Reality-185.255.114.91
+  type: vless
+  server: 185.255.114.91
+  port: 8443
+  uuid: 7faa65a6-b43b-413e-9480-a81fae3d0c49
   network: tcp
   tls: true
   udp: true
   flow: xtls-rprx-vision
   client-fingerprint: safari
-  servername: www.apple.com
+  servername: nl2.reddotcorp.org
   reality-opts:
-    public-key: 4S52pKhsJA4gK-_MLW8_R8TTeZsS4pH7ef6St-aKVBQ
-    short-id: ab1df8505f6e0072
+    public-key: VDZdbh_RzDDZsHpYF58yUuuvXh93XnmkvpSqb50qG2U
+    short-id: 1be482b8e08aa0ef
 
-2) SG | VLESS-Reality | UDP | SNI www.cloudflare.com
-vless://cb15cce9-73ed-4928-b38c-462f0732cbe9@217.217.254.126:2053?encryption=none&security=reality&sni=www.cloudflare.com&fp=firefox&pbk=VzRjuHwcY-nLqkEIJS4S1CpButKc90Bh0gDbphyZ0Tw&sid=87829de0e2bb82cb&type=tcp#SG-Reality-CF
-- name: SG-Reality-CF
-  type: vless
-  server: 217.217.254.126
-  port: 2053
-  uuid: cb15cce9-73ed-4928-b38c-462f0732cbe9
-  network: tcp
-  tls: true
-  udp: true
-  client-fingerprint: firefox
-  servername: www.cloudflare.com
-  reality-opts:
-    public-key: VzRjuHwcY-nLqkEIJS4S1CpButKc90Bh0gDbphyZ0Tw
-    short-id: 87829de0e2bb82cb
+# 7 HK Hysteria2
+- name: HK-Hysteria2-mz.hkychina.com
+  type: hysteria2
+  server: mz.hkychina.com
+  port: 8443
+  password: HysTeria2026!Proxy
+  sni: mz.hkychina.com
+  skip-cert-verify: true
 
-3) KR | VLESS-Reality-Vision | UDP | SNI www.apple.com
-vless://814bd064-544d-4255-a070-5705c03f6da9@3.39.4.109:13672?encryption=none&flow=xtls-rprx-vision&security=reality&sni=www.apple.com&fp=chrome&pbk=k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0&sid=48050fab&type=tcp#KR-Reality-Apple
-- name: KR-Reality-Apple
+# 8 KR VLESS-Reality Vision UDP
+- name: KR-VLESS-Reality-3.39.4.109
   type: vless
   server: 3.39.4.109
   port: 13672
@@ -52,9 +101,8 @@ vless://814bd064-544d-4255-a070-5705c03f6da9@3.39.4.109:13672?encryption=none&fl
     public-key: k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0
     short-id: 48050fab
 
-4) KR | Hysteria2 | UDP
-hysteria2://maintell@152.70.237.123:2053?insecure=1&sni=bing.com#KR-Hy2-Bing
-- name: KR-Hy2-Bing
+# 9 KR Hysteria2
+- name: KR-Hysteria2-152.70.237.123
   type: hysteria2
   server: 152.70.237.123
   port: 2053
@@ -62,95 +110,18 @@ hysteria2://maintell@152.70.237.123:2053?insecure=1&sni=bing.com#KR-Hy2-Bing
   sni: bing.com
   skip-cert-verify: true
 
-5) DE | VLESS-Reality-gRPC | UDP | SNI hetzner.com
-vless://aac5beba-02a7-4cf0-8d33-f724c1bda5c6@140.150.238.49:8445?encryption=none&security=reality&sni=hetzner.com&fp=safari&pbk=_UazRMiBq9RqMaVrHeLsvUuoBkGFo9Gm-A4ivuZ6ZS8&sid=6ba85179e30d4fc2&type=grpc#DE-Reality-Hetzner
-- name: DE-Reality-Hetzner
+# 10 GB VLESS-Reality Vision UDP
+- name: GB-VLESS-Reality-178.79.129.203
   type: vless
-  server: 140.150.238.49
-  port: 8445
-  uuid: aac5beba-02a7-4cf0-8d33-f724c1bda5c6
-  network: grpc
-  tls: true
-  udp: true
-  client-fingerprint: safari
-  servername: hetzner.com
-  reality-opts:
-    public-key: _UazRMiBq9RqMaVrHeLsvUuoBkGFo9Gm-A4ivuZ6ZS8
-    short-id: 6ba85179e30d4fc2
-
-6) DE | VLESS-Reality-Vision | UDP | SNI deepl.com
-vless://bb0f1ed0-0298-40a1-adb1-1f5d6ab33d54@arcturus.yokkastars.com:40443?encryption=none&flow=xtls-rprx-vision&security=reality&sni=deepl.com&fp=safari&pbk=w4AYHvQnQS6olDqoG9ptLOtgehaWOsv9HQhDax5bLA4&sid=db46e2946fc466fd&type=tcp#DE-Reality-DeepL
-- name: DE-Reality-DeepL
-  type: vless
-  server: arcturus.yokkastars.com
-  port: 40443
-  uuid: bb0f1ed0-0298-40a1-adb1-1f5d6ab33d54
-  network: tcp
-  tls: true
-  udp: true
-  flow: xtls-rprx-vision
-  client-fingerprint: safari
-  servername: deepl.com
-  reality-opts:
-    public-key: w4AYHvQnQS6olDqoG9ptLOtgehaWOsv9HQhDax5bLA4
-    short-id: db46e2946fc466fd
-
-7) FR | VLESS-Reality-Vision | UDP | SNI www.icloud.com
-vless://aaec4e42-a095-44b6-a239-f16d234a0798@137.74.16.237:443?encryption=none&flow=xtls-rprx-vision&security=reality&sni=www.icloud.com&fp=random&pbk=7LSzvilTVKGMtBDuKGeMrLtlhY7tQf5YcG566dEgO0I&sid=b390e0a721d242b0&type=tcp#FR-Reality-iCloud
-- name: FR-Reality-iCloud
-  type: vless
-  server: 137.74.16.237
-  port: 443
-  uuid: aaec4e42-a095-44b6-a239-f16d234a0798
+  server: 178.79.129.203
+  port: 54865
+  uuid: d00d9d18-20cf-4191-be76-6f73d43a27ec
   network: tcp
   tls: true
   udp: true
   flow: xtls-rprx-vision
   client-fingerprint: random
-  servername: www.icloud.com
+  servername: www.cloudflare.com
   reality-opts:
-    public-key: 7LSzvilTVKGMtBDuKGeMrLtlhY7tQf5YcG566dEgO0I
-    short-id: b390e0a721d242b0
-
-8) FR | Hysteria2 | UDP
-hysteria2://github.com/Alvin9999-newpac/fanqiang@62.210.7.139:60111?insecure=1&sni=www.bing.com#FR-Hy2-Bing
-- name: FR-Hy2-Bing
-  type: hysteria2
-  server: 62.210.7.139
-  port: 60111
-  password: github.com/Alvin9999-newpac/fanqiang
-  sni: www.bing.com
-  skip-cert-verify: true
-
-9) CA | VLESS-Reality-Vision | UDP | SNI google.com
-vless://a71c8954-66a8-4321-bedb-2336230d81ce@130.107.73.148:41373?encryption=none&flow=xtls-rprx-vision&security=reality&sni=google.com&fp=chrome&pbk=m0GsZOAwvAJEaqh9aH6qfOmBKo0KW0jY_tJEC6KaDEU&sid=0e&type=tcp#CA-Reality-Google
-- name: CA-Reality-Google
-  type: vless
-  server: 130.107.73.148
-  port: 41373
-  uuid: a71c8954-66a8-4321-bedb-2336230d81ce
-  network: tcp
-  tls: true
-  udp: true
-  flow: xtls-rprx-vision
-  client-fingerprint: chrome
-  servername: google.com
-  reality-opts:
-    public-key: m0GsZOAwvAJEaqh9aH6qfOmBKo0KW0jY_tJEC6KaDEU
-    short-id: "0e"
-
-10) FI | VLESS-Reality-gRPC | UDP | SNI dl.google.com
-vless://5d16ac22-6eea-426f-b778-6f4c2961faef@85.208.86.91:9872?encryption=none&security=reality&sni=dl.google.com&fp=firefox&pbk=sm3E3hjmT6_Gmg_O9rBz4nfXYrHpnl6-LvcCp6T6_xc&type=grpc#FI-Reality-gRPC
-- name: FI-Reality-gRPC
-  type: vless
-  server: 85.208.86.91
-  port: 9872
-  uuid: 5d16ac22-6eea-426f-b778-6f4c2961faef
-  network: grpc
-  tls: true
-  udp: true
-  client-fingerprint: firefox
-  servername: dl.google.com
-  reality-opts:
-    public-key: sm3E3hjmT6_Gmg_O9rBz4nfXYrHpnl6-LvcCp6T6_xc
-    short-id: ""
+    public-key: frK9LTk4kF7lh4-ZVCuHCQm87Oy6uboRtoS-o6Fb6WE
+    short-id: 7436
