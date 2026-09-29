@@ -1,127 +1,152 @@
-# Selected nodes 2026-09-28
-# Priority: longevity + Reality/Hysteria2 + UDP; avoided TW/JP/US/VN/TH
+# Selected 2026-09-29 | priority: longevity + Reality obfuscation + UDP
+# Avoid TW/JP/US/VN/TH. Regions: SG/KR/NL/PL/DE/FI
+# Source pool: xrayvip free.yaml (fixed long-lived URL)
 
-# 1 SG VLESS-Reality Vision UDP
-- name: SG-VLESS-Reality-54.251.239.81
-  type: vless
-  server: 54.251.239.81
-  port: 26415
-  uuid: d00d9d18-20cf-4191-be76-6f73d43a27ec
-  network: tcp
-  tls: true
-  udp: true
-  flow: xtls-rprx-vision
-  client-fingerprint: chrome
-  servername: www.cloudflare.com
-  reality-opts:
-    public-key: eC5S3o9uFN6i_YjDjiALCXbc_dzh3kEm2C5zduDGtS8
-    short-id: b7dd999667b0406e
+1) SG VLESS-Reality UDP 443-alt
+name: SG-Reality-18.139
+type: vless
+server: 18.139.227.162
+port: 28243
+uuid: d00d9d18-20cf-4191-be76-6f73d43a27ec
+flow: xtls-rprx-vision
+udp: true
+tls: true
+client-fingerprint: chrome
+servername: www.cloudflare.com
+reality-opts:
+  public-key: IXxfPvq2OkbSuA-ZTBFpMzkDU1uO8dEI1e7s9VfHh1Y
+  short-id: 7996bf4dcf194d18
 
-# 2 SG VLESS-Reality Vision UDP
-- name: SG-VLESS-Reality-18.143.191.201
-  type: vless
-  server: 18.143.191.201
-  port: 21464
-  uuid: d00d9d18-20cf-4191-be76-6f73d43a27ec
-  network: tcp
-  tls: true
-  udp: true
-  flow: xtls-rprx-vision
-  client-fingerprint: chrome
-  servername: www.cloudflare.com
-  reality-opts:
-    public-key: 7TVqIgOMgFzxjYG4nSSQxWWTE7cBPXjpoZwCsd337lY
-    short-id: 52f8
+2) SG VLESS-Reality UDP
+name: SG-Reality-18.136
+type: vless
+server: 18.136.119.69
+port: 20975
+uuid: d00d9d18-20cf-4191-be76-6f73d43a27ec
+flow: xtls-rprx-vision
+udp: true
+tls: true
+client-fingerprint: chrome
+servername: www.cloudflare.com
+reality-opts:
+  public-key: GVg6RWWCJfXATSmArzQD69rXqs9-804Ot-_uX3WrJE4
+  short-id: 2bb0dc48
 
-# 3 NL Hysteria2 UDP-native
-- name: NL-Hysteria2-72.56.116.57
-  type: hysteria2
-  server: 72.56.116.57
-  port: 443
-  password: wrSuBorIlf
-  sni: off
-  skip-cert-verify: true
+3) KR VLESS-Reality UDP 443
+name: KR-Reality-61.111.80
+type: vless
+server: 61.111.247.80
+port: 443
+uuid: 82C94E17-B27E-4356-82C1-2F9C79B0CF6D
+flow: xtls-rprx-vision
+udp: true
+tls: true
+client-fingerprint: random
+servername: gateway.icloud.com
+reality-opts:
+  public-key: Cn5_Bic3VFQ2ONvH5_npnbMYZ-oxkl4BxawPKxoRdCQ
+  short-id: f8f2875b3b4cb65b
 
-# 4 NL Hysteria2
-- name: NL-Hysteria2-nl4-6vkfut
-  type: hysteria2
-  server: nl4-6vkfut.vpvr4ib84nuv6hdkt.ru
-  port: 3489
-  password: cf83b611-6cba-4535-adcb-8da06c6a9146
-  sni: nl4-6vkfut.vpvr4ib84nuv6hdkt.ru
-  skip-cert-verify: false
+4) KR VLESS-Reality UDP 443
+name: KR-Reality-61.111.177
+type: vless
+server: 61.111.247.177
+port: 443
+uuid: 82C94E17-B27E-4356-82C1-2F9C79B0CF6D
+flow: xtls-rprx-vision
+udp: true
+tls: true
+client-fingerprint: random
+servername: gateway.icloud.com
+reality-opts:
+  public-key: upzGwN_6mF1HLEIWveelchmljBlEL1fTNNJryHP1h0Q
+  short-id: 57a9322ca488758c
 
-# 5 DE Hysteria2
-- name: DE-Hysteria2-162.249.127.135
-  type: hysteria2
-  server: 162.249.127.135
-  port: 8443
-  password: 9Me_Jx935gnHx13_Nx45M_NYXe037js_Be4z
-  sni: hop-germany-september.dynuddns.com
-  skip-cert-verify: false
+5) KR VLESS-Reality UDP 443
+name: KR-Reality-61.111.22
+type: vless
+server: 61.111.247.22
+port: 443
+uuid: 82C94E17-B27E-4356-82C1-2F9C79B0CF6D
+flow: xtls-rprx-vision
+udp: true
+tls: true
+client-fingerprint: random
+servername: gateway.icloud.com
+reality-opts:
+  public-key: F6Asg31ihdkFCmTdIuGjq_232PMYhLsCH9k3Npaa9VI
+  short-id: 0d9954fe36197887
 
-# 6 DE VLESS-Reality Vision UDP
-- name: DE-VLESS-Reality-185.255.114.91
-  type: vless
-  server: 185.255.114.91
-  port: 8443
-  uuid: 7faa65a6-b43b-413e-9480-a81fae3d0c49
-  network: tcp
-  tls: true
-  udp: true
-  flow: xtls-rprx-vision
-  client-fingerprint: safari
-  servername: nl2.reddotcorp.org
-  reality-opts:
-    public-key: VDZdbh_RzDDZsHpYF58yUuuvXh93XnmkvpSqb50qG2U
-    short-id: 1be482b8e08aa0ef
+6) NL VLESS-Reality UDP
+name: NL-Reality-31.77
+type: vless
+server: 31.77.13.19
+port: 2063
+uuid: b18d5990-96eb-4587-a386-7f8ef7591e6a
+flow: xtls-rprx-vision
+udp: true
+tls: true
+client-fingerprint: chrome
+servername: rusbid.de
+reality-opts:
+  public-key: MMpt_jWc4J3oySBdf5sPDVRkiWlZmOObth6A1scM9BM
 
-# 7 HK Hysteria2
-- name: HK-Hysteria2-mz.hkychina.com
-  type: hysteria2
-  server: mz.hkychina.com
-  port: 8443
-  password: HysTeria2026!Proxy
-  sni: mz.hkychina.com
-  skip-cert-verify: true
+7) NL VLESS-Reality UDP
+name: NL-Reality-129.101
+type: vless
+server: 129.101.120.5
+port: 37951
+uuid: 25284368-40d5-4abe-9f56-54a07e88a7af
+flow: xtls-rprx-vision
+udp: true
+tls: true
+client-fingerprint: firefox
+servername: nl2.dzvn.space
+reality-opts:
+  public-key: O6ZOpoz4sxon8iHxCd5EEvx2K9NUThd4SvOCBEvADEI
+  short-id: a9e21fd097d019c6
 
-# 8 KR VLESS-Reality Vision UDP
-- name: KR-VLESS-Reality-3.39.4.109
-  type: vless
-  server: 3.39.4.109
-  port: 13672
-  uuid: 814bd064-544d-4255-a070-5705c03f6da9
-  network: tcp
-  tls: true
-  udp: true
-  flow: xtls-rprx-vision
-  client-fingerprint: chrome
-  servername: www.apple.com
-  reality-opts:
-    public-key: k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0
-    short-id: 48050fab
+8) PL VLESS-Reality UDP 443
+name: PL-Reality-31.77.59
+type: vless
+server: 31.77.59.225
+port: 443
+uuid: df23d74c-c5ea-441c-a573-9d7b0e88dd14
+flow: xtls-rprx-vision
+udp: true
+tls: true
+client-fingerprint: chrome
+servername: pl.jokervpn.space
+reality-opts:
+  public-key: D-Kt4_vBDB11deWnNmsK1OqF5Tt8tNcyuUPPXI0Y1yQ
+  short-id: f43f3666afdec470
 
-# 9 KR Hysteria2
-- name: KR-Hysteria2-152.70.237.123
-  type: hysteria2
-  server: 152.70.237.123
-  port: 2053
-  password: maintell
-  sni: bing.com
-  skip-cert-verify: true
+9) DE VLESS-Reality UDP 443
+name: DE-Reality-189.24
+type: vless
+server: 189.24.106.64
+port: 443
+uuid: 82C94E17-B27E-4356-82C1-2F9C79B0CF6D
+flow: xtls-rprx-vision
+udp: true
+tls: true
+client-fingerprint: random
+servername: gateway.icloud.com
+reality-opts:
+  public-key: mdNDY7PwSvwt56fQsDQvP15p7XU73PvFoWA6uKgNaX0
+  short-id: 13a744172777d168
 
-# 10 GB VLESS-Reality Vision UDP
-- name: GB-VLESS-Reality-178.79.129.203
-  type: vless
-  server: 178.79.129.203
-  port: 54865
-  uuid: d00d9d18-20cf-4191-be76-6f73d43a27ec
-  network: tcp
-  tls: true
-  udp: true
-  flow: xtls-rprx-vision
-  client-fingerprint: random
-  servername: www.cloudflare.com
-  reality-opts:
-    public-key: frK9LTk4kF7lh4-ZVCuHCQm87Oy6uboRtoS-o6Fb6WE
-    short-id: 7436
+10) FI VLESS-Reality UDP 443
+name: FI-Reality-31.76
+type: vless
+server: 31.76.245.63
+port: 443
+uuid: d72f05b0-b182-4783-a6f2-21cecc7d841a
+flow: xtls-rprx-vision
+udp: true
+tls: true
+client-fingerprint: firefox
+servername: dzen.ru
+reality-opts:
+  public-key: SibLV5WBGdljTiUCmKx77KhHQfErCwjDMD_ZLoha3js
+  short-id: a1b2c3d4e5f67890
