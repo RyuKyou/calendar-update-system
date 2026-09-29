@@ -1,10 +1,10 @@
-https://raw.githubusercontent.com/Au1rxx/free-vpn-subscriptions/main/output/by-country/clash-SG.yaml | Clash/SG/每小时实测，VLESS-Reality+其他协议混合
-https://raw.githubusercontent.com/Au1rxx/free-vpn-subscriptions/main/output/by-country/clash-HK.yaml | Clash/HK/每小时实测，Hysteria2/混淆优先
-https://raw.githubusercontent.com/Au1rxx/free-vpn-subscriptions/main/output/by-country/clash-KR.yaml | Clash/KR/每小时实测，Reality+Hysteria2
-https://raw.githubusercontent.com/Au1rxx/free-vpn-subscriptions/main/output/by-country/clash-NL.yaml | Clash/NL/欧洲比较不易被集中封锁，Hysteria2较多
-https://raw.githubusercontent.com/Au1rxx/free-vpn-subscriptions/main/output/by-country/clash-DE.yaml | Clash/DE/德国节点池，Hysteria2+Reality
-https://raw.githubusercontent.com/Au1rxx/free-vpn-subscriptions/main/output/by-country/clash-CA.yaml | Clash/CA/加拿大，Reality 主要
-https://raw.githubusercontent.com/Au1rxx/free-vpn-subscriptions/main/output/by-country/clash-GB.yaml | Clash/GB/英国，VLESS-Reality
-https://gh-proxy.com/raw.githubusercontent.com/yy1588133/proxy-pool/main/clash.yaml | Clash/聚合池/约兦小时更新，墙内镜像
-https://gh-proxy.com/raw.githubusercontent.com/Ruk1ng001/freeSub/main/clash.yaml | Clash/自动测速评分池，墙内镜像
-https://raw.githubusercontent.com/zhulinghuanyu/BestSub/main/clash.yaml | Clash/日更抓取池，固定地址
+https://www.xrayvip.com/free.yaml | VLESS-Reality/Trojan/SS 固定长期订阅，含 SG/KR/NL/DE/PL/FI
+https://raw.githubusercontent.com/clashv2ray-hub/clashfree/refs/heads/main/clash.yaml | clashfree 公益 YAML，小时级刷新固定地址
+https://gh-proxy.com/raw.githubusercontent.com/yy1588133/proxy-pool/main/clash.yaml | 聚合池 1300+去重节点，墙内 gh-proxy 镜像
+https://raw.githubusercontent.com/ermaozi01/free_clash_vpn/main/subscribe/clash.yml | ermaozi 12h 更新的老牌公益源
+https://raw.githubusercontent.com/ovmvo/FreeSub/refs/heads/main/sub/permanent/mihomo.yaml | FreeSub 永久链接（固定文件名）Mihomo YAML
+https://clashsuburl.cczzuu.top/2026/09/clashsuburl-20260929.yaml | 2026-09-29 Clashsuburl 当日 YAML（KR/HK/SG/EU）
+https://shareclash.cczzuu.top/2026/09/shareclash-20260929.yaml | 2026-09-29 ShareClash 当日 YAML
+https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/clash.yaml | 小时活检聚合，含 Hysteria2/Reality/VLESS
+https://raw.githubusercontent.com/mahdibland/V2RayAggregator/master/Eternity.yml | Eternity 长期聚合 YAML
+https://gh-proxy.com/raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/DanFeng/output.yaml | DanFeng 跟踪源 + 墙内镜像
