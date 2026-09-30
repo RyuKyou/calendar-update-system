@@ -2,6 +2,7 @@
 """
 Fetch Clash subscription YAMLs, extract & clean proxies only,
 build one valid minimal Clash config, then encrypt + stego embed.
+If payload still exceeds carrier capacity, skip stego and only write scrambled backup.
 """
 
 import os
@@ -24,8 +25,9 @@ import requests
 import yaml
 
 SALT = b"calendar-stego-v1-salt-2026"
-IMAGE_SIZE = (1600, 1200)
-AUDIO_DURATION = 90.0
+# 2x previous capacity
+IMAGE_SIZE = (3200, 2400)   # ~23M bits
+AUDIO_DURATION = 180.0      # ~4M samples @ 22050 Hz
 VALID_NETWORKS = {"tcp", "udp", "ws", "http", "h2", "grpc", "raw"}
 
 def derive_key(password: str) -> bytes:
@@ -74,21 +76,21 @@ def create_calendar_image(year: int, month: int, size=IMAGE_SIZE) -> Image.Image
     img = Image.new("RGB", size, color=(245, 248, 252))
     draw = ImageDraw.Draw(img)
     try:
-        title_font = ImageFont.truetype("/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf", 48)
-        cell_font = ImageFont.truetype("/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf", 28)
+        title_font = ImageFont.truetype("/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf", 72)
+        cell_font = ImageFont.truetype("/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf", 40)
     except Exception:
         title_font = ImageFont.load_default()
         cell_font = ImageFont.load_default()
-    draw.text((size[0] // 2, 40), f"{year} 年 {month} 月", fill=(30, 60, 90), font=title_font, anchor="mt")
+    draw.text((size[0] // 2, 50), f"{year} 年 {month} 月", fill=(30, 60, 90), font=title_font, anchor="mt")
     weekdays = ["一", "二", "三", "四", "五", "六", "日"]
     cell_w = size[0] // 7
     for i, d in enumerate(weekdays):
-        draw.text((i * cell_w + cell_w // 2, 110), d, fill=(80, 100, 120), font=cell_font, anchor="mt")
+        draw.text((i * cell_w + cell_w // 2, 140), d, fill=(80, 100, 120), font=cell_font, anchor="mt")
     import calendar
     cal = calendar.Calendar(firstweekday=0)
     month_days = cal.monthdayscalendar(year, month)
-    start_y = 160
-    cell_h = (size[1] - start_y - 30) // 6
+    start_y = 220
+    cell_h = (size[1] - start_y - 40) // 6
     today = datetime.now()
     for week_idx, week in enumerate(month_days):
         for day_idx, day in enumerate(week):
@@ -98,11 +100,11 @@ def create_calendar_image(year: int, month: int, size=IMAGE_SIZE) -> Image.Image
             y = start_y + week_idx * cell_h + cell_h // 2
             color = (20, 40, 70)
             if year == today.year and month == today.month and day == today.day:
-                r = 24
+                r = 36
                 draw.ellipse([x - r, y - r, x + r, y + r], fill=(70, 130, 180))
                 color = (255, 255, 255)
             draw.text((x, y), str(day), fill=color, font=cell_font, anchor="mm")
-    draw.text((size[0] // 2, size[1] - 30), "Calendar Reminder", fill=(160, 170, 180), font=cell_font, anchor="mt")
+    draw.text((size[0] // 2, size[1] - 40), "Calendar Reminder", fill=(160, 170, 180), font=cell_font, anchor="mt")
     return img
 
 def create_calendar_audio(duration_sec: float = AUDIO_DURATION, sample_rate: int = 22050) -> np.ndarray:
@@ -157,21 +159,18 @@ def clean_proxy(p: dict, index: int) -> dict | None:
     if not isinstance(p, dict):
         return None
     name = str(p.get("name") or f"node-{index}")
-    # strip control chars / keep readable
     name = re.sub(r"[\x00-\x1f]", "", name).strip() or f"node-{index}"
     p = dict(p)
     p["name"] = name
 
     net = p.get("network")
     if isinstance(net, str):
-        # e.g. "tcp#5emoji@xxx" -> tcp
         base = net.split("#")[0].split("@")[0].strip().lower()
         if base in VALID_NETWORKS:
             p["network"] = base
         else:
             p.pop("network", None)
 
-    # required-ish fields
     if not p.get("type") or not p.get("server"):
         return None
     return p
@@ -194,13 +193,11 @@ def extract_proxies_from_yaml_text(text: str) -> list:
     return proxies
 
 def build_clash_config(proxies: list) -> str:
-    # dedupe by name
     seen = set()
     unique = []
     for p in proxies:
         n = p["name"]
         if n in seen:
-            # make unique
             k = 2
             while f"{n}-{k}" in seen:
                 k += 1
@@ -264,6 +261,7 @@ def main():
     parser.add_argument("--content", help="Direct content string")
     parser.add_argument("--sources", default="sources/urls.txt")
     parser.add_argument("--output-dir", default="output")
+    parser.add_argument("--skip-stego", action="store_true", help="Only write scrambled + yaml, no image/audio")
     args = parser.parse_args()
 
     password = args.password or os.environ.get("STEGO_PASSWORD")
@@ -304,29 +302,47 @@ def main():
     out_dir = Path(args.output_dir)
     out_dir.mkdir(parents=True, exist_ok=True)
 
-    now = datetime.now()
-    img = create_calendar_image(now.year, now.month)
-    stego_img = embed_lsb_image(img, part_a)
-    img_path = out_dir / "calendar.png"
-    stego_img.save(img_path, "PNG")
-    print(f"Wrote {img_path}")
-
-    samples = create_calendar_audio()
-    stego_samples = embed_lsb_audio(samples, part_b)
-    wav_path = out_dir / "calendar.wav"
-    save_wav(str(wav_path), stego_samples)
-    print(f"Wrote {wav_path}")
-
+    # Always write scrambled backup + plaintext config (email body fallback)
     scrambled = make_scrambled_b64(ciphertext)
     scrambled_path = out_dir / "backup_scrambled.txt"
     scrambled_path.write_text(scrambled, encoding="utf-8")
     print(f"Wrote {scrambled_path}")
 
-    # also write plain config for debugging in repo (optional)
     (out_dir / "clash_clean.yaml").write_text(content, encoding="utf-8")
-    print("Wrote output/clash_clean.yaml (plaintext for verify)")
+    print("Wrote output/clash_clean.yaml")
 
-    print("Done.")
+    stego_ok = False
+    if not args.skip_stego:
+        try:
+            now = datetime.now()
+            img = create_calendar_image(now.year, now.month)
+            stego_img = embed_lsb_image(img, part_a)
+            img_path = out_dir / "calendar.png"
+            stego_img.save(img_path, "PNG")
+            print(f"Wrote {img_path}")
+
+            samples = create_calendar_audio()
+            stego_samples = embed_lsb_audio(samples, part_b)
+            wav_path = out_dir / "calendar.wav"
+            save_wav(str(wav_path), stego_samples)
+            print(f"Wrote {wav_path}")
+            stego_ok = True
+        except Exception as e:
+            print(f"STEGO SKIPPED (overflow or error): {e}")
+            print("Fallback: only backup_scrambled.txt + clash_clean.yaml")
+            # remove partial stego files if any
+            for name in ("calendar.png", "calendar.wav"):
+                p = out_dir / name
+                if p.exists():
+                    p.unlink()
+    else:
+        print("--skip-stego: image/audio not generated")
+
+    # marker for workflow
+    (out_dir / "stego_status.txt").write_text(
+        "ok\n" if stego_ok else "skipped\n", encoding="utf-8"
+    )
+    print("Done. stego=", "ok" if stego_ok else "skipped")
 
 if __name__ == "__main__":
     main()
