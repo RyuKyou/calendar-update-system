@@ -1,42 +1,26 @@
-# Selected single nodes 2026-09-30 | longevity first | avoid TW/JP/US/VN/TH
-# Import as share URI or map fields in Clash/sing-box. UDP supported on listed items.
+# Selected single nodes 2026-09-30 night | longevity first | avoid TW/JP/US/VN/TH
+# Share URI + field map. UDP enabled on listed items.
 
-1) VLESS Reality Vision | SG-ish (3.0.x AWS)
-vless://814bd064-544d-4255-a070-5705c03f6da9@3.0.111.82:12972?encryption=none&flow=xtls-rprx-vision&fp=chrome&security=reality&sni=www.apple.com&pbk=k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0&sid=48050fab&type=tcp#SG-Reality-Vision-Apple
-server=3.0.111.82 port=12972 uuid=814bd064-544d-4255-a070-5705c03f6da9 flow=xtls-rprx-vision sni=www.apple.com pbk=k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0 sid=48050fab udp=true
+1) VLESS Reality Vision | SG (54.169.x)
+vless://49c0aac1-5e05-4f04-b624-248fc59e03c4@54.169.200.246:41688?encryption=none&flow=xtls-rprx-vision&fp=chrome&security=reality&sni=www.intel.com&pbk=srwIElIGTPs0kshpN1vvPsn4wixV_pLd56y_v9m0sTk&sid=7f342137c20387&type=tcp#SG-Reality-Vision-Intel
+server=54.169.200.246 port=41688 uuid=49c0aac1-5e05-4f04-b624-248fc59e03c4 flow=xtls-rprx-vision sni=www.intel.com pbk=srwIElIGTPs0kshpN1vvPsn4wixV_pLd56y_v9m0sTk sid=7f342137c20387 udp=true
 
-2) Hysteria2 | Asia (Oracle-ish 138.2.x)
-hysteria2://f87376e17da040ed04c9665ce8972930@138.2.73.238:50160?insecure=1#HY2-138-50160
-server=138.2.73.238 port=50160 password=f87376e17da040ed04c9665ce8972930 skip-cert-verify=true udp=true
-
-3) VLESS WS+TLS | SG Linode
+2) VLESS WS+TLS | SG Linode
 vless://6e59d5c5-7aa3-4c36-a4c4-e3b899525ed2@139.162.51.49:2096?encryption=none&security=tls&sni=free-server.techsonic.dev&type=ws#SG-VLESS-WS-TLS
 server=139.162.51.49 port=2096 uuid=6e59d5c5-7aa3-4c36-a4c4-e3b899525ed2 network=ws tls=true sni=free-server.techsonic.dev udp=true
 
-4) VLESS Reality | EU/CF-front 217.217.x
-vless://cb15cce9-73ed-4928-b38c-462f0732cbe9@217.217.254.126:2053?encryption=none&security=reality&sni=www.cloudflare.com&fp=chrome&pbk=VzRjuHwcY-nLqkEIJS4S1CpButKc90Bh0gDbphyZ0Tw&sid=87829de0e2bb82cb&type=tcp#EU-Reality-CF
-server=217.217.254.126 port=2053 uuid=cb15cce9-73ed-4928-b38c-462f0732cbe9 sni=www.cloudflare.com pbk=VzRjuHwcY-nLqkEIJS4S1CpButKc90Bh0gDbphyZ0Tw sid=87829de0e2bb82cb udp=true
+3) Hysteria2 | Asia (138.2.x Oracle-ish)
+hysteria2://f87376e17da040ed04c9665ce8972930@138.2.73.238:50160?insecure=1#HY2-138-50160
+server=138.2.73.238 port=50160 password=f87376e17da040ed04c9665ce8972930 skip-cert-verify=true udp=true
+
+4) Hysteria2 | HK
+hysteria2://H7mP2xY9kJ4nQ8wR5tF6vB3z@202.146.222.174:443?insecure=1&sni=off#HK-HY2-443
+server=202.146.222.174 port=443 password=H7mP2xY9kJ4nQ8wR5tF6vB3z skip-cert-verify=true udp=true
 
 5) Trojan Reality | Kazakhstan
 trojan://dc0d27ba-34d2-4c8b-9cba-9ddbbb632748@91.212.166.6:8090?fp=firefox&pbk=6_P9RjLdVkjYb9OHiuckOipbY6DVBp3ajAIpywlCeAk&security=reality&sid=bc&sni=www.nvidia.com&type=tcp#KZ-Trojan-Reality-Nvidia
 server=91.212.166.6 port=8090 password=dc0d27ba-34d2-4c8b-9cba-9ddbbb632748 sni=www.nvidia.com pbk=6_P9RjLdVkjYb9OHiuckOipbY6DVBp3ajAIpywlCeAk sid=bc udp=true
 
-6) VLESS Reality Vision | UAE
+6) VLESS Reality Vision | AE
 vless://98d0fa1b-d778-477e-b897-4e2569c53178@128.254.186.11:443?encryption=none&flow=xtls-rprx-vision&fp=firefox&pbk=SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc&security=reality&sni=mother-earth.fyi&type=tcp#AE-Reality-Vision
 server=128.254.186.11 port=443 uuid=98d0fa1b-d778-477e-b897-4e2569c53178 flow=xtls-rprx-vision sni=mother-earth.fyi pbk=SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc udp=true
-
-7) VLESS Reality Vision | UAE alt
-vless://32721515-985b-4773-9e70-5d2e1b88a060@128.254.186.111:443?encryption=none&flow=xtls-rprx-vision&fp=firefox&pbk=SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc&security=reality&sni=jobinvest.ru&type=tcp#AE-Reality-Vision-2
-server=128.254.186.111 port=443 uuid=32721515-985b-4773-9e70-5d2e1b88a060 flow=xtls-rprx-vision sni=jobinvest.ru pbk=SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc udp=true
-
-8) VLESS Reality Vision | UAE apple SNI
-vless://4f166057-2f4c-43d8-b5b3-6eb4413022e1@185.253.116.18:8443?encryption=none&flow=xtls-rprx-vision&fp=qq&pbk=kt-wshmPVd-J1dlU-tsXUoGag2-oFwYQ5UafScaAfzQ&security=reality&sni=apple.com&type=tcp#AE-Reality-Apple
-server=185.253.116.18 port=8443 uuid=4f166057-2f4c-43d8-b5b3-6eb4413022e1 flow=xtls-rprx-vision sni=apple.com pbk=kt-wshmPVd-J1dlU-tsXUoGag2-oFwYQ5UafScaAfzQ udp=true
-
-9) VLESS Reality Vision | UAE duckduckgo
-vless://fb9da2e5-aee6-4108-ab57-ffc36ce85656@185.253.116.38:443?encryption=none&flow=xtls-rprx-vision&fp=chrome&pbk=A2_2LyDmeLGGBqdtl7Zu2vRKghhewpmsMq8NmG9RqDw&security=reality&sid=b9cd333706f5&sni=duckduckgo.com&type=tcp#AE-Reality-DDG
-server=185.253.116.38 port=443 uuid=fb9da2e5-aee6-4108-ab57-ffc36ce85656 flow=xtls-rprx-vision sni=duckduckgo.com pbk=A2_2LyDmeLGGBqdtl7Zu2vRKghhewpmsMq8NmG9RqDw sid=b9cd333706f5 udp=true
-
-10) Trojan Reality | Croatia (EU fallback)
-trojan://1e32fe52198848788f029c2ec244f347@212.192.14.227:9443?fp=random&pbk=GooqN94J-NNbWxkVsDb7NIQW4xXhkMGByk58ihKwX1Q&security=reality&sid=aabbccdd&sni=ya.ru&type=tcp#HR-Trojan-Reality
-server=212.192.14.227 port=9443 password=1e32fe52198848788f029c2ec244f347 sni=ya.ru pbk=GooqN94J-NNbWxkVsDb7NIQW4xXhkMGByk58ihKwX1Q sid=aabbccdd udp=true
