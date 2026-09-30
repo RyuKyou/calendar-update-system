@@ -1,10 +1,6 @@
-https://raw.githubusercontent.com/ovmvo/FreeSub/refs/heads/main/sub/permanent/mihomo.yaml | Clash/Mihomo 永久链 8h更新 含KR/SG/HK/DE等
-https://cdn.jsdelivr.net/gh/free18/v2ray@main/c.yaml | Clash YAML 每日核验 jsDelivr镜像
-https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/clash.yaml | Clash 小时级HTTP实测聚合
-https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/by-country/clash-SG.yaml | Clash 新加坡分片 Reality/Hysteria2混合
-https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/by-country/clash-KR.yaml | Clash 韩国分片 规避TW/JP/US/VN/TH
-https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/by-country/clash-HK.yaml | Clash 香港分片 亚洲近端
-https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/by-country/clash-DE.yaml | Clash 德国分片 欧洲替代
-https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/by-country/clash-RO.yaml | Clash 罗马尼亚分片 集中封锁压力较低
-https://gh-proxy.com/raw.githubusercontent.com/yy1588133/proxy-pool/main/clash.yaml | Clash 聚合池 6h更新 GitHub镜像
-https://gh-proxy.com/raw.githubusercontent.com/Ruk1ng001/freeSub/main/clash.yaml | Clash 自动测速评分订阅 镜像
+https://raw.githubusercontent.com/ovmvo/FreeSub/refs/heads/main/sub/permanent/mihomo.yaml | Clash/Mihomo 永久链 8h更新 含KR/SG/HK/DE
+https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/clash.yaml | Clash 小时级HTTP实测聚合 Reality/HY2混合
+https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/by-country/clash-SG.yaml | Clash 新加坡分片 Reality Vision/HY2 较近亚洲
+https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/by-country/clash-KR.yaml | Clash 韩国分片 回避TW/JP/US/VN/TH
+https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/by-country/clash-DE.yaml | Clash 德国分片 欧洲替代 集中封锁压力较低
+https://raw.githubusercontent.com/0xRadikal/Free-v2ray-Configs/main/verified/clash.yaml | Clash 三轮HTTP实测通过 验证池
