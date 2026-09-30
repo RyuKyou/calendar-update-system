@@ -1,10 +1,10 @@
-https://www.xrayvip.com/free.yaml | VLESS-Reality/Trojan/SS 固定长期订阅，含 SG/KR/NL/DE/PL/FI
-https://raw.githubusercontent.com/clashv2ray-hub/clashfree/refs/heads/main/clash.yaml | clashfree 公益 YAML，小时级刷新固定地址
-https://gh-proxy.com/raw.githubusercontent.com/yy1588133/proxy-pool/main/clash.yaml | 聚合池 1300+去重节点，墙内 gh-proxy 镜像
-https://raw.githubusercontent.com/ermaozi01/free_clash_vpn/main/subscribe/clash.yml | ermaozi 12h 更新的老牌公益源
-https://raw.githubusercontent.com/ovmvo/FreeSub/refs/heads/main/sub/permanent/mihomo.yaml | FreeSub 永久链接（固定文件名）Mihomo YAML
-https://clashsuburl.cczzuu.top/2026/09/clashsuburl-20260929.yaml | 2026-09-29 Clashsuburl 当日 YAML（KR/HK/SG/EU）
-https://shareclash.cczzuu.top/2026/09/shareclash-20260929.yaml | 2026-09-29 ShareClash 当日 YAML
-https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/clash.yaml | 小时活检聚合，含 Hysteria2/Reality/VLESS
-https://raw.githubusercontent.com/mahdibland/V2RayAggregator/master/Eternity.yml | Eternity 长期聚合 YAML
-https://gh-proxy.com/raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/DanFeng/output.yaml | DanFeng 跟踪源 + 墙内镜像
+https://raw.githubusercontent.com/ovmvo/FreeSub/refs/heads/main/sub/permanent/mihomo.yaml | Clash/Mihomo 永久链 8h更新 含KR/SG/HK/DE等
+https://cdn.jsdelivr.net/gh/free18/v2ray@main/c.yaml | Clash YAML 每日核验 jsDelivr镜像
+https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/clash.yaml | Clash 小时级HTTP实测聚合
+https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/by-country/clash-SG.yaml | Clash 新加坡分片 Reality/Hysteria2混合
+https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/by-country/clash-KR.yaml | Clash 韩国分片 规避TW/JP/US/VN/TH
+https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/by-country/clash-HK.yaml | Clash 香港分片 亚洲近端
+https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/by-country/clash-DE.yaml | Clash 德国分片 欧洲替代
+https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/by-country/clash-RO.yaml | Clash 罗马尼亚分片 集中封锁压力较低
+https://gh-proxy.com/raw.githubusercontent.com/yy1588133/proxy-pool/main/clash.yaml | Clash 聚合池 6h更新 GitHub镜像
+https://gh-proxy.com/raw.githubusercontent.com/Ruk1ng001/freeSub/main/clash.yaml | Clash 自动测速评分订阅 镜像
