@@ -1,152 +1,42 @@
-# Selected 2026-09-29 | priority: longevity + Reality obfuscation + UDP
-# Avoid TW/JP/US/VN/TH. Regions: SG/KR/NL/PL/DE/FI
-# Source pool: xrayvip free.yaml (fixed long-lived URL)
+# Selected single nodes 2026-09-30 | longevity first | avoid TW/JP/US/VN/TH
+# Import as share URI or map fields in Clash/sing-box. UDP supported on listed items.
 
-1) SG VLESS-Reality UDP 443-alt
-name: SG-Reality-18.139
-type: vless
-server: 18.139.227.162
-port: 28243
-uuid: d00d9d18-20cf-4191-be76-6f73d43a27ec
-flow: xtls-rprx-vision
-udp: true
-tls: true
-client-fingerprint: chrome
-servername: www.cloudflare.com
-reality-opts:
-  public-key: IXxfPvq2OkbSuA-ZTBFpMzkDU1uO8dEI1e7s9VfHh1Y
-  short-id: 7996bf4dcf194d18
+1) VLESS Reality Vision | SG-ish (3.0.x AWS)
+vless://814bd064-544d-4255-a070-5705c03f6da9@3.0.111.82:12972?encryption=none&flow=xtls-rprx-vision&fp=chrome&security=reality&sni=www.apple.com&pbk=k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0&sid=48050fab&type=tcp#SG-Reality-Vision-Apple
+server=3.0.111.82 port=12972 uuid=814bd064-544d-4255-a070-5705c03f6da9 flow=xtls-rprx-vision sni=www.apple.com pbk=k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0 sid=48050fab udp=true
 
-2) SG VLESS-Reality UDP
-name: SG-Reality-18.136
-type: vless
-server: 18.136.119.69
-port: 20975
-uuid: d00d9d18-20cf-4191-be76-6f73d43a27ec
-flow: xtls-rprx-vision
-udp: true
-tls: true
-client-fingerprint: chrome
-servername: www.cloudflare.com
-reality-opts:
-  public-key: GVg6RWWCJfXATSmArzQD69rXqs9-804Ot-_uX3WrJE4
-  short-id: 2bb0dc48
+2) Hysteria2 | Asia (Oracle-ish 138.2.x)
+hysteria2://f87376e17da040ed04c9665ce8972930@138.2.73.238:50160?insecure=1#HY2-138-50160
+server=138.2.73.238 port=50160 password=f87376e17da040ed04c9665ce8972930 skip-cert-verify=true udp=true
 
-3) KR VLESS-Reality UDP 443
-name: KR-Reality-61.111.80
-type: vless
-server: 61.111.247.80
-port: 443
-uuid: 82C94E17-B27E-4356-82C1-2F9C79B0CF6D
-flow: xtls-rprx-vision
-udp: true
-tls: true
-client-fingerprint: random
-servername: gateway.icloud.com
-reality-opts:
-  public-key: Cn5_Bic3VFQ2ONvH5_npnbMYZ-oxkl4BxawPKxoRdCQ
-  short-id: f8f2875b3b4cb65b
+3) VLESS WS+TLS | SG Linode
+vless://6e59d5c5-7aa3-4c36-a4c4-e3b899525ed2@139.162.51.49:2096?encryption=none&security=tls&sni=free-server.techsonic.dev&type=ws#SG-VLESS-WS-TLS
+server=139.162.51.49 port=2096 uuid=6e59d5c5-7aa3-4c36-a4c4-e3b899525ed2 network=ws tls=true sni=free-server.techsonic.dev udp=true
 
-4) KR VLESS-Reality UDP 443
-name: KR-Reality-61.111.177
-type: vless
-server: 61.111.247.177
-port: 443
-uuid: 82C94E17-B27E-4356-82C1-2F9C79B0CF6D
-flow: xtls-rprx-vision
-udp: true
-tls: true
-client-fingerprint: random
-servername: gateway.icloud.com
-reality-opts:
-  public-key: upzGwN_6mF1HLEIWveelchmljBlEL1fTNNJryHP1h0Q
-  short-id: 57a9322ca488758c
+4) VLESS Reality | EU/CF-front 217.217.x
+vless://cb15cce9-73ed-4928-b38c-462f0732cbe9@217.217.254.126:2053?encryption=none&security=reality&sni=www.cloudflare.com&fp=chrome&pbk=VzRjuHwcY-nLqkEIJS4S1CpButKc90Bh0gDbphyZ0Tw&sid=87829de0e2bb82cb&type=tcp#EU-Reality-CF
+server=217.217.254.126 port=2053 uuid=cb15cce9-73ed-4928-b38c-462f0732cbe9 sni=www.cloudflare.com pbk=VzRjuHwcY-nLqkEIJS4S1CpButKc90Bh0gDbphyZ0Tw sid=87829de0e2bb82cb udp=true
 
-5) KR VLESS-Reality UDP 443
-name: KR-Reality-61.111.22
-type: vless
-server: 61.111.247.22
-port: 443
-uuid: 82C94E17-B27E-4356-82C1-2F9C79B0CF6D
-flow: xtls-rprx-vision
-udp: true
-tls: true
-client-fingerprint: random
-servername: gateway.icloud.com
-reality-opts:
-  public-key: F6Asg31ihdkFCmTdIuGjq_232PMYhLsCH9k3Npaa9VI
-  short-id: 0d9954fe36197887
+5) Trojan Reality | Kazakhstan
+trojan://dc0d27ba-34d2-4c8b-9cba-9ddbbb632748@91.212.166.6:8090?fp=firefox&pbk=6_P9RjLdVkjYb9OHiuckOipbY6DVBp3ajAIpywlCeAk&security=reality&sid=bc&sni=www.nvidia.com&type=tcp#KZ-Trojan-Reality-Nvidia
+server=91.212.166.6 port=8090 password=dc0d27ba-34d2-4c8b-9cba-9ddbbb632748 sni=www.nvidia.com pbk=6_P9RjLdVkjYb9OHiuckOipbY6DVBp3ajAIpywlCeAk sid=bc udp=true
 
-6) NL VLESS-Reality UDP
-name: NL-Reality-31.77
-type: vless
-server: 31.77.13.19
-port: 2063
-uuid: b18d5990-96eb-4587-a386-7f8ef7591e6a
-flow: xtls-rprx-vision
-udp: true
-tls: true
-client-fingerprint: chrome
-servername: rusbid.de
-reality-opts:
-  public-key: MMpt_jWc4J3oySBdf5sPDVRkiWlZmOObth6A1scM9BM
+6) VLESS Reality Vision | UAE
+vless://98d0fa1b-d778-477e-b897-4e2569c53178@128.254.186.11:443?encryption=none&flow=xtls-rprx-vision&fp=firefox&pbk=SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc&security=reality&sni=mother-earth.fyi&type=tcp#AE-Reality-Vision
+server=128.254.186.11 port=443 uuid=98d0fa1b-d778-477e-b897-4e2569c53178 flow=xtls-rprx-vision sni=mother-earth.fyi pbk=SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc udp=true
 
-7) NL VLESS-Reality UDP
-name: NL-Reality-129.101
-type: vless
-server: 129.101.120.5
-port: 37951
-uuid: 25284368-40d5-4abe-9f56-54a07e88a7af
-flow: xtls-rprx-vision
-udp: true
-tls: true
-client-fingerprint: firefox
-servername: nl2.dzvn.space
-reality-opts:
-  public-key: O6ZOpoz4sxon8iHxCd5EEvx2K9NUThd4SvOCBEvADEI
-  short-id: a9e21fd097d019c6
+7) VLESS Reality Vision | UAE alt
+vless://32721515-985b-4773-9e70-5d2e1b88a060@128.254.186.111:443?encryption=none&flow=xtls-rprx-vision&fp=firefox&pbk=SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc&security=reality&sni=jobinvest.ru&type=tcp#AE-Reality-Vision-2
+server=128.254.186.111 port=443 uuid=32721515-985b-4773-9e70-5d2e1b88a060 flow=xtls-rprx-vision sni=jobinvest.ru pbk=SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc udp=true
 
-8) PL VLESS-Reality UDP 443
-name: PL-Reality-31.77.59
-type: vless
-server: 31.77.59.225
-port: 443
-uuid: df23d74c-c5ea-441c-a573-9d7b0e88dd14
-flow: xtls-rprx-vision
-udp: true
-tls: true
-client-fingerprint: chrome
-servername: pl.jokervpn.space
-reality-opts:
-  public-key: D-Kt4_vBDB11deWnNmsK1OqF5Tt8tNcyuUPPXI0Y1yQ
-  short-id: f43f3666afdec470
+8) VLESS Reality Vision | UAE apple SNI
+vless://4f166057-2f4c-43d8-b5b3-6eb4413022e1@185.253.116.18:8443?encryption=none&flow=xtls-rprx-vision&fp=qq&pbk=kt-wshmPVd-J1dlU-tsXUoGag2-oFwYQ5UafScaAfzQ&security=reality&sni=apple.com&type=tcp#AE-Reality-Apple
+server=185.253.116.18 port=8443 uuid=4f166057-2f4c-43d8-b5b3-6eb4413022e1 flow=xtls-rprx-vision sni=apple.com pbk=kt-wshmPVd-J1dlU-tsXUoGag2-oFwYQ5UafScaAfzQ udp=true
 
-9) DE VLESS-Reality UDP 443
-name: DE-Reality-189.24
-type: vless
-server: 189.24.106.64
-port: 443
-uuid: 82C94E17-B27E-4356-82C1-2F9C79B0CF6D
-flow: xtls-rprx-vision
-udp: true
-tls: true
-client-fingerprint: random
-servername: gateway.icloud.com
-reality-opts:
-  public-key: mdNDY7PwSvwt56fQsDQvP15p7XU73PvFoWA6uKgNaX0
-  short-id: 13a744172777d168
+9) VLESS Reality Vision | UAE duckduckgo
+vless://fb9da2e5-aee6-4108-ab57-ffc36ce85656@185.253.116.38:443?encryption=none&flow=xtls-rprx-vision&fp=chrome&pbk=A2_2LyDmeLGGBqdtl7Zu2vRKghhewpmsMq8NmG9RqDw&security=reality&sid=b9cd333706f5&sni=duckduckgo.com&type=tcp#AE-Reality-DDG
+server=185.253.116.38 port=443 uuid=fb9da2e5-aee6-4108-ab57-ffc36ce85656 flow=xtls-rprx-vision sni=duckduckgo.com pbk=A2_2LyDmeLGGBqdtl7Zu2vRKghhewpmsMq8NmG9RqDw sid=b9cd333706f5 udp=true
 
-10) FI VLESS-Reality UDP 443
-name: FI-Reality-31.76
-type: vless
-server: 31.76.245.63
-port: 443
-uuid: d72f05b0-b182-4783-a6f2-21cecc7d841a
-flow: xtls-rprx-vision
-udp: true
-tls: true
-client-fingerprint: firefox
-servername: dzen.ru
-reality-opts:
-  public-key: SibLV5WBGdljTiUCmKx77KhHQfErCwjDMD_ZLoha3js
-  short-id: a1b2c3d4e5f67890
+10) Trojan Reality | Croatia (EU fallback)
+trojan://1e32fe52198848788f029c2ec244f347@212.192.14.227:9443?fp=random&pbk=GooqN94J-NNbWxkVsDb7NIQW4xXhkMGByk58ihKwX1Q&security=reality&sid=aabbccdd&sni=ya.ru&type=tcp#HR-Trojan-Reality
+server=212.192.14.227 port=9443 password=1e32fe52198848788f029c2ec244f347 sni=ya.ru pbk=GooqN94J-NNbWxkVsDb7NIQW4xXhkMGByk58ihKwX1Q sid=aabbccdd udp=true
