@@ -1,6 +1,6 @@
-updated=2026-10-01T22:47:59.419709+00:00
-sources=6
-raw=868
-dedup=344
-alive_capped=192
+updated=2026-10-01T23:00:55.436676+00:00
+sources=9
+raw=2688
+dedup=758
+alive_capped=600
 cap=998
