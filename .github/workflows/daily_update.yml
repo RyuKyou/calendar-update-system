@@ -41,10 +41,23 @@ jobs:
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add output/
           if git diff --staged --quiet; then
-            echo "No output changes to commit"
+            echo "No output changes"
             exit 0
           fi
           git commit -m "Update nodes $(date -u +%Y-%m-%dT%H:%MZ)"
-          # avoid race with concurrent pushes / other commits on main
-          git pull --rebase origin main
+
+          git fetch origin main
+          if ! git rebase origin/main; then
+            # generated files: always keep the commit being replayed (theirs in rebase)
+            git checkout --theirs -- output/clash_clean.yaml output/nodes_stats.txt 2>/dev/null || true
+            git add output/
+            GIT_EDITOR=true git rebase --continue || {
+              echo "Rebase still failing; force-with-lease push of our tree"
+              git rebase --abort || true
+              git fetch origin main
+              git reset --soft origin/main
+              git add output/
+              git commit -m "Update nodes $(date -u +%Y-%m-%dT%H:%MZ)" || true
+            }
+          fi
           git push origin HEAD:main
