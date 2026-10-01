@@ -1,6 +1,9 @@
-https://raw.githubusercontent.com/ovmvo/FreeSub/refs/heads/main/sub/permanent/mihomo.yaml | Mihomo 永久链/多地区/链接稳定
-https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/protocol/hysteria2/clash-0001.yaml | Hy2 分片/UDP混淆/小时刷新
-https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/by-country/clash-SG.yaml | Clash 新加坡/非日美台越泰
-https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/by-country/clash-KR.yaml | Clash 韩国/亚洲备份
-https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/by-country/clash-NL.yaml | Clash 荷兰/Reality+Hy2
-https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/by-country/clash-DE.yaml | Clash 德国/Hy2+Reality
+https://gitlab.com/free9999/ipupdate/-/raw/master/backup/img/1/2/ipp/quick/1/config.yaml | fixed-gitlab-ipupdate
+https://www.67867867.xyz/Alvin9999/PAC/refs/heads/master/backup/img/1/2/ipp/quick/1/config.yaml | fixed-alvin-mirror
+https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/protocol/hysteria2/clash-0001.yaml | fixed-hy2-0001
+https://raw.githubusercontent.com/ovmvo/FreeSub/refs/heads/main/sub/permanent/mihomo.yaml | Mihomo 永久链
+https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/clash.yaml | Clash 小时级聚合
+https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/by-country/clash-SG.yaml | Clash SG
+https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/by-country/clash-KR.yaml | Clash KR
+https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/by-country/clash-NL.yaml | Clash NL
+https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/by-country/clash-DE.yaml | Clash DE
