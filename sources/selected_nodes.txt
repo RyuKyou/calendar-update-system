@@ -1,26 +1,27 @@
-# Selected single nodes 2026-09-30 night | longevity first | avoid TW/JP/US/VN/TH
-# Share URI + field map. UDP enabled on listed items.
+# Selected single nodes 2026-10-01 | longevity first | avoid TW/JP/US/VN/TH
+# Public free nodes; prefer Reality/Hy2 + UDP. Quota unknown, treat as light use.
+# Share URI + field map.
 
-1) VLESS Reality Vision | SG (54.169.x)
-vless://49c0aac1-5e05-4f04-b624-248fc59e03c4@54.169.200.246:41688?encryption=none&flow=xtls-rprx-vision&fp=chrome&security=reality&sni=www.intel.com&pbk=srwIElIGTPs0kshpN1vvPsn4wixV_pLd56y_v9m0sTk&sid=7f342137c20387&type=tcp#SG-Reality-Vision-Intel
-server=54.169.200.246 port=41688 uuid=49c0aac1-5e05-4f04-b624-248fc59e03c4 flow=xtls-rprx-vision sni=www.intel.com pbk=srwIElIGTPs0kshpN1vvPsn4wixV_pLd56y_v9m0sTk sid=7f342137c20387 udp=true
+1) Hysteria2 | DE | cert pinned SNI
+hysteria2://d4cae7df-50a1-428c-bd62-881c8f3bbd90@dehys.superbuba.top:443?insecure=0&sni=dehys.superbuba.top#DE-HY2-443
+server=dehys.superbuba.top port=443 password=d4cae7df-50a1-428c-bd62-881c8f3bbd90 sni=dehys.superbuba.top skip-cert-verify=false udp=true
 
-2) VLESS WS+TLS | SG Linode
-vless://6e59d5c5-7aa3-4c36-a4c4-e3b899525ed2@139.162.51.49:2096?encryption=none&security=tls&sni=free-server.techsonic.dev&type=ws#SG-VLESS-WS-TLS
-server=139.162.51.49 port=2096 uuid=6e59d5c5-7aa3-4c36-a4c4-e3b899525ed2 network=ws tls=true sni=free-server.techsonic.dev udp=true
+2) Hysteria2 | FR | SNI microsoft
+hysteria2://dongtaiwang.com@62.210.124.146:22000?insecure=1&sni=www.microsoft.com#FR-HY2-22000
+server=62.210.124.146 port=22000 password=dongtaiwang.com sni=www.microsoft.com skip-cert-verify=true udp=true
 
-3) Hysteria2 | Asia (138.2.x Oracle-ish)
-hysteria2://f87376e17da040ed04c9665ce8972930@138.2.73.238:50160?insecure=1#HY2-138-50160
-server=138.2.73.238 port=50160 password=f87376e17da040ed04c9665ce8972930 skip-cert-verify=true udp=true
+3) Hysteria2 | NL | 443
+hysteria2://BWAFlp8g53@72.56.102.31:443?insecure=1&sni=72.56.102.31#NL-HY2-443
+server=72.56.102.31 port=443 password=BWAFlp8g53 sni=72.56.102.31 skip-cert-verify=true udp=true
 
-4) Hysteria2 | HK
-hysteria2://H7mP2xY9kJ4nQ8wR5tF6vB3z@202.146.222.174:443?insecure=1&sni=off#HK-HY2-443
-server=202.146.222.174 port=443 password=H7mP2xY9kJ4nQ8wR5tF6vB3z skip-cert-verify=true udp=true
+4) VLESS Reality gRPC | NL | sni cloudflare
+vless://11f21602-47aa-42e2-9149-69120f2e6df6@31.56.184.132:8443?encryption=none&security=reality&sni=cloudflare.com&fp=chrome&pbk=bzbe7QdD633ew_Er1_YWEhuCEHWurmDpxpz3fRzXr0A&sid=b4e3b0b55b8dc75b&type=grpc#NL-Reality-gRPC
+server=31.56.184.132 port=8443 uuid=11f21602-47aa-42e2-9149-69120f2e6df6 network=grpc tls=true sni=cloudflare.com pbk=bzbe7QdD633ew_Er1_YWEhuCEHWurmDpxpz3fRzXr0A sid=b4e3b0b55b8dc75b udp=true
 
-5) Trojan Reality | Kazakhstan
-trojan://dc0d27ba-34d2-4c8b-9cba-9ddbbb632748@91.212.166.6:8090?fp=firefox&pbk=6_P9RjLdVkjYb9OHiuckOipbY6DVBp3ajAIpywlCeAk&security=reality&sid=bc&sni=www.nvidia.com&type=tcp#KZ-Trojan-Reality-Nvidia
-server=91.212.166.6 port=8090 password=dc0d27ba-34d2-4c8b-9cba-9ddbbb632748 sni=www.nvidia.com pbk=6_P9RjLdVkjYb9OHiuckOipbY6DVBp3ajAIpywlCeAk sid=bc udp=true
+5) VLESS Reality gRPC | DE | sni dl.google.com
+vless://5d16ac22-6eea-426f-b778-6f4c2961faef@176.109.111.154:9881?encryption=none&security=reality&sni=dl.google.com&fp=firefox&pbk=Dfgu8Ey0M8Hz4gXGZAwQ3H9jLt2HByVsjAOTWiuKDB0&sid=aabbccdd&type=grpc#DE-Reality-gRPC
+server=176.109.111.154 port=9881 uuid=5d16ac22-6eea-426f-b778-6f4c2961faef network=grpc tls=true sni=dl.google.com pbk=Dfgu8Ey0M8Hz4gXGZAwQ3H9jLt2HByVsjAOTWiuKDB0 sid=aabbccdd udp=true
 
-6) VLESS Reality Vision | AE
-vless://98d0fa1b-d778-477e-b897-4e2569c53178@128.254.186.11:443?encryption=none&flow=xtls-rprx-vision&fp=firefox&pbk=SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc&security=reality&sni=mother-earth.fyi&type=tcp#AE-Reality-Vision
-server=128.254.186.11 port=443 uuid=98d0fa1b-d778-477e-b897-4e2569c53178 flow=xtls-rprx-vision sni=mother-earth.fyi pbk=SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc udp=true
+6) Hysteria2 | SG | domain entry, Asia backup
+hysteria2://qQe1z5kU8kN6SlKnDt9Ru3Qp@vpn-sg-001.fastervpn.world:443?insecure=1&sni=vpn-sg-001.fastervpn.world#SG-HY2-443
+server=vpn-sg-001.fastervpn.world port=443 password=qQe1z5kU8kN6SlKnDt9Ru3Qp sni=vpn-sg-001.fastervpn.world skip-cert-verify=true udp=true
