@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
-Fetch Clash YAML sources, TCP latency probe, dedupe, keep top N, write clean config.
-No stego, no encryption, no email.
+Fetch Clash YAML sources, TCP probe, dedupe, hard-cap top MAX_NODES (998).
+Order: lowest latency first, then unprobed fillers if still under cap.
 """
 
 from __future__ import annotations
@@ -18,10 +18,10 @@ import requests
 import yaml
 
 VALID_NETWORKS = {"tcp", "udp", "ws", "http", "h2", "grpc", "raw"}
-CONNECT_TIMEOUT = 3.0
-MAX_WORKERS = 32
-MAX_LATENCY_MS = 3000
-MAX_NODES = 998  # final list hard cap: lowest latency first
+CONNECT_TIMEOUT = 4.0
+MAX_WORKERS = 40
+MAX_LATENCY_MS = 5000
+MAX_NODES = 998
 
 
 def load_urls(path: Path) -> list[tuple[str, str]]:
@@ -106,8 +106,10 @@ def tcp_latency_ms(server: str, port: int) -> float | None:
         return None
 
 
-def probe_all(proxies: list[dict]) -> list[tuple[dict, float]]:
-    results: list[tuple[dict, float]] = []
+def probe_all(proxies: list[dict]) -> tuple[list[tuple[dict, float]], list[dict]]:
+    """Return (alive sorted by ms, dead/unreached)."""
+    alive: list[tuple[dict, float]] = []
+    dead: list[dict] = []
 
     def work(p: dict):
         ms = tcp_latency_ms(str(p["server"]), int(p["port"]))
@@ -117,22 +119,40 @@ def probe_all(proxies: list[dict]) -> list[tuple[dict, float]]:
         futs = [ex.submit(work, p) for p in proxies]
         for fut in as_completed(futs):
             p, ms = fut.result()
-            if ms is None:
-                continue
-            if MAX_LATENCY_MS and ms > MAX_LATENCY_MS:
-                continue
-            results.append((p, ms))
-    results.sort(key=lambda x: x[1])
-    return results
+            if ms is None or (MAX_LATENCY_MS and ms > MAX_LATENCY_MS):
+                dead.append(p)
+            else:
+                alive.append((p, ms))
+    alive.sort(key=lambda x: x[1])
+    return alive, dead
 
 
-def build_config(alive: list[tuple[dict, float]]) -> str:
+def select_top(
+    alive: list[tuple[dict, float]],
+    dead: list[dict],
+    cap: int,
+) -> list[tuple[dict, float]]:
+    """Prefer probed low-latency; fill with unprobed up to cap. Never exceed cap."""
+    chosen: list[tuple[dict, float]] = list(alive[:cap])
+    if len(chosen) >= cap:
+        return chosen[:cap]
+    need = cap - len(chosen)
+    for p in dead[:need]:
+        # large sentinel so they sort after real latency in name tag
+        chosen.append((p, 99999.0))
+    return chosen[:cap]
+
+
+def build_config(selected: list[tuple[dict, float]], cap: int) -> str:
     seen_names: set[str] = set()
     unique: list[dict] = []
-    for p, ms in alive:
+    for p, ms in selected:
         p = dict(p)
         base = p["name"]
-        label = f"{base} | {ms:.0f}ms"
+        if ms >= 99999.0:
+            label = f"{base} | untested"
+        else:
+            label = f"{base} | {ms:.0f}ms"
         if label in seen_names:
             k = 2
             while f"{label}-{k}" in seen_names:
@@ -170,10 +190,9 @@ def build_config(alive: list[tuple[dict, float]]) -> str:
             "MATCH,🚀 节点选择",
         ],
     }
-    header = (
-        f"# Ryukyou nodes | updated {now} | "
-        f"alive={len(unique)} | cap={MAX_NODES}\n"
-    )
+    n = len(unique)
+    header = f"# Ryukyou nodes | updated {now} | count={n} | hard_cap={cap}\n"
+    assert n <= cap, f"BUG: count {n} exceeds cap {cap}"
     return header + yaml.dump(cfg, allow_unicode=True, sort_keys=False, default_flow_style=False)
 
 
@@ -181,10 +200,13 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--sources", default="sources/urls.txt")
     ap.add_argument("--output-dir", default="output")
-    ap.add_argument("--skip-probe", action="store_true", help="skip TCP probe")
+    ap.add_argument("--skip-probe", action="store_true")
     ap.add_argument("--max-nodes", type=int, default=MAX_NODES)
     args = ap.parse_args()
-    cap = max(1, args.max_nodes)
+    cap = max(1, min(args.max_nodes, MAX_NODES))  # never above 998 default constant either
+    if args.max_nodes > MAX_NODES:
+        print(f"Note: clamping max-nodes to {MAX_NODES}")
+        cap = MAX_NODES
 
     entries = load_urls(Path(args.sources))
     if not entries:
@@ -195,7 +217,7 @@ def main():
     for i, (url, desc) in enumerate(entries, 1):
         try:
             print(f"[{i}/{len(entries)}] Fetch {url}")
-            r = requests.get(url, timeout=30)
+            r = requests.get(url, timeout=35)
             r.raise_for_status()
             found = extract_proxies(r.text)
             print(f"  -> {len(found)} proxies ({desc})")
@@ -215,29 +237,30 @@ def main():
 
     if args.skip_probe:
         alive = [(p, 0.0) for p in deduped]
+        dead = []
     else:
-        print(f"Probing TCP latency (timeout={CONNECT_TIMEOUT}s, workers={MAX_WORKERS}) ...")
-        alive = probe_all(deduped)
-        print(f"Alive (before cap): {len(alive)}")
+        print(f"Probing TCP (timeout={CONNECT_TIMEOUT}s, workers={MAX_WORKERS}) ...")
+        alive, dead = probe_all(deduped)
+        print(f"Probed OK: {len(alive)} | failed/slow: {len(dead)}")
 
-    # strongest = lowest TCP latency first, hard cap
-    alive = alive[:cap]
-    print(f"After top-{cap} cap: {len(alive)}")
+    selected = select_top(alive, dead, cap)
+    print(f"Final selected: {len(selected)} (hard_cap={cap})")
 
     out_dir = Path(args.output_dir)
     out_dir.mkdir(parents=True, exist_ok=True)
-    text = build_config(alive)
+    text = build_config(selected, cap)
     out = out_dir / "clash_clean.yaml"
     out.write_text(text, encoding="utf-8")
-    print(f"Wrote {out} ({len(text)} chars, {len(alive)} nodes)")
+    print(f"Wrote {out} nodes={len(selected)}")
 
     (out_dir / "nodes_stats.txt").write_text(
         f"updated={datetime.now(timezone.utc).isoformat()}\n"
         f"sources={len(entries)}\n"
         f"raw={len(all_proxies)}\n"
         f"dedup={len(deduped)}\n"
-        f"alive_capped={len(alive)}\n"
-        f"cap={cap}\n",
+        f"probed_ok={len(alive)}\n"
+        f"final_count={len(selected)}\n"
+        f"hard_cap={cap}\n",
         encoding="utf-8",
     )
     print("Done.")
