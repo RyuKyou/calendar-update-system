@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Fetch Clash YAML sources, TCP latency probe, dedupe, write one clean config.
+Fetch Clash YAML sources, TCP latency probe, dedupe, keep top N, write clean config.
 No stego, no encryption, no email.
 """
 
@@ -20,8 +20,8 @@ import yaml
 VALID_NETWORKS = {"tcp", "udp", "ws", "http", "h2", "grpc", "raw"}
 CONNECT_TIMEOUT = 3.0
 MAX_WORKERS = 32
-# keep nodes with latency under this (ms); 0 = keep all that connect
 MAX_LATENCY_MS = 3000
+MAX_NODES = 998  # final list hard cap: lowest latency first
 
 
 def load_urls(path: Path) -> list[tuple[str, str]]:
@@ -96,7 +96,6 @@ def proxy_key(p: dict) -> str:
 
 def tcp_latency_ms(server: str, port: int) -> float | None:
     try:
-        # skip obvious non-hostnames that need DNS special
         if not server or " " in server:
             return None
         t0 = time.perf_counter()
@@ -133,7 +132,6 @@ def build_config(alive: list[tuple[dict, float]]) -> str:
     for p, ms in alive:
         p = dict(p)
         base = p["name"]
-        # annotate latency for readability
         label = f"{base} | {ms:.0f}ms"
         if label in seen_names:
             k = 2
@@ -172,7 +170,10 @@ def build_config(alive: list[tuple[dict, float]]) -> str:
             "MATCH,🚀 节点选择",
         ],
     }
-    header = f"# Ryukyou nodes | updated {now} | alive={len(unique)}\n"
+    header = (
+        f"# Ryukyou nodes | updated {now} | "
+        f"alive={len(unique)} | cap={MAX_NODES}\n"
+    )
     return header + yaml.dump(cfg, allow_unicode=True, sort_keys=False, default_flow_style=False)
 
 
@@ -181,7 +182,9 @@ def main():
     ap.add_argument("--sources", default="sources/urls.txt")
     ap.add_argument("--output-dir", default="output")
     ap.add_argument("--skip-probe", action="store_true", help="skip TCP probe")
+    ap.add_argument("--max-nodes", type=int, default=MAX_NODES)
     args = ap.parse_args()
+    cap = max(1, args.max_nodes)
 
     entries = load_urls(Path(args.sources))
     if not entries:
@@ -200,7 +203,6 @@ def main():
         except Exception as e:
             print(f"  WARN: {e}")
 
-    # dedupe by identity key before probe
     deduped: list[dict] = []
     seen_keys: set[str] = set()
     for p in all_proxies:
@@ -216,7 +218,11 @@ def main():
     else:
         print(f"Probing TCP latency (timeout={CONNECT_TIMEOUT}s, workers={MAX_WORKERS}) ...")
         alive = probe_all(deduped)
-        print(f"Alive: {len(alive)}")
+        print(f"Alive (before cap): {len(alive)}")
+
+    # strongest = lowest TCP latency first, hard cap
+    alive = alive[:cap]
+    print(f"After top-{cap} cap: {len(alive)}")
 
     out_dir = Path(args.output_dir)
     out_dir.mkdir(parents=True, exist_ok=True)
@@ -225,13 +231,13 @@ def main():
     out.write_text(text, encoding="utf-8")
     print(f"Wrote {out} ({len(text)} chars, {len(alive)} nodes)")
 
-    # simple stats
     (out_dir / "nodes_stats.txt").write_text(
         f"updated={datetime.now(timezone.utc).isoformat()}\n"
         f"sources={len(entries)}\n"
         f"raw={len(all_proxies)}\n"
         f"dedup={len(deduped)}\n"
-        f"alive={len(alive)}\n",
+        f"alive_capped={len(alive)}\n"
+        f"cap={cap}\n",
         encoding="utf-8",
     )
     print("Done.")
