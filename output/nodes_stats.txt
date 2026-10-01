@@ -1,5 +1,5 @@
-updated=2026-10-01T07:22:08.123288+00:00
-sources=9
-raw=4024
-dedup=1761
-alive=1537
+updated=2026-10-01T18:13:01.760123+00:00
+sources=6
+raw=899
+dedup=380
+alive=199
