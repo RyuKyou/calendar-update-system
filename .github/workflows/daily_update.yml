@@ -1,15 +1,17 @@
-name: Daily Calendar Update
+name: Node Aggregate Update
 
 on:
   push:
     paths:
       - 'sources/urls.txt'
+      - 'scripts/update_nodes.py'
   schedule:
-    - cron: "0 2 * * *"
+    # every 6 hours UTC
+    - cron: "0 */6 * * *"
   workflow_dispatch:
 
 jobs:
-  generate:
+  update:
     runs-on: ubuntu-latest
     permissions:
       contents: write
@@ -26,80 +28,16 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install -r requirements.txt
+          pip install requests PyYAML
 
-      - name: Generate stego calendar files
-        env:
-          STEGO_PASSWORD: ${{ secrets.STEGO_PASSWORD }}
+      - name: Fetch, probe, dedup, write clash_clean.yaml
         run: |
-          python scripts/encrypt_and_embed.py --output-dir output
+          python scripts/update_nodes.py --output-dir output
 
-      - name: Commit and push results
+      - name: Commit and push
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add output/
-          git diff --staged --quiet || git commit -m "Update calendar media $(date -u +%Y-%m-%d)"
+          git diff --staged --quiet || git commit -m "Update nodes $(date -u +%Y-%m-%dT%H:%MZ)"
           git push
-
-      - name: Check email secrets and build attachments
-        id: mail
-        run: |
-          if [ -z "${{ secrets.QQ_EMAIL }}" ]; then
-            echo "ERROR: Secret QQ_EMAIL is empty."
-            exit 1
-          fi
-          if [ -z "${{ secrets.QQ_AUTH_CODE }}" ]; then
-            echo "ERROR: Secret QQ_AUTH_CODE is empty."
-            exit 1
-          fi
-          ls -lh output/ || true
-
-          ATTACH=""
-          if [ -f output/backup_scrambled.txt ]; then
-            ATTACH="output/backup_scrambled.txt"
-          fi
-          if [ -f output/calendar.png ]; then
-            ATTACH="${ATTACH:+$ATTACH,}output/calendar.png"
-          fi
-          if [ -f output/calendar.wav ]; then
-            ATTACH="${ATTACH:+$ATTACH,}output/calendar.wav"
-          fi
-          echo "attachments=$ATTACH" >> "$GITHUB_OUTPUT"
-
-          # email body: always include scrambled text (fallback when stego skipped)
-          {
-            echo "body<<MAILBODY_EOF"
-            echo "Ryukyou Calendar 每日更新"
-            echo ""
-            if [ -f output/stego_status.txt ]; then
-              echo "隐写状态: $(cat output/stego_status.txt)"
-            fi
-            echo "附件含 backup_scrambled.txt（打乱密文，可单独解密）。"
-            echo "若有 calendar.png / calendar.wav 则为隐写载体。"
-            echo "仓库: https://github.com/RyuKyou/calendar-update-system"
-            echo ""
-            echo "===== SCRAMBLED BACKUP (正文备份) ====="
-            if [ -f output/backup_scrambled.txt ]; then
-              # cap body size ~400KB for QQ stability
-              head -c 400000 output/backup_scrambled.txt
-              echo ""
-            else
-              echo "(无 scrambled 文件)"
-            fi
-            echo "MAILBODY_EOF"
-          } >> "$GITHUB_OUTPUT"
-
-      - name: Send via QQ email
-        uses: dawidd6/action-send-mail@v3
-        with:
-          server_address: smtp.qq.com
-          server_port: 465
-          secure: true
-          username: ${{ secrets.QQ_EMAIL }}
-          password: ${{ secrets.QQ_AUTH_CODE }}
-          subject: Ryukyou Calendar 每日更新
-          to: ${{ secrets.QQ_EMAIL }}
-          from: Ryukyou Calendar <${{ secrets.QQ_EMAIL }}>
-          body: ${{ steps.mail.outputs.body }}
-          attachments: ${{ steps.mail.outputs.attachments }}
