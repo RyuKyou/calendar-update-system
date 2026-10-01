@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 """
-Fetch Clash YAML sources, TCP probe, dedupe, hard-cap top MAX_NODES (998).
-Order: lowest latency first, then unprobed fillers if still under cap.
+Fetch Clash YAML sources, TCP probe, dedupe.
+Only keep nodes that connect successfully; hard-cap at 998 (lowest latency first).
+Failed / timeout nodes are discarded.
 """
 
 from __future__ import annotations
@@ -18,9 +19,8 @@ import requests
 import yaml
 
 VALID_NETWORKS = {"tcp", "udp", "ws", "http", "h2", "grpc", "raw"}
-CONNECT_TIMEOUT = 4.0
+CONNECT_TIMEOUT = 6.0  # relaxed timeout
 MAX_WORKERS = 40
-MAX_LATENCY_MS = 5000
 MAX_NODES = 998
 
 
@@ -106,41 +106,21 @@ def tcp_latency_ms(server: str, port: int) -> float | None:
         return None
 
 
-def probe_all(proxies: list[dict]) -> tuple[list[tuple[dict, float]], list[dict]]:
-    """Return (alive sorted by ms, dead/unreached)."""
+def probe_alive(proxies: list[dict]) -> list[tuple[dict, float]]:
     alive: list[tuple[dict, float]] = []
-    dead: list[dict] = []
 
     def work(p: dict):
-        ms = tcp_latency_ms(str(p["server"]), int(p["port"]))
-        return p, ms
+        return p, tcp_latency_ms(str(p["server"]), int(p["port"]))
 
     with ThreadPoolExecutor(max_workers=MAX_WORKERS) as ex:
         futs = [ex.submit(work, p) for p in proxies]
         for fut in as_completed(futs):
             p, ms = fut.result()
-            if ms is None or (MAX_LATENCY_MS and ms > MAX_LATENCY_MS):
-                dead.append(p)
-            else:
-                alive.append((p, ms))
+            if ms is None:
+                continue  # failed / timeout -> drop
+            alive.append((p, ms))
     alive.sort(key=lambda x: x[1])
-    return alive, dead
-
-
-def select_top(
-    alive: list[tuple[dict, float]],
-    dead: list[dict],
-    cap: int,
-) -> list[tuple[dict, float]]:
-    """Prefer probed low-latency; fill with unprobed up to cap. Never exceed cap."""
-    chosen: list[tuple[dict, float]] = list(alive[:cap])
-    if len(chosen) >= cap:
-        return chosen[:cap]
-    need = cap - len(chosen)
-    for p in dead[:need]:
-        # large sentinel so they sort after real latency in name tag
-        chosen.append((p, 99999.0))
-    return chosen[:cap]
+    return alive
 
 
 def build_config(selected: list[tuple[dict, float]], cap: int) -> str:
@@ -149,10 +129,7 @@ def build_config(selected: list[tuple[dict, float]], cap: int) -> str:
     for p, ms in selected:
         p = dict(p)
         base = p["name"]
-        if ms >= 99999.0:
-            label = f"{base} | untested"
-        else:
-            label = f"{base} | {ms:.0f}ms"
+        label = f"{base} | {ms:.0f}ms"
         if label in seen_names:
             k = 2
             while f"{label}-{k}" in seen_names:
@@ -191,8 +168,9 @@ def build_config(selected: list[tuple[dict, float]], cap: int) -> str:
         ],
     }
     n = len(unique)
-    header = f"# Ryukyou nodes | updated {now} | count={n} | hard_cap={cap}\n"
-    assert n <= cap, f"BUG: count {n} exceeds cap {cap}"
+    if n > cap:
+        raise RuntimeError(f"BUG: {n} > hard_cap {cap}")
+    header = f"# Ryukyou nodes | updated {now} | count={n} | hard_cap={cap} | only_reachable\n"
     return header + yaml.dump(cfg, allow_unicode=True, sort_keys=False, default_flow_style=False)
 
 
@@ -200,13 +178,9 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--sources", default="sources/urls.txt")
     ap.add_argument("--output-dir", default="output")
-    ap.add_argument("--skip-probe", action="store_true")
     ap.add_argument("--max-nodes", type=int, default=MAX_NODES)
     args = ap.parse_args()
-    cap = max(1, min(args.max_nodes, MAX_NODES))  # never above 998 default constant either
-    if args.max_nodes > MAX_NODES:
-        print(f"Note: clamping max-nodes to {MAX_NODES}")
-        cap = MAX_NODES
+    cap = max(1, min(int(args.max_nodes), MAX_NODES))
 
     entries = load_urls(Path(args.sources))
     if not entries:
@@ -235,32 +209,28 @@ def main():
         deduped.append(p)
     print(f"After dedup: {len(deduped)} / {len(all_proxies)}")
 
-    if args.skip_probe:
-        alive = [(p, 0.0) for p in deduped]
-        dead = []
-    else:
-        print(f"Probing TCP (timeout={CONNECT_TIMEOUT}s, workers={MAX_WORKERS}) ...")
-        alive, dead = probe_all(deduped)
-        print(f"Probed OK: {len(alive)} | failed/slow: {len(dead)}")
+    print(f"Probing TCP (timeout={CONNECT_TIMEOUT}s) ...")
+    alive = probe_alive(deduped)
+    print(f"Reachable: {len(alive)}")
 
-    selected = select_top(alive, dead, cap)
-    print(f"Final selected: {len(selected)} (hard_cap={cap})")
+    selected = alive[:cap]
+    print(f"Final: {len(selected)} (hard_cap={cap}, unreachable dropped)")
 
     out_dir = Path(args.output_dir)
     out_dir.mkdir(parents=True, exist_ok=True)
     text = build_config(selected, cap)
-    out = out_dir / "clash_clean.yaml"
-    out.write_text(text, encoding="utf-8")
-    print(f"Wrote {out} nodes={len(selected)}")
+    (out_dir / "clash_clean.yaml").write_text(text, encoding="utf-8")
+    print(f"Wrote output/clash_clean.yaml nodes={len(selected)}")
 
     (out_dir / "nodes_stats.txt").write_text(
         f"updated={datetime.now(timezone.utc).isoformat()}\n"
         f"sources={len(entries)}\n"
         f"raw={len(all_proxies)}\n"
         f"dedup={len(deduped)}\n"
-        f"probed_ok={len(alive)}\n"
+        f"reachable={len(alive)}\n"
         f"final_count={len(selected)}\n"
-        f"hard_cap={cap}\n",
+        f"hard_cap={cap}\n"
+        f"policy=only_reachable\n",
         encoding="utf-8",
     )
     print("Done.")
