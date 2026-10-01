@@ -1,6 +1,8 @@
-updated=2026-10-01T23:00:55.436676+00:00
+updated=2026-10-01T23:09:47.962718+00:00
 sources=9
 raw=2688
 dedup=758
-alive_capped=600
-cap=998
+reachable=601
+final_count=601
+hard_cap=998
+policy=only_reachable
