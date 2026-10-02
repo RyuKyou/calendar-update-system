@@ -1,0 +1,459 @@
+mixed-port: 7890
+allow-lan: true
+mode: rule
+log-level: info
+ipv6: false
+tcp-concurrent: true
+unified-delay: true
+profile:
+  store-selected: true
+  store-fake-ip: true
+
+# ==================== TUN & 嗅探 ====================
+tun:
+  enable: true
+  stack: mixed
+  mtu: 9000
+  dns-hijack:
+    - any:53
+    - tcp://any:53
+    - 0.0.0.0:53          # 额外强制劫持本地 53
+  auto-detect-interface: true
+  auto-route: true
+  auto-redirect: true
+  strict-route: true
+
+sniffer:
+  enable: true
+  override-destination: true
+  parse-pure-ip: true
+  force-dns-mapping: true
+  sniff:
+    HTTP:
+      ports: [80, 8080-8880]
+    TLS:
+      ports: [443, 8443]
+    QUIC:
+      ports: [443]
+
+# ==================== DNS（防泄漏强化版） ====================
+dns:
+  enable: true
+  listen: 0.0.0.0:1053
+  ipv6: false
+  enhanced-mode: fake-ip
+  fake-ip-range: 198.18.0.0/16
+  use-system-hosts: false
+  prefer-h3: false
+  respect-rules: true                    # 保持开启，让 DNS 也走规则
+  # 强制所有 DNS 流量都经 Clash 处理
+  default-nameserver:
+    - 223.5.5.5
+    - 119.29.29.29
+  proxy-server-nameserver:               # 节点域名解析用国内 DoH（快且不泄漏）
+    - https://doh.pub/dns-query
+    - https://dns.alidns.com/dns-query
+  direct-nameserver:
+    - https://doh.pub/dns-query
+    - https://dns.alidns.com/dns-query
+  nameserver:                            # 默认用国内 DoH（国内网站快）
+    - https://doh.pub/dns-query
+    - https://dns.alidns.com/dns-query
+  fallback:                              # 国外域名强制走国外 DoH（防污染+防泄漏）
+    - https://1.1.1.1/dns-query
+    - https://dns.google/dns-query
+    - tls://8.8.8.8:853
+  nameserver-policy:
+    'geosite:cn':
+      - https://doh.pub/dns-query
+      - https://dns.alidns.com/dns-query
+    'geosite:geolocation-!cn':
+      - https://1.1.1.1/dns-query
+      - https://dns.google/dns-query
+    '+.msftconnecttest.com': system
+    '+.msftncsi.com': system
+  fallback-filter:
+    geoip: true
+    geoip-code: CN
+    ipcidr:
+      - 240.0.0.0/4
+  fake-ip-filter:
+    - '*.lan'
+    - '*.local'
+    - '*.localhost'
+    - 'time.windows.com'
+    - 'time.nist.gov'
+    - '*.ntp.org'
+    - '+.msftconnecttest.com'
+    - '+.msftncsi.com'
+    - 'localhost.ptlogin2.qq.com'
+    - 'localhost.sec.qq.com'
+    - '+.stun.*.*'
+    - '+.stun.*.*.*'
+
+# ==================== 策略组 ====================
+proxy-groups:
+
+  - name: 🚀 手动切换
+    type: select
+    include-all: true
+    proxies:
+      - ♻️ 自动选择
+      - 🚀 故障轉移
+      - ⚖️ 負載均衡
+  # - 🤖 AI
+      - DIRECT
+
+  - name: ♻️ 自动选择
+    type: url-test
+    include-all: true
+    url: https://cp.cloudflare.com/generate_204
+    interval: 300
+    tolerance: 50
+
+  - name: 🚀 故障轉移
+    type: fallback
+    include-all: true
+    url: https://www.gstatic.com/generate_204
+    interval: 300
+    tolerance: 50
+
+  # ===== AI 专用自动测速组（优先保证 Grok） =====
+  - name: 🤖 AI
+    type: select
+    include-all: true
+    proxies:
+      - REJECT
+      - 🚀 手动切换
+      - ♻️ 自动选择
+      - 🚀 故障轉移
+      - DIRECT
+    #url: https://cp.cloudflare.com/generate_204   # 轻量稳定，对 Grok / GPT / Gemini 友好
+    #interval: 300
+    #tolerance: 40
+    # 如需进一步过滤节点可加filter: '(US|Singapore|SG|JP|Japan)' 
+
+  - name: 🔞 Porn
+    type: select
+    include-all: true
+    proxies:
+      - REJECT
+      - 🚀 手动切换
+      - ♻️ 自动选择
+      - 🚀 故障轉移
+      - DIRECT
+
+  - name: 🛑 广告屏蔽
+    type: select
+    proxies:
+      - REJECT
+      - 🚀 手动切换
+      - ♻️ 自动选择
+      - DIRECT
+
+  - name: Microsoft
+    type: select
+    proxies:
+      - DIRECT
+      - 🚀 手动切换
+      - ♻️ 自动选择
+
+  - name: 🐟 漏网之鱼
+    type: select
+    include-all: true
+    proxies:
+      - 🚀 故障轉移
+      - ♻️ 自动选择
+      - 🚀 手动切换
+      - DIRECT
+
+  - name: 🎯 全球直连/版权区
+    type: select
+    proxies:
+      - DIRECT
+      - 🚀 手动切换
+
+
+  - name: ⚖️ 負載均衡
+    type: load-balance
+    strategy: consistent-hashing
+    include-all: true
+    url: https://www.gstatic.com/generate_204
+    interval: 3600
+    tolerance: 50
+
+
+# ==================== 规则（严格优先级） ====================
+rules:
+  # ---------- 局域网 & 私有地址 ----------
+  - IP-CIDR,192.168.0.0/16,DIRECT,no-resolve
+  - IP-CIDR,10.0.0.0/8,DIRECT,no-resolve
+  - IP-CIDR,172.16.0.0/12,DIRECT,no-resolve
+  - IP-CIDR,127.0.0.0/8,DIRECT,no-resolve
+  - IP-CIDR,100.64.0.0/10,DIRECT,no-resolve
+  - IP-CIDR,224.0.0.0/4,DIRECT,no-resolve
+  - IP-CIDR6,fe80::/10,DIRECT,no-resolve
+  - DOMAIN-SUFFIX,local,DIRECT
+  - DOMAIN-SUFFIX,localhost,DIRECT
+  - DOMAIN-SUFFIX,lan,DIRECT
+
+  # ---------- Windows 更新 + Edge + Defender 强制直连 ----------
+  - DOMAIN-SUFFIX,windowsupdate.com,Microsoft
+  - DOMAIN-SUFFIX,update.microsoft.com,Microsoft
+  - DOMAIN-SUFFIX,download.windowsupdate.com,Microsoft
+  - DOMAIN-SUFFIX,download.microsoft.com,Microsoft
+  - DOMAIN-SUFFIX,delivery.mp.microsoft.com,Microsoft
+  - DOMAIN-SUFFIX,do.dsp.mp.microsoft.com,Microsoft
+  - DOMAIN-SUFFIX,mp.microsoft.com,Microsoft
+  - DOMAIN-SUFFIX,edge.microsoft.com,Microsoft
+  - DOMAIN-SUFFIX,microsoftedge.microsoft.com,Microsoft
+  - DOMAIN-SUFFIX,msedge.net,Microsoft
+  - DOMAIN-SUFFIX,edgeassetservice.azureedge.net,Microsoft
+  - DOMAIN-SUFFIX,storeedgefd.dsx.mp.microsoft.com,Microsoft
+  - DOMAIN-SUFFIX,edge.nelreports.net,Microsoft
+  - DOMAIN-SUFFIX,nelreports.net,Microsoft
+  - DOMAIN-SUFFIX,displaycatalog.mp.microsoft.com,Microsoft
+  - DOMAIN-KEYWORD,msedge,Microsoft
+  - DOMAIN-KEYWORD,edgefd,Microsoft
+  - DOMAIN-SUFFIX,wd.microsoft.com,Microsoft
+  - DOMAIN-SUFFIX,definitionupdates.microsoft.com,Microsoft
+  - DOMAIN-SUFFIX,smartscreen.microsoft.com,Microsoft
+  - DOMAIN-KEYWORD,defender,Microsoft
+  - DOMAIN-SUFFIX,microsoft.com,Microsoft
+  - DOMAIN-SUFFIX,office.com,Microsoft
+  - DOMAIN-SUFFIX,live.com,Microsoft
+  - DOMAIN-SUFFIX,office.net,Microsoft
+  - DOMAIN-SUFFIX,azureedge.net,Microsoft
+  - DOMAIN-SUFFIX,msftncsi.com,Microsoft
+  - DOMAIN-SUFFIX,msftconnecttest.com,Microsoft
+
+  # ---------- Steam ----------
+  - DOMAIN-SUFFIX,steamcontent.com,DIRECT
+  - DOMAIN-SUFFIX,steampowered.com,🚀 手动切换
+  - DOMAIN-SUFFIX,steamcommunity.com,🚀 手动切换
+
+  # ---------- 广告 / NSFW ----------
+  - RULE-SET,adblock,🛑 广告屏蔽
+  - RULE-SET,NSFW,🔞 Porn
+
+  # ---------- 下载 / 局域网 ----------
+  - RULE-SET,Download,DIRECT
+  - RULE-SET,Lan,DIRECT
+  - RULE-SET,Lan_CN,DIRECT
+  - RULE-SET,private,DIRECT
+
+  # ---------- 国内核心 ----------
+  - RULE-SET,China,DIRECT
+  - RULE-SET,Apple,DIRECT
+  - RULE-SET,ChinaMedia,DIRECT
+  - RULE-SET,Bilibili,🎯 全球直连/版权区
+  - RULE-SET,Firefox,DIRECT
+
+  # ---------- 微软（规则集兜底） ----------
+  - RULE-SET,Microsoft,Microsoft
+  - RULE-SET,OneDrive,🚀 手动切换
+
+  # ---------- AI 优先（Grok 最重要） ----------
+  - RULE-SET,GPT_AI,🤖 AI
+  - RULE-SET,category-ai,🤖 AI
+  - DOMAIN-SUFFIX,x.ai,🤖 AI
+  - DOMAIN-SUFFIX,grok.com,🤖 AI
+  - DOMAIN-SUFFIX,grok.x.ai,🤖 AI
+  - DOMAIN-KEYWORD,xai,🤖 AI
+
+  # ---------- 其他需要代理的服务 ----------
+  - RULE-SET,Google,🚀 手动切换
+  - RULE-SET,GoogleDrive,🚀 手动切换
+  - RULE-SET,Github,🚀 手动切换
+  - RULE-SET,Developer,🚀 手动切换
+  - RULE-SET,Telegram,🚀 手动切换
+  - RULE-SET,YouTube,🚀 手动切换
+  - RULE-SET,Netflix,🚀 手动切换
+  - RULE-SET,Bahamut,🚀 手动切换
+  - RULE-SET,GlobalMedia,🚀 手动切换
+  - RULE-SET,Twitter,🚀 手动切换
+
+  # ---------- 最终兜底 ----------
+  - GEOIP,CN,DIRECT,no-resolve
+  - MATCH,🐟 漏网之鱼
+
+# ==================== 规则集提供者 ====================
+rule-providers:
+  # 广告（更新勤、误杀相对低）
+  adblock:
+    type: http
+    behavior: domain
+    format: mrs
+    path: ./RuleSet/adblock.mrs
+    url: https://raw.githubusercontent.com/217heidai/adblockfilters/main/rules/adblockmihomo.mrs
+    interval: 86400
+
+  NSFW:
+    type: http
+    behavior: classical
+    path: ./RuleSet/NSFW.yaml
+    url: https://cdn.jsdelivr.net/gh/tanmoumou252/NSFWruleset/NSFW.yaml
+    interval: 86400
+
+  private:
+    type: http
+    behavior: domain
+    url: https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/private.txt
+    path: ./RuleSet/private.yaml
+    interval: 86400
+
+  China:
+    type: http
+    behavior: classical
+    path: ./RuleSet/China.yaml
+    url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/China/China.yaml
+    interval: 86400
+
+  Google:
+    type: http
+    behavior: classical
+    path: ./RuleSet/Google.yaml
+    url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Google/Google.yaml
+    interval: 86400
+
+  GoogleDrive:
+    type: http
+    behavior: classical
+    path: ./RuleSet/GoogleDrive.yaml
+    url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/GoogleDrive/GoogleDrive.yaml
+    interval: 86400
+
+  OneDrive:
+    type: http
+    behavior: classical
+    path: ./RuleSet/OneDrive.yaml
+    url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/OneDrive/OneDrive.yaml
+    interval: 86400
+
+  Microsoft:
+    type: http
+    behavior: classical
+    path: ./RuleSet/Microsoft.yaml
+    url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Microsoft/Microsoft.yaml
+    interval: 86400
+
+  Github:
+    type: http
+    behavior: classical
+    path: ./RuleSet/Github.yaml
+    url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/GitHub/GitHub.yaml
+    interval: 86400
+
+  Apple:
+    type: http
+    behavior: classical
+    path: ./RuleSet/Apple.yaml
+    url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Apple/Apple.yaml
+    interval: 86400
+
+  Telegram:
+    type: http
+    behavior: classical
+    path: ./RuleSet/Telegram.yaml
+    url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Telegram/Telegram.yaml
+    interval: 86400
+
+  YouTube:
+    type: http
+    behavior: classical
+    path: ./RuleSet/YouTube.yaml
+    url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/YouTube/YouTube.yaml
+    interval: 86400
+
+  Netflix:
+    type: http
+    behavior: classical
+    path: ./RuleSet/Netflix.yaml
+    url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Netflix/Netflix.yaml
+    interval: 86400
+
+  Bahamut:
+    type: http
+    behavior: classical
+    path: ./RuleSet/Bahamut.yaml
+    url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Bahamut/Bahamut.yaml
+    interval: 86400
+
+  GlobalMedia:
+    type: http
+    behavior: classical
+    path: ./RuleSet/GlobalMedia.yaml
+    url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/GlobalMedia/GlobalMedia.yaml
+    interval: 86400
+
+  Bilibili:
+    type: http
+    behavior: classical
+    path: ./RuleSet/Bilibili.yaml
+    url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/BiliBili/BiliBili.yaml
+    interval: 86400
+
+  ChinaMedia:
+    type: http
+    behavior: classical
+    path: ./RuleSet/ChinaMedia.yaml
+    url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/ChinaMedia/ChinaMedia.yaml
+    interval: 86400
+
+  Developer:
+    type: http
+    behavior: classical
+    path: ./RuleSet/Developer.yaml
+    url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Developer/Developer.yaml
+    interval: 86400
+
+  Download:
+    type: http
+    behavior: classical
+    path: ./RuleSet/Download.yaml
+    url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Download/Download.yaml
+    interval: 86400
+
+  Lan:
+    type: http
+    behavior: classical
+    path: ./RuleSet/Lan.yaml
+    url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Lan/Lan.yaml
+    interval: 86400
+
+  Lan_CN:
+    type: http
+    behavior: classical
+    path: ./RuleSet/Lan_CN.yaml
+    url: https://cdn.jsdelivr.net/gh/tanmoumou252/NSFWruleset/Lan_CN.yaml
+    interval: 86400
+
+  Firefox:
+    type: http
+    behavior: classical
+    path: ./RuleSet/Firefox.yaml
+    url: https://cdn.jsdelivr.net/gh/tanmoumou252/firefoxruleset/Firefox.yaml
+    interval: 86400
+
+  GPT_AI:
+    type: http
+    behavior: classical
+    path: ./RuleSet/GPT_AI.yaml
+    url: https://cdn.jsdelivr.net/gh/tanmoumou252/NSFWruleset/GPT_AI.yaml
+    interval: 86400
+
+  # MetaCubeX 官方 AI 分类（更新快）
+  category-ai:
+    type: http
+    behavior: domain
+    format: mrs
+    path: ./RuleSet/category-ai.mrs
+    url: https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/category-ai-!cn.mrs
+    interval: 86400
+
+  Twitter:
+    type: http
+    behavior: classical
+    path: ./RuleSet/Twitter.yaml
+    url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script/rule/Clash/Twitter/Twitter.yaml
+    interval: 86400
