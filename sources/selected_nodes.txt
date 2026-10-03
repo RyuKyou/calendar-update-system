@@ -1,27 +1,104 @@
-# Selected single nodes 2026-10-02 | longevity first | avoid TW/JP/US/VN/TH
-# Pulled from hourly-verified public pools. Free shared nodes; quota unknown, light use only.
-# UDP assumed for Hy2 (QUIC) and listed VLESS. Not a guarantee of multi-day survival.
+# 精選單節點 2026-10-03
+# 原則：壽命優先；回避台灣/日本/美國/越南/泰國；Reality 與 Hysteria2 優先；均標 UDP。
+# 來源：Au1rxx 小時級已轉發驗證公開池。免費共享，額度不穩，僅作補救窗口，勿登敏感帳號。
 
-1) Hysteria2 | DE | domain entry, 443
-hysteria2://mkL3AfdSZIpTWRB9TcWPn9vywPGN89MRHg3ToRDj@de.1.23.h2corp.org:443?insecure=1&sni=germany3.h2corp.local#DE-HY2-443
-server=de.1.23.h2corp.org port=443 password=mkL3AfdSZIpTWRB9TcWPn9vywPGN89MRHg3ToRDj sni=germany3.h2corp.local skip-cert-verify=true udp=true
+## 1. ID-Reality-vless-1598400047
+# 印尼 / VLESS+Reality+Vision / UDP / 小池，被集中打擊概率較低
+proxies:
+  - name: ID-Reality-vless-1598400047
+    type: vless
+    server: 103.172.197.3
+    port: 16006
+    uuid: f8c9d2a1-da40-4f90-b671-11772a0b13d6
+    network: raw
+    tls: true
+    udp: true
+    flow: xtls-rprx-vision
+    servername: www.cloudflare.com
+    client-fingerprint: firefox
+    reality-opts:
+      public-key: ll7JTP628PuBMZJvx6fuhGSmCRSURnReAetmhCEL8GU
+      short-id: ""
 
-2) VLESS Reality gRPC | DE | sni support-shield.nvidia.no
-vless://3ada8d7b-806e-47e0-9cac-aa35061104ce@64.188.98.179:443?encryption=none&security=reality&sni=support-shield.nvidia.no&fp=chrome&pbk=I88bya0Wf4iHIQb19bHZII3UlJ-oWBRbcnzvF0WFKyg&sid=bf6f&type=grpc#DE-Reality-gRPC
-server=64.188.98.179 port=443 uuid=3ada8d7b-806e-47e0-9cac-aa35061104ce network=grpc tls=true sni=support-shield.nvidia.no pbk=I88bya0Wf4iHIQb19bHZII3UlJ-oWBRbcnzvF0WFKyg sid=bf6f fp=chrome udp=true
+## 2. DE-Reality-vless-1635944400
+# 德國 / VLESS+Reality+Vision / 443 / UDP
+proxies:
+  - name: DE-Reality-vless-1635944400
+    type: vless
+    server: 50.7.157.234
+    port: 443
+    uuid: 75c4c6b1-dc9a-4c59-9985-df8af6e9c707
+    network: tcp
+    tls: true
+    udp: true
+    flow: xtls-rprx-vision
+    servername: edge-fr.extazy.net
+    client-fingerprint: random
+    reality-opts:
+      public-key: ygxQyBcJzlLgpSl3MCRDDiFET4TT-3wxa4GdG1obkCY
+      short-id: ba4b2afa9e7193ea
 
-3) Hysteria2 | NL | 443
-hysteria2://BWAFlp8g53@72.56.102.31:443?insecure=1&sni=72.56.102.31#NL-HY2-443
-server=72.56.102.31 port=443 password=BWAFlp8g53 sni=72.56.102.31 skip-cert-verify=true udp=true
+## 3. NL-Reality-vless-1636626762
+# 荷蘭 / VLESS+Reality+Vision / 443 / UDP
+proxies:
+  - name: NL-Reality-vless-1636626762
+    type: vless
+    server: nl3.freekeysh110.online
+    port: 443
+    uuid: 9b13807b-93e0-43c3-bd31-d0b0ed0c1d6b
+    network: tcp
+    tls: true
+    udp: true
+    flow: xtls-rprx-vision
+    servername: nl3.freekeysh110.online
+    client-fingerprint: edge
+    reality-opts:
+      public-key: zVEDSKwQEIM6xRD7YEhJakteNI2xPK3xhhKulDo_vWg
+      short-id: b664d93e9d7a04f1
 
-4) Hysteria2 | FR | sni microsoft, port 22000
-hysteria2://dongtaiwang.com@62.210.124.146:22000?insecure=1&sni=www.microsoft.com#FR-HY2-22000
-server=62.210.124.146 port=22000 password=dongtaiwang.com sni=www.microsoft.com skip-cert-verify=true udp=true
+## 4. NL-Hy2-1591550745
+# 荷蘭 / Hysteria2 / UDP 原生 / 有 SNI
+proxies:
+  - name: NL-Hy2-1591550745
+    type: hysteria2
+    server: 77.74.123.103
+    port: 8443
+    password: s0_sdK93x9wer_D02Lz9cvK3_Sa014Oakl_C2z
+    sni: grape-test-italy.dynuddns.net
+    skip-cert-verify: false
 
-5) VLESS Reality TCP | GB | sni apple.com
-vless://8e790f25-1d71-4601-9fb0-d503931dcfca@51.89.194.151:2053?encryption=none&security=reality&sni=www.apple.com&fp=random&pbk=xPEBx4wUmwAAv4ikUALNBf5wH6TRhyeQ0Q2pcNELsV0&sid=d051f678212f9d54&type=tcp#GB-Reality-TCP
-server=51.89.194.151 port=2053 uuid=8e790f25-1d71-4601-9fb0-d503931dcfca network=tcp tls=true sni=www.apple.com pbk=xPEBx4wUmwAAv4ikUALNBf5wH6TRhyeQ0Q2pcNELsV0 sid=d051f678212f9d54 fp=random udp=true
+## 5. KR-Reality-vless-12945899
+# 韓國 / VLESS+Reality+Vision / UDP
+proxies:
+  - name: KR-Reality-vless-12945899
+    type: vless
+    server: 3.39.4.109
+    port: 13672
+    uuid: 814bd064-544d-4255-a070-5705c03f6da9
+    network: tcp
+    tls: true
+    udp: true
+    flow: xtls-rprx-vision
+    servername: www.apple.com
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0
+      short-id: 48050fab
 
-6) Hysteria2 | KR | high port, less crowded than JP/SG hot paths
-hysteria2://3d7634af8cb2c6cb4bac1c0efad8b43d@152.67.200.82:50160?insecure=1&sni=152-67-200-82.liao.kdns.fr#KR-HY2-50160
-server=152.67.200.82 port=50160 password=3d7634af8cb2c6cb4bac1c0efad8b43d sni=152-67-200-82.liao.kdns.fr skip-cert-verify=true udp=true
+## 6. SG-Reality-vless-1629328487
+# 新加坡 / VLESS+Reality+Vision / 443 / UDP；亞洲備援，優先級低於上面五條
+proxies:
+  - name: SG-Reality-vless-1629328487
+    type: vless
+    server: 149.33.30.176
+    port: 443
+    uuid: 5fffad1b-10f0-41ff-abe7-e5a92696d5ef
+    network: tcp
+    tls: true
+    udp: true
+    flow: xtls-rprx-vision
+    servername: www.apple.com
+    client-fingerprint: firefox
+    reality-opts:
+      public-key: rk_iTiKEWYK02oF8lCIXrVlM7pWMSYX-Iuaz6Eat5lI
+      short-id: 4b26322b354bd74e
