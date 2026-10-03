@@ -1,8 +1,8 @@
-updated=2026-10-03T04:26:23.693247+00:00
+updated=2026-10-03T04:57:45.880099+00:00
 sources=6
-raw=2620
-dedup=2057
-reachable=1044
-final_count=998
-hard_cap=998
-policy=only_reachable
+raw_after_hk_mo_filter=2555
+dedup=2002
+reachable=1003
+final_count=256
+hard_cap=256
+policy=only_reachable_no_HK_MO
