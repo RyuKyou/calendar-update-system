@@ -1,6 +1,6 @@
-https://gitlab.com/free9999/ipupdate/-/raw/master/backup/img/1/2/ipp/quick/1/config.yaml | YAML·固定链·历史长期公益源·多协议
-https://raw.githubusercontent.com/ovmvo/FreeSub/refs/heads/main/sub/permanent/mihomo.yaml | YAML·永久链·8h更新·Mihomo·不随日期失效
-https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/protocol/hysteria2/clash-0001.yaml | YAML·Hy2分片·UDP/QUIC混淆·小时级验活
-https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/by-country/clash-DE.yaml | YAML·德国·回避美日台·Reality/Hy2混合
-https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/by-country/clash-NL.yaml | YAML·荷兰·回避高风险地区·Hy2为主
-https://gh-proxy.com/raw.githubusercontent.com/yy1588133/proxy-pool/main/clash.yaml | YAML·墙内镜像·6h聚合·链接本身稳定
+https://raw.githubusercontent.com/Au1rxx/free-vpn-subscriptions/main/output/by-country/clash-DE.yaml | Clash YAML / 德國 / 小時級驗證，VLESS-Reality 佔比高，非重點封鎖區
+https://raw.githubusercontent.com/Au1rxx/free-vpn-subscriptions/main/output/by-country/clash-NL.yaml | Clash YAML / 荷蘭 / 含 Hysteria2 與 Reality，池子中等且持續刷新
+https://raw.githubusercontent.com/Au1rxx/free-vpn-subscriptions/main/output/by-country/clash-KR.yaml | Clash YAML / 韓國 / Reality+Hysteria2，UDP 可用，非台日美越泰
+https://raw.githubusercontent.com/Au1rxx/free-vpn-subscriptions/main/output/by-country/clash-ID.yaml | Clash YAML / 印尼 / 小池 Reality，被集中針對概率較低
+https://raw.githubusercontent.com/Au1rxx/free-vpn-subscriptions/main/output/by-country/clash-SG.yaml | Clash YAML / 新加坡 / Reality 備援，優先級低於歐亞小國
+https://node.nodefree.me/2026/10/20261003.yaml | Clash YAML / 2026-10-03 混合池 / 導入後請手動排除台灣日本美國越南泰國
