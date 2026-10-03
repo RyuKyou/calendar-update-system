@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """
 Fetch Clash YAML sources, TCP probe, dedupe.
-Only keep nodes that connect successfully; hard-cap at 998 (lowest latency first).
-Failed / timeout nodes are discarded.
+Only keep reachable nodes; hard-cap 256 (lowest latency first).
+Hong Kong / Macau nodes are fully excluded.
 """
 
 from __future__ import annotations
@@ -19,9 +19,34 @@ import requests
 import yaml
 
 VALID_NETWORKS = {"tcp", "udp", "ws", "http", "h2", "grpc", "raw"}
-CONNECT_TIMEOUT = 6.0  # relaxed timeout
+CONNECT_TIMEOUT = 6.0
 MAX_WORKERS = 40
-MAX_NODES = 998
+MAX_NODES = 256
+
+# name / server markers for HK & Macau (case-insensitive)
+HK_MO_PATTERNS = [
+    r"香港",
+    r"澳门",
+    r"澳門",
+    r"\bhk\b",
+    r"\bhkg\b",
+    r"hong\s*kong",
+    r"\bmo\b",
+    r"\bmac\b",
+    r"macau",
+    r"macao",
+    r"🇭🇰",
+    r"🇲🇴",
+]
+HK_MO_RE = re.compile("|".join(HK_MO_PATTERNS), re.IGNORECASE)
+
+
+def is_hk_or_mo(p: dict) -> bool:
+    blob = " ".join(
+        str(p.get(k) or "")
+        for k in ("name", "server", "servername", "sni", "host")
+    )
+    return bool(HK_MO_RE.search(blob))
 
 
 def load_urls(path: Path) -> list[tuple[str, str]]:
@@ -65,6 +90,9 @@ def clean_proxy(p: dict, index: int) -> dict | None:
     if port <= 0 or port > 65535:
         return None
     p["port"] = port
+
+    if is_hk_or_mo(p):
+        return None
     return p
 
 
@@ -117,7 +145,7 @@ def probe_alive(proxies: list[dict]) -> list[tuple[dict, float]]:
         for fut in as_completed(futs):
             p, ms = fut.result()
             if ms is None:
-                continue  # failed / timeout -> drop
+                continue
             alive.append((p, ms))
     alive.sort(key=lambda x: x[1])
     return alive
@@ -170,7 +198,10 @@ def build_config(selected: list[tuple[dict, float]], cap: int) -> str:
     n = len(unique)
     if n > cap:
         raise RuntimeError(f"BUG: {n} > hard_cap {cap}")
-    header = f"# Ryukyou nodes | updated {now} | count={n} | hard_cap={cap} | only_reachable\n"
+    header = (
+        f"# Ryukyou nodes | updated {now} | count={n} | hard_cap={cap} | "
+        f"only_reachable | no_HK_MO\n"
+    )
     return header + yaml.dump(cfg, allow_unicode=True, sort_keys=False, default_flow_style=False)
 
 
@@ -194,7 +225,7 @@ def main():
             r = requests.get(url, timeout=35)
             r.raise_for_status()
             found = extract_proxies(r.text)
-            print(f"  -> {len(found)} proxies ({desc})")
+            print(f"  -> {len(found)} proxies after HK/MO filter ({desc})")
             all_proxies.extend(found)
         except Exception as e:
             print(f"  WARN: {e}")
@@ -214,7 +245,7 @@ def main():
     print(f"Reachable: {len(alive)}")
 
     selected = alive[:cap]
-    print(f"Final: {len(selected)} (hard_cap={cap}, unreachable dropped)")
+    print(f"Final: {len(selected)} (hard_cap={cap}, no HK/MO, unreachable dropped)")
 
     out_dir = Path(args.output_dir)
     out_dir.mkdir(parents=True, exist_ok=True)
@@ -225,12 +256,12 @@ def main():
     (out_dir / "nodes_stats.txt").write_text(
         f"updated={datetime.now(timezone.utc).isoformat()}\n"
         f"sources={len(entries)}\n"
-        f"raw={len(all_proxies)}\n"
+        f"raw_after_hk_mo_filter={len(all_proxies)}\n"
         f"dedup={len(deduped)}\n"
         f"reachable={len(alive)}\n"
         f"final_count={len(selected)}\n"
         f"hard_cap={cap}\n"
-        f"policy=only_reachable\n",
+        f"policy=only_reachable_no_HK_MO\n",
         encoding="utf-8",
     )
     print("Done.")
