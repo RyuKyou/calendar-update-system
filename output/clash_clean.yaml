@@ -1,43 +1,12 @@
-# Ryukyou nodes | updated 2026-10-04 15:04 UTC | count=256 | hard_cap=256 | only_reachable | no_HK_MO
+# Ryukyou nodes | updated 2026-10-04 16:48 UTC | count=256 | hard_cap=256 | only_reachable | no_HK_MO
 mixed-port: 7890
 allow-lan: false
 mode: rule
 log-level: info
 ipv6: false
 proxies:
-- name: trojan-1662258378 | 1ms
-  password: mitivpn
-  port: 443
+- name: US 🇺🇸 | @Raydikalx | 68780F | 1ms
   server: 167.82.76.7
-  skip-cert-verify: false
-  sni: ssl.fastly.com
-  type: trojan
-  udp: true
-- alpn:
-  - http/1.1
-  client-fingerprint: chrome
-  name: '[NoMoreWalls#091] 🇫🇷[www.v2nodes.com] vless-FR-1... #4 | 1ms'
-  network: ws
-  port: 443
-  server: 199.232.78.160
-  servername: ssl.fastly.com
-  tls: true
-  type: vless
-  uuid: 88888888-8888-8888-8888-888888888888
-  ws-opts:
-    headers:
-      Host: Appxdn.global.ssl.fastly.net
-    path: /
-- name: trojan-1643698408 | 1ms
-  password: mitivpn
-  port: 443
-  server: 199.232.78.160
-  skip-cert-verify: false
-  sni: ssl.fastly.com
-  type: trojan
-  udp: true
-- name: US 🇺🇸 | @Raydikalx | 0C7FCA | 1ms
-  server: 199.232.78.101
   port: 443
   type: trojan
   password: mitivpn
@@ -46,10 +15,10 @@ proxies:
   client-fingerprint: chrome
   network: ws
   ws-opts:
-    path: /
+    path: /---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/NLSs---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN
     headers:
-      Host: mitivpn---deb--s---mitivpn-1.global.ssl.fastly.net
-- name: '[free18#066] 🇺🇸_美国_144 | 1ms'
+      Host: mitivpn---deb--s---mitivpn-4.global.ssl.fastly.net
+- name: '[free18#066] 🇺🇸_美国_144 | 2ms'
   type: vless
   server: 199.232.78.160
   port: 443
@@ -64,8 +33,102 @@ proxies:
       Host: Appxdn.global.ssl.fastly.net
   skip-cert-verify: true
   udp: true
+- name: US 🇺🇸 | @Raydikalx | C6E76F | 2ms
+  server: 199.232.78.160
+  port: 443
+  type: vless
+  uuid: XpnTeam-70
+  udp: true
+  tls: true
+  servername: ssl.fastly.com
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: Appxdn.global.ssl.fastly.net
+- alpn:
+  - http/1.1
+  client-fingerprint: chrome
+  name: '[NoMoreWalls#091] 🇫🇷[www.v2nodes.com] vless-FR-1... #4 | 2ms'
+  network: ws
+  port: 443
+  server: 199.232.78.160
+  servername: ssl.fastly.com
+  tls: true
+  type: vless
+  uuid: 88888888-8888-8888-8888-888888888888
+  ws-opts:
+    headers:
+      Host: Appxdn.global.ssl.fastly.net
+    path: /
+- name: US 🇺🇸 | @Raydikalx | 0E3564 | 2ms
+  server: 167.82.76.27
+  port: 443
+  type: trojan
+  password: mitivpn
+  udp: true
+  sni: ssl.fastly.com
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: mitivpn---deb--s---mitivpn-3.global.ssl.fastly.net
+- name: '[free18#060] 🇺🇸_美国_136 | 2ms'
+  type: trojan
+  server: 199.232.78.160
+  port: 443
+  password: mitivpn
+  sni: ssl.fastly.com
+  skip-cert-verify: true
+  ws-opts:
+    path: /---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/D-e1i@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN
+    headers:
+      Host: mitivpn---deb--s---mitivpn-2.global.ssl.fastly.net
+  udp: true
+- name: US 🇺🇸 | @Raydikalx | E55526 | 2ms
+  server: 199.232.78.170
+  port: 443
+  type: vless
+  uuid: XpnTeam-69
+  udp: true
+  tls: true
+  servername: ssl.fastly.com
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: Appxdn.global.ssl.fastly.net
+- name: US 🇺🇸 | @Raydikalx | 1A152D | 2ms
+  server: 199.232.78.101
+  port: 443
+  type: trojan
+  password: mitivpn
+  udp: true
+  sni: ssl.fastly.com
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /---@MetiVIP---@MetiVIP/---@MetiVIP---@MetiVIP/---@MetiVIP---@MetiVIP/des---@MetiVIP---@MetiVIP/---@MetiVIP---@@MetiVIP/---@@MetiVIP---@MetiVIP
+    headers:
+      Host: mitivpn---deb--s---mitivpn-1.global.ssl.fastly.net
 - encryption: none
-  name: '[NoMoreWalls#092] 🇳🇱[www.v2nodes.com] vless-NL-1... #17 | 1ms'
+  name: '[NoMoreWalls#076] 🇳🇱[www.v2nodes.com] vless-NL-1... #18 | 2ms'
+  network: ws
+  port: 443
+  server: 199.232.78.159
+  servername: ssl.fastly.com
+  tls: true
+  type: vless
+  uuid: 36e8e5e8-8010-45a1-9fb7-9fa21f7e4c66
+  ws-opts:
+    headers:
+      Host: pannn1.global.ssl.fastly.net
+    path: /
+- encryption: none
+  name: '[NoMoreWalls#092] 🇳🇱[www.v2nodes.com] vless-NL-1... #17 | 2ms'
   network: ws
   port: 443
   server: 199.232.78.159
@@ -78,73 +141,58 @@ proxies:
     headers:
       Host: pan2e.global.ssl.fastly.net
     path: /
-- encryption: none
-  name: '[NoMoreWalls#076] 🇳🇱[www.v2nodes.com] vless-NL-1... #18 | 1ms'
+- alterId: 0
+  cipher: auto
+  name: vmess-248 | 3ms
   network: ws
-  port: 443
-  server: 199.232.78.159
-  servername: ssl.fastly.com
-  tls: true
-  type: vless
-  uuid: 36e8e5e8-8010-45a1-9fb7-9fa21f7e4c66
-  ws-opts:
-    headers:
-      Host: pannn1.global.ssl.fastly.net
-    path: /
-- name: '[AutoMerge#070] 🇺🇸 美国 | USA #18 | 1ms'
-  network: ws
-  port: 8880
-  server: 172.64.88.251
-  tls: false
-  type: vless
+  port: 39495
+  server: 129.146.77.248
+  type: vmess
   udp: true
-  uuid: 7e3cd2f1-0de5-4717-9002-64d8597bc577
-  ws-opts:
-    headers:
-      Host: dry-credit-fc26.203-d8c.workers.dev
-    path: /pyip=ProxyIP.KR.CMLiussss.net
-- name: '[free18#084] 🏳️_未知_168 | 2ms'
-  type: vless
-  server: 188.114.96.9
+  uuid: f836c736-87fc-4fde-aabc-00857ecdff3e
+- name: US 🇺🇸 | @Raydikalx | D2E735 | 3ms
+  server: 132.226.85.167
   port: 443
-  uuid: 2e305ebe-f6e6-4689-b32f-cd04ab5ff541
-  network: ws
-  servername: idb8onmvbntuyt5t7t6cejfw8vlrb.pages.dev
+  type: vless
+  uuid: e43dd231-7c75-4606-80ec-50fbb8335ce7
+  udp: true
   tls: true
+  flow: xtls-rprx-vision
+  servername: www.microsoft.com
+  reality-opts:
+    public-key: 3ik9ws7ATJ5dKDY2Fofv9y7_vpFYsTqgOJRxiQKwA3A
+    short-id: 7b233a973c94ca0a
   client-fingerprint: chrome
-  ws-opts:
-    path: /vl/9yvcoLdzdOXLUYfH7r5gwJhu1CHrj
+  network: tcp
+- name: '[freeSub#186] D🔴🇺🇸hos[🎬🤖📺🎭]_dokng.com_4dbb3d73 | 3ms'
+  port: 443
+  server: 129.153.93.183
   skip-cert-verify: true
-  udp: true
-- name: CA 🇨🇦 | @Raydikalx | 6C0D93 | 2ms
-  server: 104.21.70.21
+  tls: true
+  type: http
+- cipher: rc4-md5
+  name: shadowsocks-27291 | 8ms
+  password: 14fFPrbezE3HDZzsMOr6
   port: 8080
-  type: vless
-  uuid: e5cc16a6-ea42-46b2-82ae-ad2157e1641b
+  server: 79.110.53.169
+  type: ss
   udp: true
-  tls: false
-  servername: hhlfy.twiladaphne.ndjp.net
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: hhlfy.twiladaphne.ndjp.net
 - client-fingerprint: chrome
-  name: '[AutoMerge#060] 🇺🇸 美国 | USA #7 | 2ms'
+  name: vless-1633929731 | 8ms
   network: ws
   port: 443
-  server: 172.64.67.117
-  servername: edg-2oo.pages.dev
+  reality-opts:
+    public-key: 6l-Yq_zkVrnExw8AVv85VwoYnfNc8-dRSpoj_AA-fxY
+    short-id: c5cde18f
+  server: 45.32.69.110
+  servername: itunes.apple.com
   tls: true
   type: vless
-  uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
-  ws-opts:
-    headers:
-      Host: edg-2oo.pages.dev
-    path: /qa/books?ed=2560
-- name: CA 🇨🇦 | @Raydikalx | 61D0AA | 2ms
-  server: 172.64.158.146
-  port: 2086
+  udp: true
+  uuid: 1572b9c5-d741-46eb-b4a2-a5d23958dfbe
+- name: CA 🇨🇦 | @Raydikalx | 88D649 | 8ms
+  server: 172.64.229.2
+  port: 8880
   type: vless
   uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
   udp: true
@@ -155,236 +203,45 @@ proxies:
     path: /?ed=2560security=tls
     headers:
       Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: vless-1659750577 | 2ms
+- name: CA 🇨🇦 | @Raydikalx | 166F29 | 8ms
+  server: 172.64.229.2
+  port: 8080
+  type: vless
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  udp: true
+  tls: false
+  servername: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+  network: ws
+  ws-opts:
+    path: /?ed=2560security=tls
+    headers:
+      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+- name: '[freeSub#223] D🔴🇺🇸hos[🎬🤖📺🎭]_dokng.com_596fc241 | 8ms'
+  password: None
+  port: 9002
+  server: 138.199.35.202
+  skip-cert-verify: true
+  tls: true
+  type: http
+  username: null
+- alpn:
+  - http/1.1
+  client-fingerprint: chrome
+  name: '[AutoMerge#065] 🇺🇸 美国 | USA #13 | 8ms'
   network: ws
   port: 443
   server: adheres-scruple.quick-cdn.net
   servername: adheres-scruple.quick-cdn.net
-  skip-cert-verify: false
   tls: true
   type: vless
   udp: true
-  uuid: 694af80a-2b0c-4d78-93e3-75db887be626
-- name: '[free18#173] 🇺🇸_美国_268 | 2ms'
-  type: vless
-  server: 198.202.211.1
-  port: 443
-  uuid: cf39fab0-bb85-42cb-9945-2ad69d78e575
-  network: ws
-  servername: rubifen.adaspoloandco.com
-  tls: true
-  client-fingerprint: chrome
-  ws-opts:
-    path: /GOrbEh
-  skip-cert-verify: true
-  udp: true
-- name: US 🇺🇸 | @Raydikalx | 31C110 | 2ms
-  server: 45.205.0.6
-  port: 443
-  type: trojan
-  password: humanity
-  udp: true
-  sni: www.calmlunch.com
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /assignment
-    headers:
-      Host: www.calmlunch.com
-- name: CA 🇨🇦 | @Raydikalx | B82160 | 2ms
-  server: 162.159.24.131
-  port: 2082
-  type: vless
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  udp: true
-  tls: false
-  servername: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-  network: ws
-  ws-opts:
-    path: /?ed=2560security=tls
-    headers:
-      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: vless-1659750908 | 2ms
-  network: ws
-  port: 443
-  server: grimness-backlogs.cdn-content.com
-  servername: grimness-backlogs.cdn-content.com
-  skip-cert-verify: false
-  tls: true
-  type: vless
-  udp: true
-  uuid: 0097844e-b939-4d50-93f3-591debdceb55
-- cipher: rc4-md5
-  name: shadowsocks-27271 | 2ms
-  password: 14fFPrbezE3HDZzsMOr6
-  port: 8080
-  server: 107.155.57.51
-  type: ss
-  udp: true
-- name: BZ 🇧🇿 | @Raydikalx | ECC3DE | 2ms
-  server: 45.131.7.7
-  port: 8443
-  type: vless
-  uuid: 7967bf59-57e3-4cde-9898-527b0fe60022
-  udp: true
-  tls: true
-  servername: speed.dulacloud.store
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /dula?Telegram-WangCai2
-    headers:
-      Host: speed.dulacloud.store
-- name: CA 🇨🇦 | @Raydikalx | 7C0F0C | 2ms
-  server: 172.64.154.8
-  port: 2082
-  type: vless
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  udp: true
-  tls: false
-  servername: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-  network: ws
-  ws-opts:
-    path: /?ed=2560security=tls
-    headers:
-      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: '[free18#088] 🇳🇱_荷兰_172 | 2ms'
-  type: vless
-  server: 45.131.210.30
-  port: 8880
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  network: ws
-  servername: vms.lifetime05.workers.dev
-  tls: false
-  ws-opts:
-    path: /
-    headers:
-      Host: vms.lifetime05.workers.dev
-  skip-cert-verify: true
-  udp: true
-- name: '[free18#081] 🏳️_未知_165 | 2ms'
-  type: vless
-  server: 172.67.79.160
-  port: 2087
-  uuid: a4a951b9-901d-4db8-8a7d-6df82c4b5c23
-  network: ws
-  servername: cvhpyn.pages.dev
-  tls: true
-  client-fingerprint: chrome
-  ws-opts:
-    path: /
-    headers:
-      Host: cvhpyn.pages.dev
-  skip-cert-verify: true
-  udp: true
-- client-fingerprint: chrome
-  name: '[AutoMerge#064] 🇺🇸 美国 | USA #11 | 2ms'
-  network: ws
-  port: 443
-  server: 104.18.38.47
-  servername: edg-2oo.pages.dev
-  tls: true
-  type: vless
-  uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
+  uuid: a9c57d75-a2d3-47f7-9fd5-020a8c918b93
   ws-opts:
     headers:
-      Host: edg-2oo.pages.dev
-    path: /team/downloads/events?ed=2560
-- name: CA 🇨🇦 | @Raydikalx | 91D532 | 2ms
-  server: 172.64.158.146
-  port: 2095
-  type: vless
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  udp: true
-  tls: false
-  servername: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-  network: ws
-  ws-opts:
-    path: /?ed=2560security=tls
-    headers:
-      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: GB 🇬🇧 | @Raydikalx | 762DEA | 2ms
-  server: 45.12.30.7
-  port: 8443
-  type: vless
-  uuid: 7967bf59-57e3-4cde-9898-527b0fe60022
-  udp: true
-  tls: true
-  servername: speed.dulacloud.store
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /dula?Telegram-WangCai2fp
-    headers:
-      Host: speed.dulacloud.store
-- name: US 🇺🇸 | @Raydikalx | A45083 | 2ms
-  server: 139.64.235.7
-  port: 8443
-  type: vless
-  uuid: 7967bf59-57e3-4cde-9898-527b0fe60022
-  udp: true
-  tls: true
-  servername: speed.dulacloud.store
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /dula?Telegram-WangCai2fp=chrome
-    headers:
-      Host: speed.dulacloud.store
-- name: CW 🇨🇼 | @Raydikalx | D45691 | 2ms
-  server: 88.216.67.7
-  port: 8443
-  type: vless
-  uuid: 7967bf59-57e3-4cde-9898-527b0fe60022
-  udp: true
-  tls: true
-  servername: speed.dulacloud.store
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /dula?Telegram-WangCai2
-    headers:
-      Host: speed.dulacloud.store
-- name: CA 🇨🇦 | @Raydikalx | 8CAB93 | 2ms
-  server: 162.159.0.169
-  port: 8880
-  type: vless
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  udp: true
-  tls: false
-  servername: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-  network: ws
-  ws-opts:
-    path: /?ed=2560security=tls
-    headers:
-      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: CA 🇨🇦 | @Raydikalx | 8AC2EA | 2ms
-  server: 172.64.42.85
-  port: 2052
-  type: vless
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  udp: true
-  tls: false
-  servername: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-  network: ws
-  ws-opts:
-    path: /?ed=2560security=tls
-    headers:
-      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: '[free18#149] 🏳️_未知_243 | 2ms'
-  type: trojan
-  server: 172.67.217.240
-  port: 443
-  password: humanity
-  sni: www.calmlunch.com
-  skip-cert-verify: true
-  ws-opts:
-    path: /assignment
-    headers:
-      Host: www.calmlunch.com
-  udp: true
-- name: CA 🇨🇦 | @Raydikalx | 4561A3 | 2ms
-  server: 104.18.42.98
+      Host: adheres-scruple.quick-cdn.net
+    path: /ws
+- name: CA 🇨🇦 | @Raydikalx | 09E0B6 | 8ms
+  server: 104.16.10.84
   port: 443
   type: vless
   uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
@@ -396,57 +253,9 @@ proxies:
     path: /tyxyws
     headers:
       Host: jp3.yohototo.top
-- name: '[free18#064] 🇺🇸_美国_141 | 2ms'
-  type: trojan
-  server: 167.82.76.27
-  port: 443
-  password: mitivpn
-  sni: ssl.fastly.com
-  skip-cert-verify: true
-  ws-opts:
-    path: /---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/NLSus---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN
-    headers:
-      Host: mitivpn---deb--s---mitivpn-3.global.ssl.fastly.net
-  udp: true
-- name: '[AutoMerge#046] 🇳🇱 荷兰 | NLD #1 | 2ms'
-  network: ws
-  port: 2086
-  server: 172.67.133.44
-  tls: false
-  type: vless
-  udp: true
-  uuid: af19ce98-b58b-43ef-9f0d-2ae6343e28fe
-  ws-opts:
-    headers:
-      Host: blue-disk-1124.sawmansafi.workers.dev
-    path: /eyJqdW5rIjoiQTdKUTVZeVVoQWpjamhqIiwicHJvdG9jb2wiOiJ2bCIsIm1vZGUiOiJwcmVmaXgiLCJwYW5lbElQcyI6WyJbMjYwMjpmYzU5OjExOjY0OjpdIl19?ed=2560
-- name: CY 🇨🇾 | @Raydikalx | D6FD2E | 2ms
-  server: 77.37.33.7
-  port: 8443
-  type: vless
-  uuid: 7967bf59-57e3-4cde-9898-527b0fe60022
-  udp: true
-  tls: true
-  servername: speed.dulacloud.store
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /dula?Telegram-WangCai2
-    headers:
-      Host: speed.dulacloud.store
-- name: vless-1659750593 | 2ms
-  network: ws
-  port: 443
-  server: adheres-scruple.quick-cdn.net
-  servername: adheres-scruple.quick-cdn.net
-  skip-cert-verify: false
-  tls: true
-  type: vless
-  udp: true
-  uuid: 0f0e6a6c-f448-4931-b5a3-0fcdcd6dacec
-- name: CA 🇨🇦 | @Raydikalx | 3A84F1 | 2ms
-  server: 172.64.229.2
-  port: 80
+- name: CA 🇨🇦 | @Raydikalx | A07B4B | 8ms
+  server: 104.18.34.14
+  port: 2095
   type: vless
   uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
   udp: true
@@ -454,25 +263,50 @@ proxies:
   servername: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
   network: ws
   ws-opts:
-    path: /?ed=2560security=tls
+    path: /
     headers:
       Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: US 🇺🇸 | @Raydikalx | 3B43AB | 2ms
-  server: 154.211.8.7
-  port: 8443
+- name: CA 🇨🇦 | @Raydikalx | 420B80 | 8ms
+  server: 104.21.6.186
+  port: 443
   type: vless
-  uuid: 7967bf59-57e3-4cde-9898-527b0fe60022
+  uuid: c4edb87e-8544-4fa4-bd1c-b0cda9a34b46
   udp: true
   tls: true
-  servername: speed.dulacloud.store
+  servername: a.cwvps.eu.org
+  network: ws
+  ws-opts:
+    path: /ws
+    headers:
+      Host: a.cwvps.eu.org
+- encryption: none
+  name: '[NoMoreWalls#087] 🇷🇴[www.v2nodes.com] vless-RO-1... | 8ms'
+  network: ws
+  port: 8880
+  server: 172.65.90.53
+  servername: www.zsu.gov.ua
+  tls: false
+  type: vless
+  uuid: 121c3728-2b6b-4b69-bac6-170b13658d74
+  ws-opts:
+    headers:
+      Host: falling-darkness-95ea.289.workers.dev
+    path: /pyip=ProxyIP.SG.CMLiussss.net
+- name: CA 🇨🇦 | @Raydikalx | E3EA2D | 8ms
+  server: 172.67.200.219
+  port: 443
+  type: trojan
+  password: humanity
+  udp: true
+  sni: www.calmlunch.com
   client-fingerprint: chrome
   network: ws
   ws-opts:
-    path: /dula?Telegram-WangCai2
+    path: /assignment
     headers:
-      Host: speed.dulacloud.store
-- name: CA 🇨🇦 | @Raydikalx | DCCE02 | 2ms
-  server: 104.18.46.46
+      Host: www.calmlunch.com
+- name: CA 🇨🇦 | @Raydikalx | 1FC1BC | 8ms
+  server: 172.64.229.2
   port: 2052
   type: vless
   uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
@@ -484,7 +318,20 @@ proxies:
     path: /?ed=2560security=tls
     headers:
       Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: '[free18#094] 🏳️_未知_178 | 2ms'
+- name: CA 🇨🇦 | @Raydikalx | 8B2A7E | 8ms
+  server: 104.18.0.181
+  port: 443
+  type: vless
+  uuid: c4edb87e-8544-4fa4-bd1c-b0cda9a34b46
+  udp: true
+  tls: true
+  servername: a.cwvps.eu.org
+  network: ws
+  ws-opts:
+    path: /ws
+    headers:
+      Host: a.cwvps.eu.org
+- name: '[free18#094] 🏳️_未知_178 | 8ms'
   type: vless
   server: 172.67.183.52
   port: 80
@@ -499,224 +346,8 @@ proxies:
       Host: r7yhmg1zxnt120wmkag.mf1h0myptv4lougs7341bmttcz8.workers.dev
   skip-cert-verify: true
   udp: true
-- name: VG 🇻🇬 | @Raydikalx | 1385F2 | 2ms
-  server: 45.142.120.7
-  port: 8443
-  type: vless
-  uuid: 7967bf59-57e3-4cde-9898-527b0fe60022
-  udp: true
-  tls: true
-  servername: speed.dulacloud.store
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /dula?Telegram-WangCai2
-    headers:
-      Host: speed.dulacloud.store
-- name: '[free18#089] 🇺🇸_美国_173 | 2ms'
-  type: vless
-  server: 80.93.202.40
-  port: 8880
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
-  network: ws
-  tls: false
-  ws-opts:
-    path: /
-    headers:
-      Host: vms.lifetime02.workers.dev
-  skip-cert-verify: true
-  udp: true
-- name: '[free18#156] 🏳️_未知_250 | 2ms'
-  type: vless
-  server: 104.26.14.85
-  port: 443
-  uuid: cf39fab0-bb85-42cb-9945-2ad69d78e575
-  network: ws
-  servername: rubifen.adaspoloandco.com
-  tls: true
-  client-fingerprint: chrome
-  ws-opts:
-    path: /GOrbEh
-  skip-cert-verify: true
-  udp: true
-- name: '[free18#072] 🏳️_未知_152 | 2ms'
-  type: vless
-  server: 172.67.207.26
-  port: 8880
-  uuid: 26beb784-a664-4c3e-becf-0f0c12568b62
-  network: ws
-  servername: 172.67.207.26
-  tls: false
-  client-fingerprint: chrome
-  ws-opts:
-    path: /pyip=ProxyIP.JP.CMLiussss.net
-    headers:
-      Host: twilight-poetry-2bfe.218-699.workers.dev
-  skip-cert-verify: true
-  udp: true
-- name: CR 🇨🇷 | @Raydikalx | 9A1CA6 | 2ms
-  server: 190.93.245.7
-  port: 8443
-  type: vless
-  uuid: 7967bf59-57e3-4cde-9898-527b0fe60022
-  udp: true
-  tls: true
-  servername: speed.dulacloud.store
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /dula?Telegram-WangCai2
-    headers:
-      Host: speed.dulacloud.store
-- name: CA 🇨🇦 | @Raydikalx | 189305 | 2ms
-  server: 172.67.156.147
-  port: 443
-  type: vless
-  uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
-  udp: true
-  tls: true
-  servername: jp3.yohototo.top
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /tyxyws
-    headers:
-      Host: jp3.yohototo.top
-- name: US 🇺🇸 | @Raydikalx | CA7108 | 2ms
-  server: 170.114.46.6
-  port: 80
-  type: vless
-  uuid: cac6ec8f-99f0-44c5-814f-2f3f65e4db74
-  udp: true
-  tls: false
-  servername: support.zoom.us
-  network: ws
-  ws-opts:
-    path: /dula
-    headers:
-      Host: speed.dulacloud.store
-- name: US 🇺🇸 | @Raydikalx | E9CCA9 | 2ms
-  server: 108.162.198.178
-  port: 80
-  type: vless
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  udp: true
-  tls: false
-  servername: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: AE 🇦🇪 | @Raydikalx | 7042EA | 2ms
-  server: 77.232.140.7
-  port: 8443
-  type: vless
-  uuid: 7967bf59-57e3-4cde-9898-527b0fe60022
-  udp: true
-  tls: true
-  servername: speed.dulacloud.store
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /dula?Telegram-WangCai2
-    headers:
-      Host: speed.dulacloud.store
-- name: CA 🇨🇦 | @Raydikalx | 8B60FE | 2ms
-  server: 104.16.72.41
-  port: 443
-  type: trojan
-  password: humanity
-  udp: true
-  sni: www.calmlunch.com
-  network: ws
-  ws-opts:
-    path: /assignment
-    headers:
-      Host: www.calmlunch.com
-- name: CA 🇨🇦 | @Raydikalx | 8CA1B3 | 2ms
-  server: 104.16.10.185
-  port: 443
-  type: vless
-  uuid: 3c52e091-6714-4915-949f-2149fe69951b
-  udp: true
-  tls: true
-  servername: v2ray.simspeedup.com
-  network: ws
-  ws-opts:
-    path: /ws
-    headers:
-      Host: v2ray.simspeedup.com
-- name: NL 🇳🇱 | @Raydikalx | E8E21C | 2ms
-  server: 37.153.171.7
-  port: 8443
-  type: vless
-  uuid: 7967bf59-57e3-4cde-9898-527b0fe60022
-  udp: true
-  tls: true
-  servername: speed.dulacloud.store
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /dula?Telegram-WangCai2
-    headers:
-      Host: speed.dulacloud.store
-- name: '[free18#087] 🏳️_未知_171 | 2ms'
-  type: vless
-  server: 104.21.56.90
-  port: 80
-  uuid: c8f3f81a-5276-48e9-af6b-c537fb4c7856
-  network: ws
-  servername: 104.21.56.90
-  tls: false
-  ws-opts:
-    path: /vl/2INL39K32mKsOBKt?ed=2560
-    headers:
-      Host: r7yhmg1zxnt120wmkag.mf1h0myptv4lougs7341bmttcz8.workers.dev
-  skip-cert-verify: true
-  udp: true
-- name: CW 🇨🇼 | @Raydikalx | 8ABFCB | 2ms
-  server: 88.216.66.7
-  port: 8443
-  type: vless
-  uuid: 7967bf59-57e3-4cde-9898-527b0fe60022
-  udp: true
-  tls: true
-  servername: speed.dulacloud.store
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /dula?Telegram-WangCai2
-    headers:
-      Host: speed.dulacloud.store
-- name: '[free18#074] 🇹🇷_土耳其_154 | 2ms'
-  type: vless
-  server: 91.206.71.8
-  port: 80
-  uuid: c20a0bcf-aa6f-4c35-9e62-a39b47b04e73
-  network: ws
-  tls: false
-  ws-opts:
-    path: /pyip=Telegram🇨🇳+@WangCai2
-    headers:
-      Host: round-haze-8783.294.workers.dev
-  skip-cert-verify: true
-  udp: true
-- name: CA 🇨🇦 | @Raydikalx | 31803A | 2ms
-  server: 104.16.10.251
-  port: 443
-  type: vless
-  uuid: c4edb87e-8544-4fa4-bd1c-b0cda9a34b46
-  udp: true
-  tls: true
-  servername: a.cwvps.eu.org
-  network: ws
-  ws-opts:
-    path: /ws
-    headers:
-      Host: a.cwvps.eu.org
-- name: CA 🇨🇦 | @Raydikalx | 17F42B | 2ms
-  server: 162.159.48.32
+- name: CA 🇨🇦 | @Raydikalx | 0F8FEA | 9ms
+  server: 162.159.43.187
   port: 8080
   type: vless
   uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
@@ -728,21 +359,193 @@ proxies:
     path: /?ed=2560security=tls
     headers:
       Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: US 🇺🇸 | @Raydikalx | B1CEC9 | 2ms
-  server: 104.254.140.7
-  port: 8443
+- name: CA 🇨🇦 | @Raydikalx | 6DBA53 | 9ms
+  server: 172.64.158.146
+  port: 2052
   type: vless
-  uuid: 7967bf59-57e3-4cde-9898-527b0fe60022
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
   udp: true
-  tls: true
-  servername: speed.dulacloud.store
-  client-fingerprint: chrome
+  tls: false
+  servername: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
   network: ws
   ws-opts:
-    path: /dula?Telegram-WangCai2
+    path: /?ed=2560security=tls
     headers:
-      Host: speed.dulacloud.store
-- name: CA 🇨🇦 | @Raydikalx | 2A8E59 | 2ms
+      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+- name: CA 🇨🇦 | @Raydikalx | 7D621B | 9ms
+  server: 162.159.0.169
+  port: 2086
+  type: vless
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  udp: true
+  tls: false
+  servername: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+  network: ws
+  ws-opts:
+    path: /?ed=2560security=tls
+    headers:
+      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+- client-fingerprint: chrome
+  name: '[AutoMerge#071] 🇺🇸 美国 | USA #20 | 9ms'
+  network: ws
+  port: 443
+  server: 104.19.220.22
+  servername: edg-2oo.pages.dev
+  tls: true
+  type: vless
+  uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
+  ws-opts:
+    headers:
+      Host: edg-2oo.pages.dev
+    path: /teacher/china?ed=2560
+- name: CA 🇨🇦 | @Raydikalx | 760BAF | 9ms
+  server: 172.64.229.170
+  port: 2082
+  type: vless
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  udp: true
+  tls: false
+  servername: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+  network: ws
+  ws-opts:
+    path: /?ed=2560security=tls
+    headers:
+      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+- name: CA 🇨🇦 | @Raydikalx | 908F7E | 9ms
+  server: 104.18.47.113
+  port: 2095
+  type: vless
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  udp: true
+  tls: false
+  servername: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+  network: ws
+  ws-opts:
+    path: /?ed=2560security=tls
+    headers:
+      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+- name: CA 🇨🇦 | @Raydikalx | 6B96AC | 9ms
+  server: 162.159.24.131
+  port: 8080
+  type: vless
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  udp: true
+  tls: false
+  servername: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+  network: ws
+  ws-opts:
+    path: /?ed=2560security=tls
+    headers:
+      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+- name: '[free18#135] 🏳️_未知_226 | 9ms'
+  type: trojan
+  server: 172.64.150.28
+  port: 443
+  password: humanity
+  sni: www.calmlunch.com
+  skip-cert-verify: true
+  ws-opts:
+    path: /assignment
+    headers:
+      Host: www.calmlunch.com
+  udp: true
+- name: vless-450834934 | 9ms
+  network: ws
+  port: 80
+  server: 170.114.45.6
+  type: vless
+  udp: true
+  uuid: cac6ec8f-99f0-44c5-814f-2f3f65e4db74
+- name: CA 🇨🇦 | @Raydikalx | 15EA67 | 9ms
+  server: 188.114.97.6
+  port: 2052
+  type: vless
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  udp: true
+  tls: false
+  servername: zb1zi.s3nx.dyz.hh.vavava.kdns.fr
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: zb1zi.s3nx.dyz.hh.vavava.kdns.fr
+- name: '[free18#129] 🇸🇨_塞舌尔_219 | 9ms'
+  type: trojan
+  server: 45.130.125.190
+  port: 443
+  password: humanity
+  sni: www.calmlunch.com
+  skip-cert-verify: true
+  ws-opts:
+    path: /assignment
+    headers:
+      Host: www.calmlunch.com
+  udp: true
+- name: CA 🇨🇦 | @Raydikalx | 591536 | 9ms
+  server: 172.64.32.108
+  port: 2052
+  type: vless
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  udp: true
+  tls: false
+  servername: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+  network: ws
+  ws-opts:
+    path: /?ed=2560security=tls
+    headers:
+      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+- name: CA 🇨🇦 | @Raydikalx | 58E74A | 9ms
+  server: 172.64.229.170
+  port: 8880
+  type: vless
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  udp: true
+  tls: false
+  servername: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+  network: ws
+  ws-opts:
+    path: /?ed=2560security=tls
+    headers:
+      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+- name: CA 🇨🇦 | @Raydikalx | 668570 | 9ms
+  server: 162.159.43.187
+  port: 2052
+  type: vless
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  udp: true
+  tls: false
+  servername: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+  network: ws
+  ws-opts:
+    path: /?ed=2560security=tls
+    headers:
+      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+- name: CA 🇨🇦 | @Raydikalx | 5B34E5 | 9ms
+  server: 188.114.97.6
+  port: 2086
+  type: vless
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  udp: true
+  tls: false
+  servername: zb1zi.s3nx.dyz.hh.vavava.kdns.fr
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: zb1zi.s3nx.dyz.hh.vavava.kdns.fr
+- name: DE 🇩🇪 | @Raydikalx | 526D68 | 9ms
+  server: 45.80.111.7
+  port: 443
+  type: trojan
+  password: humanity
+  udp: true
+  sni: www.calmlunch.com
+  network: ws
+  ws-opts:
+    path: /assignment
+    headers:
+      Host: www.calmlunch.com
+- name: CA 🇨🇦 | @Raydikalx | 2A8E59 | 9ms
   server: 172.64.154.8
   port: 2086
   type: vless
@@ -755,21 +558,67 @@ proxies:
     path: /?ed=2560security=tls
     headers:
       Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: CA 🇨🇦 | @Raydikalx | 4FBD39 | 2ms
-  server: 104.21.60.29
-  port: 8443
+- name: '[free18#074] 🇹🇷_土耳其_154 | 9ms'
   type: vless
-  uuid: 7c99dc89-bf49-45c9-acc5-e43f36657518
+  server: 91.206.71.8
+  port: 80
+  uuid: c20a0bcf-aa6f-4c35-9e62-a39b47b04e73
+  network: ws
+  tls: false
+  ws-opts:
+    path: /pyip=Telegram🇨🇳+@WangCai2
+    headers:
+      Host: round-haze-8783.294.workers.dev
+  skip-cert-verify: true
   udp: true
-  tls: true
-  servername: www.large-files.info
+- name: vless-1656587328 | 9ms
+  network: ws
+  port: 2082
+  server: 104.18.0.181
+  type: vless
+  udp: true
+  uuid: e5cc16a6-ea42-46b2-82ae-ad2157e1641b
+- name: CA 🇨🇦 | @Raydikalx | D955BF | 9ms
+  server: 104.18.47.113
+  port: 8880
+  type: vless
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  udp: true
+  tls: false
+  servername: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
   network: ws
   ws-opts:
-    path: /var/www/html/video/preview/download/i8o0la
+    path: /?ed=2560security=tls
     headers:
-      Host: www.large-files.info
-- name: CA 🇨🇦 | @Raydikalx | 2A483F | 2ms
-  server: 104.18.46.234
+      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+- name: CA 🇨🇦 | @Raydikalx | D60959 | 9ms
+  server: 162.159.48.32
+  port: 2052
+  type: vless
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  udp: true
+  tls: false
+  servername: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+- name: CA 🇨🇦 | @Raydikalx | BA6E49 | 9ms
+  server: 104.18.47.113
+  port: 2052
+  type: vless
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  udp: true
+  tls: false
+  servername: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+- name: CA 🇨🇦 | @Raydikalx | 07AE8C | 9ms
+  server: 172.64.229.170
   port: 2052
   type: vless
   uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
@@ -781,50 +630,65 @@ proxies:
     path: /?ed=2560security=tls
     headers:
       Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: NL 🇳🇱 | @Raydikalx | FF847A | 2ms
-  server: 185.207.199.7
-  port: 8443
+- name: CA 🇨🇦 | @Raydikalx | CD57C0 | 9ms
+  server: 104.18.0.181
+  port: 8080
   type: vless
-  uuid: 7967bf59-57e3-4cde-9898-527b0fe60022
+  uuid: e5cc16a6-ea42-46b2-82ae-ad2157e1641b
   udp: true
-  tls: true
-  servername: speed.dulacloud.store
-  client-fingerprint: chrome
+  tls: false
+  servername: hhlfy.twiladaphne.ndjp.net
   network: ws
   ws-opts:
-    path: /dula?Telegram-WangCai2
+    path: /sg-melbi
     headers:
-      Host: speed.dulacloud.store
-- name: CW 🇨🇼 | @Raydikalx | CDB3A1 | 2ms
-  server: 5.10.244.7
-  port: 8443
+      Host: hhlfy.twiladaphne.ndjp.net
+- name: CA 🇨🇦 | @Raydikalx | 98BD34 | 9ms
+  server: 162.159.43.187
+  port: 8880
   type: vless
-  uuid: 7967bf59-57e3-4cde-9898-527b0fe60022
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
   udp: true
-  tls: true
-  servername: speed.dulacloud.store
-  client-fingerprint: chrome
+  tls: false
+  servername: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
   network: ws
   ws-opts:
-    path: /dula?Telegram-WangCai2
+    path: /?ed=2560security=tls
     headers:
-      Host: speed.dulacloud.store
-- name: US 🇺🇸 | @Raydikalx | 7787F9 | 2ms
-  server: 89.116.161.7
-  port: 8443
-  type: vless
-  uuid: 7967bf59-57e3-4cde-9898-527b0fe60022
-  udp: true
+      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+- name: '[freeSub#185] D🔴🇺🇸hos[🎬🤖📺🎭]_dokng.com_5e148d55 | 9ms'
+  port: 9443
+  server: 38.95.111.226
+  skip-cert-verify: true
   tls: true
-  servername: speed.dulacloud.store
-  client-fingerprint: chrome
+  type: http
+- name: CA 🇨🇦 | @Raydikalx | B72A46 | 9ms
+  server: 104.21.37.56
+  port: 443
+  type: trojan
+  password: humanity
+  udp: true
+  sni: www.volumeroot.com
   network: ws
   ws-opts:
-    path: /dula?Telegram-WangCai2
+    path: /assignment
     headers:
-      Host: speed.dulacloud.store
-- name: CA 🇨🇦 | @Raydikalx | C13D19 | 2ms
-  server: 172.64.154.8
+      Host: www.volumeroot.com
+- name: CA 🇨🇦 | @Raydikalx | 1212F1 | 9ms
+  server: 162.159.48.32
+  port: 80
+  type: vless
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  udp: true
+  tls: false
+  servername: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+  network: ws
+  ws-opts:
+    path: /?ed=2560security=tls
+    headers:
+      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+- name: CA 🇨🇦 | @Raydikalx | 91D532 | 9ms
+  server: 172.64.158.146
   port: 2095
   type: vless
   uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
@@ -836,25 +700,51 @@ proxies:
     path: /?ed=2560security=tls
     headers:
       Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: NL 🇳🇱 | @Raydikalx | 425CE4 | 2ms
-  server: 154.194.0.7
-  port: 8443
+- name: CA 🇨🇦 | @Raydikalx | 895057 | 9ms
+  server: 104.18.46.234
+  port: 80
   type: vless
-  uuid: 7967bf59-57e3-4cde-9898-527b0fe60022
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  udp: true
+  tls: false
+  servername: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+  network: ws
+  ws-opts:
+    path: /?ed=2560security=tls
+    headers:
+      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+- name: CA 🇨🇦 | @Raydikalx | 9BEFCE | 9ms
+  server: 172.67.159.161
+  port: 443
+  type: vless
+  uuid: 76ac91c5-ea82-4046-8ee7-2ffbb563ac94
   udp: true
   tls: true
-  servername: speed.dulacloud.store
+  servername: geo.shkola112.site
+  network: ws
+  ws-opts:
+    path: /api-vless
+    headers:
+      Host: geo.shkola112.site
+- name: FR 🇫🇷 | @Raydikalx | B29FC1 | 9ms
+  server: 141.101.122.147
+  port: 443
+  type: vless
+  uuid: c4edb87e-8544-4fa4-bd1c-b0cda9a34b46
+  udp: true
+  tls: true
+  servername: a.cwvps.eu.org
   client-fingerprint: chrome
   network: ws
   ws-opts:
-    path: /dula?Telegram-WangCai2
+    path: /ws
     headers:
-      Host: speed.dulacloud.store
+      Host: a.cwvps.eu.org
 - client-fingerprint: chrome
-  name: '[AutoMerge#061] 🇺🇸 美国 | USA #8 | 2ms'
+  name: '[AutoMerge#055] 🇺🇸 美国 | USA #2 | 9ms'
   network: ws
   port: 443
-  server: 104.17.221.155
+  server: 104.17.69.244
   servername: edg-2oo.pages.dev
   tls: true
   type: vless
@@ -862,48 +752,87 @@ proxies:
   ws-opts:
     headers:
       Host: edg-2oo.pages.dev
-    path: /clip?ed=2560
-- name: CA 🇨🇦 | @Raydikalx | E9A5AD | 2ms
-  server: 172.67.190.248
-  port: 8443
+    path: /doc/app/pay?ed=2560
+- name: CA 🇨🇦 | @Raydikalx | 690C70 | 9ms
+  server: 104.18.46.46
+  port: 2086
   type: vless
-  uuid: 7c99dc89-bf49-45c9-acc5-e43f36657518
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
   udp: true
-  tls: true
-  servername: www.large-files.info
-  network: ws
-  ws-opts:
-    path: /var/www/html/video/preview/download/i8o0la
-    headers:
-      Host: www.large-files.info
-- name: '[free18#092] 🏳️_未知_176 | 2ms'
-  type: vless
-  server: 104.21.70.21
-  port: 8080
-  uuid: 8a36be1d-7c78-4885-8a1f-bedf5ba7db1c
-  network: ws
   tls: false
-  ws-opts:
-    path: /rN50nmm9L1DeY73C?ed=2560
-    headers:
-      Host: lucky-lab-ac6d.caveyi8071.workers.dev
-  skip-cert-verify: true
-  udp: true
-- name: CA 🇨🇦 | @Raydikalx | 3FF0A8 | 2ms
-  server: 104.16.10.9
-  port: 443
-  type: vless
-  uuid: 3c52e091-6714-4915-949f-2149fe69951b
-  udp: true
-  tls: true
-  servername: v2ray.simspeedup.com
+  servername: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
   network: ws
   ws-opts:
-    path: /ws
+    path: /?ed=2560security=tls
     headers:
-      Host: v2ray.simspeedup.com
-- name: US 🇺🇸 | @Raydikalx | 9D5581 | 2ms
-  server: 108.162.198.178
+      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+- name: CA 🇨🇦 | @Raydikalx | 7A1AC9 | 9ms
+  server: 104.18.46.234
+  port: 2082
+  type: vless
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  udp: true
+  tls: false
+  servername: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+  network: ws
+  ws-opts:
+    path: /?ed=2560security=tls
+    headers:
+      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+- name: CA 🇨🇦 | @Raydikalx | 865310 | 9ms
+  server: 162.159.0.53
+  port: 2082
+  type: vless
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  udp: true
+  tls: false
+  servername: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+  network: ws
+  ws-opts:
+    path: /?ed=2560security=tls
+    headers:
+      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+- name: CA 🇨🇦 | @Raydikalx | A3ACA2 | 9ms
+  server: 162.159.48.32
+  port: 2082
+  type: vless
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  udp: true
+  tls: false
+  servername: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+  network: ws
+  ws-opts:
+    path: /?ed=2560security=tls
+    headers:
+      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+- name: CA 🇨🇦 | @Raydikalx | 28C3B5 | 9ms
+  server: 162.159.24.131
+  port: 80
+  type: vless
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  udp: true
+  tls: false
+  servername: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+  network: ws
+  ws-opts:
+    path: /?ed=2560security=tls
+    headers:
+      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+- client-fingerprint: chrome
+  name: '[NoMoreWalls#154] 🇺🇸[www.v2nodes.com] vless-US-1... #3 | 9ms'
+  network: ws
+  port: 25517
+  server: 69.63.221.116
+  servername: wzs.echo.net.eu.org
+  tls: true
+  type: vless
+  uuid: d18c6897-2849-456a-8c46-d7ecece47c20
+  ws-opts:
+    headers:
+      Host: wzs.echo.net.eu.org
+    path: /video/HxNMGkZdGw0PRk1GVw8YF14OXkwNVVtIRg1HBRETS1lYDldeEEFRGxhbVloPHhpEVl9AFwxSGQ9bSQ==
+- name: CA 🇨🇦 | @Raydikalx | 1127E7 | 9ms
+  server: 162.159.48.32
   port: 8880
   type: vless
   uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
@@ -912,23 +841,499 @@ proxies:
   servername: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
   network: ws
   ws-opts:
-    path: /
+    path: /?ed=2560security=tls
     headers:
       Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: NL 🇳🇱 | @Raydikalx | 7DF20E | 2ms
-  server: 188.42.145.180
+- name: CA 🇨🇦 | @Raydikalx | CE5B5F | 9ms
+  server: 162.159.43.187
+  port: 2082
+  type: vless
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  udp: true
+  tls: false
+  servername: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+  network: ws
+  ws-opts:
+    path: /?ed=2560security=tls
+    headers:
+      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+- name: CA 🇨🇦 | @Raydikalx | 93EE2A | 9ms
+  server: 162.159.36.20
   port: 443
   type: trojan
   password: humanity
   udp: true
-  sni: wWw.Volumeroot.cOm
-  client-fingerprint: chrome
+  sni: www.calmlunch.com
   network: ws
   ws-opts:
     path: /assignment
     headers:
-      Host: www.volumerOot.coM
-- name: CA 🇨🇦 | @Raydikalx | A18C2A | 2ms
+      Host: www.calmlunch.com
+- name: US 🇺🇸 | @Raydikalx | F1AD8B | 9ms
+  server: 107.173.237.146
+  port: 8443
+  type: vless
+  uuid: 1d39f715-2740-4d99-bc3b-197cc48dcee7
+  udp: true
+  tls: true
+  servername: updates.cdn-apple.com
+  reality-opts:
+    public-key: D3ojIs3AUKP_tV0E4TEjh90HBVJp24Nq3qMfdxD30kc
+    short-id: df8611c07d
+  client-fingerprint: chrome
+  network: tcp
+- name: CA 🇨🇦 | @Raydikalx | 51EA03 | 9ms
+  server: 104.18.46.46
+  port: 2082
+  type: vless
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  udp: true
+  tls: false
+  servername: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+  network: ws
+  ws-opts:
+    path: /?ed=2560security=tls
+    headers:
+      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+- name: CA 🇨🇦 | @Raydikalx | 17F42B | 9ms
+  server: 162.159.48.32
+  port: 8080
+  type: vless
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  udp: true
+  tls: false
+  servername: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+  network: ws
+  ws-opts:
+    path: /?ed=2560security=tls
+    headers:
+      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+- name: vless-1662656009 | 9ms
+  network: ws
+  port: 8080
+  server: 104.18.35.86
+  type: vless
+  udp: true
+  uuid: e5cc16a6-ea42-46b2-82ae-ad2157e1641b
+- name: CA 🇨🇦 | @Raydikalx | D80B49 | 9ms
+  server: 104.18.39.218
+  port: 8880
+  type: vless
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  udp: true
+  tls: false
+  servername: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+  network: ws
+  ws-opts:
+    path: /?ed=2560security=tls
+    headers:
+      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+- name: '[freeSub#169] D🔴🇺🇸hos[🎬🤖📺🎭]_dokng.com_47775503 | 9ms'
+  password: null
+  port: 9002
+  server: 138.199.35.219
+  skip-cert-verify: true
+  tls: true
+  type: http
+  username: null
+- name: CA 🇨🇦 | @Raydikalx | 881E27 | 9ms
+  server: 104.18.34.14
+  port: 2082
+  type: vless
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  udp: true
+  tls: false
+  servername: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+  network: ws
+  ws-opts:
+    path: /?ed=2560security=tls
+    headers:
+      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+- name: CA 🇨🇦 | @Raydikalx | 0E6145 | 9ms
+  server: 104.16.71.213
+  port: 443
+  type: trojan
+  password: humanity
+  udp: true
+  sni: www.calmlunch.com
+  network: ws
+  ws-opts:
+    path: /assignment
+    headers:
+      Host: www.calmlunch.com
+- name: CA 🇨🇦 | @Raydikalx | A23A8A | 9ms
+  server: 172.64.32.108
+  port: 2082
+  type: vless
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  udp: true
+  tls: false
+  servername: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+  network: ws
+  ws-opts:
+    path: /?ed=2560security=tls
+    headers:
+      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+- name: CA 🇨🇦 | @Raydikalx | 46BE33 | 9ms
+  server: 172.64.154.8
+  port: 8080
+  type: vless
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  udp: true
+  tls: false
+  servername: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+  network: ws
+  ws-opts:
+    path: /?ed=2560security=tls
+    headers:
+      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+- client-fingerprint: chrome
+  name: '[AutoMerge#066] 🇺🇸 美国 | USA #14 | 9ms'
+  network: ws
+  port: 2096
+  server: 172.64.151.254
+  servername: edg-2oo.pages.dev
+  tls: true
+  type: vless
+  uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
+  ws-opts:
+    headers:
+      Host: edg-2oo.pages.dev
+    path: /tools/friends/forums?ed=2560
+- name: CA 🇨🇦 | @Raydikalx | 404682 | 9ms
+  server: 104.17.169.13
+  port: 443
+  type: vless
+  uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
+  udp: true
+  tls: true
+  servername: jp3.yohototo.top
+  network: ws
+  ws-opts:
+    path: /tyxyws
+    headers:
+      Host: jp3.yohototo.top
+- name: CA 🇨🇦 | @Raydikalx | 1DB02C | 9ms
+  server: 172.67.231.254
+  port: 443
+  type: trojan
+  password: humanity
+  udp: true
+  sni: www.calmlunch.com
+  network: ws
+  ws-opts:
+    path: /assignment
+    headers:
+      Host: www.calmlunch.com
+- name: AT 🇦🇹 | @Raydikalx | 94A6B3 | 9ms
+  server: 212.183.88.136
+  port: 443
+  type: trojan
+  password: humanity
+  udp: true
+  sni: www.calmlunch.com
+  network: ws
+  ws-opts:
+    path: /assignment
+    headers:
+      Host: www.calmlunch.com
+- name: CA 🇨🇦 | @Raydikalx | 6D8CA8 | 9ms
+  server: 172.64.32.103
+  port: 2052
+  type: vless
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  udp: true
+  tls: false
+  servername: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+  network: ws
+  ws-opts:
+    path: /?ed=2560security=tls
+    headers:
+      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+- name: CA 🇨🇦 | @Raydikalx | B82160 | 9ms
+  server: 162.159.24.131
+  port: 2082
+  type: vless
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  udp: true
+  tls: false
+  servername: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+  network: ws
+  ws-opts:
+    path: /?ed=2560security=tls
+    headers:
+      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+- name: '[freeSub#153] D🔴🇺🇸hos[🎬🤖📺🎭]_dokng.com_e487e5ba | 9ms'
+  password: None
+  port: 9002
+  server: 138.199.35.205
+  skip-cert-verify: true
+  tls: true
+  type: http
+  username: null
+- name: CA 🇨🇦 | @Raydikalx | C9C17C | 9ms
+  server: 104.16.10.48
+  port: 443
+  type: vless
+  uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
+  udp: true
+  tls: true
+  servername: jp3.yohototo.top
+  network: ws
+  ws-opts:
+    path: /tyxyws
+    headers:
+      Host: jp3.yohototo.top
+- name: CA 🇨🇦 | @Raydikalx | CF2AEC | 9ms
+  server: 104.19.64.105
+  port: 443
+  type: trojan
+  password: humanity
+  udp: true
+  sni: www.calmlunch.com
+  network: ws
+  ws-opts:
+    path: /assignment
+    headers:
+      Host: www.calmlunch.com
+- name: CA 🇨🇦 | @Raydikalx | 7C0F0C | 9ms
+  server: 172.64.154.8
+  port: 2082
+  type: vless
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  udp: true
+  tls: false
+  servername: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+  network: ws
+  ws-opts:
+    path: /?ed=2560security=tls
+    headers:
+      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+- name: CA 🇨🇦 | @Raydikalx | 05B6A7 | 9ms
+  server: 162.159.43.187
+  port: 2086
+  type: vless
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  udp: true
+  tls: false
+  servername: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+  network: ws
+  ws-opts:
+    path: /?ed=2560security=tls
+    headers:
+      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+- name: '[free18#149] 🏳️_未知_243 | 9ms'
+  type: trojan
+  server: 172.67.217.240
+  port: 443
+  password: humanity
+  sni: www.calmlunch.com
+  skip-cert-verify: true
+  ws-opts:
+    path: /assignment
+    headers:
+      Host: www.calmlunch.com
+  udp: true
+- name: CA 🇨🇦 | @Raydikalx | C64FAC | 9ms
+  server: 162.159.0.53
+  port: 2095
+  type: vless
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  udp: true
+  tls: false
+  servername: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+  network: ws
+  ws-opts:
+    path: /?ed=2560security=tls
+    headers:
+      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+- name: CA 🇨🇦 | @Raydikalx | 4561A3 | 9ms
+  server: 104.18.42.98
+  port: 443
+  type: vless
+  uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
+  udp: true
+  tls: true
+  servername: jp3.yohototo.top
+  network: ws
+  ws-opts:
+    path: /tyxyws
+    headers:
+      Host: jp3.yohototo.top
+- name: '[freeSub#168] D🔴🇺🇸hos[🎬🤖📺🎭]_dokng.com_067d2b9f | 9ms'
+  password: ''
+  port: 9002
+  server: 138.199.35.196
+  skip-cert-verify: true
+  tls: true
+  type: http
+  username: ''
+- name: '[free18#084] 🏳️_未知_168 | 9ms'
+  type: vless
+  server: 188.114.96.9
+  port: 443
+  uuid: 2e305ebe-f6e6-4689-b32f-cd04ab5ff541
+  network: ws
+  servername: idb8onmvbntuyt5t7t6cejfw8vlrb.pages.dev
+  tls: true
+  client-fingerprint: chrome
+  ws-opts:
+    path: /vl/9yvcoLdzdOXLUYfH7r5gwJhu1CHrj
+  skip-cert-verify: true
+  udp: true
+- name: US 🇺🇸 | @Raydikalx | 5DCA9D | 9ms
+  server: 165.215.250.14
+  port: 443
+  type: trojan
+  password: humanity
+  udp: true
+  sni: www.calmlunch.com
+  network: ws
+  ws-opts:
+    path: //assignment
+    headers:
+      Host: www.calmlunch.com
+- name: '[Eternity#090] RELAY-203.30.191.2-1124 | 0.0MB | 9ms'
+  server: 203.30.191.2
+  port: 443
+  type: vmess
+  uuid: c5a2d7b8-bf84-4f97-8577-b9b87f2baaf7
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: oplg1.cfcdn2.xyz
+- name: CA 🇨🇦 | @Raydikalx | 565A24 | 9ms
+  server: 172.64.32.108
+  port: 2086
+  type: vless
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  udp: true
+  tls: false
+  servername: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+  network: ws
+  ws-opts:
+    path: /?ed=2560security=tls
+    headers:
+      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+- name: CA 🇨🇦 | @Raydikalx | 8C3B14 | 9ms
+  server: 104.16.10.22
+  port: 443
+  type: vless
+  uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
+  udp: true
+  tls: true
+  servername: jp3.yohototo.top
+  network: ws
+  ws-opts:
+    path: /tyxyws
+    headers:
+      Host: jp3.yohototo.top
+- name: '[freeSub#154] D🔴🇺🇸hos[🎬🤖📺🎭]_dokng.com_ff5d6731 | 9ms'
+  password: null
+  port: 9002
+  server: 138.199.35.195
+  skip-cert-verify: true
+  tls: true
+  type: http
+  username: null
+- name: US 🇺🇸 | @Raydikalx | 8F407D | 9ms
+  server: 170.114.45.6
+  port: 80
+  type: vless
+  uuid: a57223c7-3581-4fec-9bc4-ad5c30900efb
+  udp: true
+  tls: false
+  servername: free-server.techsonic.dev
+  network: ws
+  ws-opts:
+    path: /free-server.techsonic.dev
+    headers:
+      Host: free-server.techsonic.dev
+- name: CA 🇨🇦 | @Raydikalx | 9A9CCD | 9ms
+  server: 104.17.121.71
+  port: 443
+  type: trojan
+  password: humanity
+  udp: true
+  sni: www.calmlunch.com
+  network: ws
+  ws-opts:
+    path: /assignment
+    headers:
+      Host: www.calmlunch.com
+- name: CA 🇨🇦 | @Raydikalx | 26E40D | 9ms
+  server: 162.159.192.125
+  port: 443
+  type: vless
+  uuid: c4edb87e-8544-4fa4-bd1c-b0cda9a34b46
+  udp: true
+  tls: true
+  servername: a.cwvps.eu.org
+  network: ws
+  ws-opts:
+    path: /ws
+    headers:
+      Host: a.cwvps.eu.org
+- client-fingerprint: chrome
+  name: '[AutoMerge#062] 🇺🇸 美国 | USA #9 | 9ms'
+  network: ws
+  port: 2087
+  server: 104.16.146.132
+  servername: edg-2oo.pages.dev
+  tls: true
+  type: vless
+  uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
+  ws-opts:
+    headers:
+      Host: edg-2oo.pages.dev
+    path: /intro/episode?ed=2560
+- name: CA 🇨🇦 | @Raydikalx | 5831D3 | 9ms
+  server: 104.18.34.14
+  port: 8880
+  type: vless
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  udp: true
+  tls: false
+  servername: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+  network: ws
+  ws-opts:
+    path: /?ed=2560security=tls
+    headers:
+      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+- name: US 🇺🇸 | @Raydikalx | 1F0561 | 9ms
+  server: 141.193.213.21
+  port: 8443
+  type: vless
+  uuid: 29c3dd6b-b164-40ca-a0d5-f06aca52a8b2
+  udp: true
+  tls: true
+  servername: u.srilankangrill.online
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: u.srilankangrill.online
+- cipher: aes-128-gcm
+  name: '[NoMoreWalls#189] 🇺🇸[www.v2nodes.com] ss-US-1586... #1 | 9ms'
+  password: 1377d5cfafc9279a904deb3bfa4f3de2
+  port: 14680
+  server: 74.201.177.54
+  type: ss
+- name: '[freeSub#141] D🔴🇺🇸hos[🎬🤖📺🎭]_dokng.com_8a9f3564 | 9ms'
+  password: None
+  port: 9002
+  server: 138.199.35.198
+  skip-cert-verify: true
+  tls: true
+  type: http
+  username: null
+- name: CA 🇨🇦 | @Raydikalx | A18C2A | 9ms
   server: 188.114.96.19
   port: 80
   type: vmess
@@ -943,21 +1348,7 @@ proxies:
     path: /
     headers:
       Host: google.whatsapp.snapp.torob.basalam.hesanid8.ir
-- name: NL 🇳🇱 | @Raydikalx | 4A40AB | 2ms
-  server: 185.7.240.7
-  port: 8443
-  type: vless
-  uuid: 7967bf59-57e3-4cde-9898-527b0fe60022
-  udp: true
-  tls: true
-  servername: speed.dulacloud.store
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /dula?Telegram-WangCai2
-    headers:
-      Host: speed.dulacloud.store
-- name: US 🇺🇸 | @Raydikalx | 522BF7 | 2ms
+- name: US 🇺🇸 | @Raydikalx | 522BF7 | 9ms
   server: 170.114.46.6
   port: 80
   type: vless
@@ -970,56 +1361,9 @@ proxies:
     path: /free-server.techsonic.dev
     headers:
       Host: free-server.techsonic.dev
-- name: CA 🇨🇦 | @Raydikalx | 52EECF | 2ms
-  server: 162.159.228.224
-  port: 443
-  type: trojan
-  password: humanity
-  udp: true
-  sni: www.pleadcourt.org
-  network: ws
-  ws-opts:
-    path: /assignment
-    headers:
-      Host: www.pleadcourt.org
-- name: US 🇺🇸 | @Raydikalx | 2ABC0C | 2ms
-  server: 47.251.25.74
-  port: 443
-  type: vless
-  uuid: 18805ff3-b420-45de-af18-93be14024ae8
-  udp: true
-  tls: true
-  flow: xtls-rprx-vision
-  servername: www.amazon.com
-  reality-opts:
-    public-key: H56cOJhw0xw76lDEpt7IuJJmVGemK6_CK34KtHwDMX8
-    short-id: ''
-  client-fingerprint: chrome
-  network: tcp
-- name: vless-947793414 | 2ms
-  network: ws
-  port: 8080
-  server: 188.114.97.6
-  type: vless
-  udp: true
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-- name: NL 🇳🇱 | @Raydikalx | 61D065 | 2ms
-  server: 185.18.184.7
-  port: 8443
-  type: vless
-  uuid: 7967bf59-57e3-4cde-9898-527b0fe60022
-  udp: true
-  tls: true
-  servername: speed.dulacloud.store
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /dula?Telegram-WangCai2
-    headers:
-      Host: speed.dulacloud.store
-- name: CA 🇨🇦 | @Raydikalx | 05B6A7 | 2ms
-  server: 162.159.43.187
-  port: 2086
+- name: CA 🇨🇦 | @Raydikalx | 563902 | 9ms
+  server: 162.159.0.169
+  port: 2082
   type: vless
   uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
   udp: true
@@ -1030,48 +1374,143 @@ proxies:
     path: /?ed=2560security=tls
     headers:
       Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: GB 🇬🇧 | @Raydikalx | 5BBC82 | 2ms
-  server: 164.38.155.7
-  port: 8443
+- name: CA 🇨🇦 | @Raydikalx | CDFD0A | 9ms
+  server: 104.18.39.218
+  port: 80
   type: vless
-  uuid: 7967bf59-57e3-4cde-9898-527b0fe60022
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
   udp: true
-  tls: true
-  servername: speed.dulacloud.store
-  client-fingerprint: chrome
+  tls: false
+  servername: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
   network: ws
   ws-opts:
-    path: /dula?Telegram-WangCai2
+    path: /?ed=2560security=tls
     headers:
-      Host: speed.dulacloud.store
-- name: '[free18#082] 🏳️_未知_166 | 2ms'
+      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+- name: '[free18#088] 🇳🇱_荷兰_172 | 9ms'
   type: vless
-  server: 172.67.134.7
-  port: 2052
-  uuid: f1e5d738-2e83-4e2f-b6d6-a9013b3e7e48
+  server: 45.131.210.30
+  port: 8880
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
   network: ws
+  servername: vms.lifetime05.workers.dev
   tls: false
   ws-opts:
-    path: /vl/u3oMYZoYUAozPFEA8UhR?ed=2560
+    path: /
     headers:
-      Host: a6o58qfpwvgrwmz0crtha0r24uyiu2l.x7-f5jb95s0ocjt-0.workers.dev
+      Host: vms.lifetime05.workers.dev
   skip-cert-verify: true
   udp: true
-- name: GB 🇬🇧 | @Raydikalx | FCA12F | 2ms
-  server: 89.116.46.7
-  port: 8443
-  type: vless
-  uuid: 7967bf59-57e3-4cde-9898-527b0fe60022
-  udp: true
+- client-fingerprint: chrome
+  name: '[AutoMerge#064] 🇺🇸 美国 | USA #11 | 9ms'
+  network: ws
+  port: 443
+  server: 104.18.38.47
+  servername: edg-2oo.pages.dev
   tls: true
-  servername: speed.dulacloud.store
-  client-fingerprint: chrome
+  type: vless
+  uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
+  ws-opts:
+    headers:
+      Host: edg-2oo.pages.dev
+    path: /team/downloads/events?ed=2560
+- name: '[AutoMerge#070] 🇺🇸 美国 | USA #18 | 9ms'
+  network: ws
+  port: 8880
+  server: 172.64.88.251
+  tls: false
+  type: vless
+  udp: true
+  uuid: 7e3cd2f1-0de5-4717-9002-64d8597bc577
+  ws-opts:
+    headers:
+      Host: dry-credit-fc26.203-d8c.workers.dev
+    path: /pyip=ProxyIP.KR.CMLiussss.net
+- name: CA 🇨🇦 | @Raydikalx | 8CC9EC | 9ms
+  server: 104.18.47.113
+  port: 2082
+  type: vless
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  udp: true
+  tls: false
+  servername: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
   network: ws
   ws-opts:
-    path: /dula?Telegram-WangCai2
+    path: /?ed=2560security=tls
     headers:
-      Host: speed.dulacloud.store
-- name: '[free18#075] 🇳🇱_荷兰_155 | 2ms'
+      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+- name: CA 🇨🇦 | @Raydikalx | 6BD303 | 9ms
+  server: 172.64.42.85
+  port: 8880
+  type: vless
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  udp: true
+  tls: false
+  servername: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+  network: ws
+  ws-opts:
+    path: /?ed=2560security=tls
+    headers:
+      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+- name: '[freeSub#137] D🔴🇺🇸hos[🎬🤖📺🎭]_dokng.com_0f8d1baa | 9ms'
+  password: None
+  port: 9002
+  server: 138.199.35.197
+  skip-cert-verify: true
+  tls: true
+  type: http
+  username: null
+- name: CA 🇨🇦 | @Raydikalx | 42811B | 9ms
+  server: 104.21.70.21
+  port: 8080
+  type: vless
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  udp: true
+  tls: false
+  servername: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+  network: ws
+  ws-opts:
+    path: /?ed=2560security=tls
+    headers:
+      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+- name: CA 🇨🇦 | @Raydikalx | 1FCF86 | 9ms
+  server: 172.64.42.85
+  port: 2082
+  type: vless
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  udp: true
+  tls: false
+  servername: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+  network: ws
+  ws-opts:
+    path: /?ed=2560security=tls
+    headers:
+      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+- name: CA 🇨🇦 | @Raydikalx | D5C299 | 9ms
+  server: 188.114.97.6
+  port: 443
+  type: vless
+  uuid: 76ac91c5-ea82-4046-8ee7-2ffbb563ac94
+  udp: true
+  tls: true
+  servername: geo.shkola112.site
+  network: ws
+  ws-opts:
+    path: /api-vless
+    headers:
+      Host: geo.shkola112.site
+- name: '[NoMoreWalls#146] 🇸🇬[www.v2nodes.com] vless-SG-1... #7 | 9ms'
+  network: ws
+  port: 8880
+  server: 45.80.111.45
+  tls: false
+  type: vless
+  uuid: 5ffd914e-9594-4198-8327-145f096f8e4c
+  ws-opts:
+    headers:
+      Host: cnd.singapure.mygold.stream
+    path: /cdn/assets/stream
+- name: '[free18#075] 🇳🇱_荷兰_155 | 9ms'
   type: vless
   server: 188.164.248.123
   port: 8443
@@ -1086,270 +1525,8 @@ proxies:
       Host: vp21.cc.cd
   skip-cert-verify: true
   udp: true
-- name: '[AutoMerge#047] 🇳🇱 荷兰 | NLD #4 | 2ms'
-  network: ws
-  port: 8080
-  server: 172.67.171.191
-  servername: 172.67.171.191
-  tls: false
-  type: vless
-  udp: true
-  uuid: 0b2ea024-3ffd-46a7-87ce-86cbb79d7a48
-  ws-opts:
-    headers:
-      Host: server18.peekconfig2.workers.dev
-    path: /eyJqdW5rIjoiT3FNeW1sMVdGVHlvNTIiLCJwcm90b2NvbCI6InZsIiwibW9kZSI6InByZWZpeCIsInBhbmVsSVBzIjpbIlsyYTAyOjg5ODoxNDY6NjQ6Ol0iLCJbMjYwMjpmYzU5OmIwOjY0OjpdIiwiWzI2MDI6ZmM1OToxMTo2NDo6XSJdfQ==
-- name: CA 🇨🇦 | @Raydikalx | EA1678 | 2ms
-  server: 172.67.181.125
-  port: 2083
-  type: vless
-  uuid: ca608afb-55ff-4f36-9d00-606fedbb30e1
-  udp: true
-  tls: true
-  servername: Site.check-looks.space
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: Site.check-looks.space
-- name: DE 🇩🇪 | @Raydikalx | 8627D6 | 2ms
-  server: 5.175.141.7
-  port: 8443
-  type: vless
-  uuid: 7967bf59-57e3-4cde-9898-527b0fe60022
-  udp: true
-  tls: true
-  servername: speed.dulacloud.store
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /dula?Telegram-WangCai2
-    headers:
-      Host: speed.dulacloud.store
-- name: CA 🇨🇦 | @Raydikalx | D9E52E | 2ms
-  server: 104.18.37.127
-  port: 443
-  type: vless
-  uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
-  udp: true
-  tls: true
-  servername: jp3.yohototo.top
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /tyxyws
-    headers:
-      Host: jp3.yohototo.top
-- name: CA 🇨🇦 | @Raydikalx | EEC1E1 | 2ms
-  server: 162.159.24.131
-  port: 2095
-  type: vless
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  udp: true
-  tls: false
-  servername: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-  network: ws
-  ws-opts:
-    path: /?ed=2560security=tls
-    headers:
-      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: BZ 🇧🇿 | @Raydikalx | 94A662 | 2ms
-  server: 45.131.6.7
-  port: 8443
-  type: vless
-  uuid: 7967bf59-57e3-4cde-9898-527b0fe60022
-  udp: true
-  tls: true
-  servername: speed.dulacloud.store
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /dula?Telegram-WangCai2
-    headers:
-      Host: speed.dulacloud.store
-- name: CA 🇨🇦 | @Raydikalx | B754D5 | 2ms
-  server: 104.17.77.77
-  port: 8443
-  type: vmess
-  uuid: 60441548-b68e-43b2-8191-e3b884be4b3c
-  alterId: 0
-  cipher: none
-  udp: true
-  tls: true
-  servername: v2ray1.dozapp.xyz
-  network: ws
-  ws-opts:
-    path: /lMnsZUN4/
-    headers:
-      Host: v2ray1.dozapp.xyz
-- name: '[free18#166] 🏳️_未知_261 | 2ms'
-  type: vless
-  server: 173.245.49.157
-  port: 443
-  uuid: cf39fab0-bb85-42cb-9945-2ad69d78e575
-  network: ws
-  servername: rubifen.adaspoloandco.com
-  tls: true
-  client-fingerprint: chrome
-  ws-opts:
-    path: /GOrbEh
-  skip-cert-verify: true
-  udp: true
-- name: 🇺🇸 119  | ⬇️ 361KB/s | 2ms
+- name: CA 🇨🇦 | @Raydikalx | 90AED3 | 9ms
   server: 162.159.48.32
-  port: 2086
-  type: vless
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  tls: false
-  tfo: true
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /?ed=2560security=tls
-    headers:
-      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-  udp: true
-  servername: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: CA 🇨🇦 | @Raydikalx | C707B6 | 2ms
-  server: 104.17.44.17
-  port: 8080
-  type: vless
-  uuid: e5cc16a6-ea42-46b2-82ae-ad2157e1641b
-  udp: true
-  tls: false
-  servername: hhlfy.twiladaphne.ndjp.net
-  network: ws
-  ws-opts:
-    path: /sg-melbi
-    headers:
-      Host: hhlfy.twiladaphne.ndjp.net
-- name: CW 🇨🇼 | @Raydikalx | D498C4 | 2ms
-  server: 62.72.166.7
-  port: 8443
-  type: vless
-  uuid: 7967bf59-57e3-4cde-9898-527b0fe60022
-  udp: true
-  tls: true
-  servername: speed.dulacloud.store
-  network: ws
-  ws-opts:
-    path: /dula?Telegram-WangCai2
-    headers:
-      Host: speed.dulacloud.store
-- name: CA 🇨🇦 | @Raydikalx | 9BEFCE | 2ms
-  server: 172.67.159.161
-  port: 443
-  type: vless
-  uuid: 76ac91c5-ea82-4046-8ee7-2ffbb563ac94
-  udp: true
-  tls: true
-  servername: geo.shkola112.site
-  network: ws
-  ws-opts:
-    path: /api-vless
-    headers:
-      Host: geo.shkola112.site
-- client-fingerprint: chrome
-  encryption: none
-  name: '[NoMoreWalls#267] 🇺🇸US_2|1.6MB/s | 2ms'
-  network: ws
-  port: 443
-  server: 104.18.10.110
-  servername: 05agj.gkef.zhs.hh.vavava.kdns.fr
-  tls: true
-  type: vless
-  udp: true
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  ws-opts:
-    headers:
-      Host: 05agj.gkef.zhs.hh.vavava.kdns.fr
-      User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML,
-        like Gecko) Chrome/54.0.2840.99 Safari/537.36
-    path: /?ed=2560
-  xudp: true
-- name: '[NoMoreWalls#146] 🇸🇬[www.v2nodes.com] vless-SG-1... #7 | 2ms'
-  network: ws
-  port: 8880
-  server: 45.80.111.45
-  tls: false
-  type: vless
-  uuid: 5ffd914e-9594-4198-8327-145f096f8e4c
-  ws-opts:
-    headers:
-      Host: cnd.singapure.mygold.stream
-    path: /cdn/assets/stream
-- name: CA 🇨🇦 | @Raydikalx | 05893C | 2ms
-  server: 188.114.97.6
-  port: 443
-  type: trojan
-  password: humanity
-  udp: true
-  sni: www.calmlunch.com
-  network: ws
-  ws-opts:
-    path: /assignment
-    headers:
-      Host: www.calmlunch.com
-- cipher: rc4-md5
-  name: shadowsocks-27275 | 2ms
-  password: 14fFPrbezE3HDZzsMOr6
-  port: 8080
-  server: 107.155.57.11
-  type: ss
-  udp: true
-- name: CA 🇨🇦 | @Raydikalx | AE6904 | 2ms
-  server: 104.18.8.83
-  port: 443
-  type: trojan
-  password: humanity
-  udp: true
-  sni: www.calmlunch.com
-  network: ws
-  ws-opts:
-    path: /assignment
-    headers:
-      Host: www.calmlunch.com
-- name: US 🇺🇸 | @Raydikalx | 350AEB | 2ms
-  server: 108.162.198.178
-  port: 2086
-  type: vless
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  udp: true
-  tls: false
-  servername: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: CA 🇨🇦 | @Raydikalx | D8CEC0 | 2ms
-  server: 172.67.139.14
-  port: 443
-  type: trojan
-  password: humanity
-  udp: true
-  sni: www.volumeroot.com
-  network: ws
-  ws-opts:
-    path: /assignment
-    headers:
-      Host: www.volumeroot.com
-- name: GB 🇬🇧 | @Raydikalx | 453B05 | 2ms
-  server: 5.10.215.7
-  port: 8443
-  type: vless
-  uuid: 7967bf59-57e3-4cde-9898-527b0fe60022
-  udp: true
-  tls: true
-  servername: speed.dulacloud.store
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /dula?Telegram-WangCai2fp=chrome
-    headers:
-      Host: speed.dulacloud.store
-- name: US 🇺🇸 | @Raydikalx | 3A3CDE | 2ms
-  server: 108.162.198.178
   port: 2095
   type: vless
   uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
@@ -1358,90 +1535,55 @@ proxies:
   servername: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
   network: ws
   ws-opts:
-    path: /
+    path: /?ed=2560security=tls
     headers:
       Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: CA 🇨🇦 | @Raydikalx | 9E7EBE | 2ms
-  server: 104.18.32.47
+- name: '[freeSub#197] D🔴🇺🇸hos[🎬🤖📺🎭]_dokng.com_300ca497 | 9ms'
+  password: None
+  port: 9002
+  server: 138.199.35.211
+  skip-cert-verify: true
+  tls: true
+  type: http
+  username: null
+- name: US 🇺🇸 | @Raydikalx | 37A986 | 9ms
+  server: 162.159.253.41
   port: 443
   type: trojan
   password: humanity
   udp: true
   sni: www.calmlunch.com
-  client-fingerprint: chrome
   network: ws
   ws-opts:
     path: /assignment
     headers:
       Host: www.calmlunch.com
-- name: '[free18#073] 🇺🇸_美国_153 | 2ms'
+- name: '[free18#164] 🏳️_未知_259 | 9ms'
   type: vless
-  server: 63.141.128.30
-  port: 8880
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  server: 172.67.190.248
+  port: 8443
+  uuid: 7c99dc89-bf49-45c9-acc5-e43f36657518
   network: ws
-  tls: false
+  servername: www.large-files.info
+  tls: true
   ws-opts:
-    path: /
-    headers:
-      Host: vms.lifetime42.workers.dev
+    path: /var/www/html/video/preview/download/i8o0la
   skip-cert-verify: true
   udp: true
-- name: US 🇺🇸 | @Raydikalx | 74EE03 | 2ms
-  server: 141.193.213.20
-  port: 8443
+- name: CA 🇨🇦 | @Raydikalx | 63FD51 | 9ms
+  server: 104.18.47.113
+  port: 8080
   type: vless
-  uuid: 7967bf59-57e3-4cde-9898-527b0fe60022
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
   udp: true
-  tls: true
-  servername: speed.dulacloud.store
-  client-fingerprint: chrome
+  tls: false
+  servername: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
   network: ws
   ws-opts:
-    path: /dula
+    path: /?ed=2560security=tls
     headers:
-      Host: speed.dulacloud.store
-- name: US 🇺🇸 | @Raydikalx | 8FE4C4 | 2ms
-  server: 199.181.197.7
-  port: 8443
-  type: vless
-  uuid: 7967bf59-57e3-4cde-9898-527b0fe60022
-  udp: true
-  tls: true
-  servername: speed.dulacloud.store
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /dula?Telegram-WangCai2
-    headers:
-      Host: speed.dulacloud.store
-- name: US 🇺🇸 | @Raydikalx | 9DFC4D | 2ms
-  server: 199.34.228.7
-  port: 8443
-  type: vless
-  uuid: 7967bf59-57e3-4cde-9898-527b0fe60022
-  udp: true
-  tls: true
-  servername: speed.dulacloud.store
-  network: ws
-  ws-opts:
-    path: /dula?Telegram-WangCai2fp=chrome
-    headers:
-      Host: speed.dulacloud.store
-- client-fingerprint: chrome
-  name: '[AutoMerge#067] 🇺🇸 美国 | USA #15 | 2ms'
-  network: ws
-  port: 443
-  server: 162.159.140.85
-  servername: edg-2oo.pages.dev
-  tls: true
-  type: vless
-  uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
-  ws-opts:
-    headers:
-      Host: edg-2oo.pages.dev
-    path: /go.php?ed=2560
-- name: CA 🇨🇦 | @Raydikalx | 123339 | 2ms
+      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+- name: CA 🇨🇦 | @Raydikalx | 123339 | 9ms
   server: 172.64.158.146
   port: 8080
   type: vless
@@ -1454,258 +1596,39 @@ proxies:
     path: /?ed=2560security=tls
     headers:
       Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: CA 🇨🇦 | @Raydikalx | CDFD0A | 2ms
-  server: 104.18.39.218
-  port: 80
-  type: vless
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  udp: true
-  tls: false
-  servername: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+- name: '[NoMoreWalls#312] 🇺🇸 美国 | USA #7 | 9ms'
   network: ws
-  ws-opts:
-    path: /?ed=2560security=tls
-    headers:
-      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: CA 🇨🇦 | @Raydikalx | 56A41C | 2ms
-  server: 104.18.26.90
-  port: 443
-  type: vless
-  uuid: 3c52e091-6714-4915-949f-2149fe69951b
-  udp: true
-  tls: true
-  servername: v2ray.simspeedup.com
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /ws
-    headers:
-      Host: v2ray.simspeedup.com
-- name: CA 🇨🇦 | @Raydikalx | 05250D | 2ms
-  server: 172.64.154.8
   port: 8880
-  type: vless
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  udp: true
+  server: 104.17.58.113
   tls: false
-  servername: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-  network: ws
-  ws-opts:
-    path: /?ed=2560security=tls
-    headers:
-      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: CA 🇨🇦 | @Raydikalx | 358C05 | 2ms
-  server: 162.159.24.131
-  port: 2086
   type: vless
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
   udp: true
-  tls: false
-  servername: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-  network: ws
+  uuid: f77a1ad9-5ffa-4684-ba91-82f0df247eef
   ws-opts:
-    path: /?ed=2560security=tls
     headers:
-      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: CA 🇨🇦 | @Raydikalx | 93EE2A | 2ms
-  server: 162.159.36.20
+      Host: weathered-hat-64c5.50-47f.workers.dev
+    path: /pyip=ProxyIP.US.CMLiussss.net
+- name: US 🇺🇸 | @Raydikalx | 31C110 | 9ms
+  server: 45.205.0.6
   port: 443
   type: trojan
   password: humanity
   udp: true
   sni: www.calmlunch.com
+  client-fingerprint: chrome
   network: ws
   ws-opts:
     path: /assignment
     headers:
       Host: www.calmlunch.com
-- name: TR 🇹🇷 | @Raydikalx | 246F01 | 2ms
-  server: 86.38.214.7
-  port: 8443
-  type: vless
-  uuid: 7967bf59-57e3-4cde-9898-527b0fe60022
+- cipher: chacha20-ietf-poly1305
+  name: shadowsocks-157 | 9ms
+  password: G5p6ww4o67HB
+  port: 8388
+  server: 108.181.0.177
+  type: ss
   udp: true
-  tls: true
-  servername: speed.dulacloud.store
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /dula?Telegram-WangCai2
-    headers:
-      Host: speed.dulacloud.store
-- client-fingerprint: chrome
-  name: '[AutoMerge#069] 🇺🇸 美国 | USA #17 | 2ms'
-  network: ws
-  port: 2053
-  server: 141.101.90.108
-  servername: wzs.echo.net.eu.org
-  tls: true
-  type: vless
-  udp: true
-  uuid: d18c6897-2849-456a-8c46-d7ecece47c20
-  ws-opts:
-    headers:
-      Host: wzs.echo.net.eu.org
-    path: /video/HxNMGkZdGw0PRk1GVw8YF14OXkwNVVtIRg1HUlxQSwUEVRwJUx8BQRoaSVhfRhoOChkDDUs=
-- name: NL 🇳🇱 | @Raydikalx | 3DA043 | 2ms
-  server: 188.42.145.7
-  port: 8443
-  type: vless
-  uuid: 7967bf59-57e3-4cde-9898-527b0fe60022
-  udp: true
-  tls: true
-  servername: speed.dulacloud.store
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /dula?Telegram-WangCai2
-    headers:
-      Host: speed.dulacloud.store
-- name: HU 🇭🇺 | @Raydikalx | FB721F | 2ms
-  server: 74.49.214.7
-  port: 8443
-  type: vless
-  uuid: 7967bf59-57e3-4cde-9898-527b0fe60022
-  udp: true
-  tls: true
-  servername: speed.dulacloud.store
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /dula?Telegram-WangCai2
-    headers:
-      Host: speed.dulacloud.store
-- name: GB 🇬🇧 | @Raydikalx | BBDE75 | 2ms
-  server: 185.156.19.7
-  port: 8443
-  type: vless
-  uuid: 7967bf59-57e3-4cde-9898-527b0fe60022
-  udp: true
-  tls: true
-  servername: speed.dulacloud.store
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /dula?Telegram-WangCai2
-    headers:
-      Host: speed.dulacloud.store
-- name: CA 🇨🇦 | @Raydikalx | D6A4CB | 2ms
-  server: 104.19.12.94
-  port: 443
-  type: vless
-  uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
-  udp: true
-  tls: true
-  servername: jp3.yohototo.top
-  network: ws
-  ws-opts:
-    path: /tyxyws#telegram--MARAMBASHI--MARAMBASHI--MARAMBASHI--MARAMBASHI
-    headers:
-      Host: jp3.yohototo.top
-- name: US 🇺🇸 | @Raydikalx | 37A986 | 2ms
-  server: 162.159.253.41
-  port: 443
-  type: trojan
-  password: humanity
-  udp: true
-  sni: www.calmlunch.com
-  network: ws
-  ws-opts:
-    path: /assignment
-    headers:
-      Host: www.calmlunch.com
-- name: CA 🇨🇦 | @Raydikalx | C3C64F | 2ms
-  server: 172.64.154.8
-  port: 80
-  type: vless
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  udp: true
-  tls: false
-  servername: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-  network: ws
-  ws-opts:
-    path: /?ed=2560security=tls
-    headers:
-      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: CA 🇨🇦 | @Raydikalx | 63FD51 | 2ms
-  server: 104.18.47.113
-  port: 8080
-  type: vless
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  udp: true
-  tls: false
-  servername: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-  network: ws
-  ws-opts:
-    path: /?ed=2560security=tls
-    headers:
-      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: CA 🇨🇦 | @Raydikalx | 832341 | 2ms
-  server: 104.18.9.83
-  port: 443
-  type: trojan
-  password: humanity
-  udp: true
-  sni: www.calmlunch.com
-  network: ws
-  ws-opts:
-    path: /assignment
-    headers:
-      Host: www.calmlunch.com
-- name: CA 🇨🇦 | @Raydikalx | E9BC49 | 2ms
-  server: 104.16.85.85
-  port: 443
-  type: trojan
-  password: humanity
-  udp: true
-  sni: www.volumeroot.com
-  network: ws
-  ws-opts:
-    path: /assignment
-    headers:
-      Host: www.volumeroot.com
-- alpn:
-  - http/1.1
-  client-fingerprint: chrome
-  name: '[AutoMerge#065] 🇺🇸 美国 | USA #13 | 2ms'
-  network: ws
-  port: 443
-  server: adheres-scruple.quick-cdn.net
-  servername: adheres-scruple.quick-cdn.net
-  tls: true
-  type: vless
-  udp: true
-  uuid: a9c57d75-a2d3-47f7-9fd5-020a8c918b93
-  ws-opts:
-    headers:
-      Host: adheres-scruple.quick-cdn.net
-    path: /ws
-- name: CA 🇨🇦 | @Raydikalx | 6D8CA8 | 2ms
-  server: 172.64.32.103
-  port: 2052
-  type: vless
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  udp: true
-  tls: false
-  servername: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-  network: ws
-  ws-opts:
-    path: /?ed=2560security=tls
-    headers:
-      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: '[free18#135] 🏳️_未知_226 | 2ms'
-  type: trojan
-  server: 172.64.150.28
-  port: 443
-  password: humanity
-  sni: www.calmlunch.com
-  skip-cert-verify: true
-  ws-opts:
-    path: /assignment
-    headers:
-      Host: www.calmlunch.com
-  udp: true
-- name: CA 🇨🇦 | @Raydikalx | 7EB14B | 2ms
+- name: CA 🇨🇦 | @Raydikalx | 7EB14B | 9ms
   server: 104.18.34.14
   port: 2086
   type: vless
@@ -1718,8 +1641,45 @@ proxies:
     path: /?ed=2560security=tls
     headers:
       Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: CA 🇨🇦 | @Raydikalx | 861C59 | 2ms
-  server: 104.16.10.56
+- name: CA 🇨🇦 | @Raydikalx | 8B60FE | 9ms
+  server: 104.16.72.41
+  port: 443
+  type: trojan
+  password: humanity
+  udp: true
+  sni: www.calmlunch.com
+  network: ws
+  ws-opts:
+    path: /assignment
+    headers:
+      Host: www.calmlunch.com
+- encryption: none
+  name: '[AutoMerge#015] 🇪🇸[www.v2nodes.com] vless-ES-4... #1 | 9ms'
+  network: ws
+  port: 8880
+  server: 172.65.90.53
+  tls: false
+  type: vless
+  uuid: 812b1aeb-c6f7-43cb-8d8b-981711fea21a
+  ws-opts:
+    headers:
+      Host: dark-cake-4743.198-46c.workers.dev
+    path: /pyip=ProxyIP.JP.CMLiussss.net
+- name: '[free18#079] 🏳️_未知_159 | 9ms'
+  type: vless
+  server: 104.26.3.125
+  port: 2052
+  uuid: e8d06b09-acd9-448c-9874-3c36151d36ee
+  network: ws
+  tls: false
+  ws-opts:
+    path: /
+    headers:
+      Host: icy-wildflower-2590.lihuifeng595.workers.dev
+  skip-cert-verify: true
+  udp: true
+- name: CA 🇨🇦 | @Raydikalx | 929E2C | 9ms
+  server: 104.16.10.63
   port: 443
   type: vless
   uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
@@ -1731,135 +1691,22 @@ proxies:
     path: /tyxyws
     headers:
       Host: jp3.yohototo.top
-- client-fingerprint: chrome
-  name: '[AutoMerge#071] 🇺🇸 美国 | USA #20 | 2ms'
-  network: ws
+- name: '[freeSub#133] D🔴🇰🇷hos[🎬🤖📺🎭]_dokng.com_aba567e8 | 9ms'
   port: 443
-  server: 104.19.220.22
-  servername: edg-2oo.pages.dev
-  tls: true
-  type: vless
-  uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
-  ws-opts:
-    headers:
-      Host: edg-2oo.pages.dev
-    path: /teacher/china?ed=2560
-- name: '[NoMoreWalls#310] 🇺🇸 美国 | USA #5 | 2ms'
-  network: ws
-  port: 8080
-  server: 172.67.153.109
-  tls: false
-  type: vless
-  udp: true
-  uuid: 45643c5f-ffc2-46f3-b82c-329aea9962d4
-  ws-opts:
-    headers:
-      Host: server10.sotowoy673.workers.dev
-    path: /eyJqdW5rIjoiQkRZWDhCN01sIiwicHJvdG9jb2wiOiJ2bCIsIm1vZGUiOiJwcmVmaXgiLCJwYW5lbElQcyI6WyJbMmEwMjo4OTg6MTQ2OjY0OjpdIl19?ed=2560
-- name: US 🇺🇸 | @Raydikalx | EDEF72 | 2ms
-  server: 108.162.198.178
-  port: 2082
-  type: vless
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  udp: true
-  tls: false
-  servername: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- client-fingerprint: chrome
-  name: '[NoMoreWalls#112] 🇮🇹[www.v2nodes.com] vless-IT-2... #2 | 2ms'
-  network: ws
-  port: 443
-  server: 188.114.98.0
-  servername: tn1r.eu.cc
-  tls: true
-  type: vless
-  uuid: 22424ee2-6fe3-42ca-9749-6d4c5a8acc82
-  ws-opts:
-    headers:
-      Host: tn1r.eu.cc
-    path: /id-pusat
-- name: '[free18#147] 🏳️_未知_241 | 2ms'
-  type: trojan
-  server: 8.47.69.0
-  port: 443
-  password: humanity
-  sni: www.pleadcourt.org
+  server: 172.64.69.89
   skip-cert-verify: true
-  ws-opts:
-    path: /assignment
-  udp: true
-- client-fingerprint: chrome
-  encryption: none
-  name: '[ermaozi#017] 🇸🇬[www.v2nodes.com] vless-SG-1... #1 | 2ms'
-  network: ws
-  port: 443
-  server: 104.16.10.235
-  servername: u.srilankangrill.online
-  skip-cert-verify: false
   tls: true
-  type: vless
-  uuid: b8d8a5b0-867f-4491-b4e4-30edc04bb10e
-  ws-opts:
-    headers:
-      Host: u.srilankangrill.online
-    path: /
-- name: CA 🇨🇦 | @Raydikalx | F09F46 | 2ms
-  server: 104.16.111.193
-  port: 443
-  type: vless
-  uuid: 3c52e091-6714-4915-949f-2149fe69951b
-  udp: true
+  type: http
+- name: '[freeSub#103] D🔴🇺🇸hos[🎬🤖📺🎭]_dokng.com_483f6707 | 9ms'
+  password: null
+  port: 9002
+  server: 138.199.35.214
+  skip-cert-verify: true
   tls: true
-  servername: v2ray.simspeedup.com
-  network: ws
-  ws-opts:
-    path: /ws
-    headers:
-      Host: v2ray.simspeedup.com
-- name: CA 🇨🇦 | @Raydikalx | 3F8DB7 | 2ms
-  server: 104.19.157.30
-  port: 443
-  type: trojan
-  password: humanity
-  udp: true
-  sni: www.volumeroot.com
-  network: ws
-  ws-opts:
-    path: /assignment
-    headers:
-      Host: www.volumeroot.com
-- name: CA 🇨🇦 | @Raydikalx | 1550F2 | 2ms
-  server: 162.159.43.187
-  port: 80
-  type: vless
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  udp: true
-  tls: false
-  servername: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-  network: ws
-  ws-opts:
-    path: /?ed=2560security=tls
-    headers:
-      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: US 🇺🇸 | @Raydikalx | 8F407D | 2ms
-  server: 170.114.45.6
-  port: 80
-  type: vless
-  uuid: a57223c7-3581-4fec-9bc4-ad5c30900efb
-  udp: true
-  tls: false
-  servername: free-server.techsonic.dev
-  network: ws
-  ws-opts:
-    path: /free-server.techsonic.dev
-    headers:
-      Host: free-server.techsonic.dev
-- name: CA 🇨🇦 | @Raydikalx | 5DC2F9 | 2ms
-  server: 104.25.109.237
+  type: http
+  username: null
+- name: CA 🇨🇦 | @Raydikalx | 9588EA | 9ms
+  server: 104.16.72.50
   port: 443
   type: trojan
   password: humanity
@@ -1870,206 +1717,96 @@ proxies:
     path: /assignment
     headers:
       Host: www.calmlunch.com
-- name: '[free18#129] 🇸🇨_塞舌尔_219 | 2ms'
-  type: trojan
-  server: 45.130.125.190
-  port: 443
-  password: humanity
-  sni: www.calmlunch.com
+- name: '[freeSub#178] D🔴🇺🇸hos[🎬🤖📺🎭]_dokng.com_c41378dc | 9ms'
+  password: None
+  port: 9002
+  server: 138.199.35.218
   skip-cert-verify: true
-  ws-opts:
-    path: /assignment
-    headers:
-      Host: www.calmlunch.com
-  udp: true
-- name: CA 🇨🇦 | @Raydikalx | D06334 | 2ms
-  server: 104.16.10.185
-  port: 443
-  type: vless
-  uuid: c4edb87e-8544-4fa4-bd1c-b0cda9a34b46
-  udp: true
   tls: true
-  servername: a.cwvps.eu.org
-  network: ws
-  ws-opts:
-    path: /ws
-    headers:
-      Host: a.cwvps.eu.org
-- name: CA 🇨🇦 | @Raydikalx | 690C70 | 2ms
-  server: 104.18.46.46
-  port: 2086
+  type: http
+  username: null
+- name: '[free18#072] 🏳️_未知_152 | 9ms'
   type: vless
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  udp: true
+  server: 172.67.207.26
+  port: 8880
+  uuid: 26beb784-a664-4c3e-becf-0f0c12568b62
+  network: ws
+  servername: 172.67.207.26
   tls: false
-  servername: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-  network: ws
+  client-fingerprint: chrome
   ws-opts:
-    path: /?ed=2560security=tls
+    path: /pyip=ProxyIP.JP.CMLiussss.net
     headers:
-      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: '[free18#071] 🏳️_未知_151 | 2ms'
-  type: vless
-  server: 172.67.203.138
-  port: 8080
-  uuid: 015fada5-2c95-4251-9c58-39fa3abf1e24
-  network: ws
-  servername: 172.67.203.138
-  tls: false
-  ws-opts:
-    path: /eyJqdW5rIjoidzY2QTdySkdOeiIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJlZml4IiwicGFuZWxJUHMiOlsiWzJhMDI6ODk4OjE0Njo2NDo6XSIsIlsyNjAyOmZjNTk6MTE6NjQ6Ol0iLCJbMjYwMjpmYzU5OmIwOjY0OjpdIl19?ed=2560
-    headers:
-      Host: server17.peekconfig1.workers.dev
+      Host: twilight-poetry-2bfe.218-699.workers.dev
   skip-cert-verify: true
   udp: true
-- name: '[free18#080] 🏳️_未知_164 | 2ms'
-  type: vless
-  server: 172.67.145.5
-  port: 443
-  uuid: 20836693-ea23-4f40-a1e7-48a6da897917
-  network: ws
-  servername: netra-85a0ca.shoameni19.workers.dev
-  tls: true
-  ws-opts:
-    path: /vl/bluttbb7mo8rvx1coeyh4ww4qzbr2aui
-  skip-cert-verify: true
-  udp: true
-- name: '[clashfree#219] 未知 VLESS-436 | free-nodes | 2ms'
-  server: 104.21.207.202
-  port: 443
-  type: vless
-  uuid: 30e52776-55ac-3cb4-8d36-e2910f07e2c3
-  tls: true
-  alpn:
-  - h2
-  - http/1.1
-  tfo: false
-  skip-cert-verify: false
-  servername: b33ec4a1s226.fuhuovps.xyz
-  client-fingerprint: ios
-  xhttp-opts:
-    path: e0d9cd6ea04ecda957b4ca0869e038af
-    host: b33ec4a1s226.fuhuovps.xyz
-- name: CA 🇨🇦 | @Raydikalx | 42811B | 2ms
-  server: 104.21.70.21
-  port: 8080
-  type: vless
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  udp: true
-  tls: false
-  servername: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-  network: ws
-  ws-opts:
-    path: /?ed=2560security=tls
-    headers:
-      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: CA 🇨🇦 | @Raydikalx | F5FE35 | 2ms
-  server: 104.21.33.59
-  port: 443
-  type: vless
-  uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
-  udp: true
-  tls: true
-  servername: jp3.yohototo.top
-  network: ws
-  ws-opts:
-    path: /tyxyws
-    headers:
-      Host: jp3.yohototo.top
-- name: '[free18#085] 🏳️_未知_169 | 2ms'
-  type: vless
-  server: 104.21.31.137
-  port: 443
-  uuid: 59c70620-d2f3-4255-9d6f-f4c5103d64ce
-  network: ws
-  servername: 59fssibe-sddrrs3qw83qqzz0h1nt-o.q7qwsxitb6byi5nmta4naalz.workers.dev
-  tls: true
-  ws-opts:
-    path: /vl/fpyfomlg8srpgv7ssaoarya3fagqgu?ed
-  skip-cert-verify: true
-  udp: true
-- name: CA 🇨🇦 | @Raydikalx | 8B674D | 2ms
-  server: 104.21.33.59
-  port: 443
-  type: trojan
-  password: humanity
-  udp: true
-  sni: www.pleadcourt.org
-  network: ws
-  ws-opts:
-    path: /assignment
-    headers:
-      Host: www.pleadcourt.org
-- name: 🇺🇸 136  | ⬇️ 6MB/s | 2ms
-  server: 104.18.39.218
+- name: CA 🇨🇦 | @Raydikalx | 530D38 | 9ms
+  server: 188.114.97.6
   port: 2095
   type: vless
   uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  udp: true
   tls: false
-  tfo: true
-  skip-cert-verify: false
+  servername: zb1zi.s3nx.dyz.hh.vavava.kdns.fr
   network: ws
   ws-opts:
-    path: /?ed=2560security=tls
+    path: /?ed=2560
     headers:
-      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-  udp: true
-- name: '[freeSub#279] D🔴🇺🇸hos[🎬🤖📺🎭]_dokng.com_c09c3f93 | 2ms'
-  password: e4b72b531a2d10900519
-  port: 443
-  server: 162.243.146.243
-  sni: a2f392f3.acsnet.co
-  tls: true
-  type: http
-  username: testuser1
-- name: NL 🇳🇱 | @Raydikalx | 1560E5 | 2ms
-  server: 193.227.99.7
-  port: 8443
-  type: vless
-  uuid: 7967bf59-57e3-4cde-9898-527b0fe60022
-  udp: true
-  tls: true
-  servername: speed.dulacloud.store
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /dula?Telegram-WangCai2
-    headers:
-      Host: speed.dulacloud.store
-- name: CA 🇨🇦 | @Raydikalx | 39D89D | 2ms
+      Host: zb1zi.s3nx.dyz.hh.vavava.kdns.fr
+- name: CA 🇨🇦 | @Raydikalx | D5912C | 9ms
   server: 188.114.97.6
-  port: 443
-  type: vless
-  uuid: c4edb87e-8544-4fa4-bd1c-b0cda9a34b46
-  udp: true
-  tls: true
-  servername: a.cwvps.eu.org
-  network: ws
-  ws-opts:
-    path: /ws
-    headers:
-      Host: a.cwvps.eu.org
-- name: CA 🇨🇦 | @Raydikalx | 01E5A9 | 2ms
-  server: 104.18.47.113
-  port: 2086
+  port: 8080
   type: vless
   uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
   udp: true
   tls: false
-  servername: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+  servername: zb1zi.s3nx.dyz.hh.vavava.kdns.fr
   network: ws
   ws-opts:
-    path: /?ed=2560security=tls
+    path: /?ed=2560
     headers:
-      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: vless-450834934 | 2ms
+      Host: zb1zi.s3nx.dyz.hh.vavava.kdns.fr
+- name: '[freeSub#109] D🔴🇺🇸hos[🎬🤖📺🎭]_dokng.com_2b221c73 | 9ms'
+  password: ''
+  port: 9002
+  server: 138.199.35.217
+  skip-cert-verify: true
+  tls: true
+  type: http
+  username: ''
+- client-fingerprint: unsafe
+  encryption: none
+  name: '[NoMoreWalls#114] 🇯🇵[www.v2nodes.com] vless-JP-1... #3 | 9ms'
   network: ws
-  port: 80
-  server: 170.114.45.6
+  port: 443
+  server: 188.114.97.6
+  servername: jp3.yohototo.top
+  tls: true
   type: vless
+  uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
+  ws-opts:
+    headers:
+      Host: jp3.yohototo.top
+    path: /tyxyws
+- name: '[freeSub#213] D🔴🇺🇸hos[🎬🤖📺🎭]_dokng.com_a5d28d03 | 9ms'
+  password: null
+  port: 9002
+  server: 138.199.35.209
+  skip-cert-verify: true
+  tls: true
+  type: http
+  username: null
+- name: '[free18#148] 🏳️_未知_242 | 9ms'
+  type: trojan
+  server: 162.159.91.211
+  port: 443
+  password: humanity
+  sni: www.calmlunch.com
+  skip-cert-verify: true
+  ws-opts:
+    path: /assignment
   udp: true
-  uuid: cac6ec8f-99f0-44c5-814f-2f3f65e4db74
-- name: '[clashfree#208] 未知 VLESS-421 | free-nodes | 2ms'
+- name: '[clashfree#208] 未知 VLESS-421 | free-nodes | 9ms'
   server: 104.27.0.121
   port: 443
   type: vless
@@ -2085,438 +1822,19 @@ proxies:
   xhttp-opts:
     path: e0d9cd6ea04ecda957b4ca0869e038af
     host: b33ec4a1s226.fuhuovps.xyz
-- name: ES 🇪🇸 | @Raydikalx | A20A0C | 2ms
-  server: 185.18.250.7
-  port: 8443
-  type: vless
-  uuid: 7967bf59-57e3-4cde-9898-527b0fe60022
-  udp: true
-  tls: true
-  servername: speed.dulacloud.store
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /dula?Telegram-WangCai2
-    headers:
-      Host: speed.dulacloud.store
-- encryption: none
-  name: '[AutoMerge#015] 🇪🇸[www.v2nodes.com] vless-ES-4... #1 | 2ms'
-  network: ws
-  port: 8880
-  server: 172.65.90.53
-  tls: false
-  type: vless
-  uuid: 812b1aeb-c6f7-43cb-8d8b-981711fea21a
-  ws-opts:
-    headers:
-      Host: dark-cake-4743.198-46c.workers.dev
-    path: /pyip=ProxyIP.JP.CMLiussss.net
-- name: CA 🇨🇦 | @Raydikalx | BC3485 | 2ms
-  server: 104.21.57.25
-  port: 443
+- name: '[free18#172] 🏳️_未知_267 | 9ms'
   type: trojan
-  password: humanity
-  udp: true
-  sni: www.volumeroot.com
-  network: ws
-  ws-opts:
-    path: /assignment
-    headers:
-      Host: www.volumeroot.com
-- client-fingerprint: chrome
-  name: '[NoMoreWalls#060] 🇸🇬[www.v2nodes.com] vless-SG | 2ms'
-  network: ws
-  port: 443
-  server: 27.50.48.8
-  servername: vless2-8vx.pages.dev
-  tls: true
-  type: vless
-  uuid: c98a16e4-0dc5-42f0-b3db-30f04525c123
-  ws-opts:
-    headers:
-      Host: vless2-8vx.pages.dev
-    path: /
-- name: CA 🇨🇦 | @Raydikalx | 8CC9EC | 2ms
-  server: 104.18.47.113
-  port: 2082
-  type: vless
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  udp: true
-  tls: false
-  servername: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-  network: ws
-  ws-opts:
-    path: /?ed=2560security=tls
-    headers:
-      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: GB 🇬🇧 | @Raydikalx | D6AED8 | 2ms
-  server: 185.162.228.7
-  port: 8443
-  type: vless
-  uuid: 7967bf59-57e3-4cde-9898-527b0fe60022
-  udp: true
-  tls: true
-  servername: speed.dulacloud.store
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /dula?Telegram-WangCai2
-    headers:
-      Host: speed.dulacloud.store
-- name: BZ 🇧🇿 | @Raydikalx | AF6288 | 2ms
-  server: 45.135.235.7
-  port: 8443
-  type: vless
-  uuid: 7967bf59-57e3-4cde-9898-527b0fe60022
-  udp: true
-  tls: true
-  servername: speed.dulacloud.store
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /dula?Telegram-WangCai2
-    headers:
-      Host: speed.dulacloud.store
-- name: CA 🇨🇦 | @Raydikalx | 05877E | 2ms
-  server: 104.18.46.234
-  port: 8080
-  type: vless
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  udp: true
-  tls: false
-  servername: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: CA 🇨🇦 | @Raydikalx | 28C3B5 | 2ms
-  server: 162.159.24.131
-  port: 80
-  type: vless
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  udp: true
-  tls: false
-  servername: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-  network: ws
-  ws-opts:
-    path: /?ed=2560security=tls
-    headers:
-      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: US 🇺🇸 | @Raydikalx | 1F0561 | 2ms
-  server: 141.193.213.21
-  port: 8443
-  type: vless
-  uuid: 29c3dd6b-b164-40ca-a0d5-f06aca52a8b2
-  udp: true
-  tls: true
-  servername: u.srilankangrill.online
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: u.srilankangrill.online
-- name: '[ermaozi#014] 🇸🇬[www.v2nodes.com] vless-SG #2 | 2ms'
-  network: ws
-  port: 2086
-  server: 104.25.194.196
-  tls: false
-  type: vless
-  uuid: e3c7c198-2b02-42c2-b78f-22dfc078219c
-  ws-opts:
-    headers:
-      Host: uj-kn9gcgkzl0wmmy5wrkmalvhzdw62z.soltannatlos.workers.dev
-    path: /vl/3k4QnDlh2r3IPLPNFGLAeMJ5df?ed=2560
-- name: US 🇺🇸 | @Raydikalx | 1ECAA9 | 2ms
-  server: 108.162.198.178
-  port: 8080
-  type: vless
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  udp: true
-  tls: false
-  servername: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-  network: ws
-  ws-opts:
-    path: /?ed=2560security=tls
-    headers:
-      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: NL 🇳🇱 | @Raydikalx | DAAD2A | 2ms
-  server: 188.42.88.7
-  port: 8443
-  type: vless
-  uuid: 7967bf59-57e3-4cde-9898-527b0fe60022
-  udp: true
-  tls: true
-  servername: speed.dulacloud.store
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /dula?Telegram-WangCai2
-    headers:
-      Host: speed.dulacloud.store
-- name: CA 🇨🇦 | @Raydikalx | 9588EA | 2ms
-  server: 104.16.72.50
-  port: 443
-  type: trojan
-  password: humanity
-  udp: true
-  sni: www.calmlunch.com
-  network: ws
-  ws-opts:
-    path: /assignment
-    headers:
-      Host: www.calmlunch.com
-- name: CA 🇨🇦 | @Raydikalx | 0AB470 | 2ms
-  server: 104.18.34.14
-  port: 8080
-  type: vless
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  udp: true
-  tls: false
-  servername: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-  network: ws
-  ws-opts:
-    path: /?ed=2560security=tls
-    headers:
-      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: '[NoMoreWalls#312] 🇺🇸 美国 | USA #7 | 2ms'
-  network: ws
-  port: 8880
-  server: 104.17.58.113
-  tls: false
-  type: vless
-  udp: true
-  uuid: f77a1ad9-5ffa-4684-ba91-82f0df247eef
-  ws-opts:
-    headers:
-      Host: weathered-hat-64c5.50-47f.workers.dev
-    path: /pyip=ProxyIP.US.CMLiussss.net
-- name: CA 🇨🇦 | @Raydikalx | 76F5D4 | 2ms
-  server: 104.27.46.35
-  port: 443
-  type: vless
-  uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
-  udp: true
-  tls: true
-  servername: jp3.yohototo.top
-  network: ws
-  ws-opts:
-    path: /tyxyws
-    headers:
-      Host: jp3.yohototo.top
-- name: HU 🇭🇺 | @Raydikalx | DA9E5C | 2ms
-  server: 141.11.202.7
-  port: 8443
-  type: vless
-  uuid: 7967bf59-57e3-4cde-9898-527b0fe60022
-  udp: true
-  tls: true
-  servername: speed.dulacloud.store
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /dula?Telegram-WangCai2
-    headers:
-      Host: speed.dulacloud.store
-- name: CA 🇨🇦 | @Raydikalx | D60959 | 2ms
-  server: 162.159.48.32
-  port: 2052
-  type: vless
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  udp: true
-  tls: false
-  servername: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: DE 🇩🇪 | @Raydikalx | 526D68 | 2ms
-  server: 45.80.111.7
-  port: 443
-  type: trojan
-  password: humanity
-  udp: true
-  sni: www.calmlunch.com
-  network: ws
-  ws-opts:
-    path: /assignment
-    headers:
-      Host: www.calmlunch.com
-- name: '[zhuhaiuk#008] US - zhuhai.uk 02 | 2ms'
-  type: http
-  server: 137.175.22.40
-  port: 443
-  tls: true
-  skip-cert-verify: true
-- name: CA 🇨🇦 | @Raydikalx | 180650 | 2ms
-  server: 104.17.147.22
-  port: 443
-  type: trojan
-  password: humanity
-  udp: true
-  sni: www.calmlunch.com
-  network: ws
-  ws-opts:
-    path: /assignment
-    headers:
-      Host: www.calmlunch.com
-- type: vless
-  name: 🇺🇸 163  | ⬇️ 1MB/s | 2ms
-  server: 172.64.145.94
-  port: 2096
-  uuid: e98a5234-3038-4532-8ab8-3b5f630e8265
-  udp: true
-  tls: true
-  client-fingerprint: chrome
-  skip-cert-verify: false
-  packet-encoding: xudp
-  network: ws
-  ws-opts:
-    headers:
-      Host: enjoy0819.pages.dev
-    path: /
-  encryption: none
-  servername: enjoy0819.pages.dev
-- name: CA 🇨🇦 | @Raydikalx | D80B49 | 2ms
-  server: 104.18.39.218
-  port: 8880
-  type: vless
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  udp: true
-  tls: false
-  servername: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-  network: ws
-  ws-opts:
-    path: /?ed=2560security=tls
-    headers:
-      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: AE 🇦🇪 | @Raydikalx | 2BA895 | 2ms
-  server: 185.225.195.7
-  port: 8443
-  type: vless
-  uuid: 7967bf59-57e3-4cde-9898-527b0fe60022
-  udp: true
-  tls: true
-  servername: speed.dulacloud.store
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /dula?Telegram-WangCai2
-    headers:
-      Host: speed.dulacloud.store
-- name: CA 🇨🇦 | @Raydikalx | C9C17C | 2ms
-  server: 104.16.10.48
-  port: 443
-  type: vless
-  uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
-  udp: true
-  tls: true
-  servername: jp3.yohototo.top
-  network: ws
-  ws-opts:
-    path: /tyxyws
-    headers:
-      Host: jp3.yohototo.top
-- name: CA 🇨🇦 | @Raydikalx | B72A46 | 2ms
-  server: 104.21.37.56
-  port: 443
-  type: trojan
-  password: humanity
-  udp: true
-  sni: www.volumeroot.com
-  network: ws
-  ws-opts:
-    path: /assignment
-    headers:
-      Host: www.volumeroot.com
-- name: '[NoMoreWalls#303] 🇸🇬 新加坡 | SGP #3 | 2ms'
-  network: ws
-  port: 8080
-  server: 104.18.35.86
-  servername: hhlfy.twiladaphne.ndjp.net
-  tls: false
-  type: vless
-  udp: true
-  uuid: e5cc16a6-ea42-46b2-82ae-ad2157e1641b
-  ws-opts:
-    headers:
-      Host: hhlfy.twiladaphne.ndjp.net
-    path: /sg-melbi
-- name: CA 🇨🇦 | @Raydikalx | 9C0660 | 2ms
-  server: 104.18.153.10
-  port: 443
-  type: vless
-  uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
-  udp: true
-  tls: true
-  servername: jp3.yohototo.top
-  network: ws
-  ws-opts:
-    path: /tyxyws
-    headers:
-      Host: jp3.yohototo.top
-- name: '[Eternity#090] RELAY-203.30.191.2-1124 | 0.0MB | 2ms'
-  server: 203.30.191.2
-  port: 443
-  type: vmess
-  uuid: c5a2d7b8-bf84-4f97-8577-b9b87f2baaf7
-  alterId: 0
-  cipher: auto
-  tls: true
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: oplg1.cfcdn2.xyz
-- name: CA 🇨🇦 | @Raydikalx | 56ABBD | 2ms
   server: 104.18.35.86
   port: 443
-  type: trojan
   password: humanity
-  udp: true
-  sni: www.volumerOot.coM
-  network: ws
+  sni: www.volumerOot.coM.
+  skip-cert-verify: true
   ws-opts:
     path: /assignment
-    headers:
-      Host: www.volumerOot.coM
-- name: US 🇺🇸 | @Raydikalx | 4D9FA3 | 2ms
-  server: 162.159.244.91
-  port: 443
-  type: trojan
-  password: humanity
   udp: true
-  sni: www.calmlunch.com
-  network: ws
-  ws-opts:
-    path: /assignment
-    headers:
-      Host: www.calmlunch.com
-- cipher: rc4-md5
-  name: shadowsocks-27276 | 2ms
-  password: 14fFPrbezE3HDZzsMOr6
+- name: CA 🇨🇦 | @Raydikalx | 1A6E36 | 9ms
+  server: 172.64.229.170
   port: 8080
-  server: 23.251.121.242
-  type: ss
-  udp: true
-- name: CA 🇨🇦 | @Raydikalx | DA0B9C | 2ms
-  server: 172.64.145.133
-  port: 443
-  type: trojan
-  password: humanity
-  udp: true
-  sni: www.pleadcourt.org
-  network: ws
-  ws-opts:
-    path: /assignment
-    headers:
-      Host: www.pleadcourt.org
-- name: CA 🇨🇦 | @Raydikalx | 3A5859 | 2ms
-  server: 162.159.0.169
-  port: 80
   type: vless
   uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
   udp: true
@@ -2527,420 +1845,8 @@ proxies:
     path: /?ed=2560security=tls
     headers:
       Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: '[freeSub#061] B🟡🇺🇸biz_dokng.com_145fbfbc | 2ms'
-  password: d7340868-b74c-455a-8ce0-17a52afa43b7
-  port: 21333
-  server: 134.195.101.162
-  skip-cert-verify: true
-  sni: apple.com
-  type: anytls
-  udp: true
-- alpn:
-  - http/1.1
-  client-fingerprint: chrome
-  name: '[NoMoreWalls#308] 🇺🇸 美国 | USA #2 | 2ms'
-  network: ws
-  packet-encoding: xudp
-  port: 443
-  server: ghosts-spasm.quick-cdn.net
-  servername: ghosts-spasm.quick-cdn.net
-  tls: true
-  type: vless
-  udp: true
-  uuid: 440fe024-dd04-4581-9657-4a49afa65b81
-  ws-opts:
-    headers:
-      Host: ghosts-spasm.quick-cdn.net
-    path: /ws
-- name: '[free18#086] 🏳️_未知_170 | 2ms'
-  type: vless
-  server: 172.67.142.169
-  port: 443
-  uuid: 4c0b7280-76bb-495c-9c8b-f05712ebf805
-  network: ws
-  servername: youxuanku.kdns.fr
-  tls: true
-  ws-opts:
-    path: /
-  skip-cert-verify: true
-  udp: true
-- encryption: none
-  name: '[NoMoreWalls#132] 🇷🇴[www.v2nodes.com] vless-RO-4... | 2ms'
-  network: ws
-  port: 8880
-  server: 172.65.90.53
-  servername: autumn-leaf-eefd.119-38e.workers.dev
-  tls: false
-  type: vless
-  uuid: a9fb0f8c-89e9-44ee-9574-a310c5bd259c
-  ws-opts:
-    headers:
-      Host: autumn-leaf-eefd.119-38e.workers.dev
-    path: /pyip=ProxyIP.US.CMLiussss.net
-- name: CA 🇨🇦 | @Raydikalx | 38F112 | 2ms
-  server: 172.64.32.103
-  port: 8880
-  type: vless
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  udp: true
-  tls: false
-  servername: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-  network: ws
-  ws-opts:
-    path: /?ed=2560security=tls
-    headers:
-      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- client-fingerprint: chrome
-  name: '[AutoMerge#062] 🇺🇸 美国 | USA #9 | 2ms'
-  network: ws
-  port: 2087
-  server: 104.16.146.132
-  servername: edg-2oo.pages.dev
-  tls: true
-  type: vless
-  uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
-  ws-opts:
-    headers:
-      Host: edg-2oo.pages.dev
-    path: /intro/episode?ed=2560
-- name: CA 🇨🇦 | @Raydikalx | 929E2C | 2ms
-  server: 104.16.10.63
-  port: 443
-  type: vless
-  uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
-  udp: true
-  tls: true
-  servername: jp3.yohototo.top
-  network: ws
-  ws-opts:
-    path: /tyxyws
-    headers:
-      Host: jp3.yohototo.top
-- name: '[freeSub#133] D🔴🇰🇷hos[🎬🤖📺🎭]_dokng.com_aba567e8 | 2ms'
-  port: 443
-  server: 172.64.69.89
-  skip-cert-verify: true
-  tls: true
-  type: http
-- name: '[free18#079] 🏳️_未知_159 | 2ms'
-  type: vless
-  server: 104.26.3.125
-  port: 2052
-  uuid: e8d06b09-acd9-448c-9874-3c36151d36ee
-  network: ws
-  tls: false
-  ws-opts:
-    path: /
-    headers:
-      Host: icy-wildflower-2590.lihuifeng595.workers.dev
-  skip-cert-verify: true
-  udp: true
-- name: CA 🇨🇦 | @Raydikalx | 8C3B14 | 2ms
-  server: 104.16.10.22
-  port: 443
-  type: vless
-  uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
-  udp: true
-  tls: true
-  servername: jp3.yohototo.top
-  network: ws
-  ws-opts:
-    path: /tyxyws
-    headers:
-      Host: jp3.yohototo.top
-- name: NL 🇳🇱 | @Raydikalx | 2A9E32 | 2ms
-  server: 188.42.89.7
-  port: 8443
-  type: vless
-  uuid: 7967bf59-57e3-4cde-9898-527b0fe60022
-  udp: true
-  tls: true
-  servername: speed.dulacloud.store
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /dula?Telegram-WangCai2
-    headers:
-      Host: speed.dulacloud.store
-- name: 🇺🇸 117  | ⬇️ 332KB/s | 2ms
-  server: 104.18.46.234
-  port: 80
-  type: vless
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  tls: false
-  tfo: true
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /?ed=2560security=tls
-    headers:
-      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-  udp: true
-  servername: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: CA 🇨🇦 | @Raydikalx | FE4F26 | 2ms
-  server: 162.159.43.187
-  port: 2095
-  type: vless
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  udp: true
-  tls: false
-  servername: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-  network: ws
-  ws-opts:
-    path: /?ed=2560security=tls
-    headers:
-      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: '[freeSub#273] D🔴🇺🇸hos[🎬🤖📺🎭]_dokng.com_75365148 | 2ms'
-  port: 443
-  server: 167.88.60.242
-  skip-cert-verify: true
-  tls: true
-  type: http
-- name: US 🇺🇸 | @Raydikalx | 45D6E2 | 2ms
-  server: 108.162.198.178
-  port: 2052
-  type: vless
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  udp: true
-  tls: false
-  servername: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-  network: ws
-  ws-opts:
-    path: /?ed=2560security=tls
-    headers:
-      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: '[freeSub#111] D🔴🇺🇸hos[🎬🤖📺🎭]_dokng.com_efcae490 | 2ms'
-  port: 443
-  server: 137.175.22.96
-  skip-cert-verify: true
-  tls: true
-  type: http
-- client-fingerprint: random
-  flow: xtls-rprx-vision
-  name: vless-1538407570 | 2ms
-  network: tcp
-  port: 8443
-  reality-opts:
-    public-key: ribQDOlZ69PzvZ1EDF0EcmMvbq_T5RQrVRBSGUU2riU
-    short-id: 35cd899f8de04801
-  server: 23.95.222.127
-  servername: www.apple.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: 352ff568-f971-4613-bf48-92997a5d44ed
-- name: '[NoMoreWalls#207] 🇮🇩[www.v2nodes.com] trojan-ID-... | 2ms'
-  network: ws
-  password: 018b8e7b-7813-4dcb-84a5-3c98f1521e00
-  port: 443
-  server: 104.21.70.21
-  sni: id1.nathaya.web.id
-  type: trojan
-  ws-opts:
-    headers:
-      Host: id1.nathaya.web.id
-    path: /trojan
-- name: US 🇺🇸 | @Raydikalx | 5194FA | 2ms
-  server: 80.93.202.7
-  port: 8443
-  type: vless
-  uuid: 7967bf59-57e3-4cde-9898-527b0fe60022
-  udp: true
-  tls: true
-  servername: speed.dulacloud.store
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /dula?Telegram-WangCai2
-    headers:
-      Host: speed.dulacloud.store
-- name: '[clashfree#222] 未知 VLESS-439 | free-nodes | 2ms'
-  server: 104.19.12.0
-  port: 443
-  type: vless
-  uuid: 30e52776-55ac-3cb4-8d36-e2910f07e2c3
-  tls: true
-  alpn:
-  - h2
-  - http/1.1
-  tfo: false
-  skip-cert-verify: false
-  servername: b33ec4a1s226.fuhuovps.xyz
-  client-fingerprint: ios
-  xhttp-opts:
-    path: e0d9cd6ea04ecda957b4ca0869e038af
-    host: b33ec4a1s226.fuhuovps.xyz
-- name: US 🇺🇸 | @Raydikalx | 0C77C4 | 2ms
-  server: 172.64.72.171
-  port: 443
-  type: trojan
-  password: humanity
-  udp: true
-  sni: www.volumeroot.com
-  network: ws
-  ws-opts:
-    path: /assignment
-    headers:
-      Host: www.volumeroot.com
-- name: PL 🇵🇱 | @Raydikalx | DB5773 | 2ms
-  server: 185.193.31.7
-  port: 8443
-  type: vless
-  uuid: 7967bf59-57e3-4cde-9898-527b0fe60022
-  udp: true
-  tls: true
-  servername: speed.dulacloud.store
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /dula?Telegram-WangCai2
-    headers:
-      Host: speed.dulacloud.store
-- name: US 🇺🇸 | @Raydikalx | 5DCA9D | 2ms
-  server: 165.215.250.14
-  port: 443
-  type: trojan
-  password: humanity
-  udp: true
-  sni: www.calmlunch.com
-  network: ws
-  ws-opts:
-    path: //assignment
-    headers:
-      Host: www.calmlunch.com
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: vless-1510182882 | 2ms
-  network: tcp
-  port: 30556
-  reality-opts:
-    public-key: EcmNQqZxyW4GCEQF-7nH54w3qgBkLzsfqFSgafGjB0E
-    short-id: d082f567
-  server: 137.175.82.40
-  servername: www.lovelive-anime.jp
-  tls: true
-  type: vless
-  udp: true
-  uuid: 949d278e-6d98-4014-84e9-59f1c6c93e0e
-- name: AT 🇦🇹 | @Raydikalx | 94A6B3 | 2ms
-  server: 212.183.88.136
-  port: 443
-  type: trojan
-  password: humanity
-  udp: true
-  sni: www.calmlunch.com
-  network: ws
-  ws-opts:
-    path: /assignment
-    headers:
-      Host: www.calmlunch.com
-- name: '[NoMoreWalls#141] 🇸🇬[www.v2nodes.com] vless-SG-1... #1 | 2ms'
-  network: ws
-  port: 8443
-  server: 89.116.250.7
-  servername: speed.dulacloud.store
-  tls: true
-  type: vless
-  uuid: 7967bf59-57e3-4cde-9898-527b0fe60022
-  ws-opts:
-    headers:
-      Host: speed.dulacloud.store
-    path: /dula?Telegram-WangCai2fp=chrome
-- client-fingerprint: chrome
-  name: '[freeSub#210] D🔴🇰🇷hos[🎬📺🎭🎪]_dokng.com_1ca689b4 | 2ms'
-  network: ws
-  port: 2083
-  server: 104.17.171.60
-  servername: vlso5.1d.mom
-  skip-cert-verify: false
-  tls: true
-  type: vless
-  uuid: a1de0630-5786-48a0-84f6-dc6f2de10d6d
-  ws-opts:
-    headers:
-      Host: vlso5.1d.mom
-    path: /socks5=888:888@hkip.1d.mom:1080
-- name: US 🇺🇸 | @Raydikalx | 65CB97 | 2ms
-  server: 167.68.42.7
-  port: 8443
-  type: vless
-  uuid: 7967bf59-57e3-4cde-9898-527b0fe60022
-  udp: true
-  tls: true
-  servername: speed.dulacloud.store
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /dula?Telegram-WangCai2fp=chrome
-    headers:
-      Host: speed.dulacloud.store
-- name: CA 🇨🇦 | @Raydikalx | 74B5FF | 2ms
-  server: 104.21.13.204
-  port: 443
-  type: trojan
-  password: humanity
-  udp: true
-  sni: www.calmlunch.com
-  network: ws
-  ws-opts:
-    path: /assignment
-    headers:
-      Host: www.calmlunch.com
-- name: '[free18#162] 🏳️_未知_257 | 2ms'
-  type: vless
-  server: 172.67.172.95
-  port: 443
-  uuid: cf39fab0-bb85-42cb-9945-2ad69d78e575
-  network: ws
-  servername: rubifen.adaspoloandco.com
-  tls: true
-  client-fingerprint: chrome
-  ws-opts:
-    path: /GOrbEh
-  skip-cert-verify: true
-  udp: true
-- name: CA 🇨🇦 | @Raydikalx | 404682 | 2ms
-  server: 104.17.169.13
-  port: 443
-  type: vless
-  uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
-  udp: true
-  tls: true
-  servername: jp3.yohototo.top
-  network: ws
-  ws-opts:
-    path: /tyxyws
-    headers:
-      Host: jp3.yohototo.top
-- name: CA 🇨🇦 | @Raydikalx | 05C8B0 | 2ms
-  server: 172.64.32.108
-  port: 8880
-  type: vless
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  udp: true
-  tls: false
-  servername: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-  network: ws
-  ws-opts:
-    path: /?ed=2560security=tls
-    headers:
-      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: DE 🇩🇪 | @Raydikalx | 9DD688 | 2ms
-  server: 45.128.76.7
-  port: 8443
-  type: vless
-  uuid: 7967bf59-57e3-4cde-9898-527b0fe60022
-  udp: true
-  tls: true
-  servername: speed.dulacloud.store
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /dula?Telegram-WangCai2
-    headers:
-      Host: speed.dulacloud.store
-- name: CA 🇨🇦 | @Raydikalx | 8B2A7E | 2ms
-  server: 104.18.0.181
+- name: CA 🇨🇦 | @Raydikalx | EEF52A | 9ms
+  server: 104.16.10.84
   port: 443
   type: vless
   uuid: c4edb87e-8544-4fa4-bd1c-b0cda9a34b46
@@ -2949,37 +1855,12 @@ proxies:
   servername: a.cwvps.eu.org
   network: ws
   ws-opts:
-    path: /ws
+    path: /ws#/?TELEGRAM--MARAMBASHI--MARAMBASHI?ed=512
     headers:
       Host: a.cwvps.eu.org
-- encryption: none
-  name: '[NoMoreWalls#087] 🇷🇴[www.v2nodes.com] vless-RO-1... | 2ms'
-  network: ws
-  port: 8880
-  server: 172.65.90.53
-  servername: www.zsu.gov.ua
-  tls: false
-  type: vless
-  uuid: 121c3728-2b6b-4b69-bac6-170b13658d74
-  ws-opts:
-    headers:
-      Host: falling-darkness-95ea.289.workers.dev
-    path: /pyip=ProxyIP.SG.CMLiussss.net
-- name: CA 🇨🇦 | @Raydikalx | 81B423 | 2ms
-  server: 172.64.152.23
-  port: 443
-  type: trojan
-  password: humanity
-  udp: true
-  sni: www.calmlunch.com
-  network: ws
-  ws-opts:
-    path: /assignment
-    headers:
-      Host: www.calmlunch.com
-- name: CA 🇨🇦 | @Raydikalx | 4E0D8E | 2ms
-  server: 104.18.39.218
-  port: 2082
+- name: CA 🇨🇦 | @Raydikalx | 122FF3 | 9ms
+  server: 172.64.32.103
+  port: 2086
   type: vless
   uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
   udp: true
@@ -2990,100 +1871,63 @@ proxies:
     path: /?ed=2560security=tls
     headers:
       Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: CA 🇨🇦 | @Raydikalx | 72D103 | 2ms
+- name: CA 🇨🇦 | @Raydikalx | 4D93D5 | 9ms
+  server: 172.64.229.170
+  port: 2086
+  type: vless
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  udp: true
+  tls: false
+  servername: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+  network: ws
+  ws-opts:
+    path: /?ed=2560security=tls
+    headers:
+      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+- name: '[freeSub#101] D🔴🇺🇸hos[🎬🤖📺🎭]_dokng.com_da81ef84 | 9ms'
+  password: None
+  port: 9002
+  server: 138.199.35.200
+  skip-cert-verify: true
+  tls: true
+  type: http
+  username: null
+- name: CA 🇨🇦 | @Raydikalx | DE048E | 9ms
+  server: 172.64.32.108
+  port: 8080
+  type: vless
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  udp: true
+  tls: false
+  servername: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+  network: ws
+  ws-opts:
+    path: /?ed=2560security=tls
+    headers:
+      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+- name: '[free18#092] 🏳️_未知_176 | 9ms'
+  type: vless
   server: 104.21.70.21
-  port: 443
-  type: vless
-  uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
-  udp: true
-  tls: true
-  servername: jp3.yohototo.top
-  client-fingerprint: chrome
+  port: 8080
+  uuid: 8a36be1d-7c78-4885-8a1f-bedf5ba7db1c
   network: ws
-  ws-opts:
-    path: /tyxyws
-    headers:
-      Host: jp3.yohototo.top
-- name: CA 🇨🇦 | @Raydikalx | 950346 | 2ms
-  server: 104.19.48.107
-  port: 443
-  type: vless
-  uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
-  udp: true
-  tls: true
-  servername: jp3.yohototo.top
-  network: ws
-  ws-opts:
-    path: /tyxyws
-    headers:
-      Host: jp3.yohototo.top
-- name: CA 🇨🇦 | @Raydikalx | D955BF | 2ms
-  server: 104.18.47.113
-  port: 8880
-  type: vless
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  udp: true
   tls: false
-  servername: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-  network: ws
   ws-opts:
-    path: /?ed=2560security=tls
+    path: /rN50nmm9L1DeY73C?ed=2560
     headers:
-      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: CA 🇨🇦 | @Raydikalx | 46EDC3 | 2ms
-  server: 172.67.118.45
-  port: 443
-  type: trojan
-  password: humanity
+      Host: lucky-lab-ac6d.caveyi8071.workers.dev
+  skip-cert-verify: true
   udp: true
-  sni: www.volumeroot.com
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /assignment
-    headers:
-      Host: www.volumeroot.com
-- name: GB 🇬🇧 | @Raydikalx | 834F16 | 2ms
-  server: 45.85.118.7
-  port: 8443
-  type: vless
-  uuid: 7967bf59-57e3-4cde-9898-527b0fe60022
-  udp: true
+- name: '[freeSub#193] D🔴🇺🇸hos[🎬🤖📺🎭]_dokng.com_c6c9640a | 9ms'
+  password: 'null'
+  port: 9002
+  server: 138.199.35.201
+  skip-cert-verify: true
+  sni: 138.199.35.201
   tls: true
-  servername: speed.dulacloud.store
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /dula?Telegram-WangCai2
-    headers:
-      Host: speed.dulacloud.store
-- name: US 🇺🇸 | @Raydikalx | 7EC5EC | 2ms
-  server: 108.165.216.7
-  port: 8443
-  type: vless
-  uuid: 7967bf59-57e3-4cde-9898-527b0fe60022
-  udp: true
-  tls: true
-  servername: speed.dulacloud.store
-  network: ws
-  ws-opts:
-    path: /dula?Telegram-WangCai2fp=chrome
-    headers:
-      Host: speed.dulacloud.store
-- name: CA 🇨🇦 | @Raydikalx | A07B4B | 2ms
-  server: 104.18.34.14
-  port: 2095
-  type: vless
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  udp: true
-  tls: false
-  servername: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: CA 🇨🇦 | @Raydikalx | D94FDB | 2ms
+  type: http
+  username: 'null'
+- name: CA 🇨🇦 | @Raydikalx | D94FDB | 9ms
   server: 188.114.96.19
   port: 80
   type: vmess
@@ -3100,81 +1944,68 @@ proxies:
       Host: google.whatsapp.snapp.torob.basalam.dns-look.space
     v2ray-http-upgrade: true
     v2ray-http-upgrade-fast-open: true
-- name: DE 🇩🇪 | @Raydikalx | 634556 | 2ms
-  server: 156.243.246.7
-  port: 8443
+- name: CA 🇨🇦 | @Raydikalx | 998E93 | 9ms
+  server: 104.18.46.46
+  port: 8080
   type: vless
-  uuid: 7967bf59-57e3-4cde-9898-527b0fe60022
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
   udp: true
-  tls: true
-  servername: speed.dulacloud.store
-  client-fingerprint: chrome
+  tls: false
+  servername: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
   network: ws
   ws-opts:
-    path: /dula?Telegram-WangCai2
+    path: /?ed=2560security=tls
     headers:
-      Host: speed.dulacloud.store
-- name: '[free18#095] 🏳️_未知_181 | 2ms'
+      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+- name: CA 🇨🇦 | @Raydikalx | 3A84F1 | 9ms
+  server: 172.64.229.2
+  port: 80
   type: vless
-  server: 104.21.70.21
-  port: 443
-  uuid: c4edb87e-8544-4fa4-bd1c-b0cda9a34b46
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  udp: true
+  tls: false
+  servername: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
   network: ws
-  servername: a.cwvps.eu.org
-  tls: true
-  client-fingerprint: unsafe
   ws-opts:
-    path: /ws
+    path: /?ed=2560security=tls
+    headers:
+      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+- name: vless-897906541 | 9ms
+  network: ws
+  port: 2095
+  server: 162.159.24.131
+  type: vless
+  udp: true
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+- name: CA 🇨🇦 | @Raydikalx | F0AA75 | 9ms
+  server: 172.64.229.170
+  port: 80
+  type: vless
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  udp: true
+  tls: false
+  servername: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+  network: ws
+  ws-opts:
+    path: /?ed=2560security=tls
+    headers:
+      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+- name: '[freeSub#196] D🔴🇺🇸hos[🎬🤖📺🎭]_dokng.com_e3414a29 | 9ms'
+  password: 'null'
+  port: 9002
+  server: 138.199.35.216
   skip-cert-verify: true
-  udp: true
-- name: EE 🇪🇪 | @Raydikalx | 9AE1C3 | 2ms
-  server: 45.80.108.7
-  port: 8443
-  type: vless
-  uuid: 7967bf59-57e3-4cde-9898-527b0fe60022
-  udp: true
   tls: true
-  servername: speed.dulacloud.store
-  network: ws
-  ws-opts:
-    path: /dula?Telegram-WangCai2fp=chrome
-    headers:
-      Host: speed.dulacloud.store
-- name: CA 🇨🇦 | @Raydikalx | 9A9CCD | 2ms
-  server: 104.17.121.71
-  port: 443
-  type: trojan
-  password: humanity
-  udp: true
-  sni: www.calmlunch.com
-  network: ws
-  ws-opts:
-    path: /assignment
-    headers:
-      Host: www.calmlunch.com
-- name: MT 🇲🇹 | @Raydikalx | D61DC6 | 2ms
-  server: 46.202.30.7
-  port: 8443
-  type: vless
-  uuid: 7967bf59-57e3-4cde-9898-527b0fe60022
-  udp: true
-  tls: true
-  servername: speed.dulacloud.store
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /dula?Telegram-WangCai2
-    headers:
-      Host: speed.dulacloud.store
-- name: vless-1656587328 | 2ms
-  network: ws
-  port: 2082
-  server: 104.18.0.181
-  type: vless
-  udp: true
-  uuid: e5cc16a6-ea42-46b2-82ae-ad2157e1641b
-- name: CA 🇨🇦 | @Raydikalx | F1218F | 2ms
-  server: 104.17.189.78
+  type: http
+  username: 'null'
+- name: '[clashfree#061] 未知 SS-69 | free-nodes | 9ms'
+  server: 173.234.25.90
+  port: 15240
+  type: ss
+  cipher: aes-128-gcm
+  password: 62dd75ba944947d4ca983cf1679b3797
+- name: CA 🇨🇦 | @Raydikalx | A1E89D | 9ms
+  server: 104.16.111.193
   port: 443
   type: vless
   uuid: c4edb87e-8544-4fa4-bd1c-b0cda9a34b46
@@ -3186,8 +2017,35 @@ proxies:
     path: /ws
     headers:
       Host: a.cwvps.eu.org
-- name: CA 🇨🇦 | @Raydikalx | 0E6145 | 2ms
-  server: 104.16.71.213
+- name: '[free18#081] 🏳️_未知_165 | 9ms'
+  type: vless
+  server: 172.67.79.160
+  port: 2087
+  uuid: a4a951b9-901d-4db8-8a7d-6df82c4b5c23
+  network: ws
+  servername: cvhpyn.pages.dev
+  tls: true
+  client-fingerprint: chrome
+  ws-opts:
+    path: /
+    headers:
+      Host: cvhpyn.pages.dev
+  skip-cert-verify: true
+  udp: true
+- name: CA 🇨🇦 | @Raydikalx | 3B2C93 | 9ms
+  server: 104.18.4.5
+  port: 443
+  type: trojan
+  password: humanity
+  udp: true
+  sni: www.volumeroot.com
+  network: ws
+  ws-opts:
+    path: /assignment
+    headers:
+      Host: www.volumeroot.com
+- name: CA 🇨🇦 | @Raydikalx | 180650 | 9ms
+  server: 104.17.147.22
   port: 443
   type: trojan
   password: humanity
@@ -3198,7 +2056,159 @@ proxies:
     path: /assignment
     headers:
       Host: www.calmlunch.com
-- name: CA 🇨🇦 | @Raydikalx | 2E1AB6 | 2ms
+- name: '[free18#162] 🏳️_未知_257 | 9ms'
+  type: vless
+  server: 172.67.172.95
+  port: 443
+  uuid: cf39fab0-bb85-42cb-9945-2ad69d78e575
+  network: ws
+  servername: rubifen.adaspoloandco.com
+  tls: true
+  client-fingerprint: chrome
+  ws-opts:
+    path: /GOrbEh
+  skip-cert-verify: true
+  udp: true
+- name: SC 🇸🇨 | @Raydikalx | 0EF0CF | 9ms
+  server: 45.130.125.112
+  port: 443
+  type: trojan
+  password: humanity
+  udp: true
+  sni: www.calmlunch.com
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /assignment
+    headers:
+      Host: www.calmlunch.com
+- client-fingerprint: chrome
+  name: '[AutoMerge#067] 🇺🇸 美国 | USA #15 | 9ms'
+  network: ws
+  port: 443
+  server: 162.159.140.85
+  servername: edg-2oo.pages.dev
+  tls: true
+  type: vless
+  uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
+  ws-opts:
+    headers:
+      Host: edg-2oo.pages.dev
+    path: /go.php?ed=2560
+- name: '[free18#082] 🏳️_未知_166 | 9ms'
+  type: vless
+  server: 172.67.134.7
+  port: 2052
+  uuid: f1e5d738-2e83-4e2f-b6d6-a9013b3e7e48
+  network: ws
+  tls: false
+  ws-opts:
+    path: /vl/u3oMYZoYUAozPFEA8UhR?ed=2560
+    headers:
+      Host: a6o58qfpwvgrwmz0crtha0r24uyiu2l.x7-f5jb95s0ocjt-0.workers.dev
+  skip-cert-verify: true
+  udp: true
+- name: CA 🇨🇦 | @Raydikalx | FE4F26 | 9ms
+  server: 162.159.43.187
+  port: 2095
+  type: vless
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  udp: true
+  tls: false
+  servername: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+  network: ws
+  ws-opts:
+    path: /?ed=2560security=tls
+    headers:
+      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+- name: '[freeSub#218] D🔴🇺🇸hos[🎬🤖📺🎭]_dokng.com_8b32f357 | 9ms'
+  password: 'null'
+  port: 9002
+  server: 138.199.35.207
+  skip-cert-verify: true
+  tls: true
+  type: http
+  username: 'null'
+- client-fingerprint: chrome
+  name: '[NoMoreWalls#112] 🇮🇹[www.v2nodes.com] vless-IT-2... #2 | 9ms'
+  network: ws
+  port: 443
+  server: 188.114.98.0
+  servername: tn1r.eu.cc
+  tls: true
+  type: vless
+  uuid: 22424ee2-6fe3-42ca-9749-6d4c5a8acc82
+  ws-opts:
+    headers:
+      Host: tn1r.eu.cc
+    path: /id-pusat
+- name: CA 🇨🇦 | @Raydikalx | 0C43DC | 9ms
+  server: 172.64.42.85
+  port: 2086
+  type: vless
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  udp: true
+  tls: false
+  servername: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+- client-fingerprint: chrome
+  name: '[AutoMerge#056] 🇺🇸 美国 | USA #3 | 9ms'
+  network: ws
+  port: 443
+  server: 104.17.148.226
+  servername: cf3.schzyc.cc.cd
+  tls: true
+  type: vless
+  udp: true
+  uuid: 51a0af77-a60c-4d9b-81a4-f50e1b38d90b
+  ws-opts:
+    headers:
+      Host: cf3.schzyc.cc.cd
+    path: /proxyip=ProxyIP.CMLiussss.net
+- name: CA 🇨🇦 | @Raydikalx | 861C59 | 9ms
+  server: 104.16.10.56
+  port: 443
+  type: vless
+  uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
+  udp: true
+  tls: true
+  servername: jp3.yohototo.top
+  network: ws
+  ws-opts:
+    path: /tyxyws
+    headers:
+      Host: jp3.yohototo.top
+- name: '[free18#071] 🏳️_未知_151 | 9ms'
+  type: vless
+  server: 172.67.203.138
+  port: 8080
+  uuid: 015fada5-2c95-4251-9c58-39fa3abf1e24
+  network: ws
+  servername: 172.67.203.138
+  tls: false
+  ws-opts:
+    path: /eyJqdW5rIjoidzY2QTdySkdOeiIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJlZml4IiwicGFuZWxJUHMiOlsiWzJhMDI6ODk4OjE0Njo2NDo6XSIsIlsyNjAyOmZjNTk6MTE6NjQ6Ol0iLCJbMjYwMjpmYzU5OmIwOjY0OjpdIl19?ed=2560
+    headers:
+      Host: server17.peekconfig1.workers.dev
+  skip-cert-verify: true
+  udp: true
+- name: '[free18#080] 🏳️_未知_164 | 9ms'
+  type: vless
+  server: 172.67.145.5
+  port: 443
+  uuid: 20836693-ea23-4f40-a1e7-48a6da897917
+  network: ws
+  servername: netra-85a0ca.shoameni19.workers.dev
+  tls: true
+  ws-opts:
+    path: /vl/bluttbb7mo8rvx1coeyh4ww4qzbr2aui
+  skip-cert-verify: true
+  udp: true
+- name: CA 🇨🇦 | @Raydikalx | CAAED6 | 9ms
   server: 172.64.150.28
   port: 2082
   type: vless
@@ -3208,10 +2218,261 @@ proxies:
   servername: hhlfy.twiladaphne.ndjp.net
   network: ws
   ws-opts:
-    path: /fp
+    path: /
     headers:
       Host: hhlfy.twiladaphne.ndjp.net
-- name: CA 🇨🇦 | @Raydikalx | 01F44A | 2ms
+- name: '[free18#173] 🇺🇸_美国_268 | 9ms'
+  type: vless
+  server: 198.202.211.1
+  port: 443
+  uuid: cf39fab0-bb85-42cb-9945-2ad69d78e575
+  network: ws
+  servername: rubifen.adaspoloandco.com
+  tls: true
+  client-fingerprint: chrome
+  ws-opts:
+    path: /GOrbEh
+  skip-cert-verify: true
+  udp: true
+- name: '[AutoMerge#047] 🇳🇱 荷兰 | NLD #4 | 9ms'
+  network: ws
+  port: 8080
+  server: 172.67.171.191
+  servername: 172.67.171.191
+  tls: false
+  type: vless
+  udp: true
+  uuid: 0b2ea024-3ffd-46a7-87ce-86cbb79d7a48
+  ws-opts:
+    headers:
+      Host: server18.peekconfig2.workers.dev
+    path: /eyJqdW5rIjoiT3FNeW1sMVdGVHlvNTIiLCJwcm90b2NvbCI6InZsIiwibW9kZSI6InByZWZpeCIsInBhbmVsSVBzIjpbIlsyYTAyOjg5ODoxNDY6NjQ6Ol0iLCJbMjYwMjpmYzU5OmIwOjY0OjpdIiwiWzI2MDI6ZmM1OToxMTo2NDo6XSJdfQ==
+- name: vless-1659750684 | 9ms
+  network: ws
+  port: 443
+  server: ghosts-spasm.quick-cdn.net
+  servername: ghosts-spasm.quick-cdn.net
+  skip-cert-verify: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: 85726d24-9f41-43fe-9e5e-49e54d9680e0
+- name: CA 🇨🇦 | @Raydikalx | 586CC5 | 9ms
+  server: 172.64.32.103
+  port: 2082
+  type: vless
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  udp: true
+  tls: false
+  servername: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+  network: ws
+  ws-opts:
+    path: /?ed=2560security=tls
+    headers:
+      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+- name: CA 🇨🇦 | @Raydikalx | 1DFB48 | 9ms
+  server: 104.21.91.53
+  port: 8443
+  type: vmess
+  uuid: 60441548-b68e-43b2-8191-e3b884be4b3c
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: true
+  servername: v2ray1.dozapp.xyz
+  network: ws
+  ws-opts:
+    path: /lMnsZUN4/
+    headers:
+      Host: v2ray1.dozapp.xyz
+- name: CA 🇨🇦 | @Raydikalx | 05893C | 9ms
+  server: 188.114.97.6
+  port: 443
+  type: trojan
+  password: humanity
+  udp: true
+  sni: www.calmlunch.com
+  network: ws
+  ws-opts:
+    path: /assignment
+    headers:
+      Host: www.calmlunch.com
+- name: CA 🇨🇦 | @Raydikalx | 832341 | 9ms
+  server: 104.18.9.83
+  port: 443
+  type: trojan
+  password: humanity
+  udp: true
+  sni: www.calmlunch.com
+  network: ws
+  ws-opts:
+    path: /assignment
+    headers:
+      Host: www.calmlunch.com
+- name: CA 🇨🇦 | @Raydikalx | 81B423 | 9ms
+  server: 172.64.152.23
+  port: 443
+  type: trojan
+  password: humanity
+  udp: true
+  sni: www.calmlunch.com
+  network: ws
+  ws-opts:
+    path: /assignment
+    headers:
+      Host: www.calmlunch.com
+- client-fingerprint: chrome
+  name: '[AutoMerge#059] 🇺🇸 美国 | USA #6 | 9ms'
+  network: ws
+  port: 443
+  server: 104.17.221.218
+  servername: edg-2oo.pages.dev
+  tls: true
+  type: vless
+  uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
+  ws-opts:
+    headers:
+      Host: edg-2oo.pages.dev
+    path: /lib?ed=2560
+- name: CA 🇨🇦 | @Raydikalx | DCCE02 | 9ms
+  server: 104.18.46.46
+  port: 2052
+  type: vless
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  udp: true
+  tls: false
+  servername: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+  network: ws
+  ws-opts:
+    path: /?ed=2560security=tls
+    headers:
+      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+- name: CA 🇨🇦 | @Raydikalx | 2DD26E | 9ms
+  server: 162.159.0.53
+  port: 80
+  type: vless
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  udp: true
+  tls: false
+  servername: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+  network: ws
+  ws-opts:
+    path: /?ed=2560security=tls
+    headers:
+      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+- name: CA 🇨🇦 | @Raydikalx | 8AC2AE | 9ms
+  server: 104.16.10.197
+  port: 443
+  type: vless
+  uuid: c4edb87e-8544-4fa4-bd1c-b0cda9a34b46
+  udp: true
+  tls: true
+  servername: a.cwvps.eu.org
+  network: ws
+  ws-opts:
+    path: /ws
+    headers:
+      Host: a.cwvps.eu.org
+- name: '[free18#090] 🏳️_未知_174 | 9ms'
+  type: vless
+  server: 188.114.98.112
+  port: 80
+  uuid: 0991a0c4-0ee5-4213-af89-7ad589f853f3
+  network: ws
+  tls: false
+  ws-opts:
+    path: /ELiV2-RAY----ELiV2-RAY----ELiV2-RAY----ELiV2-RAY----ELiV2-RAY----ELiV2-RAY?ed=2560
+    headers:
+      Host: elenaaaaaaaaaa.cloudns.pro.
+  skip-cert-verify: true
+  udp: true
+- name: '[free18#155] 🏳️_未知_249 | 9ms'
+  type: trojan
+  server: 172.67.139.14
+  port: 443
+  password: humanity
+  sni: www.volumeroot.com
+  skip-cert-verify: true
+  ws-opts:
+    path: /assignment
+  udp: true
+- name: '[free18#091] 🇺🇸_美国_175 | 9ms'
+  type: vless
+  server: 155.46.167.30
+  port: 8880
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  network: ws
+  tls: false
+  ws-opts:
+    path: /
+    headers:
+      Host: vms.lifetime50.workers.dev
+  skip-cert-verify: true
+  udp: true
+- name: CA 🇨🇦 | @Raydikalx | 38F112 | 9ms
+  server: 172.64.32.103
+  port: 8880
+  type: vless
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  udp: true
+  tls: false
+  servername: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+  network: ws
+  ws-opts:
+    path: /?ed=2560security=tls
+    headers:
+      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+- name: '[freeSub#222] D🔴🇺🇸hos[🎬🤖📺🎭]_dokng.com_51f1276e | 9ms'
+  password: ''
+  port: 9002
+  server: 138.199.35.199
+  skip-cert-verify: true
+  tls: true
+  type: http
+  username: ''
+- name: CA 🇨🇦 | @Raydikalx | D06334 | 9ms
+  server: 104.16.10.185
+  port: 443
+  type: vless
+  uuid: c4edb87e-8544-4fa4-bd1c-b0cda9a34b46
+  udp: true
+  tls: true
+  servername: a.cwvps.eu.org
+  network: ws
+  ws-opts:
+    path: /ws
+    headers:
+      Host: a.cwvps.eu.org
+- name: '[freeSub#147] D🔴🇺🇸hos[🎬🤖📺🎭]_dokng.com_b01fc6dc | 9ms'
+  password: null
+  port: 9002
+  server: 138.199.35.208
+  skip-cert-verify: true
+  tls: true
+  type: http
+  username: null
+- name: '[freeSub#158] D🔴🇺🇸hos[🎬🤖📺🎭]_dokng.com_e4a94dd0 | 9ms'
+  password: None
+  port: 9002
+  server: 138.199.35.215
+  skip-cert-verify: true
+  tls: true
+  type: http
+  username: null
+- name: CA 🇨🇦 | @Raydikalx | 0AB470 | 9ms
+  server: 104.18.34.14
+  port: 8080
+  type: vless
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  udp: true
+  tls: false
+  servername: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+  network: ws
+  ws-opts:
+    path: /?ed=2560security=tls
+    headers:
+      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+- name: CA 🇨🇦 | @Raydikalx | 01F44A | 9ms
   server: 104.18.34.14
   port: 80
   type: vless
@@ -3224,21 +2485,96 @@ proxies:
     path: /?ed=2560security=tls
     headers:
       Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: CA 🇨🇦 | @Raydikalx | 474D1D | 2ms
-  server: 162.159.0.53
-  port: 8880
+- name: '[free18#122] 🏳️_未知_211 | 9ms'
   type: vless
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  server: 188.114.97.6
+  port: 443
+  uuid: c4edb87e-8544-4fa4-bd1c-b0cda9a34b46
+  network: ws
+  servername: a.cwvps.eu.org
+  tls: true
+  ws-opts:
+    path: /ws
+  skip-cert-verify: true
+  udp: true
+- name: CA 🇨🇦 | @Raydikalx | 2D3BA7 | 9ms
+  server: 188.114.97.6
+  port: 8080
+  type: vless
+  uuid: e5cc16a6-ea42-46b2-82ae-ad2157e1641b
   udp: true
   tls: false
-  servername: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+  servername: hhlfy.twiladaphne.ndjp.net
   network: ws
   ws-opts:
-    path: /?ed=2560security=tls
+    path: /sg-melbi
     headers:
-      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: CA 🇨🇦 | @Raydikalx | 9CE1B2 | 2ms
-  server: 104.18.39.218
+      Host: hhlfy.twiladaphne.ndjp.net
+- name: CA 🇨🇦 | @Raydikalx | 3F8DB7 | 9ms
+  server: 104.19.157.30
+  port: 443
+  type: trojan
+  password: humanity
+  udp: true
+  sni: www.volumeroot.com
+  network: ws
+  ws-opts:
+    path: /assignment
+    headers:
+      Host: www.volumeroot.com
+- name: '[free18#143] 🏳️_未知_235 | 9ms'
+  type: trojan
+  server: 104.21.57.25
+  port: 443
+  password: humanity
+  sni: www.volumeroot.com
+  skip-cert-verify: true
+  ws-opts:
+    path: /assignment
+  udp: true
+- name: CA 🇨🇦 | @Raydikalx | D602EE | 9ms
+  server: 104.16.10.21
+  port: 443
+  type: vless
+  uuid: c4edb87e-8544-4fa4-bd1c-b0cda9a34b46
+  udp: true
+  tls: true
+  servername: a.cwvps.eu.org
+  network: ws
+  ws-opts:
+    path: /ws
+    headers:
+      Host: a.cwvps.eu.org
+- client-fingerprint: chrome
+  encryption: none
+  name: '[ermaozi#017] 🇸🇬[www.v2nodes.com] vless-SG-1... #1 | 9ms'
+  network: ws
+  port: 443
+  server: 104.16.10.235
+  servername: u.srilankangrill.online
+  skip-cert-verify: false
+  tls: true
+  type: vless
+  uuid: b8d8a5b0-867f-4491-b4e4-30edc04bb10e
+  ws-opts:
+    headers:
+      Host: u.srilankangrill.online
+    path: /
+- name: CA 🇨🇦 | @Raydikalx | 47ADEA | 9ms
+  server: 104.18.42.98
+  port: 443
+  type: vless
+  uuid: c4edb87e-8544-4fa4-bd1c-b0cda9a34b46
+  udp: true
+  tls: true
+  servername: a.cwvps.eu.org
+  network: ws
+  ws-opts:
+    path: /ws#/?TELEGRAM--MARAMBASHI--MARAMBASHI?ed=512
+    headers:
+      Host: a.cwvps.eu.org
+- name: CA 🇨🇦 | @Raydikalx | 1F5E09 | 9ms
+  server: 172.64.229.2
   port: 2086
   type: vless
   uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
@@ -3250,8 +2586,31 @@ proxies:
     path: /?ed=2560security=tls
     headers:
       Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: CA 🇨🇦 | @Raydikalx | 5F26A6 | 2ms
-  server: 104.16.10.135
+- name: '[freeSub#129] D🔴🇺🇸hos[🎬🤖📺🎭]_dokng.com_f41808b3 | 9ms'
+  password: ''
+  port: 9002
+  server: 138.199.35.203
+  skip-cert-verify: true
+  tls: true
+  type: http
+  username: ''
+- name: '[clashfree#228] 🇺🇸 US VLESS-445 | free-nodes | 9ms'
+  server: 192.227.168.162
+  port: 33414
+  type: vless
+  uuid: 30e52776-55ac-3cb4-8d36-e2910f07e2c3
+  tls: true
+  alpn:
+  - h2
+  - http/1.1
+  tfo: false
+  flow: xtls-rprx-vision
+  skip-cert-verify: false
+  servername: u695098u5cabc3b2s489.gogocs.xyz
+  client-fingerprint: firefox
+  network: tcp
+- name: CA 🇨🇦 | @Raydikalx | 161FA2 | 9ms
+  server: 104.16.111.202
   port: 443
   type: vless
   uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
@@ -3263,20 +2622,46 @@ proxies:
     path: /tyxyws
     headers:
       Host: jp3.yohototo.top
-- name: CA 🇨🇦 | @Raydikalx | 0663B4 | 2ms
-  server: 104.16.10.2
+- name: 🇺🇸 136  | ⬇️ 6MB/s | 9ms
+  server: 104.18.39.218
+  port: 2095
+  type: vless
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  tls: false
+  tfo: true
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /?ed=2560security=tls
+    headers:
+      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+  udp: true
+- name: '[free18#171] 🏳️_未知_266 | 9ms'
+  type: vless
+  server: 104.21.71.238
+  port: 443
+  uuid: cf39fab0-bb85-42cb-9945-2ad69d78e575
+  network: ws
+  servername: rubifen.adaspoloandco.com
+  tls: true
+  ws-opts:
+    path: /GOrbEh
+  skip-cert-verify: true
+  udp: true
+- name: CA 🇨🇦 | @Raydikalx | 173DC3 | 9ms
+  server: 104.21.70.21
   port: 443
   type: vless
-  uuid: 3c52e091-6714-4915-949f-2149fe69951b
+  uuid: c4edb87e-8544-4fa4-bd1c-b0cda9a34b46
   udp: true
   tls: true
-  servername: v2ray.simspeedup.com
+  servername: a.cwvps.eu.org
   network: ws
   ws-opts:
     path: /ws
     headers:
-      Host: v2ray.simspeedup.com
-- name: CA 🇨🇦 | @Raydikalx | 21FB57 | 2ms
+      Host: a.cwvps.eu.org
+- name: CA 🇨🇦 | @Raydikalx | 21FB57 | 9ms
   server: 188.114.97.6
   port: 8880
   type: vless
@@ -3289,8 +2674,68 @@ proxies:
     path: /?ed=2560
     headers:
       Host: zb1zi.s3nx.dyz.hh.vavava.kdns.fr
-- name: CA 🇨🇦 | @Raydikalx | 5C4793 | 2ms
-  server: 104.16.10.135
+- name: CA 🇨🇦 | @Raydikalx | 994B91 | 9ms
+  server: 104.18.37.127
+  port: 443
+  type: trojan
+  password: humanity
+  udp: true
+  sni: wWw.Volumeroot.cOm
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /assignment
+    headers:
+      Host: www.volumerOot.coM
+- name: '[NoMoreWalls#433] US_speednode_0143 | 9ms'
+  port: 9002
+  server: 138.199.35.198
+  skip-cert-verify: true
+  tls: true
+  type: http
+  udp: true
+- client-fingerprint: chrome
+  name: '[AutoMerge#060] 🇺🇸 美国 | USA #7 | 9ms'
+  network: ws
+  port: 443
+  server: 172.64.67.117
+  servername: edg-2oo.pages.dev
+  tls: true
+  type: vless
+  uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
+  ws-opts:
+    headers:
+      Host: edg-2oo.pages.dev
+    path: /qa/books?ed=2560
+- name: '[free18#087] 🏳️_未知_171 | 9ms'
+  type: vless
+  server: 104.21.56.90
+  port: 80
+  uuid: c8f3f81a-5276-48e9-af6b-c537fb4c7856
+  network: ws
+  servername: 104.21.56.90
+  tls: false
+  ws-opts:
+    path: /vl/2INL39K32mKsOBKt?ed=2560
+    headers:
+      Host: r7yhmg1zxnt120wmkag.mf1h0myptv4lougs7341bmttcz8.workers.dev
+  skip-cert-verify: true
+  udp: true
+- name: CA 🇨🇦 | @Raydikalx | 76F5D4 | 9ms
+  server: 104.27.46.35
+  port: 443
+  type: vless
+  uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
+  udp: true
+  tls: true
+  servername: jp3.yohototo.top
+  network: ws
+  ws-opts:
+    path: /tyxyws
+    headers:
+      Host: jp3.yohototo.top
+- name: CA 🇨🇦 | @Raydikalx | 0611F1 | 9ms
+  server: 104.17.169.13
   port: 443
   type: vless
   uuid: c4edb87e-8544-4fa4-bd1c-b0cda9a34b46
@@ -3302,527 +2747,912 @@ proxies:
     path: /ws#/?TELEGRAM--MARAMBASHI--MARAMBASHI?ed=512
     headers:
       Host: a.cwvps.eu.org
+- name: '[free18#119] 🇺🇸_美国_207 | 9ms'
+  type: vless
+  server: support.zoom.us
+  port: 80
+  uuid: cac6ec8f-99f0-44c5-814f-2f3f65e4db74
+  network: ws
+  servername: speed.dulacloud.store
+  tls: false
+  ws-opts:
+    path: /dula
+  skip-cert-verify: true
+  udp: true
+- name: CA 🇨🇦 | @Raydikalx | EA1678 | 9ms
+  server: 172.67.181.125
+  port: 2083
+  type: vless
+  uuid: ca608afb-55ff-4f36-9d00-606fedbb30e1
+  udp: true
+  tls: true
+  servername: Site.check-looks.space
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: Site.check-looks.space
+- name: CA 🇨🇦 | @Raydikalx | F1EC39 | 9ms
+  server: 104.19.164.155
+  port: 443
+  type: vless
+  uuid: c4edb87e-8544-4fa4-bd1c-b0cda9a34b46
+  udp: true
+  tls: true
+  servername: a.cwvps.eu.org
+  network: ws
+  ws-opts:
+    path: /ws
+    headers:
+      Host: a.cwvps.eu.org
+- name: CA 🇨🇦 | @Raydikalx | A57F2F | 9ms
+  server: 104.21.34.106
+  port: 443
+  type: vless
+  uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
+  udp: true
+  tls: true
+  servername: jp3.yohototo.top
+  network: ws
+  ws-opts:
+    path: /tyxyws
+    headers:
+      Host: jp3.yohototo.top
+- name: '[freeSub#159] D🔴🇺🇸hos[🎬🤖📺🎭]_dokng.com_c66af7d3 | 9ms'
+  password: null
+  port: 9002
+  server: 138.199.35.213
+  skip-cert-verify: true
+  tls: true
+  type: http
+  username: null
+- name: CA 🇨🇦 | @Raydikalx | 05250D | 9ms
+  server: 172.64.154.8
+  port: 8880
+  type: vless
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  udp: true
+  tls: false
+  servername: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+  network: ws
+  ws-opts:
+    path: /?ed=2560security=tls
+    headers:
+      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+- name: CA 🇨🇦 | @Raydikalx | AE6904 | 9ms
+  server: 104.18.8.83
+  port: 443
+  type: trojan
+  password: humanity
+  udp: true
+  sni: www.calmlunch.com
+  network: ws
+  ws-opts:
+    path: /assignment
+    headers:
+      Host: www.calmlunch.com
+- name: CA 🇨🇦 | @Raydikalx | F1218F | 9ms
+  server: 104.17.189.78
+  port: 443
+  type: vless
+  uuid: c4edb87e-8544-4fa4-bd1c-b0cda9a34b46
+  udp: true
+  tls: true
+  servername: a.cwvps.eu.org
+  network: ws
+  ws-opts:
+    path: /ws
+    headers:
+      Host: a.cwvps.eu.org
+- name: '[freeSub#102] D🔴🇺🇸hos[🎬🤖📺🎭]_dokng.com_81badd77 | 9ms'
+  password: null
+  port: 9002
+  server: 138.199.35.220
+  skip-cert-verify: true
+  tls: true
+  type: http
+  username: null
+- client-fingerprint: chrome
+  name: '[NoMoreWalls#060] 🇸🇬[www.v2nodes.com] vless-SG | 9ms'
+  network: ws
+  port: 443
+  server: 27.50.48.8
+  servername: vless2-8vx.pages.dev
+  tls: true
+  type: vless
+  uuid: c98a16e4-0dc5-42f0-b3db-30f04525c123
+  ws-opts:
+    headers:
+      Host: vless2-8vx.pages.dev
+    path: /
+- name: CA 🇨🇦 | @Raydikalx | 62663E | 9ms
+  server: 172.67.153.156
+  port: 443
+  type: vless
+  uuid: 8be461cb-a0df-47cf-bc0d-4d9e6a22fa74
+  udp: true
+  tls: true
+  servername: ccs2g.pai50288.uk
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /pai50288
+    headers:
+      Host: ccs2g.pai50288.uk
+- name: '[ermaozi#014] 🇸🇬[www.v2nodes.com] vless-SG #2 | 9ms'
+  network: ws
+  port: 2086
+  server: 104.25.194.196
+  tls: false
+  type: vless
+  uuid: e3c7c198-2b02-42c2-b78f-22dfc078219c
+  ws-opts:
+    headers:
+      Host: uj-kn9gcgkzl0wmmy5wrkmalvhzdw62z.soltannatlos.workers.dev
+    path: /vl/3k4QnDlh2r3IPLPNFGLAeMJ5df?ed=2560
+- name: vless-941486986 | 9ms
+  network: ws
+  port: 80
+  server: 162.159.43.187
+  type: vless
+  udp: true
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+- client-fingerprint: chrome
+  encryption: none
+  name: '[NoMoreWalls#266] 🇩🇪DE_2|1.7MB/s | 9ms'
+  network: ws
+  port: 443
+  server: 104.21.69.30
+  servername: 05agj.gkef.zhs.hh.vavava.kdns.fr
+  tls: true
+  type: vless
+  udp: true
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  ws-opts:
+    headers:
+      Host: 05agj.gkef.zhs.hh.vavava.kdns.fr
+      User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML,
+        like Gecko) Chrome/53.0.2785.143 Safari/537.36
+    path: /?ed=2560
+  xudp: true
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: 🇺🇸 053  | ⬇️ 15KB/s | 9ms
+  port: 9443
+  reality-opts:
+    public-key: 0hIFPaEn4RdFib8_eP8HYxMywR5izEwM3JA2W1Zo8U4
+    short-id: b390142456517acc
+  server: 156.229.162.171
+  tls: true
+  type: vless
+  uuid: 3969ccbc-7bb3-4def-a9b4-26e2c84b66f8
+  network: tcp
+  servername: www.amazon.com
+- name: '[freeSub#140] D🔴🇺🇸hos[🎬🤖📺🎭]_dokng.com_fb61d702 | 9ms'
+  password: null
+  port: 9002
+  server: 138.199.35.204
+  skip-cert-verify: true
+  tls: true
+  type: http
+  username: null
+- name: '[clashfree#091] 未知 VLESS-159 | free-nodes | 9ms'
+  server: 108.165.216.7
+  port: 8443
+  type: vless
+  uuid: 7967bf59-57e3-4cde-9898-527b0fe60022
+  tls: true
+  tfo: false
+  skip-cert-verify: false
+  servername: speed.dulacloud.store
+  network: ws
+  ws-opts:
+    path: /dula?Telegram-WangCai2fp=chrome
+    headers:
+      Host: speed.dulacloud.store
+- name: CA 🇨🇦 | @Raydikalx | D474D2 | 9ms
+  server: 104.16.10.22
+  port: 443
+  type: vless
+  uuid: c4edb87e-8544-4fa4-bd1c-b0cda9a34b46
+  udp: true
+  tls: true
+  servername: a.cwvps.eu.org
+  network: ws
+  ws-opts:
+    path: /ws#/?TELEGRAM--MARAMBASHI--MARAMBASHI?ed=512
+    headers:
+      Host: a.cwvps.eu.org
+- name: US 🇺🇸 | @Raydikalx | E9FED8 | 9ms
+  server: support.zoom.us
+  port: 80
+  type: vless
+  uuid: 9b0025a3-3a36-4915-b4e1-89c5cd65c9cb
+  udp: true
+  tls: false
+  servername: support.zoom.us
+  network: ws
+  ws-opts:
+    path: /shalana
+    headers:
+      Host: onhit.shalana.shop
+- alpn:
+  - http/1.1
+  name: '[NoMoreWalls#231] 🇳🇱[www.v2nodes.com] trojan-NL-... | 9ms'
+  network: ws
+  password: humanity
+  port: 443
+  server: 188.42.145.180
+  skip-cert-verify: true
+  sni: www.volumeroot.com
+  type: trojan
+  ws-opts:
+    headers:
+      Host: www.volumeroot.com
+    path: /assignment
+- name: CA 🇨🇦 | @Raydikalx | 656E41 | 9ms
+  server: 172.64.42.85
+  port: 2095
+  type: vless
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  udp: true
+  tls: false
+  servername: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+  network: ws
+  ws-opts:
+    path: /?ed=2560security=tls
+    headers:
+      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+- name: '[Eternity#107] RELAY-188.114.96.19-0195 | 0.0MB | 9ms'
+  server: 188.114.96.19
+  port: 80
+  type: vmess
+  uuid: af4be52a-aab3-4db1-a6bb-c23700dcb9c2
+  alterId: 0
+  cipher: auto
+  tls: false
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: https.http.www.net.com.ramseyv2.ir.
+- client-fingerprint: chrome
+  name: '[AutoMerge#069] 🇺🇸 美国 | USA #17 | 9ms'
+  network: ws
+  port: 2053
+  server: 141.101.90.108
+  servername: wzs.echo.net.eu.org
+  tls: true
+  type: vless
+  udp: true
+  uuid: d18c6897-2849-456a-8c46-d7ecece47c20
+  ws-opts:
+    headers:
+      Host: wzs.echo.net.eu.org
+    path: /video/HxNMGkZdGw0PRk1GVw8YF14OXkwNVVtIRg1HUlxQSwUEVRwJUx8BQRoaSVhfRhoOChkDDUs=
+- name: US 🇺🇸 | @Raydikalx | 0C77C4 | 9ms
+  server: 172.64.72.171
+  port: 443
+  type: trojan
+  password: humanity
+  udp: true
+  sni: www.volumeroot.com
+  network: ws
+  ws-opts:
+    path: /assignment
+    headers:
+      Host: www.volumeroot.com
+- name: '[freeSub#390] A🟢🇲🇾res[🎬🤖📺✨]_dokng.com_6e7e9891 | 9ms'
+  network: ws
+  port: 25411
+  server: 155.117.199.15
+  type: vless
+  uuid: 593c2ff4-f051-4859-8449-b0130e2991df
+  ws-opts:
+    headers:
+      Host: www.baidu.com
+    path: /04235e8c-cea8-4f16-8934-b704a89b40cb.live238.m3u8
+- type: vless
+  name: 🇺🇸 163  | ⬇️ 1MB/s | 9ms
+  server: 172.64.145.94
+  port: 2096
+  uuid: e98a5234-3038-4532-8ab8-3b5f630e8265
+  udp: true
+  tls: true
+  client-fingerprint: chrome
+  skip-cert-verify: false
+  packet-encoding: xudp
+  network: ws
+  ws-opts:
+    headers:
+      Host: enjoy0819.pages.dev
+    path: /
+  encryption: none
+  servername: enjoy0819.pages.dev
+- name: '[clashfree#219] 未知 VLESS-436 | free-nodes | 9ms'
+  server: 104.21.207.202
+  port: 443
+  type: vless
+  uuid: 30e52776-55ac-3cb4-8d36-e2910f07e2c3
+  tls: true
+  alpn:
+  - h2
+  - http/1.1
+  tfo: false
+  skip-cert-verify: false
+  servername: b33ec4a1s226.fuhuovps.xyz
+  client-fingerprint: ios
+  xhttp-opts:
+    path: e0d9cd6ea04ecda957b4ca0869e038af
+    host: b33ec4a1s226.fuhuovps.xyz
+- name: '[freeSub#292] D🔴🇯🇵hos[🎬🤖📺🎭]_dokng.com_caadd361 | 9ms'
+  network: ws
+  port: 25211
+  server: 155.117.199.15
+  type: vless
+  uuid: 593c2ff4-f051-4859-8449-b0130e2991df
+  ws-opts:
+    headers:
+      Host: www.baidu.com
+    path: /04235e8c-cea8-4f16-8934-b704a89b40cb.live238.m3u8
+- name: CA 🇨🇦 | @Raydikalx | 8BEFD8 | 9ms
+  server: 104.19.229.21
+  port: 443
+  type: trojan
+  password: humanity
+  udp: true
+  sni: www.calmlunch.com
+  network: ws
+  ws-opts:
+    path: /assignment
+    headers:
+      Host: www.calmlunch.com
+- name: '[NoMoreWalls#207] 🇮🇩[www.v2nodes.com] trojan-ID-... | 9ms'
+  network: ws
+  password: 018b8e7b-7813-4dcb-84a5-3c98f1521e00
+  port: 443
+  server: 104.21.70.21
+  sni: id1.nathaya.web.id
+  type: trojan
+  ws-opts:
+    headers:
+      Host: id1.nathaya.web.id
+    path: /trojan
+- name: CA 🇨🇦 | @Raydikalx | 8CAB93 | 9ms
+  server: 162.159.0.169
+  port: 8880
+  type: vless
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  udp: true
+  tls: false
+  servername: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+  network: ws
+  ws-opts:
+    path: /?ed=2560security=tls
+    headers:
+      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
 proxy-groups:
 - name: 🚀 节点选择
   type: select
   proxies:
   - ♻️ 自动选择
   - DIRECT
-  - trojan-1662258378 | 1ms
-  - '[NoMoreWalls#091] 🇫🇷[www.v2nodes.com] vless-FR-1... #4 | 1ms'
-  - trojan-1643698408 | 1ms
-  - US 🇺🇸 | @Raydikalx | 0C7FCA | 1ms
-  - '[free18#066] 🇺🇸_美国_144 | 1ms'
-  - '[NoMoreWalls#092] 🇳🇱[www.v2nodes.com] vless-NL-1... #17 | 1ms'
-  - '[NoMoreWalls#076] 🇳🇱[www.v2nodes.com] vless-NL-1... #18 | 1ms'
-  - '[AutoMerge#070] 🇺🇸 美国 | USA #18 | 1ms'
-  - '[free18#084] 🏳️_未知_168 | 2ms'
-  - CA 🇨🇦 | @Raydikalx | 6C0D93 | 2ms
-  - '[AutoMerge#060] 🇺🇸 美国 | USA #7 | 2ms'
-  - CA 🇨🇦 | @Raydikalx | 61D0AA | 2ms
-  - vless-1659750577 | 2ms
-  - '[free18#173] 🇺🇸_美国_268 | 2ms'
-  - US 🇺🇸 | @Raydikalx | 31C110 | 2ms
-  - CA 🇨🇦 | @Raydikalx | B82160 | 2ms
-  - vless-1659750908 | 2ms
-  - shadowsocks-27271 | 2ms
-  - BZ 🇧🇿 | @Raydikalx | ECC3DE | 2ms
-  - CA 🇨🇦 | @Raydikalx | 7C0F0C | 2ms
-  - '[free18#088] 🇳🇱_荷兰_172 | 2ms'
-  - '[free18#081] 🏳️_未知_165 | 2ms'
-  - '[AutoMerge#064] 🇺🇸 美国 | USA #11 | 2ms'
-  - CA 🇨🇦 | @Raydikalx | 91D532 | 2ms
-  - GB 🇬🇧 | @Raydikalx | 762DEA | 2ms
-  - US 🇺🇸 | @Raydikalx | A45083 | 2ms
-  - CW 🇨🇼 | @Raydikalx | D45691 | 2ms
-  - CA 🇨🇦 | @Raydikalx | 8CAB93 | 2ms
-  - CA 🇨🇦 | @Raydikalx | 8AC2EA | 2ms
-  - '[free18#149] 🏳️_未知_243 | 2ms'
-  - CA 🇨🇦 | @Raydikalx | 4561A3 | 2ms
-  - '[free18#064] 🇺🇸_美国_141 | 2ms'
-  - '[AutoMerge#046] 🇳🇱 荷兰 | NLD #1 | 2ms'
-  - CY 🇨🇾 | @Raydikalx | D6FD2E | 2ms
-  - vless-1659750593 | 2ms
-  - CA 🇨🇦 | @Raydikalx | 3A84F1 | 2ms
-  - US 🇺🇸 | @Raydikalx | 3B43AB | 2ms
-  - CA 🇨🇦 | @Raydikalx | DCCE02 | 2ms
-  - '[free18#094] 🏳️_未知_178 | 2ms'
-  - VG 🇻🇬 | @Raydikalx | 1385F2 | 2ms
-  - '[free18#089] 🇺🇸_美国_173 | 2ms'
-  - '[free18#156] 🏳️_未知_250 | 2ms'
-  - '[free18#072] 🏳️_未知_152 | 2ms'
-  - CR 🇨🇷 | @Raydikalx | 9A1CA6 | 2ms
-  - CA 🇨🇦 | @Raydikalx | 189305 | 2ms
-  - US 🇺🇸 | @Raydikalx | CA7108 | 2ms
-  - US 🇺🇸 | @Raydikalx | E9CCA9 | 2ms
-  - AE 🇦🇪 | @Raydikalx | 7042EA | 2ms
-  - CA 🇨🇦 | @Raydikalx | 8B60FE | 2ms
-  - CA 🇨🇦 | @Raydikalx | 8CA1B3 | 2ms
-  - NL 🇳🇱 | @Raydikalx | E8E21C | 2ms
-  - '[free18#087] 🏳️_未知_171 | 2ms'
-  - CW 🇨🇼 | @Raydikalx | 8ABFCB | 2ms
-  - '[free18#074] 🇹🇷_土耳其_154 | 2ms'
-  - CA 🇨🇦 | @Raydikalx | 31803A | 2ms
-  - CA 🇨🇦 | @Raydikalx | 17F42B | 2ms
-  - US 🇺🇸 | @Raydikalx | B1CEC9 | 2ms
-  - CA 🇨🇦 | @Raydikalx | 2A8E59 | 2ms
-  - CA 🇨🇦 | @Raydikalx | 4FBD39 | 2ms
-  - CA 🇨🇦 | @Raydikalx | 2A483F | 2ms
-  - NL 🇳🇱 | @Raydikalx | FF847A | 2ms
-  - CW 🇨🇼 | @Raydikalx | CDB3A1 | 2ms
-  - US 🇺🇸 | @Raydikalx | 7787F9 | 2ms
-  - CA 🇨🇦 | @Raydikalx | C13D19 | 2ms
-  - NL 🇳🇱 | @Raydikalx | 425CE4 | 2ms
-  - '[AutoMerge#061] 🇺🇸 美国 | USA #8 | 2ms'
-  - CA 🇨🇦 | @Raydikalx | E9A5AD | 2ms
-  - '[free18#092] 🏳️_未知_176 | 2ms'
-  - CA 🇨🇦 | @Raydikalx | 3FF0A8 | 2ms
-  - US 🇺🇸 | @Raydikalx | 9D5581 | 2ms
-  - NL 🇳🇱 | @Raydikalx | 7DF20E | 2ms
-  - CA 🇨🇦 | @Raydikalx | A18C2A | 2ms
-  - NL 🇳🇱 | @Raydikalx | 4A40AB | 2ms
-  - US 🇺🇸 | @Raydikalx | 522BF7 | 2ms
-  - CA 🇨🇦 | @Raydikalx | 52EECF | 2ms
-  - US 🇺🇸 | @Raydikalx | 2ABC0C | 2ms
-  - vless-947793414 | 2ms
-  - NL 🇳🇱 | @Raydikalx | 61D065 | 2ms
-  - CA 🇨🇦 | @Raydikalx | 05B6A7 | 2ms
-  - GB 🇬🇧 | @Raydikalx | 5BBC82 | 2ms
-  - '[free18#082] 🏳️_未知_166 | 2ms'
-  - GB 🇬🇧 | @Raydikalx | FCA12F | 2ms
-  - '[free18#075] 🇳🇱_荷兰_155 | 2ms'
-  - '[AutoMerge#047] 🇳🇱 荷兰 | NLD #4 | 2ms'
-  - CA 🇨🇦 | @Raydikalx | EA1678 | 2ms
-  - DE 🇩🇪 | @Raydikalx | 8627D6 | 2ms
-  - CA 🇨🇦 | @Raydikalx | D9E52E | 2ms
-  - CA 🇨🇦 | @Raydikalx | EEC1E1 | 2ms
-  - BZ 🇧🇿 | @Raydikalx | 94A662 | 2ms
-  - CA 🇨🇦 | @Raydikalx | B754D5 | 2ms
-  - '[free18#166] 🏳️_未知_261 | 2ms'
-  - 🇺🇸 119  | ⬇️ 361KB/s | 2ms
-  - CA 🇨🇦 | @Raydikalx | C707B6 | 2ms
-  - CW 🇨🇼 | @Raydikalx | D498C4 | 2ms
-  - CA 🇨🇦 | @Raydikalx | 9BEFCE | 2ms
-  - '[NoMoreWalls#267] 🇺🇸US_2|1.6MB/s | 2ms'
-  - '[NoMoreWalls#146] 🇸🇬[www.v2nodes.com] vless-SG-1... #7 | 2ms'
-  - CA 🇨🇦 | @Raydikalx | 05893C | 2ms
-  - shadowsocks-27275 | 2ms
-  - CA 🇨🇦 | @Raydikalx | AE6904 | 2ms
-  - US 🇺🇸 | @Raydikalx | 350AEB | 2ms
-  - CA 🇨🇦 | @Raydikalx | D8CEC0 | 2ms
-  - GB 🇬🇧 | @Raydikalx | 453B05 | 2ms
-  - US 🇺🇸 | @Raydikalx | 3A3CDE | 2ms
-  - CA 🇨🇦 | @Raydikalx | 9E7EBE | 2ms
-  - '[free18#073] 🇺🇸_美国_153 | 2ms'
-  - US 🇺🇸 | @Raydikalx | 74EE03 | 2ms
-  - US 🇺🇸 | @Raydikalx | 8FE4C4 | 2ms
-  - US 🇺🇸 | @Raydikalx | 9DFC4D | 2ms
-  - '[AutoMerge#067] 🇺🇸 美国 | USA #15 | 2ms'
-  - CA 🇨🇦 | @Raydikalx | 123339 | 2ms
-  - CA 🇨🇦 | @Raydikalx | CDFD0A | 2ms
-  - CA 🇨🇦 | @Raydikalx | 56A41C | 2ms
-  - CA 🇨🇦 | @Raydikalx | 05250D | 2ms
-  - CA 🇨🇦 | @Raydikalx | 358C05 | 2ms
-  - CA 🇨🇦 | @Raydikalx | 93EE2A | 2ms
-  - TR 🇹🇷 | @Raydikalx | 246F01 | 2ms
-  - '[AutoMerge#069] 🇺🇸 美国 | USA #17 | 2ms'
-  - NL 🇳🇱 | @Raydikalx | 3DA043 | 2ms
-  - HU 🇭🇺 | @Raydikalx | FB721F | 2ms
-  - GB 🇬🇧 | @Raydikalx | BBDE75 | 2ms
-  - CA 🇨🇦 | @Raydikalx | D6A4CB | 2ms
-  - US 🇺🇸 | @Raydikalx | 37A986 | 2ms
-  - CA 🇨🇦 | @Raydikalx | C3C64F | 2ms
-  - CA 🇨🇦 | @Raydikalx | 63FD51 | 2ms
-  - CA 🇨🇦 | @Raydikalx | 832341 | 2ms
-  - CA 🇨🇦 | @Raydikalx | E9BC49 | 2ms
-  - '[AutoMerge#065] 🇺🇸 美国 | USA #13 | 2ms'
-  - CA 🇨🇦 | @Raydikalx | 6D8CA8 | 2ms
-  - '[free18#135] 🏳️_未知_226 | 2ms'
-  - CA 🇨🇦 | @Raydikalx | 7EB14B | 2ms
-  - CA 🇨🇦 | @Raydikalx | 861C59 | 2ms
-  - '[AutoMerge#071] 🇺🇸 美国 | USA #20 | 2ms'
-  - '[NoMoreWalls#310] 🇺🇸 美国 | USA #5 | 2ms'
-  - US 🇺🇸 | @Raydikalx | EDEF72 | 2ms
-  - '[NoMoreWalls#112] 🇮🇹[www.v2nodes.com] vless-IT-2... #2 | 2ms'
-  - '[free18#147] 🏳️_未知_241 | 2ms'
-  - '[ermaozi#017] 🇸🇬[www.v2nodes.com] vless-SG-1... #1 | 2ms'
-  - CA 🇨🇦 | @Raydikalx | F09F46 | 2ms
-  - CA 🇨🇦 | @Raydikalx | 3F8DB7 | 2ms
-  - CA 🇨🇦 | @Raydikalx | 1550F2 | 2ms
-  - US 🇺🇸 | @Raydikalx | 8F407D | 2ms
-  - CA 🇨🇦 | @Raydikalx | 5DC2F9 | 2ms
-  - '[free18#129] 🇸🇨_塞舌尔_219 | 2ms'
-  - CA 🇨🇦 | @Raydikalx | D06334 | 2ms
-  - CA 🇨🇦 | @Raydikalx | 690C70 | 2ms
-  - '[free18#071] 🏳️_未知_151 | 2ms'
-  - '[free18#080] 🏳️_未知_164 | 2ms'
-  - '[clashfree#219] 未知 VLESS-436 | free-nodes | 2ms'
-  - CA 🇨🇦 | @Raydikalx | 42811B | 2ms
-  - CA 🇨🇦 | @Raydikalx | F5FE35 | 2ms
-  - '[free18#085] 🏳️_未知_169 | 2ms'
-  - CA 🇨🇦 | @Raydikalx | 8B674D | 2ms
-  - 🇺🇸 136  | ⬇️ 6MB/s | 2ms
-  - '[freeSub#279] D🔴🇺🇸hos[🎬🤖📺🎭]_dokng.com_c09c3f93 | 2ms'
-  - NL 🇳🇱 | @Raydikalx | 1560E5 | 2ms
-  - CA 🇨🇦 | @Raydikalx | 39D89D | 2ms
-  - CA 🇨🇦 | @Raydikalx | 01E5A9 | 2ms
-  - vless-450834934 | 2ms
-  - '[clashfree#208] 未知 VLESS-421 | free-nodes | 2ms'
-  - ES 🇪🇸 | @Raydikalx | A20A0C | 2ms
-  - '[AutoMerge#015] 🇪🇸[www.v2nodes.com] vless-ES-4... #1 | 2ms'
-  - CA 🇨🇦 | @Raydikalx | BC3485 | 2ms
-  - '[NoMoreWalls#060] 🇸🇬[www.v2nodes.com] vless-SG | 2ms'
-  - CA 🇨🇦 | @Raydikalx | 8CC9EC | 2ms
-  - GB 🇬🇧 | @Raydikalx | D6AED8 | 2ms
-  - BZ 🇧🇿 | @Raydikalx | AF6288 | 2ms
-  - CA 🇨🇦 | @Raydikalx | 05877E | 2ms
-  - CA 🇨🇦 | @Raydikalx | 28C3B5 | 2ms
-  - US 🇺🇸 | @Raydikalx | 1F0561 | 2ms
-  - '[ermaozi#014] 🇸🇬[www.v2nodes.com] vless-SG #2 | 2ms'
-  - US 🇺🇸 | @Raydikalx | 1ECAA9 | 2ms
-  - NL 🇳🇱 | @Raydikalx | DAAD2A | 2ms
-  - CA 🇨🇦 | @Raydikalx | 9588EA | 2ms
-  - CA 🇨🇦 | @Raydikalx | 0AB470 | 2ms
-  - '[NoMoreWalls#312] 🇺🇸 美国 | USA #7 | 2ms'
-  - CA 🇨🇦 | @Raydikalx | 76F5D4 | 2ms
-  - HU 🇭🇺 | @Raydikalx | DA9E5C | 2ms
-  - CA 🇨🇦 | @Raydikalx | D60959 | 2ms
-  - DE 🇩🇪 | @Raydikalx | 526D68 | 2ms
-  - '[zhuhaiuk#008] US - zhuhai.uk 02 | 2ms'
-  - CA 🇨🇦 | @Raydikalx | 180650 | 2ms
-  - 🇺🇸 163  | ⬇️ 1MB/s | 2ms
-  - CA 🇨🇦 | @Raydikalx | D80B49 | 2ms
-  - AE 🇦🇪 | @Raydikalx | 2BA895 | 2ms
-  - CA 🇨🇦 | @Raydikalx | C9C17C | 2ms
-  - CA 🇨🇦 | @Raydikalx | B72A46 | 2ms
-  - '[NoMoreWalls#303] 🇸🇬 新加坡 | SGP #3 | 2ms'
-  - CA 🇨🇦 | @Raydikalx | 9C0660 | 2ms
-  - '[Eternity#090] RELAY-203.30.191.2-1124 | 0.0MB | 2ms'
-  - CA 🇨🇦 | @Raydikalx | 56ABBD | 2ms
-  - US 🇺🇸 | @Raydikalx | 4D9FA3 | 2ms
-  - shadowsocks-27276 | 2ms
-  - CA 🇨🇦 | @Raydikalx | DA0B9C | 2ms
-  - CA 🇨🇦 | @Raydikalx | 3A5859 | 2ms
-  - '[freeSub#061] B🟡🇺🇸biz_dokng.com_145fbfbc | 2ms'
-  - '[NoMoreWalls#308] 🇺🇸 美国 | USA #2 | 2ms'
-  - '[free18#086] 🏳️_未知_170 | 2ms'
-  - '[NoMoreWalls#132] 🇷🇴[www.v2nodes.com] vless-RO-4... | 2ms'
-  - CA 🇨🇦 | @Raydikalx | 38F112 | 2ms
-  - '[AutoMerge#062] 🇺🇸 美国 | USA #9 | 2ms'
-  - CA 🇨🇦 | @Raydikalx | 929E2C | 2ms
-  - '[freeSub#133] D🔴🇰🇷hos[🎬🤖📺🎭]_dokng.com_aba567e8 | 2ms'
-  - '[free18#079] 🏳️_未知_159 | 2ms'
-  - CA 🇨🇦 | @Raydikalx | 8C3B14 | 2ms
-  - NL 🇳🇱 | @Raydikalx | 2A9E32 | 2ms
-  - 🇺🇸 117  | ⬇️ 332KB/s | 2ms
-  - CA 🇨🇦 | @Raydikalx | FE4F26 | 2ms
-  - '[freeSub#273] D🔴🇺🇸hos[🎬🤖📺🎭]_dokng.com_75365148 | 2ms'
-  - US 🇺🇸 | @Raydikalx | 45D6E2 | 2ms
-  - '[freeSub#111] D🔴🇺🇸hos[🎬🤖📺🎭]_dokng.com_efcae490 | 2ms'
-  - vless-1538407570 | 2ms
-  - '[NoMoreWalls#207] 🇮🇩[www.v2nodes.com] trojan-ID-... | 2ms'
-  - US 🇺🇸 | @Raydikalx | 5194FA | 2ms
-  - '[clashfree#222] 未知 VLESS-439 | free-nodes | 2ms'
-  - US 🇺🇸 | @Raydikalx | 0C77C4 | 2ms
-  - PL 🇵🇱 | @Raydikalx | DB5773 | 2ms
-  - US 🇺🇸 | @Raydikalx | 5DCA9D | 2ms
-  - vless-1510182882 | 2ms
-  - AT 🇦🇹 | @Raydikalx | 94A6B3 | 2ms
-  - '[NoMoreWalls#141] 🇸🇬[www.v2nodes.com] vless-SG-1... #1 | 2ms'
-  - '[freeSub#210] D🔴🇰🇷hos[🎬📺🎭🎪]_dokng.com_1ca689b4 | 2ms'
-  - US 🇺🇸 | @Raydikalx | 65CB97 | 2ms
-  - CA 🇨🇦 | @Raydikalx | 74B5FF | 2ms
-  - '[free18#162] 🏳️_未知_257 | 2ms'
-  - CA 🇨🇦 | @Raydikalx | 404682 | 2ms
-  - CA 🇨🇦 | @Raydikalx | 05C8B0 | 2ms
-  - DE 🇩🇪 | @Raydikalx | 9DD688 | 2ms
-  - CA 🇨🇦 | @Raydikalx | 8B2A7E | 2ms
-  - '[NoMoreWalls#087] 🇷🇴[www.v2nodes.com] vless-RO-1... | 2ms'
-  - CA 🇨🇦 | @Raydikalx | 81B423 | 2ms
-  - CA 🇨🇦 | @Raydikalx | 4E0D8E | 2ms
-  - CA 🇨🇦 | @Raydikalx | 72D103 | 2ms
-  - CA 🇨🇦 | @Raydikalx | 950346 | 2ms
-  - CA 🇨🇦 | @Raydikalx | D955BF | 2ms
-  - CA 🇨🇦 | @Raydikalx | 46EDC3 | 2ms
-  - GB 🇬🇧 | @Raydikalx | 834F16 | 2ms
-  - US 🇺🇸 | @Raydikalx | 7EC5EC | 2ms
-  - CA 🇨🇦 | @Raydikalx | A07B4B | 2ms
-  - CA 🇨🇦 | @Raydikalx | D94FDB | 2ms
-  - DE 🇩🇪 | @Raydikalx | 634556 | 2ms
-  - '[free18#095] 🏳️_未知_181 | 2ms'
-  - EE 🇪🇪 | @Raydikalx | 9AE1C3 | 2ms
-  - CA 🇨🇦 | @Raydikalx | 9A9CCD | 2ms
-  - MT 🇲🇹 | @Raydikalx | D61DC6 | 2ms
-  - vless-1656587328 | 2ms
-  - CA 🇨🇦 | @Raydikalx | F1218F | 2ms
-  - CA 🇨🇦 | @Raydikalx | 0E6145 | 2ms
-  - CA 🇨🇦 | @Raydikalx | 2E1AB6 | 2ms
-  - CA 🇨🇦 | @Raydikalx | 01F44A | 2ms
-  - CA 🇨🇦 | @Raydikalx | 474D1D | 2ms
-  - CA 🇨🇦 | @Raydikalx | 9CE1B2 | 2ms
-  - CA 🇨🇦 | @Raydikalx | 5F26A6 | 2ms
-  - CA 🇨🇦 | @Raydikalx | 0663B4 | 2ms
-  - CA 🇨🇦 | @Raydikalx | 21FB57 | 2ms
-  - CA 🇨🇦 | @Raydikalx | 5C4793 | 2ms
+  - US 🇺🇸 | @Raydikalx | 68780F | 1ms
+  - '[free18#066] 🇺🇸_美国_144 | 2ms'
+  - US 🇺🇸 | @Raydikalx | C6E76F | 2ms
+  - '[NoMoreWalls#091] 🇫🇷[www.v2nodes.com] vless-FR-1... #4 | 2ms'
+  - US 🇺🇸 | @Raydikalx | 0E3564 | 2ms
+  - '[free18#060] 🇺🇸_美国_136 | 2ms'
+  - US 🇺🇸 | @Raydikalx | E55526 | 2ms
+  - US 🇺🇸 | @Raydikalx | 1A152D | 2ms
+  - '[NoMoreWalls#076] 🇳🇱[www.v2nodes.com] vless-NL-1... #18 | 2ms'
+  - '[NoMoreWalls#092] 🇳🇱[www.v2nodes.com] vless-NL-1... #17 | 2ms'
+  - vmess-248 | 3ms
+  - US 🇺🇸 | @Raydikalx | D2E735 | 3ms
+  - '[freeSub#186] D🔴🇺🇸hos[🎬🤖📺🎭]_dokng.com_4dbb3d73 | 3ms'
+  - shadowsocks-27291 | 8ms
+  - vless-1633929731 | 8ms
+  - CA 🇨🇦 | @Raydikalx | 88D649 | 8ms
+  - CA 🇨🇦 | @Raydikalx | 166F29 | 8ms
+  - '[freeSub#223] D🔴🇺🇸hos[🎬🤖📺🎭]_dokng.com_596fc241 | 8ms'
+  - '[AutoMerge#065] 🇺🇸 美国 | USA #13 | 8ms'
+  - CA 🇨🇦 | @Raydikalx | 09E0B6 | 8ms
+  - CA 🇨🇦 | @Raydikalx | A07B4B | 8ms
+  - CA 🇨🇦 | @Raydikalx | 420B80 | 8ms
+  - '[NoMoreWalls#087] 🇷🇴[www.v2nodes.com] vless-RO-1... | 8ms'
+  - CA 🇨🇦 | @Raydikalx | E3EA2D | 8ms
+  - CA 🇨🇦 | @Raydikalx | 1FC1BC | 8ms
+  - CA 🇨🇦 | @Raydikalx | 8B2A7E | 8ms
+  - '[free18#094] 🏳️_未知_178 | 8ms'
+  - CA 🇨🇦 | @Raydikalx | 0F8FEA | 9ms
+  - CA 🇨🇦 | @Raydikalx | 6DBA53 | 9ms
+  - CA 🇨🇦 | @Raydikalx | 7D621B | 9ms
+  - '[AutoMerge#071] 🇺🇸 美国 | USA #20 | 9ms'
+  - CA 🇨🇦 | @Raydikalx | 760BAF | 9ms
+  - CA 🇨🇦 | @Raydikalx | 908F7E | 9ms
+  - CA 🇨🇦 | @Raydikalx | 6B96AC | 9ms
+  - '[free18#135] 🏳️_未知_226 | 9ms'
+  - vless-450834934 | 9ms
+  - CA 🇨🇦 | @Raydikalx | 15EA67 | 9ms
+  - '[free18#129] 🇸🇨_塞舌尔_219 | 9ms'
+  - CA 🇨🇦 | @Raydikalx | 591536 | 9ms
+  - CA 🇨🇦 | @Raydikalx | 58E74A | 9ms
+  - CA 🇨🇦 | @Raydikalx | 668570 | 9ms
+  - CA 🇨🇦 | @Raydikalx | 5B34E5 | 9ms
+  - DE 🇩🇪 | @Raydikalx | 526D68 | 9ms
+  - CA 🇨🇦 | @Raydikalx | 2A8E59 | 9ms
+  - '[free18#074] 🇹🇷_土耳其_154 | 9ms'
+  - vless-1656587328 | 9ms
+  - CA 🇨🇦 | @Raydikalx | D955BF | 9ms
+  - CA 🇨🇦 | @Raydikalx | D60959 | 9ms
+  - CA 🇨🇦 | @Raydikalx | BA6E49 | 9ms
+  - CA 🇨🇦 | @Raydikalx | 07AE8C | 9ms
+  - CA 🇨🇦 | @Raydikalx | CD57C0 | 9ms
+  - CA 🇨🇦 | @Raydikalx | 98BD34 | 9ms
+  - '[freeSub#185] D🔴🇺🇸hos[🎬🤖📺🎭]_dokng.com_5e148d55 | 9ms'
+  - CA 🇨🇦 | @Raydikalx | B72A46 | 9ms
+  - CA 🇨🇦 | @Raydikalx | 1212F1 | 9ms
+  - CA 🇨🇦 | @Raydikalx | 91D532 | 9ms
+  - CA 🇨🇦 | @Raydikalx | 895057 | 9ms
+  - CA 🇨🇦 | @Raydikalx | 9BEFCE | 9ms
+  - FR 🇫🇷 | @Raydikalx | B29FC1 | 9ms
+  - '[AutoMerge#055] 🇺🇸 美国 | USA #2 | 9ms'
+  - CA 🇨🇦 | @Raydikalx | 690C70 | 9ms
+  - CA 🇨🇦 | @Raydikalx | 7A1AC9 | 9ms
+  - CA 🇨🇦 | @Raydikalx | 865310 | 9ms
+  - CA 🇨🇦 | @Raydikalx | A3ACA2 | 9ms
+  - CA 🇨🇦 | @Raydikalx | 28C3B5 | 9ms
+  - '[NoMoreWalls#154] 🇺🇸[www.v2nodes.com] vless-US-1... #3 | 9ms'
+  - CA 🇨🇦 | @Raydikalx | 1127E7 | 9ms
+  - CA 🇨🇦 | @Raydikalx | CE5B5F | 9ms
+  - CA 🇨🇦 | @Raydikalx | 93EE2A | 9ms
+  - US 🇺🇸 | @Raydikalx | F1AD8B | 9ms
+  - CA 🇨🇦 | @Raydikalx | 51EA03 | 9ms
+  - CA 🇨🇦 | @Raydikalx | 17F42B | 9ms
+  - vless-1662656009 | 9ms
+  - CA 🇨🇦 | @Raydikalx | D80B49 | 9ms
+  - '[freeSub#169] D🔴🇺🇸hos[🎬🤖📺🎭]_dokng.com_47775503 | 9ms'
+  - CA 🇨🇦 | @Raydikalx | 881E27 | 9ms
+  - CA 🇨🇦 | @Raydikalx | 0E6145 | 9ms
+  - CA 🇨🇦 | @Raydikalx | A23A8A | 9ms
+  - CA 🇨🇦 | @Raydikalx | 46BE33 | 9ms
+  - '[AutoMerge#066] 🇺🇸 美国 | USA #14 | 9ms'
+  - CA 🇨🇦 | @Raydikalx | 404682 | 9ms
+  - CA 🇨🇦 | @Raydikalx | 1DB02C | 9ms
+  - AT 🇦🇹 | @Raydikalx | 94A6B3 | 9ms
+  - CA 🇨🇦 | @Raydikalx | 6D8CA8 | 9ms
+  - CA 🇨🇦 | @Raydikalx | B82160 | 9ms
+  - '[freeSub#153] D🔴🇺🇸hos[🎬🤖📺🎭]_dokng.com_e487e5ba | 9ms'
+  - CA 🇨🇦 | @Raydikalx | C9C17C | 9ms
+  - CA 🇨🇦 | @Raydikalx | CF2AEC | 9ms
+  - CA 🇨🇦 | @Raydikalx | 7C0F0C | 9ms
+  - CA 🇨🇦 | @Raydikalx | 05B6A7 | 9ms
+  - '[free18#149] 🏳️_未知_243 | 9ms'
+  - CA 🇨🇦 | @Raydikalx | C64FAC | 9ms
+  - CA 🇨🇦 | @Raydikalx | 4561A3 | 9ms
+  - '[freeSub#168] D🔴🇺🇸hos[🎬🤖📺🎭]_dokng.com_067d2b9f | 9ms'
+  - '[free18#084] 🏳️_未知_168 | 9ms'
+  - US 🇺🇸 | @Raydikalx | 5DCA9D | 9ms
+  - '[Eternity#090] RELAY-203.30.191.2-1124 | 0.0MB | 9ms'
+  - CA 🇨🇦 | @Raydikalx | 565A24 | 9ms
+  - CA 🇨🇦 | @Raydikalx | 8C3B14 | 9ms
+  - '[freeSub#154] D🔴🇺🇸hos[🎬🤖📺🎭]_dokng.com_ff5d6731 | 9ms'
+  - US 🇺🇸 | @Raydikalx | 8F407D | 9ms
+  - CA 🇨🇦 | @Raydikalx | 9A9CCD | 9ms
+  - CA 🇨🇦 | @Raydikalx | 26E40D | 9ms
+  - '[AutoMerge#062] 🇺🇸 美国 | USA #9 | 9ms'
+  - CA 🇨🇦 | @Raydikalx | 5831D3 | 9ms
+  - US 🇺🇸 | @Raydikalx | 1F0561 | 9ms
+  - '[NoMoreWalls#189] 🇺🇸[www.v2nodes.com] ss-US-1586... #1 | 9ms'
+  - '[freeSub#141] D🔴🇺🇸hos[🎬🤖📺🎭]_dokng.com_8a9f3564 | 9ms'
+  - CA 🇨🇦 | @Raydikalx | A18C2A | 9ms
+  - US 🇺🇸 | @Raydikalx | 522BF7 | 9ms
+  - CA 🇨🇦 | @Raydikalx | 563902 | 9ms
+  - CA 🇨🇦 | @Raydikalx | CDFD0A | 9ms
+  - '[free18#088] 🇳🇱_荷兰_172 | 9ms'
+  - '[AutoMerge#064] 🇺🇸 美国 | USA #11 | 9ms'
+  - '[AutoMerge#070] 🇺🇸 美国 | USA #18 | 9ms'
+  - CA 🇨🇦 | @Raydikalx | 8CC9EC | 9ms
+  - CA 🇨🇦 | @Raydikalx | 6BD303 | 9ms
+  - '[freeSub#137] D🔴🇺🇸hos[🎬🤖📺🎭]_dokng.com_0f8d1baa | 9ms'
+  - CA 🇨🇦 | @Raydikalx | 42811B | 9ms
+  - CA 🇨🇦 | @Raydikalx | 1FCF86 | 9ms
+  - CA 🇨🇦 | @Raydikalx | D5C299 | 9ms
+  - '[NoMoreWalls#146] 🇸🇬[www.v2nodes.com] vless-SG-1... #7 | 9ms'
+  - '[free18#075] 🇳🇱_荷兰_155 | 9ms'
+  - CA 🇨🇦 | @Raydikalx | 90AED3 | 9ms
+  - '[freeSub#197] D🔴🇺🇸hos[🎬🤖📺🎭]_dokng.com_300ca497 | 9ms'
+  - US 🇺🇸 | @Raydikalx | 37A986 | 9ms
+  - '[free18#164] 🏳️_未知_259 | 9ms'
+  - CA 🇨🇦 | @Raydikalx | 63FD51 | 9ms
+  - CA 🇨🇦 | @Raydikalx | 123339 | 9ms
+  - '[NoMoreWalls#312] 🇺🇸 美国 | USA #7 | 9ms'
+  - US 🇺🇸 | @Raydikalx | 31C110 | 9ms
+  - shadowsocks-157 | 9ms
+  - CA 🇨🇦 | @Raydikalx | 7EB14B | 9ms
+  - CA 🇨🇦 | @Raydikalx | 8B60FE | 9ms
+  - '[AutoMerge#015] 🇪🇸[www.v2nodes.com] vless-ES-4... #1 | 9ms'
+  - '[free18#079] 🏳️_未知_159 | 9ms'
+  - CA 🇨🇦 | @Raydikalx | 929E2C | 9ms
+  - '[freeSub#133] D🔴🇰🇷hos[🎬🤖📺🎭]_dokng.com_aba567e8 | 9ms'
+  - '[freeSub#103] D🔴🇺🇸hos[🎬🤖📺🎭]_dokng.com_483f6707 | 9ms'
+  - CA 🇨🇦 | @Raydikalx | 9588EA | 9ms
+  - '[freeSub#178] D🔴🇺🇸hos[🎬🤖📺🎭]_dokng.com_c41378dc | 9ms'
+  - '[free18#072] 🏳️_未知_152 | 9ms'
+  - CA 🇨🇦 | @Raydikalx | 530D38 | 9ms
+  - CA 🇨🇦 | @Raydikalx | D5912C | 9ms
+  - '[freeSub#109] D🔴🇺🇸hos[🎬🤖📺🎭]_dokng.com_2b221c73 | 9ms'
+  - '[NoMoreWalls#114] 🇯🇵[www.v2nodes.com] vless-JP-1... #3 | 9ms'
+  - '[freeSub#213] D🔴🇺🇸hos[🎬🤖📺🎭]_dokng.com_a5d28d03 | 9ms'
+  - '[free18#148] 🏳️_未知_242 | 9ms'
+  - '[clashfree#208] 未知 VLESS-421 | free-nodes | 9ms'
+  - '[free18#172] 🏳️_未知_267 | 9ms'
+  - CA 🇨🇦 | @Raydikalx | 1A6E36 | 9ms
+  - CA 🇨🇦 | @Raydikalx | EEF52A | 9ms
+  - CA 🇨🇦 | @Raydikalx | 122FF3 | 9ms
+  - CA 🇨🇦 | @Raydikalx | 4D93D5 | 9ms
+  - '[freeSub#101] D🔴🇺🇸hos[🎬🤖📺🎭]_dokng.com_da81ef84 | 9ms'
+  - CA 🇨🇦 | @Raydikalx | DE048E | 9ms
+  - '[free18#092] 🏳️_未知_176 | 9ms'
+  - '[freeSub#193] D🔴🇺🇸hos[🎬🤖📺🎭]_dokng.com_c6c9640a | 9ms'
+  - CA 🇨🇦 | @Raydikalx | D94FDB | 9ms
+  - CA 🇨🇦 | @Raydikalx | 998E93 | 9ms
+  - CA 🇨🇦 | @Raydikalx | 3A84F1 | 9ms
+  - vless-897906541 | 9ms
+  - CA 🇨🇦 | @Raydikalx | F0AA75 | 9ms
+  - '[freeSub#196] D🔴🇺🇸hos[🎬🤖📺🎭]_dokng.com_e3414a29 | 9ms'
+  - '[clashfree#061] 未知 SS-69 | free-nodes | 9ms'
+  - CA 🇨🇦 | @Raydikalx | A1E89D | 9ms
+  - '[free18#081] 🏳️_未知_165 | 9ms'
+  - CA 🇨🇦 | @Raydikalx | 3B2C93 | 9ms
+  - CA 🇨🇦 | @Raydikalx | 180650 | 9ms
+  - '[free18#162] 🏳️_未知_257 | 9ms'
+  - SC 🇸🇨 | @Raydikalx | 0EF0CF | 9ms
+  - '[AutoMerge#067] 🇺🇸 美国 | USA #15 | 9ms'
+  - '[free18#082] 🏳️_未知_166 | 9ms'
+  - CA 🇨🇦 | @Raydikalx | FE4F26 | 9ms
+  - '[freeSub#218] D🔴🇺🇸hos[🎬🤖📺🎭]_dokng.com_8b32f357 | 9ms'
+  - '[NoMoreWalls#112] 🇮🇹[www.v2nodes.com] vless-IT-2... #2 | 9ms'
+  - CA 🇨🇦 | @Raydikalx | 0C43DC | 9ms
+  - '[AutoMerge#056] 🇺🇸 美国 | USA #3 | 9ms'
+  - CA 🇨🇦 | @Raydikalx | 861C59 | 9ms
+  - '[free18#071] 🏳️_未知_151 | 9ms'
+  - '[free18#080] 🏳️_未知_164 | 9ms'
+  - CA 🇨🇦 | @Raydikalx | CAAED6 | 9ms
+  - '[free18#173] 🇺🇸_美国_268 | 9ms'
+  - '[AutoMerge#047] 🇳🇱 荷兰 | NLD #4 | 9ms'
+  - vless-1659750684 | 9ms
+  - CA 🇨🇦 | @Raydikalx | 586CC5 | 9ms
+  - CA 🇨🇦 | @Raydikalx | 1DFB48 | 9ms
+  - CA 🇨🇦 | @Raydikalx | 05893C | 9ms
+  - CA 🇨🇦 | @Raydikalx | 832341 | 9ms
+  - CA 🇨🇦 | @Raydikalx | 81B423 | 9ms
+  - '[AutoMerge#059] 🇺🇸 美国 | USA #6 | 9ms'
+  - CA 🇨🇦 | @Raydikalx | DCCE02 | 9ms
+  - CA 🇨🇦 | @Raydikalx | 2DD26E | 9ms
+  - CA 🇨🇦 | @Raydikalx | 8AC2AE | 9ms
+  - '[free18#090] 🏳️_未知_174 | 9ms'
+  - '[free18#155] 🏳️_未知_249 | 9ms'
+  - '[free18#091] 🇺🇸_美国_175 | 9ms'
+  - CA 🇨🇦 | @Raydikalx | 38F112 | 9ms
+  - '[freeSub#222] D🔴🇺🇸hos[🎬🤖📺🎭]_dokng.com_51f1276e | 9ms'
+  - CA 🇨🇦 | @Raydikalx | D06334 | 9ms
+  - '[freeSub#147] D🔴🇺🇸hos[🎬🤖📺🎭]_dokng.com_b01fc6dc | 9ms'
+  - '[freeSub#158] D🔴🇺🇸hos[🎬🤖📺🎭]_dokng.com_e4a94dd0 | 9ms'
+  - CA 🇨🇦 | @Raydikalx | 0AB470 | 9ms
+  - CA 🇨🇦 | @Raydikalx | 01F44A | 9ms
+  - '[free18#122] 🏳️_未知_211 | 9ms'
+  - CA 🇨🇦 | @Raydikalx | 2D3BA7 | 9ms
+  - CA 🇨🇦 | @Raydikalx | 3F8DB7 | 9ms
+  - '[free18#143] 🏳️_未知_235 | 9ms'
+  - CA 🇨🇦 | @Raydikalx | D602EE | 9ms
+  - '[ermaozi#017] 🇸🇬[www.v2nodes.com] vless-SG-1... #1 | 9ms'
+  - CA 🇨🇦 | @Raydikalx | 47ADEA | 9ms
+  - CA 🇨🇦 | @Raydikalx | 1F5E09 | 9ms
+  - '[freeSub#129] D🔴🇺🇸hos[🎬🤖📺🎭]_dokng.com_f41808b3 | 9ms'
+  - '[clashfree#228] 🇺🇸 US VLESS-445 | free-nodes | 9ms'
+  - CA 🇨🇦 | @Raydikalx | 161FA2 | 9ms
+  - 🇺🇸 136  | ⬇️ 6MB/s | 9ms
+  - '[free18#171] 🏳️_未知_266 | 9ms'
+  - CA 🇨🇦 | @Raydikalx | 173DC3 | 9ms
+  - CA 🇨🇦 | @Raydikalx | 21FB57 | 9ms
+  - CA 🇨🇦 | @Raydikalx | 994B91 | 9ms
+  - '[NoMoreWalls#433] US_speednode_0143 | 9ms'
+  - '[AutoMerge#060] 🇺🇸 美国 | USA #7 | 9ms'
+  - '[free18#087] 🏳️_未知_171 | 9ms'
+  - CA 🇨🇦 | @Raydikalx | 76F5D4 | 9ms
+  - CA 🇨🇦 | @Raydikalx | 0611F1 | 9ms
+  - '[free18#119] 🇺🇸_美国_207 | 9ms'
+  - CA 🇨🇦 | @Raydikalx | EA1678 | 9ms
+  - CA 🇨🇦 | @Raydikalx | F1EC39 | 9ms
+  - CA 🇨🇦 | @Raydikalx | A57F2F | 9ms
+  - '[freeSub#159] D🔴🇺🇸hos[🎬🤖📺🎭]_dokng.com_c66af7d3 | 9ms'
+  - CA 🇨🇦 | @Raydikalx | 05250D | 9ms
+  - CA 🇨🇦 | @Raydikalx | AE6904 | 9ms
+  - CA 🇨🇦 | @Raydikalx | F1218F | 9ms
+  - '[freeSub#102] D🔴🇺🇸hos[🎬🤖📺🎭]_dokng.com_81badd77 | 9ms'
+  - '[NoMoreWalls#060] 🇸🇬[www.v2nodes.com] vless-SG | 9ms'
+  - CA 🇨🇦 | @Raydikalx | 62663E | 9ms
+  - '[ermaozi#014] 🇸🇬[www.v2nodes.com] vless-SG #2 | 9ms'
+  - vless-941486986 | 9ms
+  - '[NoMoreWalls#266] 🇩🇪DE_2|1.7MB/s | 9ms'
+  - 🇺🇸 053  | ⬇️ 15KB/s | 9ms
+  - '[freeSub#140] D🔴🇺🇸hos[🎬🤖📺🎭]_dokng.com_fb61d702 | 9ms'
+  - '[clashfree#091] 未知 VLESS-159 | free-nodes | 9ms'
+  - CA 🇨🇦 | @Raydikalx | D474D2 | 9ms
+  - US 🇺🇸 | @Raydikalx | E9FED8 | 9ms
+  - '[NoMoreWalls#231] 🇳🇱[www.v2nodes.com] trojan-NL-... | 9ms'
+  - CA 🇨🇦 | @Raydikalx | 656E41 | 9ms
+  - '[Eternity#107] RELAY-188.114.96.19-0195 | 0.0MB | 9ms'
+  - '[AutoMerge#069] 🇺🇸 美国 | USA #17 | 9ms'
+  - US 🇺🇸 | @Raydikalx | 0C77C4 | 9ms
+  - '[freeSub#390] A🟢🇲🇾res[🎬🤖📺✨]_dokng.com_6e7e9891 | 9ms'
+  - 🇺🇸 163  | ⬇️ 1MB/s | 9ms
+  - '[clashfree#219] 未知 VLESS-436 | free-nodes | 9ms'
+  - '[freeSub#292] D🔴🇯🇵hos[🎬🤖📺🎭]_dokng.com_caadd361 | 9ms'
+  - CA 🇨🇦 | @Raydikalx | 8BEFD8 | 9ms
+  - '[NoMoreWalls#207] 🇮🇩[www.v2nodes.com] trojan-ID-... | 9ms'
+  - CA 🇨🇦 | @Raydikalx | 8CAB93 | 9ms
 - name: ♻️ 自动选择
   type: url-test
   proxies:
-  - trojan-1662258378 | 1ms
-  - '[NoMoreWalls#091] 🇫🇷[www.v2nodes.com] vless-FR-1... #4 | 1ms'
-  - trojan-1643698408 | 1ms
-  - US 🇺🇸 | @Raydikalx | 0C7FCA | 1ms
-  - '[free18#066] 🇺🇸_美国_144 | 1ms'
-  - '[NoMoreWalls#092] 🇳🇱[www.v2nodes.com] vless-NL-1... #17 | 1ms'
-  - '[NoMoreWalls#076] 🇳🇱[www.v2nodes.com] vless-NL-1... #18 | 1ms'
-  - '[AutoMerge#070] 🇺🇸 美国 | USA #18 | 1ms'
-  - '[free18#084] 🏳️_未知_168 | 2ms'
-  - CA 🇨🇦 | @Raydikalx | 6C0D93 | 2ms
-  - '[AutoMerge#060] 🇺🇸 美国 | USA #7 | 2ms'
-  - CA 🇨🇦 | @Raydikalx | 61D0AA | 2ms
-  - vless-1659750577 | 2ms
-  - '[free18#173] 🇺🇸_美国_268 | 2ms'
-  - US 🇺🇸 | @Raydikalx | 31C110 | 2ms
-  - CA 🇨🇦 | @Raydikalx | B82160 | 2ms
-  - vless-1659750908 | 2ms
-  - shadowsocks-27271 | 2ms
-  - BZ 🇧🇿 | @Raydikalx | ECC3DE | 2ms
-  - CA 🇨🇦 | @Raydikalx | 7C0F0C | 2ms
-  - '[free18#088] 🇳🇱_荷兰_172 | 2ms'
-  - '[free18#081] 🏳️_未知_165 | 2ms'
-  - '[AutoMerge#064] 🇺🇸 美国 | USA #11 | 2ms'
-  - CA 🇨🇦 | @Raydikalx | 91D532 | 2ms
-  - GB 🇬🇧 | @Raydikalx | 762DEA | 2ms
-  - US 🇺🇸 | @Raydikalx | A45083 | 2ms
-  - CW 🇨🇼 | @Raydikalx | D45691 | 2ms
-  - CA 🇨🇦 | @Raydikalx | 8CAB93 | 2ms
-  - CA 🇨🇦 | @Raydikalx | 8AC2EA | 2ms
-  - '[free18#149] 🏳️_未知_243 | 2ms'
-  - CA 🇨🇦 | @Raydikalx | 4561A3 | 2ms
-  - '[free18#064] 🇺🇸_美国_141 | 2ms'
-  - '[AutoMerge#046] 🇳🇱 荷兰 | NLD #1 | 2ms'
-  - CY 🇨🇾 | @Raydikalx | D6FD2E | 2ms
-  - vless-1659750593 | 2ms
-  - CA 🇨🇦 | @Raydikalx | 3A84F1 | 2ms
-  - US 🇺🇸 | @Raydikalx | 3B43AB | 2ms
-  - CA 🇨🇦 | @Raydikalx | DCCE02 | 2ms
-  - '[free18#094] 🏳️_未知_178 | 2ms'
-  - VG 🇻🇬 | @Raydikalx | 1385F2 | 2ms
-  - '[free18#089] 🇺🇸_美国_173 | 2ms'
-  - '[free18#156] 🏳️_未知_250 | 2ms'
-  - '[free18#072] 🏳️_未知_152 | 2ms'
-  - CR 🇨🇷 | @Raydikalx | 9A1CA6 | 2ms
-  - CA 🇨🇦 | @Raydikalx | 189305 | 2ms
-  - US 🇺🇸 | @Raydikalx | CA7108 | 2ms
-  - US 🇺🇸 | @Raydikalx | E9CCA9 | 2ms
-  - AE 🇦🇪 | @Raydikalx | 7042EA | 2ms
-  - CA 🇨🇦 | @Raydikalx | 8B60FE | 2ms
-  - CA 🇨🇦 | @Raydikalx | 8CA1B3 | 2ms
-  - NL 🇳🇱 | @Raydikalx | E8E21C | 2ms
-  - '[free18#087] 🏳️_未知_171 | 2ms'
-  - CW 🇨🇼 | @Raydikalx | 8ABFCB | 2ms
-  - '[free18#074] 🇹🇷_土耳其_154 | 2ms'
-  - CA 🇨🇦 | @Raydikalx | 31803A | 2ms
-  - CA 🇨🇦 | @Raydikalx | 17F42B | 2ms
-  - US 🇺🇸 | @Raydikalx | B1CEC9 | 2ms
-  - CA 🇨🇦 | @Raydikalx | 2A8E59 | 2ms
-  - CA 🇨🇦 | @Raydikalx | 4FBD39 | 2ms
-  - CA 🇨🇦 | @Raydikalx | 2A483F | 2ms
-  - NL 🇳🇱 | @Raydikalx | FF847A | 2ms
-  - CW 🇨🇼 | @Raydikalx | CDB3A1 | 2ms
-  - US 🇺🇸 | @Raydikalx | 7787F9 | 2ms
-  - CA 🇨🇦 | @Raydikalx | C13D19 | 2ms
-  - NL 🇳🇱 | @Raydikalx | 425CE4 | 2ms
-  - '[AutoMerge#061] 🇺🇸 美国 | USA #8 | 2ms'
-  - CA 🇨🇦 | @Raydikalx | E9A5AD | 2ms
-  - '[free18#092] 🏳️_未知_176 | 2ms'
-  - CA 🇨🇦 | @Raydikalx | 3FF0A8 | 2ms
-  - US 🇺🇸 | @Raydikalx | 9D5581 | 2ms
-  - NL 🇳🇱 | @Raydikalx | 7DF20E | 2ms
-  - CA 🇨🇦 | @Raydikalx | A18C2A | 2ms
-  - NL 🇳🇱 | @Raydikalx | 4A40AB | 2ms
-  - US 🇺🇸 | @Raydikalx | 522BF7 | 2ms
-  - CA 🇨🇦 | @Raydikalx | 52EECF | 2ms
-  - US 🇺🇸 | @Raydikalx | 2ABC0C | 2ms
-  - vless-947793414 | 2ms
-  - NL 🇳🇱 | @Raydikalx | 61D065 | 2ms
-  - CA 🇨🇦 | @Raydikalx | 05B6A7 | 2ms
-  - GB 🇬🇧 | @Raydikalx | 5BBC82 | 2ms
-  - '[free18#082] 🏳️_未知_166 | 2ms'
-  - GB 🇬🇧 | @Raydikalx | FCA12F | 2ms
-  - '[free18#075] 🇳🇱_荷兰_155 | 2ms'
-  - '[AutoMerge#047] 🇳🇱 荷兰 | NLD #4 | 2ms'
-  - CA 🇨🇦 | @Raydikalx | EA1678 | 2ms
-  - DE 🇩🇪 | @Raydikalx | 8627D6 | 2ms
-  - CA 🇨🇦 | @Raydikalx | D9E52E | 2ms
-  - CA 🇨🇦 | @Raydikalx | EEC1E1 | 2ms
-  - BZ 🇧🇿 | @Raydikalx | 94A662 | 2ms
-  - CA 🇨🇦 | @Raydikalx | B754D5 | 2ms
-  - '[free18#166] 🏳️_未知_261 | 2ms'
-  - 🇺🇸 119  | ⬇️ 361KB/s | 2ms
-  - CA 🇨🇦 | @Raydikalx | C707B6 | 2ms
-  - CW 🇨🇼 | @Raydikalx | D498C4 | 2ms
-  - CA 🇨🇦 | @Raydikalx | 9BEFCE | 2ms
-  - '[NoMoreWalls#267] 🇺🇸US_2|1.6MB/s | 2ms'
-  - '[NoMoreWalls#146] 🇸🇬[www.v2nodes.com] vless-SG-1... #7 | 2ms'
-  - CA 🇨🇦 | @Raydikalx | 05893C | 2ms
-  - shadowsocks-27275 | 2ms
-  - CA 🇨🇦 | @Raydikalx | AE6904 | 2ms
-  - US 🇺🇸 | @Raydikalx | 350AEB | 2ms
-  - CA 🇨🇦 | @Raydikalx | D8CEC0 | 2ms
-  - GB 🇬🇧 | @Raydikalx | 453B05 | 2ms
-  - US 🇺🇸 | @Raydikalx | 3A3CDE | 2ms
-  - CA 🇨🇦 | @Raydikalx | 9E7EBE | 2ms
-  - '[free18#073] 🇺🇸_美国_153 | 2ms'
-  - US 🇺🇸 | @Raydikalx | 74EE03 | 2ms
-  - US 🇺🇸 | @Raydikalx | 8FE4C4 | 2ms
-  - US 🇺🇸 | @Raydikalx | 9DFC4D | 2ms
-  - '[AutoMerge#067] 🇺🇸 美国 | USA #15 | 2ms'
-  - CA 🇨🇦 | @Raydikalx | 123339 | 2ms
-  - CA 🇨🇦 | @Raydikalx | CDFD0A | 2ms
-  - CA 🇨🇦 | @Raydikalx | 56A41C | 2ms
-  - CA 🇨🇦 | @Raydikalx | 05250D | 2ms
-  - CA 🇨🇦 | @Raydikalx | 358C05 | 2ms
-  - CA 🇨🇦 | @Raydikalx | 93EE2A | 2ms
-  - TR 🇹🇷 | @Raydikalx | 246F01 | 2ms
-  - '[AutoMerge#069] 🇺🇸 美国 | USA #17 | 2ms'
-  - NL 🇳🇱 | @Raydikalx | 3DA043 | 2ms
-  - HU 🇭🇺 | @Raydikalx | FB721F | 2ms
-  - GB 🇬🇧 | @Raydikalx | BBDE75 | 2ms
-  - CA 🇨🇦 | @Raydikalx | D6A4CB | 2ms
-  - US 🇺🇸 | @Raydikalx | 37A986 | 2ms
-  - CA 🇨🇦 | @Raydikalx | C3C64F | 2ms
-  - CA 🇨🇦 | @Raydikalx | 63FD51 | 2ms
-  - CA 🇨🇦 | @Raydikalx | 832341 | 2ms
-  - CA 🇨🇦 | @Raydikalx | E9BC49 | 2ms
-  - '[AutoMerge#065] 🇺🇸 美国 | USA #13 | 2ms'
-  - CA 🇨🇦 | @Raydikalx | 6D8CA8 | 2ms
-  - '[free18#135] 🏳️_未知_226 | 2ms'
-  - CA 🇨🇦 | @Raydikalx | 7EB14B | 2ms
-  - CA 🇨🇦 | @Raydikalx | 861C59 | 2ms
-  - '[AutoMerge#071] 🇺🇸 美国 | USA #20 | 2ms'
-  - '[NoMoreWalls#310] 🇺🇸 美国 | USA #5 | 2ms'
-  - US 🇺🇸 | @Raydikalx | EDEF72 | 2ms
-  - '[NoMoreWalls#112] 🇮🇹[www.v2nodes.com] vless-IT-2... #2 | 2ms'
-  - '[free18#147] 🏳️_未知_241 | 2ms'
-  - '[ermaozi#017] 🇸🇬[www.v2nodes.com] vless-SG-1... #1 | 2ms'
-  - CA 🇨🇦 | @Raydikalx | F09F46 | 2ms
-  - CA 🇨🇦 | @Raydikalx | 3F8DB7 | 2ms
-  - CA 🇨🇦 | @Raydikalx | 1550F2 | 2ms
-  - US 🇺🇸 | @Raydikalx | 8F407D | 2ms
-  - CA 🇨🇦 | @Raydikalx | 5DC2F9 | 2ms
-  - '[free18#129] 🇸🇨_塞舌尔_219 | 2ms'
-  - CA 🇨🇦 | @Raydikalx | D06334 | 2ms
-  - CA 🇨🇦 | @Raydikalx | 690C70 | 2ms
-  - '[free18#071] 🏳️_未知_151 | 2ms'
-  - '[free18#080] 🏳️_未知_164 | 2ms'
-  - '[clashfree#219] 未知 VLESS-436 | free-nodes | 2ms'
-  - CA 🇨🇦 | @Raydikalx | 42811B | 2ms
-  - CA 🇨🇦 | @Raydikalx | F5FE35 | 2ms
-  - '[free18#085] 🏳️_未知_169 | 2ms'
-  - CA 🇨🇦 | @Raydikalx | 8B674D | 2ms
-  - 🇺🇸 136  | ⬇️ 6MB/s | 2ms
-  - '[freeSub#279] D🔴🇺🇸hos[🎬🤖📺🎭]_dokng.com_c09c3f93 | 2ms'
-  - NL 🇳🇱 | @Raydikalx | 1560E5 | 2ms
-  - CA 🇨🇦 | @Raydikalx | 39D89D | 2ms
-  - CA 🇨🇦 | @Raydikalx | 01E5A9 | 2ms
-  - vless-450834934 | 2ms
-  - '[clashfree#208] 未知 VLESS-421 | free-nodes | 2ms'
-  - ES 🇪🇸 | @Raydikalx | A20A0C | 2ms
-  - '[AutoMerge#015] 🇪🇸[www.v2nodes.com] vless-ES-4... #1 | 2ms'
-  - CA 🇨🇦 | @Raydikalx | BC3485 | 2ms
-  - '[NoMoreWalls#060] 🇸🇬[www.v2nodes.com] vless-SG | 2ms'
-  - CA 🇨🇦 | @Raydikalx | 8CC9EC | 2ms
-  - GB 🇬🇧 | @Raydikalx | D6AED8 | 2ms
-  - BZ 🇧🇿 | @Raydikalx | AF6288 | 2ms
-  - CA 🇨🇦 | @Raydikalx | 05877E | 2ms
-  - CA 🇨🇦 | @Raydikalx | 28C3B5 | 2ms
-  - US 🇺🇸 | @Raydikalx | 1F0561 | 2ms
-  - '[ermaozi#014] 🇸🇬[www.v2nodes.com] vless-SG #2 | 2ms'
-  - US 🇺🇸 | @Raydikalx | 1ECAA9 | 2ms
-  - NL 🇳🇱 | @Raydikalx | DAAD2A | 2ms
-  - CA 🇨🇦 | @Raydikalx | 9588EA | 2ms
-  - CA 🇨🇦 | @Raydikalx | 0AB470 | 2ms
-  - '[NoMoreWalls#312] 🇺🇸 美国 | USA #7 | 2ms'
-  - CA 🇨🇦 | @Raydikalx | 76F5D4 | 2ms
-  - HU 🇭🇺 | @Raydikalx | DA9E5C | 2ms
-  - CA 🇨🇦 | @Raydikalx | D60959 | 2ms
-  - DE 🇩🇪 | @Raydikalx | 526D68 | 2ms
-  - '[zhuhaiuk#008] US - zhuhai.uk 02 | 2ms'
-  - CA 🇨🇦 | @Raydikalx | 180650 | 2ms
-  - 🇺🇸 163  | ⬇️ 1MB/s | 2ms
-  - CA 🇨🇦 | @Raydikalx | D80B49 | 2ms
-  - AE 🇦🇪 | @Raydikalx | 2BA895 | 2ms
-  - CA 🇨🇦 | @Raydikalx | C9C17C | 2ms
-  - CA 🇨🇦 | @Raydikalx | B72A46 | 2ms
-  - '[NoMoreWalls#303] 🇸🇬 新加坡 | SGP #3 | 2ms'
-  - CA 🇨🇦 | @Raydikalx | 9C0660 | 2ms
-  - '[Eternity#090] RELAY-203.30.191.2-1124 | 0.0MB | 2ms'
-  - CA 🇨🇦 | @Raydikalx | 56ABBD | 2ms
-  - US 🇺🇸 | @Raydikalx | 4D9FA3 | 2ms
-  - shadowsocks-27276 | 2ms
-  - CA 🇨🇦 | @Raydikalx | DA0B9C | 2ms
-  - CA 🇨🇦 | @Raydikalx | 3A5859 | 2ms
-  - '[freeSub#061] B🟡🇺🇸biz_dokng.com_145fbfbc | 2ms'
-  - '[NoMoreWalls#308] 🇺🇸 美国 | USA #2 | 2ms'
-  - '[free18#086] 🏳️_未知_170 | 2ms'
-  - '[NoMoreWalls#132] 🇷🇴[www.v2nodes.com] vless-RO-4... | 2ms'
-  - CA 🇨🇦 | @Raydikalx | 38F112 | 2ms
-  - '[AutoMerge#062] 🇺🇸 美国 | USA #9 | 2ms'
-  - CA 🇨🇦 | @Raydikalx | 929E2C | 2ms
-  - '[freeSub#133] D🔴🇰🇷hos[🎬🤖📺🎭]_dokng.com_aba567e8 | 2ms'
-  - '[free18#079] 🏳️_未知_159 | 2ms'
-  - CA 🇨🇦 | @Raydikalx | 8C3B14 | 2ms
-  - NL 🇳🇱 | @Raydikalx | 2A9E32 | 2ms
-  - 🇺🇸 117  | ⬇️ 332KB/s | 2ms
-  - CA 🇨🇦 | @Raydikalx | FE4F26 | 2ms
-  - '[freeSub#273] D🔴🇺🇸hos[🎬🤖📺🎭]_dokng.com_75365148 | 2ms'
-  - US 🇺🇸 | @Raydikalx | 45D6E2 | 2ms
-  - '[freeSub#111] D🔴🇺🇸hos[🎬🤖📺🎭]_dokng.com_efcae490 | 2ms'
-  - vless-1538407570 | 2ms
-  - '[NoMoreWalls#207] 🇮🇩[www.v2nodes.com] trojan-ID-... | 2ms'
-  - US 🇺🇸 | @Raydikalx | 5194FA | 2ms
-  - '[clashfree#222] 未知 VLESS-439 | free-nodes | 2ms'
-  - US 🇺🇸 | @Raydikalx | 0C77C4 | 2ms
-  - PL 🇵🇱 | @Raydikalx | DB5773 | 2ms
-  - US 🇺🇸 | @Raydikalx | 5DCA9D | 2ms
-  - vless-1510182882 | 2ms
-  - AT 🇦🇹 | @Raydikalx | 94A6B3 | 2ms
-  - '[NoMoreWalls#141] 🇸🇬[www.v2nodes.com] vless-SG-1... #1 | 2ms'
-  - '[freeSub#210] D🔴🇰🇷hos[🎬📺🎭🎪]_dokng.com_1ca689b4 | 2ms'
-  - US 🇺🇸 | @Raydikalx | 65CB97 | 2ms
-  - CA 🇨🇦 | @Raydikalx | 74B5FF | 2ms
-  - '[free18#162] 🏳️_未知_257 | 2ms'
-  - CA 🇨🇦 | @Raydikalx | 404682 | 2ms
-  - CA 🇨🇦 | @Raydikalx | 05C8B0 | 2ms
-  - DE 🇩🇪 | @Raydikalx | 9DD688 | 2ms
-  - CA 🇨🇦 | @Raydikalx | 8B2A7E | 2ms
-  - '[NoMoreWalls#087] 🇷🇴[www.v2nodes.com] vless-RO-1... | 2ms'
-  - CA 🇨🇦 | @Raydikalx | 81B423 | 2ms
-  - CA 🇨🇦 | @Raydikalx | 4E0D8E | 2ms
-  - CA 🇨🇦 | @Raydikalx | 72D103 | 2ms
-  - CA 🇨🇦 | @Raydikalx | 950346 | 2ms
-  - CA 🇨🇦 | @Raydikalx | D955BF | 2ms
-  - CA 🇨🇦 | @Raydikalx | 46EDC3 | 2ms
-  - GB 🇬🇧 | @Raydikalx | 834F16 | 2ms
-  - US 🇺🇸 | @Raydikalx | 7EC5EC | 2ms
-  - CA 🇨🇦 | @Raydikalx | A07B4B | 2ms
-  - CA 🇨🇦 | @Raydikalx | D94FDB | 2ms
-  - DE 🇩🇪 | @Raydikalx | 634556 | 2ms
-  - '[free18#095] 🏳️_未知_181 | 2ms'
-  - EE 🇪🇪 | @Raydikalx | 9AE1C3 | 2ms
-  - CA 🇨🇦 | @Raydikalx | 9A9CCD | 2ms
-  - MT 🇲🇹 | @Raydikalx | D61DC6 | 2ms
-  - vless-1656587328 | 2ms
-  - CA 🇨🇦 | @Raydikalx | F1218F | 2ms
-  - CA 🇨🇦 | @Raydikalx | 0E6145 | 2ms
-  - CA 🇨🇦 | @Raydikalx | 2E1AB6 | 2ms
-  - CA 🇨🇦 | @Raydikalx | 01F44A | 2ms
-  - CA 🇨🇦 | @Raydikalx | 474D1D | 2ms
-  - CA 🇨🇦 | @Raydikalx | 9CE1B2 | 2ms
-  - CA 🇨🇦 | @Raydikalx | 5F26A6 | 2ms
-  - CA 🇨🇦 | @Raydikalx | 0663B4 | 2ms
-  - CA 🇨🇦 | @Raydikalx | 21FB57 | 2ms
-  - CA 🇨🇦 | @Raydikalx | 5C4793 | 2ms
+  - US 🇺🇸 | @Raydikalx | 68780F | 1ms
+  - '[free18#066] 🇺🇸_美国_144 | 2ms'
+  - US 🇺🇸 | @Raydikalx | C6E76F | 2ms
+  - '[NoMoreWalls#091] 🇫🇷[www.v2nodes.com] vless-FR-1... #4 | 2ms'
+  - US 🇺🇸 | @Raydikalx | 0E3564 | 2ms
+  - '[free18#060] 🇺🇸_美国_136 | 2ms'
+  - US 🇺🇸 | @Raydikalx | E55526 | 2ms
+  - US 🇺🇸 | @Raydikalx | 1A152D | 2ms
+  - '[NoMoreWalls#076] 🇳🇱[www.v2nodes.com] vless-NL-1... #18 | 2ms'
+  - '[NoMoreWalls#092] 🇳🇱[www.v2nodes.com] vless-NL-1... #17 | 2ms'
+  - vmess-248 | 3ms
+  - US 🇺🇸 | @Raydikalx | D2E735 | 3ms
+  - '[freeSub#186] D🔴🇺🇸hos[🎬🤖📺🎭]_dokng.com_4dbb3d73 | 3ms'
+  - shadowsocks-27291 | 8ms
+  - vless-1633929731 | 8ms
+  - CA 🇨🇦 | @Raydikalx | 88D649 | 8ms
+  - CA 🇨🇦 | @Raydikalx | 166F29 | 8ms
+  - '[freeSub#223] D🔴🇺🇸hos[🎬🤖📺🎭]_dokng.com_596fc241 | 8ms'
+  - '[AutoMerge#065] 🇺🇸 美国 | USA #13 | 8ms'
+  - CA 🇨🇦 | @Raydikalx | 09E0B6 | 8ms
+  - CA 🇨🇦 | @Raydikalx | A07B4B | 8ms
+  - CA 🇨🇦 | @Raydikalx | 420B80 | 8ms
+  - '[NoMoreWalls#087] 🇷🇴[www.v2nodes.com] vless-RO-1... | 8ms'
+  - CA 🇨🇦 | @Raydikalx | E3EA2D | 8ms
+  - CA 🇨🇦 | @Raydikalx | 1FC1BC | 8ms
+  - CA 🇨🇦 | @Raydikalx | 8B2A7E | 8ms
+  - '[free18#094] 🏳️_未知_178 | 8ms'
+  - CA 🇨🇦 | @Raydikalx | 0F8FEA | 9ms
+  - CA 🇨🇦 | @Raydikalx | 6DBA53 | 9ms
+  - CA 🇨🇦 | @Raydikalx | 7D621B | 9ms
+  - '[AutoMerge#071] 🇺🇸 美国 | USA #20 | 9ms'
+  - CA 🇨🇦 | @Raydikalx | 760BAF | 9ms
+  - CA 🇨🇦 | @Raydikalx | 908F7E | 9ms
+  - CA 🇨🇦 | @Raydikalx | 6B96AC | 9ms
+  - '[free18#135] 🏳️_未知_226 | 9ms'
+  - vless-450834934 | 9ms
+  - CA 🇨🇦 | @Raydikalx | 15EA67 | 9ms
+  - '[free18#129] 🇸🇨_塞舌尔_219 | 9ms'
+  - CA 🇨🇦 | @Raydikalx | 591536 | 9ms
+  - CA 🇨🇦 | @Raydikalx | 58E74A | 9ms
+  - CA 🇨🇦 | @Raydikalx | 668570 | 9ms
+  - CA 🇨🇦 | @Raydikalx | 5B34E5 | 9ms
+  - DE 🇩🇪 | @Raydikalx | 526D68 | 9ms
+  - CA 🇨🇦 | @Raydikalx | 2A8E59 | 9ms
+  - '[free18#074] 🇹🇷_土耳其_154 | 9ms'
+  - vless-1656587328 | 9ms
+  - CA 🇨🇦 | @Raydikalx | D955BF | 9ms
+  - CA 🇨🇦 | @Raydikalx | D60959 | 9ms
+  - CA 🇨🇦 | @Raydikalx | BA6E49 | 9ms
+  - CA 🇨🇦 | @Raydikalx | 07AE8C | 9ms
+  - CA 🇨🇦 | @Raydikalx | CD57C0 | 9ms
+  - CA 🇨🇦 | @Raydikalx | 98BD34 | 9ms
+  - '[freeSub#185] D🔴🇺🇸hos[🎬🤖📺🎭]_dokng.com_5e148d55 | 9ms'
+  - CA 🇨🇦 | @Raydikalx | B72A46 | 9ms
+  - CA 🇨🇦 | @Raydikalx | 1212F1 | 9ms
+  - CA 🇨🇦 | @Raydikalx | 91D532 | 9ms
+  - CA 🇨🇦 | @Raydikalx | 895057 | 9ms
+  - CA 🇨🇦 | @Raydikalx | 9BEFCE | 9ms
+  - FR 🇫🇷 | @Raydikalx | B29FC1 | 9ms
+  - '[AutoMerge#055] 🇺🇸 美国 | USA #2 | 9ms'
+  - CA 🇨🇦 | @Raydikalx | 690C70 | 9ms
+  - CA 🇨🇦 | @Raydikalx | 7A1AC9 | 9ms
+  - CA 🇨🇦 | @Raydikalx | 865310 | 9ms
+  - CA 🇨🇦 | @Raydikalx | A3ACA2 | 9ms
+  - CA 🇨🇦 | @Raydikalx | 28C3B5 | 9ms
+  - '[NoMoreWalls#154] 🇺🇸[www.v2nodes.com] vless-US-1... #3 | 9ms'
+  - CA 🇨🇦 | @Raydikalx | 1127E7 | 9ms
+  - CA 🇨🇦 | @Raydikalx | CE5B5F | 9ms
+  - CA 🇨🇦 | @Raydikalx | 93EE2A | 9ms
+  - US 🇺🇸 | @Raydikalx | F1AD8B | 9ms
+  - CA 🇨🇦 | @Raydikalx | 51EA03 | 9ms
+  - CA 🇨🇦 | @Raydikalx | 17F42B | 9ms
+  - vless-1662656009 | 9ms
+  - CA 🇨🇦 | @Raydikalx | D80B49 | 9ms
+  - '[freeSub#169] D🔴🇺🇸hos[🎬🤖📺🎭]_dokng.com_47775503 | 9ms'
+  - CA 🇨🇦 | @Raydikalx | 881E27 | 9ms
+  - CA 🇨🇦 | @Raydikalx | 0E6145 | 9ms
+  - CA 🇨🇦 | @Raydikalx | A23A8A | 9ms
+  - CA 🇨🇦 | @Raydikalx | 46BE33 | 9ms
+  - '[AutoMerge#066] 🇺🇸 美国 | USA #14 | 9ms'
+  - CA 🇨🇦 | @Raydikalx | 404682 | 9ms
+  - CA 🇨🇦 | @Raydikalx | 1DB02C | 9ms
+  - AT 🇦🇹 | @Raydikalx | 94A6B3 | 9ms
+  - CA 🇨🇦 | @Raydikalx | 6D8CA8 | 9ms
+  - CA 🇨🇦 | @Raydikalx | B82160 | 9ms
+  - '[freeSub#153] D🔴🇺🇸hos[🎬🤖📺🎭]_dokng.com_e487e5ba | 9ms'
+  - CA 🇨🇦 | @Raydikalx | C9C17C | 9ms
+  - CA 🇨🇦 | @Raydikalx | CF2AEC | 9ms
+  - CA 🇨🇦 | @Raydikalx | 7C0F0C | 9ms
+  - CA 🇨🇦 | @Raydikalx | 05B6A7 | 9ms
+  - '[free18#149] 🏳️_未知_243 | 9ms'
+  - CA 🇨🇦 | @Raydikalx | C64FAC | 9ms
+  - CA 🇨🇦 | @Raydikalx | 4561A3 | 9ms
+  - '[freeSub#168] D🔴🇺🇸hos[🎬🤖📺🎭]_dokng.com_067d2b9f | 9ms'
+  - '[free18#084] 🏳️_未知_168 | 9ms'
+  - US 🇺🇸 | @Raydikalx | 5DCA9D | 9ms
+  - '[Eternity#090] RELAY-203.30.191.2-1124 | 0.0MB | 9ms'
+  - CA 🇨🇦 | @Raydikalx | 565A24 | 9ms
+  - CA 🇨🇦 | @Raydikalx | 8C3B14 | 9ms
+  - '[freeSub#154] D🔴🇺🇸hos[🎬🤖📺🎭]_dokng.com_ff5d6731 | 9ms'
+  - US 🇺🇸 | @Raydikalx | 8F407D | 9ms
+  - CA 🇨🇦 | @Raydikalx | 9A9CCD | 9ms
+  - CA 🇨🇦 | @Raydikalx | 26E40D | 9ms
+  - '[AutoMerge#062] 🇺🇸 美国 | USA #9 | 9ms'
+  - CA 🇨🇦 | @Raydikalx | 5831D3 | 9ms
+  - US 🇺🇸 | @Raydikalx | 1F0561 | 9ms
+  - '[NoMoreWalls#189] 🇺🇸[www.v2nodes.com] ss-US-1586... #1 | 9ms'
+  - '[freeSub#141] D🔴🇺🇸hos[🎬🤖📺🎭]_dokng.com_8a9f3564 | 9ms'
+  - CA 🇨🇦 | @Raydikalx | A18C2A | 9ms
+  - US 🇺🇸 | @Raydikalx | 522BF7 | 9ms
+  - CA 🇨🇦 | @Raydikalx | 563902 | 9ms
+  - CA 🇨🇦 | @Raydikalx | CDFD0A | 9ms
+  - '[free18#088] 🇳🇱_荷兰_172 | 9ms'
+  - '[AutoMerge#064] 🇺🇸 美国 | USA #11 | 9ms'
+  - '[AutoMerge#070] 🇺🇸 美国 | USA #18 | 9ms'
+  - CA 🇨🇦 | @Raydikalx | 8CC9EC | 9ms
+  - CA 🇨🇦 | @Raydikalx | 6BD303 | 9ms
+  - '[freeSub#137] D🔴🇺🇸hos[🎬🤖📺🎭]_dokng.com_0f8d1baa | 9ms'
+  - CA 🇨🇦 | @Raydikalx | 42811B | 9ms
+  - CA 🇨🇦 | @Raydikalx | 1FCF86 | 9ms
+  - CA 🇨🇦 | @Raydikalx | D5C299 | 9ms
+  - '[NoMoreWalls#146] 🇸🇬[www.v2nodes.com] vless-SG-1... #7 | 9ms'
+  - '[free18#075] 🇳🇱_荷兰_155 | 9ms'
+  - CA 🇨🇦 | @Raydikalx | 90AED3 | 9ms
+  - '[freeSub#197] D🔴🇺🇸hos[🎬🤖📺🎭]_dokng.com_300ca497 | 9ms'
+  - US 🇺🇸 | @Raydikalx | 37A986 | 9ms
+  - '[free18#164] 🏳️_未知_259 | 9ms'
+  - CA 🇨🇦 | @Raydikalx | 63FD51 | 9ms
+  - CA 🇨🇦 | @Raydikalx | 123339 | 9ms
+  - '[NoMoreWalls#312] 🇺🇸 美国 | USA #7 | 9ms'
+  - US 🇺🇸 | @Raydikalx | 31C110 | 9ms
+  - shadowsocks-157 | 9ms
+  - CA 🇨🇦 | @Raydikalx | 7EB14B | 9ms
+  - CA 🇨🇦 | @Raydikalx | 8B60FE | 9ms
+  - '[AutoMerge#015] 🇪🇸[www.v2nodes.com] vless-ES-4... #1 | 9ms'
+  - '[free18#079] 🏳️_未知_159 | 9ms'
+  - CA 🇨🇦 | @Raydikalx | 929E2C | 9ms
+  - '[freeSub#133] D🔴🇰🇷hos[🎬🤖📺🎭]_dokng.com_aba567e8 | 9ms'
+  - '[freeSub#103] D🔴🇺🇸hos[🎬🤖📺🎭]_dokng.com_483f6707 | 9ms'
+  - CA 🇨🇦 | @Raydikalx | 9588EA | 9ms
+  - '[freeSub#178] D🔴🇺🇸hos[🎬🤖📺🎭]_dokng.com_c41378dc | 9ms'
+  - '[free18#072] 🏳️_未知_152 | 9ms'
+  - CA 🇨🇦 | @Raydikalx | 530D38 | 9ms
+  - CA 🇨🇦 | @Raydikalx | D5912C | 9ms
+  - '[freeSub#109] D🔴🇺🇸hos[🎬🤖📺🎭]_dokng.com_2b221c73 | 9ms'
+  - '[NoMoreWalls#114] 🇯🇵[www.v2nodes.com] vless-JP-1... #3 | 9ms'
+  - '[freeSub#213] D🔴🇺🇸hos[🎬🤖📺🎭]_dokng.com_a5d28d03 | 9ms'
+  - '[free18#148] 🏳️_未知_242 | 9ms'
+  - '[clashfree#208] 未知 VLESS-421 | free-nodes | 9ms'
+  - '[free18#172] 🏳️_未知_267 | 9ms'
+  - CA 🇨🇦 | @Raydikalx | 1A6E36 | 9ms
+  - CA 🇨🇦 | @Raydikalx | EEF52A | 9ms
+  - CA 🇨🇦 | @Raydikalx | 122FF3 | 9ms
+  - CA 🇨🇦 | @Raydikalx | 4D93D5 | 9ms
+  - '[freeSub#101] D🔴🇺🇸hos[🎬🤖📺🎭]_dokng.com_da81ef84 | 9ms'
+  - CA 🇨🇦 | @Raydikalx | DE048E | 9ms
+  - '[free18#092] 🏳️_未知_176 | 9ms'
+  - '[freeSub#193] D🔴🇺🇸hos[🎬🤖📺🎭]_dokng.com_c6c9640a | 9ms'
+  - CA 🇨🇦 | @Raydikalx | D94FDB | 9ms
+  - CA 🇨🇦 | @Raydikalx | 998E93 | 9ms
+  - CA 🇨🇦 | @Raydikalx | 3A84F1 | 9ms
+  - vless-897906541 | 9ms
+  - CA 🇨🇦 | @Raydikalx | F0AA75 | 9ms
+  - '[freeSub#196] D🔴🇺🇸hos[🎬🤖📺🎭]_dokng.com_e3414a29 | 9ms'
+  - '[clashfree#061] 未知 SS-69 | free-nodes | 9ms'
+  - CA 🇨🇦 | @Raydikalx | A1E89D | 9ms
+  - '[free18#081] 🏳️_未知_165 | 9ms'
+  - CA 🇨🇦 | @Raydikalx | 3B2C93 | 9ms
+  - CA 🇨🇦 | @Raydikalx | 180650 | 9ms
+  - '[free18#162] 🏳️_未知_257 | 9ms'
+  - SC 🇸🇨 | @Raydikalx | 0EF0CF | 9ms
+  - '[AutoMerge#067] 🇺🇸 美国 | USA #15 | 9ms'
+  - '[free18#082] 🏳️_未知_166 | 9ms'
+  - CA 🇨🇦 | @Raydikalx | FE4F26 | 9ms
+  - '[freeSub#218] D🔴🇺🇸hos[🎬🤖📺🎭]_dokng.com_8b32f357 | 9ms'
+  - '[NoMoreWalls#112] 🇮🇹[www.v2nodes.com] vless-IT-2... #2 | 9ms'
+  - CA 🇨🇦 | @Raydikalx | 0C43DC | 9ms
+  - '[AutoMerge#056] 🇺🇸 美国 | USA #3 | 9ms'
+  - CA 🇨🇦 | @Raydikalx | 861C59 | 9ms
+  - '[free18#071] 🏳️_未知_151 | 9ms'
+  - '[free18#080] 🏳️_未知_164 | 9ms'
+  - CA 🇨🇦 | @Raydikalx | CAAED6 | 9ms
+  - '[free18#173] 🇺🇸_美国_268 | 9ms'
+  - '[AutoMerge#047] 🇳🇱 荷兰 | NLD #4 | 9ms'
+  - vless-1659750684 | 9ms
+  - CA 🇨🇦 | @Raydikalx | 586CC5 | 9ms
+  - CA 🇨🇦 | @Raydikalx | 1DFB48 | 9ms
+  - CA 🇨🇦 | @Raydikalx | 05893C | 9ms
+  - CA 🇨🇦 | @Raydikalx | 832341 | 9ms
+  - CA 🇨🇦 | @Raydikalx | 81B423 | 9ms
+  - '[AutoMerge#059] 🇺🇸 美国 | USA #6 | 9ms'
+  - CA 🇨🇦 | @Raydikalx | DCCE02 | 9ms
+  - CA 🇨🇦 | @Raydikalx | 2DD26E | 9ms
+  - CA 🇨🇦 | @Raydikalx | 8AC2AE | 9ms
+  - '[free18#090] 🏳️_未知_174 | 9ms'
+  - '[free18#155] 🏳️_未知_249 | 9ms'
+  - '[free18#091] 🇺🇸_美国_175 | 9ms'
+  - CA 🇨🇦 | @Raydikalx | 38F112 | 9ms
+  - '[freeSub#222] D🔴🇺🇸hos[🎬🤖📺🎭]_dokng.com_51f1276e | 9ms'
+  - CA 🇨🇦 | @Raydikalx | D06334 | 9ms
+  - '[freeSub#147] D🔴🇺🇸hos[🎬🤖📺🎭]_dokng.com_b01fc6dc | 9ms'
+  - '[freeSub#158] D🔴🇺🇸hos[🎬🤖📺🎭]_dokng.com_e4a94dd0 | 9ms'
+  - CA 🇨🇦 | @Raydikalx | 0AB470 | 9ms
+  - CA 🇨🇦 | @Raydikalx | 01F44A | 9ms
+  - '[free18#122] 🏳️_未知_211 | 9ms'
+  - CA 🇨🇦 | @Raydikalx | 2D3BA7 | 9ms
+  - CA 🇨🇦 | @Raydikalx | 3F8DB7 | 9ms
+  - '[free18#143] 🏳️_未知_235 | 9ms'
+  - CA 🇨🇦 | @Raydikalx | D602EE | 9ms
+  - '[ermaozi#017] 🇸🇬[www.v2nodes.com] vless-SG-1... #1 | 9ms'
+  - CA 🇨🇦 | @Raydikalx | 47ADEA | 9ms
+  - CA 🇨🇦 | @Raydikalx | 1F5E09 | 9ms
+  - '[freeSub#129] D🔴🇺🇸hos[🎬🤖📺🎭]_dokng.com_f41808b3 | 9ms'
+  - '[clashfree#228] 🇺🇸 US VLESS-445 | free-nodes | 9ms'
+  - CA 🇨🇦 | @Raydikalx | 161FA2 | 9ms
+  - 🇺🇸 136  | ⬇️ 6MB/s | 9ms
+  - '[free18#171] 🏳️_未知_266 | 9ms'
+  - CA 🇨🇦 | @Raydikalx | 173DC3 | 9ms
+  - CA 🇨🇦 | @Raydikalx | 21FB57 | 9ms
+  - CA 🇨🇦 | @Raydikalx | 994B91 | 9ms
+  - '[NoMoreWalls#433] US_speednode_0143 | 9ms'
+  - '[AutoMerge#060] 🇺🇸 美国 | USA #7 | 9ms'
+  - '[free18#087] 🏳️_未知_171 | 9ms'
+  - CA 🇨🇦 | @Raydikalx | 76F5D4 | 9ms
+  - CA 🇨🇦 | @Raydikalx | 0611F1 | 9ms
+  - '[free18#119] 🇺🇸_美国_207 | 9ms'
+  - CA 🇨🇦 | @Raydikalx | EA1678 | 9ms
+  - CA 🇨🇦 | @Raydikalx | F1EC39 | 9ms
+  - CA 🇨🇦 | @Raydikalx | A57F2F | 9ms
+  - '[freeSub#159] D🔴🇺🇸hos[🎬🤖📺🎭]_dokng.com_c66af7d3 | 9ms'
+  - CA 🇨🇦 | @Raydikalx | 05250D | 9ms
+  - CA 🇨🇦 | @Raydikalx | AE6904 | 9ms
+  - CA 🇨🇦 | @Raydikalx | F1218F | 9ms
+  - '[freeSub#102] D🔴🇺🇸hos[🎬🤖📺🎭]_dokng.com_81badd77 | 9ms'
+  - '[NoMoreWalls#060] 🇸🇬[www.v2nodes.com] vless-SG | 9ms'
+  - CA 🇨🇦 | @Raydikalx | 62663E | 9ms
+  - '[ermaozi#014] 🇸🇬[www.v2nodes.com] vless-SG #2 | 9ms'
+  - vless-941486986 | 9ms
+  - '[NoMoreWalls#266] 🇩🇪DE_2|1.7MB/s | 9ms'
+  - 🇺🇸 053  | ⬇️ 15KB/s | 9ms
+  - '[freeSub#140] D🔴🇺🇸hos[🎬🤖📺🎭]_dokng.com_fb61d702 | 9ms'
+  - '[clashfree#091] 未知 VLESS-159 | free-nodes | 9ms'
+  - CA 🇨🇦 | @Raydikalx | D474D2 | 9ms
+  - US 🇺🇸 | @Raydikalx | E9FED8 | 9ms
+  - '[NoMoreWalls#231] 🇳🇱[www.v2nodes.com] trojan-NL-... | 9ms'
+  - CA 🇨🇦 | @Raydikalx | 656E41 | 9ms
+  - '[Eternity#107] RELAY-188.114.96.19-0195 | 0.0MB | 9ms'
+  - '[AutoMerge#069] 🇺🇸 美国 | USA #17 | 9ms'
+  - US 🇺🇸 | @Raydikalx | 0C77C4 | 9ms
+  - '[freeSub#390] A🟢🇲🇾res[🎬🤖📺✨]_dokng.com_6e7e9891 | 9ms'
+  - 🇺🇸 163  | ⬇️ 1MB/s | 9ms
+  - '[clashfree#219] 未知 VLESS-436 | free-nodes | 9ms'
+  - '[freeSub#292] D🔴🇯🇵hos[🎬🤖📺🎭]_dokng.com_caadd361 | 9ms'
+  - CA 🇨🇦 | @Raydikalx | 8BEFD8 | 9ms
+  - '[NoMoreWalls#207] 🇮🇩[www.v2nodes.com] trojan-ID-... | 9ms'
+  - CA 🇨🇦 | @Raydikalx | 8CAB93 | 9ms
   url: https://www.gstatic.com/generate_204
   interval: 300
 rules:
