@@ -1,6 +1,6 @@
 # Selected single nodes | 2026-10-04 23:00 CST
 # Filter: Reality / Hysteria2 first, UDP-capable transports preferred, YouTube-1080p class only if the pool already passed a proxied 204.
-# Region rule: dropped CN/TW/JP/HK/MO/VN/TH. Kept KR/SG/IN/ID only as other-Asia spares.
+# Region rule: dropped CN/TW/JP/HK/MO/VN/TH. Kept KR/SG only as other-Asia spares.
 # Lifetime note: public free nodes are shared. These are the least region-targeted shape available tonight, not a 3-day guarantee.
 # Import the share URI directly (v2rayN / Hiddify / sing-box). Fields below are the connection essentials.
 
@@ -28,10 +28,9 @@ server=23.81.34.204 port=443 uuid=99955907-9070-46f0-a200-9c7a0b9d74fe sni=speed
 vless://581cb8c3-dadb-4e10-a18b-5e79bfe7bd93@47.80.14.8:443?security=reality&type=raw&packetEncoding=xudp&sni=www.samsung.com&fp=chrome&flow=xtls-rprx-vision&sid=71110d3f7ef57760&pbk=OBIHAXdhfYJ0PWsZjy3QYPRjTfMQlvjmBsTf1CT671w#KR-Reality-06
 server=47.80.14.8 port=443 uuid=581cb8c3-dadb-4e10-a18b-5e79bfe7bd93 sni=www.samsung.com pbk=OBIHAXdhfYJ0PWsZjy3QYPRjTfMQlvjmBsTf1CT671w sid=71110d3f7ef57760 fp=chrome flow=xtls-rprx-vision packetEncoding=xudp
 
-07 | VLESS+Reality+TCP | SG | other-Asia spare
-vless://2d1ad594-80a4-4bfb-87a6-038e39701f51@146.235.16.130:19825?encryption=none&security=reality&sni=www.cloudflare.com&fp=chrome&pbk=p_rF4m2G1k0vYw8e7nQ3hJ5sL9dC6bA0tU2iO4pM&sid=a1b2c3d4&type=tcp#SG-Reality-07
-# link above may be truncated in source pool; prefer the verified SG shard if handshake fails
-server=146.235.16.130 port=19825 uuid=2d1ad594-80a4-4bfb-87a6-038e39701f51 security=reality
+07 | VLESS+Reality+Vision+TCP | SG | other-Asia spare
+vless://2d1ad594-80a4-4bfb-87a6-038e39701f51@146.235.16.130:19825?encryption=none&flow=xtls-rprx-vision&pbk=GvvkY8xYb9QjvwvzYq_uNC4tOGd0DCxRnz6770-xgkI&security=reality&sid=6ba85179e30d4fc2&sni=sg2-8sb.6121999.dpdns.org&type=tcp#SG-Reality-07
+server=146.235.16.130 port=19825 uuid=2d1ad594-80a4-4bfb-87a6-038e39701f51 sni=sg2-8sb.6121999.dpdns.org pbk=GvvkY8xYb9QjvwvzYq_uNC4tOGd0DCxRnz6770-xgkI sid=6ba85179e30d4fc2 fp=chrome flow=xtls-rprx-vision
 
 08 | VLESS+Reality+Vision+TCP | AE | low-profile exit
 vless://31fd2fde-ca69-450e-8c03-eaad819b06b9@146.70.102.82:443?security=reality&type=tcp&sni=www.datadoghq.com&fp=firefox&flow=xtls-rprx-vision&sid=002fb4ec7b3088cc&pbk=GDer6NQYXdbccrFI0tLn2671PjCvrcSy0R7TKY8vG1k#AE-Reality-08
