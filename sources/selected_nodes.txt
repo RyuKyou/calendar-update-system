@@ -1,104 +1,325 @@
-# 精選單節點 2026-10-03
-# 原則：壽命優先；回避台灣/日本/美國/越南/泰國；Reality 與 Hysteria2 優先；均標 UDP。
-# 來源：Au1rxx 小時級已轉發驗證公開池。免費共享，額度不穩，僅作補救窗口，勿登敏感帳號。
+# selected_nodes 2026-10-04 16:05 CST
+# 來源: Au1rxx/free-vpn-subscriptions 當日國家分片，發布前做過 HTTP 探活
+# 篩選: 避開 TW/JP/US/VN/TH；Reality 與 Hysteria2 優先；UDP 可用
+# 壽命: 公開共享節點，額度通常遠低於 10G，預期可用數小時到 1-2 天。協議與地區已按抗封優先，仍請當日複測。
 
-## 1. ID-Reality-vless-1598400047
-# 印尼 / VLESS+Reality+Vision / UDP / 小池，被集中打擊概率較低
+## 01 | SG | reality | funagfr.alixxplay.com:30322
+```yaml
 proxies:
-  - name: ID-Reality-vless-1598400047
+  - client-fingerprint: ios
+    flow: xtls-rprx-vision
+    name: vless-1645363438
+    network: tcp
+    port: 30322
+    reality-opts:
+      public-key: WIQGJ43m8ym13-VZ57mAtWY5vOwHMHEpnLV8caw2-kA
+      short-id: f38326f99edf
+    server: funagfr.alixxplay.com
+    servername: www.lamer.com.sg
+    tls: true
     type: vless
-    server: 103.172.197.3
-    port: 16006
-    uuid: f8c9d2a1-da40-4f90-b671-11772a0b13d6
+    udp: true
+    uuid: 57beeeb0-03fc-4fc9-94da-7604488a7134
+```
+
+## 02 | SG | reality | 54.169.200.246:41688
+```yaml
+proxies:
+  - client-fingerprint: safari
+    flow: xtls-rprx-vision
+    name: vless-1284366765
+    network: tcp
+    port: 41688
+    reality-opts:
+      public-key: srwIElIGTPs0kshpN1vvPsn4wixV_pLd56y_v9m0sTk
+      short-id: 7f342137c20387
+    server: 54.169.200.246
+    servername: www.intel.com
+    tls: true
+    type: vless
+    udp: true
+    uuid: 49c0aac1-5e05-4f04-b624-248fc59e03c4
+```
+
+## 03 | SG | reality | 217.217.254.126:2053
+```yaml
+proxies:
+  - client-fingerprint: chrome
+    name: vless-1343742641
     network: raw
-    tls: true
-    udp: true
-    flow: xtls-rprx-vision
+    port: 2053
+    reality-opts:
+      public-key: VzRjuHwcY-nLqkEIJS4S1CpButKc90Bh0gDbphyZ0Tw
+      short-id: 87829de0e2bb82cb
+    server: 217.217.254.126
     servername: www.cloudflare.com
-    client-fingerprint: firefox
-    reality-opts:
-      public-key: ll7JTP628PuBMZJvx6fuhGSmCRSURnReAetmhCEL8GU
-      short-id: ""
-
-## 2. DE-Reality-vless-1635944400
-# 德國 / VLESS+Reality+Vision / 443 / UDP
-proxies:
-  - name: DE-Reality-vless-1635944400
-    type: vless
-    server: 50.7.157.234
-    port: 443
-    uuid: 75c4c6b1-dc9a-4c59-9985-df8af6e9c707
-    network: tcp
     tls: true
-    udp: true
-    flow: xtls-rprx-vision
-    servername: edge-fr.extazy.net
-    client-fingerprint: random
-    reality-opts:
-      public-key: ygxQyBcJzlLgpSl3MCRDDiFET4TT-3wxa4GdG1obkCY
-      short-id: ba4b2afa9e7193ea
-
-## 3. NL-Reality-vless-1636626762
-# 荷蘭 / VLESS+Reality+Vision / 443 / UDP
-proxies:
-  - name: NL-Reality-vless-1636626762
     type: vless
-    server: nl3.freekeysh110.online
-    port: 443
-    uuid: 9b13807b-93e0-43c3-bd31-d0b0ed0c1d6b
-    network: tcp
-    tls: true
     udp: true
-    flow: xtls-rprx-vision
-    servername: nl3.freekeysh110.online
-    client-fingerprint: edge
-    reality-opts:
-      public-key: zVEDSKwQEIM6xRD7YEhJakteNI2xPK3xhhKulDo_vWg
-      short-id: b664d93e9d7a04f1
+    uuid: cb15cce9-73ed-4928-b38c-462f0732cbe9
+```
 
-## 4. NL-Hy2-1591550745
-# 荷蘭 / Hysteria2 / UDP 原生 / 有 SNI
+## 04 | SG | reality | 35.185.179.62:443
+```yaml
 proxies:
-  - name: NL-Hy2-1591550745
+  - client-fingerprint: chrome
+    name: vless-1634026390
+    network: tcp
+    port: 443
+    reality-opts:
+      public-key: hJCcmOf_ECJ3GUfHUjsgfcFKcgGb22H7cz_m_FvcVm4
+      short-id: eb97ce837da2f6ad
+    server: 35.185.179.62
+    servername: www.cloudflare.com
+    tls: true
+    type: vless
+    udp: true
+    uuid: 5567cac6-2a32-4318-83cd-7df3a9eebbd7
+```
+
+## 05 | SG | hysteria2 | abb12ec5-tmm5c0-tmg311-141tv.sg7.hyhuawei.com:443
+```yaml
+proxies:
+  - name: hysteria2-1623484118
+    password: bd77bfe8-e0f3-11ec-bd7c-f23c913c8d2b
+    port: 443
+    server: abb12ec5-tmm5c0-tmg311-141tv.sg7.hyhuawei.com
+    skip-cert-verify: true
+    sni: abb12ec5-tmm5c0-tmg311-141tv.sg7.hyhuawei.com
     type: hysteria2
-    server: 77.74.123.103
-    port: 8443
-    password: s0_sdK93x9wer_D02Lz9cvK3_Sa014Oakl_C2z
-    sni: grape-test-italy.dynuddns.net
-    skip-cert-verify: false
+```
 
-## 5. KR-Reality-vless-12945899
-# 韓國 / VLESS+Reality+Vision / UDP
+## 06 | SG | hysteria2 | 4b5512c3-tmm5c0-trnd2c-jjv2.sg7.hyhuawei.com:443
+```yaml
 proxies:
-  - name: KR-Reality-vless-12945899
-    type: vless
-    server: 3.39.4.109
-    port: 13672
-    uuid: 814bd064-544d-4255-a070-5705c03f6da9
-    network: tcp
-    tls: true
-    udp: true
+  - name: hysteria2-1623483800
+    password: 31676725-b0fd-fed2-c857-2da8ce5a6e4f
+    port: 443
+    server: 4b5512c3-tmm5c0-trnd2c-jjv2.sg7.hyhuawei.com
+    skip-cert-verify: true
+    sni: 4b5512c3-tmm5c0-trnd2c-jjv2.sg7.hyhuawei.com
+    type: hysteria2
+```
+
+## 07 | SG | hysteria2 | 3d62ffa2-tmm5c0-ttx5yr-1j0y6.sg7.hyhuawei.com:443
+```yaml
+proxies:
+  - name: hysteria2-1623484308
+    password: 1cce7df2-251c-11ee-9409-f23c9164ca5d
+    port: 443
+    server: 3d62ffa2-tmm5c0-ttx5yr-1j0y6.sg7.hyhuawei.com
+    skip-cert-verify: true
+    sni: 3d62ffa2-tmm5c0-ttx5yr-1j0y6.sg7.hyhuawei.com
+    type: hysteria2
+```
+
+## 08 | KR | reality | 3.39.4.109:13672
+```yaml
+proxies:
+  - client-fingerprint: firefox
     flow: xtls-rprx-vision
-    servername: www.apple.com
-    client-fingerprint: chrome
+    name: vless-48555241
+    network: tcp
+    port: 13672
     reality-opts:
       public-key: k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0
       short-id: 48050fab
-
-## 6. SG-Reality-vless-1629328487
-# 新加坡 / VLESS+Reality+Vision / 443 / UDP；亞洲備援，優先級低於上面五條
-proxies:
-  - name: SG-Reality-vless-1629328487
-    type: vless
-    server: 149.33.30.176
-    port: 443
-    uuid: 5fffad1b-10f0-41ff-abe7-e5a92696d5ef
-    network: tcp
-    tls: true
-    udp: true
-    flow: xtls-rprx-vision
+    server: 3.39.4.109
     servername: www.apple.com
-    client-fingerprint: firefox
+    tls: true
+    type: vless
+    udp: true
+    uuid: 814bd064-544d-4255-a070-5705c03f6da9
+```
+
+## 09 | KR | reality | 34.47.83.187:443
+```yaml
+proxies:
+  - client-fingerprint: chrome
+    name: vless-1645364923
+    network: tcp
+    port: 443
     reality-opts:
-      public-key: rk_iTiKEWYK02oF8lCIXrVlM7pWMSYX-Iuaz6Eat5lI
-      short-id: 4b26322b354bd74e
+      public-key: M0QKczb2MzOH45qDViIAbb9LPrVVyCp880D4HlwIKnA
+      short-id: 8685f8b4d9f4f51e
+    server: 34.47.83.187
+    servername: www.cloudflare.com
+    tls: true
+    type: vless
+    udp: true
+    uuid: cb2abff3-5fe6-4b5a-aa19-5739deb285b6
+```
+
+## 10 | KR | reality | 3.39.4.109:18967
+```yaml
+proxies:
+  - client-fingerprint: qq
+    flow: xtls-rprx-vision
+    name: vless-667136237
+    network: tcp
+    port: 18967
+    reality-opts:
+      public-key: k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0
+      short-id: 48050fab
+    server: 3.39.4.109
+    servername: www.apple.com
+    tls: true
+    type: vless
+    udp: true
+    uuid: 814bd064-544d-4255-a070-5705c03f6da9
+```
+
+## 11 | KR | hysteria2 | 152.70.237.123:2053
+```yaml
+proxies:
+  - name: hysteria2-1232696196
+    password: maintell
+    port: 2053
+    server: 152.70.237.123
+    skip-cert-verify: true
+    sni: bing.com
+    type: hysteria2
+```
+
+## 12 | KR | hysteria2 | 152.67.200.82:50160
+```yaml
+proxies:
+  - name: hysteria2-1111846155
+    password: 3d7634af8cb2c6cb4bac1c0efad8b43d
+    port: 50160
+    server: 152.67.200.82
+    skip-cert-verify: true
+    sni: google.com
+    type: hysteria2
+```
+
+## 13 | NL | reality | 130.12.242.106:443
+```yaml
+proxies:
+  - client-fingerprint: firefox
+    flow: xtls-rprx-vision
+    name: vless-84394360
+    network: tcp
+    port: 443
+    reality-opts:
+      public-key: vnjp7zIK2H3CGdjSis_79KXqS6IG-opmpbETPUD-EC8
+      short-id: 15affa0af66dfc79
+    server: 130.12.242.106
+    servername: deepl.com
+    tls: true
+    type: vless
+    udp: true
+    uuid: bc058e69-0444-4c7b-98da-bd67f0b143da
+```
+
+## 14 | NL | reality | 162.35.242.252:443
+```yaml
+proxies:
+  - client-fingerprint: chrome
+    name: vless-1595948408
+    network: tcp
+    port: 443
+    reality-opts:
+      public-key: ClG6fvriBTK8donGsTlKusJ0dwRCgVDDTAGzAtZzJDY
+      short-id: 82c2b7d5e70ff000
+    server: 162.35.242.252
+    servername: nl.aksay.pro
+    tls: true
+    type: vless
+    udp: true
+    uuid: e3e9805a-6c8b-4edd-8ee8-621df79806eb
+```
+
+## 15 | DE | hysteria2 | 162.249.127.141:8443
+```yaml
+proxies:
+  - name: hysteria2-1588408405
+    password: 9Me_Jx935gnHx13_Nx45M_NYXe037js_Be4z
+    port: 8443
+    server: 162.249.127.141
+    skip-cert-verify: true
+    sni: hop-germany-september.dynuddns.com
+    type: hysteria2
+```
+
+## 16 | DE | hysteria2 | 162.249.127.133:8443
+```yaml
+proxies:
+  - name: hysteria2-1537155765
+    password: 9Me_Jx935gnHx13_Nx45M_NYXe037js_Be4z
+    port: 8443
+    server: 162.249.127.133
+    skip-cert-verify: true
+    sni: hop-germany-september.dynuddns.com
+    type: hysteria2
+```
+
+## 17 | ID | reality | 103.172.197.2:29172
+```yaml
+proxies:
+  - client-fingerprint: chrome
+    flow: xtls-rprx-vision
+    name: vless-1568568958
+    network: tcp
+    port: 29172
+    reality-opts:
+      public-key: pff94OJwuKXnF7_3SJ8KKJuAN4GJtInBlR-kg-4mwzQ
+      short-id: ""
+    server: 103.172.197.2
+    servername: aws.amazon.com
+    tls: true
+    type: vless
+    udp: true
+    uuid: 3977434d-6a9b-4858-8ced-80326ba5e367
+```
+
+## 18 | IN | reality | 5.253.28.240:2443
+```yaml
+proxies:
+  - client-fingerprint: firefox
+    name: vless-1466572024
+    network: grpc
+    port: 2443
+    reality-opts:
+      public-key: h85e28MxBgNyT9d9cNeOLVtWfHq6cT_1_oxZOTajtTg
+      short-id: 92c32de179e5d908
+    server: 5.253.28.240
+    servername: deepl.com
+    tls: true
+    type: vless
+    udp: true
+    uuid: 5e679ccd-1586-4d5f-b87b-48251046cad8
+```
+
+## 19 | GB | reality | 23.81.34.204:443
+```yaml
+proxies:
+  - client-fingerprint: chrome
+    flow: xtls-rprx-vision
+    name: vless-1484508210
+    network: tcp
+    port: 443
+    reality-opts:
+      public-key: J_p_dxR8dIKaezk1_Ins5MZ7e4dqgrr2n9690vVuQ2s
+      short-id: b19b017d6f453873
+    server: 23.81.34.204
+    servername: speed.cloudflare.com
+    tls: true
+    type: vless
+    udp: true
+    uuid: 99955907-9070-46f0-a200-9c7a0b9d74fe
+```
+
+## 20 | KR | trojan | engaging-toucan.rooster465.autos:443
+```yaml
+proxies:
+  - name: trojan-1643520503
+    password: UX82473651
+    port: 443
+    server: engaging-toucan.rooster465.autos
+    skip-cert-verify: true
+    sni: engaging-toucan.rooster465.autos
+    type: trojan
+    udp: true
+```
+
