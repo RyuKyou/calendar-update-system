@@ -1,6 +1,24 @@
-https://raw.githubusercontent.com/Au1rxx/free-vpn-subscriptions/main/output/by-country/clash-DE.yaml | Clash YAML / 德國 / 小時級驗證，VLESS-Reality 佔比高，非重點封鎖區
-https://raw.githubusercontent.com/Au1rxx/free-vpn-subscriptions/main/output/by-country/clash-NL.yaml | Clash YAML / 荷蘭 / 含 Hysteria2 與 Reality，池子中等且持續刷新
-https://raw.githubusercontent.com/Au1rxx/free-vpn-subscriptions/main/output/by-country/clash-KR.yaml | Clash YAML / 韓國 / Reality+Hysteria2，UDP 可用，非台日美越泰
-https://raw.githubusercontent.com/Au1rxx/free-vpn-subscriptions/main/output/by-country/clash-ID.yaml | Clash YAML / 印尼 / 小池 Reality，被集中針對概率較低
-https://raw.githubusercontent.com/Au1rxx/free-vpn-subscriptions/main/output/by-country/clash-SG.yaml | Clash YAML / 新加坡 / Reality 備援，優先級低於歐亞小國
-https://node.nodefree.me/2026/10/20261003.yaml | Clash YAML / 2026-10-03 混合池 / 導入後請手動排除台灣日本美國越南泰國
+# daily sources 2026-10-04 16:05 CST
+# 格式: URL | 說明
+# 優先非 TW/JP/US/VN/TH 分片與長期更新的聚合源。聚合源內仍可能混有熱點地區，客戶端請手動排除。
+
+https://raw.githubusercontent.com/Au1rxx/free-vpn-subscriptions/main/output/by-country/clash-SG.yaml | Clash YAML / 新加坡 / Reality+Hysteria2 為主，每小時探活，優先
+https://raw.githubusercontent.com/Au1rxx/free-vpn-subscriptions/main/output/by-country/clash-KR.yaml | Clash YAML / 韓國 / Trojan+VLESS Reality+Hy2，每小時探活
+https://raw.githubusercontent.com/Au1rxx/free-vpn-subscriptions/main/output/by-country/clash-NL.yaml | Clash YAML / 荷蘭 / 歐洲出口，非熱點地區
+https://raw.githubusercontent.com/Au1rxx/free-vpn-subscriptions/main/output/by-country/clash-DE.yaml | Clash YAML / 德國 / 含 Hysteria2，歐洲備用
+https://raw.githubusercontent.com/Au1rxx/free-vpn-subscriptions/main/output/by-country/clash-CA.yaml | Clash YAML / 加拿大 / 避開美西熱點 IP 段的北美備線
+https://raw.githubusercontent.com/Au1rxx/free-vpn-subscriptions/main/output/by-country/clash-GB.yaml | Clash YAML / 英國 / 小池，適合輕度備用
+https://raw.githubusercontent.com/Au1rxx/free-vpn-subscriptions/main/output/by-country/clash-AE.yaml | Clash YAML / 阿聯酋 / 西亞，集中封堵概率較低
+https://raw.githubusercontent.com/Au1rxx/free-vpn-subscriptions/main/output/by-country/clash-ID.yaml | Clash YAML / 印尼 / 東南亞非熱點，Reality 為主
+https://raw.githubusercontent.com/Au1rxx/free-vpn-subscriptions/main/output/by-country/clash-IN.yaml | Clash YAML / 印度 / Reality，輕度使用
+https://raw.githubusercontent.com/Au1rxx/free-vpn-subscriptions/main/output/by-country/clash-FR.yaml | Clash YAML / 法國 / 歐洲小池備用
+https://raw.githubusercontent.com/Au1rxx/free-vpn-subscriptions/main/output/by-country/clash-LT.yaml | Clash YAML / 立陶宛 / 東歐小池，不易被集中針對
+https://raw.githubusercontent.com/Au1rxx/free-vpn-subscriptions/main/output/by-country/clash-ES.yaml | Clash YAML / 西班牙 / 南歐小池備用
+https://raw.githubusercontent.com/ovmvo/FreeSub/refs/heads/main/sub/permanent/mihomo.yaml | Clash/Mihomo YAML / 混合 / 固定永久鏈接，約 8 小時更新，壽命優於日更短鏈
+https://raw.githubusercontent.com/yy1588133/proxy-pool/main/clash.yaml | Clash YAML / 多來源聚合 / 約 6 小時更新，牆內可用 gh-proxy 鏡像；請排除 JP/US/TW
+https://gh-proxy.com/raw.githubusercontent.com/yy1588133/proxy-pool/main/clash.yaml | Clash YAML / 同上聚合的牆內鏡像 / 大陸環境優先用這條
+https://raw.githubusercontent.com/clashv2ray-hub/clashfree/refs/heads/main/clash.yaml | Clash YAML / 公益聚合 / 每小時更新，歷史倉庫更新勤
+https://raw.githubusercontent.com/danmaifu/mianfeijiedian/main/feed/clash-20261004.yaml | Clash YAML / 當日抓取 / 2026-10-04 日更，失效後改日期
+https://raw.githubusercontent.com/free-nodes/clashfree/main/clash.yaml | Clash YAML / free-nodes 公益 / 長期維護的聚合源
+https://raw.githubusercontent.com/ermaozi/get_subscribe/main/subscribe/clash.yml | Clash YAML / ermaozi 訂閱轉換 / 更新頻率較穩的老源
+https://raw.githubusercontent.com/Pawdroid/Free-servers/main/sub | Clash/混合 / Pawdroid / 約 6 小時更新的小池，作最後備用
