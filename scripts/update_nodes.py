@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 Fetch Clash YAML sources, TCP probe, dedupe.
-Only keep reachable nodes; hard-cap 256 (lowest latency first).
+Only keep reachable nodes; hard-cap 512 (lowest latency first).
 Hong Kong / Macau nodes are fully excluded.
 """
 
