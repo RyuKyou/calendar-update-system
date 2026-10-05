@@ -1,23 +1,24 @@
-# Daily YAML subscriptions | 2026-10-04 23:00 CST
-# Priority: longevity over peak speed. Avoided country shards: CN/TW/JP/HK/MO/VN/TH.
-# Free shared pools; treat as bridge until a private fallback is ready. Do not use for sensitive logins.
-https://raw.githubusercontent.com/Au1rxx/free-vpn-subscriptions/main/output/by-country/clash-US.yaml | Clash YAML / US / hourly HTTP-verified pool, Reality+VLESS heavy
-https://raw.githubusercontent.com/Au1rxx/free-vpn-subscriptions/main/output/by-country/clash-DE.yaml | Clash YAML / DE / hourly verified, EU exit less region-targeted
-https://raw.githubusercontent.com/Au1rxx/free-vpn-subscriptions/main/output/by-country/clash-NL.yaml | Clash YAML / NL / hourly verified, stable EU transit
-https://raw.githubusercontent.com/Au1rxx/free-vpn-subscriptions/main/output/by-country/clash-CA.yaml | Clash YAML / CA / hourly verified, non-East-Asia exit
-https://raw.githubusercontent.com/Au1rxx/free-vpn-subscriptions/main/output/by-country/clash-GB.yaml | Clash YAML / GB / hourly verified, small but less crowded shard
-https://raw.githubusercontent.com/Au1rxx/free-vpn-subscriptions/main/output/by-country/clash-FR.yaml | Clash YAML / FR / hourly verified, EU fallback
-https://raw.githubusercontent.com/Au1rxx/free-vpn-subscriptions/main/output/by-country/clash-KR.yaml | Clash YAML / KR / other-Asia, not in the high-risk block list
-https://raw.githubusercontent.com/Au1rxx/free-vpn-subscriptions/main/output/by-country/clash-SG.yaml | Clash YAML / SG / other-Asia, lower priority than EU/US but kept as regional spare
-https://raw.githubusercontent.com/Au1rxx/free-vpn-subscriptions/main/output/by-country/clash-IN.yaml | Clash YAML / IN / other-Asia, low targeting overlap
-https://raw.githubusercontent.com/Au1rxx/free-vpn-subscriptions/main/output/by-country/clash-AU.yaml | Clash YAML / AU / hourly verified, Oceania spare
-https://raw.githubusercontent.com/Au1rxx/free-vpn-subscriptions/main/output/by-country/clash-FI.yaml | Clash YAML / FI / hourly verified, low-profile EU shard
-https://raw.githubusercontent.com/Au1rxx/free-vpn-subscriptions/main/output/by-country/clash-SE.yaml | Clash YAML / SE / hourly verified, low-profile EU shard
-https://raw.githubusercontent.com/Au1rxx/free-vpn-subscriptions/main/output/by-country/clash-PL.yaml | Clash YAML / PL / hourly verified, EU spare
-https://raw.githubusercontent.com/0xRadikal/Free-v2ray-Configs/main/verified/clash.yaml | Clash YAML / mixed / 3-round proxied-204 verified, refresh ~15m
-https://raw.githubusercontent.com/0xRadikal/Free-v2ray-Configs/main/secure/clash.yaml | Clash YAML / mixed / verified plus forward-secrecy filter
-https://raw.githubusercontent.com/ovmvo/FreeSub/refs/heads/main/sub/permanent/mihomo.yaml | Mihomo YAML / mixed / fixed permanent URL, ~8h refresh
-https://raw.githubusercontent.com/yy1588133/proxy-pool/main/clash.yaml | Clash YAML / mixed / 6h aggregate, upstreams sampled from CN-side checks
-https://free-clash-v2ray.github.io/uploads/2026/10/0-20261004.yaml | Clash YAML / dated 2026-10-04 shard 0 / public crawl
-https://free-clash-v2ray.github.io/uploads/2026/10/1-20261004.yaml | Clash YAML / dated 2026-10-04 shard 1 / public crawl
-https://free-clash-v2ray.github.io/uploads/2026/10/2-20261004.yaml | Clash YAML / dated 2026-10-04 shard 2 / public crawl
+# Daily YAML subscriptions | 2026-10-05 23:01 CST
+# Priority: longevity > obfuscation > UDP. Avoid CN/TW/JP/HK/MO/VN/TH pools.
+# Free public pools rotate; prefer country shards and long-running aggregators.
+
+https://raw.githubusercontent.com/Au1rxx/free-vpn-subscriptions/main/output/by-country/clash-US.yaml | VLESS-Reality/Hy2/Trojan · 美國 · 每小時驗證存活
+https://raw.githubusercontent.com/Au1rxx/free-vpn-subscriptions/main/output/by-country/clash-NL.yaml | 混合協議 · 荷蘭 · 歐洲中轉，非高風險地區
+https://raw.githubusercontent.com/Au1rxx/free-vpn-subscriptions/main/output/by-country/clash-DE.yaml | 混合協議 · 德國 · 小池更不易被集中打
+https://raw.githubusercontent.com/Au1rxx/free-vpn-subscriptions/main/output/by-country/clash-CA.yaml | 混合協議 · 加拿大 · 每小時更新
+https://raw.githubusercontent.com/Au1rxx/free-vpn-subscriptions/main/output/by-country/clash-GB.yaml | 混合協議 · 英國 · 歐洲備份
+https://raw.githubusercontent.com/Au1rxx/free-vpn-subscriptions/main/output/by-country/clash-FR.yaml | 混合協議 · 法國 · 小池
+https://raw.githubusercontent.com/Au1rxx/free-vpn-subscriptions/main/output/by-country/clash-SG.yaml | 混合協議 · 新加坡 · 亞洲非日港台，優先級低於歐美
+https://raw.githubusercontent.com/Au1rxx/free-vpn-subscriptions/main/output/by-country/clash-KR.yaml | 混合協議 · 韓國 · 亞洲備份，非封鎖焦點
+https://raw.githubusercontent.com/peasoft/NoMoreWalls/master/list.meta.yml | Clash Meta · 長期維護聚合 · 含分流
+https://cdn.jsdelivr.net/gh/peasoft/NoMoreWalls@master/list.meta.yml | 同上 jsDelivr · 牆內較易拉取
+https://raw.githubusercontent.com/peasoft/NoMoreWalls/master/list.yml | Clash · NoMoreWalls 原版長期源
+https://raw.githubusercontent.com/yy1588133/proxy-pool/main/clash.yaml | 多源去重聚合 · 約6小時 · 含策略組
+https://raw.githubusercontent.com/ovmvo/FreeSub/refs/heads/main/sub/permanent/mihomo.yaml | 固定永久鏈 · Mihomo · 約8小時
+https://raw.githubusercontent.com/mfuu/v2ray/master/clash.yaml | 公益聚合 Clash · 歷史較久
+https://raw.githubusercontent.com/ripaojiedian/freenode/main/clash | 公開節點 Clash · 日更
+https://raw.githubusercontent.com/zhangkaiitugithub/passcro/main/speednodes.yaml | 測速篩選 YAML · 偏可用性
+https://raw.githubusercontent.com/ermaozi/get_subscribe/main/subscribe/clash.yml | 長期聚合訂閱 · Clash
+https://raw.githubusercontent.com/aiboboxx/v2rayfree/main/clash.yaml | 公益池 Clash · 日更
+https://raw.githubusercontent.com/Barabama/FreeNodes/master/merged.yaml | 爬蟲合併 YAML · 當日更新
+https://raw.githubusercontent.com/Au1rxx/free-vpn-subscriptions/main/output/clash.yaml | 全池 Clash · 含日港台，僅作備份輪轉
