@@ -21,7 +21,7 @@ import yaml
 VALID_NETWORKS = {"tcp", "udp", "ws", "http", "h2", "grpc", "raw"}
 CONNECT_TIMEOUT = 6.0
 MAX_WORKERS = 40
-MAX_NODES = 256
+MAX_NODES = 512
 
 # name / server markers for HK & Macau (case-insensitive)
 HK_MO_PATTERNS = [
