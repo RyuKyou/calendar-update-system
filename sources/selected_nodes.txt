@@ -1,85 +1,222 @@
-# Selected single nodes | 2026-10-04 23:00 CST
-# Filter: Reality / Hysteria2 first, UDP-capable transports preferred, YouTube-1080p class only if the pool already passed a proxied 204.
-# Region rule: dropped CN/TW/JP/HK/MO/VN/TH. Kept KR/SG only as other-Asia spares.
-# Lifetime note: public free nodes are shared. These are the least region-targeted shape available tonight, not a 3-day guarantee.
-# Import the share URI directly (v2rayN / Hiddify / sing-box). Fields below are the connection essentials.
+# Selected single nodes | 2026-10-05 23:01 CST
+# Source: Au1rxx US hourly-verified pool (HTTP-forward checked). Public free nodes; treat as bridge until a private fallback is up.
+# Bias: Reality / Hysteria2, UDP, non CN/TW/JP/HK/MO/VN/TH. Quota unknown; light use only.
 
-01 | VLESS+Reality+Vision+TCP | US | UDP via xray
-vless://949d278e-6d98-4014-84e9-59f1c6c93e0e@137.175.82.40:30556?security=reality&type=tcp&sni=www.lovelive-anime.jp&fp=chrome&flow=xtls-rprx-vision&sid=d082f567&pbk=EcmNQqZxyW4GCEQF-7nH54w3qgBkLzsfqFSgafGjB0E#US-Reality-01
-server=137.175.82.40 port=30556 uuid=949d278e-6d98-4014-84e9-59f1c6c93e0e sni=www.lovelive-anime.jp pbk=EcmNQqZxyW4GCEQF-7nH54w3qgBkLzsfqFSgafGjB0E sid=d082f567 fp=chrome flow=xtls-rprx-vision
+## 01 US VLESS-Reality TCP vision
+name: vless-1538407570
+type: vless
+server: 23.95.222.127
+port: 8443
+uuid: 352ff568-f971-4613-bf48-92997a5d44ed
+network: tcp
+tls: true
+udp: true
+flow: xtls-rprx-vision
+client-fingerprint: random
+servername: www.apple.com
+reality-opts:
+  public-key: ribQDOlZ69PzvZ1EDF0EcmMvbq_T5RQrVRBSGUU2riU
+  short-id: 35cd899f8de04801
 
-02 | VLESS+Reality+Vision+TCP | DE | UDP via xray
-vless://87fd990d-ca93-440a-bbd4-e8281c4a0910@31.77.109.35:443?security=reality&encryption=none&pbk=SPyieysl8w1lo950icthB72kn_ElyJXkpCdKqmnjGEY&headerType=none&fp=chrome&type=tcp&flow=xtls-rprx-vision&sni=d3-de1.cloud-cdn.xyz&sid=494afdc75f8c2fa8#DE-Reality-02
-server=31.77.109.35 port=443 uuid=87fd990d-ca93-440a-bbd4-e8281c4a0910 sni=d3-de1.cloud-cdn.xyz pbk=SPyieysl8w1lo950icthB72kn_ElyJXkpCdKqmnjGEY sid=494afdc75f8c2fa8 fp=chrome flow=xtls-rprx-vision
+## 02 US VLESS-Reality TCP vision
+name: vless-944037331
+type: vless
+server: 51.81.203.63
+port: 443
+uuid: see pool if rotated; fingerprint chrome
+network: tcp
+tls: true
+udp: true
+flow: xtls-rprx-vision
+client-fingerprint: chrome
+servername: www.icloud.com
+reality-opts:
+  public-key: nqwCf6oW49tEtmQ0EzxigZ0uu1pg0E30CS54G40Iti0
+  short-id: 4477382ff6d3d41c
+note: uuid not fully captured in slice; re-import from clash-US.yaml name vless-944037331 if handshake fails
 
-03 | VLESS+Reality+Vision+TCP | NL | UDP via xray
-vless://48ff2b70-e180-582f-8866-d9a2edeed5f5@51.158.206.34:23576?security=reality&type=tcp&sni=fuck.rkn&fp=chrome&flow=xtls-rprx-vision&sid=01&pbk=1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s#NL-Reality-03
-server=51.158.206.34 port=23576 uuid=48ff2b70-e180-582f-8866-d9a2edeed5f5 sni=fuck.rkn pbk=1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s sid=01 fp=chrome flow=xtls-rprx-vision
+## 03 US VLESS-Reality TCP vision
+name: vless-1494839211
+type: vless
+server: 137.175.82.40
+port: 30556
+uuid: 949d278e-6d98-4014-84e9-59f1c6c93e0e
+network: tcp
+tls: true
+udp: true
+flow: xtls-rprx-vision
+client-fingerprint: ios
+servername: www.lovelive-anime.jp
+reality-opts:
+  public-key: EcmNQqZxyW4GCEQF-7nH54w3qgBkLzsfqFSgafGjB0E
+  short-id: d082f567
+note: SNI is a JP domain, server IP is US pool
 
-04 | VLESS+Reality+TCP | CA | UDP via xray
-vless://dc620cd6-a9d8-4a0f-8f18-006b895db77e@66.70.179.198:2053?security=reality&encryption=none&pbk=k4l6TxwkBbx9DhZAFpByq5rfCWFSgyOex3f_eFe9CWU&headerType=none&type=tcp&sni=www.cloudflare.com&sid=83f8317a948bb769#CA-Reality-04
-server=66.70.179.198 port=2053 uuid=dc620cd6-a9d8-4a0f-8f18-006b895db77e sni=www.cloudflare.com pbk=k4l6TxwkBbx9DhZAFpByq5rfCWFSgyOex3f_eFe9CWU sid=83f8317a948bb769
+## 04 US Hysteria2 UDP
+name: hysteria2-855509014
+type: hysteria2
+server: 155.248.209.237
+port: 33333
+password: bce6c821-200d-421f-bf3d-7159e5246ea0
+sni: 155.248.209.237
+skip-cert-verify: true
 
-05 | VLESS+Reality+Vision+TCP | GB | UDP via xray
-vless://99955907-9070-46f0-a200-9c7a0b9d74fe@23.81.34.204:443?security=reality&type=tcp&sni=speed.cloudflare.com&fp=chrome&flow=xtls-rprx-vision&sid=b19b017d6f453873&pbk=J_p_dxR8dIKaezk1_Ins5MZ7e4dqgrr2n9690vVuQ2s&encryption=none#GB-Reality-05
-server=23.81.34.204 port=443 uuid=99955907-9070-46f0-a200-9c7a0b9d74fe sni=speed.cloudflare.com pbk=J_p_dxR8dIKaezk1_Ins5MZ7e4dqgrr2n9690vVuQ2s sid=b19b017d6f453873 fp=chrome flow=xtls-rprx-vision
+## 05 US Hysteria2 UDP
+name: hysteria2-1505682842
+type: hysteria2
+server: 107.149.159.190
+port: 8443
+password: 488b2611852407f03a681927cb91804b
+sni: cf.shiranyu.xyz
+skip-cert-verify: false
 
-06 | VLESS+Reality+Vision+RAW+xudp | KR | other-Asia spare, explicit xudp
-vless://581cb8c3-dadb-4e10-a18b-5e79bfe7bd93@47.80.14.8:443?security=reality&type=raw&packetEncoding=xudp&sni=www.samsung.com&fp=chrome&flow=xtls-rprx-vision&sid=71110d3f7ef57760&pbk=OBIHAXdhfYJ0PWsZjy3QYPRjTfMQlvjmBsTf1CT671w#KR-Reality-06
-server=47.80.14.8 port=443 uuid=581cb8c3-dadb-4e10-a18b-5e79bfe7bd93 sni=www.samsung.com pbk=OBIHAXdhfYJ0PWsZjy3QYPRjTfMQlvjmBsTf1CT671w sid=71110d3f7ef57760 fp=chrome flow=xtls-rprx-vision packetEncoding=xudp
+## 06 US Hysteria2 UDP
+name: hysteria2-1604107043
+type: hysteria2
+server: 129.213.91.185
+port: 35013
+password: 4291c983-c520-46ac-82cc-48f14bef573f
+sni: www.bing.com
+skip-cert-verify: true
 
-07 | VLESS+Reality+Vision+TCP | SG | other-Asia spare
-vless://2d1ad594-80a4-4bfb-87a6-038e39701f51@146.235.16.130:19825?encryption=none&flow=xtls-rprx-vision&pbk=GvvkY8xYb9QjvwvzYq_uNC4tOGd0DCxRnz6770-xgkI&security=reality&sid=6ba85179e30d4fc2&sni=sg2-8sb.6121999.dpdns.org&type=tcp#SG-Reality-07
-server=146.235.16.130 port=19825 uuid=2d1ad594-80a4-4bfb-87a6-038e39701f51 sni=sg2-8sb.6121999.dpdns.org pbk=GvvkY8xYb9QjvwvzYq_uNC4tOGd0DCxRnz6770-xgkI sid=6ba85179e30d4fc2 fp=chrome flow=xtls-rprx-vision
+## 07 US Hysteria2 UDP
+name: hysteria2-1507123858
+type: hysteria2
+server: 144.24.46.175
+port: 8443
+password: pbgLTkd5276SN1sZ
+sni: www.bing.com
+skip-cert-verify: true
 
-08 | VLESS+Reality+Vision+TCP | AE | low-profile exit
-vless://31fd2fde-ca69-450e-8c03-eaad819b06b9@146.70.102.82:443?security=reality&type=tcp&sni=www.datadoghq.com&fp=firefox&flow=xtls-rprx-vision&sid=002fb4ec7b3088cc&pbk=GDer6NQYXdbccrFI0tLn2671PjCvrcSy0R7TKY8vG1k#AE-Reality-08
-server=146.70.102.82 port=443 uuid=31fd2fde-ca69-450e-8c03-eaad819b06b9 sni=www.datadoghq.com pbk=GDer6NQYXdbccrFI0tLn2671PjCvrcSy0R7TKY8vG1k sid=002fb4ec7b3088cc fp=firefox flow=xtls-rprx-vision
+## 08 US Hysteria2 domain
+name: hysteria2-561697888
+type: hysteria2
+server: hy2.561891.xyz
+port: 44356
+password: dongtaiwang.com
+skip-cert-verify: true
 
-09 | VLESS+Reality+TCP | FR | UDP via xray
-vless://9f0baff8-bdee-4de9-9515-bcc4932b41fa@194.76.154.31:40443?security=reality&encryption=none&sni=deepl.com&fp=chrome&pbk=MN6QjUHDUXyteMdR-cDna89fq4X3qgQhLnNqTtRUbBQ&sid=a8ae&spx=/&type=tcp&headerType=none#FR-Reality-09
-server=194.76.154.31 port=40443 uuid=9f0baff8-bdee-4de9-9515-bcc4932b41fa sni=deepl.com pbk=MN6QjUHDUXyteMdR-cDna89fq4X3qgQhLnNqTtRUbBQ sid=a8ae fp=chrome
+## 09 US Hysteria2 UDP
+name: hysteria2-918221107
+type: hysteria2
+server: 163.192.14.135
+port: 50160
+password: 099830134df5ac3a04a4b21d39b8c395
+sni: speedtest.tinkoff.ru
+skip-cert-verify: true
 
-10 | VLESS+Reality+Vision+TCP | IE | UDP via xray
-vless://c916acaa-c87e-4c18-b8b6-5b2966cdb52a@198.13.142.208:443?encryption=none&type=tcp&flow=xtls-rprx-vision&security=reality&sni=36911.lumariqis.com&fp=chrome&pbk=JDUHaCWFryv7gFDYFcjcbdZiMJ7ympfTJGB8JXDwEnU&sid=798467fa#IE-Reality-10
-server=198.13.142.208 port=443 uuid=c916acaa-c87e-4c18-b8b6-5b2966cdb52a sni=36911.lumariqis.com pbk=JDUHaCWFryv7gFDYFcjcbdZiMJ7ympfTJGB8JXDwEnU sid=798467fa fp=chrome flow=xtls-rprx-vision
+## 10 US Trojan TLS UDP
+name: trojan-1653307125
+type: trojan
+server: ultimate-jaguar.rooster465.autos
+port: 443
+password: UX82473651
+sni: ultimate-jaguar.rooster465.autos
+skip-cert-verify: true
+udp: true
 
-11 | VLESS+Reality+Vision+TCP | SE | UDP via xray
-vless://87fd990d-ca93-440a-bbd4-e8281c4a0910@132.243.231.4:443?security=reality&encryption=none&pbk=zWDvtTWK-cWWwHDMHMXcOpQy4k3EKp7yw-5e0wTZAUM&headerType=none&fp=firefox&spx=/&type=tcp&flow=xtls-rprx-vision&sni=d3-se1.cloud-cdn.xyz&sid=5efa80b939612291#SE-Reality-11
-server=132.243.231.4 port=443 uuid=87fd990d-ca93-440a-bbd4-e8281c4a0910 sni=d3-se1.cloud-cdn.xyz pbk=zWDvtTWK-cWWwHDMHMXcOpQy4k3EKp7yw-5e0wTZAUM sid=5efa80b939612291 fp=firefox flow=xtls-rprx-vision
+## 11 US VMess WS TLS
+name: vmess-1571778600
+type: vmess
+server: 167.17.68.89
+port: 443
+uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
+alterId: 0
+cipher: auto
+network: ws
+tls: true
+udp: true
+servername: vspeedfast.org
+skip-cert-verify: false
 
-12 | VLESS+Reality+Vision+TCP | PL | UDP via xray
-vless://0afdcc75-e449-418d-8eac-c5b657363443@2.27.211.129:443?type=tcp&security=reality&flow=xtls-rprx-vision&fp=safari&pbk=-YpJ_Xav7sUkd77sEZjg58Pn6dnNpj5himuUS-OFDh4&sid=fd44fcf1c3afa0af&sni=www.icloud.com#PL-Reality-12
-server=2.27.211.129 port=443 uuid=0afdcc75-e449-418d-8eac-c5b657363443 sni=www.icloud.com pbk=-YpJ_Xav7sUkd77sEZjg58Pn6dnNpj5himuUS-OFDh4 sid=fd44fcf1c3afa0af fp=safari flow=xtls-rprx-vision
+## 12 US VMess TCP UDP
+name: vmess-485686545
+type: vmess
+server: 67.220.95.3
+port: 18000
+uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
+alterId: 0
+cipher: auto
+network: raw
+udp: true
 
-13 | VLESS+Reality+TCP | ZA | low-profile exit
-vless://4758aee6-6d1a-4306-b460-2398b5af4e35@34.35.174.85:443?fp=chrome&pbk=dcox8XXfkOCmKn3kgrloj6wY5o1_0brJOi2mczYmAT4&security=reality&sid=5ced03e42cc31aab&sni=www.cloudflare.com#ZA-Reality-13
-server=34.35.174.85 port=443 uuid=4758aee6-6d1a-4306-b460-2398b5af4e35 sni=www.cloudflare.com pbk=dcox8XXfkOCmKn3kgrloj6wY5o1_0brJOi2mczYmAT4 sid=5ced03e42cc31aab fp=chrome
+## 13 US Shadowsocks UDP
+name: shadowsocks-154
+type: ss
+server: 108.181.118.10
+port: 8388
+cipher: chacha20-ietf-poly1305
+password: G5p6ww4o67HB
+udp: true
 
-14 | VLESS+Reality+Vision+TCP | US | port 443, CDN-like SNI
-vless://975fc322-6e38-434b-a53c-d39fed49b9a9@47.251.108.158:443?security=reality&type=tcp&sni=www.cloudflare.com&fp=chrome&flow=xtls-rprx-vision&sid=896f52ba2cfca903&pbk=SmgYcFIvvFXW3xh4gvGhIJuQsaZvWkAylcjB6TEddEs#US-Reality-14
-server=47.251.108.158 port=443 uuid=975fc322-6e38-434b-a53c-d39fed49b9a9 sni=www.cloudflare.com pbk=SmgYcFIvvFXW3xh4gvGhIJuQsaZvWkAylcjB6TEddEs sid=896f52ba2cfca903 fp=chrome flow=xtls-rprx-vision
+## 14 US Shadowsocks UDP
+name: shadowsocks-1668129452
+type: ss
+server: 144.48.105.68
+port: 11659
+cipher: aes-128-gcm
+password: 14a1e160827dc81ecdd9d04e3e0a5593
+udp: true
 
-15 | VLESS+Reality+Vision | US | raw/tcp, tesla SNI
-vless://56a1b253-cde4-490f-9c5e-09a523882bdd@172.233.139.46:53734?security=reality&type=raw&sni=www.tesla.com&fp=firefox&flow=xtls-rprx-vision&sid=a56d7d8da977f860&pbk=JAG5rl6KEt7KAV0y8Z2x6orWHymCXRSX49SkEnEftWU&encryption=none#US-Reality-15
-server=172.233.139.46 port=53734 uuid=56a1b253-cde4-490f-9c5e-09a523882bdd sni=www.tesla.com pbk=JAG5rl6KEt7KAV0y8Z2x6orWHymCXRSX49SkEnEftWU sid=a56d7d8da977f860 fp=firefox flow=xtls-rprx-vision
+## 15 US Shadowsocks UDP
+name: shadowsocks-687923666
+type: ss
+server: 15.204.246.132
+port: 7307
+cipher: aes-256-gcm
+password: FoOiGlkAA9yPEGP
+udp: true
 
-16 | VLESS+Reality+Vision+TCP | US | nvidia SNI
-vless://7ab29f89-6eef-4171-b232-fc4f580ad31b@172.235.43.210:53957?security=reality&type=tcp&sni=www.nvidia.com&fp=edge&flow=xtls-rprx-vision&sid=44e82fd7b97b14&pbk=XUHlbk5VH5z4E2wxZBhlpLZ33qevyQgqU7dheRDgoGQ&encryption=none#US-Reality-16
-server=172.235.43.210 port=53957 uuid=7ab29f89-6eef-4171-b232-fc4f580ad31b sni=www.nvidia.com pbk=XUHlbk5VH5z4E2wxZBhlpLZ33qevyQgqU7dheRDgoGQ sid=44e82fd7b97b14 fp=edge flow=xtls-rprx-vision
+## 16 CA Shadowsocks UDP (NoMoreWalls)
+name: ss-CA-1588
+type: ss
+server: 64.74.163.69
+port: 18766
+cipher: aes-128-gcm
+password: 4efe1af272e7292139b889f6a63ee071
+udp: true
 
-17 | Hysteria2+salamander | DE | native UDP, obfs
-hysteria2://17537e14543a478b9c7a558870d814f3@mhzedir.qzz.io:51791?security=tls&obfs=salamander&obfs-password=7y0p9k93w7ryw8tz&insecure=0&sni=mhzedir.qzz.io#DE-Hy2-17
-server=mhzedir.qzz.io port=51791 auth=17537e14543a478b9c7a558870d814f3 sni=mhzedir.qzz.io obfs=salamander obfs-password=7y0p9k93w7ryw8tz insecure=0
+## 17 DE Trojan gRPC
+name: trojan-DE-cloud-cdn
+type: trojan
+server: 31.77.168.35
+port: 443
+password: MDYVt6HgSqB7d537GPQXjk6Rk0E4RxWo
+network: grpc
+sni: d3-de2.cloud-cdn.xyz
+skip-cert-verify: true
+udp: true
+grpc-opts:
+  grpc-service-name: ajv
 
-18 | Hysteria2 | FR | native UDP
-hysteria2://2561c6b1a3069d3170b4d7e1ecc08c65@paris.nerabotaet.com:443?insecure=1&sni=paris.nerabotaet.com#FR-Hy2-18
-server=paris.nerabotaet.com port=443 auth=2561c6b1a3069d3170b4d7e1ecc08c65 sni=paris.nerabotaet.com insecure=1
+## 18 CZ Trojan gRPC
+name: CZE-musicc
+type: trojan
+server: cz-musicc.moritech.net
+port: 443
+password: f8b-U5TxjNRYKLvU0Js_6YeMCdj_82km
+network: grpc
+skip-cert-verify: true
+udp: true
+grpc-opts:
+  grpc-service-name: grpcbeast
+alpn:
+  - h2
 
-19 | Hysteria2+salamander | SE | native UDP, obfs
-hysteria2://617z9r1mbzbm1t5z@giftcard.gisora.ir:52000?security=tls&obfs=salamander&obfs-password=09p333uviv2qal0y&insecure=0&sni=giftcard.gisora.ir#SE-Hy2-19
-server=giftcard.gisora.ir port=52000 auth=617z9r1mbzbm1t5z sni=giftcard.gisora.ir obfs=salamander obfs-password=09p333uviv2qal0y insecure=0
+## 19 FI Shadowsocks UDP
+name: ss-FI-1203
+type: ss
+server: 185.103.110.68
+port: 18283
+cipher: aes-128-gcm
+password: f9300a9bf39ae0347c3a3bfbc4dd7754
+udp: true
 
-20 | Hysteria2 | US | native UDP, bandwidth hint 10/50
-hy2://qQe1z5kU8kN6SlKnDt9Ru3Qp@54.213.89.22:443?insecure=1&sni=vk.com&allowInsecure=1&upmbps=10&downmbps=50#US-Hy2-20
-server=54.213.89.22 port=443 auth=qQe1z5kU8kN6SlKnDt9Ru3Qp sni=vk.com insecure=1
+## 20 EE Trojan
+name: trojan-EE
+type: trojan
+server: 109.206.241.10
+port: 449
+password: oiiaB38ywjEHCWRs_O_a_1113_Il_KeyyyHop_Bes1
+sni: russiapower.accesscam.org
+udp: true
