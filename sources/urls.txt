@@ -1,24 +1,24 @@
-# daily sources 2026-10-06 23:00 CST
+# daily sources 2026-10-07 23:05 CST
 # YAML subscriptions. Longevity first. Avoid CN/TW/JP/HK/MO/VN/TH as primary pools.
-# Country shards below are HTTP-verified hourly feeds; still public/shared, use lightly.
+# Country shards are HTTP-verified hourly feeds; public/shared, light use only.
 
 https://raw.githubusercontent.com/Au1rxx/free-vpn-subscriptions/main/output/by-country/clash-US.yaml | VLESS/Hy2/Trojan mixed | US | hourly HTTP-verified, largest non-risk pool
 https://raw.githubusercontent.com/Au1rxx/free-vpn-subscriptions/main/output/by-country/clash-NL.yaml | VLESS/Hy2/SS | NL | hourly verified, EU transit, lower targeted risk
 https://raw.githubusercontent.com/Au1rxx/free-vpn-subscriptions/main/output/by-country/clash-DE.yaml | VLESS/Trojan/Hy2 | DE | hourly verified, stable EU
 https://raw.githubusercontent.com/Au1rxx/free-vpn-subscriptions/main/output/by-country/clash-FR.yaml | VLESS/Hy2 | FR | hourly verified, EU
-https://raw.githubusercontent.com/Au1rxx/free-vpn-subscriptions/main/output/by-country/clash-GB.yaml | VLESS/VMess | GB | hourly verified, smaller pool
-https://raw.githubusercontent.com/Au1rxx/free-vpn-subscriptions/main/output/by-country/clash-CA.yaml | VLESS/VMess | CA | hourly verified, NA backup
-https://raw.githubusercontent.com/Au1rxx/free-vpn-subscriptions/main/output/by-country/clash-CH.yaml | Hy2 | CH | hourly verified, small but less crowded
-https://raw.githubusercontent.com/Au1rxx/free-vpn-subscriptions/main/output/by-country/clash-FI.yaml | Hy2 | FI | hourly verified, low-profile EU
-https://raw.githubusercontent.com/Au1rxx/free-vpn-subscriptions/main/output/by-country/clash-PL.yaml | mixed | PL | hourly verified, EU east backup
-https://raw.githubusercontent.com/Au1rxx/free-vpn-subscriptions/main/output/by-country/clash-RO.yaml | Hy2/mixed | RO | hourly verified, lower targeting
-https://raw.githubusercontent.com/Au1rxx/free-vpn-subscriptions/main/output/by-country/clash-SG.yaml | VLESS/Trojan/Hy2 | SG | other Asia only; use after EU/NA, not primary
+https://raw.githubusercontent.com/Au1rxx/free-vpn-subscriptions/main/output/by-country/clash-GB.yaml | VLESS Reality | GB | hourly verified, smaller pool
+https://raw.githubusercontent.com/Au1rxx/free-vpn-subscriptions/main/output/by-country/clash-CA.yaml | VLESS Reality | CA | hourly verified, NA backup
+https://raw.githubusercontent.com/Au1rxx/free-vpn-subscriptions/main/output/by-country/clash-CH.yaml | VLESS/Hy2 | CH | hourly verified, small but less crowded
+https://raw.githubusercontent.com/Au1rxx/free-vpn-subscriptions/main/output/by-country/clash-FI.yaml | VLESS Reality | FI | hourly verified, low-profile EU
+https://raw.githubusercontent.com/Au1rxx/free-vpn-subscriptions/main/output/by-country/clash-RO.yaml | VLESS/Hy2 | RO | hourly verified, lower targeting
 https://raw.githubusercontent.com/Au1rxx/free-vpn-subscriptions/main/output/by-country/clash-EE.yaml | mixed | EE | hourly verified, low-profile EU
-https://raw.githubusercontent.com/yy1588133/proxy-pool/main/clash.yaml | aggregated Clash | multi | 6h refresh, wall-sampled upstreams
+https://raw.githubusercontent.com/Au1rxx/free-vpn-subscriptions/main/output/by-country/clash-SG.yaml | VLESS/Trojan/Hy2 | SG | other Asia only; secondary, not primary
+https://raw.githubusercontent.com/yy1588133/proxy-pool/main/clash.yaml | aggregated Clash | multi | 6h refresh, wall-sampled upstreams, filter risk regions
 https://raw.githubusercontent.com/peasoft/NoMoreWalls/master/list.meta.yml | Clash Meta | multi | long-running public merge, filter JP/HK/TW
 https://raw.githubusercontent.com/peasoft/NoMoreWalls/master/list.yml | Clash | multi | same project classic yaml
 https://raw.githubusercontent.com/chengaopan/AutoMergePublicNodes/master/list.meta.yml | Clash Meta merge | multi | daily auto-merge, longevity via refresh
 https://raw.githubusercontent.com/chengaopan/AutoMergePublicNodes/master/list.yml | Clash merge | multi | classic yaml twin
-https://raw.githubusercontent.com/Ruk1ng001/freeSub/main/clash.yaml | freeSub Clash | multi | frequently updated public pool
-https://raw.githubusercontent.com/ermaozi/get_subscribe/main/subscribe/clash.yml | get_subscribe Clash | multi | older aggregator, still 200, backup only
+https://raw.githubusercontent.com/Ruk1ng001/freeSub/main/clash.yaml | freeSub Clash | multi | updated 2026-10-07 22:00, filter risk regions
+https://raw.githubusercontent.com/ovmvo/FreeSub/refs/heads/main/sub/permanent/mihomo.yaml | mihomo permanent | multi | fixed URL, 8h refresh, updated 2026-10-07
+https://raw.githubusercontent.com/ermaozi/get_subscribe/main/subscribe/clash.yml | get_subscribe Clash | multi | older aggregator, backup only
 https://raw.githubusercontent.com/mahdibland/V2RayAggregator/master/Eternity.yml | Eternity Clash | multi | long-lived aggregator, filter risk regions
