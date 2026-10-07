@@ -1,24 +1,24 @@
 # selected single-node configs
-# generated 2026-10-06 23:00 CST
+# generated 2026-10-07 23:05 CST
 # priority: longevity > obfuscation > UDP > security > 1080p-capable
 # excluded priority regions: CN TW JP HK MO VN TH
-# source: Au1rxx free-vpn-subscriptions HTTP-verified public nodes, same-day snapshot
-# note: public free nodes can die within hours; prefer Reality (TCP) first, Hysteria2 as UDP backup
+# source: Au1rxx by-country clash shards, HTTP-verified same-day snapshot
+# note: public free nodes can die within hours; Reality TCP first, Hysteria2 as UDP backup
 # quota unknown; treat as light use, roughly under 10G / 3 days if still alive
 
-## 01 US vless 154.21.94.246:443
+## 01 US vless 154.17.1.248:443
 ```yaml
 proxies:
 - client-fingerprint: firefox
   flow: xtls-rprx-vision
-  name: vless-1684028078
+  name: vless-1688937338
   network: tcp
   port: 443
   reality-opts:
-    public-key: C8Qz7kuyHo9O0oBV9W7ltzL8aPLPzdb1vvt3UkJjtF0
-    short-id: ea29b7b15bb24d49
-  server: 154.21.94.246
-  servername: frost.sigy.me
+    public-key: vQKxWxae-2n1Bz9MGUiFQMVk0-D7X5f3QVgaTJ5wBkM
+    short-id: 0271bcb88c1551ae
+  server: 154.17.1.248
+  servername: gust.sigy.me
   tls: true
   type: vless
   udp: true
@@ -26,144 +26,27 @@ proxies:
 ```
 # Reality | US | UDP=yes | public shared, light use only
 
-## 02 NL vless nl5.freekeysh110.online:443
-```yaml
-proxies:
-- client-fingerprint: edge
-  flow: xtls-rprx-vision
-  name: vless-1683785823
-  network: tcp
-  port: 443
-  reality-opts:
-    public-key: sgPREsDFJUchKawgXgFGEM4YBjTDur0rgD2GuQmZXzA
-    short-id: 04b9f0b2470fae16
-  server: nl5.freekeysh110.online
-  servername: nl5.freekeysh110.online
-  tls: true
-  type: vless
-  udp: true
-  uuid: 8f25f14c-0ecd-464c-ba3f-05d7c6f0aea5
-```
-# Reality | NL | UDP=yes | public shared, light use only
-
-## 03 DE vless de12.h1cloud.net:25095
-```yaml
-proxies:
-- client-fingerprint: chrome
-  name: vless-1682241028
-  network: grpc
-  port: 25095
-  reality-opts:
-    public-key: pvXuNe35fkSbA-CVmh6_b3ADAXLY8tBONjnwE8HM8yY
-    short-id: 397c81bed08f3f78
-  server: de12.h1cloud.net
-  servername: www.chip.de
-  tls: true
-  type: vless
-  udp: true
-  uuid: 95003356-20f9-4c84-a21f-2f9c1fc285eb
-```
-# Reality | DE | UDP=yes | public shared, light use only
-
-## 04 FR vless 51.77.217.70:2053
-```yaml
-proxies:
-- client-fingerprint: random
-  name: vless-1310987480
-  network: tcp
-  port: 2053
-  reality-opts:
-    public-key: g63cT3uI0Y5iUtj3m__RYz7nmR1eIK4AYikdnZCl63w
-    short-id: bfe58beb41f1d09f
-  server: 51.77.217.70
-  servername: www.apple.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: bf16ee0c-8b3c-41e4-ab3a-8b48033c404e
-```
-# Reality | FR | UDP=yes | public shared, light use only
-
-## 05 GB vless 23.81.34.204:443
-```yaml
-proxies:
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: vless-1484508210
-  network: tcp
-  port: 443
-  reality-opts:
-    public-key: J_p_dxR8dIKaezk1_Ins5MZ7e4dqgrr2n9690vVuQ2s
-    short-id: b19b017d6f453873
-  server: 23.81.34.204
-  servername: speed.cloudflare.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: 99955907-9070-46f0-a200-9c7a0b9d74fe
-```
-# Reality | GB | UDP=yes | public shared, light use only
-
-## 06 CA vless 66.70.179.198:2053
-```yaml
-proxies:
-- client-fingerprint: random
-  name: vless-1275300277
-  network: tcp
-  port: 2053
-  reality-opts:
-    public-key: k4l6TxwkBbx9DhZAFpByq5rfCWFSgyOex3f_eFe9CWU
-    short-id: 83f8317a948bb769
-  server: 66.70.179.198
-  servername: www.cloudflare.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: dc620cd6-a9d8-4a0f-8f18-006b895db77e
-```
-# Reality | CA | UDP=yes | public shared, light use only
-
-## 07 SG vless 54.169.200.246:41688
-```yaml
-proxies:
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: vless-1014378462
-  network: tcp
-  port: 41688
-  reality-opts:
-    public-key: srwIElIGTPs0kshpN1vvPsn4wixV_pLd56y_v9m0sTk
-    short-id: 7f342137c20387
-  server: 54.169.200.246
-  servername: www.intel.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: 49c0aac1-5e05-4f04-b624-248fc59e03c4
-```
-# Reality | SG | UDP=yes | public shared, light use only
-
-## 08 US vless 137.175.82.40:30556
+## 02 US vless 51.81.203.63:443
 ```yaml
 proxies:
 - client-fingerprint: firefox
   flow: xtls-rprx-vision
-  name: vless-1497617517
+  name: vless-946181279
   network: tcp
-  port: 30556
+  port: 443
   reality-opts:
-    public-key: EcmNQqZxyW4GCEQF-7nH54w3qgBkLzsfqFSgafGjB0E
-    short-id: d082f567
-  server: 137.175.82.40
-  servername: www.lovelive-anime.jp
+    public-key: nqwCf6oW49tEtmQ0EzxigZ0uu1pg0E30CS54G40Iti0
+    short-id: 4477382ff6d3d41c
+  server: 51.81.203.63
+  servername: www.icloud.com
   tls: true
   type: vless
   udp: true
-  uuid: 949d278e-6d98-4014-84e9-59f1c6c93e0e
+  uuid: cb2dbb6a-a1ea-4023-9ace-6466cee57241
 ```
 # Reality | US | UDP=yes | public shared, light use only
 
-## 09 NL vless 31.77.114.114:443
+## 03 NL vless 31.77.114.114:443
 ```yaml
 proxies:
 - client-fingerprint: random
@@ -183,165 +66,300 @@ proxies:
 ```
 # Reality | NL | UDP=yes | public shared, light use only
 
-## 10 DE vless 31.77.161.15:443
+## 04 NL vless 130.12.242.106:443
+```yaml
+proxies:
+- client-fingerprint: firefox
+  flow: xtls-rprx-vision
+  name: vless-83842750
+  network: tcp
+  port: 443
+  reality-opts:
+    public-key: vnjp7zIK2H3CGdjSis_79KXqS6IG-opmpbETPUD-EC8
+    short-id: 15affa0af66dfc79
+  server: 130.12.242.106
+  servername: deepl.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: bc058e69-0444-4c7b-98da-bd67f0b143da
+```
+# Reality | NL | UDP=yes | public shared, light use only
+
+## 05 DE vless 144.31.62.242:443
+```yaml
+proxies:
+- client-fingerprint: firefox
+  flow: xtls-rprx-vision
+  name: vless-1666092134
+  network: tcp
+  port: 443
+  reality-opts:
+    public-key: 0-or5ogGhYbBgsVSrSC2Fhxyp2BN97Y9pqIdg61Qd08
+    short-id: 4be4110078ebed4a
+  server: 144.31.62.242
+  servername: de2.srv.vbuste.ru
+  tls: true
+  type: vless
+  udp: true
+  uuid: 318c935d-c195-41d3-99ad-9bbcfdab3386
+```
+# Reality | DE | UDP=yes | public shared, light use only
+
+## 06 DE vless 2.27.69.128:443
+```yaml
+proxies:
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: vless-1670155830
+  network: tcp
+  port: 443
+  reality-opts:
+    public-key: RTG-xTU5UuKTRrkk8_COe04GiUWrqrSdt9mqSak_XEc
+    short-id: e696e744
+  server: 2.27.69.128
+  servername: addons.mozilla.org
+  tls: true
+  type: vless
+  udp: true
+  uuid: df53b6c2-8005-475c-9eb9-74e1be785dc8
+```
+# Reality | DE | UDP=yes | public shared, light use only
+
+## 07 FR vless 195.154.118.134:443
 ```yaml
 proxies:
 - client-fingerprint: random
   flow: xtls-rprx-vision
-  name: vless-1439899360
+  name: vless-1397731731
   network: tcp
   port: 443
   reality-opts:
-    public-key: fNfokzklCF4l_c8k8PciOCjm5ecNoF_sNLjEtaO-xzI
-    short-id: db04ce8bdb8900f1
-  server: 31.77.161.15
-  servername: nvidia.com
+    public-key: YhT24GkuI1r7Fwo8pxIYH3CmTtbRlYs5X7fWtYp3vTY
+    short-id: 05f4f85fdc6c1379
+  server: 195.154.118.134
+  servername: w-mebel.pro
   tls: true
   type: vless
   udp: true
-  uuid: adc11f30-e4cb-4985-bf5e-f9ded69c019f
-```
-# Reality | DE | UDP=yes | public shared, light use only
-
-## 11 FR vless 152.228.139.33:51671
-```yaml
-proxies:
-- client-fingerprint: chrome
-  name: vless-1432809197
-  network: grpc
-  port: 51671
-  reality-opts:
-    public-key: -5PowNUY37Pi01YKO9fjRTrum1m_9n6XauaPDpmOJzU
-    short-id: 2fed44d8c59f7e71
-  server: 152.228.139.33
-  servername: www.sony.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: 75cc7568-abb0-46a8-88be-8137d3c647d4
+  uuid: 3c48b5f5-7766-4896-874e-b3ba1860e83a
 ```
 # Reality | FR | UDP=yes | public shared, light use only
 
-## 12 SG vless 217.217.254.126:2053
+## 08 FR vless 157.228.155.238:443
 ```yaml
 proxies:
 - client-fingerprint: chrome
-  name: vless-1510329151
+  flow: xtls-rprx-vision
+  name: vless-1691248007
   network: tcp
-  port: 2053
+  port: 443
   reality-opts:
-    public-key: VzRjuHwcY-nLqkEIJS4S1CpButKc90Bh0gDbphyZ0Tw
-    short-id: 87829de0e2bb82cb
-  server: 217.217.254.126
+    public-key: 5BDht3tAZdKEKpJymGlRK9JugOnieA-kMSWz_0FoE0I
+    short-id: 6f76ad09
+  server: 157.228.155.238
+  servername: addons.mozilla.org
+  tls: true
+  type: vless
+  udp: true
+  uuid: 4d852af3-a121-41aa-9aed-4ca40a6f7b4d
+```
+# Reality | FR | UDP=yes | public shared, light use only
+
+## 09 GB vless 23.81.34.204:443
+```yaml
+proxies:
+- client-fingerprint: firefox
+  flow: xtls-rprx-vision
+  name: vless-1479678804
+  network: tcp
+  port: 443
+  reality-opts:
+    public-key: J_p_dxR8dIKaezk1_Ins5MZ7e4dqgrr2n9690vVuQ2s
+    short-id: b19b017d6f453873
+  server: 23.81.34.204
+  servername: speed.cloudflare.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: 99955907-9070-46f0-a200-9c7a0b9d74fe
+```
+# Reality | GB | UDP=yes | public shared, light use only
+
+## 10 GB vless 193.202.113.5:443
+```yaml
+proxies:
+- client-fingerprint: firefox
+  flow: xtls-rprx-vision
+  name: vless-1699358958
+  network: tcp
+  port: 443
+  reality-opts:
+    public-key: 65d6SIYIqiX-SN4vx_BnNiQJ8Lnr0HAgUKoT7WgWRgI
+    short-id: ee169e93d3c277a1
+  server: 193.202.113.5
+  servername: edge-uk2.mystatic-cdn.ru
+  tls: true
+  type: vless
+  udp: true
+  uuid: 6f756511-7fc3-41ba-874b-8cdc8e1b225f
+```
+# Reality | GB | UDP=yes | public shared, light use only
+
+## 11 FI vless 95.85.224.51:443
+```yaml
+proxies:
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: vless-281649961
+  network: tcp
+  port: 443
+  reality-opts:
+    public-key: WWeAHWUVD-phmnjNJ823cer0c4CMIbEs08AhsuEZmDc
+    short-id: a696de84963656de
+  server: 95.85.224.51
+  servername: max.ru
+  tls: true
+  type: vless
+  udp: true
+  uuid: 342ab7e4-5a89-0001-8809-304120d4aa83
+```
+# Reality | FI | UDP=yes | public shared, light use only
+
+## 12 RO vless 46.28.67.55:443
+```yaml
+proxies:
+- client-fingerprint: random
+  flow: xtls-rprx-vision
+  name: vless-1223729872
+  network: tcp
+  port: 443
+  reality-opts:
+    public-key: i2dJ1_XGDpp50qpEclh6SWSWkxt4B0t2hi2qOVQbeSU
+    short-id: d06d78e974491b6e
+  server: 46.28.67.55
   servername: www.cloudflare.com
   tls: true
   type: vless
   udp: true
-  uuid: cb15cce9-73ed-4928-b38c-462f0732cbe9
+  uuid: d1a6a033-fdbd-46a6-a177-3370ba042b9f
 ```
-# Reality | SG | UDP=yes | public shared, light use only
-# geo label from feed may drift; IP is not in the avoided region list
+# Reality | RO | UDP=yes | public shared, light use only
 
-## 13 US hysteria2 163.192.14.135:50160
+## 13 CA vless 209.200.246.148:443
 ```yaml
 proxies:
-- name: hysteria2-918220947
-  password: 099830134df5ac3a04a4b21d39b8c395
-  port: 50160
-  server: 163.192.14.135
+- client-fingerprint: firefox
+  flow: xtls-rprx-vision
+  name: vless-1003491287
+  network: tcp
+  port: 443
+  reality-opts:
+    public-key: uTmb-ytXsx8p0fkBz7A76SHpWk7_oVutIA4LGTE8BQk
+    short-id: f98843107912e782
+  server: 209.200.246.148
+  servername: www.cloudflare.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: ca52e2b6-fb9f-4dac-b6dc-49da9923f251
+```
+# Reality | CA | UDP=yes | source network was raw, written as tcp | public shared, light use only
+
+## 14 FI vless 132.243.231.4:443
+```yaml
+proxies:
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: vless-1699940823
+  network: tcp
+  port: 443
+  reality-opts:
+    public-key: zWDvtTWK-cWWwHDMHMXcOpQy4k3EKp7yw-5e0wTZAUM
+    short-id: 5efa80b939612291
+  server: 132.243.231.4
+  servername: d3-se1.cloud-cdn.xyz
+  tls: true
+  type: vless
+  udp: true
+  uuid: 87fd990d-ca93-440a-bbd4-e8281c4a0910
+```
+# Reality | FI | UDP=yes | source network was raw, written as tcp | public shared, light use only
+
+## 15 US hysteria2 144.24.46.175:8443
+```yaml
+proxies:
+- name: hysteria2-1537386177
+  password: pbgLTkd5276SN1sZ
+  port: 8443
+  server: 144.24.46.175
   skip-cert-verify: true
-  sni: css.rbxcdn.com
+  sni: 144.24.46.175
   type: hysteria2
 ```
 # Hysteria2/QUIC | US | UDP=yes | public shared, light use only
 
-## 14 NL hysteria2 77.74.123.105:8443
+## 16 NL hysteria2 77.74.123.106:8443
 ```yaml
 proxies:
-- name: hysteria2-1666096000
+- name: hysteria2-1670786124
   password: s0_sdK93x9wer_D02Lz9cvK3_Sa014Oakl_C2z
   port: 8443
-  server: 77.74.123.105
+  server: 77.74.123.106
   skip-cert-verify: true
   sni: grape-test-italy.dynuddns.net
   type: hysteria2
 ```
 # Hysteria2/QUIC | NL | UDP=yes | public shared, light use only
 
-## 15 DE hysteria2 8.211.15.144:8443
+## 17 DE hysteria2 cz.h2.cleanersaz.help:443
 ```yaml
 proxies:
-- name: hysteria2-1511520015
-  password: fc04RSUu3TfONQnlbKTwvA
-  port: 8443
-  server: 8.211.15.144
+- name: hysteria2-1698581218
+  password: c-E0lamG8OnEj9M_uh3oJPmIXqYIVGctO-NHELF1TmNYs7Jl
+  port: 443
+  server: cz.h2.cleanersaz.help
   skip-cert-verify: true
-  sni: www.cloudflare.com
+  sni: cz.h2.cleanersaz.help
   type: hysteria2
 ```
 # Hysteria2/QUIC | DE | UDP=yes | public shared, light use only
 
-## 16 FR hysteria2 62.210.7.139:60111
+## 18 FR hysteria2 13.36.234.11:443
 ```yaml
 proxies:
-- name: hysteria2-650659597
-  password: github.com/Alvin9999-newpac/fanqiang
-  port: 60111
-  server: 62.210.7.139
+- name: hysteria2-1697122862
+  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
+  port: 443
+  server: 13.36.234.11
   skip-cert-verify: true
-  sni: 62.210.7.139
+  sni: vpn-fr-001.fastervpn.world
   type: hysteria2
 ```
 # Hysteria2/QUIC | FR | UDP=yes | public shared, light use only
 
-## 17 CH hysteria2 82.38.64.229:8443
+## 19 CH hysteria2 82.38.64.235:8443
 ```yaml
 proxies:
-- name: hysteria2-1393931791
+- name: hysteria2-1520000103
   password: we9_I1893UFj3149xbr1_k8qvJ8734ic_Mx82gH
   port: 8443
-  server: 82.38.64.229
+  server: 82.38.64.235
   skip-cert-verify: true
   sni: hopp-swizland-new.mysynology.net
   type: hysteria2
 ```
 # Hysteria2/QUIC | CH | UDP=yes | public shared, light use only
 
-## 18 FI hysteria2 144.31.212.253:443
+## 20 RO hysteria2 103.126.51.51:8443
 ```yaml
 proxies:
-- name: hysteria2-1552278389
-  password: cf83b611-6cba-4535-adcb-8da06c6a9146
-  port: 443
-  server: 144.31.212.253
-  skip-cert-verify: true
-  sni: vps155-edge.kermemehori.ru
-  type: hysteria2
-```
-# Hysteria2/QUIC | FI | UDP=yes | public shared, light use only
-
-## 19 RO hysteria2 103.126.51.46:8443
-```yaml
-proxies:
-- name: hysteria2-1655741633
+- name: hysteria2-1693973156
   password: Jz40_mIJ934vK0_k9D3jz92_Vx48q_GHa1_sz0
   port: 8443
-  server: 103.126.51.46
-  skip-cert-verify: false
+  server: 103.126.51.51
+  skip-cert-verify: true
   sni: ocober-romania-new.yyuyy.com
   type: hysteria2
 ```
 # Hysteria2/QUIC | RO | UDP=yes | public shared, light use only
-
-## 20 SG hysteria2 138.2.73.238:50160
-```yaml
-proxies:
-- name: hysteria2-1063751359
-  password: f87376e17da040ed04c9665ce8972930
-  port: 50160
-  server: 138.2.73.238
-  skip-cert-verify: true
-  sni: 138.2.73.238
-  type: hysteria2
-```
-# Hysteria2/QUIC | SG | UDP=yes | public shared, light use only
