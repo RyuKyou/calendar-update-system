@@ -1,31 +1,24 @@
-# sources — prefer US/CA/NO/SG pools; hy2/vless/trojan heavy feeds
-# HK/MO filtered in script. Public free nodes only.
+# sources — longevity first; avoid CN/TW/HK/MO/VN/TH focused feeds
+# refreshed 2026-10-08 23:05 CST
+# YAML subscriptions only. Prefer US/CA/EU; KR/SG kept as secondary Asia.
 
-# --- fixed / classic ---
-https://gitlab.com/free9999/ipupdate/-/raw/master/backup/img/1/2/ipp/quick/1/config.yaml | fixed-gitlab-ipupdate
+https://gitlab.com/free9999/ipupdate/-/raw/master/backup/img/1/2/ipp/quick/1/config.yaml | fixed-gitlab-ipupdate long-lived mirror
 https://www.67867867.xyz/Alvin9999/PAC/refs/heads/master/backup/img/1/2/ipp/quick/1/config.yaml | fixed-alvin-mirror
-
-# --- Au1rxx hourly (country + protocol + full) ---
-https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/clash.yaml | Au1rxx full hourly verified
-https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/by-country/clash-US.yaml | Au1rxx US
-https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/by-country/clash-CA.yaml | Au1rxx CA
-https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/by-country/clash-SG.yaml | Au1rxx SG
-https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/by-country/clash-NL.yaml | Au1rxx NL
-https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/by-country/clash-DE.yaml | Au1rxx DE
-https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/by-country/clash-FR.yaml | Au1rxx FR
-https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/by-country/clash-GB.yaml | Au1rxx GB
-https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/by-country/clash-CH.yaml | Au1rxx CH
-https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/by-country/clash-FI.yaml | Au1rxx FI
-https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/protocol/hysteria2/clash-0001.yaml | Au1rxx hy2 shard
-
-# --- other active aggregators ---
-https://raw.githubusercontent.com/ovmvo/FreeSub/refs/heads/main/sub/permanent/mihomo.yaml | ovmvo mihomo permanent 8h
+https://raw.githubusercontent.com/Au1rxx/free-vpn-subscriptions/main/output/clash.yaml | Au1rxx full hourly HTTP-verified
+https://raw.githubusercontent.com/Au1rxx/free-vpn-subscriptions/main/output/by-country/clash-US.yaml | Au1rxx US Reality-heavy
+https://raw.githubusercontent.com/Au1rxx/free-vpn-subscriptions/main/output/by-country/clash-CA.yaml | Au1rxx CA
+https://raw.githubusercontent.com/Au1rxx/free-vpn-subscriptions/main/output/by-country/clash-NL.yaml | Au1rxx NL
+https://raw.githubusercontent.com/Au1rxx/free-vpn-subscriptions/main/output/by-country/clash-DE.yaml | Au1rxx DE
+https://raw.githubusercontent.com/Au1rxx/free-vpn-subscriptions/main/output/by-country/clash-FR.yaml | Au1rxx FR
+https://raw.githubusercontent.com/Au1rxx/free-vpn-subscriptions/main/output/by-country/clash-GB.yaml | Au1rxx GB
+https://raw.githubusercontent.com/Au1rxx/free-vpn-subscriptions/main/output/by-country/clash-FI.yaml | Au1rxx FI
+https://raw.githubusercontent.com/Au1rxx/free-vpn-subscriptions/main/output/by-country/clash-CH.yaml | Au1rxx CH
+https://raw.githubusercontent.com/Au1rxx/free-vpn-subscriptions/main/output/by-country/clash-KR.yaml | Au1rxx KR secondary Asia
+https://raw.githubusercontent.com/Au1rxx/free-vpn-subscriptions/main/output/by-country/clash-SG.yaml | Au1rxx SG secondary Asia
+https://raw.githubusercontent.com/Au1rxx/free-vpn-subscriptions/main/output/protocol/hysteria2/clash-0001.yaml | Au1rxx Hysteria2 shard
+https://raw.githubusercontent.com/ovmvo/FreeSub/refs/heads/main/sub/permanent/mihomo.yaml | ovmvo permanent mihomo
 https://raw.githubusercontent.com/snakem982/proxypool/main/source/clash-meta-2.yaml | snakem982 proxypool meta
-https://raw.githubusercontent.com/yy1588133/proxy-pool/main/clash.yaml | yy1588133 proxy-pool 6h
-https://raw.githubusercontent.com/peasoft/NoMoreWalls/master/list.meta.yml | NoMoreWalls meta
-https://raw.githubusercontent.com/peasoft/NoMoreWalls/master/list.yml | NoMoreWalls classic
+https://raw.githubusercontent.com/peasoft/NoMoreWalls/master/list.meta.yml | NoMoreWalls meta long-running
 https://raw.githubusercontent.com/chengaopan/AutoMergePublicNodes/master/list.meta.yml | AutoMerge meta
-https://raw.githubusercontent.com/chengaopan/AutoMergePublicNodes/master/list.yml | AutoMerge classic
-https://raw.githubusercontent.com/Ruk1ng001/freeSub/main/clash.yaml | Ruk1ng001 freeSub
-https://raw.githubusercontent.com/mahdibland/V2RayAggregator/master/Eternity.yml | V2RayAggregator Eternity
-https://raw.githubusercontent.com/ermaozi/get_subscribe/main/subscribe/clash.yml | ermaozi backup
+https://raw.githubusercontent.com/Ruk1ng001/freeSub/main/clash.yaml | Ruk1ng001 freeSub daily
+https://raw.githubusercontent.com/wzmwayne/proxy-node/main/output/aio/clash.yaml | wzmwayne AIO tested 4h
