@@ -1,12 +1,12 @@
-updated=2026-10-08T09:29:54.969533+00:00
+updated=2026-10-08T09:30:18.728872+00:00
 sources=20
 raw_after_hk_mo_filter=5100
 dedup=1771
-reachable=1349
+reachable=1352
 reachable_anytls=25
-reachable_preferred_region=281
+reachable_preferred_region=285
 final_count=512
 final_anytls=25
-final_preferred_region=281
+final_preferred_region=285
 hard_cap=512
 policy=prefer_US_CA_NO_SG_then_anytls_only_reachable_no_HK_MO
