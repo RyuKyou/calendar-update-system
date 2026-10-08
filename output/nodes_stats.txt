@@ -1,8 +1,8 @@
-updated=2026-10-08T10:00:06.528180+00:00
+updated=2026-10-08T10:00:08.419887+00:00
 sources=23
 raw_after_hk_mo_filter=7466
 dedup=1989
-reachable=1473
+reachable=1470
 final_count=512
 hard_cap=512
 types={'anytls': 26, 'vless': 249, 'trojan': 7, 'http': 145, 'socks5': 4, 'ss': 27, 'vmess': 14, 'hysteria2': 40}
