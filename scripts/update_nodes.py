@@ -22,7 +22,7 @@ import yaml
 VALID_NETWORKS = {"tcp", "udp", "ws", "http", "h2", "grpc", "raw"}
 CONNECT_TIMEOUT = 6.0
 MAX_WORKERS = 40
-MAX_NODES = 256
+MAX_NODES = 512
 PRIORITY_TYPES = ("anytls",)  # lower rank = higher priority
 
 HK_MO_PATTERNS = [
