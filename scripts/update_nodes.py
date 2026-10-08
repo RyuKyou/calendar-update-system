@@ -1,8 +1,11 @@
 #!/usr/bin/env python3
 """
 Fetch Clash YAML sources, TCP probe, dedupe.
-Only keep reachable nodes; hard-cap MAX_NODES.
-Priority: anytls first (by latency), then other types by latency.
+Only keep reachable nodes; hard-cap MAX_NODES (512).
+Priority:
+  1) preferred regions: US, Canada, Norway, Singapore
+  2) anytls protocol
+  3) lower TCP latency
 Hong Kong / Macau nodes are fully excluded.
 """
 
@@ -41,6 +44,32 @@ HK_MO_PATTERNS = [
 ]
 HK_MO_RE = re.compile("|".join(HK_MO_PATTERNS), re.IGNORECASE)
 
+# preferred regions (lower rank = higher priority)
+REGION_PATTERNS: list[tuple[int, re.Pattern[str]]] = [
+    # US
+    (0, re.compile(
+        r"美国|美國|\busa\b|\bus\b|united\s*states|california|los\s*angeles|"
+        r"san\s*francisco|new\s*york|seattle|chicago|dallas|miami|phoenix|"
+        r"\bla\b|\bny\b|\bsfo\b|\bsjc\b|\biad\b|\bord\b|\bdfw\b|🇺🇸",
+        re.I,
+    )),
+    # Canada
+    (1, re.compile(
+        r"加拿大|\bcanada\b|\bca\b|toronto|vancouver|montreal|🇨🇦",
+        re.I,
+    )),
+    # Norway
+    (2, re.compile(
+        r"挪威|\bnorway\b|\bno\b|oslo|bergen|🇳🇴",
+        re.I,
+    )),
+    # Singapore
+    (3, re.compile(
+        r"新加坡|\bsingapore\b|\bsg\b|\bsin\b|🇸🇬",
+        re.I,
+    )),
+]
+
 
 def is_hk_or_mo(p: dict) -> bool:
     blob = " ".join(
@@ -48,6 +77,17 @@ def is_hk_or_mo(p: dict) -> bool:
         for k in ("name", "server", "servername", "sni", "host")
     )
     return bool(HK_MO_RE.search(blob))
+
+
+def region_priority(p: dict) -> int:
+    blob = " ".join(
+        str(p.get(k) or "")
+        for k in ("name", "server", "servername", "sni", "host")
+    )
+    for rank, pat in REGION_PATTERNS:
+        if pat.search(blob):
+            return rank
+    return 100  # non-preferred regions
 
 
 def type_priority(p: dict) -> int:
@@ -156,8 +196,8 @@ def probe_alive(proxies: list[dict]) -> list[tuple[dict, float]]:
             if ms is None:
                 continue
             alive.append((p, ms))
-    # anytls first, then by latency
-    alive.sort(key=lambda x: (type_priority(x[0]), x[1]))
+    # region -> anytls -> latency
+    alive.sort(key=lambda x: (region_priority(x[0]), type_priority(x[0]), x[1]))
     return alive
 
 
@@ -165,10 +205,14 @@ def build_config(selected: list[tuple[dict, float]], cap: int) -> str:
     seen_names: set[str] = set()
     unique: list[dict] = []
     anytls_n = 0
+    preferred_n = 0
     for p, ms in selected:
         p = dict(p)
         base = p["name"]
         t = str(p.get("type") or "").lower()
+        pref = region_priority(p) < 100
+        if pref:
+            preferred_n += 1
         if t == "anytls":
             anytls_n += 1
             label = f"[anytls] {base} | {ms:.0f}ms"
@@ -216,7 +260,8 @@ def build_config(selected: list[tuple[dict, float]], cap: int) -> str:
         raise RuntimeError(f"BUG: {n} > hard_cap {cap}")
     header = (
         f"# Ryukyou nodes | updated {now} | count={n} | hard_cap={cap} | "
-        f"anytls={anytls_n} | only_reachable | no_HK_MO | prefer_anytls\n"
+        f"anytls={anytls_n} | preferred_region={preferred_n} | "
+        f"only_reachable | no_HK_MO | prefer_US_CA_NO_SG+anytls\n"
     )
     return header + yaml.dump(cfg, allow_unicode=True, sort_keys=False, default_flow_style=False)
 
@@ -259,11 +304,13 @@ def main():
     print(f"Probing TCP (timeout={CONNECT_TIMEOUT}s) ...")
     alive = probe_alive(deduped)
     anytls_alive = sum(1 for p, _ in alive if str(p.get("type", "")).lower() == "anytls")
-    print(f"Reachable: {len(alive)} (anytls={anytls_alive})")
+    pref_alive = sum(1 for p, _ in alive if region_priority(p) < 100)
+    print(f"Reachable: {len(alive)} (anytls={anytls_alive}, preferred_region={pref_alive})")
 
     selected = alive[:cap]
     sel_any = sum(1 for p, _ in selected if str(p.get("type", "")).lower() == "anytls")
-    print(f"Final: {len(selected)} (anytls={sel_any}, hard_cap={cap})")
+    sel_pref = sum(1 for p, _ in selected if region_priority(p) < 100)
+    print(f"Final: {len(selected)} (anytls={sel_any}, preferred={sel_pref}, hard_cap={cap})")
 
     out_dir = Path(args.output_dir)
     out_dir.mkdir(parents=True, exist_ok=True)
@@ -278,10 +325,12 @@ def main():
         f"dedup={len(deduped)}\n"
         f"reachable={len(alive)}\n"
         f"reachable_anytls={anytls_alive}\n"
+        f"reachable_preferred_region={pref_alive}\n"
         f"final_count={len(selected)}\n"
         f"final_anytls={sel_any}\n"
+        f"final_preferred_region={sel_pref}\n"
         f"hard_cap={cap}\n"
-        f"policy=prefer_anytls_only_reachable_no_HK_MO\n",
+        f"policy=prefer_US_CA_NO_SG_then_anytls_only_reachable_no_HK_MO\n",
         encoding="utf-8",
     )
     print("Done.")
