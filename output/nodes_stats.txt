@@ -1,9 +1,9 @@
-updated=2026-10-08T09:59:50.027577+00:00
-sources=20
-raw_after_hk_mo_filter=5150
-dedup=1780
-reachable=1354
+updated=2026-10-08T10:00:06.528180+00:00
+sources=23
+raw_after_hk_mo_filter=7466
+dedup=1989
+reachable=1473
 final_count=512
 hard_cap=512
-types={'anytls': 25, 'hysteria2': 18, 'vless': 275, 'trojan': 6, 'http': 144, 'socks5': 4, 'ss': 26, 'vmess': 14}
+types={'anytls': 26, 'vless': 249, 'trojan': 7, 'http': 145, 'socks5': 4, 'ss': 27, 'vmess': 14, 'hysteria2': 40}
 policy=region_then_hy2_vless_trojan_ss_vmess_ssr_last
