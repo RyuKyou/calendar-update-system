@@ -2,10 +2,12 @@
 """
 Fetch Clash YAML sources, TCP probe, dedupe.
 Only keep reachable nodes; hard-cap MAX_NODES (512).
-Priority:
+
+Priority order:
   1) preferred regions: US, Canada, Norway, Singapore
-  2) anytls protocol
+  2) protocol: anytls > hysteria2/hysteria > vless > trojan > others > ss/vmess/ssr (last)
   3) lower TCP latency
+
 Hong Kong / Macau nodes are fully excluded.
 """
 
@@ -26,7 +28,29 @@ VALID_NETWORKS = {"tcp", "udp", "ws", "http", "h2", "grpc", "raw"}
 CONNECT_TIMEOUT = 6.0
 MAX_WORKERS = 40
 MAX_NODES = 512
-PRIORITY_TYPES = ("anytls",)  # lower rank = higher priority
+
+# lower rank = higher priority
+# hy2 / hysteria / vless / trojan preferred; ss / vmess / ssr last
+PROTOCOL_RANK = {
+    "anytls": 0,
+    "hysteria2": 1,
+    "hysteria": 1,
+    "hy2": 1,
+    "vless": 2,
+    "trojan": 3,
+    "tuic": 4,
+    "wireguard": 5,
+    "http": 6,
+    "socks5": 6,
+    "socks": 6,
+    # heavily blocked / last resort
+    "ss": 20,
+    "shadowsocks": 20,
+    "ssr": 20,
+    "shadowsocksr": 20,
+    "vmess": 20,
+}
+DEFAULT_PROTOCOL_RANK = 10  # unknown protocols middle
 
 HK_MO_PATTERNS = [
     r"香港",
@@ -44,26 +68,21 @@ HK_MO_PATTERNS = [
 ]
 HK_MO_RE = re.compile("|".join(HK_MO_PATTERNS), re.IGNORECASE)
 
-# preferred regions (lower rank = higher priority)
 REGION_PATTERNS: list[tuple[int, re.Pattern[str]]] = [
-    # US
     (0, re.compile(
         r"美国|美國|\busa\b|\bus\b|united\s*states|california|los\s*angeles|"
         r"san\s*francisco|new\s*york|seattle|chicago|dallas|miami|phoenix|"
         r"\bla\b|\bny\b|\bsfo\b|\bsjc\b|\biad\b|\bord\b|\bdfw\b|🇺🇸",
         re.I,
     )),
-    # Canada
     (1, re.compile(
         r"加拿大|\bcanada\b|\bca\b|toronto|vancouver|montreal|🇨🇦",
         re.I,
     )),
-    # Norway
     (2, re.compile(
         r"挪威|\bnorway\b|\bno\b|oslo|bergen|🇳🇴",
         re.I,
     )),
-    # Singapore
     (3, re.compile(
         r"新加坡|\bsingapore\b|\bsg\b|\bsin\b|🇸🇬",
         re.I,
@@ -87,15 +106,12 @@ def region_priority(p: dict) -> int:
     for rank, pat in REGION_PATTERNS:
         if pat.search(blob):
             return rank
-    return 100  # non-preferred regions
+    return 100
 
 
 def type_priority(p: dict) -> int:
     t = str(p.get("type") or "").strip().lower()
-    try:
-        return PRIORITY_TYPES.index(t)
-    except ValueError:
-        return len(PRIORITY_TYPES)
+    return PROTOCOL_RANK.get(t, DEFAULT_PROTOCOL_RANK)
 
 
 def load_urls(path: Path) -> list[tuple[str, str]]:
@@ -196,7 +212,7 @@ def probe_alive(proxies: list[dict]) -> list[tuple[dict, float]]:
             if ms is None:
                 continue
             alive.append((p, ms))
-    # region -> anytls -> latency
+    # region -> protocol -> latency
     alive.sort(key=lambda x: (region_priority(x[0]), type_priority(x[0]), x[1]))
     return alive
 
@@ -204,18 +220,28 @@ def probe_alive(proxies: list[dict]) -> list[tuple[dict, float]]:
 def build_config(selected: list[tuple[dict, float]], cap: int) -> str:
     seen_names: set[str] = set()
     unique: list[dict] = []
-    anytls_n = 0
-    preferred_n = 0
+    stats = {"anytls": 0, "hy2": 0, "vless": 0, "trojan": 0, "low": 0, "preferred": 0}
     for p, ms in selected:
         p = dict(p)
         base = p["name"]
         t = str(p.get("type") or "").lower()
-        pref = region_priority(p) < 100
-        if pref:
-            preferred_n += 1
+        if region_priority(p) < 100:
+            stats["preferred"] += 1
         if t == "anytls":
-            anytls_n += 1
+            stats["anytls"] += 1
             label = f"[anytls] {base} | {ms:.0f}ms"
+        elif t in ("hysteria2", "hysteria", "hy2"):
+            stats["hy2"] += 1
+            label = f"[hy2] {base} | {ms:.0f}ms"
+        elif t == "vless":
+            stats["vless"] += 1
+            label = f"{base} | {ms:.0f}ms"
+        elif t == "trojan":
+            stats["trojan"] += 1
+            label = f"{base} | {ms:.0f}ms"
+        elif t in ("ss", "shadowsocks", "ssr", "shadowsocksr", "vmess"):
+            stats["low"] += 1
+            label = f"{base} | {ms:.0f}ms"
         else:
             label = f"{base} | {ms:.0f}ms"
         if label in seen_names:
@@ -260,8 +286,10 @@ def build_config(selected: list[tuple[dict, float]], cap: int) -> str:
         raise RuntimeError(f"BUG: {n} > hard_cap {cap}")
     header = (
         f"# Ryukyou nodes | updated {now} | count={n} | hard_cap={cap} | "
-        f"anytls={anytls_n} | preferred_region={preferred_n} | "
-        f"only_reachable | no_HK_MO | prefer_US_CA_NO_SG+anytls\n"
+        f"anytls={stats['anytls']} hy2={stats['hy2']} vless={stats['vless']} "
+        f"trojan={stats['trojan']} ss_vmess_ssr={stats['low']} | "
+        f"preferred_region={stats['preferred']} | "
+        f"prefer_US_CA_NO_SG + hy2/vless/trojan | ss/vmess/ssr last\n"
     )
     return header + yaml.dump(cfg, allow_unicode=True, sort_keys=False, default_flow_style=False)
 
@@ -303,14 +331,10 @@ def main():
 
     print(f"Probing TCP (timeout={CONNECT_TIMEOUT}s) ...")
     alive = probe_alive(deduped)
-    anytls_alive = sum(1 for p, _ in alive if str(p.get("type", "")).lower() == "anytls")
-    pref_alive = sum(1 for p, _ in alive if region_priority(p) < 100)
-    print(f"Reachable: {len(alive)} (anytls={anytls_alive}, preferred_region={pref_alive})")
+    print(f"Reachable: {len(alive)}")
 
     selected = alive[:cap]
-    sel_any = sum(1 for p, _ in selected if str(p.get("type", "")).lower() == "anytls")
-    sel_pref = sum(1 for p, _ in selected if region_priority(p) < 100)
-    print(f"Final: {len(selected)} (anytls={sel_any}, preferred={sel_pref}, hard_cap={cap})")
+    print(f"Final: {len(selected)} (hard_cap={cap})")
 
     out_dir = Path(args.output_dir)
     out_dir.mkdir(parents=True, exist_ok=True)
@@ -318,19 +342,18 @@ def main():
     (out_dir / "clash_clean.yaml").write_text(text, encoding="utf-8")
     print(f"Wrote output/clash_clean.yaml nodes={len(selected)}")
 
+    from collections import Counter
+    type_c = Counter(str(p.get("type", "")).lower() for p, _ in selected)
     (out_dir / "nodes_stats.txt").write_text(
         f"updated={datetime.now(timezone.utc).isoformat()}\n"
         f"sources={len(entries)}\n"
         f"raw_after_hk_mo_filter={len(all_proxies)}\n"
         f"dedup={len(deduped)}\n"
         f"reachable={len(alive)}\n"
-        f"reachable_anytls={anytls_alive}\n"
-        f"reachable_preferred_region={pref_alive}\n"
         f"final_count={len(selected)}\n"
-        f"final_anytls={sel_any}\n"
-        f"final_preferred_region={sel_pref}\n"
         f"hard_cap={cap}\n"
-        f"policy=prefer_US_CA_NO_SG_then_anytls_only_reachable_no_HK_MO\n",
+        f"types={dict(type_c)}\n"
+        f"policy=region_then_hy2_vless_trojan_ss_vmess_ssr_last\n",
         encoding="utf-8",
     )
     print("Done.")
