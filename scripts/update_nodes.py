@@ -8,6 +8,10 @@ Priority order:
   2) protocol: anytls > hysteria2/hysteria > vless > trojan > others > ss/vmess/ssr (last)
   3) lower TCP latency
 
+Node names get traffic-light emoji from TCP RTT snapshot:
+  🟢 <150ms  🟡 <400ms  🟠 <800ms  🔴 >=800ms
+(Client UI red/green dots are separate: live HTTP health-check.)
+
 Hong Kong / Macau nodes are fully excluded.
 """
 
@@ -17,6 +21,7 @@ import argparse
 import re
 import socket
 import time
+from collections import Counter
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import datetime, timezone
 from pathlib import Path
@@ -29,8 +34,6 @@ CONNECT_TIMEOUT = 6.0
 MAX_WORKERS = 40
 MAX_NODES = 512
 
-# lower rank = higher priority
-# hy2 / hysteria / vless / trojan preferred; ss / vmess / ssr last
 PROTOCOL_RANK = {
     "anytls": 0,
     "hysteria2": 1,
@@ -43,14 +46,13 @@ PROTOCOL_RANK = {
     "http": 6,
     "socks5": 6,
     "socks": 6,
-    # heavily blocked / last resort
     "ss": 20,
     "shadowsocks": 20,
     "ssr": 20,
     "shadowsocksr": 20,
     "vmess": 20,
 }
-DEFAULT_PROTOCOL_RANK = 10  # unknown protocols middle
+DEFAULT_PROTOCOL_RANK = 10
 
 HK_MO_PATTERNS = [
     r"香港",
@@ -112,6 +114,17 @@ def region_priority(p: dict) -> int:
 def type_priority(p: dict) -> int:
     t = str(p.get("type") or "").strip().lower()
     return PROTOCOL_RANK.get(t, DEFAULT_PROTOCOL_RANK)
+
+
+def latency_emoji(ms: float) -> str:
+    """Traffic-light style tag from TCP RTT (snapshot at build time)."""
+    if ms < 150:
+        return "🟢"
+    if ms < 400:
+        return "🟡"
+    if ms < 800:
+        return "🟠"
+    return "🔴"
 
 
 def load_urls(path: Path) -> list[tuple[str, str]]:
@@ -212,38 +225,46 @@ def probe_alive(proxies: list[dict]) -> list[tuple[dict, float]]:
             if ms is None:
                 continue
             alive.append((p, ms))
-    # region -> protocol -> latency
     alive.sort(key=lambda x: (region_priority(x[0]), type_priority(x[0]), x[1]))
     return alive
+
+
+def format_label(p: dict, ms: float) -> str:
+    base = p["name"]
+    t = str(p.get("type") or "").lower()
+    light = latency_emoji(ms)
+    tag = ""
+    if t == "anytls":
+        tag = "[anytls] "
+    elif t in ("hysteria2", "hysteria", "hy2"):
+        tag = "[hy2] "
+    return f"{light} {tag}{base} | {ms:.0f}ms"
 
 
 def build_config(selected: list[tuple[dict, float]], cap: int) -> str:
     seen_names: set[str] = set()
     unique: list[dict] = []
     stats = {"anytls": 0, "hy2": 0, "vless": 0, "trojan": 0, "low": 0, "preferred": 0}
+    lights = Counter()
     for p, ms in selected:
         p = dict(p)
-        base = p["name"]
         t = str(p.get("type") or "").lower()
         if region_priority(p) < 100:
             stats["preferred"] += 1
         if t == "anytls":
             stats["anytls"] += 1
-            label = f"[anytls] {base} | {ms:.0f}ms"
         elif t in ("hysteria2", "hysteria", "hy2"):
             stats["hy2"] += 1
-            label = f"[hy2] {base} | {ms:.0f}ms"
         elif t == "vless":
             stats["vless"] += 1
-            label = f"{base} | {ms:.0f}ms"
         elif t == "trojan":
             stats["trojan"] += 1
-            label = f"{base} | {ms:.0f}ms"
         elif t in ("ss", "shadowsocks", "ssr", "shadowsocksr", "vmess"):
             stats["low"] += 1
-            label = f"{base} | {ms:.0f}ms"
-        else:
-            label = f"{base} | {ms:.0f}ms"
+
+        light = latency_emoji(ms)
+        lights[light] += 1
+        label = format_label(p, ms)
         if label in seen_names:
             k = 2
             while f"{label}-{k}" in seen_names:
@@ -286,10 +307,11 @@ def build_config(selected: list[tuple[dict, float]], cap: int) -> str:
         raise RuntimeError(f"BUG: {n} > hard_cap {cap}")
     header = (
         f"# Ryukyou nodes | updated {now} | count={n} | hard_cap={cap} | "
+        f"lights={dict(lights)} | "
         f"anytls={stats['anytls']} hy2={stats['hy2']} vless={stats['vless']} "
         f"trojan={stats['trojan']} ss_vmess_ssr={stats['low']} | "
         f"preferred_region={stats['preferred']} | "
-        f"prefer_US_CA_NO_SG + hy2/vless/trojan | ss/vmess/ssr last\n"
+        f"emoji=TCP_RTT_snapshot not_client_live_check\n"
     )
     return header + yaml.dump(cfg, allow_unicode=True, sort_keys=False, default_flow_style=False)
 
@@ -342,8 +364,8 @@ def main():
     (out_dir / "clash_clean.yaml").write_text(text, encoding="utf-8")
     print(f"Wrote output/clash_clean.yaml nodes={len(selected)}")
 
-    from collections import Counter
     type_c = Counter(str(p.get("type", "")).lower() for p, _ in selected)
+    light_c = Counter(latency_emoji(ms) for _, ms in selected)
     (out_dir / "nodes_stats.txt").write_text(
         f"updated={datetime.now(timezone.utc).isoformat()}\n"
         f"sources={len(entries)}\n"
@@ -353,6 +375,7 @@ def main():
         f"final_count={len(selected)}\n"
         f"hard_cap={cap}\n"
         f"types={dict(type_c)}\n"
+        f"lights={dict(light_c)}\n"
         f"policy=region_then_hy2_vless_trojan_ss_vmess_ssr_last\n",
         encoding="utf-8",
     )
