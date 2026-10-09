@@ -3,11 +3,12 @@
 Fetch Clash YAML sources, TCP probe, dedupe.
 
 Two-stage quality:
-  A) GitHub Actions (overseas): TCP alive + drop HK/MO name + drop CN-located server IPs
-  B) Optional mainland probe file output/cn_probe_results.json (from scripts/cn_probe.py)
-     -> prefer keys that passed CN-path TCP; rank by CN RTT first
+  A) GitHub Actions (overseas): TCP alive + drop HK/MO names
+     + drop server IPs geolocated to CN / HK / MO
+  B) Optional path probe file output/cn_probe_results.json (scripts/cn_probe.py)
+     -> prefer keys that passed path TCP; rank by that RTT first
 
-Priority: preferred regions -> protocol rank -> (CN RTT if any) -> overseas RTT
+Path-proven nodes are renamed with [Be] (Beyond = 跨越), never CN/HK/MO tags.
 """
 
 from __future__ import annotations
@@ -30,6 +31,9 @@ CONNECT_TIMEOUT = 6.0
 MAX_WORKERS = 40
 MAX_NODES = 512
 CN_PROBE_MAX_AGE_HOURS = 36
+
+# Country codes to never use as exit (native mainland / HK / MO)
+BLOCKED_EXIT_CC = {"CN", "HK", "MO"}
 
 PROTOCOL_RANK = {
     "anytls": 0,
@@ -56,6 +60,13 @@ HK_MO_PATTERNS = [
     r"\bmo\b", r"\bmac\b", r"macau", r"macao", r"🇭🇰", r"🇲🇴",
 ]
 HK_MO_RE = re.compile("|".join(HK_MO_PATTERNS), re.IGNORECASE)
+
+# Strip confusing geo words from display name
+NAME_SCRUB_RE = re.compile(
+    r"(中国|大陸|大陆|內地|内地|\bcn\b|\bchina\b|香港|澳门|澳門|"
+    r"\bhk\b|\bhkg\b|hong\s*kong|macau|macao|🇨🇳|🇭🇰|🇲🇴)",
+    re.I,
+)
 
 REGION_PATTERNS: list[tuple[int, re.Pattern[str]]] = [
     (0, re.compile(
@@ -94,6 +105,12 @@ def latency_emoji(ms: float) -> str:
     if ms < 800:
         return "🟠"
     return "🔴"
+
+
+def scrub_display_name(name: str) -> str:
+    s = NAME_SCRUB_RE.sub("", name)
+    s = re.sub(r"\s{2,}", " ", s).strip(" -_|/")
+    return s or name
 
 
 def load_urls(path: Path) -> list[tuple[str, str]]:
@@ -178,8 +195,8 @@ def resolve_ip(host: str) -> str | None:
         return None
 
 
-def filter_cn_located_servers(proxies: list[dict]) -> list[dict]:
-    """Drop nodes whose server IP geolocates to CN (useless as exit)."""
+def filter_blocked_exit_servers(proxies: list[dict]) -> list[dict]:
+    """Drop nodes whose server IP is in CN / HK / MO."""
     hosts = sorted({str(p.get("server") or "") for p in proxies if p.get("server")})
     host_ip: dict[str, str] = {}
     for h in hosts:
@@ -187,8 +204,7 @@ def filter_cn_located_servers(proxies: list[dict]) -> list[dict]:
         if ip:
             host_ip[h] = ip
     ips = sorted(set(host_ip.values()))
-    cn_ips: set[str] = set()
-    # batch via ip-api (free, non-commercial, rate limited)
+    blocked_ips: set[str] = set()
     for i in range(0, len(ips), 80):
         batch = ips[i : i + 80]
         try:
@@ -201,8 +217,9 @@ def filter_cn_located_servers(proxies: list[dict]) -> list[dict]:
                 continue
             for row in r.json():
                 if isinstance(row, dict) and row.get("status") == "success":
-                    if str(row.get("countryCode") or "").upper() == "CN":
-                        cn_ips.add(str(row.get("query")))
+                    cc = str(row.get("countryCode") or "").upper()
+                    if cc in BLOCKED_EXIT_CC:
+                        blocked_ips.add(str(row.get("query")))
         except Exception as e:
             print(f"  WARN geo batch: {e}")
         time.sleep(0.4)
@@ -212,11 +229,11 @@ def filter_cn_located_servers(proxies: list[dict]) -> list[dict]:
     for p in proxies:
         h = str(p.get("server") or "")
         ip = host_ip.get(h)
-        if ip and ip in cn_ips:
+        if ip and ip in blocked_ips:
             dropped += 1
             continue
         kept.append(p)
-    print(f"CN-located server drop: {dropped}, kept {len(kept)}")
+    print(f"CN/HK/MO server IP drop: {dropped}, kept {len(kept)}")
     return kept
 
 
@@ -248,8 +265,8 @@ def probe_alive(proxies: list[dict]) -> list[tuple[dict, float]]:
     return alive
 
 
-def load_cn_probe(path: Path) -> dict[str, float]:
-    """key -> cn_ms for ok results; empty if missing/stale."""
+def load_path_probe(path: Path) -> dict[str, float]:
+    """key -> path_ms for ok results; empty if missing/stale."""
     if not path.exists():
         return {}
     try:
@@ -261,10 +278,10 @@ def load_cn_probe(path: Path) -> dict[str, float]:
         ts = datetime.fromisoformat(updated.replace("Z", "+00:00"))
         age_h = (datetime.now(timezone.utc) - ts.astimezone(timezone.utc)).total_seconds() / 3600.0
         if age_h > CN_PROBE_MAX_AGE_HOURS:
-            print(f"CN probe stale ({age_h:.1f}h > {CN_PROBE_MAX_AGE_HOURS}h), ignore")
+            print(f"Path probe stale ({age_h:.1f}h > {CN_PROBE_MAX_AGE_HOURS}h), ignore")
             return {}
     except Exception:
-        print("CN probe timestamp parse fail, still using file")
+        print("Path probe timestamp parse fail, still using file")
     out: dict[str, float] = {}
     for row in data.get("results") or []:
         if not row.get("ok"):
@@ -273,40 +290,43 @@ def load_cn_probe(path: Path) -> dict[str, float]:
         ms = row.get("ms")
         if key and isinstance(ms, (int, float)):
             out[key] = float(ms)
-    print(f"CN probe loaded: {len(out)} ok keys")
+    print(f"Path probe loaded: {len(out)} ok keys (Beyond pool)")
     return out
 
 
-def sort_key(p: dict, overseas_ms: float, cn_map: dict[str, float]):
+def sort_key(p: dict, overseas_ms: float, path_map: dict[str, float]):
     k = proxy_key(p)
-    has_cn = 0 if k in cn_map else 1  # prefer has CN proof
-    cn_ms = cn_map.get(k, 9_999_999.0)
-    return (has_cn, region_priority(p), type_priority(p), cn_ms, overseas_ms)
+    has_be = 0 if k in path_map else 1
+    be_ms = path_map.get(k, 9_999_999.0)
+    return (has_be, region_priority(p), type_priority(p), be_ms, overseas_ms)
 
 
-def format_label(p: dict, display_ms: float, cn_ok: bool) -> str:
-    base = p["name"]
+def format_label(p: dict, display_ms: float, beyond: bool) -> str:
+    base = scrub_display_name(str(p["name"]))
     t = str(p.get("type") or "").lower()
     light = latency_emoji(display_ms)
-    tag = ""
+    proto = ""
     if t == "anytls":
-        tag = "[anytls] "
+        proto = "[anytls] "
     elif t in ("hysteria2", "hysteria", "hy2"):
-        tag = "[hy2] "
-    cn_tag = "🇨🇳" if cn_ok else ""
-    return f"{light}{cn_tag} {tag}{base} | {display_ms:.0f}ms"
+        proto = "[hy2] "
+    # Beyond = path-proven (not native CN/HK/MO exit)
+    be = "[Be] " if beyond else ""
+    return f"{light} {be}{proto}{base} | {display_ms:.0f}ms"
 
 
 def build_config(
     selected: list[tuple[dict, float, float | None]],
     cap: int,
 ) -> str:
-    """selected items: (proxy, overseas_ms, cn_ms|None)"""
     seen_names: set[str] = set()
     unique: list[dict] = []
-    stats = {"anytls": 0, "hy2": 0, "vless": 0, "trojan": 0, "low": 0, "preferred": 0, "cn_ok": 0}
+    stats = {
+        "anytls": 0, "hy2": 0, "vless": 0, "trojan": 0, "low": 0,
+        "preferred": 0, "beyond": 0,
+    }
     lights = Counter()
-    for p, o_ms, c_ms in selected:
+    for p, o_ms, be_ms in selected:
         p = dict(p)
         t = str(p.get("type") or "").lower()
         if region_priority(p) < 100:
@@ -321,13 +341,13 @@ def build_config(
             stats["trojan"] += 1
         elif t in ("ss", "shadowsocks", "ssr", "shadowsocksr", "vmess"):
             stats["low"] += 1
-        cn_ok = c_ms is not None
-        if cn_ok:
-            stats["cn_ok"] += 1
-        display = float(c_ms) if cn_ok else float(o_ms)
+        beyond = be_ms is not None
+        if beyond:
+            stats["beyond"] += 1
+        display = float(be_ms) if beyond else float(o_ms)
         light = latency_emoji(display)
         lights[light] += 1
-        label = format_label(p, display, cn_ok)
+        label = format_label(p, display, beyond)
         if label in seen_names:
             k = 2
             while f"{label}-{k}" in seen_names:
@@ -370,7 +390,7 @@ def build_config(
         raise RuntimeError(f"BUG: {n} > hard_cap {cap}")
     header = (
         f"# Ryukyou nodes | updated {now} | count={n} | hard_cap={cap} | "
-        f"cn_ok={stats['cn_ok']} | lights={dict(lights)} | "
+        f"Beyond[Be]={stats['beyond']} | lights={dict(lights)} | "
         f"anytls={stats['anytls']} hy2={stats['hy2']} vless={stats['vless']} "
         f"trojan={stats['trojan']} | preferred_region={stats['preferred']}\n"
     )
@@ -400,7 +420,7 @@ def main():
             r = requests.get(url, timeout=35)
             r.raise_for_status()
             found = extract_proxies(r.text)
-            print(f"  -> {len(found)} after HK/MO filter ({desc})")
+            print(f"  -> {len(found)} after HK/MO name filter ({desc})")
             all_proxies.extend(found)
         except Exception as e:
             print(f"  WARN: {e}")
@@ -415,14 +435,13 @@ def main():
         deduped.append(p)
     print(f"After dedup: {len(deduped)} / {len(all_proxies)}")
 
-    print("Geo-filter CN-located servers ...")
-    deduped = filter_cn_located_servers(deduped)
+    print("Geo-filter CN/HK/MO server IPs ...")
+    deduped = filter_blocked_exit_servers(deduped)
 
     print(f"Overseas TCP probe (timeout={CONNECT_TIMEOUT}s) ...")
     alive = probe_alive(deduped)
     print(f"Overseas reachable: {len(alive)}")
 
-    # export candidates for mainland agent
     candidates = []
     for p, ms in alive:
         candidates.append(
@@ -446,38 +465,36 @@ def main():
     )
     print(f"Wrote {cand_path} ({len(candidates)})")
 
-    cn_map = load_cn_probe(Path(args.cn_probe))
+    path_map = load_path_probe(Path(args.cn_probe))
 
-    ranked = sorted(alive, key=lambda x: sort_key(x[0], x[1], cn_map))
-    # If we have CN results, optionally drop overseas-only when enough CN ok
+    ranked = sorted(alive, key=lambda x: sort_key(x[0], x[1], path_map))
     selected_triples: list[tuple[dict, float, float | None]] = []
-    if len(cn_map) >= 20:
-        cn_first = [(p, o, cn_map.get(proxy_key(p))) for p, o in ranked if proxy_key(p) in cn_map]
-        rest = [(p, o, None) for p, o in ranked if proxy_key(p) not in cn_map]
-        merged = cn_first + rest
-        selected_triples = merged[:cap]
-        print(f"Select with CN preference: cn_pool={len(cn_first)} fill={len(selected_triples)}")
+    if len(path_map) >= 20:
+        be_first = [(p, o, path_map.get(proxy_key(p))) for p, o in ranked if proxy_key(p) in path_map]
+        rest = [(p, o, None) for p, o in ranked if proxy_key(p) not in path_map]
+        selected_triples = (be_first + rest)[:cap]
+        print(f"Select with Beyond preference: be_pool={len(be_first)} fill={len(selected_triples)}")
     else:
-        selected_triples = [(p, o, cn_map.get(proxy_key(p))) for p, o in ranked[:cap]]
-        print(f"CN probe sparse ({len(cn_map)}); use overseas rank primarily")
+        selected_triples = [(p, o, path_map.get(proxy_key(p))) for p, o in ranked[:cap]]
+        print(f"Path probe sparse ({len(path_map)}); overseas rank primarily")
 
     text = build_config(selected_triples, cap)
     (out_dir / "clash_clean.yaml").write_text(text, encoding="utf-8")
     print(f"Wrote output/clash_clean.yaml nodes={len(selected_triples)}")
 
     type_c = Counter(str(p.get("type", "")).lower() for p, _, _ in selected_triples)
-    cn_ok_n = sum(1 for _, _, c in selected_triples if c is not None)
+    be_n = sum(1 for _, _, c in selected_triples if c is not None)
     (out_dir / "nodes_stats.txt").write_text(
         f"updated={datetime.now(timezone.utc).isoformat()}\n"
         f"sources={len(entries)}\n"
         f"dedup={len(deduped)}\n"
         f"overseas_reachable={len(alive)}\n"
-        f"cn_probe_ok_keys={len(cn_map)}\n"
+        f"path_probe_ok_keys={len(path_map)}\n"
         f"final_count={len(selected_triples)}\n"
-        f"final_cn_ok={cn_ok_n}\n"
+        f"final_beyond_Be={be_n}\n"
         f"hard_cap={cap}\n"
         f"types={dict(type_c)}\n"
-        f"policy=overseas_tcp+optional_cn_probe+drop_cn_server_ip\n",
+        f"policy=drop_CN_HK_MO_ip+path_probe_Beyond_tag\n",
         encoding="utf-8",
     )
     print("Done.")
