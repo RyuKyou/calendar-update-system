@@ -1,10 +1,10 @@
-updated=2026-10-09T15:37:01.237285+00:00
+updated=2026-10-09T22:27:18.989538+00:00
 sources=20
-dedup=1650
-overseas_reachable=1303
+dedup=1491
+overseas_reachable=1171
 path_probe_ok_keys=0
 final_count=512
 final_beyond_Be=0
 hard_cap=512
-types={'anytls': 18, 'vless': 261, 'trojan': 12, 'http': 152, 'socks5': 5, 'ss': 19, 'vmess': 7, 'hysteria2': 38}
+types={'vless': 307, 'trojan': 6, 'http': 129, 'socks5': 3, 'vmess': 7, 'ss': 11, 'anytls': 13, 'hysteria2': 36}
 policy=drop_CN_HK_MO_ip+path_probe_Beyond_tag
