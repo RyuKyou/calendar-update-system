@@ -1,10 +1,10 @@
-updated=2026-10-09T15:26:51.009676+00:00
+updated=2026-10-09T15:27:07.182721+00:00
 sources=20
 dedup=1697
-overseas_reachable=1333
+overseas_reachable=1335
 cn_probe_ok_keys=0
 final_count=512
 final_cn_ok=0
 hard_cap=512
-types={'anytls': 18, 'vless': 259, 'trojan': 12, 'http': 152, 'socks5': 5, 'ss': 20, 'vmess': 7, 'hysteria2': 39}
+types={'anytls': 18, 'vless': 258, 'trojan': 12, 'http': 152, 'socks5': 5, 'ss': 20, 'vmess': 7, 'hysteria2': 40}
 policy=overseas_tcp+optional_cn_probe+drop_cn_server_ip
