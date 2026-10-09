@@ -1,10 +1,10 @@
-updated=2026-10-09T14:42:46.448977+00:00
+updated=2026-10-09T14:42:49.652484+00:00
 sources=20
 raw_after_hk_mo_filter=6117
 dedup=1731
-reachable=1372
+reachable=1365
 final_count=512
 hard_cap=512
-types={'anytls': 18, 'vless': 243, 'trojan': 16, 'http': 154, 'socks5': 5, 'ss': 21, 'vmess': 16, 'hysteria2': 39}
-lights={'🟢': 404, '🟡': 83, '🟠': 13, '🔴': 12}
+types={'anytls': 18, 'vless': 244, 'trojan': 16, 'http': 154, 'socks5': 5, 'ss': 20, 'vmess': 16, 'hysteria2': 39}
+lights={'🟢': 392, '🟡': 108, '🔴': 5, '🟠': 7}
 policy=region_then_hy2_vless_trojan_ss_vmess_ssr_last
