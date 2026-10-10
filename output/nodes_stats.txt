@@ -1,3 +1,3 @@
-updated=2026-10-10T04:04:19.375118+00:00
-final_count=512 final_beyond_Be=340 hard_cap=512
-types={'http': 186, 'vless': 201, 'ss': 32, 'socks5': 7, 'hysteria2': 40, 'trojan': 22, 'vmess': 8, 'anytls': 16}
+updated=2026-10-10T04:39:31.583009+00:00
+final_count=512 final_beyond_Be=309 hard_cap=512
+types={'vless': 261, 'trojan': 31, 'hysteria2': 39, 'http': 136, 'socks5': 3, 'ss': 20, 'vmess': 6, 'anytls': 16}
