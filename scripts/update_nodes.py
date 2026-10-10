@@ -6,7 +6,12 @@ Two-stage quality:
   A) GitHub Actions (overseas): TCP alive + drop HK/MO names
      + drop server IPs geolocated to CN / HK / MO
   B) Optional path probe file output/cn_probe_results.json (scripts/cn_probe.py)
-     -> prefer keys that passed path TCP; rank by that RTT first
+
+Selection inside hard_cap=512:
+  - Always reserve up to BE_RESERVED (128) path-proven [Be] nodes
+    sorted by lowest path RTT (mainland probe).
+  - Fill remaining slots with other overseas-alive nodes
+    (region -> protocol -> overseas RTT).
 
 Path-proven nodes are renamed with [Be] (Beyond = 跨越), never CN/HK/MO tags.
 """
@@ -30,9 +35,9 @@ VALID_NETWORKS = {"tcp", "udp", "ws", "http", "h2", "grpc", "raw"}
 CONNECT_TIMEOUT = 6.0
 MAX_WORKERS = 40
 MAX_NODES = 512
+BE_RESERVED = 128  # hard seats for lowest path-RTT Beyond nodes
 CN_PROBE_MAX_AGE_HOURS = 36
 
-# Country codes to never use as exit (native mainland / HK / MO)
 BLOCKED_EXIT_CC = {"CN", "HK", "MO"}
 
 PROTOCOL_RANK = {
@@ -61,7 +66,6 @@ HK_MO_PATTERNS = [
 ]
 HK_MO_RE = re.compile("|".join(HK_MO_PATTERNS), re.IGNORECASE)
 
-# Strip confusing geo words from display name
 NAME_SCRUB_RE = re.compile(
     r"(中国|大陸|大陆|內地|内地|\bcn\b|\bchina\b|香港|澳门|澳門|"
     r"\bhk\b|\bhkg\b|hong\s*kong|macau|macao|🇨🇳|🇭🇰|🇲🇴)",
@@ -294,11 +298,8 @@ def load_path_probe(path: Path) -> dict[str, float]:
     return out
 
 
-def sort_key(p: dict, overseas_ms: float, path_map: dict[str, float]):
-    k = proxy_key(p)
-    has_be = 0 if k in path_map else 1
-    be_ms = path_map.get(k, 9_999_999.0)
-    return (has_be, region_priority(p), type_priority(p), be_ms, overseas_ms)
+def overseas_sort_key(p: dict, overseas_ms: float):
+    return (region_priority(p), type_priority(p), overseas_ms)
 
 
 def format_label(p: dict, display_ms: float, beyond: bool) -> str:
@@ -310,7 +311,6 @@ def format_label(p: dict, display_ms: float, beyond: bool) -> str:
         proto = "[anytls] "
     elif t in ("hysteria2", "hysteria", "hy2"):
         proto = "[hy2] "
-    # Beyond = path-proven (not native CN/HK/MO exit)
     be = "[Be] " if beyond else ""
     return f"{light} {be}{proto}{base} | {display_ms:.0f}ms"
 
@@ -390,11 +390,58 @@ def build_config(
         raise RuntimeError(f"BUG: {n} > hard_cap {cap}")
     header = (
         f"# Ryukyou nodes | updated {now} | count={n} | hard_cap={cap} | "
-        f"Beyond[Be]={stats['beyond']} | lights={dict(lights)} | "
+        f"Be_reserved={BE_RESERVED} Beyond[Be]={stats['beyond']} | lights={dict(lights)} | "
         f"anytls={stats['anytls']} hy2={stats['hy2']} vless={stats['vless']} "
         f"trojan={stats['trojan']} | preferred_region={stats['preferred']}\n"
     )
     return header + yaml.dump(cfg, allow_unicode=True, sort_keys=False, default_flow_style=False)
+
+
+def select_with_be_reserve(
+    alive: list[tuple[dict, float]],
+    path_map: dict[str, float],
+    cap: int,
+    be_reserved: int,
+) -> list[tuple[dict, float, float | None]]:
+    """
+    1) Take up to be_reserved path-proven nodes with lowest path RTT.
+    2) Fill remaining slots from the rest (overseas rank).
+    """
+    by_key: dict[str, tuple[dict, float]] = {}
+    for p, o_ms in alive:
+        by_key[proxy_key(p)] = (p, o_ms)
+
+    # Beyond pool: path ok AND still overseas-alive this run
+    be_pool: list[tuple[dict, float, float]] = []
+    for key, be_ms in path_map.items():
+        if key not in by_key:
+            continue
+        p, o_ms = by_key[key]
+        be_pool.append((p, o_ms, float(be_ms)))
+    be_pool.sort(key=lambda x: (x[2], type_priority(x[0]), x[1]))
+
+    seats = min(be_reserved, cap, len(be_pool))
+    chosen: list[tuple[dict, float, float | None]] = []
+    chosen_keys: set[str] = set()
+    for p, o_ms, be_ms in be_pool[:seats]:
+        chosen.append((p, o_ms, be_ms))
+        chosen_keys.add(proxy_key(p))
+
+    # Fillers: everyone else not already chosen
+    fillers = [(p, o) for p, o in alive if proxy_key(p) not in chosen_keys]
+    fillers.sort(key=lambda x: overseas_sort_key(x[0], x[1]))
+    need = cap - len(chosen)
+    for p, o_ms in fillers[:need]:
+        # if somehow also in path_map, keep Be tag
+        k = proxy_key(p)
+        be = path_map.get(k)
+        chosen.append((p, o_ms, be if be is not None else None))
+
+    print(
+        f"Be reserve: pool={len(be_pool)} seats={seats}/{be_reserved} | "
+        f"fillers_added={min(need, len(fillers))} | total={len(chosen)}/{cap}"
+    )
+    return chosen
 
 
 def main():
@@ -403,8 +450,10 @@ def main():
     ap.add_argument("--output-dir", default="output")
     ap.add_argument("--max-nodes", type=int, default=MAX_NODES)
     ap.add_argument("--cn-probe", default="output/cn_probe_results.json")
+    ap.add_argument("--be-reserved", type=int, default=BE_RESERVED)
     args = ap.parse_args()
     cap = max(1, min(int(args.max_nodes), MAX_NODES))
+    be_reserved = max(0, min(int(args.be_reserved), cap))
     out_dir = Path(args.output_dir)
     out_dir.mkdir(parents=True, exist_ok=True)
 
@@ -467,16 +516,12 @@ def main():
 
     path_map = load_path_probe(Path(args.cn_probe))
 
-    ranked = sorted(alive, key=lambda x: sort_key(x[0], x[1], path_map))
-    selected_triples: list[tuple[dict, float, float | None]] = []
-    if len(path_map) >= 20:
-        be_first = [(p, o, path_map.get(proxy_key(p))) for p, o in ranked if proxy_key(p) in path_map]
-        rest = [(p, o, None) for p, o in ranked if proxy_key(p) not in path_map]
-        selected_triples = (be_first + rest)[:cap]
-        print(f"Select with Beyond preference: be_pool={len(be_first)} fill={len(selected_triples)}")
+    if path_map:
+        selected_triples = select_with_be_reserve(alive, path_map, cap, be_reserved)
     else:
-        selected_triples = [(p, o, path_map.get(proxy_key(p))) for p, o in ranked[:cap]]
-        print(f"Path probe sparse ({len(path_map)}); overseas rank primarily")
+        ranked = sorted(alive, key=lambda x: overseas_sort_key(x[0], x[1]))
+        selected_triples = [(p, o, None) for p, o in ranked[:cap]]
+        print(f"No path probe; overseas-only select {len(selected_triples)}")
 
     text = build_config(selected_triples, cap)
     (out_dir / "clash_clean.yaml").write_text(text, encoding="utf-8")
@@ -490,11 +535,12 @@ def main():
         f"dedup={len(deduped)}\n"
         f"overseas_reachable={len(alive)}\n"
         f"path_probe_ok_keys={len(path_map)}\n"
+        f"be_reserved_config={be_reserved}\n"
         f"final_count={len(selected_triples)}\n"
         f"final_beyond_Be={be_n}\n"
         f"hard_cap={cap}\n"
         f"types={dict(type_c)}\n"
-        f"policy=drop_CN_HK_MO_ip+path_probe_Beyond_tag\n",
+        f"policy=reserve_{be_reserved}_Be_by_path_rtt_then_fill\n",
         encoding="utf-8",
     )
     print("Done.")
