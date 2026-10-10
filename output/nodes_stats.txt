@@ -1,11 +1,11 @@
-updated=2026-10-10T03:05:44.014587+00:00
+updated=2026-10-10T03:41:06.398623+00:00
 sources=20
-dedup=1566
-overseas_reachable=1241
-path_probe_ok_keys=0
+dedup=1573
+overseas_reachable=1248
+path_probe_ok_keys=982
 be_reserved_config=128
 final_count=512
-final_beyond_Be=0
+final_beyond_Be=409
 hard_cap=512
-types={'vless': 280, 'trojan': 12, 'http': 136, 'socks5': 3, 'ss': 19, 'vmess': 9, 'anytls': 16, 'hysteria2': 37}
+types={'http': 184, 'vless': 209, 'ss': 29, 'socks5': 7, 'hysteria2': 40, 'trojan': 18, 'vmess': 9, 'anytls': 16}
 policy=reserve_128_Be_by_path_rtt_then_fill
