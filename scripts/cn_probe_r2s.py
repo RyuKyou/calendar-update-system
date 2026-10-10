@@ -3,6 +3,10 @@
 R2S / OpenWrt path probe + upload cn_probe_results.json to GitHub.
 Stdlib only. Run with probe traffic DIRECT (no TUN/proxy).
 
+Skips weak/blocked protocols before probing to save CPU/time:
+  ss ssr shadowsocks vmess http socks5 hysteria(tuic v1) tuic wireguard snell
+Keeps: anytls, hysteria2/hy2, vless, trojan, etc.
+
 /root/be-probe/config.env:
   GH_TOKEN=...
   GH_OWNER=RyuKyou
@@ -27,6 +31,14 @@ from pathlib import Path
 
 CONNECT_TIMEOUT = 5.0
 MAX_WORKERS = 20
+
+SKIP_TYPES = {
+    "ss", "ssr", "shadowsocks", "shadowsocksr",
+    "vmess", "http", "socks5", "socks",
+    "hysteria",  # v1 only; hysteria2 / hy2 kept
+    "tuic", "wireguard", "snell",
+}
+
 CONFIG_PATHS = [
     Path("/root/be-probe/config.env"),
     Path(__file__).resolve().parent / "config.env",
@@ -54,7 +66,7 @@ def http_json(url: str, method: str = "GET", data: dict | None = None, token: st
     req = urllib.request.Request(url, data=body, method=method)
     req.add_header("Accept", "application/vnd.github+json")
     req.add_header("X-GitHub-Api-Version", "2022-11-28")
-    req.add_header("User-Agent", "Ryukyou-BeProbe/1.1")
+    req.add_header("User-Agent", "Ryukyou-BeProbe/1.2")
     if body is not None:
         req.add_header("Content-Type", "application/json; charset=utf-8")
         req.add_header("Content-Length", str(len(body)))
@@ -96,12 +108,10 @@ def main() -> int:
     if not token:
         print("ERROR: set GH_TOKEN in /root/be-probe/config.env", file=sys.stderr)
         return 1
-    if not token.startswith(("ghp_", "github_pat_")):
-        print("WARN: GH_TOKEN format unusual; check config.env has no line breaks", file=sys.stderr)
 
     print(f"Fetch candidates: {cand_url}")
     try:
-        req = urllib.request.Request(cand_url, headers={"User-Agent": "Ryukyou-BeProbe/1.1"})
+        req = urllib.request.Request(cand_url, headers={"User-Agent": "Ryukyou-BeProbe/1.2"})
         with urllib.request.urlopen(req, timeout=60) as resp:
             cand = json.loads(resp.read().decode("utf-8"))
     except Exception as e:
@@ -110,7 +120,9 @@ def main() -> int:
         meta = http_json(api, token=token)
         cand = json.loads(base64.b64decode(meta["content"]).decode("utf-8"))
 
-    items = cand.get("candidates") or []
+    raw_items = cand.get("candidates") or []
+    items = [it for it in raw_items if str(it.get("type") or "").lower() not in SKIP_TYPES]
+    print(f"Candidates {len(raw_items)} -> after protocol filter {len(items)}")
     print(f"Probing {len(items)} (workers={MAX_WORKERS}, timeout={CONNECT_TIMEOUT}s)")
 
     results = []
@@ -130,8 +142,6 @@ def main() -> int:
     ok = [r for r in results if r["ok"]]
     ok.sort(key=lambda r: r["ms"] if r["ms"] is not None else 9e9)
 
-    # Compact payload for GitHub API (avoid 400 malformed / size issues)
-    # Only keep successful probes; failures are summary counts only.
     compact_results = [
         {"key": r["key"], "ok": True, "ms": round(float(r["ms"]), 1)}
         for r in ok
@@ -144,6 +154,7 @@ def main() -> int:
         "total": len(results),
         "ok": len(ok),
         "fail": len(results) - len(ok),
+        "skipped_protocols": sorted(SKIP_TYPES),
         "results": compact_results,
         "ok_keys_ordered": [r["key"] for r in compact_results],
     }
