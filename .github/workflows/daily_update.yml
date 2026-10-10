@@ -48,11 +48,11 @@ jobs:
 
           git fetch origin main
           if ! git rebase origin/main; then
-            # generated files: always keep the commit being replayed (theirs in rebase)
-            git checkout --theirs -- output/clash_clean.yaml output/nodes_stats.txt 2>/dev/null || true
+            # Always keep freshly generated output from this run
+            git checkout --ours -- output/ 2>/dev/null || true
             git add output/
             GIT_EDITOR=true git rebase --continue || {
-              echo "Rebase still failing; force-with-lease push of our tree"
+              echo "Rebase still failing; soft reset and recommit"
               git rebase --abort || true
               git fetch origin main
               git reset --soft origin/main
