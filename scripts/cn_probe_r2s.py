@@ -1,15 +1,14 @@
 #!/usr/bin/env python3
 """
 R2S / OpenWrt path probe + upload cn_probe_results.json to GitHub.
-Stdlib only (no pip). Run WITHOUT proxy so path is real mainland egress.
+Stdlib only. Run with probe traffic DIRECT (no TUN/proxy).
 
-Env or /root/be-probe/config.env:
-  GH_TOKEN=github_pat_xxx   # fine-grained: contents write on this repo only
+/root/be-probe/config.env:
+  GH_TOKEN=...
   GH_OWNER=RyuKyou
   GH_REPO=calendar-update-system
   GH_BRANCH=main
   GH_PATH=output/cn_probe_results.json
-  CANDIDATES_URL=https://raw.githubusercontent.com/RyuKyou/calendar-update-system/main/output/candidates.json
 """
 
 from __future__ import annotations
@@ -51,21 +50,23 @@ def load_env() -> None:
 
 
 def http_json(url: str, method: str = "GET", data: dict | None = None, token: str | None = None) -> dict:
-    body = None if data is None else json.dumps(data).encode("utf-8")
+    body = None if data is None else json.dumps(data, ensure_ascii=False, separators=(",", ":")).encode("utf-8")
     req = urllib.request.Request(url, data=body, method=method)
     req.add_header("Accept", "application/vnd.github+json")
-    req.add_header("User-Agent", "Ryukyou-BeProbe/1.0")
+    req.add_header("X-GitHub-Api-Version", "2022-11-28")
+    req.add_header("User-Agent", "Ryukyou-BeProbe/1.1")
     if body is not None:
-        req.add_header("Content-Type", "application/json")
+        req.add_header("Content-Type", "application/json; charset=utf-8")
+        req.add_header("Content-Length", str(len(body)))
     if token:
         req.add_header("Authorization", f"Bearer {token}")
     try:
-        with urllib.request.urlopen(req, timeout=60) as resp:
+        with urllib.request.urlopen(req, timeout=90) as resp:
             raw = resp.read().decode("utf-8", errors="replace")
             return json.loads(raw) if raw else {}
     except urllib.error.HTTPError as e:
         err = e.read().decode("utf-8", errors="replace")
-        raise RuntimeError(f"HTTP {e.code} {url}: {err[:400]}") from e
+        raise RuntimeError(f"HTTP {e.code} {url}: {err[:500]}") from e
 
 
 def tcp_ms(host: str, port: int) -> float | None:
@@ -82,11 +83,11 @@ def tcp_ms(host: str, port: int) -> float | None:
 
 def main() -> int:
     load_env()
-    token = os.environ.get("GH_TOKEN", "").strip()
+    token = os.environ.get("GH_TOKEN", "").strip().replace("\n", "").replace("\r", "")
     owner = os.environ.get("GH_OWNER", "RyuKyou").strip()
     repo = os.environ.get("GH_REPO", "calendar-update-system").strip()
     branch = os.environ.get("GH_BRANCH", "main").strip()
-    path = os.environ.get("GH_PATH", "output/cn_probe_results.json").strip()
+    path = os.environ.get("GH_PATH", "output/cn_probe_results.json").strip().lstrip("/")
     cand_url = os.environ.get(
         "CANDIDATES_URL",
         f"https://raw.githubusercontent.com/{owner}/{repo}/{branch}/output/candidates.json",
@@ -95,15 +96,15 @@ def main() -> int:
     if not token:
         print("ERROR: set GH_TOKEN in /root/be-probe/config.env", file=sys.stderr)
         return 1
+    if not token.startswith(("ghp_", "github_pat_")):
+        print("WARN: GH_TOKEN format unusual; check config.env has no line breaks", file=sys.stderr)
 
     print(f"Fetch candidates: {cand_url}")
-    # raw content may need token if repo private; public raw usually ok
     try:
-        req = urllib.request.Request(cand_url, headers={"User-Agent": "Ryukyou-BeProbe/1.0"})
+        req = urllib.request.Request(cand_url, headers={"User-Agent": "Ryukyou-BeProbe/1.1"})
         with urllib.request.urlopen(req, timeout=60) as resp:
             cand = json.loads(resp.read().decode("utf-8"))
     except Exception as e:
-        # try API
         print(f"raw failed ({e}), try API")
         api = f"https://api.github.com/repos/{owner}/{repo}/contents/output/candidates.json?ref={branch}"
         meta = http_json(api, token=token)
@@ -128,6 +129,14 @@ def main() -> int:
 
     ok = [r for r in results if r["ok"]]
     ok.sort(key=lambda r: r["ms"] if r["ms"] is not None else 9e9)
+
+    # Compact payload for GitHub API (avoid 400 malformed / size issues)
+    # Only keep successful probes; failures are summary counts only.
+    compact_results = [
+        {"key": r["key"], "ok": True, "ms": round(float(r["ms"]), 1)}
+        for r in ok
+        if r.get("ms") is not None
+    ]
     out = {
         "updated": datetime.now(timezone.utc).isoformat(),
         "probe": "cn_path_tcp_r2s",
@@ -135,13 +144,12 @@ def main() -> int:
         "total": len(results),
         "ok": len(ok),
         "fail": len(results) - len(ok),
-        "results": results,
-        "ok_keys_ordered": [r["key"] for r in ok],
+        "results": compact_results,
+        "ok_keys_ordered": [r["key"] for r in compact_results],
     }
-    text = json.dumps(out, ensure_ascii=False, indent=2) + "\n"
-    print(f"OK={out['ok']} FAIL={out['fail']}")
+    text = json.dumps(out, ensure_ascii=False, separators=(",", ":")) + "\n"
+    print(f"OK={out['ok']} FAIL={out['fail']} json_bytes={len(text.encode('utf-8'))}")
 
-    # local backup
     local = Path("/root/be-probe/cn_probe_results.json")
     try:
         local.parent.mkdir(parents=True, exist_ok=True)
@@ -155,17 +163,20 @@ def main() -> int:
     try:
         meta = http_json(f"{api_path}?ref={branch}", token=token)
         sha = meta.get("sha")
-    except Exception:
+    except Exception as e:
+        print(f"no existing file or get sha skip: {e}")
         sha = None
 
+    b64 = base64.b64encode(text.encode("utf-8")).decode("ascii")
     payload = {
-        "message": f"R2S path probe {out['updated'][:19]} OK={out['ok']}",
-        "content": base64.b64encode(text.encode("utf-8")).decode("ascii"),
+        "message": f"R2S path probe OK={out['ok']} fail={out['fail']}",
+        "content": b64,
         "branch": branch,
     }
     if sha:
         payload["sha"] = sha
 
+    print(f"Upload bytes~{len(b64)} sha={'yes' if sha else 'new'}")
     http_json(api_path, method="PUT", data=payload, token=token)
     print(f"Uploaded {owner}/{repo}:{path}")
     return 0
