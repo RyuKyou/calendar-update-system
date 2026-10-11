@@ -2,16 +2,9 @@
 """
 Fetch Clash YAML sources, TCP probe, dedupe.
 
-Two-stage quality:
-  A) GitHub Actions (overseas): TCP alive + drop HK/MO names
-     + drop server IPs geolocated to CN / HK / MO
-  B) Optional path probe file output/cn_probe_results.json
-
-Selection inside hard_cap=512:
-  - Reserve up to BE_RESERVED (128) path-proven [Be] nodes by lowest path RTT
-  - Fill remaining with overseas-alive nodes
-
-R2S candidates.json excludes weak protocols (ss/vmess/http/...).
+Early drop: type=http (no distinctive value, crowds out better protocols).
+Also drop HK/MO names and CN/HK/MO server IPs.
+Path-probe candidates further skip ss/vmess/socks/etc.
 """
 
 from __future__ import annotations
@@ -36,6 +29,9 @@ MAX_NODES = 512
 BE_RESERVED = 128
 CN_PROBE_MAX_AGE_HOURS = 36
 
+# Fully excluded before probe / final list
+DROP_TYPES = {"http"}
+
 SKIP_PATH_PROBE_TYPES = {
     "ss", "ssr", "shadowsocks", "shadowsocksr",
     "vmess", "http", "socks5", "socks",
@@ -54,7 +50,6 @@ PROTOCOL_RANK = {
     "trojan": 3,
     "tuic": 4,
     "wireguard": 5,
-    "http": 6,
     "socks5": 6,
     "socks": 6,
     "ss": 20,
@@ -145,6 +140,9 @@ def clean_proxy(p: dict, index: int) -> dict | None:
     name = re.sub(r"[\x00-\x1f]", "", name).strip() or f"node-{index}"
     p = dict(p)
     p["name"] = name
+    t = str(p.get("type") or "").strip().lower()
+    if t in DROP_TYPES:
+        return None
     net = p.get("network")
     if isinstance(net, str):
         base = net.split("#")[0].split("@")[0].strip().lower()
@@ -369,7 +367,8 @@ def build_config(selected: list[tuple[dict, float, float | None]], cap: int) -> 
     header = (
         f"# Ryukyou nodes | updated {now} | count={len(unique)} | hard_cap={cap} | "
         f"Be_reserved={BE_RESERVED} Beyond[Be]={stats['beyond']} | lights={dict(lights)} | "
-        f"anytls={stats['anytls']} hy2={stats['hy2']} vless={stats['vless']} trojan={stats['trojan']}\n"
+        f"anytls={stats['anytls']} hy2={stats['hy2']} vless={stats['vless']} trojan={stats['trojan']} | "
+        f"drop_types={sorted(DROP_TYPES)}\n"
     )
     return header + yaml.dump(cfg, allow_unicode=True, sort_keys=False, default_flow_style=False)
 
@@ -435,7 +434,7 @@ def main():
             continue
         seen.add(k)
         deduped.append(p)
-    print(f"After dedup: {len(deduped)}")
+    print(f"After dedup (http already dropped): {len(deduped)}")
     deduped = filter_blocked_exit_servers(deduped)
 
     print(f"Overseas TCP probe ...")
@@ -459,6 +458,7 @@ def main():
         json.dumps({
             "updated": datetime.now(timezone.utc).isoformat(),
             "candidates": candidates,
+            "drop_types": sorted(DROP_TYPES),
             "skipped_path_probe_protocols": sorted(SKIP_PATH_PROBE_TYPES),
             "skipped_path_probe_count": skipped_proto,
         }, ensure_ascii=False, indent=2),
@@ -480,6 +480,7 @@ def main():
     (out_dir / "nodes_stats.txt").write_text(
         f"updated={datetime.now(timezone.utc).isoformat()}\n"
         f"final_count={len(selected)} final_beyond_Be={be_n} hard_cap={cap}\n"
+        f"drop_types={sorted(DROP_TYPES)}\n"
         f"types={dict(type_c)}\n",
         encoding="utf-8",
     )
