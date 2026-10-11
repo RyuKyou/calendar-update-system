@@ -1,6 +1,6 @@
 # sources — longevity first; avoid CN/TW/HK/MO/VN/TH focused feeds
-# refreshed 2026-10-11 07:09 CST
-# YAML subscriptions only. Prefer US/CA/EU; KR/SG as secondary Asia only.
+# refreshed 2026-10-11
+# YAML subscriptions only. http/socks auto-dropped by update_nodes.
 
 https://raw.githubusercontent.com/Au1rxx/free-vpn-subscriptions/main/output/clash.yaml | Au1rxx full hourly HTTP-verified
 https://raw.githubusercontent.com/Au1rxx/free-vpn-subscriptions/main/output/by-country/clash-US.yaml | Au1rxx US Reality-heavy
@@ -22,3 +22,5 @@ https://gitlab.com/free9999/ipupdate/-/raw/master/backup/img/1/2/ipp/quick/1/con
 https://www.67867867.xyz/Alvin9999/PAC/refs/heads/master/backup/img/1/2/ipp/quick/1/config.yaml | fixed-alvin-mirror
 https://raw.githubusercontent.com/freenodess/freenodess/refs/heads/main/nodes/clash.yaml | freenodess daily
 https://raw.githubusercontent.com/danmaifu/mianfeijiedian/main/feed/clash-20261010.yaml | danmaifu daily snapshot
+https://raw.githubusercontent.com/ssrsub/ssr/master/clash.yaml | ssrsub clash (~185; mostly http dropped; keep vless/anytls)
+https://raw.githubusercontent.com/RyuKyou/calendar-update-system/main/sources/manual_extra.yaml | manual hy2+vless from tips
