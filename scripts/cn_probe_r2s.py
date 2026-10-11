@@ -1,18 +1,10 @@
 #!/usr/bin/env python3
 """
-R2S / OpenWrt path probe + upload cn_probe_results.json to GitHub.
-Stdlib only. Run with probe traffic DIRECT (no TUN/proxy).
+R2S path probe + upload cn_probe_results.json.
+Stdlib only. Prefer DIRECT egress (not through TUN/proxy) for GitHub HTTPS.
 
-Skips weak/blocked protocols before probing to save CPU/time:
-  ss ssr shadowsocks vmess http socks5 hysteria(tuic v1) tuic wireguard snell
-Keeps: anytls, hysteria2/hy2, vless, trojan, etc.
-
-/root/be-probe/config.env:
-  GH_TOKEN=...
-  GH_OWNER=RyuKyou
-  GH_REPO=calendar-update-system
-  GH_BRANCH=main
-  GH_PATH=output/cn_probe_results.json
+Skips: ss ssr shadowsocks vmess http socks5 hysteria tuic wireguard snell
+Keeps: anytls hysteria2/hy2 vless trojan ...
 """
 
 from __future__ import annotations
@@ -21,6 +13,7 @@ import base64
 import json
 import os
 import socket
+import ssl
 import sys
 import time
 import urllib.error
@@ -31,11 +24,13 @@ from pathlib import Path
 
 CONNECT_TIMEOUT = 5.0
 MAX_WORKERS = 20
+HTTP_RETRIES = 5
+HTTP_BACKOFF = 3.0
 
 SKIP_TYPES = {
     "ss", "ssr", "shadowsocks", "shadowsocksr",
     "vmess", "http", "socks5", "socks",
-    "hysteria",  # v1 only; hysteria2 / hy2 kept
+    "hysteria",
     "tuic", "wireguard", "snell",
 }
 
@@ -61,24 +56,61 @@ def load_env() -> None:
         break
 
 
-def http_json(url: str, method: str = "GET", data: dict | None = None, token: str | None = None) -> dict:
+def _open(req: urllib.request.Request, timeout: float = 90):
+    ctx = ssl.create_default_context()
+    return urllib.request.urlopen(req, timeout=timeout, context=ctx)
+
+
+def http_json(
+    url: str,
+    method: str = "GET",
+    data: dict | None = None,
+    token: str | None = None,
+    retries: int = HTTP_RETRIES,
+) -> dict:
     body = None if data is None else json.dumps(data, ensure_ascii=False, separators=(",", ":")).encode("utf-8")
-    req = urllib.request.Request(url, data=body, method=method)
-    req.add_header("Accept", "application/vnd.github+json")
-    req.add_header("X-GitHub-Api-Version", "2022-11-28")
-    req.add_header("User-Agent", "Ryukyou-BeProbe/1.2")
-    if body is not None:
-        req.add_header("Content-Type", "application/json; charset=utf-8")
-        req.add_header("Content-Length", str(len(body)))
-    if token:
-        req.add_header("Authorization", f"Bearer {token}")
-    try:
-        with urllib.request.urlopen(req, timeout=90) as resp:
-            raw = resp.read().decode("utf-8", errors="replace")
-            return json.loads(raw) if raw else {}
-    except urllib.error.HTTPError as e:
-        err = e.read().decode("utf-8", errors="replace")
-        raise RuntimeError(f"HTTP {e.code} {url}: {err[:500]}") from e
+    last_err: Exception | None = None
+    for attempt in range(1, retries + 1):
+        req = urllib.request.Request(url, data=body, method=method)
+        req.add_header("Accept", "application/vnd.github+json")
+        req.add_header("X-GitHub-Api-Version", "2022-11-28")
+        req.add_header("User-Agent", "Ryukyou-BeProbe/1.3")
+        if body is not None:
+            req.add_header("Content-Type", "application/json; charset=utf-8")
+            req.add_header("Content-Length", str(len(body)))
+        if token:
+            req.add_header("Authorization", f"Bearer {token}")
+        try:
+            with _open(req, timeout=90) as resp:
+                raw = resp.read().decode("utf-8", errors="replace")
+                return json.loads(raw) if raw else {}
+        except urllib.error.HTTPError as e:
+            err = e.read().decode("utf-8", errors="replace")
+            # 409 conflict / 422 often need fresh sha — don't spin forever
+            if e.code in (400, 401, 403, 404, 409, 422):
+                raise RuntimeError(f"HTTP {e.code} {url}: {err[:500]}") from e
+            last_err = RuntimeError(f"HTTP {e.code} {url}: {err[:300]}")
+        except Exception as e:
+            last_err = e
+        print(f"  http retry {attempt}/{retries}: {last_err}")
+        time.sleep(HTTP_BACKOFF * attempt)
+    raise RuntimeError(f"http failed after {retries} tries: {last_err}")
+
+
+def fetch_url_text(url: str, token: str | None = None, retries: int = HTTP_RETRIES) -> str:
+    last_err: Exception | None = None
+    for attempt in range(1, retries + 1):
+        req = urllib.request.Request(url, headers={"User-Agent": "Ryukyou-BeProbe/1.3"})
+        if token:
+            req.add_header("Authorization", f"Bearer {token}")
+        try:
+            with _open(req, timeout=60) as resp:
+                return resp.read().decode("utf-8", errors="replace")
+        except Exception as e:
+            last_err = e
+            print(f"  fetch retry {attempt}/{retries}: {e}")
+            time.sleep(HTTP_BACKOFF * attempt)
+    raise RuntimeError(f"fetch failed: {last_err}")
 
 
 def tcp_ms(host: str, port: int) -> float | None:
@@ -100,25 +132,29 @@ def main() -> int:
     repo = os.environ.get("GH_REPO", "calendar-update-system").strip()
     branch = os.environ.get("GH_BRANCH", "main").strip()
     path = os.environ.get("GH_PATH", "output/cn_probe_results.json").strip().lstrip("/")
-    cand_url = os.environ.get(
-        "CANDIDATES_URL",
-        f"https://raw.githubusercontent.com/{owner}/{repo}/{branch}/output/candidates.json",
-    ).strip()
 
     if not token:
         print("ERROR: set GH_TOKEN in /root/be-probe/config.env", file=sys.stderr)
         return 1
 
-    print(f"Fetch candidates: {cand_url}")
+    # Prefer API (auth) then raw — both with retries
+    cand = None
+    api_cand = f"https://api.github.com/repos/{owner}/{repo}/contents/output/candidates.json?ref={branch}"
+    raw_cand = f"https://raw.githubusercontent.com/{owner}/{repo}/{branch}/output/candidates.json"
+    print(f"Fetch candidates via API ...")
     try:
-        req = urllib.request.Request(cand_url, headers={"User-Agent": "Ryukyou-BeProbe/1.2"})
-        with urllib.request.urlopen(req, timeout=60) as resp:
-            cand = json.loads(resp.read().decode("utf-8"))
-    except Exception as e:
-        print(f"raw failed ({e}), try API")
-        api = f"https://api.github.com/repos/{owner}/{repo}/contents/output/candidates.json?ref={branch}"
-        meta = http_json(api, token=token)
+        meta = http_json(api_cand, token=token)
         cand = json.loads(base64.b64decode(meta["content"]).decode("utf-8"))
+        print("  API ok")
+    except Exception as e:
+        print(f"  API failed ({e}), try raw")
+        try:
+            text = fetch_url_text(raw_cand, token=token)
+            cand = json.loads(text)
+            print("  raw ok")
+        except Exception as e2:
+            print(f"FATAL: cannot get candidates: {e2}", file=sys.stderr)
+            return 2
 
     raw_items = cand.get("candidates") or []
     items = [it for it in raw_items if str(it.get("type") or "").lower() not in SKIP_TYPES]
@@ -141,7 +177,6 @@ def main() -> int:
 
     ok = [r for r in results if r["ok"]]
     ok.sort(key=lambda r: r["ms"] if r["ms"] is not None else 9e9)
-
     compact_results = [
         {"key": r["key"], "ok": True, "ms": round(float(r["ms"]), 1)}
         for r in ok
@@ -175,8 +210,7 @@ def main() -> int:
         meta = http_json(f"{api_path}?ref={branch}", token=token)
         sha = meta.get("sha")
     except Exception as e:
-        print(f"no existing file or get sha skip: {e}")
-        sha = None
+        print(f"get sha skip: {e}")
 
     b64 = base64.b64encode(text.encode("utf-8")).decode("ascii")
     payload = {
@@ -188,7 +222,18 @@ def main() -> int:
         payload["sha"] = sha
 
     print(f"Upload bytes~{len(b64)} sha={'yes' if sha else 'new'}")
-    http_json(api_path, method="PUT", data=payload, token=token)
+    # retry upload; on 409 refresh sha once
+    try:
+        http_json(api_path, method="PUT", data=payload, token=token)
+    except Exception as e:
+        err = str(e)
+        if "409" in err or "sha" in err.lower():
+            print("upload conflict, refresh sha and retry")
+            meta = http_json(f"{api_path}?ref={branch}", token=token)
+            payload["sha"] = meta.get("sha")
+            http_json(api_path, method="PUT", data=payload, token=token)
+        else:
+            raise
     print(f"Uploaded {owner}/{repo}:{path}")
     return 0
 
