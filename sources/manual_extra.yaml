@@ -1,0 +1,22 @@
+proxies:
+  - name: "FR HY2 Alvin tip"
+    type: hysteria2
+    server: 62.210.147.2
+    port: 43115
+    password: "github.com/Alvin9999-newpac/fanqiang"
+    sni: www.microsoft.com
+    skip-cert-verify: true
+  - name: "US VLESS tip saas.sin.fan"
+    type: vless
+    server: saas.sin.fan
+    port: 443
+    uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
+    network: ws
+    tls: true
+    udp: true
+    client-fingerprint: chrome
+    servername: snip.edgeoneai.cc.cd
+    ws-opts:
+      path: "/fdip=sstp://vpn:vpn@public-vpn-200.opengw.net:443?ed=2560"
+      headers:
+        Host: snip.edgeoneai.cc.cd
