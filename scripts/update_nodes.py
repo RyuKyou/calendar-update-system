@@ -2,7 +2,7 @@
 """
 Fetch Clash YAML sources, TCP probe, dedupe.
 
-Early drop: type=http (no distinctive value, crowds out better protocols).
+Early drop: http / socks5 / socks (weak for path survival; free seats for better protos).
 Also drop HK/MO names and CN/HK/MO server IPs.
 Path-probe candidates further skip ss/vmess/socks/etc.
 """
@@ -30,7 +30,7 @@ BE_RESERVED = 128
 CN_PROBE_MAX_AGE_HOURS = 36
 
 # Fully excluded before probe / final list
-DROP_TYPES = {"http"}
+DROP_TYPES = {"http", "socks5", "socks"}
 
 SKIP_PATH_PROBE_TYPES = {
     "ss", "ssr", "shadowsocks", "shadowsocksr",
@@ -50,8 +50,6 @@ PROTOCOL_RANK = {
     "trojan": 3,
     "tuic": 4,
     "wireguard": 5,
-    "socks5": 6,
-    "socks": 6,
     "ss": 20,
     "shadowsocks": 20,
     "ssr": 20,
@@ -434,7 +432,7 @@ def main():
             continue
         seen.add(k)
         deduped.append(p)
-    print(f"After dedup (http already dropped): {len(deduped)}")
+    print(f"After dedup (http/socks dropped): {len(deduped)}")
     deduped = filter_blocked_exit_servers(deduped)
 
     print(f"Overseas TCP probe ...")
