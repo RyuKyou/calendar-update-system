@@ -1,4 +1,4 @@
-updated=2026-10-11T16:36:57.320698+00:00
-final_count=512 final_beyond_Be=425 hard_cap=512
+updated=2026-10-11T23:14:47.908877+00:00
+final_count=512 final_beyond_Be=303 hard_cap=512
 drop_types=['http', 'socks', 'socks5']
-types={'trojan': 62, 'hysteria2': 36, 'vless': 355, 'anytls': 32, 'ss': 20, 'vmess': 7}
+types={'trojan': 50, 'hysteria2': 34, 'vless': 370, 'anytls': 28, 'ss': 19, 'vmess': 11}
