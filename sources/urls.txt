@@ -1,26 +1,24 @@
 # sources — longevity first; avoid CN/TW/HK/MO/VN/TH focused feeds
-# refreshed 2026-10-11
-# YAML subscriptions only. http/socks auto-dropped by update_nodes.
+# refreshed 2026-10-12
+# YAML subscriptions only. Prefer verified aggregators and non-restricted regions.
 
-https://raw.githubusercontent.com/Au1rxx/free-vpn-subscriptions/main/output/clash.yaml | Au1rxx full hourly HTTP-verified
-https://raw.githubusercontent.com/Au1rxx/free-vpn-subscriptions/main/output/by-country/clash-US.yaml | Au1rxx US Reality-heavy
-https://raw.githubusercontent.com/Au1rxx/free-vpn-subscriptions/main/output/by-country/clash-CA.yaml | Au1rxx CA
-https://raw.githubusercontent.com/Au1rxx/free-vpn-subscriptions/main/output/by-country/clash-NL.yaml | Au1rxx NL
-https://raw.githubusercontent.com/Au1rxx/free-vpn-subscriptions/main/output/by-country/clash-DE.yaml | Au1rxx DE
-https://raw.githubusercontent.com/Au1rxx/free-vpn-subscriptions/main/output/by-country/clash-FR.yaml | Au1rxx FR
-https://raw.githubusercontent.com/Au1rxx/free-vpn-subscriptions/main/output/by-country/clash-GB.yaml | Au1rxx GB
-https://raw.githubusercontent.com/Au1rxx/free-vpn-subscriptions/main/output/by-country/clash-FI.yaml | Au1rxx FI
-https://raw.githubusercontent.com/Au1rxx/free-vpn-subscriptions/main/output/by-country/clash-CH.yaml | Au1rxx CH
-https://raw.githubusercontent.com/Au1rxx/free-vpn-subscriptions/main/output/protocol/hysteria2/clash-0001.yaml | Au1rxx Hysteria2 shard
+https://raw.githubusercontent.com/Au1rxx/free-vpn-subscriptions/main/output/clash.yaml | Au1rxx full hourly HTTP-verified multi-protocol
+https://raw.githubusercontent.com/Au1rxx/free-vpn-subscriptions/main/output/by-country/clash-US.yaml | Au1rxx US verified
+https://raw.githubusercontent.com/Au1rxx/free-vpn-subscriptions/main/output/by-country/clash-JP.yaml | Au1rxx Japan verified
+https://raw.githubusercontent.com/Au1rxx/free-vpn-subscriptions/main/output/by-country/clash-SG.yaml | Au1rxx Singapore verified
+https://raw.githubusercontent.com/Au1rxx/free-vpn-subscriptions/main/output/by-country/clash-KR.yaml | Au1rxx Korea verified
+https://raw.githubusercontent.com/Au1rxx/free-vpn-subscriptions/main/output/by-country/clash-NL.yaml | Au1rxx Netherlands verified
+https://raw.githubusercontent.com/Au1rxx/free-vpn-subscriptions/main/output/by-country/clash-DE.yaml | Au1rxx Germany verified
+https://raw.githubusercontent.com/Au1rxx/free-vpn-subscriptions/main/output/by-country/clash-CA.yaml | Au1rxx Canada verified
+https://raw.githubusercontent.com/Au1rxx/free-vpn-subscriptions/main/output/protocol/hysteria2/clash-0001.yaml | Au1rxx Hysteria2 focused shard
+https://raw.githubusercontent.com/Ruk1ng001/freeSub/main/clash.yaml | Ruk1ng001 freeSub scored daily
+https://raw.githubusercontent.com/yy1588133/proxy-pool/main/clash.yaml | proxy-pool aggregated 6h
 https://raw.githubusercontent.com/ovmvo/FreeSub/refs/heads/main/sub/permanent/mihomo.yaml | ovmvo permanent mihomo 8h
-https://raw.githubusercontent.com/peasoft/NoMoreWalls/master/list.meta.yml | NoMoreWalls meta long-running
-https://raw.githubusercontent.com/chengaopan/AutoMergePublicNodes/master/list.meta.yml | AutoMerge meta
-https://raw.githubusercontent.com/Ruk1ng001/freeSub/main/clash.yaml | Ruk1ng001 freeSub daily
-https://raw.githubusercontent.com/wzmwayne/proxy-node/main/output/aio/clash.yaml | wzmwayne AIO tested 4h
+https://raw.githubusercontent.com/clashv2ray-hub/clashfree/refs/heads/main/clash.yaml | clashfree hourly
 https://raw.githubusercontent.com/snakem982/proxypool/main/source/clash-meta-2.yaml | snakem982 proxypool meta
-https://gitlab.com/free9999/ipupdate/-/raw/master/backup/img/1/2/ipp/quick/1/config.yaml | fixed-gitlab-ipupdate long-lived mirror
-https://www.67867867.xyz/Alvin9999/PAC/refs/heads/master/backup/img/1/2/ipp/quick/1/config.yaml | fixed-alvin-mirror
-https://raw.githubusercontent.com/freenodess/freenodess/refs/heads/main/nodes/clash.yaml | freenodess daily
-https://raw.githubusercontent.com/danmaifu/mianfeijiedian/main/feed/clash-20261010.yaml | danmaifu daily snapshot
-https://raw.githubusercontent.com/ssrsub/ssr/master/clash.yaml | ssrsub clash (~185; mostly http dropped; keep vless/anytls)
-https://raw.githubusercontent.com/RyuKyou/calendar-update-system/main/sources/manual_extra.yaml | manual hy2+vless from tips
+https://www.xrayvip.com/free.yaml | xrayfree daily fixed
+https://static.v2rayshare.net/2026/10/20261011.yaml | v2rayShare daily
+https://node.nodefree.me/2026/10/20261011.yaml | NodeFree daily
+https://raw.githubusercontent.com/python-net-dev/anytls-vless-reality-hysteria2-tuic-ss/refs/heads/main/.github/links/clash.yaml | Reality/HY2/TUIC focused
+https://raw.githubusercontent.com/peasoft/NoMoreWalls/master/list.meta.yml | NoMoreWalls meta
+https://raw.githubusercontent.com/chengaopan/AutoMergePublicNodes/master/list.meta.yml | AutoMerge meta
