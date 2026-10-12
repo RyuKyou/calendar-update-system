@@ -2,9 +2,9 @@
 """
 Fetch Clash YAML sources, TCP probe, dedupe.
 
-Early drop: http / socks5 / socks (weak for path survival; free seats for better protos).
-Also drop HK/MO names and CN/HK/MO server IPs.
-Path-probe candidates further skip ss/vmess/socks/etc.
+Early drop: http / socks5 / socks.
+Drop HK/MO names and CN/HK/MO server IPs.
+Name format: 🟢 US [Be] [anytls] original | 120ms  (ISO code after light)
 """
 
 from __future__ import annotations
@@ -29,7 +29,6 @@ MAX_NODES = 512
 BE_RESERVED = 128
 CN_PROBE_MAX_AGE_HOURS = 36
 
-# Fully excluded before probe / final list
 DROP_TYPES = {"http", "socks5", "socks"}
 
 SKIP_PATH_PROBE_TYPES = {
@@ -58,6 +57,9 @@ PROTOCOL_RANK = {
 }
 DEFAULT_PROTOCOL_RANK = 10
 
+# Preferred region rank for sorting (lower = better)
+PREFERRED_CC_RANK = {"US": 0, "CA": 1, "NO": 2, "SG": 3}
+
 HK_MO_PATTERNS = [
     r"香港", r"澳门", r"澳門", r"\bhk\b", r"\bhkg\b", r"hong\s*kong",
     r"\bmo\b", r"\bmac\b", r"macau", r"macao", r"🇭🇰", r"🇲🇴",
@@ -70,28 +72,67 @@ NAME_SCRUB_RE = re.compile(
     re.I,
 )
 
-REGION_PATTERNS: list[tuple[int, re.Pattern[str]]] = [
-    (0, re.compile(
-        r"美国|美國|\busa\b|\bus\b|united\s*states|california|los\s*angeles|"
+# (ISO-3166 alpha-2, pattern) — first match wins; order matters for ambiguous tokens
+CC_PATTERNS: list[tuple[str, re.Pattern[str]]] = [
+    ("US", re.compile(
+        r"美国|美國|\busa\b|united\s*states|california|los\s*angeles|"
         r"san\s*francisco|new\s*york|seattle|chicago|dallas|miami|phoenix|"
-        r"\bla\b|\bny\b|\bsfo\b|\bsjc\b|\biad\b|\bord\b|\bdfw\b|🇺🇸", re.I)),
-    (1, re.compile(r"加拿大|\bcanada\b|\bca\b|toronto|vancouver|montreal|🇨🇦", re.I)),
-    (2, re.compile(r"挪威|\bnorway\b|\bno\b|oslo|bergen|🇳🇴", re.I)),
-    (3, re.compile(r"新加坡|\bsingapore\b|\bsg\b|\bsin\b|🇸🇬", re.I)),
+        r"\bla\b|\bny\b|\bsfo\b|\bsjc\b|\biad\b|\bord\b|\bdfw\b|"
+        r"🇺🇸|(?<![a-z])us(?![a-z])", re.I)),
+    ("CA", re.compile(r"加拿大|\bcanada\b|toronto|vancouver|montreal|🇨🇦|(?<![a-z])ca(?![a-z])", re.I)),
+    ("NO", re.compile(r"挪威|\bnorway\b|oslo|bergen|🇳🇴|(?<![a-z])no(?![a-z])", re.I)),
+    ("SG", re.compile(r"新加坡|\bsingapore\b|\bsin\b|🇸🇬|(?<![a-z])sg(?![a-z])", re.I)),
+    ("JP", re.compile(r"日本|\bjapan\b|tokyo|osaka|\btyo\b|\bhnd\b|🇯🇵|(?<![a-z])jp(?![a-z])", re.I)),
+    ("KR", re.compile(r"韩国|韓國|\bkorea\b|seoul|\bicn\b|🇰🇷|(?<![a-z])kr(?![a-z])", re.I)),
+    ("DE", re.compile(r"德国|德國|\bgermany\b|frankfurt|berlin|munich|\bfra\b|🇩🇪|(?<![a-z])de(?![a-z])", re.I)),
+    ("GB", re.compile(r"英国|英國|\buk\b|\bbritain\b|\bengland\b|london|\blhr\b|🇬🇧|(?<![a-z])gb(?![a-z])", re.I)),
+    ("FR", re.compile(r"法国|法國|\bfrance\b|paris|\bcdg\b|🇫🇷|(?<![a-z])fr(?![a-z])", re.I)),
+    ("NL", re.compile(r"荷兰|荷蘭|\bnetherlands\b|\bholland\b|amsterdam|\bams\b|🇳🇱|(?<![a-z])nl(?![a-z])", re.I)),
+    ("FI", re.compile(r"芬兰|芬蘭|\bfinland\b|helsinki|🇫🇮|(?<![a-z])fi(?![a-z])", re.I)),
+    ("SE", re.compile(r"瑞典|\bsweden\b|stockholm|🇸🇪|(?<![a-z])se(?![a-z])", re.I)),
+    ("CH", re.compile(r"瑞士|\bswitzerland\b|zurich|geneva|🇨🇭|(?<![a-z])ch(?![a-z])", re.I)),
+    ("AU", re.compile(r"澳大利亚|澳洲|\baustralia\b|sydney|melbourne|\bsyd\b|🇦🇺|(?<![a-z])au(?![a-z])", re.I)),
+    ("TW", re.compile(r"台湾|台灣|\btaiwan\b|taipei|🇹🇼|(?<![a-z])tw(?![a-z])", re.I)),
+    ("IN", re.compile(r"印度|\bindia\b|mumbai|\bbom\b|🇮🇳|(?<![a-z])in(?![a-z])", re.I)),
+    ("TR", re.compile(r"土耳其|\bturkey\b|istanbul|🇹🇷|(?<![a-z])tr(?![a-z])", re.I)),
+    ("RU", re.compile(r"俄罗斯|俄羅斯|\brussia\b|moscow|🇷🇺|(?<![a-z])ru(?![a-z])", re.I)),
+    ("BR", re.compile(r"巴西|\bbrazil\b|sao\s*paulo|🇧🇷|(?<![a-z])br(?![a-z])", re.I)),
+    ("IE", re.compile(r"爱尔兰|愛爾蘭|\bireland\b|dublin|🇮🇪|(?<![a-z])ie(?![a-z])", re.I)),
+    ("IT", re.compile(r"意大利|\bitaly\b|milan|rome|🇮🇹|(?<![a-z])it(?![a-z])", re.I)),
+    ("ES", re.compile(r"西班牙|\bspain\b|madrid|🇪🇸|(?<![a-z])es(?![a-z])", re.I)),
+    ("PL", re.compile(r"波兰|波蘭|\bpoland\b|warsaw|🇵🇱|(?<![a-z])pl(?![a-z])", re.I)),
+    ("VN", re.compile(r"越南|\bvietnam\b|hanoi|🇻🇳|(?<![a-z])vn(?![a-z])", re.I)),
+    ("TH", re.compile(r"泰国|泰國|\bthailand\b|bangkok|🇹🇭|(?<![a-z])th(?![a-z])", re.I)),
+    ("PH", re.compile(r"菲律宾|菲律賓|\bphilippines\b|manila|🇵🇭|(?<![a-z])ph(?![a-z])", re.I)),
+    ("ID", re.compile(r"印尼|印度尼西亚|\bindonesia\b|jakarta|🇮🇩|(?<![a-z])id(?![a-z])", re.I)),
+    ("MY", re.compile(r"马来|馬來|\bmalaysia\b|kuala\s*lumpur|🇲🇾|(?<![a-z])my(?![a-z])", re.I)),
+    ("AE", re.compile(r"阿联酋|迪拜|\buae\b|\bdubai\b|🇦🇪|(?<![a-z])ae(?![a-z])", re.I)),
+    ("MX", re.compile(r"墨西哥|\bmexico\b|🇲🇽|(?<![a-z])mx(?![a-z])", re.I)),
+    ("AR", re.compile(r"阿根廷|\bargentina\b|🇦🇷|(?<![a-z])ar(?![a-z])", re.I)),
+    ("ZA", re.compile(r"南非|\bsouth\s*africa\b|🇿🇦|(?<![a-z])za(?![a-z])", re.I)),
 ]
 
 
+def proxy_blob(p: dict) -> str:
+    return " ".join(str(p.get(k) or "") for k in ("name", "server", "servername", "sni", "host"))
+
+
+def detect_cc(p: dict) -> str:
+    """ISO 3166-1 alpha-2 from name/sni/host hints; XX if unknown."""
+    blob = proxy_blob(p)
+    for cc, pat in CC_PATTERNS:
+        if pat.search(blob):
+            return cc
+    return "XX"
+
+
 def is_hk_or_mo(p: dict) -> bool:
-    blob = " ".join(str(p.get(k) or "") for k in ("name", "server", "servername", "sni", "host"))
-    return bool(HK_MO_RE.search(blob))
+    return bool(HK_MO_RE.search(proxy_blob(p)))
 
 
 def region_priority(p: dict) -> int:
-    blob = " ".join(str(p.get(k) or "") for k in ("name", "server", "servername", "sni", "host"))
-    for rank, pat in REGION_PATTERNS:
-        if pat.search(blob):
-            return rank
-    return 100
+    cc = detect_cc(p)
+    return PREFERRED_CC_RANK.get(cc, 100)
 
 
 def type_priority(p: dict) -> int:
@@ -299,16 +340,18 @@ def overseas_sort_key(p: dict, overseas_ms: float):
 
 
 def format_label(p: dict, display_ms: float, beyond: bool) -> str:
+    """🟢 US [Be] [anytls] name | 120ms"""
     base = scrub_display_name(str(p["name"]))
     t = str(p.get("type") or "").lower()
     light = latency_emoji(display_ms)
+    cc = detect_cc(p)
     proto = ""
     if t == "anytls":
         proto = "[anytls] "
     elif t in ("hysteria2", "hysteria", "hy2"):
         proto = "[hy2] "
     be = "[Be] " if beyond else ""
-    return f"{light} {be}{proto}{base} | {display_ms:.0f}ms"
+    return f"{light} {cc} {be}{proto}{base} | {display_ms:.0f}ms"
 
 
 def build_config(selected: list[tuple[dict, float, float | None]], cap: int) -> str:
@@ -316,6 +359,7 @@ def build_config(selected: list[tuple[dict, float, float | None]], cap: int) -> 
     unique: list[dict] = []
     stats = {"anytls": 0, "hy2": 0, "vless": 0, "trojan": 0, "low": 0, "preferred": 0, "beyond": 0}
     lights = Counter()
+    ccs = Counter()
     for p, o_ms, be_ms in selected:
         p = dict(p)
         t = str(p.get("type") or "").lower()
@@ -336,6 +380,7 @@ def build_config(selected: list[tuple[dict, float, float | None]], cap: int) -> 
             stats["beyond"] += 1
         display = float(be_ms) if beyond else float(o_ms)
         lights[latency_emoji(display)] += 1
+        ccs[detect_cc(p)] += 1
         label = format_label(p, display, beyond)
         if label in seen_names:
             k = 2
@@ -356,7 +401,14 @@ def build_config(selected: list[tuple[dict, float, float | None]], cap: int) -> 
         "proxies": unique,
         "proxy-groups": [
             {"name": "🚀 节点选择", "type": "select", "proxies": ["♻️ 自动选择", "DIRECT"] + names},
-            {"name": "♻️ 自动选择", "type": "url-test", "proxies": names, "url": "https://www.gstatic.com/generate_204", "interval": 300},
+            {
+                "name": "♻️ 自动选择",
+                "type": "url-test",
+                "proxies": names,
+                "url": "https://www.gstatic.com/generate_204",
+                "interval": 600,
+                "tolerance": 200,
+            },
         ],
         "rules": ["GEOIP,CN,DIRECT", "MATCH,🚀 节点选择"],
     }
@@ -365,8 +417,9 @@ def build_config(selected: list[tuple[dict, float, float | None]], cap: int) -> 
     header = (
         f"# Ryukyou nodes | updated {now} | count={len(unique)} | hard_cap={cap} | "
         f"Be_reserved={BE_RESERVED} Beyond[Be]={stats['beyond']} | lights={dict(lights)} | "
-        f"anytls={stats['anytls']} hy2={stats['hy2']} vless={stats['vless']} trojan={stats['trojan']} | "
-        f"drop_types={sorted(DROP_TYPES)}\n"
+        f"cc={dict(ccs)} | anytls={stats['anytls']} hy2={stats['hy2']} "
+        f"vless={stats['vless']} trojan={stats['trojan']} | drop_types={sorted(DROP_TYPES)}\n"
+        f"# name format: <light> <ISO> [Be] [proto] <base> | <ms>ms\n"
     )
     return header + yaml.dump(cfg, allow_unicode=True, sort_keys=False, default_flow_style=False)
 
