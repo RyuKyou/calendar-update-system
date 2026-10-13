@@ -4,6 +4,7 @@ on:
   push:
     paths:
       - 'sources/urls.txt'
+      - 'sources/tg_exports/**'
       - 'scripts/update_nodes.py'
   schedule:
     # Asia/Taipei 07:10, 13:00, 19:00  (after Grok CLASHmi 07:00)
