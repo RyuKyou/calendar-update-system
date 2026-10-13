@@ -1,137 +1,20 @@
-# Selected single-node full configs — longevity & stability first
-# Avoided CN/TW/HK/MO/VN/TH. Prefer Reality / Hysteria2 / strong obfuscation from US/JP/SG/KR/NL/DE etc.
-# Sources: Au1rxx verified hourly feeds (2026-10-12). Test before relying; free nodes can drop.
-# Format: Clash-style YAML fragment or key fields. UDP supported where noted.
-
-1. VLESS Reality (US)
-   type: vless
-   name: vless-reality-us-1
-   server: 137.175.82.40
-   port: 30556
-   uuid: 949d278e-6d98-4014-84e9-59f1c6c93e0e
-   network: tcp
-   tls: true
-   flow: xtls-rprx-vision
-   client-fingerprint: safari
-   servername: www.lovelive-anime.jp
-   reality-opts:
-     public-key: EcmNQqZxyW4GCEQF-7nH54w3qgBkLzsfqFSgafGjB0E
-     short-id: d082f567
-   udp: true
-
-2. VLESS Reality (US)
-   type: vless
-   name: vless-reality-us-2
-   server: 51.81.203.63
-   port: 443
-   uuid: cb2dbb6a-a1ea-4023-9ace-6466cee57241
-   network: tcp
-   tls: true
-   flow: xtls-rprx-vision
-   client-fingerprint: chrome
-   servername: www.icloud.com
-   reality-opts:
-     public-key: nqwCf6oW49tEtmQ0EzxigZ0uu1pg0E30CS54G40Iti0
-     short-id: 4477382ff6d3d41c
-   udp: true
-
-3. Hysteria2 (US)
-   type: hysteria2
-   name: hy2-us-1
-   server: 144.24.46.175
-   port: 8443
-   password: pbgLTkd5276SN1sZ
-   sni: www.bing.com
-   skip-cert-verify: true
-   udp: true
-
-4. Hysteria2
-   type: hysteria2
-   name: hy2-2
-   server: 163.192.14.135
-   port: 50160
-   password: 099830134df5ac3a04a4b21d39b8c395
-   sni: speedtest.tinkoff.ru
-   skip-cert-verify: true
-   udp: true
-
-5. Hysteria2
-   type: hysteria2
-   name: hy2-3
-   server: hy2.123266.xyz
-   port: 33333
-   password: bce6c821-200d-421f-bf3d-7159e5246ea0
-   sni: hy2.123266.xyz
-   skip-cert-verify: true
-   udp: true
-
-6. VLESS Reality (JP)
-   type: vless
-   name: vless-reality-jp-1
-   server: 46.250.250.149
-   port: 2053
-   uuid: b4caaf57-ad77-4948-a6f5-51b3513799bf
-   network: tcp
-   tls: true
-   client-fingerprint: random
-   servername: www.apple.com
-   reality-opts:
-     public-key: hieuCHb3HYdDYHmTDyWw2SGqyfo36AVuA-wSiZMdU1M
-     short-id: 9922313fffed1c63
-   udp: true
-
-7. VLESS Reality (JP)
-   type: vless
-   name: vless-reality-jp-2
-   server: 18.183.215.124
-   port: 28573
-   uuid: 871bfce7-8440-4394-8d82-56b51f20fdad
-   network: tcp
-   tls: true
-   flow: xtls-rprx-vision
-   client-fingerprint: firefox
-   servername: www.sony.com
-   reality-opts:
-     public-key: 1DJr9toke7FRuSXjibBVuNvRnLnJnN5kXwUBG6Romzg
-     short-id: 03653bc03be10c97
-   udp: true
-
-8. VLESS Reality (JP)
-   type: vless
-   name: vless-reality-jp-3
-   server: 3.114.220.22
-   port: 10583
-   uuid: (extract from full feed)
-   network: tcp
-   tls: true
-   flow: xtls-rprx-vision
-   client-fingerprint: chrome
-   servername: www.apple.com
-   reality-opts:
-     public-key: k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0
-     short-id: 48050fab
-   udp: true
-
-9. Shadowsocks (US, basic)
-   type: ss
-   name: ss-us-1
-   server: 5.78.51.123
-   port: 1080
-   cipher: chacha20-ietf-poly1305
-   password: 8tmnvX5zYuWGVIDP2jglZw
-   udp: true
-
-10. Shadowsocks (US)
-    type: ss
-    name: ss-us-2
-    server: 66.23.205.83
-    port: 17529
-    cipher: aes-128-gcm
-    password: bdd35b65a5b716eb7a91150c06764956
-    udp: true
-
-11-20. (Additional from same verified US/JP feeds — recommend importing full country YAML for more Reality/HY2 candidates)
-    Prefer: import https://raw.githubusercontent.com/Au1rxx/free-vpn-subscriptions/main/output/by-country/clash-US.yaml
-    and filter for type: vless with reality-opts or type: hysteria2.
-    Similar for JP/SG/KR/NL.
-    All support UDP in the source configs. Longevity higher due to HTTP-verified + hourly refresh.
+1. hysteria2://96ab5cd282733fd4c312a61f972f330a@45.32.10.7:443?security=tls&sni=vp3.yysyy.online#🇯🇵JP_Hy2_702KBs | Hy2 TLS 日本 UDP优先 混淆强
+2. hysteria2://96ab5cd282733fd4c312a61f972f330a@vp3.yysyy.online:443?security=tls&sni=vp3.yysyy.online#🇯🇵JP_Hy2_699KBs | Hy2 TLS 日本 稳定候选
+3. hysteria2://184cdec28da5a09450803c8debcd2cc9@138.3.208.26:50160?insecure=1&security=tls&sni=138.3.208.26#🇯🇵JP_Hy2_654KBs | Hy2 日本 UDP
+4. vless://ee18d188-14cc-417e-beb1-70e4add6d023@142.91.108.25:443?security=reality&encryption=none&pbk=9ZCYjybxMQ7JpE39B8u_Bo-alI1LIbt5ER0E-4yMjiM&headerType=none&fp=firefox&type=tcp&flow=xtls-rprx-vision&sni=jp3.nztvpn.com&sid=ea36c03d86f91287#JP_Reality_Vision | VLESS Reality Vision 日本 强混淆
+5. vless://b98d4c6e-6770-4a31-8256-a4750cdea0e7@153.121.36.102:443?security=reality&type=tcp&packetEncoding=xudp&sni=www.amazon.com&fp=ios&flow=xtls-rprx-vision&sid=1a&pbk=0i_xAxYgSNx5NMpK2lOaWGS-CvAiD_LneYPO0MF0owo#🇯🇵JP_Reality_475KBs | VLESS Reality 日本 UDP支持
+6. trojan://UX82473651@warm-krill.rooster465.autos:443?security=tls&sni=warm-krill.rooster465.autos#🇯🇵JP_Trojan | Trojan TLS 日本
+7. trojan://UX82473651@amazed-mako.rooster465.autos:443?security=tls&sni=amazed-mako.rooster465.autos#🇯🇵JP_Trojan_496KBs | Trojan TLS 日本
+8. ss://YWVzLTEyOC1nY206c2hhZG93c29ja3M=@149.22.87.204:443#🇯🇵JP_SS_634KBs | Shadowsocks 日本
+9. ss://YWVzLTEyOC1nY206c2hhZG93c29ja3NAMTQ5LjIyLjg3LjI0MDo0NDM=#🇺🇸US_SS | Shadowsocks 美国
+10. vless://e5cc16a6-ea42-46b2-82ae-ad2157e1641b@172.64.150.43:2082?security=none&type=ws&path=/&host=hhlfy.twiladaphne.ndjp.net&packetEncoding=xudp&sni=hhlfy.twiladaphne.ndjp.net#🇫🇷FR_VLESS_WS | VLESS WS 法国 UDP
+11. hysteria2://96ab5cd282733fd4c312a61f972f330a@45.32.10.7:443?security=tls&sni=vp3.yysyy.online#🇯🇵JP_Hy2_backup | Hy2 备份 日本
+12. vless://d342d11e-d224-4463-b982-532309285094@172.66.0.162:443?path=/&security=tls&encryption=none&insecure=0&host=ccc.010304.xyz&fp=chrome&type=ws&allowInsecure=0&sni=ccc.010304.xyz#WS_TLS | VLESS WS TLS 混淆
+13. ss://YWVzLTI1Ni1nY206M2VPRmVOc3NkZTdQWVlNdg@84.247.155.196:80#SS_EU | Shadowsocks 欧洲
+14. vless://e6df2095-a73c-4043-8693-8d5a03686870@188.114.97.6:443?path=%2&security=tls&alpn=http/1.1&encryption=none&insecure=0&host=lucasjow.us.ci&fp=chrome&ech=cloudflare-ech.com+udp://1.1.1.1&type=ws&allowInsecure=0&sni=lucasjow.us.ci#VLESS_WS_ECH | VLESS WS 带ECH 强隐私
+15. trojan://UX82473651@warm-krill.rooster465.autos:443?security=tls&sni=warm-krill.rooster465.autos#JP_Trojan_2 | Trojan 日本备份
+16. hysteria2://184cdec28da5a09450803c8debcd2cc9@138.3.208.26:50160?insecure=1&security=tls&sni=138.3.208.26#JP_Hy2_2 | Hy2 日本备份
+17. vless://b98d4c6e-6770-4a31-8256-a4750cdea0e7@153.121.36.102:443?security=reality&type=tcp&packetEncoding=xudp&sni=www.amazon.com&fp=ios&flow=xtls-rprx-vision&sid=1a&pbk=0i_xAxYgSNx5NMpK2lOaWGS-CvAiD_LneYPO0MF0owo#JP_Reality_2 | Reality 日本备份
+18. ss://YWVzLTEyOC1nY206c2hhZG93c29ja3M=@149.22.87.204:443#JP_SS_2 | SS 日本备份
+19. vless://e5cc16a6-ea42-46b2-82ae-ad2157e1641b@104.17.44.17:8080?security=none&type=ws&path=/sg-melbi&host=hhlfy.twiladaphne.ndjp.net&packetEncoding=xudp#FR_VLESS_WS_2 | VLESS WS 法国
+20. hysteria2://96ab5cd282733fd4c312a61f972f330a@vp3.yysyy.online:443?security=tls&sni=vp3.yysyy.online#JP_Hy2_3 | Hy2 日本优先稳定
