@@ -3,8 +3,8 @@
 R2S path probe + upload cn_probe_results.json.
 Stdlib only. Prefer DIRECT egress (not through TUN/proxy) for GitHub HTTPS.
 
-Skips: ss ssr shadowsocks vmess http socks5 hysteria tuic wireguard snell
-Keeps: anytls hysteria2/hy2 vless trojan ...
+Skips: http socks5 socks wireguard snell
+Keeps: anytls hysteria2/hy2 vless trojan ss ssr vmess ...
 """
 
 from __future__ import annotations
@@ -28,10 +28,8 @@ HTTP_RETRIES = 5
 HTTP_BACKOFF = 3.0
 
 SKIP_TYPES = {
-    "ss", "ssr", "shadowsocks", "shadowsocksr",
-    "vmess", "http", "socks5", "socks",
-    "hysteria",
-    "tuic", "wireguard", "snell",
+    "http", "socks5", "socks",
+    "wireguard", "snell",
 }
 
 CONFIG_PATHS = [
@@ -74,7 +72,7 @@ def http_json(
         req = urllib.request.Request(url, data=body, method=method)
         req.add_header("Accept", "application/vnd.github+json")
         req.add_header("X-GitHub-Api-Version", "2022-11-28")
-        req.add_header("User-Agent", "Ryukyou-BeProbe/1.3")
+        req.add_header("User-Agent", "Ryukyou-BeProbe/1.4")
         if body is not None:
             req.add_header("Content-Type", "application/json; charset=utf-8")
             req.add_header("Content-Length", str(len(body)))
@@ -86,7 +84,6 @@ def http_json(
                 return json.loads(raw) if raw else {}
         except urllib.error.HTTPError as e:
             err = e.read().decode("utf-8", errors="replace")
-            # 409 conflict / 422 often need fresh sha — don't spin forever
             if e.code in (400, 401, 403, 404, 409, 422):
                 raise RuntimeError(f"HTTP {e.code} {url}: {err[:500]}") from e
             last_err = RuntimeError(f"HTTP {e.code} {url}: {err[:300]}")
@@ -100,7 +97,7 @@ def http_json(
 def fetch_url_text(url: str, token: str | None = None, retries: int = HTTP_RETRIES) -> str:
     last_err: Exception | None = None
     for attempt in range(1, retries + 1):
-        req = urllib.request.Request(url, headers={"User-Agent": "Ryukyou-BeProbe/1.3"})
+        req = urllib.request.Request(url, headers={"User-Agent": "Ryukyou-BeProbe/1.4"})
         if token:
             req.add_header("Authorization", f"Bearer {token}")
         try:
@@ -137,7 +134,6 @@ def main() -> int:
         print("ERROR: set GH_TOKEN in /root/be-probe/config.env", file=sys.stderr)
         return 1
 
-    # Prefer API (auth) then raw — both with retries
     cand = None
     api_cand = f"https://api.github.com/repos/{owner}/{repo}/contents/output/candidates.json?ref={branch}"
     raw_cand = f"https://raw.githubusercontent.com/{owner}/{repo}/{branch}/output/candidates.json"
@@ -222,7 +218,6 @@ def main() -> int:
         payload["sha"] = sha
 
     print(f"Upload bytes~{len(b64)} sha={'yes' if sha else 'new'}")
-    # retry upload; on 409 refresh sha once
     try:
         http_json(api_path, method="PUT", data=payload, token=token)
     except Exception as e:
