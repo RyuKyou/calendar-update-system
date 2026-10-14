@@ -7,11 +7,11 @@ on:
       - 'sources/tg_exports/**'
       - 'scripts/update_nodes.py'
   schedule:
-    # After R2S probe upload (R2S recommended: 07:00 / 13:00 / 19:00 Taipei)
+    # After R2S probe upload (R2S: 07:00 / 13:00 / 19:00 Taipei)
     # GitHub aggregate: 07:30 / 13:30 / 19:30 Taipei
-    - cron: "30 23 * * *"   # 07:30 Taipei
-    - cron: "30 5 * * *"    # 13:30 Taipei
-    - cron: "30 11 * * *"   # 19:30 Taipei
+    - cron: "30 23 * * *"
+    - cron: "30 5 * * *"
+    - cron: "30 11 * * *"
   workflow_dispatch:
 
 jobs:
@@ -36,7 +36,17 @@ jobs:
           python -m pip install --upgrade pip
           pip install requests PyYAML
 
-      - name: Fetch, probe, dedup, write clash_clean.yaml
+      - name: Install mihomo
+        run: |
+          set -e
+          VER=v1.19.32
+          URL="https://github.com/MetaCubeX/mihomo/releases/download/${VER}/mihomo-linux-amd64-compatible-${VER}.gz"
+          curl -sL "$URL" | gunzip > /usr/local/bin/mihomo
+          chmod +x /usr/local/bin/mihomo
+          mihomo -v || true
+          echo "MIHOMO_BIN=/usr/local/bin/mihomo" >> "$GITHUB_ENV"
+
+      - name: Fetch, deep-probe, write clash_clean.yaml
         run: |
           python scripts/update_nodes.py --output-dir output
 
