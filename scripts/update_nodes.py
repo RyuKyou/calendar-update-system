@@ -8,6 +8,7 @@ for subscription URLs and merges them into the fetch list.
 Early drop: http / socks5 / socks.
 Drop HK/MO names and CN/HK/MO server IPs.
 Name format: 🟢 美國 [Be] [anytls] original | 120ms
+Be_reserved=256 after R2S probe upload.
 """
 
 from __future__ import annotations
@@ -30,7 +31,7 @@ VALID_NETWORKS = {"tcp", "udp", "ws", "http", "h2", "grpc", "raw"}
 CONNECT_TIMEOUT = 6.0
 MAX_WORKERS = 40
 MAX_NODES = 512
-BE_RESERVED = 128
+BE_RESERVED = 256
 CN_PROBE_MAX_AGE_HOURS = 36
 
 DROP_TYPES = {"http", "socks5", "socks"}
