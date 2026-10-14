@@ -6,8 +6,11 @@ on:
       - 'sources/urls.txt'
       - 'sources/tg_exports/**'
       - 'scripts/update_nodes.py'
+      - 'scripts/deep_probe.py'
+      # R2S uploads this first; then re-run aggregate with fresh path scores
+      - 'output/cn_probe_results.json'
   schedule:
-    # After R2S probe upload (R2S: 07:00 / 13:00 / 19:00 Taipei)
+    # After R2S probe window (R2S: 07:00 / 13:00 / 19:00 Taipei)
     # GitHub aggregate: 07:30 / 13:30 / 19:30 Taipei
     - cron: "30 23 * * *"
     - cron: "30 5 * * *"
@@ -54,7 +57,10 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add output/
+          # Do not stage cn_probe_results.json (owned by R2S)
+          git add output/candidates.json output/clash_clean.yaml output/nodes_stats.txt 2>/dev/null || true
+          git add output/ || true
+          git reset HEAD -- output/cn_probe_results.json 2>/dev/null || true
           if git diff --staged --quiet; then
             echo "No output changes"
             exit 0
@@ -63,14 +69,15 @@ jobs:
 
           git fetch origin main
           if ! git rebase origin/main; then
-            git checkout --ours -- output/ 2>/dev/null || true
-            git add output/
+            git checkout --ours -- output/candidates.json output/clash_clean.yaml output/nodes_stats.txt 2>/dev/null || true
+            git add output/candidates.json output/clash_clean.yaml output/nodes_stats.txt 2>/dev/null || true
             GIT_EDITOR=true git rebase --continue || {
               echo "Rebase still failing; soft reset and recommit"
               git rebase --abort || true
               git fetch origin main
               git reset --soft origin/main
-              git add output/
+              git add output/candidates.json output/clash_clean.yaml output/nodes_stats.txt
+              git reset HEAD -- output/cn_probe_results.json 2>/dev/null || true
               git commit -m "Update nodes $(date -u +%Y-%m-%dT%H:%MZ)" || true
             }
           fi
