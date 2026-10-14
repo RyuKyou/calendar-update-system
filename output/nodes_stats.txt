@@ -1,6 +1,6 @@
-updated=2026-10-14T04:49:00.460245+00:00
+updated=2026-10-14T07:13:59.752441+00:00
 source_urls=48
-final_count=299 final_beyond_Be=299 hard_cap=512 (no pad)
-deep_pass=299 path_ok=1090
+final_count=283 final_beyond_Be=283 hard_cap=512 (no pad)
+deep_pass=283 path_ok=1333
 drop_types=['http', 'socks', 'socks5']
-types={'hysteria2': 9, 'vless': 290}
+types={'hysteria2': 9, 'vless': 274}
