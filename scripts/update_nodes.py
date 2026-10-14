@@ -3,6 +3,7 @@
 Fetch Clash YAML sources, TCP probe, dedupe.
 Also scans sources/tg_exports/*.html for subscription URLs.
 Deep probe (mihomo delay+256KiB). Output only usable; never pad.
+Legacy ss/ssr/vmess allowed if they pass deep probe (ranked last).
 """
 
 from __future__ import annotations
@@ -34,8 +35,7 @@ CN_PROBE_MAX_AGE_HOURS = 36
 
 DROP_TYPES = {"http", "socks5", "socks"}
 SKIP_PATH_PROBE_TYPES = {
-    "ss", "ssr", "shadowsocks", "shadowsocksr", "vmess", "http", "socks5", "socks",
-    "hysteria", "tuic", "wireguard", "snell",
+    "http", "socks5", "socks", "wireguard", "snell",
 }
 BLOCKED_EXIT_CC = {"CN", "HK", "MO"}
 PROTOCOL_RANK = {
@@ -270,6 +270,9 @@ def format_label(p, display_ms, beyond):
     proto = ""
     if t == "anytls": proto = "[anytls] "
     elif t in ("hysteria2", "hysteria", "hy2"): proto = "[hy2] "
+    elif t in ("ss", "shadowsocks"): proto = "[ss] "
+    elif t in ("ssr", "shadowsocksr"): proto = "[ssr] "
+    elif t == "vmess": proto = "[vmess] "
     be = "[Be] " if beyond else ""
     return f"{light} {region} {be}{proto}{base} | {display_ms:.0f}ms"
 def build_config(selected, cap):
@@ -312,9 +315,9 @@ def build_config(selected, cap):
     header = (
         f"# Ryukyou nodes | updated {now} | count={len(unique)} | hard_cap={cap} | "
         f"Beyond[Be]={stats['beyond']} | lights={dict(lights)} | regions={dict(regions)} | "
-        f"anytls={stats['anytls']} hy2={stats['hy2']} vless={stats['vless']} trojan={stats['trojan']} | "
+        f"anytls={stats['anytls']} hy2={stats['hy2']} vless={stats['vless']} trojan={stats['trojan']} low={stats['low']} | "
         f"drop_types={sorted(DROP_TYPES)}\n"
-        f"# name format: <light> <繁體地區> [Be] [proto] <base> | <ms>ms | no-pad deep-probe\n"
+        f"# name format: <light> <繁體地區> [Be] [proto] <base> | <ms>ms | no-pad deep-probe + legacy try\n"
     )
     return header + yaml.dump(cfg, allow_unicode=True, sort_keys=False, default_flow_style=False)
 
@@ -374,7 +377,13 @@ def main():
     path_map = load_path_probe(Path(args.cn_probe))
     if path_map:
         pool = [p for p, _ in alive if proxy_key(p) in path_map]
-        print(f"Pool deep (R2S∩TCP): {len(pool)}")
+        # also include alive legacy not in path_map so deep can try them
+        extra = [p for p, _ in alive if proxy_key(p) not in path_map
+                 and str(p.get("type") or "").lower() in
+                 ("ss", "shadowsocks", "ssr", "shadowsocksr", "vmess", "hysteria", "tuic")]
+        # prefer path-matched first in pool order for deep ranking via quality_rank inside deep_probe
+        pool = pool + extra
+        print(f"Pool deep (R2S∩TCP + legacy extra): {len(pool)} (legacy_extra={len(extra)})")
     else:
         pool = [p for p, _ in alive]
         print(f"Pool deep (TCP): {len(pool)}")
