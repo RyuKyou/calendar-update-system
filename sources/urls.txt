@@ -1,20 +1,20 @@
-https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/clash.yaml | Clash YAML 多协议 hourly验证 含Reality/Hy2 优先JP/SG/US/KR
+https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/clash.yaml | Clash YAML 多协议 hourly验证 Reality/Hy2 优先JP/SG/US/KR/DE
 https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/by-country/clash-JP.yaml | Clash YAML 日本节点 稳定优先
 https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/by-country/clash-SG.yaml | Clash YAML 新加坡节点
 https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/by-country/clash-US.yaml | Clash YAML 美国节点
 https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/by-country/clash-KR.yaml | Clash YAML 韩国节点
 https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/by-country/clash-NL.yaml | Clash YAML 荷兰节点
-https://raw.githubusercontent.com/0xRadikal/Free-v2ray-Configs/main/verified/clash.yaml | Clash YAML 每15分钟验证 高可用
-https://www.xrayvip.com/free.yaml | Clash YAML 固定订阅 每日更新
-https://nodes.udptoos.com/subscriptions/clash.yaml | Clash YAML 每2小时更新
-https://cdn.jsdelivr.net/gh/hezhanleiok/freesub@main/output/clash.yaml | Clash YAML 家宽优先 多协议
-https://raw.githubusercontent.com/hezhanleiok/freesub/main/output/clash.yaml | Clash YAML raw 家宽节点
-https://raw.githubusercontent.com/a2470982985/getNode/main/clash.yaml | Clash YAML 每小时更新
-https://cdn.jsdelivr.net/gh/a2470982985/getNode@main/clash.yaml | Clash YAML CDN加速
-https://ghfast.top/https://raw.githubusercontent.com/free18/v2ray/refs/heads/main/c.yaml | Clash YAML 每日核验
-https://cdn.jsdelivr.net/gh/free18/v2ray@main/c.yaml | Clash YAML jsDelivr
 https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/by-country/clash-DE.yaml | Clash YAML 德国节点
 https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/by-country/clash-FR.yaml | Clash YAML 法国节点
 https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/by-country/clash-CA.yaml | Clash YAML 加拿大节点
 https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/by-country/clash-GB.yaml | Clash YAML 英国节点
-https://hysteria2.github.io/uploads/2026/10/0-20261008.yaml | Clash YAML Hy2专注 历史稳定
+https://raw.githubusercontent.com/Ruk1ng001/freeSub/main/clash.yaml | Clash YAML 自动测速评分 多协议
+https://gh-proxy.com/raw.githubusercontent.com/Ruk1ng001/freeSub/main/clash.yaml | Clash YAML 镜像加速 国内友好
+https://raw.githubusercontent.com/yy1588133/proxy-pool/main/clash.yaml | Clash YAML 每6小时聚合 去重
+https://gh-proxy.com/raw.githubusercontent.com/yy1588133/proxy-pool/main/clash.yaml | Clash YAML 镜像 6h更新
+https://raw.githubusercontent.com/kooker/FreeSubsCheck/main/mihomo.yaml | Mihomo YAML 自动同步
+https://cdn.jsdelivr.net/gh/kooker/FreeSubsCheck@main/mihomo.yaml | Mihomo YAML CDN
+https://raw.githubusercontent.com/a2470982985/getNode/main/clash.yaml | Clash YAML 每小时更新
+https://cdn.jsdelivr.net/gh/a2470982985/getNode@main/clash.yaml | Clash YAML jsDelivr
+https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/protocol/hysteria2/clash-0001.yaml | Clash YAML Hy2专注
+https://raw.githubusercontent.com/0xRadikal/Free-v2ray-Configs/main/verified/clash.yaml | Clash YAML 高频验证高可用
