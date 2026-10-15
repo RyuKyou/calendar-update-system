@@ -4,6 +4,7 @@ Fetch Clash YAML sources, TCP probe, dedupe.
 Also scans sources/tg_exports/*.html for subscription URLs.
 Deep probe (mihomo delay+256KiB). Output only usable; never pad.
 Legacy ss/ssr/vmess allowed if they pass deep probe (ranked last).
+Sticky: previous output/clash_clean.yaml nodes re-enter the pool each run.
 """
 
 from __future__ import annotations
@@ -187,6 +188,20 @@ def extract_proxies(text):
         c = clean_proxy(item, i)
         if c: out.append(c)
     return out
+
+def load_previous_final(path: Path) -> list[dict]:
+    """Seed last published clash_clean nodes so good ones can survive updates."""
+    if not path.is_file():
+        return []
+    try:
+        raw = path.read_text(encoding="utf-8", errors="replace")
+        found = extract_proxies(raw)
+        print(f"Previous final seed {path.name}: {len(found)} nodes")
+        return found
+    except Exception as e:
+        print(f"WARN previous final seed: {e}")
+        return []
+
 def proxy_key(p):
     t = str(p.get("type", "")); server = str(p.get("server", "")); port = str(p.get("port", ""))
     uid = str(p.get("uuid") or p.get("password") or p.get("auth") or "")
@@ -317,7 +332,7 @@ def build_config(selected, cap):
         f"Beyond[Be]={stats['beyond']} | lights={dict(lights)} | regions={dict(regions)} | "
         f"anytls={stats['anytls']} hy2={stats['hy2']} vless={stats['vless']} trojan={stats['trojan']} low={stats['low']} | "
         f"drop_types={sorted(DROP_TYPES)}\n"
-        f"# name format: <light> <繁體地區> [Be] [proto] <base> | <ms>ms | no-pad deep-probe + legacy try\n"
+        f"# name format: <light> <繁體地區> [Be] [proto] <base> | <ms>ms | sticky previous final\n"
     )
     return header + yaml.dump(cfg, allow_unicode=True, sort_keys=False, default_flow_style=False)
 
@@ -352,6 +367,12 @@ def main():
             all_proxies.extend(found)
         except Exception as e:
             print(f"  WARN: {e}")
+    # Sticky seed: last final list competes again in TCP + deep probe
+    prev_final = load_previous_final(out_dir / "clash_clean.yaml")
+    if prev_final:
+        all_proxies.extend(prev_final)
+        print(f"Merged previous final into candidate pool (+{len(prev_final)})")
+    prev_keys = {proxy_key(p) for p in prev_final}
     deduped, seen = [], set()
     for p in all_proxies:
         k = proxy_key(p)
@@ -371,19 +392,26 @@ def main():
     (out_dir / "candidates.json").write_text(json.dumps({
         "updated": datetime.now(timezone.utc).isoformat(), "candidates": candidates,
         "drop_types": sorted(DROP_TYPES), "skipped_path_probe_count": skipped_proto,
-        "source_url_count": len(entries),
+        "source_url_count": len(entries), "sticky_seed": len(prev_final),
     }, ensure_ascii=False, indent=2), encoding="utf-8")
     print(f"candidates.json {len(candidates)} (skipped_proto={skipped_proto})")
     path_map = load_path_probe(Path(args.cn_probe))
     if path_map:
-        pool = [p for p, _ in alive if proxy_key(p) in path_map]
-        # also include alive legacy not in path_map so deep can try them
+        pool = [p for p, _ in alive if proxy_key(p) in path_map or proxy_key(p) in prev_keys]
         extra = [p for p, _ in alive if proxy_key(p) not in path_map
+                 and proxy_key(p) not in prev_keys
                  and str(p.get("type") or "").lower() in
                  ("ss", "shadowsocks", "ssr", "shadowsocksr", "vmess", "hysteria", "tuic")]
-        # prefer path-matched first in pool order for deep ranking via quality_rank inside deep_probe
-        pool = pool + extra
-        print(f"Pool deep (R2S∩TCP + legacy extra): {len(pool)} (legacy_extra={len(extra)})")
+        seen_pool, ordered = set(), []
+        for p in pool + extra:
+            k = proxy_key(p)
+            if k in seen_pool:
+                continue
+            seen_pool.add(k)
+            ordered.append(p)
+        pool = ordered
+        sticky_n = sum(1 for p in pool if proxy_key(p) in prev_keys)
+        print(f"Pool deep (R2S∩TCP + sticky + legacy): {len(pool)} (sticky={sticky_n} legacy_extra={len(extra)})")
     else:
         pool = [p for p, _ in alive]
         print(f"Pool deep (TCP): {len(pool)}")
@@ -393,13 +421,15 @@ def main():
     (out_dir / "clash_clean.yaml").write_text(build_config(selected, cap), encoding="utf-8")
     be_n = sum(1 for _, _, c in selected if c is not None)
     type_c = Counter(str(p.get("type", "")).lower() for p, _, _ in selected)
+    sticky_kept = sum(1 for p, _, _ in selected if proxy_key(p) in prev_keys)
     (out_dir / "nodes_stats.txt").write_text(
         f"updated={datetime.now(timezone.utc).isoformat()}\n"
         f"source_urls={len(entries)}\n"
         f"final_count={len(selected)} final_beyond_Be={be_n} hard_cap={cap} (no pad)\n"
-        f"deep_pass={len(deep)} path_ok={len(path_map)}\n"
+        f"deep_pass={len(deep)} path_ok={len(path_map)} sticky_seed={len(prev_final)} sticky_kept={sticky_kept}\n"
         f"drop_types={sorted(DROP_TYPES)}\n"
         f"types={dict(type_c)}\n", encoding="utf-8")
+    print(f"Sticky kept from previous final: {sticky_kept}/{len(prev_final)}")
     print("Done.")
 
 if __name__ == "__main__":
