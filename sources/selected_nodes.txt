@@ -1,23 +1,24 @@
 # 精选单节点完整配置 (优先Reality/Hy2, 非CN/TW/HK/MO/VN/TH地区, 寿命优先, 支持UDP)
 # 格式: URI | 简短说明（协议/地区/特点）
+# 注意：免费公共节点变化快，请优先使用订阅并实时测试可用性
 
 vless://e01fcb68-3112-49da-b85d-dffb799cfc9b@156.246.88.125:26518?encryption=none&flow=xtls-rprx-vision&security=reality&sni=github.com&fp=firefox&pbk=1fa6iCY7vhoQyKu91FeaK04FN-mr1qeHnrtdyLZ79mk&sid=6caead99&type=tcp | VLESS Reality JP GitHub伪装 UDP
 vless://d56624b2-35bb-468c-9b2a-e0b0df7230c1@154.31.114.248:50159?encryption=none&flow=xtls-rprx-vision&security=reality&sni=www.cloudflare.com&fp=chrome&pbk=j4QXngGuJkUGwRj4XIrfHRohYYuEfnJlX4cvCE-WklA&sid=091e1c5db8451757&type=tcp | VLESS Reality JP Cloudflare伪装
-vless://ee18d188-14cc-417e-beb1-70e4add6d023@142.91.108.25:443?encryption=none&flow=xtls-rprx-vision&security=reality&sni=jp3.nztvpn.com&fp=chrome&pbk=9ZCYjybxMQ7JpE39B8u_Bo-alI1LIbt5ER0E-4yMjiM&sid=ea36c03d86f91287&type=tcp | VLESS Reality JP nztvpn强混淆
 vless://814bd064-544d-4255-a070-5705c03f6da9@103.75.118.228:11452?encryption=none&flow=xtls-rprx-vision&security=reality&sni=www.apple.com&fp=chrome&pbk=k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0&sid=48050fab&type=tcp | VLESS Reality JP Apple伪装
-vless://814bd064-544d-4255-a070-5705c03f6da9@3.114.220.22:19645?encryption=none&flow=xtls-rprx-vision&security=reality&sni=www.apple.com&fp=chrome&pbk=k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0&sid=48050fab&type=tcp | VLESS Reality JP AWS Apple伪装
-hysteria2://96ab5cd282733fd4c312a61f972f330a@vp3.yysyy.online:443?sni=vp3.yysyy.online | Hysteria2 JP专用域名 UDP强混淆
-hysteria2://184cdec28da5a09450803c8debcd2cc9@138.3.208.26:50160?insecure=1&sni=138.3.208.26 | Hysteria2 JP-ish 高UDP
-vless://57beeeb0-03fc-4fc9-94da-7604488a7134@funagfrdfs.alixxplay.com:35544?encryption=none&flow=xtls-rprx-vision&security=reality&sni=iosapps.itunes.apple.com&fp=ios&pbk=HrcXRHtsitc_AVlN-_8fZuRgaP-Mqa_9JJotI9OnkVc&sid=25c79e5856c7&type=tcp | VLESS Reality iOS伪装
-vless://0fd46529-707f-4d33-899b-598f5f4acffa@43.167.232.174:443?encryption=none&security=reality&sni=www.microsoft.com&fp=random&pbk=hJIfTUp7nQckx08yoBSkaaEsPdZmM054HmbYNKK4sBI&sid=b51e057820d3e14c&type=tcp | VLESS Reality MS伪装
+hysteria2://u63SxILNwtrQZ7Y1ZrFaZfsA@8.211.175.236:8443?insecure=1&security=tls&sni=bing.com | Hysteria2 JP Bing伪装 UDP
+vless://e01fcb68-3112-49da-b85d-dffb799cfc9b@jp.wxgqlfx.top:26518?security=reality&type=tcp&packetEncoding=xudp&sni=github.com&fp=chrome&flow=xtls-rprx-vision&sid=6caead99&pbk=1fa6iCY7vhoQyKu91FeaK04FN-mr1qeHnrtdyLZ79mk | VLESS Reality JP 域名伪装
 vless://64c05afc-ce81-4ba0-b697-afa04da1427e@198.23.169.170:443?encryption=none&flow=xtls-rprx-vision&security=reality&sni=download-porter.hoyoverse.com&fp=firefox&pbk=FOl1qibUWpTggolWp30DD7VQ9_xKHZPEPVQs0sQs3gI&sid=2128e27b&type=tcp | VLESS Reality US Hoyoverse伪装
 vless://36c3dcc2-17b6-4478-b8a7-3978e6d5afe9@208.84.100.209:2112?encryption=none&security=reality&sni=play.google.com&fp=chrome&pbk=p8pUe3hwND5rhAti-yRQ5qMaIkNdhxOV1K1jpbtJlEQ&sid=125ba3&type=tcp | VLESS Reality US Google伪装
 vless://6338c01a-310e-42c3-bf4f-2a20e161054b@85.155.242.37:443?encryption=none&flow=xtls-rprx-vision&security=reality&sni=hu1.aiage.work&fp=chrome&pbk=mPzNFHO4pZMzFviRkIhRd7xDUz4dMHyI-flZLOrgDVg&sid=f8379ce795f2e5ed&type=tcp | VLESS Reality HU
 vless://741809be-e44e-000b-b411-bf66f0ae3860@152.233.71.81:443?encryption=none&flow=xtls-rprx-vision&security=reality&sni=brointelengence.com&fp=chrome&pbk=6VMgXXhZdJCiOG05EyK_zTHh00kpFGrZJeZIEPgqhjY&sid=1c3e8241a8743df9&type=tcp | VLESS Reality FI
 vless://e625f8ef-f935-4c7d-a259-0f154b6842fd@2.27.21.85:443?encryption=none&flow=xtls-rprx-vision&security=reality&sni=seal-nl1.bypassme.online&fp=chrome&pbk=jQC3Kmmbu-CfUKlQaeuSn4I8dbqAZhpgihZhWu1SvBk&sid=6b69118a7847c4c3&type=tcp | VLESS Reality NL
 hysteria2://633bc3be486b646190661ac2387c150a@152.67.115.203:443?sni=www.bing.com&obfs=salamander&obfs-password=850a3fb1cd33a28f12d837578ae1a2e7&insecure=1 | Hysteria2 AU Salamander混淆 UDP
-trojan://ae7eb4dwyaz25pxwgq59@66.23.203.21:59689?security=tls&sni=66.23.203.21&allowInsecure=1 | Trojan TLS US
-vless://b8d8a5b0-867f-4491-b4e4-30edc04bb10e@104.16.10.235:443?encryption=none&security=tls&sni=u.srilankangrill.online&type=ws&path=/&host=u.srilankangrill.online | VLESS WS TLS 通用
-vless://f55e9aba-7b14-4f6f-b59a-d5b3d45c9309@109.172.54.135:8444?encryption=none&security=reality&sni=github.com&fp=chrome&pbk=FWitre1jinQR7qz5HQ0q2Q4Gg9xA9B0SyizCziN7Ch0&type=grpc&serviceName=GunService | VLESS Reality gRPC FI
-trojan://humanity@104.18.8.83:443?security=tls&sni=www.calmlunch.com&type=ws&path=/assignment&host=www.calmlunch.com | Trojan WS TLS
 vless://7cfd34ae-edad-4cc5-9d6f-066f7add7829@sg4.oh-node.com:443?encryption=none&flow=xtls-rprx-vision&security=reality&sni=www.changiairport.com&fp=chrome&pbk=I2PQq5bidT2RjVCJt2r-eSVpLNY61quSYgS2dseomF8&sid=1dd8558159ecd0&type=tcp | VLESS Reality SG 机场伪装
+vless://e5cc16a6-ea42-46b2-82ae-ad2157e1641b@104.18.0.181:2082?path=/fp&security=none&encryption=none&host=hhlfy.twiladaphne.ndjp.net&type=ws&sni=hhlfy.twiladaphne.ndjp.net | VLESS WS 通用（临时）
+trojan://Trojan%4082164024@108.61.186.37:443?allowInsecure=1&fp=chrome&security=tls&sni=jp.tronsg.com&type=tcp | Trojan TLS JP
+ss://YWVzLTEyOC1nY206c2hhZG93c29ja3M=@149.22.87.204:443 | SS JP AES
+vless://495c7195-85b8-498a-bf20-2ea9ce9175b5@162.159.130.234:443?encryption=none&security=tls&sni=snip.edgeoneai.cc.cd&fp=chrome&type=ws&host=snip.edgeoneai.cc.cd&path=%2Ffdip%3Dsstp%3A%2F%2Fvpn%3Avpn%40public-vpn-200.opengw.net%3A443%3Fed%3D2560 | VLESS WS TLS US
+vless://eb8613e3-8393-4cff-a3ad-6501fd4adc63@152.69.195.67:47878?encryption=none&security=&type=tcp | VLESS TCP JP
+hysteria2://iL4nX2BQ3NSbn0poKQcb@nas119.eu.cc:8443?sni=nas119.eu.cc | Hysteria2 US 域名
+vless://ee18d188-14cc-417e-beb1-70e4add6d023@142.91.108.25:443?encryption=none&flow=xtls-rprx-vision&security=reality&sni=jp3.nztvpn.com&fp=chrome&pbk=9ZCYjybxMQ7JpE39B8u_Bo-alI1LIbt5ER0E-4yMjiM&sid=ea36c03d86f91287&type=tcp | VLESS Reality JP nztvpn
+vless://0fd46529-707f-4d33-899b-598f5f4acffa@43.167.232.174:443?encryption=none&security=reality&sni=www.microsoft.com&fp=random&pbk=hJIfTUp7nQckx08yoBSkaaEsPdZmM054HmbYNKK4sBI&sid=b51e057820d3e14c&type=tcp | VLESS Reality MS伪装
