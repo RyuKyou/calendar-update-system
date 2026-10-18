@@ -6,15 +6,15 @@ https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/by-country/clas
 https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/by-country/clash-DE.yaml | Clash YAML 德国节点
 https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/by-country/clash-KR.yaml | Clash YAML 韩国节点
 https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/by-country/clash-FI.yaml | Clash YAML 芬兰节点
-https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/stable/clash-0001.yaml | Clash YAML 高质量Stable分片
-https://raw.githubusercontent.com/morpheusadam/v2ray-config/main/subs/bundles/reality.txt | Reality专用订阅
-https://raw.githubusercontent.com/morpheusadam/v2ray-config/main/subs/bundles/hysteria2.txt | Hysteria2专用订阅 UDP优先
-https://raw.githubusercontent.com/morpheusadam/v2ray-config/main/subs/bundles/best.txt | Best精选多协议
-https://raw.githubusercontent.com/0xRadikal/Free-v2ray-Configs/main/top100.txt | Top100低延迟验证节点
-https://gh-proxy.com/raw.githubusercontent.com/yy1588133/proxy-pool/main/clash.yaml | Clash YAML 6h聚合去重墙内可达
-https://raw.githubusercontent.com/PuddinCat/BestClash/refs/heads/main/proxies.yaml | Clash YAML 30min测速更新
-https://cdn.jsdelivr.net/gh/LeilaoMi/AutoMergePublicNodes-Optimized@main/output/verified.yaml | Clash YAML 真测verified CDN
-https://raw.githubusercontent.com/python-net-dev/anytls-vless-reality-hysteria2-tuic-ss/refs/heads/main/.github/links/clash.yaml | Reality/Hy2/TUIC每日优选Clash
-https://freenode.biz/api/featured?format=clash | Hysteria2/VLESS聚合Clash订阅
 https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/by-country/clash-GB.yaml | Clash YAML 英国节点
-https://raw.githubusercontent.com/nikita29a/FreeProxyList/refs/heads/main/mirror/1.txt | 每日Reality/Hy2/TUIC镜像订阅
+https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/by-country/clash-CA.yaml | Clash YAML 加拿大节点
+https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/by-country/clash-FR.yaml | Clash YAML 法国节点
+https://gh-proxy.com/raw.githubusercontent.com/yy1588133/proxy-pool/main/clash.yaml | Clash YAML 6h聚合去重墙内可达
+https://raw.githubusercontent.com/python-net-dev/anytls-vless-reality-hysteria2-tuic-ss/refs/heads/main/.github/links/clash.yaml | Reality/Hy2/TUIC每日优选Clash
+https://cdn.jsdelivr.net/gh/free18/v2ray@main/c.yaml | Clash YAML free18每日更新
+https://github.com/AkkunYo/HysteriaNode/releases/download/prerelease/clash.yaml | Hysteria2优先Clash聚合
+https://raw.githubusercontent.com/PuddinCat/BestClash/refs/heads/main/proxies.yaml | Clash YAML 30min测速更新
+https://ghfast.top/https://raw.githubusercontent.com/huiwin/NodeCollection/main/output/merged/latest.clash.yaml | 综合Clash订阅
+https://freenode.biz/api/featured?format=clash | Hysteria2/VLESS聚合Clash订阅
+https://raw.githubusercontent.com/0xRadikal/Free-v2ray-Configs/main/top100.txt | Top100低延迟验证节点
+https://raw.githubusercontent.com/morpheusadam/v2ray-config/main/subs/bundles/reality.txt | Reality专用订阅
