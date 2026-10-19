@@ -9,12 +9,12 @@ https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/by-country/clas
 https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/by-country/clash-GB.yaml | Clash YAML 英国节点
 https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/by-country/clash-CA.yaml | Clash YAML 加拿大节点
 https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/by-country/clash-FR.yaml | Clash YAML 法国节点
-https://gh-proxy.com/raw.githubusercontent.com/yy1588133/proxy-pool/main/clash.yaml | Clash YAML 6h聚合去重墙内可达
+https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/stable/clash-0001.yaml | Stable 高质量Clash分片
 https://raw.githubusercontent.com/python-net-dev/anytls-vless-reality-hysteria2-tuic-ss/refs/heads/main/.github/links/clash.yaml | Reality/Hy2/TUIC每日优选Clash
-https://cdn.jsdelivr.net/gh/free18/v2ray@main/c.yaml | Clash YAML free18每日更新
+https://gh-proxy.com/raw.githubusercontent.com/yy1588133/proxy-pool/main/clash.yaml | Clash YAML 6h聚合去重墙内可达
+https://freenode.biz/api/featured?format=clash | Featured Clash聚合Hy2/VLESS
+https://cdn.jsdelivr.net/gh/free18/v2ray@main/c.yaml | free18每日Clash YAML
 https://github.com/AkkunYo/HysteriaNode/releases/download/prerelease/clash.yaml | Hysteria2优先Clash聚合
-https://raw.githubusercontent.com/PuddinCat/BestClash/refs/heads/main/proxies.yaml | Clash YAML 30min测速更新
-https://ghfast.top/https://raw.githubusercontent.com/huiwin/NodeCollection/main/output/merged/latest.clash.yaml | 综合Clash订阅
-https://freenode.biz/api/featured?format=clash | Hysteria2/VLESS聚合Clash订阅
-https://raw.githubusercontent.com/0xRadikal/Free-v2ray-Configs/main/top100.txt | Top100低延迟验证节点
-https://raw.githubusercontent.com/morpheusadam/v2ray-config/main/subs/bundles/reality.txt | Reality专用订阅
+https://raw.githubusercontent.com/PuddinCat/BestClash/refs/heads/main/proxies.yaml | 30min测速Clash YAML
+https://raw.githubusercontent.com/0xRadikal/Free-v2ray-Configs/main/verified/clash.yaml | 3轮验证Clash YAML
+https://raw.githubusercontent.com/morpheusadam/v2ray-config/main/subs/bundles/hysteria2.txt | Hy2专用订阅(非YAML但可转)
