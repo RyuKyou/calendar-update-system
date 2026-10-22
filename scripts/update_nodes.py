@@ -5,7 +5,7 @@ Also scans sources/tg_exports/*.html for subscription URLs.
 Deep probe (mihomo delay+256KiB). Output only usable; never pad.
 Legacy ss/ssr/vmess allowed if they pass deep probe (ranked last).
 Sticky: previous output/clash_clean.yaml nodes re-enter the pool each run.
-Name format: light [Be]? base (short)
+Name format: light region [Be]? base
 """
 
 from __future__ import annotations
@@ -288,12 +288,13 @@ def load_path_probe(path):
 def overseas_sort_key(p, overseas_ms):
     return (region_priority(p), type_priority(p), overseas_ms)
 def format_label(p, display_ms, beyond):
-    """Short name: light + optional [Be] + base (max 3 pieces)."""
+    """light + region + optional [Be] + base; no proto / latency suffix."""
     base = scrub_display_name(str(p["name"]))
     light = latency_emoji(display_ms)
+    region = CC_ZH.get(detect_cc(p), "未知")
     if beyond:
-        return f"{light} [Be] {base}"
-    return f"{light} {base}"
+        return f"{light} {region} [Be] {base}"
+    return f"{light} {region} {base}"
 def build_config(selected, cap):
     seen_names, unique = set(), []
     stats = {"anytls": 0, "hy2": 0, "vless": 0, "trojan": 0, "low": 0, "preferred": 0, "beyond": 0}
@@ -336,7 +337,7 @@ def build_config(selected, cap):
         f"Beyond[Be]={stats['beyond']} | lights={dict(lights)} | regions={dict(regions)} | "
         f"anytls={stats['anytls']} hy2={stats['hy2']} vless={stats['vless']} trojan={stats['trojan']} low={stats['low']} | "
         f"drop_types={sorted(DROP_TYPES)}\n"
-        f"# name format: <light> [Be]? <base> | short sticky names\n"
+        f"# name format: <light> <region> [Be]? <base>\n"
     )
     return header + yaml.dump(cfg, allow_unicode=True, sort_keys=False, default_flow_style=False)
 
