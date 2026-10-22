@@ -1,4 +1,4 @@
-https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/clash.yaml | Clash YAML 每小时验证 Reality/Hy2/VLESS 优先US/JP/SG/NL/DE
+https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/clash.yaml | Clash YAML 每小时验证 Reality/Hy2/VLESS 优先US/JP/SG/NL/DE/KR
 https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/by-country/clash-JP.yaml | Clash YAML 日本节点 低延迟强混淆 UDP
 https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/by-country/clash-US.yaml | Clash YAML 美国节点 大量Reality
 https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/by-country/clash-SG.yaml | Clash YAML 新加坡节点
@@ -7,15 +7,14 @@ https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/by-country/clas
 https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/by-country/clash-KR.yaml | Clash YAML 韩国节点
 https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/by-country/clash-CA.yaml | Clash YAML 加拿大节点
 https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/by-country/clash-FR.yaml | Clash YAML 法国节点
-https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/by-country/clash-FI.yaml | Clash YAML 芬兰节点
 https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/by-country/clash-GB.yaml | Clash YAML 英国节点
-https://raw.githubusercontent.com/LeilaoMi/AutoMergePublicNodes-Optimized/main/output/verified.yaml | 真测验证Clash YAML Reality优先 壁内可达
-https://cdn.jsdelivr.net/gh/LeilaoMi/AutoMergePublicNodes-Optimized@main/output/global.yaml | Global验证Clash
+https://cdn.jsdelivr.net/gh/LeilaoMi/AutoMergePublicNodes-Optimized@main/output/verified.yaml | 真测验证Clash YAML Reality优先 壁内可达
+https://cdn.jsdelivr.net/gh/LeilaoMi/AutoMergePublicNodes-Optimized@main/output/global.yaml | Global验证Clash YAML
 https://raw.githubusercontent.com/0xRadikal/Free-v2ray-Configs/main/verified/clash.yaml | 3轮验证Clash YAML 高稳定
-https://raw.githubusercontent.com/0xRadikal/Free-v2ray-Configs/main/top100.txt | Top100验证节点 Base64
-https://raw.githubusercontent.com/morpheusadam/v2ray-config/main/subs/bundles/best.txt | Best精选订阅
+https://raw.githubusercontent.com/0xRadikal/Free-v2ray-Configs/main/fast/clash.yaml | Fast验证Clash YAML 低延迟
+https://raw.githubusercontent.com/yy1588133/proxy-pool/main/clash.yaml | 聚合每6h更新Clash YAML 多源
+https://raw.githubusercontent.com/wzmwayne/proxy-node/main/output/aio/clash.yaml | AIO精选测速Clash YAML 每4h
+https://raw.githubusercontent.com/morpheusadam/v2ray-config/main/subs/bundles/best.txt | Best精选订阅 Base64
 https://raw.githubusercontent.com/morpheusadam/v2ray-config/main/subs/bundles/reality.txt | Reality专项订阅
 https://raw.githubusercontent.com/morpheusadam/v2ray-config/main/subs/bundles/hysteria2.txt | Hysteria2专项订阅
-https://github.com/AkkunYo/HysteriaNode/releases/download/prerelease/clash.yaml | Hy2优先Clash 每6h更新
-https://raw.githubusercontent.com/Subzio/subzio/main/HYSTERIA2.txt | Hy2累积节点列表
 https://freevpnkeys.com/sub/all | FreeVPNKeys Reality/Hy2自动更新订阅
