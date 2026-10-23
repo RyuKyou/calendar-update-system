@@ -2,21 +2,21 @@
 # 格式: URI | 简短说明（协议/地区/特点）
 # 注意：免费公共节点变化快，请优先使用订阅并实时测试可用性
 
-vless://ee18d188-14cc-417e-beb1-70e4add6d023@142.91.108.25:443?flow=xtls-rprx-vision&fp=chrome&pbk=9ZCYjybxMQ7JpE39B8u_Bo-alI1LIbt5ER0E-4yMjiM&security=reality&sid=ea36c03d86f91287&sni=jp3.nztvpn.com&type=tcp | VLESS Reality JP 低延迟UDP
-vless://814bd064-544d-4255-a070-5705c03f6da9@3.114.220.22:19645?flow=xtls-rprx-vision&fp=chrome&pbk=k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0&security=reality&sid=48050fab&sni=www.apple.com&type=tcp | VLESS Reality JP Apple伪装UDP
-vless://82eb8419-59f4-4d3e-9106-d05d22af615c@45.202.254.20:9443?flow=xtls-rprx-vision&fp=chrome&pbk=0hIFPaEn4RdFib8_eP8HYxMywR5izEwM3JA2W1Zo8U4&security=reality&sid=b390142456517acc&sni=www.amazon.com&type=tcp | VLESS Reality JP Amazon伪装
-hysteria2://wvA0PtDIuFbSqooIC2goKzFr@38.175.202.26:443?insecure=1&sni=bing.com | Hy2 JP Bing伪装UDP
-hysteria2://u63SxILNwtrQZ7Y1ZrFaZfsA@8.211.175.236:8443?insecure=1&sni=bing.com | Hy2 JP UDP
-hysteria2://96ab5cd282733fd4c312a61f972f330a@vp3.yysyy.online:443?sni=vp3.yysyy.online | Hy2 JP 伪装UDP
-vless://36c06e11-028b-40a1-a91f-c8f38f03e829@jp.yi-yi.xyz:8443?flow=xtls-rprx-vision&fp=chrome&pbk=g3T4dVyrbNixv7HvSMlh91cYBa5kEsZCEInB7Xc_AEY&security=reality&sid=956d8072a694ff37&sni=www.cloudflare.com&type=tcp | VLESS Reality JP CF伪装UDP
+vless://37615d66-5467-44a3-bc23-f2c3bef7f761@44.248.233.99:443?encryption=none&flow=xtls-rprx-vision&security=reality&sni=aws.amazon.com&fp=chrome&pbk=p8VhFzvFOBAhWAEAeWmwDxT3xBSRsGYixqi0qnLFnBM&sid=21270a66&type=tcp | VLESS Reality US AWS伪装UDP
+vless://cb2dbb6a-a1ea-4023-9ace-6466cee57241@51.81.203.63:443?encryption=none&flow=xtls-rprx-vision&security=reality&sni=www.icloud.com&fp=chrome&pbk=nqwCf6oW49tEtmQ0EzxigZ0uu1pg0E30CS54G40Iti0&sid=4477382ff6d3d41c&type=tcp | VLESS Reality US iCloud伪装UDP
+vless://52919204-4ed9-42c8-97a0-0f01d007f898@154.40.55.185:443?encryption=none&flow=xtls-rprx-vision&security=reality&sni=www.oracle.com&fp=firefox&pbk=XY0OTrgnRWxHbqBC8u4qFWvZakjNZY83AAnL_lwHu1M&sid=7f&type=tcp | VLESS Reality US Oracle伪装UDP
+hysteria2://099830134df5ac3a04a4b21d39b8c395@163.192.14.135:50160?insecure=1&sni=vk.com | Hy2 US VK伪装UDP
+vless://62fdae06-6692-4b79-8f34-470784e55fd6@154.29.145.196:443?encryption=none&security=reality&sni=itunes.apple.com&fp=chrome&pbk=h6EW_Y5nW9PRypxaOrSOyiHZDR-kuNfdoy24inGOoB0&sid=33b15a3e&type=ws | VLESS Reality US iTunes伪装
+vless://82eb8419-59f4-4d3e-9106-d05d22af615c@38.180.243.134:9443?flow=xtls-rprx-vision&fp=chrome&pbk=0hIFPaEn4RdFib8_eP8HYxMywR5izEwM3JA2W1Zo8U4&security=reality&sid=b390142456517acc&sni=www.amazon.com&type=tcp | VLESS Reality US Amazon伪装UDP
+hysteria2://H7mP2xY9kJ4nQ8wR5tF6vB3z@185.156.44.99:443?insecure=1&sni=css.rbxcdn.com | Hy2 EU 伪装UDP
+hysteria2://usqmqUKJFIlCmvkCNSY64L3k@8.209.247.109:443?insecure=1&sni=bing.com | Hy2 伪装Bing UDP
 vless://18ce1302-4e37-4eac-bd4f-e3e0a983e589@45.76.98.127:443?fp=chrome&pbk=LZR1ZQzdHDSdooxAImvxEjFIs-gebEP3zf0J6V3qVSI&security=reality&sid=49fa0dad&sni=itunes.apple.com&type=ws | VLESS Reality JP iTunes伪装
 vless://975fc322-6e38-434b-a53c-d39fed49b9a9@47.251.108.158:443?security=reality&type=tcp&sni=www.cloudflare.com&fp=chrome&flow=xtls-rprx-vision&sid=896f52ba2cfca903&pbk=SmgYcFIvvFXW3xh4gvGhIJuQsaZvWkAylcjB6TEddEs | VLESS Reality US CF伪装UDP
 vless://b98d4c6e-6770-4a31-8256-a4750cdea0e7@172.235.58.21:443?flow=xtls-rprx-vision&fp=firefox&pbk=0i_xAxYgSNx5NMpK2lOaWGS-CvAiD_LneYPO0MF0owo&security=reality&sni=www.amazon.com&type=tcp | VLESS Reality US Amazon伪装
 vless://1e5dc1cb-fda6-4152-b1bf-52ff7570c160@104.36.69.180:443?flow=xtls-rprx-vision&pbk=QhEh_RgwlY-eLMAF3HmH0F8_MtYqvV1CnRxuvjDuInw&security=reality&sid=8f4a9d2c1e6b3f50&sni=www.cloudflare.com&type=tcp&fp=chrome | VLESS Reality US CF伪装
-hysteria2://4291c983-c520-46ac-82cc-48f14bef573f@129.213.91.185:35013?sni=129.213.91.185&insecure=1 | Hy2 US 低延迟UDP
+hysteria2://4291c983-c520-46ac-82cc-48f14bef573f@129.213.91.185:35013?sni=www.bing.com&insecure=1 | Hy2 US 低延迟UDP
 vless://c7282af7-a52f-4a65-af60-ae5852f2bf36@131.143.180.87:443?encryption=none&flow=xtls-rprx-vision&security=reality&sni=www.logitech.com&fp=chrome&pbk=ZxdYEReKF-M_vIMpZWVMHf7ixDZmzIg-6Xt7IzstgwE&sid=16e300b06a6a7413&type=tcp | VLESS Reality US Logitech伪装
 vless://96ebc166-565c-474f-9712-7990b55c368a@67.209.184.133:443?encryption=none&flow=xtls-rprx-vision&security=reality&sni=www.bing.com&fp=chrome&pbk=Tp015Ga5LodBwKs4z7Wz4hTvqeh8-4q1EQPZqvZfWR0&sid=ad09494d431b2b92&type=tcp | VLESS Reality US Bing伪装
-vless://37615d66-5467-44a3-bc23-f2c3bef7f761@44.248.233.99:443?encryption=none&flow=xtls-rprx-vision&security=reality&sni=aws.amazon.com&fp=chrome&pbk=p8VhFzvFOBAhWAEAeWmwDxT3xBSRsGYixqi0qnLFnBM&sid=21270a66&type=tcp | VLESS Reality US AWS伪装
 vless://9d9a048b-3aea-4b3e-b106-1106bf301feb@54.251.9.130:24146?encryption=none&flow=xtls-rprx-vision&security=reality&sni=www.intel.com&fp=firefox&pbk=VeluC9A7XDurAWQNgXKShS2SJSgoK79QHFgiAMYrvGo&sid=7205d9079521832c&type=tcp | VLESS Reality SG Intel伪装
 trojan://Trojan%4082164024@108.61.186.37:443?allowInsecure=1&security=tls&sni=jp.tronsg.com&type=tcp | Trojan TLS JP UDP
 ss://YWVzLTEyOC1nY206c2hhZG93c29ja3M=@149.22.87.204:443 | SS AES-128-GCM JP/US UDP
