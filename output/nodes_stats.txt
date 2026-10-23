@@ -1,6 +1,6 @@
-updated=2026-10-23T16:13:03.408689+00:00
+updated=2026-10-23T23:27:44.160448+00:00
 source_urls=96
-final_count=337 final_beyond_Be=337 hard_cap=512 (no pad)
-deep_pass=337 path_ok=1229 sticky_seed=352 sticky_kept=313
+final_count=369 final_beyond_Be=369 hard_cap=512 (no pad)
+deep_pass=369 path_ok=1229 sticky_seed=337 sticky_kept=320
 drop_types=['http', 'socks', 'socks5']
-types={'anytls': 5, 'hysteria2': 16, 'vless': 267, 'trojan': 49}
+types={'anytls': 5, 'hysteria2': 17, 'vless': 282, 'trojan': 65}
