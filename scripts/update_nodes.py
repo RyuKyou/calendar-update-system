@@ -6,6 +6,7 @@ Deep probe (mihomo delay+256KiB). Output only usable; never pad.
 Legacy ss/ssr/vmess allowed if they pass deep probe (ranked last).
 Sticky: previous output/clash_clean.yaml nodes re-enter the pool each run.
 Name format: light region [Be]? base
+Filter invalid REALITY public keys.
 """
 
 from __future__ import annotations
@@ -34,6 +35,7 @@ CONNECT_TIMEOUT = 6.0
 MAX_WORKERS = 40
 MAX_NODES = 512
 CN_PROBE_MAX_AGE_HOURS = 36
+REALITY_PBK_RE = re.compile(r"^[A-Za-z0-9_-]{40,50}={0,2}$")
 
 DROP_TYPES = {"http", "socks5", "socks"}
 SKIP_PATH_PROBE_TYPES = {
@@ -187,6 +189,13 @@ def clean_proxy(p, index):
     if port <= 0 or port > 65535: return None
     p["port"] = port
     if is_hk_or_mo(p): return None
+    ro = p.get("reality-opts")
+    if isinstance(ro, dict):
+        pbk = str(ro.get("public-key") or ro.get("public_key") or "").strip()
+        if pbk and not REALITY_PBK_RE.fullmatch(pbk):
+            return None
+        if not pbk and ("public-key" in ro or "public_key" in ro):
+            return None
     return p
 def extract_proxies(text):
     try: data = yaml.safe_load(text)
