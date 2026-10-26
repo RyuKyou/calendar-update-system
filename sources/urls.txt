@@ -1,20 +1,20 @@
-https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/clash.yaml | VLESS Reality/Hysteria2 mix, hourly HTTP-verified, global high-stability
-https://cdn.jsdelivr.net/gh/LeilaoMi/AutoMergePublicNodes-Optimized@main/output/verified.yaml | sing-box true-tested verified pool, high quality long-term
-https://gh-proxy.com/raw.githubusercontent.com/yy1588133/proxy-pool/main/clash.yaml | Wall-environment tested aggregate, 6h update, prefer non-restricted
-https://radarhub.top/clash.yaml | NodesRadar 6h tested, stability ranked, Clash ready
-https://raw.githubusercontent.com/danmaifu/mianfeijiedian/main/feed/clash-20261026.yaml | Daily crawled Clash, multi-protocol
-https://www.xrayvip.com/free.yaml | Long-term maintained free Clash YAML
-https://raw.githubusercontent.com/wenxig/free-nodes-sub/refs/heads/main/data/sub.yml | Auto-scraped free nodes YAML
-https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/by-country/clash-JP.yaml | Japan focused, Reality/Hy2 capable
-https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/by-country/clash-SG.yaml | Singapore focused, lower block risk
-https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/by-country/clash-NL.yaml | Netherlands high-stability
-https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/by-country/clash-US.yaml | US broad pool
-https://cdn.jsdelivr.net/gh/LeilaoMi/AutoMergePublicNodes-Optimized@main/output/global.yaml | Broader verified global pool
-https://raw.githubusercontent.com/Au1rxx/free-vpn-subscriptions/main/output/stable/clash.yaml | Stable grade nodes if available
-https://github.com/0xRadikal/Free-v2ray-Configs/raw/main/verified/clash.yaml | Verified Reality-heavy
-https://raw.githubusercontent.com/crossxx-labs/free-proxy/main/clash.yaml | Hysteria2/VMess focused (check expiry)
-https://v2ray-clash.github.io/uploads/2026/10/0-20261025.yaml | Daily Clash update
-https://raw.githubusercontent.com/hamedcode/port-based-v2ray-configs/main/sub/vless.txt | VLESS heavy (convert if needed, but listed for mix)
-https://radarhub.top/regions/NL.txt | NL recommended base64 (use with Clash converter if needed)
-https://github.com/rtwo2/FastNodes/raw/main/sub/top.txt | FastNodes ranked top
-https://raw.githubusercontent.com/Alirewa/V2ray-Configs/main/sub1.txt | Top 100 Reality priority base64
+https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/clash.yaml | Au1rxx hourly HTTP-verified mixed VLESS/Hysteria2/SS (global, high stability)
+https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/by-country/clash-US.yaml | Au1rxx US Hysteria2 + VLESS Reality preferred (longevity focus)
+https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/by-country/clash-JP.yaml | Au1rxx Japan nodes (Asia preferred)
+https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/by-country/clash-SG.yaml | Au1rxx Singapore nodes
+https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/by-country/clash-NL.yaml | Au1rxx Netherlands high stability SS/VLESS
+https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/by-country/clash-DE.yaml | Au1rxx Germany nodes
+https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/by-country/clash-KR.yaml | Au1rxx South Korea
+https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/by-country/clash-FI.yaml | Au1rxx Finland
+https://radarhub.top/clash.yaml | NodesRadar 6h tested ranked by multi-location stability
+https://raw.githubusercontent.com/python-net-dev/anytls-vless-reality-hysteria2-tuic-ss/refs/heads/main/.github/links/clash.yaml | python-net-dev Reality/Hysteria2 daily preferred
+https://raw.githubusercontent.com/Ruk1ng001/freeSub/main/clash.yaml | freeSub auto-scored ~500 nodes
+https://raw.githubusercontent.com/yy1588133/proxy-pool/main/clash.yaml | proxy-pool 6h aggregated wall-tested
+https://raw.githubusercontent.com/ovmvo/FreeSub/refs/heads/main/sub/permanent/mihomo.yaml | ovmvo permanent 8h update Mihomo
+https://github.com/0xRadikal/Free-v2ray-Configs/raw/main/verified/clash.yaml | 0xRadikal verified Reality/Hysteria2 focused
+https://raw.githubusercontent.com/danmaifu/mianfeijiedian/main/feed/clash-20261026.yaml | danmaifu daily crawl (update date daily)
+https://gh-proxy.com/https://raw.githubusercontent.com/Ruk1ng001/freeSub/main/clash.yaml | freeSub CN-friendly mirror
+https://raw.githubusercontent.com/free18/v2ray/refs/heads/main/c.yaml | free18 Clash subscription
+https://github.com/LeilaoMi/AutoMergePublicNodes-Optimized/raw/main/output/verified/clash.yaml | AutoMerge sing-box verified Clash
+https://radarhub.top/regions/US.txt | NodesRadar US filtered (convert if needed)
+https://raw.githubusercontent.com/Au1rxx/free-vpn-subscriptions/main/output/by-country/clash-CA.yaml | Au1rxx Canada nodes
