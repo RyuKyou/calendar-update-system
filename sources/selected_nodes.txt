@@ -1,21 +1,251 @@
-vless://48ff2b70-e180-582f-8866-d9a2edeed5f5@51.158.206.26:23576?security=reality&type=raw&packetEncoding=xudp&sni=fuck.rkn&fp=chrome&flow=xtls-rprx-vision&sid=01&pbk=1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s&encryption=none#Netherlands Reality UDP high-stable
-vless://75cc7568-abb0-46a8-88be-8137d3c647d4@152.228.139.33:51671?security=reality&type=grpc&mode=gun&serviceName=grpc_common3&packetEncoding=xudp&sni=www.sony.com&fp=firefox&sid=2fed44d8c59f7e71&pbk=-5PowNUY37Pi01YKO9fjRTrum1m_9n6XauaPDpmOJzU#France Reality gRPC
-vless://8e790f25-1d71-4601-9fb0-d503931dcfca@51.89.194.151:2053?security=reality&type=tcp&packetEncoding=xudp&sni=www.apple.com&fp=firefox&sid=d051f678212f9d54&pbk=xPEBx4wUmwAAv4ikUALNBf5wH6TRhyeQ0Q2pcNELsV0#United Kingdom Reality
-vless://558b26f6-061b-4079-9b84-ca13b3e90ae3@191.44.108.31:443?security=reality&type=tcp&packetEncoding=xudp&sni=www.google.com&fp=firefox&flow=xtls-rprx-vision&sid=3ba10d9ce34380c9&pbk=QLh2Y5Ig7pncEIvOYpZlLH2rUHZ3CRuyAo1A_emWZQU#Germany Reality
-vless://d4b08cd6-0903-411a-9dac-45dbdf5c9712@57.131.38.163:2053?security=reality&type=tcp&packetEncoding=xudp&sni=www.apple.com&fp=firefox&sid=5b8a942318178e7b&pbk=Ej2H5ucT7qKegYcT8wODdlxa-cLHr7F4hDVUHzAhcnc#Italy Reality
-hysteria2://Jz40_mIJ934vK0_k9D3jz92_Vx48q_GHa1_sz0@85.204.107.172:8080?security=tls&sni=hopp-romania-new.roxa.org#Romania Hysteria2 TLS UDP
-vless://6fbdbd3c-7696-4b9a-9a10-bcecc26e0f6f@212.227.235.66:2053?security=reality&type=tcp&packetEncoding=xudp&sni=www.cloudflare.com&fp=firefox&sid=866af6e56606f2bc&pbk=XrPOJwmpnq8NeCXu6K68Mp59gQ56Dr4YYboxI70kqzA#Germany Reality
-vless://48ff2b70-e180-582f-8866-d9a2edeed5f5@51.158.206.86:23576?security=reality&type=raw&packetEncoding=xudp&sni=fuck.rkn&fp=chrome&flow=xtls-rprx-vision&sid=01&pbk=1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s&encryption=none#France Reality
-ss://YWVzLTEyOC1nY206c2hhZG93c29ja3M@158.173.20.208:443#Netherlands SS stable high-speed
-vless://f8d52ece-fad4-478d-875d-df6eed3befa7@64.188.66.181:443?security=reality&type=tcp&packetEncoding=xudp&sni=ge-s-1.pythonmakemigreat.wiki&fp=chrome&flow=xtls-rprx-vision&sid=2c9a2790ad5900b2&pbk=5fkwwCKZzMsE6Eb_b3iqluu-1AWIfnYl-p0N3EL9Al8#Germany Reality
-hysteria2://49f8bb8047@srv-12c1e0.21freedom.net:11592?security=tls&sni=srv-12c1e0.21freedom.net#Canada Hysteria2
-vless://39c42b0a-b823-4c93-bb99-74b4183e518d@85.155.226.69:443?security=reality&type=tcp&packetEncoding=xudp&sni=getsavesafe.net&fp=qq&flow=xtls-rprx-vision&sid=82f5d3a1e9c0b661&pbk=5Z6PwoPSNBLPIsX8lZtHM7-Y-psMMR1vz5Pit0EVISs#Spain Reality
-vless://28148be2-61a7-4f36-8adb-030cc9f82bd0@62.210.24.143:32202?security=reality&type=xhttp&path=%2FG3EEoH63&packetEncoding=xudp&sni=www.amazon.com&fp=firefox&sid=f57d8f26&pbk=bGe_-nAtOq6_w_2mv6pcmD8RzJP65Tti-vyMP2hAwDc&encryption=none#France Reality xhttp
-ss://YWVzLTI1Ni1nY206aXR6dnBuQDMyMQ==@57.131.48.45:8388#Italy SS
-vless://d5e5f5a1-0f23-4c49-af9f-4be445bf9d8e@82.118.16.189:443?security=reality&type=raw&packetEncoding=xudp&sni=www.cloudflare.com&fp=chrome&flow=xtls-rprx-vision&sid=37fbf155c7a9f3ff&pbk=SjGkzJQ9I6ZZjC3V73atcPMczhMm0oiTrB8mUQXz1HY#Italy Reality
-hysteria2://96ab5cd282733fd4c312a61f972f330a@vp3.yysyy.online:443?security=tls&sni=vp3.yysyy.online#Japan-like but check, Hy2 (prefer non-restricted)
-vless://e5cc16a6-ea42-46b2-82ae-ad2157e1641b@104.18.35.86:8080?security=none&type=ws&path=%2Fsg-melbi&host=hhlfy.twiladaphne.ndjp.net&packetEncoding=xudp&encryption=none#Cloudflare WS stable
-vless://710fc22f-06b2-4b6d-bb3e-f57c17b670a6@bc-vn-hn.ray-balance.space:443/?type=tcp&encryption=none&flow=xtls-rprx-vision&sni=www.ray-balance.space&fp=chrome&security=reality&pbk=d1NlaZfnsYjWfxRTqIBk1ldBUmdE-kRTEQ_sWd1JYwI&sid=#United Kingdom Reality (avoid VN if possible)
-ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpvWklvQTY5UTh5aGNRVjhrYTNQYTNB@82.38.31.2:8080#United Kingdom SS
-vless://423b1d79-08c4-403f-9d5e-c541f791b55f@94.183.157.249:443?security=reality&type=tcp&packetEncoding=xudp&sni=eu-central.cendora.ru&fp=chrome&flow=xtls-rprx-vision&sid=00bca5982f82d083&pbk=b-Cm9hX-3UHsS1L_lnUB6AMjuKhlN1IDdBbZ506itjI&encryption=none#Europe Reality
-hysteria2://184cdec28da5a09450803c8debcd2cc9@138.3.208.26:50160?insecure=1&security=tls&sni=1#Non-restricted Hy2 UDP
+=== 精選單節點配置 20條（優先壽命與混淆，避開限制地區）===
+
+1. VLESS Reality US
+name: US-Reality-1
+server: 45.152.192.229
+port: 443
+type: vless
+uuid: ce8fbdea-c3c3-4fb1-9658-32599d1f853f
+udp: true
+tls: true
+flow: xtls-rprx-vision
+servername: 8a11e6a89110.j.cloudfront.hls.ttvnw.net
+reality-opts:
+  public-key: 8ZYjmjb0b2QJKCGMrcdhQNV28jZZPCKgIQbIdqChQ0w
+  short-id: 61e21f9aa67aa1bf
+client-fingerprint: chrome
+network: tcp
+來源：0xRadikal verified
+
+2. VLESS Reality US
+name: US-Reality-2
+server: 195.123.235.183
+port: 443
+type: vless
+uuid: c14ec728-3eca-4750-87fc-fd1e6aeb81d5
+udp: true
+tls: true
+flow: xtls-rprx-vision
+servername: gateway.icloud.com
+reality-opts:
+  public-key: H3R3BUAl7thrIZsznTbb-eRREIjQOH2f3WO0oTN7OGY
+  short-id: a0e2a6074c6456b0
+client-fingerprint: random
+network: tcp
+來源：0xRadikal verified
+
+3. VLESS Reality US
+name: US-Reality-3
+server: 195.123.235.177
+port: 443
+type: vless
+uuid: 729dd5f2-f5ff-4070-8c10-863eceded0b1
+udp: true
+tls: true
+flow: xtls-rprx-vision
+servername: gateway.icloud.com
+reality-opts:
+  public-key: 5B83otQ5ZQwtBFhR7xzsGJRXflkFKRJpQguYbE5JWGI
+  short-id: c85d029f5e8eb393
+client-fingerprint: chrome
+network: tcp
+來源：0xRadikal verified
+
+4. VLESS Reality US
+name: US-Reality-4
+server: 185.95.231.156
+port: 443
+type: vless
+uuid: 1f8cf47a-b66a-4916-979f-26edfcf44eea
+udp: true
+tls: true
+flow: xtls-rprx-vision
+servername: www.apple.com
+reality-opts:
+  public-key: 8eXftARun6KH38UZhuqIfPR1VF2DLS9RMBZEnF5k6To
+  short-id: a3a578ab
+client-fingerprint: random
+network: tcp
+來源：0xRadikal verified
+
+5. VLESS Reality US
+name: US-Reality-5
+server: 147.182.212.232
+port: 56565
+type: vless
+uuid: 7b188eea-b08f-42c2-bac7-d3b0e74218b8
+udp: true
+tls: true
+flow: xtls-rprx-vision
+servername: www.paypal.com
+reality-opts:
+  public-key: Td03Ae-cuYLq4xg7MSps58c_yRUcbbwtZLXm0ywabjY
+  short-id: ''
+client-fingerprint: chrome
+network: tcp
+來源：0xRadikal verified
+
+6. VLESS Reality US
+name: US-Reality-6
+server: 169.40.42.231
+port: 443
+type: vless
+uuid: d65cc14c-f53f-4fe2-b262-97856601319c
+udp: true
+tls: true
+flow: xtls-rprx-vision
+servername: yahoo.com
+reality-opts:
+  public-key: e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg
+  short-id: c39cc7310a
+client-fingerprint: ios
+network: tcp
+來源：0xRadikal verified
+
+7. Hysteria2 (from Au1rxx)
+name: hysteria2-example1
+server: 31.77.29.74
+port: 4444
+type: hysteria2
+password: 10be1dad-9952-4c5e-aa30-db435f69b727
+sni: jap2.nexfile.net
+skip-cert-verify: false
+udp: true
+來源：Au1rxx hourly
+
+8. Hysteria2
+name: hysteria2-example2
+server: 138.3.208.26
+port: 50160
+type: hysteria2
+password: 184cdec28da5a09450803c8debcd2cc9
+skip-cert-verify: true
+udp: true
+來源：Au1rxx
+
+9. Hysteria2
+name: hysteria2-example3
+server: 8.211.175.236
+port: 8443
+type: hysteria2
+password: u63SxILNwtrQZ7Y1ZrFaZfsA
+skip-cert-verify: true
+udp: true
+來源：Au1rxx
+
+10. Hysteria2
+name: hysteria2-example4
+server: 152.70.237.123
+port: 2053
+type: hysteria2
+password: maintell
+skip-cert-verify: true
+udp: true
+來源：Au1rxx
+
+11. Hysteria2
+name: hysteria2-example5
+server: 132.226.226.189
+port: 50160
+type: hysteria2
+password: 1671a252e2a97dc2bda4e515475931da
+sni: 132.226.226.189
+skip-cert-verify: true
+udp: true
+來源：Au1rxx
+
+12. Hysteria2
+name: hysteria2-example6
+server: 202.146.222.29
+port: 443
+type: hysteria2
+password: H7mP2xY9kJ4nQ8wR5tF6vB3z
+skip-cert-verify: true
+udp: true
+來源：Au1rxx
+
+13. Hysteria2
+name: hysteria2-example7
+server: 103.115.109.49
+port: 443
+type: hysteria2
+password: H7mP2xY9kJ4nQ8wR5tF6vB3z
+sni: t.me
+skip-cert-verify: true
+udp: true
+來源：Au1rxx
+
+14. Hysteria2
+name: hysteria2-example8
+server: 152.67.200.82
+port: 50160
+type: hysteria2
+password: 3d7634af8cb2c6cb4bac1c0efad8b43d
+sni: google.com
+skip-cert-verify: true
+udp: true
+來源：Au1rxx
+
+15. Hysteria2
+name: hysteria2-example9
+server: 45.32.10.7
+port: 443
+type: hysteria2
+password: 96ab5cd282733fd4c312a61f972f330a
+sni: vp3.yysyy.online
+skip-cert-verify: true
+udp: true
+來源：Au1rxx
+
+16. Hysteria2
+name: hysteria2-example10
+server: 155.248.209.237
+port: 33333
+type: hysteria2
+password: bce6c821-200d-421f-bf3d-7159e5246ea0
+skip-cert-verify: true
+udp: true
+來源：Au1rxx
+
+17. Hysteria2
+name: hysteria2-example11
+server: 144.24.46.175
+port: 8443
+type: hysteria2
+password: pbgLTkd5276SN1sZ
+skip-cert-verify: true
+udp: true
+來源：Au1rxx
+
+18. Hysteria2
+name: hysteria2-example12
+server: 129.213.91.185
+port: 35013
+type: hysteria2
+password: 4291c983-c520-46ac-82cc-48f14bef573f
+skip-cert-verify: true
+udp: true
+來源：Au1rxx
+
+19. Hysteria2
+name: hysteria2-example13
+server: 192.236.226.182
+port: 2053
+type: hysteria2
+password: 46647da9-d4b4-407f-bea6-ad0b1abc561f
+skip-cert-verify: true
+udp: true
+來源：Au1rxx
+
+20. Hysteria2
+name: hysteria2-example14
+server: 144.31.240.153
+port: 4444
+type: hysteria2
+password: 10be1dad-9952-4c5e-aa30-db435f69b727
+sni: swo1.nexfile.net
+skip-cert-verify: false
+udp: true
+來源：Au1rxx
+
+注：免費節點變動頻繁，優先使用自動更新訂閱以提高壽命。已優先選擇非中國/台灣/香港/澳門/越南/泰國出口的節點，並以 Reality 與 Hysteria2 為主。
