@@ -1,20 +1,20 @@
-https://radarhub.top/clash.yaml | NodesRadar 6h tested Clash YAML, multi-protocol high stability
-https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/clash.yaml | Au1rxx hourly verified Clash, Hysteria2/Reality included
-https://raw.githubusercontent.com/LeilaoMi/AutoMergePublicNodes-Optimized/main/output/verified.yaml | AutoMerge real-tested verified Clash
-https://cdn.jsdelivr.net/gh/LeilaoMi/AutoMergePublicNodes-Optimized@main/output/verified.yaml | jsDelivr AutoMerge verified
-https://raw.githubusercontent.com/yy1588133/proxy-pool/main/clash.yaml | proxy-pool 6h aggregated Clash
-https://gh-proxy.com/raw.githubusercontent.com/yy1588133/proxy-pool/main/clash.yaml | proxy-pool GH-proxy mirror
-https://raw.githubusercontent.com/Ruk1ng001/freeSub/main/clash.yaml | freeSub scored nodes Clash
-https://gh-proxy.com/raw.githubusercontent.com/Ruk1ng001/freeSub/main/clash.yaml | freeSub GH-proxy
-https://raw.githubusercontent.com/huiwin/NodeCollection/main/output/merged/latest.clash.yaml | NodeCollection merged Clash
-https://raw.githubusercontent.com/python-net-dev/anytls-vless-reality-hysteria2-tuic-ss/refs/heads/main/.github/links/clash.yaml | AnyTLS Reality/Hysteria2 focused Clash
-https://raw.githubusercontent.com/0xRadikal/Free-v2ray-Configs/main/verified/clash.yaml | 0xRadikal 15m verified Clash
-https://raw.githubusercontent.com/danmaifu/mianfeijiedian/main/feed/clash-20261027.yaml | Daily crawled Clash (recent)
-https://www.xrayvip.com/free.yaml | xrayvip long-term maintained
-https://cdn.jsdelivr.net/gh/LeilaoMi/AutoMergePublicNodes-Optimized@main/output/global.yaml | AutoMerge global
-https://raw.githubusercontent.com/LeilaoMi/AutoMergePublicNodes-Optimized/main/output/global.yaml | AutoMerge global raw
-https://raw.githubusercontent.com/MrErrorSan/free-v2ray-clash-verge-config/main/clash/profile.yaml | Country-select Clash profile
-https://raw.githubusercontent.com/hvwin8/autojiedian/master/clash.yaml | autojiedian aggregated
-https://hvwin8.github.io/autojiedian/clash.yaml | autojiedian pages
-https://raw.githubusercontent.com/awesome-vpn/awesome-vpn/master/clash.yaml | awesome-vpn mixed Reality/Hy2
-https://gh-proxy.com/raw.githubusercontent.com/huiwin/NodeCollection/main/output/merged/latest.clash.yaml | NodeCollection GH-proxy
+https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/clash.yaml | Clash YAML | Hourly verified multi-protocol (Hysteria2/Reality/VLESS), global pool
+https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/by-country/clash-US.yaml | US nodes | High volume US Reality/VLESS preferred
+https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/by-country/clash-JP.yaml | JP nodes | Japan exit, relatively stable
+https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/by-country/clash-SG.yaml | SG nodes | Singapore, Asia non-restricted
+https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/by-country/clash-NL.yaml | NL nodes | Netherlands Europe
+https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/by-country/clash-CA.yaml | CA nodes | Canada
+https://gh-proxy.com/raw.githubusercontent.com/yy1588133/proxy-pool/main/clash.yaml | Aggregated Clash | 6h update, wall-tested sources
+https://gh-proxy.com/raw.githubusercontent.com/Ruk1ng001/freeSub/main/clash.yaml | freeSub | Frequent auto update
+https://nodes.udptoos.com/subscriptions/clash.yaml | free-nodes | 2h update YAML
+https://raw.githubusercontent.com/wenxig/free-nodes-sub/refs/heads/main/data/sub.yml | free-nodes-sub | Auto scrape free-nodes
+https://raw.githubusercontent.com/huiwin/NodeCollection/main/output/merged/latest.clash.yaml | NodeCollection | 4h Telegram+airport merge
+https://raw.githubusercontent.com/0xRadikal/Free-v2ray-Configs/main/verified/clash.yaml | Verified Clash | 15min, Reality heavy, HTTP verified
+https://cdn.jsdelivr.net/gh/awesome-vpn/awesome-vpn@master/clash.yaml | Awesome VPN | Daily aggregated
+https://raw.githubusercontent.com/python-net-dev/anytls-vless-reality-hysteria2-tuic-ss/refs/heads/main/.github/links/clash.yaml | AnyTLS mix | Reality/Hysteria2/TUIC focus
+https://radarhub.top/clash.yaml | nodesradar | Tested every 6h, country ranked
+https://ghfast.top/https://raw.githubusercontent.com/free18/v2ray/refs/heads/main/c.yaml | free18 | Mirrored Clash YAML
+https://raw.githubusercontent.com/lyqnihao/proxy/refs/heads/main/nodefree/target.yaml | nodefree track | Tracked nodefree
+https://v1-bit-wq1.github.io/white-lists/clash.yaml | White-lists | Auto select Clash
+https://raw.githubusercontent.com/10Dream/sub-mod/main/sub/clash/mix.yaml | sub-mod mix | Multi-source Clash
+https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/by-country/clash-DE.yaml | DE nodes | Germany, Europe stable
