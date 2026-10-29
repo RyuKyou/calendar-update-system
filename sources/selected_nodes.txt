@@ -1,120 +1,120 @@
 === 精選單節點配置 20條（優先壽命與混淆，避開限制地區）===
 
 1. VLESS Reality US
-name: US-Reality-1
-server: 45.152.192.229
+name: US-Reality-Oracle
+server: 154.40.55.185
 port: 443
 type: vless
-uuid: ce8fbdea-c3c3-4fb1-9658-32599d1f853f
+uuid: 52919204-4ed9-42c8-97a0-0f01d007f898
 udp: true
 tls: true
 flow: xtls-rprx-vision
-servername: 8a11e6a89110.j.cloudfront.hls.ttvnw.net
+servername: www.oracle.com
 reality-opts:
-  public-key: 8ZYjmjb0b2QJKCGMrcdhQNV28jZZPCKgIQbIdqChQ0w
-  short-id: 61e21f9aa67aa1bf
+  public-key: XY0OTrgnRWxHbqBC8u4qFWvZakjNZY83AAnL_lwHu1M
+  short-id: 7f
 client-fingerprint: chrome
 network: tcp
 來源：0xRadikal verified
 
 2. VLESS Reality US
-name: US-Reality-2
-server: 195.123.235.183
+name: US-Reality-CF
+server: 195.123.240.65
 port: 443
 type: vless
-uuid: c14ec728-3eca-4750-87fc-fd1e6aeb81d5
+uuid: ce18d0eb-5c71-41f9-96e5-1632e22456e4
 udp: true
 tls: true
 flow: xtls-rprx-vision
-servername: gateway.icloud.com
+servername: www.cloudflare.com
 reality-opts:
-  public-key: H3R3BUAl7thrIZsznTbb-eRREIjQOH2f3WO0oTN7OGY
-  short-id: a0e2a6074c6456b0
-client-fingerprint: random
+  public-key: StPbcmBuzpuYUfa4oZ5SI3Bq1OSF_-oU1vp2AcyvQVE
+  short-id: 19296c9f1bf9c7b1
+client-fingerprint: chrome
 network: tcp
 來源：0xRadikal verified
 
 3. VLESS Reality US
-name: US-Reality-3
-server: 195.123.235.177
-port: 443
+name: US-Reality-Hillsboro
+server: 15.204.97.206
+port: 23576
 type: vless
-uuid: 729dd5f2-f5ff-4070-8c10-863eceded0b1
+uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
 udp: true
 tls: true
 flow: xtls-rprx-vision
-servername: gateway.icloud.com
+servername: fuck.rkn
 reality-opts:
-  public-key: 5B83otQ5ZQwtBFhR7xzsGJRXflkFKRJpQguYbE5JWGI
-  short-id: c85d029f5e8eb393
+  public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
+  short-id: '01'
 client-fingerprint: chrome
 network: tcp
 來源：0xRadikal verified
 
 4. VLESS Reality US
-name: US-Reality-4
-server: 185.95.231.156
-port: 443
+name: US-Reality-Vision
+server: 15.204.97.195
+port: 23576
 type: vless
-uuid: 1f8cf47a-b66a-4916-979f-26edfcf44eea
+uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
+udp: true
+tls: true
+flow: xtls-rprx-vision
+servername: fuck.rkn
+reality-opts:
+  public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
+  short-id: '01'
+client-fingerprint: chrome
+network: tcp
+來源：0xRadikal verified
+
+5. VLESS Reality (Au1rxx)
+name: VLESS-Reality-Apple
+server: 3.114.220.22
+port: 18007
+type: vless
+uuid: 814bd064-544d-4255-a070-5705c03f6da9
 udp: true
 tls: true
 flow: xtls-rprx-vision
 servername: www.apple.com
 reality-opts:
-  public-key: 8eXftARun6KH38UZhuqIfPR1VF2DLS9RMBZEnF5k6To
-  short-id: a3a578ab
-client-fingerprint: random
-network: tcp
-來源：0xRadikal verified
-
-5. VLESS Reality US
-name: US-Reality-5
-server: 147.182.212.232
-port: 56565
-type: vless
-uuid: 7b188eea-b08f-42c2-bac7-d3b0e74218b8
-udp: true
-tls: true
-flow: xtls-rprx-vision
-servername: www.paypal.com
-reality-opts:
-  public-key: Td03Ae-cuYLq4xg7MSps58c_yRUcbbwtZLXm0ywabjY
-  short-id: ''
+  public-key: k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0
+  short-id: 48050fab
 client-fingerprint: chrome
 network: tcp
-來源：0xRadikal verified
+來源：Au1rxx hourly
 
-6. VLESS Reality US
-name: US-Reality-6
-server: 169.40.42.231
-port: 443
+6. VLESS Reality (Au1rxx)
+name: VLESS-Reality-Amazon
+server: 45.202.255.92
+port: 9443
 type: vless
-uuid: d65cc14c-f53f-4fe2-b262-97856601319c
+uuid: 4a270d3e-27b4-497d-8c8c-28f1f54958d9
 udp: true
 tls: true
 flow: xtls-rprx-vision
-servername: yahoo.com
+servername: www.amazon.com
 reality-opts:
-  public-key: e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg
-  short-id: c39cc7310a
-client-fingerprint: ios
+  public-key: 0hIFPaEn4RdFib8_eP8HYxMywR5izEwM3JA2W1Zo8U4
+  short-id: b390142456517acc
+client-fingerprint: chrome
 network: tcp
-來源：0xRadikal verified
+來源：Au1rxx
 
-7. Hysteria2 (from Au1rxx)
-name: hysteria2-example1
-server: 31.77.29.74
-port: 4444
+7. Hysteria2
+name: HY2-45.32.10.7
+server: 45.32.10.7
+port: 443
 type: hysteria2
-password: 10be1dad-9952-4c5e-aa30-db435f69b727
-sni: jap2.nexfile.net
-skip-cert-verify: false
+password: 96ab5cd282733fd4c312a61f972f330a
+sni: vp3.yysyy.online
+skip-cert-verify: true
 udp: true
-來源：Au1rxx hourly
+來源：Au1rxx hourly verified
 
 8. Hysteria2
-name: hysteria2-example2
+name: HY2-138.3.208.26
 server: 138.3.208.26
 port: 50160
 type: hysteria2
@@ -124,38 +124,29 @@ udp: true
 來源：Au1rxx
 
 9. Hysteria2
-name: hysteria2-example3
+name: HY2-8.211.175.236
 server: 8.211.175.236
 port: 8443
 type: hysteria2
 password: u63SxILNwtrQZ7Y1ZrFaZfsA
+sni: bing.com
 skip-cert-verify: true
 udp: true
 來源：Au1rxx
 
 10. Hysteria2
-name: hysteria2-example4
-server: 152.70.237.123
-port: 2053
+name: HY2-132.226.226.189
+server: 132.226.226.189
+port: 50160
 type: hysteria2
-password: maintell
+password: 1671a252e2a97dc2bda4e515475931da
+sni: www.bing.com
 skip-cert-verify: true
 udp: true
 來源：Au1rxx
 
 11. Hysteria2
-name: hysteria2-example5
-server: 132.226.226.189
-port: 50160
-type: hysteria2
-password: 1671a252e2a97dc2bda4e515475931da
-sni: 132.226.226.189
-skip-cert-verify: true
-udp: true
-來源：Au1rxx
-
-12. Hysteria2
-name: hysteria2-example6
+name: HY2-202.146.222.29
 server: 202.146.222.29
 port: 443
 type: hysteria2
@@ -164,41 +155,19 @@ skip-cert-verify: true
 udp: true
 來源：Au1rxx
 
+12. Hysteria2
+name: HY2-152.70.237.123
+server: 152.70.237.123
+port: 2053
+type: hysteria2
+password: maintell
+sni: bing.com
+skip-cert-verify: true
+udp: true
+來源：Au1rxx
+
 13. Hysteria2
-name: hysteria2-example7
-server: 103.115.109.49
-port: 443
-type: hysteria2
-password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-sni: t.me
-skip-cert-verify: true
-udp: true
-來源：Au1rxx
-
-14. Hysteria2
-name: hysteria2-example8
-server: 152.67.200.82
-port: 50160
-type: hysteria2
-password: 3d7634af8cb2c6cb4bac1c0efad8b43d
-sni: google.com
-skip-cert-verify: true
-udp: true
-來源：Au1rxx
-
-15. Hysteria2
-name: hysteria2-example9
-server: 45.32.10.7
-port: 443
-type: hysteria2
-password: 96ab5cd282733fd4c312a61f972f330a
-sni: vp3.yysyy.online
-skip-cert-verify: true
-udp: true
-來源：Au1rxx
-
-16. Hysteria2
-name: hysteria2-example10
+name: HY2-155.248.209.237
 server: 155.248.209.237
 port: 33333
 type: hysteria2
@@ -207,45 +176,91 @@ skip-cert-verify: true
 udp: true
 來源：Au1rxx
 
-17. Hysteria2
-name: hysteria2-example11
-server: 144.24.46.175
-port: 8443
+14. Hysteria2
+name: HY2-152.67.200.82
+server: 152.67.200.82
+port: 50160
 type: hysteria2
-password: pbgLTkd5276SN1sZ
+password: 3d7634af8cb2c6cb4bac1c0efad8b43d
+skip-cert-verify: true
+udp: true
+來源：Au1rxx
+
+15. Hysteria2
+name: HY2-150.230.252.217
+server: 150.230.252.217
+port: 50160
+type: hysteria2
+password: 9cfc9458e48c028ec03ff86ebc71c744
+sni: 150-230-252-217.liao.kdns.fr
+skip-cert-verify: false
+udp: true
+來源：Au1rxx
+
+16. Hysteria2
+name: HY2-151.243.169.164
+server: 151.243.169.164
+port: 12824
+type: hysteria2
+password: d62s7ghfehm742us
+sni: derfderf.ru
+skip-cert-verify: false
+udp: true
+來源：Au1rxx
+
+17. Hysteria2
+name: HY2-103.115.109.49
+server: 103.115.109.49
+port: 443
+type: hysteria2
+password: H7mP2xY9kJ4nQ8wR5tF6vB3z
 skip-cert-verify: true
 udp: true
 來源：Au1rxx
 
 18. Hysteria2
-name: hysteria2-example12
-server: 129.213.91.185
-port: 35013
+name: HY2-202.146.222.174
+server: 202.146.222.174
+port: 443
 type: hysteria2
-password: 4291c983-c520-46ac-82cc-48f14bef573f
+password: H7mP2xY9kJ4nQ8wR5tF6vB3z
+sni: t.me
 skip-cert-verify: true
 udp: true
 來源：Au1rxx
 
-19. Hysteria2
-name: hysteria2-example13
-server: 192.236.226.182
-port: 2053
-type: hysteria2
-password: 46647da9-d4b4-407f-bea6-ad0b1abc561f
-skip-cert-verify: true
+19. VLESS Reality US
+name: US-Reality-Extra
+server: 15.204.97.197
+port: 23576
+type: vless
+uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
 udp: true
-來源：Au1rxx
+tls: true
+flow: xtls-rprx-vision
+servername: fuck.rkn
+reality-opts:
+  public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
+  short-id: '01'
+client-fingerprint: chrome
+network: tcp
+來源：0xRadikal verified
 
-20. Hysteria2
-name: hysteria2-example14
-server: 144.31.240.153
-port: 4444
-type: hysteria2
-password: 10be1dad-9952-4c5e-aa30-db435f69b727
-sni: swo1.nexfile.net
-skip-cert-verify: false
+20. VLESS Reality US
+name: US-Reality-Extra2
+server: 15.204.97.209
+port: 23576
+type: vless
+uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
 udp: true
-來源：Au1rxx
+tls: true
+flow: xtls-rprx-vision
+servername: fuck.rkn
+reality-opts:
+  public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
+  short-id: ''
+client-fingerprint: random
+network: tcp
+來源：0xRadikal verified
 
-注：免費節點變動頻繁，優先使用自動更新訂閱以提高壽命。已優先選擇非中國/台灣/香港/澳門/越南/泰國出口的節點，並以 Reality 與 Hysteria2 為主。
+注：免費節點變動頻繁，優先使用自動更新訂閱以提高壽命。已優先選擇非中國/台灣/香港/澳門/越南/泰國出口的節點，並以 Reality 與 Hysteria2 為主。建議搭配多個訂閱與單節點備用。
