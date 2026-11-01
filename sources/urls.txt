@@ -6,15 +6,15 @@ https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/by-country/clas
 https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/by-country/clash-CA.yaml | CA Clash | Canada
 https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/by-country/clash-DE.yaml | DE Clash | Germany Europe
 https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/by-country/clash-FR.yaml | FR Clash | France
-https://radarhub.top/clash.yaml | Free Nodes Radar Clash | Daily tested, stability ranked, multi-region
+https://radarhub.top/clash.yaml | Free Nodes Radar Clash | Daily/6h tested, stability ranked, multi-region
 https://cdn.jsdelivr.net/gh/TelegaVPN/free-vpn-keys@main/sub/clash/all.yaml | TelegaVPN Clash | Verified Reality/Hysteria2 frequent probes
 https://gh-proxy.com/raw.githubusercontent.com/yy1588133/proxy-pool/main/clash.yaml | proxy-pool Clash | Aggregated wall-tested 6h update
-https://raw.githubusercontent.com/sunmiao4458/free-proxy-airport/main/docs/clash.yaml | free-proxy-airport | Self-healing Actions tested
-https://raw.githubusercontent.com/SnapdragonLee/SystemProxy/master/dist/clash_config.yaml | SystemProxy Clash | Public collection
-https://raw.githubusercontent.com/Ruk1ng001/freeSub/main/clash.yaml | freeSub Clash | Auto scored
-https://raw.githubusercontent.com/ermaozi/get_subscribe/main/subscribe/clash.yml | ermaozi Clash | Auto fetch
-https://raw.githubusercontent.com/0xRadikal/Free-v2ray-Configs/main/verified/clash.yaml | 0xRadikal Verified | Frequent Reality HTTP
-https://raw.githubusercontent.com/mehrtat/vless-collector/main/sub.txt | mehrtat VLESS | xray-tested hourly (base64)
-https://raw.githubusercontent.com/nodesradar/nodesradar-en/main/clash.yaml | nodesradar Clash | Daily tested
-https://raw.githubusercontent.com/chaishpish/free_server_v2ray/main/@TFMTProto | chaishpish V2Ray | Regular updates
-https://raw.githubusercontent.com/10Dream/sub-mod/main/sub/clash/mix.yaml | 10Dream Mix Clash | Hourly aggregated
+https://raw.githubusercontent.com/SnapdragonLee/SystemProxy/master/dist/clash_config.yaml | SystemProxy Clash | Public collection updated
+https://raw.githubusercontent.com/kooker/FreeSubsCheck/main/mihomo.yaml | FreeSubsCheck Mihomo | Auto synced nodes
+https://raw.githubusercontent.com/huiwin/NodeCollection/main/output/merged/latest.clash.yaml | NodeCollection Clash | Telegram+Airport aggregated 4h
+https://raw.githubusercontent.com/clashv2ray-hub/clashfree/refs/heads/main/clash.yaml | clashfree | Hourly free nodes
+https://www.xrayvip.com/free.yaml | xrayvip free.yaml | Long-term maintained free
+https://v1-bit-wq1.github.io/white-lists/clash.yaml | White-lists Clash | Auto select
+https://raw.githubusercontent.com/0xRadikal/Free-v2ray-Configs/main/verified/clash.yaml | 0xRadikal Verified Clash | Frequent Reality HTTP-tested
+https://raw.githubusercontent.com/ermaozi/get_subscribe/main/subscribe/clash.yml | ermaozi Clash | Auto fetch reachable
+https://raw.githubusercontent.com/Ruk1ng001/freeSub/main/clash.yaml | freeSub Clash | Auto scored updates
