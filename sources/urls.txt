@@ -1,20 +1,20 @@
 https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/clash.yaml | Au1rxx Main Clash | Hourly HTTP-verified multi-protocol global, Reality/HY2 prioritized
-https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/by-country/clash-JP.yaml | JP Clash | Japan exits, Asia preferred, strong Reality
-https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/by-country/clash-SG.yaml | SG Clash | Singapore Asia stable
+https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/by-country/clash-US.yaml | US Clash | United States volume, preferred region
 https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/by-country/clash-NL.yaml | NL Clash | Netherlands Europe high stability
-https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/by-country/clash-US.yaml | US Clash | United States volume
-https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/by-country/clash-CA.yaml | CA Clash | Canada
 https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/by-country/clash-DE.yaml | DE Clash | Germany Europe
-https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/by-country/clash-FR.yaml | FR Clash | France
-https://radarhub.top/clash.yaml | Free Nodes Radar Clash | Daily/6h tested, stability ranked, multi-region
-https://cdn.jsdelivr.net/gh/TelegaVPN/free-vpn-keys@main/sub/clash/all.yaml | TelegaVPN Clash | Verified Reality/Hysteria2 frequent probes
+https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/by-country/clash-SG.yaml | SG Clash | Singapore Asia stable
+https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/by-country/clash-JP.yaml | JP Clash | Japan exits, Asia preferred
+https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/by-country/clash-CA.yaml | CA Clash | Canada
 https://gh-proxy.com/raw.githubusercontent.com/yy1588133/proxy-pool/main/clash.yaml | proxy-pool Clash | Aggregated wall-tested 6h update
-https://raw.githubusercontent.com/SnapdragonLee/SystemProxy/master/dist/clash_config.yaml | SystemProxy Clash | Public collection updated
+https://raw.githubusercontent.com/Ruk1ng001/freeSub/main/clash.yaml | freeSub Clash | Auto scored updates
 https://raw.githubusercontent.com/kooker/FreeSubsCheck/main/mihomo.yaml | FreeSubsCheck Mihomo | Auto synced nodes
-https://raw.githubusercontent.com/huiwin/NodeCollection/main/output/merged/latest.clash.yaml | NodeCollection Clash | Telegram+Airport aggregated 4h
+https://raw.githubusercontent.com/SnapdragonLee/SystemProxy/master/dist/clash_config.yaml | SystemProxy Clash | Public collection updated
 https://raw.githubusercontent.com/clashv2ray-hub/clashfree/refs/heads/main/clash.yaml | clashfree | Hourly free nodes
 https://www.xrayvip.com/free.yaml | xrayvip free.yaml | Long-term maintained free
-https://v1-bit-wq1.github.io/white-lists/clash.yaml | White-lists Clash | Auto select
-https://raw.githubusercontent.com/0xRadikal/Free-v2ray-Configs/main/verified/clash.yaml | 0xRadikal Verified Clash | Frequent Reality HTTP-tested
-https://raw.githubusercontent.com/ermaozi/get_subscribe/main/subscribe/clash.yml | ermaozi Clash | Auto fetch reachable
-https://raw.githubusercontent.com/Ruk1ng001/freeSub/main/clash.yaml | freeSub Clash | Auto scored updates
+https://raw.githubusercontent.com/python-net-dev/anytls-vless-reality-hysteria2-tuic-ss/refs/heads/main/.github/links/clash.yaml | AnyTLS Reality/HY2 | Full protocol preferred
+https://nodesub.v2raydog.com/2026/11/v2raydog-20261102.yaml | v2rayDog daily | Recent free nodes multi-region
+https://nodesub.shareclash.com/2026/11/shareclash-20261102.yaml | ShareClash daily | Updated free
+https://nodesub.clashsuburl.com/2026/11/clashsuburl-20261102.yaml | Clashsuburl daily | Recent
+https://nodesub.stairnode.com/2026/11/stair-20261102.yaml | StairNode daily | Free nodes
+https://nodesub.airportshare.net/2026/11/airportshare-20261102.yaml | AirportShare daily | Multi-region
+https://raw.githubusercontent.com/free-clash-v2ray/free-clash-v2ray.github.io/main/uploads/2026/11/0-20261102.yaml | free-clash-v2ray daily | Recent update
