@@ -1,20 +1,20 @@
 https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/clash.yaml | Au1rxx Main Clash | Hourly HTTP-verified multi-protocol global, Reality/HY2 prioritized
-https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/by-country/clash-US.yaml | US Clash | United States volume, preferred region
+https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/by-country/clash-US.yaml | US Clash | United States volume, preferred region for longevity
 https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/by-country/clash-NL.yaml | NL Clash | Netherlands Europe high stability
 https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/by-country/clash-DE.yaml | DE Clash | Germany Europe
-https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/by-country/clash-SG.yaml | SG Clash | Singapore Asia stable
+https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/by-country/clash-SG.yaml | SG Clash | Singapore Asia stable preferred
 https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/by-country/clash-JP.yaml | JP Clash | Japan exits, Asia preferred
 https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/by-country/clash-CA.yaml | CA Clash | Canada
-https://gh-proxy.com/raw.githubusercontent.com/yy1588133/proxy-pool/main/clash.yaml | proxy-pool Clash | Aggregated wall-tested 6h update
+https://raw.githubusercontent.com/yy1588133/proxy-pool/main/clash.yaml | proxy-pool Clash | Aggregated wall-tested 6h update
 https://raw.githubusercontent.com/Ruk1ng001/freeSub/main/clash.yaml | freeSub Clash | Auto scored updates
 https://raw.githubusercontent.com/kooker/FreeSubsCheck/main/mihomo.yaml | FreeSubsCheck Mihomo | Auto synced nodes
 https://raw.githubusercontent.com/SnapdragonLee/SystemProxy/master/dist/clash_config.yaml | SystemProxy Clash | Public collection updated
-https://raw.githubusercontent.com/clashv2ray-hub/clashfree/refs/heads/main/clash.yaml | clashfree | Hourly free nodes
-https://www.xrayvip.com/free.yaml | xrayvip free.yaml | Long-term maintained free
+https://raw.githubusercontent.com/clashv2ray-hub/clashfree/main/clash.yaml | clashfree | Hourly free nodes
+https://raw.githubusercontent.com/zhuhaiuk/free-nodes/main/clash_config.yaml | zhuhaiuk Clash | Hourly labeled regions
 https://raw.githubusercontent.com/python-net-dev/anytls-vless-reality-hysteria2-tuic-ss/refs/heads/main/.github/links/clash.yaml | AnyTLS Reality/HY2 | Full protocol preferred
-https://nodesub.v2raydog.com/2026/11/v2raydog-20261102.yaml | v2rayDog daily | Recent free nodes multi-region
-https://nodesub.shareclash.com/2026/11/shareclash-20261102.yaml | ShareClash daily | Updated free
-https://nodesub.clashsuburl.com/2026/11/clashsuburl-20261102.yaml | Clashsuburl daily | Recent
-https://nodesub.stairnode.com/2026/11/stair-20261102.yaml | StairNode daily | Free nodes
-https://nodesub.airportshare.net/2026/11/airportshare-20261102.yaml | AirportShare daily | Multi-region
-https://raw.githubusercontent.com/free-clash-v2ray/free-clash-v2ray.github.io/main/uploads/2026/11/0-20261102.yaml | free-clash-v2ray daily | Recent update
+https://www.xrayvip.com/free.yaml | xrayvip free.yaml | Long-term maintained free
+https://radarhub.top/by-protocol/hysteria2.txt | Radar HY2 | Tested every 6h pure Hysteria2 (base64)
+https://raw.githubusercontent.com/danmaifu/mianfeijiedian/main/feed/clash-20261103.yaml | danmaifu daily | Recent free nodes
+https://gh-proxy.com/raw.githubusercontent.com/yy1588133/proxy-pool/main/clash.yaml | proxy-pool mirror | Wall-friendly aggregated
+https://raw.githubusercontent.com/3inker/v2ray-subscription/main/subs/all_not_ru.txt | 3inker non-RU | Recent collected non-RU
+https://freenode.biz/api/featured?format=nsubscribe | freenode featured | Auto refreshed multi
