@@ -5,16 +5,16 @@ https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/by-country/clas
 https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/by-country/clash-SG.yaml | SG Clash | Singapore Asia stable preferred
 https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/by-country/clash-JP.yaml | JP Clash | Japan exits, Asia preferred
 https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/by-country/clash-CA.yaml | CA Clash | Canada
-https://raw.githubusercontent.com/yy1588133/proxy-pool/main/clash.yaml | proxy-pool Clash | Aggregated wall-tested 6h update
 https://raw.githubusercontent.com/Ruk1ng001/freeSub/main/clash.yaml | freeSub Clash | Auto scored updates
-https://raw.githubusercontent.com/kooker/FreeSubsCheck/main/mihomo.yaml | FreeSubsCheck Mihomo | Auto synced nodes
-https://raw.githubusercontent.com/SnapdragonLee/SystemProxy/master/dist/clash_config.yaml | SystemProxy Clash | Public collection updated
-https://raw.githubusercontent.com/clashv2ray-hub/clashfree/main/clash.yaml | clashfree | Hourly free nodes
-https://raw.githubusercontent.com/zhuhaiuk/free-nodes/main/clash_config.yaml | zhuhaiuk Clash | Hourly labeled regions
-https://raw.githubusercontent.com/python-net-dev/anytls-vless-reality-hysteria2-tuic-ss/refs/heads/main/.github/links/clash.yaml | AnyTLS Reality/HY2 | Full protocol preferred
-https://www.xrayvip.com/free.yaml | xrayvip free.yaml | Long-term maintained free
-https://radarhub.top/by-protocol/hysteria2.txt | Radar HY2 | Tested every 6h pure Hysteria2 (base64)
-https://raw.githubusercontent.com/danmaifu/mianfeijiedian/main/feed/clash-20261103.yaml | danmaifu daily | Recent free nodes
-https://gh-proxy.com/raw.githubusercontent.com/yy1588133/proxy-pool/main/clash.yaml | proxy-pool mirror | Wall-friendly aggregated
+https://raw.githubusercontent.com/PuddinCat/BestClash/refs/heads/main/proxies.yaml | BestClash | 30min update tested free
+https://raw.githubusercontent.com/mehrtat/vless-collector/main/sub.txt | mehrtat VLESS | Hourly xray-tested VLESS Reality focused
+https://raw.githubusercontent.com/0xRadikal/Free-v2ray-Configs/main/verified/configs_base64.txt | Raydikalx Verified | 15min rebuild 3-round HTTP verified
+https://raw.githubusercontent.com/0xRadikal/Free-v2ray-Configs/main/verified/clash.yaml | Raydikalx Clash | Verified Clash format
+https://radarhub.top/by-protocol/hysteria2.txt | Radar HY2 | Tested every 6h pure Hysteria2 (base64, filter non-HK/TW)
+https://radarhub.top/clash.yaml | Radar Clash | Multi-protocol tested 6h
+https://raw.githubusercontent.com/Pawdroid/Free-servers/main/sub | Pawdroid Sub | 6h update free nodes
 https://raw.githubusercontent.com/3inker/v2ray-subscription/main/subs/all_not_ru.txt | 3inker non-RU | Recent collected non-RU
+https://raw.githubusercontent.com/chaishpish/free_server_v2ray/main/@TFMTProto | chaishpish | Daily updated free
 https://freenode.biz/api/featured?format=nsubscribe | freenode featured | Auto refreshed multi
+https://raw.githubusercontent.com/Subzio/subzio/main/sub.txt | Subzio | Recent 72h collected VLESS/HY2 (non-RU)
+https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/singbox.json | Au1rxx Sing-box | Sing-box format hourly verified
