@@ -1,20 +1,20 @@
-https://radarhub.top/clash.yaml | Radar Clash YAML / multi NL DE US IT GB / 6h tested high stability UDP support
+https://radarhub.top/clash.yaml | Free Nodes Radar Clash YAML / 6h tested high stability multi NL DE US SG JP UDP support
 https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/clash.yaml | Au1rxx Main Clash / hourly HTTP-verified multi-protocol Reality/HY2 prioritized
 https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/by-country/clash-US.yaml | US Clash YAML / United States preferred for longevity
 https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/by-country/clash-NL.yaml | NL Clash YAML / Netherlands Europe high stability
 https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/by-country/clash-DE.yaml | DE Clash YAML / Germany Europe
 https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/by-country/clash-JP.yaml | JP Clash YAML / Japan Asia preferred exits
 https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/by-country/clash-SG.yaml | SG Clash YAML / Singapore Asia stable
-https://raw.githubusercontent.com/0xRadikal/Free-v2ray-Configs/main/verified/clash.yaml | Raydikalx Verified Clash / 15min rebuild 3-round HTTP Reality HY2
-https://raw.githubusercontent.com/SnapdragonLee/SystemProxy/master/dist/clash_config.yaml | SystemProxy Clash YAML / public collected daily
-https://cdn.jsdelivr.net/gh/TelegaVPN/free-vpn-keys@main/sub/clash/all.yaml | TelegaVPN Clash / multi DE NL FI US SG Reality focused
-https://raw.githubusercontent.com/python-net-dev/anytls-vless-reality-hysteria2-tuic-ss/refs/heads/main/.github/links/clash.yaml | AnyTLS Clash / Reality Hysteria2 TUIC prioritized
-https://raw.githubusercontent.com/huiwin/NodeCollection/main/output/merged/latest.clash.yaml | NodeCollection merged Clash / aggregated multi
-https://blog.ermao.net/sub/clash/ermao.net | Ermao Clash YAML / 12h free update
+https://fuzhang.net/proxy/clash.yaml | fuzhang.net Clash / 60min rebuild ~500 nodes low TCP latency multi protocol
+https://nodesub.clashsuburl.com/2026/11/clashsuburl-20261107.yaml | clashsuburl 2026-11-07 daily 21 nodes SS/VLESS/VMESS mixed regions
+https://nodesub.v2raydog.com/2026/11/v2raydog-20261107.yaml | v2raydog 2026-11-07 daily nodes
+https://nodesub.githubnode.com/2026/11/githubnode-20261107.yaml | githubnode 2026-11-07 daily
+https://nodesub.freenodesub.com/2026/11/freenodesub-20261107.yaml | freenodesub 2026-11-07 daily
+https://www.xrayvip.com/free.yaml | xrayvip fixed daily update Clash YAML
 https://raw.githubusercontent.com/Ruk1ng001/freeSub/main/clash.yaml | freeSub Clash / auto scored frequent update
-https://raw.githubusercontent.com/yy1588133/proxy-pool/main/clash.yaml | proxy-pool Clash / 6h multi source aggregated
-https://raw.githubusercontent.com/wzmwayne/proxy-node/main/output/aio/clash.yaml | wzmwayne AIO Clash / 4h kernel tested filtered
-https://raw.githubusercontent.com/clashv2ray-hub/clashfree/refs/heads/main/clash.yaml | clashfree Clash / hourly free nodes
-https://raw.githubusercontent.com/MrErrorSan/free-v2ray-clash-verge-config/main/clash/profile.yaml | MrErrorSan Clash / country auto-select 3d update
 https://gh-proxy.com/raw.githubusercontent.com/Ruk1ng001/freeSub/main/clash.yaml | freeSub Clash mirror / better for CN access
-https://raw.githubusercontent.com/Pawdroid/Free-servers/main/sub | Pawdroid Sub / 6h update free (import as needed)
+https://blog.ermao.net/sub/clash/ermao.net | Ermao Clash YAML / 12h free update
+https://raw.githubusercontent.com/free18/v2ray/refs/heads/main/c.yaml | free18 Clash YAML / daily public
+https://cdn.jsdelivr.net/gh/free18/v2ray@main/c.yaml | free18 CDN mirror for better access
+https://freenode.v2ssr.net/2026/11/07-v2ssr.net-clash-vpn-mianfeijiedian.yaml | v2ssr 2026-11-07 82 nodes multi regions
+https://raw.githubusercontent.com/0xRadikal/Free-v2ray-Configs/main/verified/clash.yaml | Raydikalx Verified Clash / 15min rebuild 3-round HTTP Reality HY2
