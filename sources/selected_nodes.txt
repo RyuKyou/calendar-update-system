@@ -80,4 +80,4 @@ vless://5c32201a-6c0e-451b-8f0a-24b4bd40df59@5.230.219.109:8444?security=reality
 vless://75cc7568-abb0-46a8-88be-8137d3c647d4@152.228.139.33:51671?mode=gun&security=reality&encryption=none&pbk=-5PowNUY37Pi01YKO9fjRTrum1m_9n6XauaPDpmOJzU&fp=chrome&type=grpc&serviceName=grpc_common3&sni=www.sony.com&sid=2fed44d8c59f7e71
 來源：mehrtat
 
-注：免費節點變動頻繁，壽命有限，優先使用自動更新訂閱提高可用性。已優先選擇非限制地區出口（US/NL/DE/SG/JP/等），以Reality與強混淆為主（支持UDP）。建議搭配多個訂閱與單節點備用，速度足夠1080p使用。更新時間：2026-11-07。
+注：免費節點變動頻繁，壽命有限，優先使用自動更新訂閱提高可用性。已優先選擇非限制地區出口（US/NL/DE/SG/JP/等），以Reality與強混淆為主（支持UDP）。建議搭配多個訂閱與單節點備用，速度足夠1080p使用。更新時間：2026-11-08。
