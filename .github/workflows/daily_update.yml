@@ -5,6 +5,7 @@ on:
     paths:
       - 'sources/urls.txt'
       - 'sources/tg_exports/**'
+      - 'sources/manual_subs/**'
       - 'scripts/update_nodes.py'
       - 'scripts/deep_probe.py'
       # R2S uploads this first; then re-run aggregate with fresh path scores
@@ -57,7 +58,6 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          # Do not stage cn_probe_results.json (owned by R2S)
           git add output/candidates.json output/clash_clean.yaml output/nodes_stats.txt 2>/dev/null || true
           git add output/ || true
           git reset HEAD -- output/cn_probe_results.json 2>/dev/null || true
