@@ -42,7 +42,7 @@ def mihomo_deep_probe(proxies: list[dict]) -> list[tuple[dict, float, float]]:
             print("WARN: mihomo not found; skip deep probe")
             return []
     ranked = sorted(proxies, key=lambda p: (quality_rank(p), str(p.get("server") or "")))
-    batch = ranked[:500]
+    batch = ranked[:900]
     print(f"Deep probe mihomo: {len(batch)}/{len(proxies)}")
     name_map = {}
     plist = []
@@ -118,7 +118,7 @@ def select_usable(alive, path_map, deep, cap):
             selected.append((p, float(speed_ms), float(be) if be is not None else None))
             if len(selected) >= cap:
                 break
-        # pass2: deep-only (e.g. legacy protocols) — no Be tag
+        # pass2: deep-only (fresh vless/trojan etc without R2S yet) — no Be tag
         if len(selected) < cap:
             for p, delay_ms, speed_ms in deep:
                 k = _proxy_key(p)
