@@ -432,7 +432,7 @@ def build_config(selected, cap):
     header = (f"# Ryukyou nodes | updated {now} | count={len(unique)} | hard_cap={cap} | "
         f"Beyond[Be]={stats['beyond']} | lights={dict(lights)} | regions={dict(regions)} | "
         f"anytls={stats['anytls']} hy2={stats['hy2']} vless={stats['vless']} trojan={stats['trojan']} low={stats['low']}\n"
-        f"# name: <light> <region> [Be]? <base> | share-URI manual_subs supported\n")
+        f"# name: <light> <region> [Be]? <base> | fresh share-URI can deep-probe without R2S first\n")
     return header + yaml.dump(cfg, allow_unicode=True, sort_keys=False, default_flow_style=False)
 
 def main():
@@ -496,16 +496,30 @@ def main():
     }, ensure_ascii=False, indent=2), encoding="utf-8")
     path_map = load_path_probe(Path(args.cn_probe))
     if path_map:
-        pool = [p for p, _ in alive if proxy_key(p) in path_map or proxy_key(p) in prev_keys]
-        extra = [p for p, _ in alive if proxy_key(p) not in path_map and proxy_key(p) not in prev_keys
-                 and str(p.get("type") or "").lower() in ("ss", "shadowsocks", "ssr", "shadowsocksr", "vmess", "hysteria", "tuic")]
-        seen_pool, ordered = set(), []
-        for p in pool + extra:
+        core = [p for p, _ in alive if proxy_key(p) in path_map or proxy_key(p) in prev_keys]
+        FRESH_TYPES = {"anytls", "hysteria2", "hysteria", "hy2", "vless", "trojan", "tuic"}
+        LEGACY_TYPES = {"ss", "shadowsocks", "ssr", "shadowsocksr", "vmess"}
+        fresh, legacy = [], []
+        for p, _ in alive:
             k = proxy_key(p)
-            if k in seen_pool: continue
-            seen_pool.add(k); ordered.append(p)
+            if k in path_map or k in prev_keys:
+                continue
+            t = str(p.get("type") or "").lower()
+            if t in FRESH_TYPES:
+                fresh.append(p)
+            elif t in LEGACY_TYPES:
+                legacy.append(p)
+        fresh.sort(key=lambda p: type_priority(p))
+        legacy.sort(key=lambda p: type_priority(p))
+        seen_pool, ordered = set(), []
+        for p in core + fresh + legacy:
+            k = proxy_key(p)
+            if k in seen_pool:
+                continue
+            seen_pool.add(k)
+            ordered.append(p)
         pool = ordered
-        print(f"Pool deep: {len(pool)} sticky={sum(1 for p in pool if proxy_key(p) in prev_keys)}")
+        print(f"Pool deep: {len(pool)} core={len(core)} fresh={len(fresh)} legacy={len(legacy)} sticky={sum(1 for p in pool if proxy_key(p) in prev_keys)}")
     else:
         pool = [p for p, _ in alive]; print(f"Pool deep (TCP): {len(pool)}")
     deep = mihomo_deep_probe(pool)
