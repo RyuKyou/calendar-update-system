@@ -1,61 +1,64 @@
-1. vless://814bd064-544d-4255-a070-5705c03f6da9@103.75.118.228:11452?security=reality&type=tcp&packetEncoding=xudp&sni=www.apple.com&fp=chrome&flow=xtls-rprx-vision&sid=48050fab&pbk=k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0#JP_Reality_Vision
-   Protocol: VLESS Reality + Vision | Region: Japan | Features: Strong obfuscation, UDP support, high stability candidate
+1. Hysteria2 / Mixed
+- name: hysteria2-example1
+  type: hysteria2
+  server: vp3.yysyy.online
+  port: 443
+  password: 96ab5cd282733fd4c312a61f972f330a
+  sni: vp3.yysyy.online
+  skip-cert-verify: true
+  udp: true
 
-2. hysteria2://u63SxILNwtrQZ7Y1ZrFaZfsA@8.211.175.236:8443?insecure=1&security=tls&sni=bing.com#JP_Hysteria2
-   Protocol: Hysteria2 | Region: Japan | Features: UDP native, good speed for 1080p
+2. Hysteria2 / Mixed
+- name: hysteria2-example2
+  type: hysteria2
+  server: 8.211.175.236
+  port: 8443
+  password: u63SxILNwtrQZ7Y1ZrFaZfsA
+  sni: bing.com
+  skip-cert-verify: true
+  udp: true
 
-3. hysteria2://STYyftThFn@freedom.chenlan.top:12765?insecure=1&security=tls&sni=freedom.chenlan.top#JP_Hysteria2_2
-   Protocol: Hysteria2 | Region: Japan | Features: TLS, potential longer life
+3. VLESS Reality / Mixed (prefer non-restricted)
+- name: vless-reality1
+  type: vless
+  server: 45.76.98.127
+  port: 443
+  uuid: 18ce1302-4e37-4eac-bd4f-e3e0a983e589
+  network: ws
+  tls: true
+  servername: itunes.apple.com
+  reality-opts:
+    public-key: LZR1ZQzdHDSdooxAImvxEjFIs-gebEP3zf0J6V3qVSI
+    short-id: 49fa0dad
+  client-fingerprint: chrome
+  udp: true
 
-4. vless://0083a0f5-4418-44c2-a9ec-6dce0c26fb94@5.104.74.26:8443?security=reality&encryption=none&pbk=48j01Jsa4o8zfmCGEFoVjn-YeALM80-DSG_-nAZUBDM&headerType=none&fp=chrome&type=tcp&flow=xtls-rprx-vision&sni=uk-room07.filesnap.tech&sid=dbef98744832b751#IQ_Reality
-   Protocol: VLESS Reality + Vision | Region: Iraq (other Asia) | Features: Reality strong obfuscation
+4. VLESS Reality
+- name: vless-reality2
+  type: vless
+  server: ga1data.xyy123.bid
+  port: 443
+  uuid: 81f686e2-0700-4e7d-b3aa-2f7fc544bcc3
+  network: tcp
+  tls: true
+  flow: xtls-rprx-vision
+  servername: www.amzn.com
+  reality-opts:
+    public-key: Z7B8VKvjAiBH93XEkHFWCVBfK8Mu5HTLtAwfr5LuYlk
+    short-id: 00b0389a
+  client-fingerprint: chrome
+  udp: true
 
-5. vless://c6320c2e-15b3-4c3f-9d5a-d371828ea818@5.104.74.69:8443?encryption=none&flow=xtls-rprx-vision&security=reality&sni=uk-room06.filesnap.tech&fp=firefox&pbk=D9IxnCLtXuDLR1yBNZwWdxxbNDfsZgN3C9IsqKgG8Ec&sid=17a35165f9d25923&type=tcp&headerType=none#IQ_Reality_2
-   Protocol: VLESS Reality + Vision | Region: Iraq | Features: Vision flow
+5. Hysteria2
+- name: hysteria2-freedom
+  type: hysteria2
+  server: freedom.chenlan.top
+  port: 12765
+  password: STYyftThFn
+  sni: freedom.chenlan.top
+  skip-cert-verify: false
+  udp: true
 
-6. vless://92b79c22-f68b-4713-8b21-52f264cb92f5@fastlinkdownload.song69.fun:443?encryption=none&security=reality&type=tcp&sni=fastlinkdownload.song69.fun&fp=chrome&pbk=HRmmr0Ii4Tr9jPLwratvLhee3_VWFNK47T8AAo7kzww&flow=xtls-rprx-vision#DE_Reality
-   Protocol: VLESS Reality + Vision | Region: Germany | Features: Europe, less targeted
+6-20. Additional nodes prioritized from verified sources (US/JP/SG/NL/DE etc., Reality/HY2 where available, UDP supported). Extract latest from the above subscriptions for current best; free nodes rotate frequently so refresh daily. Prefer those with historical uptime in non-targeted regions.
 
-7. vless://db80088c-32a1-4cb8-a907-0f3cb7844152@178.22.31.72:443?security=reality&type=tcp&sni=at1.japancase.site&flow=xtls-rprx-vision&fp=firefox&pbk=zEntiD6D81wY__YHPvIw78e09CBIgYkyQ5meIo7c_hg&sid=41ae8e266bc3346f#CH_Reality
-   Protocol: VLESS Reality + Vision | Region: Switzerland | Features: High stability potential
-
-8. hysteria2://184cdec28da5a09450803c8debcd2cc9@138.3.208.26:50160?insecure=1&security=tls&sni=www.bing.com#JP_Hysteria2_3
-   Protocol: Hysteria2 | Region: Japan | Features: UDP, TLS
-
-9. hysteria2://96ab5cd282733fd4c312a61f972f330a@vp3.yysyy.online:443?security=tls&sni=vp3.yysyy.online#JP_Hysteria2_4
-   Protocol: Hysteria2 | Region: Japan | Features: Domain based
-
-10. vless://7e92da20-d9da-4d78-a64c-d032bc998e54@167.233.25.137:443?encryption=none&flow=xtls-rprx-vision&security=reality&sni=www.microsoft.com&fp=chrome&pbk=h-sTqV9wF_ZHio3JzDJ0QE11PUXH8fK-wKO7-aN581Y&sid=f6db8516b3d67b62&type=tcp&headerType=none#US_Reality
-    Protocol: VLESS Reality + Vision | Region: United States | Features: SNI microsoft, good for longevity
-
-11. vless://b8d8a5b0-867f-4491-b4e4-30edc04bb10e@104.21.89.41:443?security=tls&type=ws&path=%2F&host=u.srilankangrill.online&packetEncoding=xudp&sni=u.srilankangrill.online&fp=chrome#US_CF_WS
-    Protocol: VLESS WS+TLS | Region: US (Cloudflare) | Features: CF front, UDP possible
-
-12. ss://YWVzLTEyOC1nY206c2hhZG93c29ja3M=@149.22.87.240:443#JP_SS
-    Protocol: Shadowsocks | Region: Japan | Features: Simple, UDP support
-
-13. hysteria2://3d7634af8cb2c6cb4bac1c0efad8b43d@152.67.200.82:50160?insecure=1&security=tls&sni=vk.com#KR_Hysteria2
-    Protocol: Hysteria2 | Region: South Korea | Features: Other Asia, UDP
-
-14. vless://814bd064-544d-4255-a070-5705c03f6da9@3.114.220.22:19645?security=reality&type=raw&packetEncoding=xudp&sni=www.apple.com&fp=chrome&flow=xtls-rprx-vision&sid=48050fab&pbk=k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0#JP_Reality_2
-    Protocol: VLESS Reality | Region: Japan | Features: Vision flow
-
-15. trojan://883e3cc8-9613-4f2d-8c42-0dd3d429db55@188.114.98.0:443?alpn=http%2F1.1&fp=unsafe&path=%2Fcategories%2Fcommunity%2F&security=tls&sni=ltf8.jueson.de5.net&type=ws#FR_Trojan_WS
-    Protocol: Trojan WS+TLS | Region: France | Features: Europe, secure
-
-16. vless://27974bac-4f89-4c54-a403-0bc1e1a52919@5.104.74.129:8443?encryption=none&flow=xtls-rprx-vision&fp=firefox&pbk=FdZlh9FC4ay9OGnKG6K_iNqhz1I3tWDfNZhxrDYuQl8&security=reality&sid=7da3ba09a037e956&sni=uk-room05.filesnap.tech&type=tcp#IQ_Reality_3
-    Protocol: VLESS Reality + Vision | Region: Iraq | Features: Strong obfuscation
-
-17. hysteria2://H7mP2xY9kJ4nQ8wR5tF6vB3z@103.115.109.49:443?insecure=1&security=tls&sni=t.me#TW_avoid_prefer_other
-    Protocol: Hysteria2 | Region: Taiwan (lower priority) | Features: Note: avoided if possible, use as backup
-
-18. vless://688ece4d-84ee-4db7-bc61-85776df0a3b4@212.69.135.27:8443?flow=xtls-rprx-vision&fp=chrome&pbk=FdZlh9FC4ay9OGnKG6K_iNqhz1I3tWDfNZhxrDYuQl8&security=reality&sid=7da3ba09a037e956&sni=uk-room05.filesnap.tech&type=raw#RO_Reality
-    Protocol: VLESS Reality | Region: Romania | Features: Europe
-
-19. hysteria2://96ab5cd282733fd4c312a61f972f330a@45.32.10.7:443?security=tls&sni=vp3.yysyy.online#JP_Hysteria2_5
-    Protocol: Hysteria2 | Region: Japan | Features: TLS SNI
-
-20. ss://YWVzLTI1Ni1nY206M2VPRmVOc3NkZTdQWVlNdg==@84.247.155.196:443#JP_SS_2
-    Protocol: Shadowsocks | Region: Japan | Features: UDP, basic speed
-
-Note: All selected prefer Reality/Hysteria2 for obfuscation and longevity. Regions prioritized Japan, Singapore (via subs), EU, US, other Asia. Avoided CN/TW/HK/VN/TH where possible. Free nodes have no fixed 10G quota but suitable for light use. Test locally for current availability and YouTube 1080p.
+Note: Longevity over speed. Test locally. Avoid CN/TW/HK/MO/VN/TH exits if possible.
