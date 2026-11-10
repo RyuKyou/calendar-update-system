@@ -52,7 +52,7 @@ jobs:
 
       - name: Fetch, deep-probe, write clash_clean.yaml
         run: |
-          python scripts/update_nodes.py --output-dir output
+          python scripts/update_nodes.py --output-dir output --max-nodes 998
 
       - name: Commit and push
         run: |
