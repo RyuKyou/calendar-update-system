@@ -19,7 +19,8 @@ MAX_WORKERS = 40
 MAX_NODES = 998
 CN_PROBE_MAX_AGE_HOURS = 36
 REALITY_PBK_RE = re.compile(r"^[A-Za-z0-9_-]{40,50}={0,2}$")
-DROP_TYPES = {"http", "socks5", "socks"}
+# Drop legacy / weak protocols everywhere (upload + web + sticky)
+DROP_TYPES = {"http", "socks5", "socks", "ss", "shadowsocks", "ssr", "shadowsocksr", "vmess"}
 SKIP_PATH_PROBE_TYPES = {"http", "socks5", "socks", "wireguard", "snell"}
 BLOCKED_EXIT_CC = {"CN", "HK", "MO"}
 PROTOCOL_RANK = {"anytls": 0, "hysteria2": 1, "hysteria": 1, "hy2": 1, "vless": 2, "trojan": 3,
@@ -243,63 +244,10 @@ def parse_share_links(text: str) -> list:
                 c = clean_proxy(p, i)
                 if c: out.append(c)
             elif line.startswith("ss://"):
-                body = line[5:]; name = f"ss-{i}"
-                if "#" in body:
-                    body, frag = body.split("#", 1); name = unquote(frag)
-                host = port = method = password = None
-                if "@" in body:
-                    userinfo, hostport = body.rsplit("@", 1)
-                    try:
-                        if ":" not in userinfo:
-                            pad = "=" * ((4 - len(userinfo) % 4) % 4)
-                            dec = base64.urlsafe_b64decode(userinfo + pad).decode("utf-8", "replace")
-                            method, password = dec.split(":", 1)
-                        else:
-                            method, password = userinfo.split(":", 1)
-                            try:
-                                pad = "=" * ((4 - len(password) % 4) % 4)
-                                password = base64.urlsafe_b64decode(password + pad).decode("utf-8", "replace")
-                            except Exception:
-                                password = unquote(password)
-                    except Exception:
-                        continue
-                    if ":" in hostport:
-                        host, ps = hostport.rsplit(":", 1)
-                        port = int(ps.split("/")[0].split("?")[0])
-                else:
-                    try:
-                        pad = "=" * ((4 - len(body) % 4) % 4)
-                        dec = base64.urlsafe_b64decode(body + pad).decode("utf-8", "replace")
-                        ui, hp = dec.rsplit("@", 1)
-                        method, password = ui.split(":", 1)
-                        host, ps = hp.rsplit(":", 1); port = int(ps)
-                    except Exception:
-                        continue
-                if not all([host, port, method, password]): continue
-                p = {"name": name, "type": "ss", "server": host, "port": int(port),
-                     "cipher": method, "password": password, "udp": True}
-                c = clean_proxy(p, i)
-                if c: out.append(c)
+                # legacy — rejected by clean_proxy / DROP_TYPES
+                continue
             elif line.startswith("vmess://"):
-                b64 = line[8:].split("#")[0].strip()
-                pad = "=" * ((4 - len(b64) % 4) % 4)
-                try:
-                    conf = json.loads(base64.urlsafe_b64decode(b64 + pad).decode("utf-8", "replace"))
-                except Exception:
-                    continue
-                p = {"name": str(conf.get("ps") or f"vmess-{i}"), "type": "vmess",
-                     "server": conf.get("add") or "", "port": int(conf.get("port") or 0),
-                     "uuid": conf.get("id") or "", "alterId": int(conf.get("aid") or 0),
-                     "cipher": conf.get("scy") or "auto", "udp": True,
-                     "network": conf.get("net") or "tcp",
-                     "tls": conf.get("tls") in ("tls", "true", True),
-                     "servername": conf.get("sni") or ""}
-                if conf.get("net") == "ws":
-                    p["ws-opts"] = {"path": conf.get("path") or "/"}
-                    if conf.get("host"):
-                        p["ws-opts"]["headers"] = {"Host": conf["host"]}
-                c = clean_proxy(p, i)
-                if c: out.append(c)
+                continue
         except Exception:
             continue
     print(f"Share-link parse: {len(out)} proxies")
@@ -469,7 +417,7 @@ def build_config(selected, cap):
         f"# Ryukyou nodes | updated {now} | count={len(unique)} | hard_cap={cap} | "
         f"Beyond[Be]={stats['beyond']} | lights={dict(lights)} | regions={dict(regions)} | "
         f"anytls={stats['anytls']} hy2={stats['hy2']} vless={stats['vless']} trojan={stats['trojan']} low={stats['low']}\n"
-        f"# upload_direct={stats['upload']} | upload=no-light/no-Be; web=deep+R2S\n"
+        f"# upload_direct={stats['upload']} | no ss/ssr/vmess | web=deep+R2S\n"
     )
     return header + yaml.dump(cfg, allow_unicode=True, sort_keys=False, default_flow_style=False)
 
@@ -530,19 +478,16 @@ def main():
         seen_p.add(k)
         prio_dedup.append(p)
     prio_geo = filter_blocked_exit_servers(prio_dedup)
-    # Upload/TG: drop legacy protocols; keep stealth / video-friendly first
-    UPLOAD_DROP = {"ss", "shadowsocks", "ssr", "shadowsocksr", "vmess"}
     UPLOAD_KEEP = {"anytls", "hysteria2", "hysteria", "hy2", "vless", "trojan", "tuic"}
     kept_u, dropped_u = [], 0
     for p in prio_geo:
         t = str(p.get("type") or "").lower()
-        if t in UPLOAD_DROP:
+        if t in DROP_TYPES:
             dropped_u += 1
             continue
         if t and t not in UPLOAD_KEEP and t not in ("wireguard",):
-            if t in {"http", "socks", "socks5", "snell"}:
-                dropped_u += 1
-                continue
+            dropped_u += 1
+            continue
         kept_u.append(p)
     kept_u.sort(key=lambda p: (type_priority(p), str(p.get("server") or "")))
     prio_geo = kept_u
@@ -585,13 +530,15 @@ def main():
     }, ensure_ascii=False, indent=2), encoding="utf-8")
 
     path_map = load_path_probe(Path(args.cn_probe))
-    LEGACY_TYPES = {"ss", "shadowsocks", "ssr", "shadowsocksr", "vmess", "hysteria", "tuic"}
+    LEGACY_TYPES = {"hysteria", "tuic"}
     path_alive, web_extra = [], []
     for p, ms in alive:
         k = proxy_key(p)
         if path_map and k in path_map:
             path_alive.append(p)
         elif k in prev_keys or str(p.get("type") or "").lower() in LEGACY_TYPES:
+            web_extra.append(p)
+        elif str(p.get("type") or "").lower() in ("anytls", "hysteria2", "hy2", "vless", "trojan"):
             web_extra.append(p)
     seen_pool, ordered = set(), []
     for p in path_alive + web_extra:
@@ -605,7 +552,7 @@ def main():
         0 if proxy_key(p) in prev_keys else 1,
         type_priority(p),
     ))
-    print(f"Web deep pool: {len(pool)} path={len(path_alive)} extra={len(web_extra)}")
+    print(f"Web deep pool: {len(pool)} path={len(path_alive)} extra={len(web_extra)} cap={cap}")
     deep = mihomo_deep_probe(pool)
     web_selected = select_usable(alive, path_map, deep, cap)
     print(f"Web deep selected: {len(web_selected)}")
@@ -614,6 +561,8 @@ def main():
     for p in prio_geo:
         k = proxy_key(p)
         if k in seen_final:
+            continue
+        if str(p.get("type") or "").lower() in DROP_TYPES:
             continue
         seen_final.add(k)
         selected.append((p, 0.0, None, True))
@@ -625,13 +574,15 @@ def main():
             k = proxy_key(p)
             if k in seen_final:
                 continue
+            if str(p.get("type") or "").lower() in DROP_TYPES:
+                continue
             seen_final.add(k)
             o_ms, be_ms = item[1], item[2]
             selected.append((p, o_ms, be_ms, False))
             if len(selected) >= cap:
                 break
 
-    print(f"Final selected: {len(selected)} (upload={sum(1 for x in selected if x[3])} web={sum(1 for x in selected if not x[3])})")
+    print(f"Final selected: {len(selected)}/{cap} (upload={sum(1 for x in selected if x[3])} web={sum(1 for x in selected if not x[3])})")
     (out_dir / "clash_clean.yaml").write_text(build_config(selected, cap), encoding="utf-8")
     be_n = sum(1 for x in selected if (not x[3]) and x[2] is not None)
     up_n = sum(1 for x in selected if x[3])
