@@ -1,5 +1,5 @@
-updated=2026-11-10T14:15:51.534164+00:00
+updated=2026-11-10T19:21:26.213405+00:00
 source_urls=169
-final_count=659 upload_direct=194 final_beyond_Be=360 hard_cap=998
-deep_pass=465 path_ok=1037 sticky_seed=644 sticky_kept=612
-types={'anytls': 3, 'vless': 568, 'trojan': 74, 'hysteria2': 14}
+final_count=554 upload_direct=194 final_beyond_Be=267 hard_cap=998
+deep_pass=360 path_ok=1037 sticky_seed=659 sticky_kept=508
+types={'anytls': 2, 'vless': 491, 'trojan': 47, 'hysteria2': 14}
