@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Node aggregate: sources + manual_subs (yaml/http/share-URIs) + sticky + deep probe."""
+"""Node aggregate: priority(manual/tg/sticky/R2S) direct deep; web keeps original filter."""
 from __future__ import annotations
 import argparse, sys, json, re, socket, time, base64
 from collections import Counter
@@ -141,6 +141,24 @@ def load_tg_export_urls(dir_path):
             if u in seen: continue
             seen.add(u); entries.append((u, f"tg:{html_path.name}"))
     return entries
+
+def load_tg_share_proxies(dir_path: Path) -> list:
+    """Parse vless/ss/trojan/vmess share links from TG HTML exports (priority source)."""
+    if not dir_path.is_dir():
+        return []
+    out = []
+    for html_path in sorted(dir_path.glob("*.html")):
+        try:
+            text = html_path.read_text(encoding="utf-8", errors="replace")
+        except Exception as e:
+            print(f"  WARN tg share {html_path.name}: {e}")
+            continue
+        found = parse_share_links(text)
+        if found:
+            print(f"TG share-links {html_path.name}: {len(found)}")
+            out.extend(found)
+    return out
+
 def clean_proxy(p, index):
     if not isinstance(p, dict): return None
     name = str(p.get("name") or f"node-{index}")
@@ -432,7 +450,7 @@ def build_config(selected, cap):
     header = (f"# Ryukyou nodes | updated {now} | count={len(unique)} | hard_cap={cap} | "
         f"Beyond[Be]={stats['beyond']} | lights={dict(lights)} | regions={dict(regions)} | "
         f"anytls={stats['anytls']} hy2={stats['hy2']} vless={stats['vless']} trojan={stats['trojan']} low={stats['low']}\n"
-        f"# name: <light> <region> [Be]? <base> | fresh share-URI can deep-probe without R2S first\n")
+        f"# priority=manual/tg/sticky/R2S direct-deep; web=original filter\n")
     return header + yaml.dump(cfg, allow_unicode=True, sort_keys=False, default_flow_style=False)
 
 def main():
@@ -446,33 +464,51 @@ def main():
     args = ap.parse_args()
     cap = max(1, min(int(args.max_nodes), MAX_NODES))
     out_dir = Path(args.output_dir); out_dir.mkdir(parents=True, exist_ok=True)
-    entries = load_urls(Path(args.sources))
+    # --- Web sources (urls.txt + http subs): original filter pipeline ---
+    web_entries = load_urls(Path(args.sources))
     tg_entries = load_tg_export_urls(Path(args.tg_exports))
     if tg_entries:
-        print(f"TG exports added {len(tg_entries)} subscription urls"); entries.extend(tg_entries)
+        print(f"TG export http subs: {len(tg_entries)}")
+        web_entries.extend(tg_entries)
     manual_urls, manual_proxies = load_manual_subs(Path(args.manual_subs))
     if manual_urls:
-        print(f"Manual subs URLs: {len(manual_urls)}"); entries.extend(manual_urls)
+        print(f"Manual http subs: {len(manual_urls)}")
+        web_entries.extend(manual_urls)
+    tg_share = load_tg_share_proxies(Path(args.tg_exports))
+    priority_proxies = list(manual_proxies) + list(tg_share)
+    print(f"Priority proxies (manual+tg share): {len(priority_proxies)}")
+
     deduped_entries, seen_u = [], set()
-    for u, d in entries:
-        if u in seen_u: continue
-        seen_u.add(u); deduped_entries.append((u, d))
-    entries = deduped_entries
-    if not entries and not manual_proxies: raise SystemExit("No sources")
-    all_proxies = []
-    for i, (url, desc) in enumerate(entries, 1):
+    for u, d in web_entries:
+        if u in seen_u:
+            continue
+        seen_u.add(u)
+        deduped_entries.append((u, d))
+    web_entries = deduped_entries
+    if not web_entries and not priority_proxies:
+        raise SystemExit("No sources")
+
+    web_proxies = []
+    for i, (url, desc) in enumerate(web_entries, 1):
         try:
-            print(f"[{i}/{len(entries)}] Fetch {url}")
-            r = requests.get(url, timeout=35); r.raise_for_status()
+            print(f"[{i}/{len(web_entries)}] Fetch web {url}")
+            r = requests.get(url, timeout=35)
+            r.raise_for_status()
             found = extract_proxies(r.text)
-            print(f"  -> {len(found)} ({desc})"); all_proxies.extend(found)
-        except Exception as e: print(f"  WARN: {e}")
-    if manual_proxies:
-        print(f"Manual proxies total: {len(manual_proxies)}"); all_proxies.extend(manual_proxies)
+            print(f"  -> {len(found)} ({desc})")
+            web_proxies.extend(found)
+        except Exception as e:
+            print(f"  WARN: {e}")
+
     prev_final = load_previous_final(out_dir / "clash_clean.yaml")
-    if prev_final:
-        all_proxies.extend(prev_final); print(f"Merged previous final (+{len(prev_final)})")
     prev_keys = {proxy_key(p) for p in prev_final}
+    if prev_final:
+        priority_proxies = list(prev_final) + priority_proxies
+        print(f"Sticky priority seed: {len(prev_final)}")
+
+    priority_keys = {proxy_key(p) for p in priority_proxies}
+    web_keys = {proxy_key(p) for p in web_proxies}
+    all_proxies = list(priority_proxies) + list(web_proxies)
     deduped, seen = [], set()
     for p in all_proxies:
         k = proxy_key(p)
@@ -492,36 +528,38 @@ def main():
     (out_dir / "candidates.json").write_text(json.dumps({
         "updated": datetime.now(timezone.utc).isoformat(), "candidates": candidates,
         "drop_types": sorted(DROP_TYPES), "skipped_path_probe_count": skipped_proto,
-        "source_url_count": len(entries), "sticky_seed": len(prev_final),
+        "source_url_count": len(web_entries), "sticky_seed": len(prev_final),
     }, ensure_ascii=False, indent=2), encoding="utf-8")
     path_map = load_path_probe(Path(args.cn_probe))
-    if path_map:
-        core = [p for p, _ in alive if proxy_key(p) in path_map or proxy_key(p) in prev_keys]
-        FRESH_TYPES = {"anytls", "hysteria2", "hysteria", "hy2", "vless", "trojan", "tuic"}
-        LEGACY_TYPES = {"ss", "shadowsocks", "ssr", "shadowsocksr", "vmess"}
-        fresh, legacy = [], []
-        for p, _ in alive:
-            k = proxy_key(p)
-            if k in path_map or k in prev_keys:
-                continue
+    LEGACY_TYPES = {"ss", "shadowsocks", "ssr", "shadowsocksr", "vmess", "hysteria", "tuic"}
+    prio_alive, path_alive, web_extra = [], [], []
+    for p, ms in alive:
+        k = proxy_key(p)
+        if k in priority_keys:
+            prio_alive.append(p)
+        elif path_map and k in path_map:
+            path_alive.append(p)
+        elif k in web_keys:
             t = str(p.get("type") or "").lower()
-            if t in FRESH_TYPES:
-                fresh.append(p)
-            elif t in LEGACY_TYPES:
-                legacy.append(p)
-        fresh.sort(key=lambda p: type_priority(p))
-        legacy.sort(key=lambda p: type_priority(p))
-        seen_pool, ordered = set(), []
-        for p in core + fresh + legacy:
-            k = proxy_key(p)
-            if k in seen_pool:
-                continue
-            seen_pool.add(k)
-            ordered.append(p)
-        pool = ordered
-        print(f"Pool deep: {len(pool)} core={len(core)} fresh={len(fresh)} legacy={len(legacy)} sticky={sum(1 for p in pool if proxy_key(p) in prev_keys)}")
-    else:
-        pool = [p for p, _ in alive]; print(f"Pool deep (TCP): {len(pool)}")
+            if t in LEGACY_TYPES:
+                web_extra.append(p)
+    seen_pool, ordered = set(), []
+    for p in prio_alive + path_alive + web_extra:
+        k = proxy_key(p)
+        if k in seen_pool:
+            continue
+        seen_pool.add(k)
+        ordered.append(p)
+    pool = ordered
+    print(
+        f"Pool deep: {len(pool)} priority={len(prio_alive)} path={len(path_alive)} "
+        f"web_legacy={len(web_extra)} sticky={sum(1 for p in pool if proxy_key(p) in prev_keys)}"
+    )
+    pool.sort(key=lambda p: (
+        0 if proxy_key(p) in prev_keys else 1,
+        0 if proxy_key(p) in priority_keys else 1,
+        type_priority(p),
+    ))
     deep = mihomo_deep_probe(pool)
     selected = select_usable(alive, path_map, deep, cap)
     print(f"Final selected: {len(selected)}")
@@ -530,7 +568,7 @@ def main():
     type_c = Counter(str(p.get("type", "")).lower() for p, _, _ in selected)
     sticky_kept = sum(1 for p, _, _ in selected if proxy_key(p) in prev_keys)
     (out_dir / "nodes_stats.txt").write_text(
-        f"updated={datetime.now(timezone.utc).isoformat()}\nsource_urls={len(entries)}\n"
+        f"updated={datetime.now(timezone.utc).isoformat()}\nsource_urls={len(web_entries)}\n"
         f"final_count={len(selected)} final_beyond_Be={be_n} hard_cap={cap}\n"
         f"deep_pass={len(deep)} path_ok={len(path_map)} sticky_seed={len(prev_final)} sticky_kept={sticky_kept}\n"
         f"types={dict(type_c)}\n", encoding="utf-8")
