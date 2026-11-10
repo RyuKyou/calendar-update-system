@@ -16,7 +16,7 @@ import requests, yaml
 VALID_NETWORKS = {"tcp", "udp", "ws", "http", "h2", "grpc", "raw"}
 CONNECT_TIMEOUT = 6.0
 MAX_WORKERS = 40
-MAX_NODES = 512
+MAX_NODES = 998
 CN_PROBE_MAX_AGE_HOURS = 36
 REALITY_PBK_RE = re.compile(r"^[A-Za-z0-9_-]{40,50}={0,2}$")
 DROP_TYPES = {"http", "socks5", "socks"}
@@ -97,7 +97,6 @@ def scrub_display_name(name):
     regions = "|".join(re.escape(v) for v in CC_ZH.values() if v and v != "未知")
     if regions: s = re.sub(rf"^({regions})\s+", "", s)
     s = NAME_SCRUB_RE.sub("", s)
-    # YAML-safe node names (unquoted values break on : # @ etc. in some clients)
     for ch in ":#[]{}&*!|>%@`\\\"'":
         s = s.replace(ch, " ")
     s = re.sub(r"[\x00-\x1f]", "", s)
@@ -531,7 +530,23 @@ def main():
         seen_p.add(k)
         prio_dedup.append(p)
     prio_geo = filter_blocked_exit_servers(prio_dedup)
-    print(f"Upload/TG after geo: {len(prio_geo)}")
+    # Upload/TG: drop legacy protocols; keep stealth / video-friendly first
+    UPLOAD_DROP = {"ss", "shadowsocks", "ssr", "shadowsocksr", "vmess"}
+    UPLOAD_KEEP = {"anytls", "hysteria2", "hysteria", "hy2", "vless", "trojan", "tuic"}
+    kept_u, dropped_u = [], 0
+    for p in prio_geo:
+        t = str(p.get("type") or "").lower()
+        if t in UPLOAD_DROP:
+            dropped_u += 1
+            continue
+        if t and t not in UPLOAD_KEEP and t not in ("wireguard",):
+            if t in {"http", "socks", "socks5", "snell"}:
+                dropped_u += 1
+                continue
+        kept_u.append(p)
+    kept_u.sort(key=lambda p: (type_priority(p), str(p.get("server") or "")))
+    prio_geo = kept_u
+    print(f"Upload/TG after geo+proto: {len(prio_geo)} (dropped_legacy={dropped_u})")
 
     web_dedup, seen_w = [], set()
     for p in web_proxies:
