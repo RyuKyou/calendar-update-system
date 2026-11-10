@@ -41,8 +41,8 @@ def mihomo_deep_probe(proxies: list[dict]) -> list[tuple[dict, float, float]]:
         if not shutil.which(str(bin_path)) and not Path(str(bin_path)).is_file():
             print("WARN: mihomo not found; skip deep probe")
             return []
-    ranked = sorted(proxies, key=lambda p: (quality_rank(p), str(p.get("server") or "")))
-    batch = ranked[:900]
+    # Preserve caller order (sticky/priority first); do not reshuffle by quality only
+    batch = list(proxies)[:900]
     print(f"Deep probe mihomo: {len(batch)}/{len(proxies)}")
     name_map = {}
     plist = []
@@ -69,7 +69,7 @@ def mihomo_deep_probe(proxies: list[dict]) -> list[tuple[dict, float, float]]:
     time.sleep(1.2)
     out = []
     delay_url = "https://www.gstatic.com/generate_204"
-    speed_url = "https://speed.cloudflare.com/__down?bytes=262144"
+    speed_url = "https://speed.cloudflare.com/__down?bytes=65536"  # 64KiB — faster deep screen
     try:
         for nm, original in name_map.items():
             try:
@@ -80,8 +80,8 @@ def mihomo_deep_probe(proxies: list[dict]) -> list[tuple[dict, float, float]]:
                 delay = r1.json().get("delay")
                 if not isinstance(delay, (int, float)) or delay <= 0:
                     continue
-                u2 = f"http://127.0.0.1:19090/proxies/{quote(nm)}/delay?timeout=15000&url={quote(speed_url, safe='')}"
-                r2 = requests.get(u2, timeout=20)
+                u2 = f"http://127.0.0.1:19090/proxies/{quote(nm)}/delay?timeout=10000&url={quote(speed_url, safe='')}"
+                r2 = requests.get(u2, timeout=16)
                 if r2.status_code != 200:
                     continue
                 speed = r2.json().get("delay")
@@ -118,7 +118,7 @@ def select_usable(alive, path_map, deep, cap):
             selected.append((p, float(speed_ms), float(be) if be is not None else None))
             if len(selected) >= cap:
                 break
-        # pass2: deep-only (fresh vless/trojan etc without R2S yet) — no Be tag
+        # pass2: deep-only (priority manual/tg/sticky without R2S yet) — no Be tag
         if len(selected) < cap:
             for p, delay_ms, speed_ms in deep:
                 k = _proxy_key(p)
