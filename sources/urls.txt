@@ -1,20 +1,20 @@
-https://radarhub.top/clash.yaml | Clash YAML / multi (NL/DE/FR/CH) / Hysteria2+SS tested 6h
-https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/clash.yaml | Clash YAML / mixed protocols / hourly HTTP-verified
-https://raw.githubusercontent.com/0xRadikal/Free-v2ray-Configs/main/verified/clash.yaml | Verified Clash YAML / Reality Hysteria2
-https://cdn.jsdelivr.net/gh/TelegaVPN/free-vpn-keys@main/sub/clash/all.yaml | Clash / global multi-region TelegaVPN
-https://blog.ermao.net/sub/clash/ermao.net | Clash / aggregated free airport 12h update
-https://raw.githubusercontent.com/clashv2ray-hub/clashfree/refs/heads/main/clash.yaml | Clash YAML / free nodes daily update
-https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/by-country/clash-NL.yaml | Clash YAML / Netherlands focused
-https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/by-country/clash-DE.yaml | Clash YAML / Germany focused
-https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/by-country/clash-SG.yaml | Clash YAML / Singapore focused
-https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/by-country/clash-JP.yaml | Clash YAML / Japan focused (other Asia)
-https://raw.githubusercontent.com/kooker/FreeSubsCheck/main/mihomo.yaml | Mihomo YAML / auto checked nodes
-https://raw.githubusercontent.com/kooker/FreeSubsCheck/main/all.yaml | Clash YAML / FreeSubsCheck
-https://clash-free-node.github.io/uploads/2026/11/0-20261109.yaml | Clash YAML / dated daily 2026-11-09
-https://raw.githubusercontent.com/clashfreenodecom/clashfreenode.com/main/feed/clash-20261109.yaml | Clash YAML / daily update 20261109
-https://nodesub.clashsuburl.com/2026/11/clashsuburl-20261109.yaml | Clash YAML / 24 nodes daily Clashsuburl
-https://gh-proxy.com/raw.githubusercontent.com/Ruk1ng001/freeSub/main/clash.yaml | Clash YAML / freeSub accelerated mirror
-https://raw.githubusercontent.com/MrErrorSan/free-v2ray-clash-verge-config/main/clash/profile.yaml | Clash with country groups / auto fastest
-https://raw.githubusercontent.com/SnapdragonLee/SystemProxy/master/dist/clash_config.yaml | Clash free / SystemProxy
-https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/by-country/clash-US.yaml | Clash YAML / US focused
-https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/by-country/clash-FR.yaml | Clash YAML / France focused
+https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/clash.yaml | Clash YAML / Mixed verified hourly / Reality+HY2 priority
+https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/by-country/clash-US.yaml | Clash / US / High stability
+https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/by-country/clash-JP.yaml | Clash / JP
+https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/by-country/clash-SG.yaml | Clash / SG
+https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/by-country/clash-NL.yaml | Clash / NL
+https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/by-country/clash-CA.yaml | Clash / CA
+https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/by-country/clash-DE.yaml | Clash / DE
+https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/by-country/clash-FR.yaml | Clash / FR
+https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/by-country/clash-GB.yaml | Clash / GB
+https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/by-country/clash-KR.yaml | Clash / KR
+https://raw.githubusercontent.com/Pawdroid/Free-servers/main/sub | Mixed / 6h update
+https://blog.ermao.net/sub/clash/ermao.net | Clash / ermaozi 12h
+https://raw.githubusercontent.com/Ruk1ng001/freeSub/main/clash.yaml | Clash / Auto scored
+https://radarhub.top/clash.yaml | Clash / nodesradar 6h tested
+https://raw.githubusercontent.com/0xRadikal/Free-v2ray-Configs/main/verified/clash.yaml | Clash / Verified Reality+HY2
+https://raw.githubusercontent.com/SnapdragonLee/SystemProxy/master/dist/clash_config.yaml | Clash / SystemProxy
+https://raw.githubusercontent.com/AzadNetCH/Clash/main/AzadNet_META.yml | Clash Meta / AzadNet
+https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/by-country/clash-IN.yaml | Clash / IN
+https://raw.githubusercontent.com/ishalumi/proxy-node-collector/main/output/nodes.txt | Text but convertible / Aggregated
+https://raw.githubusercontent.com/morpheusadam/v2ray-config/main/subs/bundles/best.txt | Base64 best / Daily measured
