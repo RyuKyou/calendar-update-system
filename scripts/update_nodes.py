@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Node aggregate: priority(manual/tg/sticky/R2S) direct deep; web keeps original filter."""
+"""Node aggregate: upload/tg skip deep (dedupe+geo only); web keeps deep/R2S filter."""
 from __future__ import annotations
 import argparse, sys, json, re, socket, time, base64
 from collections import Counter
@@ -143,7 +143,6 @@ def load_tg_export_urls(dir_path):
     return entries
 
 def load_tg_share_proxies(dir_path: Path) -> list:
-    """Parse vless/ss/trojan/vmess share links from TG HTML exports (priority source)."""
     if not dir_path.is_dir():
         return []
     out = []
@@ -414,11 +413,24 @@ def format_label(p, display_ms, beyond):
     region = CC_ZH.get(detect_cc(p), "未知")
     if beyond: return f"{light} {region} [Be] {base}"
     return f"{light} {region} {base}"
+
+def format_label_upload(p):
+    """No traffic-light / Be — distinguish upload/TG sources from probed ones."""
+    base = scrub_display_name(str(p.get("name") or "node"))
+    region = CC_ZH.get(detect_cc(p), "未知")
+    return f"{region} {base}"
+
 def build_config(selected, cap):
+    """selected items: (proxy, o_ms, be_ms) or (proxy, o_ms, be_ms, is_upload)."""
     seen_names, unique = set(), []
-    stats = {"anytls": 0, "hy2": 0, "vless": 0, "trojan": 0, "low": 0, "preferred": 0, "beyond": 0}
+    stats = {"anytls": 0, "hy2": 0, "vless": 0, "trojan": 0, "low": 0, "preferred": 0, "beyond": 0, "upload": 0}
     lights, regions = Counter(), Counter()
-    for p, o_ms, be_ms in selected:
+    for item in selected:
+        if len(item) == 4:
+            p, o_ms, be_ms, is_upload = item
+        else:
+            p, o_ms, be_ms = item
+            is_upload = False
         p = dict(p); t = str(p.get("type") or "").lower()
         if region_priority(p) < 100: stats["preferred"] += 1
         if t == "anytls": stats["anytls"] += 1
@@ -426,12 +438,17 @@ def build_config(selected, cap):
         elif t == "vless": stats["vless"] += 1
         elif t == "trojan": stats["trojan"] += 1
         elif t in ("ss", "shadowsocks", "ssr", "shadowsocksr", "vmess"): stats["low"] += 1
-        beyond = be_ms is not None
+        beyond = (be_ms is not None) and (not is_upload)
         if beyond: stats["beyond"] += 1
-        display = float(be_ms) if beyond else float(o_ms)
-        lights[latency_emoji(display)] += 1
+        if is_upload: stats["upload"] += 1
         regions[CC_ZH.get(detect_cc(p), "未知")] += 1
-        label = format_label(p, display, beyond)
+        if is_upload:
+            label = format_label_upload(p)
+            lights["upload"] += 1
+        else:
+            display = float(be_ms) if beyond else float(o_ms or 0)
+            lights[latency_emoji(display)] += 1
+            label = format_label(p, display, beyond)
         if label in seen_names:
             k = 2
             while f"{label}-{k}" in seen_names: k += 1
@@ -450,7 +467,7 @@ def build_config(selected, cap):
     header = (f"# Ryukyou nodes | updated {now} | count={len(unique)} | hard_cap={cap} | "
         f"Beyond[Be]={stats['beyond']} | lights={dict(lights)} | regions={dict(regions)} | "
         f"anytls={stats['anytls']} hy2={stats['hy2']} vless={stats['vless']} trojan={stats['trojan']} low={stats['low']}\n"
-        f"# priority=manual/tg/sticky/R2S direct-deep; web=original filter\n")
+        f"upload_direct={stats['upload']} | upload=no-light/no-Be; web=deep+R2S\n")
     return header + yaml.dump(cfg, allow_unicode=True, sort_keys=False, default_flow_style=False)
 
 def main():
@@ -464,7 +481,6 @@ def main():
     args = ap.parse_args()
     cap = max(1, min(int(args.max_nodes), MAX_NODES))
     out_dir = Path(args.output_dir); out_dir.mkdir(parents=True, exist_ok=True)
-    # --- Web sources (urls.txt + http subs): original filter pipeline ---
     web_entries = load_urls(Path(args.sources))
     tg_entries = load_tg_export_urls(Path(args.tg_exports))
     if tg_entries:
@@ -476,7 +492,7 @@ def main():
         web_entries.extend(manual_urls)
     tg_share = load_tg_share_proxies(Path(args.tg_exports))
     priority_proxies = list(manual_proxies) + list(tg_share)
-    print(f"Priority proxies (manual+tg share): {len(priority_proxies)}")
+    print(f"Upload/TG priority proxies: {len(priority_proxies)}")
 
     deduped_entries, seen_u = [], set()
     for u, d in web_entries:
@@ -502,74 +518,109 @@ def main():
 
     prev_final = load_previous_final(out_dir / "clash_clean.yaml")
     prev_keys = {proxy_key(p) for p in prev_final}
-    if prev_final:
-        priority_proxies = list(prev_final) + priority_proxies
-        print(f"Sticky priority seed: {len(prev_final)}")
 
-    priority_keys = {proxy_key(p) for p in priority_proxies}
-    web_keys = {proxy_key(p) for p in web_proxies}
-    all_proxies = list(priority_proxies) + list(web_proxies)
-    deduped, seen = [], set()
-    for p in all_proxies:
+    prio_dedup, seen_p = [], set()
+    for p in priority_proxies:
         k = proxy_key(p)
-        if k in seen: continue
-        seen.add(k); deduped.append(p)
-    print(f"After dedup: {len(deduped)}")
-    deduped = filter_blocked_exit_servers(deduped)
-    print("Overseas TCP probe ...")
-    alive = probe_alive(deduped)
-    print(f"Overseas reachable: {len(alive)}")
+        if k in seen_p:
+            continue
+        seen_p.add(k)
+        prio_dedup.append(p)
+    prio_geo = filter_blocked_exit_servers(prio_dedup)
+    print(f"Upload/TG after geo: {len(prio_geo)}")
+
+    web_dedup, seen_w = [], set()
+    for p in web_proxies:
+        k = proxy_key(p)
+        if k in seen_w or k in seen_p:
+            continue
+        seen_w.add(k)
+        web_dedup.append(p)
+    for p in prev_final:
+        k = proxy_key(p)
+        if k in seen_w or k in seen_p:
+            continue
+        seen_w.add(k)
+        web_dedup.append(p)
+    web_geo = filter_blocked_exit_servers(web_dedup)
+    print("Web overseas TCP probe ...")
+    alive = probe_alive(web_geo)
+    print(f"Web TCP reachable: {len(alive)}")
     candidates, skipped_proto = [], 0
     for p, ms in alive:
         if str(p.get("type") or "").lower() in SKIP_PATH_PROBE_TYPES:
-            skipped_proto += 1; continue
-        candidates.append({"key": proxy_key(p), "server": p.get("server"), "port": p.get("port"),
-                           "type": p.get("type"), "name": p.get("name"), "overseas_ms": round(ms, 1)})
+            skipped_proto += 1
+            continue
+        candidates.append({
+            "key": proxy_key(p), "server": p.get("server"), "port": p.get("port"),
+            "type": p.get("type"), "name": p.get("name"), "overseas_ms": round(ms, 1),
+        })
     (out_dir / "candidates.json").write_text(json.dumps({
-        "updated": datetime.now(timezone.utc).isoformat(), "candidates": candidates,
-        "drop_types": sorted(DROP_TYPES), "skipped_path_probe_count": skipped_proto,
-        "source_url_count": len(web_entries), "sticky_seed": len(prev_final),
+        "updated": datetime.now(timezone.utc).isoformat(),
+        "candidates": candidates,
+        "drop_types": sorted(DROP_TYPES),
+        "skipped_path_probe_count": skipped_proto,
+        "source_url_count": len(web_entries),
+        "sticky_seed": len(prev_final),
+        "upload_direct": len(prio_geo),
     }, ensure_ascii=False, indent=2), encoding="utf-8")
+
     path_map = load_path_probe(Path(args.cn_probe))
     LEGACY_TYPES = {"ss", "shadowsocks", "ssr", "shadowsocksr", "vmess", "hysteria", "tuic"}
-    prio_alive, path_alive, web_extra = [], [], []
+    path_alive, web_extra = [], []
     for p, ms in alive:
         k = proxy_key(p)
-        if k in priority_keys:
-            prio_alive.append(p)
-        elif path_map and k in path_map:
+        if path_map and k in path_map:
             path_alive.append(p)
-        elif k in web_keys:
-            t = str(p.get("type") or "").lower()
-            if t in LEGACY_TYPES:
-                web_extra.append(p)
+        elif k in prev_keys or str(p.get("type") or "").lower() in LEGACY_TYPES:
+            web_extra.append(p)
     seen_pool, ordered = set(), []
-    for p in prio_alive + path_alive + web_extra:
+    for p in path_alive + web_extra:
         k = proxy_key(p)
         if k in seen_pool:
             continue
         seen_pool.add(k)
         ordered.append(p)
     pool = ordered
-    print(
-        f"Pool deep: {len(pool)} priority={len(prio_alive)} path={len(path_alive)} "
-        f"web_legacy={len(web_extra)} sticky={sum(1 for p in pool if proxy_key(p) in prev_keys)}"
-    )
     pool.sort(key=lambda p: (
         0 if proxy_key(p) in prev_keys else 1,
-        0 if proxy_key(p) in priority_keys else 1,
         type_priority(p),
     ))
+    print(f"Web deep pool: {len(pool)} path={len(path_alive)} extra={len(web_extra)}")
     deep = mihomo_deep_probe(pool)
-    selected = select_usable(alive, path_map, deep, cap)
-    print(f"Final selected: {len(selected)}")
+    web_selected = select_usable(alive, path_map, deep, cap)
+    print(f"Web deep selected: {len(web_selected)}")
+
+    selected, seen_final = [], set()
+    for p in prio_geo:
+        k = proxy_key(p)
+        if k in seen_final:
+            continue
+        seen_final.add(k)
+        selected.append((p, 0.0, None, True))
+        if len(selected) >= cap:
+            break
+    if len(selected) < cap:
+        for item in web_selected:
+            p = item[0]
+            k = proxy_key(p)
+            if k in seen_final:
+                continue
+            seen_final.add(k)
+            o_ms, be_ms = item[1], item[2]
+            selected.append((p, o_ms, be_ms, False))
+            if len(selected) >= cap:
+                break
+
+    print(f"Final selected: {len(selected)} (upload={sum(1 for x in selected if x[3])} web={sum(1 for x in selected if not x[3])})")
     (out_dir / "clash_clean.yaml").write_text(build_config(selected, cap), encoding="utf-8")
-    be_n = sum(1 for _, _, c in selected if c is not None)
-    type_c = Counter(str(p.get("type", "")).lower() for p, _, _ in selected)
-    sticky_kept = sum(1 for p, _, _ in selected if proxy_key(p) in prev_keys)
+    be_n = sum(1 for x in selected if (not x[3]) and x[2] is not None)
+    up_n = sum(1 for x in selected if x[3])
+    type_c = Counter(str(x[0].get("type", "")).lower() for x in selected)
+    sticky_kept = sum(1 for x in selected if proxy_key(x[0]) in prev_keys)
     (out_dir / "nodes_stats.txt").write_text(
         f"updated={datetime.now(timezone.utc).isoformat()}\nsource_urls={len(web_entries)}\n"
-        f"final_count={len(selected)} final_beyond_Be={be_n} hard_cap={cap}\n"
+        f"final_count={len(selected)} upload_direct={up_n} final_beyond_Be={be_n} hard_cap={cap}\n"
         f"deep_pass={len(deep)} path_ok={len(path_map)} sticky_seed={len(prev_final)} sticky_kept={sticky_kept}\n"
         f"types={dict(type_c)}\n", encoding="utf-8")
     print(f"Sticky kept: {sticky_kept}/{len(prev_final)}"); print("Done.")
