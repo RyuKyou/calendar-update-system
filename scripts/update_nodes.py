@@ -97,6 +97,10 @@ def scrub_display_name(name):
     regions = "|".join(re.escape(v) for v in CC_ZH.values() if v and v != "未知")
     if regions: s = re.sub(rf"^({regions})\s+", "", s)
     s = NAME_SCRUB_RE.sub("", s)
+    # YAML-safe node names (unquoted values break on : # @ etc. in some clients)
+    for ch in ":#[]{}&*!|>%@`\\\"'":
+        s = s.replace(ch, " ")
+    s = re.sub(r"[\x00-\x1f]", "", s)
     s = re.sub(r"\s{2,}", " ", s).strip(" -_|/")
     if len(s) > 36: s = s[:36].rstrip() + "…"
     return s or "node"
@@ -415,13 +419,11 @@ def format_label(p, display_ms, beyond):
     return f"{light} {region} {base}"
 
 def format_label_upload(p):
-    """No traffic-light / Be — distinguish upload/TG sources from probed ones."""
     base = scrub_display_name(str(p.get("name") or "node"))
     region = CC_ZH.get(detect_cc(p), "未知")
     return f"{region} {base}"
 
 def build_config(selected, cap):
-    """selected items: (proxy, o_ms, be_ms) or (proxy, o_ms, be_ms, is_upload)."""
     seen_names, unique = set(), []
     stats = {"anytls": 0, "hy2": 0, "vless": 0, "trojan": 0, "low": 0, "preferred": 0, "beyond": 0, "upload": 0}
     lights, regions = Counter(), Counter()
@@ -464,10 +466,12 @@ def build_config(selected, cap):
              "url": "https://www.gstatic.com/generate_204", "interval": 600, "tolerance": 200}],
         "rules": ["GEOIP,CN,DIRECT", "MATCH,🚀 节点选择"]}
     if len(unique) > cap: raise RuntimeError(f"BUG: {len(unique)} > {cap}")
-    header = (f"# Ryukyou nodes | updated {now} | count={len(unique)} | hard_cap={cap} | "
+    header = (
+        f"# Ryukyou nodes | updated {now} | count={len(unique)} | hard_cap={cap} | "
         f"Beyond[Be]={stats['beyond']} | lights={dict(lights)} | regions={dict(regions)} | "
         f"anytls={stats['anytls']} hy2={stats['hy2']} vless={stats['vless']} trojan={stats['trojan']} low={stats['low']}\n"
-        f"upload_direct={stats['upload']} | upload=no-light/no-Be; web=deep+R2S\n")
+        f"# upload_direct={stats['upload']} | upload=no-light/no-Be; web=deep+R2S\n"
+    )
     return header + yaml.dump(cfg, allow_unicode=True, sort_keys=False, default_flow_style=False)
 
 def main():
