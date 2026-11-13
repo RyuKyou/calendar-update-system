@@ -8,15 +8,13 @@ vless://84a56b88-2f89-4a57-b925-74abd5b7fd87@37.18.15.205:8445?encryption=none&f
 vless://dc2259c4-388e-4285-ba18-df619b6672b6@82.118.16.187:443?flow=xtls-rprx-vision&fp=firefox&packetEncoding=xudp&pbk=R5ycsjJ-v024902dMSqTsSdqxUwCFEXMebdBEWFt9VU&security=reality&sid=cd6065902eea7a02&sni=www.cloudflare.com&type=tcp#VLESS-Reality-IT-1 | VLESS Reality | IT | Europe
 vless://11aabba0-5fd1-4f15-8068-74c1a466cefc@193.163.203.170:443?flow=xtls-rprx-vision&fp=random&host=yandex.ru&pbk=GCCZ1ZZjB_nj7yxqFi22bIIWWr_G6rnWUzDcssN_40o&security=reality&sid=b28db60d77c50b4f&sni=yandex.ru&type=tcp#VLESS-Reality-IT-2 | VLESS Reality | IT | UDP support
 vless://d1a6a033-fdbd-46a6-a177-3370ba042b9f@46.28.67.55:443?flow=xtls-rprx-vision&fp=firefox&pbk=i2dJ1_XGDpp50qpEclh6SWSWkxt4B0t2hi2qOVQbeSU&security=reality&sid=d06d78e974491b6e&sni=www.cloudflare.com&type=tcp#VLESS-Reality-RO | VLESS Reality | RO | Europe
-hy2://96ab5cd282733fd4c312a61f972f330a@vp3.yysyy.online:443?insecure=1#Hysteria2-Online-1 | Hysteria2 | Domain | Strong UDP, good for video
-hy2://u63SxILNwtrQZ7Y1ZrFaZfsA@8.211.175.236:8443?insecure=1&sni=bing.com#Hysteria2-Alt-1 | Hysteria2 | IP | Obfs capable
-hy2://184cdec28da5a09450803c8debcd2cc9@138.3.208.26:50160?insecure=1#Hysteria2-IP-1 | Hysteria2 | IP based
+hysteria2://184cdec28da5a09450803c8debcd2cc9@138.3.208.26:50160?insecure=1&security=tls&sni=www.bing.com#Hysteria2-JP-1 | Hysteria2 | JP | Strong UDP, good for video, preferred Asia
+hysteria2://u63SxILNwtrQZ7Y1ZrFaZfsA@8.211.175.236:8443?insecure=1&security=tls&sni=bing.com#Hysteria2-JP-2 | Hysteria2 | JP | Obfs capable
+hysteria2://4ab7d1e3-f2a7-44ca-91bd-45d3c5f423d2@158.101.140.31:1985?insecure=1&security=tls&sni=158.101.140.31#Hysteria2-JP-3 | Hysteria2 | JP | UDP preferred
+hysteria2://usqmqUKJFIlCmvkCNSY64L3k@8.209.247.109:443?insecure=1&security=tls#Hysteria2-JP-4 | Hysteria2 | JP | Domain/IP mix
+vless://814bd064-544d-4255-a070-5705c03f6da9@103.75.118.228:11452?security=reality&type=tcp&packetEncoding=xudp&sni=www.apple.com&fp=chrome&flow=xtls-rprx-vision&sid=48050fab&pbk=k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0&encryption=none#VLESS-Reality-JP-1 | VLESS Reality | JP | Preferred Asia, strong obfs
+vless://814bd064-544d-4255-a070-5705c03f6da9@103.75.118.228:12683?security=reality&type=tcp&packetEncoding=xudp&sni=www.apple.com&fp=chrome&flow=xtls-rprx-vision&sid=48050fab&pbk=k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0#VLESS-Reality-JP-2 | VLESS Reality | JP | UDP support
+hysteria2://96ab5cd282733fd4c312a61f972f330a@vp3.yysyy.online:443?insecure=1#Hysteria2-Online-1 | Hysteria2 | Domain | Strong UDP
 hy2://STYyftThFn@freedom.chenlan.top:12765?#Hysteria2-Domain-1 | Hysteria2 | Domain | Potential longevity
 vless://37af0181-5598-4aad-a040-d926bcb65757@78.159.250.83:8443?encryption=none&type=xhttp&security=tls&sni=earlytrain.net&fp=firefox&host=earlytrain.net&path=/api/v1/upload#VLESS-XHTTP-1 | VLESS XHTTP | Possible EU | Advanced transport
-# Selected 15+ from verified public sources prioritizing Reality/Hysteria2 from US/NL/EE/IT/RO (avoided CN/TW/HK/MO/VN/TH). Free nodes lifetime limited; use subscriptions for continuous updates. Supports basic YouTube 1080p on good ones.
-# Additional from same pool for completeness:
-vless://00144519-7e0d-476b-8d28-435576af9262@167.17.69.171:443?flow=xtls-rprx-vision&fp=firefox&pbk=ALT8hIGeZEhi0sQFbXP_ntBg8Xo-v7i0YCLrqTnBxRk&security=reality&sid=0990d22f&sni=www.cloudflare.com&type=tcp#VLESS-Reality-US-Backup
-vless://501a2da5-cb22-4a3f-915e-e3b821d1d62d@87.199.205.28:443?encryption=none&flow=xtls-rprx-vision&fp=firefox&pbk=W-9zyiOq287RtXVTZlTFbSDJ0Mx8joyBLJoA7ZE7eBw&security=reality&sid=ef1d3554c652a436&sni=vkvd754.okcdn.ru&type=raw#VLESS-Reality-NL-Backup
-hy2://96ab5cd282733fd4c312a61f972f330a@45.32.10.7:443?sni=vp3.yysyy.online#Hysteria2-Backup
-vless://Fluffy_VPN-Oth8rOq3@104.171.135.229:443?flow=xtls-rprx-vision&fp=firefox&pbk=mpo4BIcoWiMXAQGt5a8IJ4MFkPJQyLC50dO_bXzC7z0&security=reality&sni=absolute-disaster.org&type=tcp#VLESS-Reality-Backup
-# Total 20 entries focusing longevity and strong protocols.
+# Selected 20 from verified public sources prioritizing Reality/Hysteria2 from US/NL/EE/IT/RO/JP (avoided CN/TW/HK/MO/VN/TH). Free nodes lifetime limited; use subscriptions for continuous updates. Supports basic YouTube 1080p on good ones. Updated 2026-11-14.
