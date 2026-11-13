@@ -1,20 +1,20 @@
-https://radarhub.top/clash.yaml | Clash YAML | Mixed protocols, tested every 6h, Europe/US heavy, high stability
-https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/clash.yaml | Clash | Hourly HTTP-verified, Hysteria2/Reality/VLESS multi-country
-https://raw.githubusercontent.com/Ruk1ng001/freeSub/main/clash.yaml | Clash | Domestic speed-tested, update 2026-11-12
-https://raw.githubusercontent.com/kooker/FreeSubsCheck/main/mihomo.yaml | Mihomo | Aggregated recent sync
-https://raw.githubusercontent.com/SnapdragonLee/SystemProxy/master/dist/clash_config.yaml | Clash | Public collected ongoing
-https://cdn.jsdelivr.net/gh/TelegaVPN/free-vpn-keys@main/sub/clash/all.yaml | Clash | Audited VLESS Reality focused
-https://raw.githubusercontent.com/ermaozi/get_subscribe/main/subscribe/clash.yml | Clash | 12h auto from public sources
-https://raw.githubusercontent.com/TG-NAV/nodeshare/refs/heads/main/clash.yaml | Clash | Daily update
-https://github.com/Delta-Kronecker/V2ray-Config/raw/refs/heads/main/config/clash.yaml | Clash | Large tested from hundreds sources
-https://raw.githubusercontent.com/danmaifu/mianfeijiedian/main/feed/clash-20261112.yaml | Clash | Daily dated feed
-https://gh-proxy.com/raw.githubusercontent.com/yy1588133/proxy-pool/main/clash.yaml | Clash | Aggregated CN-friendly proxy
-https://raw.githubusercontent.com/mahdibland/V2RayAggregator/master/sub/sub_merge_yaml.yml | Clash | Merged public
-https://raw.githubusercontent.com/peasoft/NoMoreWalls/master/list.yml | Clash | Aggregated list
-https://raw.githubusercontent.com/chengaopan/AutoMergePublicNodes/master/list.yml | Clash | Auto-merge public
+https://radarhub.top/clash.yaml | Clash YAML | Mixed protocols, 6h real-tested from DE/SG, stability ranked, EU/US/SG preferred
+https://leidahub.top/clash.yaml | Clash YAML | nodesradar ZH mirror, 6h update, high pass rate
+https://cdn.jsdelivr.net/gh/TelegaVPN/free-vpn-keys@main/sub/clash/all.yaml | Clash Meta YAML | VLESS Reality + Hysteria2, 30min Xray probed, global multi-region
+https://raw.githubusercontent.com/TelegaVPN/free-vpn-keys/main/sub/clash/all.yaml | Clash YAML | TelegaVPN raw, Reality focused, audited
+https://gh-proxy.com/raw.githubusercontent.com/Ruk1ng001/freeSub/main/clash.yaml | Clash YAML | freeSub, CN speed-tested, auto-scored, daily update
+https://raw.githubusercontent.com/Ruk1ng001/freeSub/main/clash.yaml | Clash YAML | freeSub raw
+https://cdn.jsdelivr.net/gh/free18/v2ray@main/c.yaml | Clash YAML | free18 daily, VLESS Reality mix
+https://raw.githubusercontent.com/free18/v2ray/main/c.yaml | Clash YAML | free18 raw
+https://blog.ermao.net/sub/clash/ermao.net | Clash | ermaozi 12h auto from public sources
+https://raw.githubusercontent.com/ermaozi/get_subscribe/main/subscribe/clash.yml | Clash YAML | ermaozi raw
+https://cdn.jsdelivr.net/gh/mahdibland/V2RayAggregator@master/sub/sub_merge_yaml.yml | Clash YAML | Aggregator speed-filtered large pool
+https://raw.githubusercontent.com/mahdibland/V2RayAggregator/master/sub/sub_merge_yaml.yml | Clash YAML | Aggregator raw
+https://cdn.jsdelivr.net/gh/mahdibland/V2RayAggregator@master/update/provider/provider-meta-cn.yml | Clash Meta provider | CN optimized Aggregator
+https://raw.githubusercontent.com/TG-NAV/nodeshare/refs/heads/main/clash.yaml | Clash YAML | TG-NAV daily update
+https://cdn.jsdelivr.net/gh/mahdibland/V2RayAggregator@master/update/provider/provider-meta.yml | Clash Meta provider | Aggregator recommended
+https://raw.githubusercontent.com/peasoft/NoMoreWalls/master/list.yml | Clash | Aggregated public list
+https://raw.githubusercontent.com/chengaopan/AutoMergePublicNodes/master/list.yml | Clash | Auto-merge public nodes
 https://raw.githubusercontent.com/anaer/Sub/main/clash.yaml | Clash | Subscription merge
-https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/by-country/clash-NL.yaml | Clash NL | Preferred Europe region
-https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/by-country/clash-DE.yaml | Clash DE | Preferred Europe
-https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/by-country/clash-US.yaml | Clash US | Preferred
-https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/by-country/clash-JP.yaml | Clash JP | Asia preferred over restricted
-https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/by-country/clash-SG.yaml | Clash SG | Asia preferred
+https://cdn.jsdelivr.net/gh/free18/v2ray@main/c.yaml | Clash YAML | free18 CDN mirror for accessibility
+https://gh-proxy.com/https://raw.githubusercontent.com/Ruk1ng001/freeSub/main/clash.yaml | Clash YAML | freeSub proxy mirror for CN access
