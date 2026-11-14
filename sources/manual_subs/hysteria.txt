@@ -1,0 +1,10 @@
+﻿hysteria://62.210.28.175:24667?alpn=h3&auth=dongtaiwang.com&downmbps=55 Mbps&protocol=udp&insecure=1&peer=bing.com&upmbps=11 Mbps#%F0%9F%87%AB%F0%9F%87%B7FR_12
+hysteria://5.83.129.90:54177?alpn=h3&auth=dongtaiwang.com&auth_str=dongtaiwang.com&downmbps=1000&protocol=udp&insecure=1&peer=apple.com&upmbps=500#%F0%9F%87%B3%F0%9F%87%B1NL_25
+hysteria://137.175.82.44:20022?alpn=h3&auth=dongtaiwang.com&downmbps=55&password=dongtaiwang.com&servername=bing.com&insecure=1&peer=bing.com&sub_tag=noCache&upmbps=11#%F0%9F%87%BA%F0%9F%87%B8US_87%7CnoCache
+hysteria://62.210.28.175:24667?alpn=h3&auth=dongtaiwang.com&downmbps=55&password=dongtaiwang.com&servername=bing.com&insecure=1&peer=bing.com&sub_tag=noCache&upmbps=11#%F0%9F%87%AB%F0%9F%87%B7FR_22%7CnoCache
+hysteria://62.210.70.191:24667?alpn=h3&auth_str=dongtaiwang.com&downmbps=55 Mbps&obfsParam=&protocol=udp&insecure=1&peer=bing.com&sub_tag=noCache&upmbps=11 Mbps#%F0%9F%87%AB%F0%9F%87%B7FR_25%7CnoCache
+hysteria://137.175.82.43:20022?alpn=h3&auth=dongtaiwang.com&downmbps=20&password=dongtaiwang.com&servername=bing.com&insecure=1&peer=bing.com&upmbps=20#%F0%9F%87%BA%F0%9F%87%B8US_107
+hysteria://198.200.57.142:22335?alpn=h3&auth_str=github.com%2FAlvin9999-newpac%2Ffanqiang&downmbps=55&obfsParam=&insecure=1&peer=bing.com&upmbps=11#%F0%9F%87%BA%F0%9F%87%B8US_115
+hysteria://198.200.57.142:22335?alpn=h3&auth=github.com/Alvin9999-newpac/fanqiang&downmbps=55&password=github.com%2FAlvin9999-newpac%2Ffanqiang&servername=bing.com&insecure=1&peer=bing.com&sub_tag=noCache&upmbps=11#%F0%9F%87%BA%F0%9F%87%B8US_119%7CnoCache
+hysteria://5.83.129.90:54177?alpn=h3&auth=dongtaiwang.com&downmbps=55&password=dongtaiwang.com&servername=apple.com&insecure=1&peer=apple.com&sub_tag=noCache&upmbps=11#%F0%9F%87%B3%F0%9F%87%B1NL_54%7CnoCache
+hysteria://163.172.117.163:36699?alpn=h3&auth=dongtaiwang.com&downmbps=55&password=dongtaiwang.com&servername=bing.com&insecure=1&peer=bing.com&sub_tag=noCache&upmbps=11#%F0%9F%87%AB%F0%9F%87%B7FR_29%7CnoCache

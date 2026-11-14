@@ -1,0 +1,5 @@
+﻿trojan://HutaoCloud@185.220.238.77:11543?sni=185.220.238.77&allowInsecure=1&type=ws&path=%2Fapi&fp=chrome#%E2%9D%93Other_3
+trojan://5t6i121em5lkmsmk@en001.zestapp778.com:29813?sni=en001.zestapp778.com&type=tcp#%F0%9F%87%AC%F0%9F%87%A7GB_11
+trojan://HutaoCloud@185.220.238.77:11543?sni=185.220.238.77&allowInsecure=1&type=ws&path=%2Fapi#%E2%9D%93Other_10
+trojan://5t6i121em5lkmsmk@en001.zestapp778.com:29813?sni=en001.zestapp778.com&allowInsecure=1&type=tcp&fp=chrome#%F0%9F%87%AC%F0%9F%87%A7GB_15
+trojan://1n4y6i3nv4tcgurc@31.57.185.170:8443?sni=31.57.185.170&allowInsecure=1&type=ws&path=%2FTELEGRAM----%40YektaCloud----%40YektaCloud----%40YektaCloud----%40YektaCloud----%40YektaCloud----%40YektaCloud----%40YektaCloud----%40YektaCloud----%40YektaCloud----%40YektaCloud----%40YektaCloud----%40YektaCloud----%40YektaCloud----%40YektaCloud----%40YektaCloud----%40YektaCloud&alpn=http%2F1.1%2Ch3%2Ch2&fp=firefox#%F0%9F%87%B3%F0%9F%87%B1NL_58
