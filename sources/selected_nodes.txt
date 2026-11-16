@@ -1,13 +1,12 @@
 hysteria2://184cdec28da5a09450803c8debcd2cc9@138.3.208.26:50160?insecure=1&sni=www.bing.com#🇯🇵 日本 01 | Hysteria2 | JP | Strong UDP/obfs, high pass rate 28/28, preferred Asia
 hysteria2://184cdec28da5a09450803c8debcd2cc9@138.3.208.26:50160?insecure=1&sni=off#🇯🇵 日本 02 | Hysteria2 | JP | Hy2, low latency potential from JP tests
 hysteria2://u63SxILNwtrQZ7Y1ZrFaZfsA@8.211.175.236:8443?insecure=1#🇯🇵 日本 03 | Hysteria2 | JP | Verified stability
-hysteria2://f87376e17da040ed04c9665ce8972930@138.2.73.238:50160?insecure=1#🇸🇬 新加坡 01 | Hysteria2 | SG | Preferred Asia, UDP support
-hysteria2://gf1%3Agfhysteria2024@66.94.121.46:443?insecure=1&sni=www.broadcom.com#🇺🇸 美国 001 | Hysteria2 | US | Strong obfs, good for video
-hysteria2://gf1%3Agfhysteria2024@66.94.121.46:443?insecure=1&sni=vk.com#🇺🇸 美国 003 | Hysteria2 | US | Hy2 preferred
 hysteria2://maintell@152.70.237.123:2053?insecure=1&sni=bing.com#🇰🇷 韩国 01 | Hysteria2 | KR | Asia preferred, UDP
 hysteria2://1671a252e2a97dc2bda4e515475931da@132.226.226.189:50160?insecure=1&sni=off#🇰🇷 韩国 02 | Hysteria2 | KR | Stability ranked
-hysteria2://3d7634af8cb2c6cb4bac1c0efad8b43d@152.67.200.82:50160?insecure=1&sni=speedtest.tinkoff.ru#🇰🇷 韩国 03 | Hysteria2 | KR | Hy2
+hysteria2://3d7634af8cb2c6cb4bac1c0efad8b43d@152.67.200.82:50160?insecure=1&sni=google.com#🇰🇷 韩国 03 | Hysteria2 | KR | Hy2
 hysteria2://633bc3be486b646190661ac2387c150a@152.67.115.203:443?insecure=1&obfs=salamander&obfs-password=850a3fb1cd33a28f12d837578ae1a2e7&sni=www.bing.com#🇦🇺 澳大利亚 01 | Hysteria2 | AU | Obfs + UDP, less targeted
+hysteria2://gf1%3Agfhysteria2024@66.94.121.46:443?insecure=1&sni=www.broadcom.com#🇺🇸 美国 001 | Hysteria2 | US | Strong obfs, good for video
+hysteria2://gf1%3Agfhysteria2024@66.94.121.46:443?insecure=1&sni=vk.com#🇺🇸 美国 003 | Hysteria2 | US | Hy2 preferred
 vless://00144519-7e0d-476b-8d28-435576af9262@167.17.69.171:443?flow=xtls-rprx-vision&fp=firefox&pbk=ALT8hIGeZEhi0sQFbXP_ntBg8Xo-v7i0YCLrqTnBxRk&security=reality&sid=0990d22f&sni=www.cloudflare.com&type=tcp#VLESS-Reality-US-1 | VLESS Reality | US | Strong obfs, high security, UDP
 vless://d65cc14c-f53f-4fe2-b262-97856601319c@169.40.42.163:443?flow=xtls-rprx-vision&fp=firefox&pbk=e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg&security=reality&sid=c39cc7310a&sni=yahoo.com&type=tcp#VLESS-Reality-US-2 | VLESS Reality | US | Reality preferred
 vless://501a2da5-cb22-4a3f-915e-e3b821d1d62d@87.199.205.28:443?encryption=none&flow=xtls-rprx-vision&fp=firefox&pbk=W-9zyiOq287RtXVTZlTFbSDJ0Mx8joyBLJoA7ZE7eBw&security=reality&sid=ef1d3554c652a436&sni=vkvd754.okcdn.ru&type=raw#VLESS-Reality-NL-1 | VLESS Reality | NL | Europe preferred
@@ -17,5 +16,6 @@ vless://84a56b88-2f89-4a57-b925-74abd5b7fd87@37.18.15.205:8445?encryption=none&f
 vless://dc2259c4-388e-4285-ba18-df619b6672b6@82.118.16.187:443?flow=xtls-rprx-vision&fp=firefox&packetEncoding=xudp&pbk=R5ycsjJ-v024902dMSqTsSdqxUwCFEXMebdBEWFt9VU&security=reality&sid=cd6065902eea7a02&sni=www.cloudflare.com&type=tcp#VLESS-Reality-IT-1 | VLESS Reality | IT | Europe, UDP
 vless://11aabba0-5fd1-4f15-8068-74c1a466cefc@193.163.203.170:443?flow=xtls-rprx-vision&fp=random&host=yandex.ru&pbk=GCCZ1ZZjB_nj7yxqFi22bIIWWr_G6rnWUzDcssN_40o&security=reality&sid=b28db60d77c50b4f&sni=yandex.ru&type=tcp#VLESS-Reality-IT-2 | VLESS Reality | IT | Strong
 vless://d1a6a033-fdbd-46a6-a177-3370ba042b9f@46.28.67.55:443?flow=xtls-rprx-vision&fp=firefox&pbk=i2dJ1_XGDpp50qpEclh6SWSWkxt4B0t2hi2qOVQbeSU&security=reality&sid=d06d78e974491b6e&sni=www.cloudflare.com&type=tcp#VLESS-Reality-RO | VLESS Reality | RO | Europe preferred
-vless://814bd064-544d-4255-a070-5705c03f6da9@103.75.118.228:11452?security=reality&type=tcp&packetEncoding=xudp&sni=www.apple.com&fp=chrome&flow=xtls-rprx-vision&sid=48050fab&pbk=k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0&encryption=none#VLESS-Reality-JP-1 | VLESS Reality | JP | Preferred Asia, Reality obfs, UDP
-# Selected 20 single nodes prioritizing longevity proxies: Hysteria2/Reality from JP/SG/US/KR/AU/NL/IT/EE/RO. Avoided CN/TW/HK/MO/VN/TH. Free nodes have limited life; prefer subscriptions for continuous. Supports YouTube 1080p on stable ones. Updated 2026-11-16.
+vless://48ff2b70-e180-582f-8866-d9a2edeed5f5@15.204.97.198:23576?type=tcp&encryption=none&flow=xtls-rprx-vision&sni=fuck.rkn&fp=chrome&security=reality&pbk=1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s&sid=01#VLESS-Reality-US-3 | VLESS Reality | US | Fresh verified Reality
+vless://59548d2d-5d7c-4328-aa81-0d5614da0c1b@198.247.127.131:443?encryption=none&flow=xtls-rprx-vision&fp=firefox&pbk=vmHHRwA9ER6c8dfgtL-gh2HBMCvjySy1xLimqYpLiCI&security=reality&sni=addons.mozilla.org&type=tcp#VLESS-Reality-US-4 | VLESS Reality | US | Strong obfs
+# Selected 20 single nodes prioritizing longevity proxies: Hysteria2/Reality from JP/KR/AU/US/NL/IT/EE/RO. Avoided CN/TW/HK/MO/VN/TH. Free nodes have limited life; prefer subscriptions for continuous. Supports YouTube 1080p on stable ones. Updated 2026-11-17.
