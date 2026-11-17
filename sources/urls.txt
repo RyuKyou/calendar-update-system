@@ -1,5 +1,5 @@
-https://leidahub.top/clash.yaml | Clash YAML | nodesradar 6h real-tested (JP/SG/KR/AU/US), Hy2 heavy, high stability rank
-https://radarhub.top/clash.yaml | Clash YAML | nodesradar EN mirror, DE/SG/US preferred
+https://leidahub.top/clash.yaml | Clash YAML | nodesradar 6h real-tested (JP/KR/SG/US), Hy2 heavy, high stability rank, preferred Asia non-TW/HK
+https://radarhub.top/clash.yaml | Clash YAML | nodesradar EN mirror, DE/NL/US/FR preferred, multi-protocol
 https://raw.githubusercontent.com/Ruk1ng001/freeSub/main/clash.yaml | Clash YAML | CN domestic tested, auto-scored, daily, multi-protocol
 https://gh-proxy.com/raw.githubusercontent.com/Ruk1ng001/freeSub/main/clash.yaml | Clash YAML | freeSub accelerated for CN
 https://raw.githubusercontent.com/0xRadikal/Free-v2ray-Configs/main/verified/clash.yaml | Clash YAML | 15min update, 3-round verified, Reality/Hy2/VLESS
@@ -8,13 +8,13 @@ https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/clash.yaml | Cl
 https://raw.githubusercontent.com/Au1rxx/free-vpn-subscriptions/main/output/by-country/clash-US.yaml | Clash YAML | US focused hourly verified
 https://raw.githubusercontent.com/TelegaVPN/free-vpn-keys/main/sub/clash/all.yaml | Clash YAML | Reality + Hy2 audited, 30min probe
 https://cdn.jsdelivr.net/gh/TelegaVPN/free-vpn-keys@main/sub/clash/all.yaml | Clash YAML | TelegaVPN CDN mirror
-https://raw.githubusercontent.com/SnapdragonLee/SystemProxy/master/dist/clash_config.yaml | Clash YAML | Long-running public aggregator
 https://raw.githubusercontent.com/yy1588133/proxy-pool/main/clash.yaml | Clash YAML | 6h auto-merge from multiple sources, CN filtered
 https://gh-proxy.com/raw.githubusercontent.com/yy1588133/proxy-pool/main/clash.yaml | Clash YAML | proxy-pool accelerated
 https://raw.githubusercontent.com/python-net-dev/anytls-vless-reality-hysteria2-tuic-ss/refs/heads/main/.github/links/clash.yaml | Clash YAML | Daily Reality/Hy2/TUIC preferred
-https://raw.githubusercontent.com/danmaifu/mianfeijiedian/main/feed/clash-20261116.yaml | Clash YAML | Daily crawler (update date as needed)
-https://nodesub.clashsuburl.com/2026/11/clashsuburl-20261116.yaml | Clash YAML | Daily small set multi-region (AU/US/DE/NL/SG)
-https://free-clash-v2ray.github.io/uploads/2026/11/0-20261116.yaml | Clash YAML | Daily free Clash update
-https://blog.ermao.net/sub/clash/ermao.net | Clash | 12h auto public sources
+https://blog.ermao.net/sub/clash/ermao.net | Clash | 12h auto public sources, Reality heavy
+https://raw.githubusercontent.com/ermaozi/get_subscribe/main/subscribe/clash.yml | Clash YAML | ermaozi raw daily
+https://raw.githubusercontent.com/danmaifu/mianfeijiedian/main/feed/clash-20261117.yaml | Clash YAML | Daily crawler (update date as needed)
 https://raw.githubusercontent.com/chengaopan/AutoMergePublicNodes/master/list.yml | Clash | Auto-merge stable public
+https://raw.githubusercontent.com/kooker/FreeSubsCheck/main/mihomo.yaml | Clash YAML | FreeSubsCheck multi-source
 https://raw.githubusercontent.com/3inker/v2ray-subscription/main/subs/all_not_ru.txt | Plain/Base64 | Non-RU verified, Hy2/VLESS included
+https://fuzhang.net/proxy/clash.yaml | Clash YAML | Hourly rebuilt, TCP probed, multi-region
