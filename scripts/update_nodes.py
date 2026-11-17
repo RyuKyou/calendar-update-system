@@ -19,6 +19,18 @@ MAX_WORKERS = 40
 MAX_NODES = 998
 CN_PROBE_MAX_AGE_HOURS = 36
 REALITY_PBK_RE = re.compile(r"^[A-Za-z0-9_-]{40,50}={0,2}$")
+# Xray/mihomo: short-id hex, length 0..16 and typically even; empty allowed
+REALITY_SID_RE = re.compile(r"^([0-9a-fA-F]{2}){0,8}$")
+
+class _Quoted(str):
+    """Force YAML single-quoted scalar (avoid octal/int mis-parse of hex short-id)."""
+    pass
+
+def _represent_quoted(dumper, data):
+    return dumper.represent_scalar("tag:yaml.org,2002:str", str(data), style="'")
+
+yaml.add_representer(_Quoted, _represent_quoted)
+
 # Drop legacy / weak protocols everywhere (upload + web + sticky)
 DROP_TYPES = {"http", "socks5", "socks", "ss", "shadowsocks", "ssr", "shadowsocksr", "vmess"}
 SKIP_PATH_PROBE_TYPES = {"http", "socks5", "socks", "wireguard", "snell"}
@@ -183,8 +195,26 @@ def clean_proxy(p, index):
     ro = p.get("reality-opts")
     if isinstance(ro, dict):
         pbk = str(ro.get("public-key") or ro.get("public_key") or "").strip()
-        if pbk and not REALITY_PBK_RE.fullmatch(pbk): return None
-        if not pbk and ("public-key" in ro or "public_key" in ro): return None
+        if pbk and not REALITY_PBK_RE.fullmatch(pbk):
+            return None
+        if not pbk and ("public-key" in ro or "public_key" in ro):
+            return None
+        # short-id: normalize + strict validate (invalid short-id breaks whole provider load)
+        sid_raw = ro.get("short-id", ro.get("short_id", ""))
+        if sid_raw is None:
+            sid = ""
+        else:
+            sid = str(sid_raw).strip()
+        if not REALITY_SID_RE.fullmatch(sid):
+            return None
+        # rewrite normalized reality-opts only
+        clean_ro = {}
+        if pbk:
+            clean_ro["public-key"] = _Quoted(pbk)
+        clean_ro["short-id"] = _Quoted(sid)  # always quoted string in YAML
+        p["reality-opts"] = clean_ro
+    elif ro is not None and ro != {}:
+        return None
     return p
 def extract_proxies(text):
     try: data = yaml.safe_load(text)
@@ -216,7 +246,7 @@ def parse_share_links(text: str) -> list:
                      "client-fingerprint": q.get("fp") or "", "network": q.get("type") or "tcp"}
                 if q.get("flow"): p["flow"] = q["flow"]
                 if q.get("security") == "reality":
-                    p["reality-opts"] = {"public-key": q.get("pbk") or "", "short-id": q.get("sid") or ""}
+                    p["reality-opts"] = {"public-key": q.get("pbk") or "", "short-id": str(q.get("sid") or "")}
                     p["tls"] = True
                 if q.get("type") == "ws":
                     p["network"] = "ws"
@@ -244,7 +274,6 @@ def parse_share_links(text: str) -> list:
                 c = clean_proxy(p, i)
                 if c: out.append(c)
             elif line.startswith("ss://"):
-                # legacy — rejected by clean_proxy / DROP_TYPES
                 continue
             elif line.startswith("vmess://"):
                 continue
@@ -417,7 +446,7 @@ def build_config(selected, cap):
         f"# Ryukyou nodes | updated {now} | count={len(unique)} | hard_cap={cap} | "
         f"Beyond[Be]={stats['beyond']} | lights={dict(lights)} | regions={dict(regions)} | "
         f"anytls={stats['anytls']} hy2={stats['hy2']} vless={stats['vless']} trojan={stats['trojan']} low={stats['low']}\n"
-        f"# upload_direct={stats['upload']} | no ss/ssr/vmess | web=deep+R2S\n"
+        f"# upload_direct={stats['upload']} | no ss/ssr/vmess | reality short-id validated\n"
     )
     return header + yaml.dump(cfg, allow_unicode=True, sort_keys=False, default_flow_style=False)
 
