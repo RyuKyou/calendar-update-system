@@ -1,20 +1,20 @@
-https://leidahub.top/clash.yaml | Clash YAML | nodesradar 6h real-tested (JP/KR/SG/US), Hy2 heavy, high stability rank, preferred Asia non-TW/HK
-https://radarhub.top/clash.yaml | Clash YAML | nodesradar EN mirror, DE/NL/US/FR preferred, multi-protocol
-https://raw.githubusercontent.com/Ruk1ng001/freeSub/main/clash.yaml | Clash YAML | CN domestic tested, auto-scored, daily, multi-protocol
-https://gh-proxy.com/raw.githubusercontent.com/Ruk1ng001/freeSub/main/clash.yaml | Clash YAML | freeSub accelerated for CN
-https://raw.githubusercontent.com/0xRadikal/Free-v2ray-Configs/main/verified/clash.yaml | Clash YAML | 15min update, 3-round verified, Reality/Hy2/VLESS
-https://cdn.jsdelivr.net/gh/0xRadikal/Free-v2ray-Configs@main/verified/clash.yaml | Clash YAML | CDN mirror verified
-https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/clash.yaml | Clash YAML | Hourly HTTP-verified, large pool Reality/Hy2
-https://raw.githubusercontent.com/Au1rxx/free-vpn-subscriptions/main/output/by-country/clash-US.yaml | Clash YAML | US focused hourly verified
-https://raw.githubusercontent.com/TelegaVPN/free-vpn-keys/main/sub/clash/all.yaml | Clash YAML | Reality + Hy2 audited, 30min probe
+https://leidahub.top/clash.yaml | Clash YAML | nodesradar 6h real-tested (JP/KR/SG preferred), Hy2/Reality heavy, high stability
+https://radarhub.top/clash.yaml | Clash YAML | nodesradar EN, DE/NL/US/FR preferred, multi-protocol tested
+https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/by-country/clash-JP.yaml | Clash YAML | JP Japan focused, hourly verified, Hy2+Reality
+https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/by-country/clash-SG.yaml | Clash YAML | SG Singapore focused, hourly verified
+https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/by-country/clash-KR.yaml | Clash YAML | KR Korea focused, hourly verified
+https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/by-country/clash-DE.yaml | Clash YAML | DE Germany focused, hourly verified
+https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/by-country/clash-NL.yaml | Clash YAML | NL Netherlands focused, hourly verified
+https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/by-country/clash-US.yaml | Clash YAML | US focused, hourly verified, large pool
+https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/by-country/clash-FR.yaml | Clash YAML | FR France focused, hourly verified
+https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/clash.yaml | Clash YAML | Au1rxx main mixed, hourly HTTP-verified
+https://raw.githubusercontent.com/TelegaVPN/free-vpn-keys/main/sub/clash/all.yaml | Clash YAML | TelegaVPN Reality+Hy2 audited 30min probe
 https://cdn.jsdelivr.net/gh/TelegaVPN/free-vpn-keys@main/sub/clash/all.yaml | Clash YAML | TelegaVPN CDN mirror
-https://raw.githubusercontent.com/yy1588133/proxy-pool/main/clash.yaml | Clash YAML | 6h auto-merge from multiple sources, CN filtered
-https://gh-proxy.com/raw.githubusercontent.com/yy1588133/proxy-pool/main/clash.yaml | Clash YAML | proxy-pool accelerated
-https://raw.githubusercontent.com/python-net-dev/anytls-vless-reality-hysteria2-tuic-ss/refs/heads/main/.github/links/clash.yaml | Clash YAML | Daily Reality/Hy2/TUIC preferred
-https://blog.ermao.net/sub/clash/ermao.net | Clash | 12h auto public sources, Reality heavy
-https://raw.githubusercontent.com/ermaozi/get_subscribe/main/subscribe/clash.yml | Clash YAML | ermaozi raw daily
-https://raw.githubusercontent.com/danmaifu/mianfeijiedian/main/feed/clash-20261117.yaml | Clash YAML | Daily crawler (update date as needed)
-https://raw.githubusercontent.com/chengaopan/AutoMergePublicNodes/master/list.yml | Clash | Auto-merge stable public
-https://raw.githubusercontent.com/kooker/FreeSubsCheck/main/mihomo.yaml | Clash YAML | FreeSubsCheck multi-source
-https://raw.githubusercontent.com/3inker/v2ray-subscription/main/subs/all_not_ru.txt | Plain/Base64 | Non-RU verified, Hy2/VLESS included
-https://fuzhang.net/proxy/clash.yaml | Clash YAML | Hourly rebuilt, TCP probed, multi-region
+https://raw.githubusercontent.com/mehrtat/vless-collector/main/sub.txt | Base64 VLESS | hourly xray-tested VLESS
+https://raw.githubusercontent.com/morpheusadam/v2ray-config/main/subs/bundles/reality.txt | Plain/Base64 | Reality focused daily rebuilt
+https://raw.githubusercontent.com/morpheusadam/v2ray-config/main/subs/bundles/hysteria2.txt | Plain/Base64 | Hysteria2 focused
+https://raw.githubusercontent.com/morpheusadam/v2ray-config/main/subs/bundles/best.txt | Plain/Base64 | Best mixed daily
+https://raw.githubusercontent.com/free-nodes/v2rayfree/main/sub | Base64 | free-nodes daily update
+https://raw.githubusercontent.com/3inker/v2ray-subscription/main/subs/all_not_ru.txt | Plain | 3inker non-RU verified
+https://raw.githubusercontent.com/Pawdroid/Free-servers/main/static/sub_en | Base64 | Free-servers EN
+https://leidahub.top/v2ray.txt | Base64 | nodesradar v2ray mixed tested
