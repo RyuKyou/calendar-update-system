@@ -1,20 +1,20 @@
-https://leidahub.top/clash.yaml | Clash YAML | nodesradar 6h real-tested (JP/KR/SG preferred), Hy2/Reality heavy, high stability
-https://radarhub.top/clash.yaml | Clash YAML | nodesradar EN, DE/NL/US/FR preferred, multi-protocol tested
-https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/by-country/clash-JP.yaml | Clash YAML | JP Japan focused, hourly verified, Hy2+Reality
-https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/by-country/clash-SG.yaml | Clash YAML | SG Singapore focused, hourly verified
-https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/by-country/clash-KR.yaml | Clash YAML | KR Korea focused, hourly verified
-https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/by-country/clash-DE.yaml | Clash YAML | DE Germany focused, hourly verified
-https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/by-country/clash-NL.yaml | Clash YAML | NL Netherlands focused, hourly verified
-https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/by-country/clash-US.yaml | Clash YAML | US focused, hourly verified, large pool
-https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/by-country/clash-FR.yaml | Clash YAML | FR France focused, hourly verified
-https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/clash.yaml | Clash YAML | Au1rxx main mixed, hourly HTTP-verified
-https://raw.githubusercontent.com/TelegaVPN/free-vpn-keys/main/sub/clash/all.yaml | Clash YAML | TelegaVPN Reality+Hy2 audited 30min probe
-https://cdn.jsdelivr.net/gh/TelegaVPN/free-vpn-keys@main/sub/clash/all.yaml | Clash YAML | TelegaVPN CDN mirror
-https://raw.githubusercontent.com/mehrtat/vless-collector/main/sub.txt | Base64 VLESS | hourly xray-tested VLESS
-https://raw.githubusercontent.com/morpheusadam/v2ray-config/main/subs/bundles/reality.txt | Plain/Base64 | Reality focused daily rebuilt
-https://raw.githubusercontent.com/morpheusadam/v2ray-config/main/subs/bundles/hysteria2.txt | Plain/Base64 | Hysteria2 focused
-https://raw.githubusercontent.com/morpheusadam/v2ray-config/main/subs/bundles/best.txt | Plain/Base64 | Best mixed daily
-https://raw.githubusercontent.com/free-nodes/v2rayfree/main/sub | Base64 | free-nodes daily update
-https://raw.githubusercontent.com/3inker/v2ray-subscription/main/subs/all_not_ru.txt | Plain | 3inker non-RU verified
-https://raw.githubusercontent.com/Pawdroid/Free-servers/main/static/sub_en | Base64 | Free-servers EN
-https://leidahub.top/v2ray.txt | Base64 | nodesradar v2ray mixed tested
+https://radarhub.top/clash.yaml | Clash YAML | NodesRadar EN 每6h实测 DE/NL/FR/US优先 Hysteria2/Reality 高稳定
+https://leidahub.top/clash.yaml | Clash YAML | 节点雷达 每6h实测 JP/SG/KR优先
+https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/clash.yaml | Clash YAML | Au1rxx 小时HTTP验证 大量节点
+https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/stable/clash-0001.yaml | Clash YAML | Au1rxx 稳定S/A/B等级
+https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/by-country/clash-DE.yaml | Clash YAML | 德国专属 小时更新
+https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/by-country/clash-NL.yaml | Clash YAML | 荷兰专属
+https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/by-country/clash-FR.yaml | Clash YAML | 法国专属
+https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/by-country/clash-US.yaml | Clash YAML | 美国专属
+https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/by-country/clash-JP.yaml | Clash YAML | 日本专属 亚洲优选
+https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/by-country/clash-SG.yaml | Clash YAML | 新加坡专属
+https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/by-country/clash-KR.yaml | Clash YAML | 韩国专属
+https://crazygeeky.com/sub/mihomo.yaml | Clash YAML | NodeHub 每2h存活检测
+https://raw.githubusercontent.com/zhuhaiuk/free-nodes/main/clash_config.yaml | Clash YAML | 每小时自动更新
+https://raw.githubusercontent.com/danmaifu/mianfeijiedian/main/feed/clash-20261121.yaml | Clash YAML | 每日爬取最新
+https://nodesub.shareclash.com/2026/11/shareclash-20261120.yaml | Clash YAML | ShareClash 20261120 更新
+https://raw.githubusercontent.com/free18/v2ray/refs/heads/main/c.yaml | Clash YAML | free18 每日刷新
+https://raw.githubusercontent.com/Barabama/FreeNodes/main/merged.yaml | Clash YAML | FreeNodes 去重合并
+https://raw.githubusercontent.com/ermaozi/get_subscribe/main/subscribe/clash.yml | Clash YAML | 常见公益源
+https://www.xrayvip.com/free.yaml | Clash YAML | XrayVIP 免费配置
+https://raw.githubusercontent.com/SnapdragonLee/SystemProxy/master/dist/clash_config.yaml | Clash YAML | SystemProxy 配置
