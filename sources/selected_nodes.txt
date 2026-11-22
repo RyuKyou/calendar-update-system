@@ -1,23 +1,24 @@
-hysteria2://u63SxILNwtrQZ7Y1ZrFaZfsA@8.211.175.236:8443?insecure=1&sni=8.211.175.236#Japan Hy2 01 | Hysteria2 | JP | 高稳实测 UDP 亚洲优先
-hysteria2://184cdec28da5a09450803c8debcd2cc9@138.3.208.26:50160?insecure=1#Japan Hy2 02 | Hysteria2 | JP | 亚洲优选 低延迟潜力
-hysteria2://f87376e17da040ed04c9665ce8972930@138.2.73.238:50160?insecure=1#Singapore Hy2 01 | Hysteria2 | SG | 亚洲优选 UDP
-hysteria2://3d7634af8cb2c6cb4bac1c0efad8b43d@152.67.200.82:50160?insecure=1&sni=google.com#Korea Hy2 01 | Hysteria2 | KR | 亚洲相对稳定
-hysteria2://gf1:gfhysteria2024@66.94.121.46:443?insecure=1&sni=vk.com#US Hy2 01 | Hysteria2 | US | 美国节点 强混淆
-vless://48ff2b70-e180-582f-8866-d9a2edeed5f5@51.158.206.96:23576?encryption=none&flow=xtls-rprx-vision&security=reality&sni=fuck.rkn&fp=chrome&pbk=1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s&sid=01&type=tcp#DE Reality Vision | VLESS Reality | DE | 欧洲优先 强伪装 Vision
+hysteria2://d4ca9415f0eac7897472e1e5b86d2e96@50.7.38.243:443?insecure=1&sni=promo.betust.net#NL Hy2 01 | Hysteria2 | NL | 高稳定低延迟 UDP 欧洲优先
+hysteria2://H7mP2xY9kJ4nQ8wR5tF6vB3z@3.69.232.199:443?insecure=1#DE Hy2 01 | Hysteria2 | DE | 德国高通过率 强混淆
+hysteria2://H7mP2xY9kJ4nQ8wR5tF6vB3z@3.76.221.4:443?insecure=1&sni=3.76.221.4#DE Hy2 02 | Hysteria2 | DE | 实测28/28 稳定
+hysteria2://H7mP2xY9kJ4nQ8wR5tF6vB3z@18.153.65.67:443?insecure=1#DE Hy2 03 | Hysteria2 | DE | 欧洲优先 UDP
+hysteria2://84a506ca5aca505696a454d828420b3f@140.238.213.114:50160?insecure=1#CH Hy2 01 | Hysteria2 | CH | 瑞士高稳定
+hysteria2://github.com/Alvin9999-newpac/fanqiang@62.210.7.139:60111?insecure=1&sni=google.com#FR Hy2 01 | Hysteria2 | FR | 法国高通过率
+hysteria2://H7mP2xY9kJ4nQ8wR5tF6vB3z@13.36.234.11:443?insecure=1#FR Hy2 02 | Hysteria2 | FR | 强混淆
+hysteria2://3a702d4d1de4949005d8431220e040fb@152.67.75.161:443?insecure=1&obfs=salamander&obfs-password=c13f29db6a638ad2b211b9ce2669ef27&sni=www.bing.com#CH Hy2 Obfs | Hysteria2 | CH | Obfs强混淆 UDP
+ss://YWVzLTI1Ni1nY206WlJwZ2FCZUd4dEVOSVhndmhwa1pCS3o5R25XUlMyZFljeDlPK2EyaXdONDQ=@193.108.117.84:19999#DE SS 01 | Shadowsocks | DE | 高稳定实测 UDP
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpvWklvQTY5UTh5aGNRVjhrYTNQYTNB@82.38.31.48:8080#NL SS 01 | Shadowsocks | NL | 荷兰低延迟 UDP
+vless://61e3954d-0d66-4b69-b6cd-9b4fc2352303@172.233.142.149:443?encryption=none&security=reality&sni=itunes.apple.com&fp=chrome&pbk=f9D1ZzG6vP1HgjCaCIutbykWkab8VEDuitwuwaeuBgY&sid=4206512a&type=ws&path=%2Fws&host=itunes.apple.com#US Reality WS | VLESS Reality | US | 强伪装 WS 真测
+vless://4c4f7955-3b05-4795-b3b7-6c83b7f82b0f@172.236.231.45:443?encryption=none&security=reality&sni=itunes.apple.com&fp=chrome&pbk=M6kLOIYA9IagUu0eiplnPZFObYVzTc4GfPyEqKQnZWQ&sid=8353867a&type=ws&path=%2Fws&host=itunes.apple.com#US Reality WS 02 | VLESS Reality | US | Vision潜力 真测
+hysteria2://H7mP2xY9kJ4nQ8wR5tF6vB3z@3.76.203.180:443?insecure=1#DE Hy2 04 | Hysteria2 | DE | 高稳定
+hysteria2://H7mP2xY9kJ4nQ8wR5tF6vB3z@18.193.79.104:443?insecure=1&sni=vpn-de-002.fastervpn.world#DE Hy2 05 | Hysteria2 | DE | 欧洲优先
+ss://YWVzLTI1Ni1nY206WlJwZ2FCZUd4dEVOSVhndmhwa1pCS3o5R25XUlMyZFljeDlPK2EyaXdONDQ=@23.166.88.127:19999#CH SS 01 | Shadowsocks | CH | 瑞士稳定 UDP
+vless://48ff2b70-e180-582f-8866-d9a2edeed5f5@51.158.206.96:23576?encryption=none&flow=xtls-rprx-vision&security=reality&sni=fuck.rkn&fp=chrome&pbk=1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s&sid=01&type=tcp#DE Reality Vision | VLESS Reality | DE | 强伪装 Vision 欧洲
+hysteria2://H7mP2xY9kJ4nQ8wR5tF6vB3z@3.69.232.199:443?insecure=1&sni=3.69.232.199#DE Hy2 06 | Hysteria2 | DE | 高通过率
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTprMWRcb21PQjRvcWk3VW1wMzdhMWJR@82.38.31.187:8080#NL SS 02 | Shadowsocks | NL | 荷兰高稳定
+hysteria2://github.com/Alvin9999-newpac/fanqiang@62.210.7.139:60111?insecure=1&sni=bing.com#FR Hy2 03 | Hysteria2 | FR | 强混淆
 vless://afbd410e-1663-4f40-9d3b-df5117aa23ca@198.202.146.51:443?encryption=none&flow=xtls-rprx-vision&security=reality&sni=198.202.146.51.sslip.io&fp=chrome&pbk=B5DMtKe8wjH_WeM8M8IEuKwPqJ6-Ku98JH_LifwehEY&sid=6fe2994a0e208408&type=tcp#DE Reality 02 | VLESS Reality | DE | Vision UDP
-vless://afbd410e-1663-4f40-9d3b-df5117aa23ca@167.104.223.215:443?encryption=none&flow=xtls-rprx-vision&security=reality&sni=gb2.murainternet.network&fp=firefox&pbk=fyfX-egDrRvXNW1Gt2P_8rH4jdupAcmhFLOCZCzCowo&sid=fc36b4a584871aa5&type=tcp#GB Reality | VLESS Reality | GB | 欧洲优先
-hysteria2://HowdyHysteria2023w0W@51.15.19.206:8443?insecure=1&sni=sni-here.com&obfs=salamander&obfs-password=HysteriaHowdy#NL Hy2 Obfs | Hysteria2 | NL | 强混淆 Obfs UDP
-hysteria2://d4ca9415f0eac7897472e1e5b86d2e96@promo.betust.net:443#Netherlands 01 | Hysteria2 | NL | 高稳定低延迟
-vless://18ce1302-4e37-4eac-bd4f-e3e0a983e589@45.76.98.127:443?encryption=none&security=reality&sni=itunes.apple.com&fp=chrome&pbk=LZR1ZQzdHDSdooxAImvxEjFIs-gebEP3zf0J6V3qVSI&sid=49fa0dad&type=ws#JP VLESS Reality WS | VLESS Reality | JP | 强伪装 WS
-vless://81f686e2-0700-4e7d-b3aa-2f7fc544bcc3@ga1data.xyy123.bid:443?encryption=none&flow=xtls-rprx-vision&security=reality&sni=www.amzn.com&fp=chrome&pbk=Z7B8VKvjAiBH93XEkHFWCVBfK8Mu5HTLtAwfr5LuYlk&sid=00b0389a&type=tcp#JP VLESS Reality TCP | VLESS Reality | JP | Vision 流程
-hysteria2://H7mP2xY9kJ4nQ8wR5tF6vB3z@3.76.221.4:443?insecure=1&sni=vpn-de-002.fastervpn.world#Germany 02 | Hysteria2 | DE | 欧洲优先 强混淆
-vless://8c392beb-524d-4d0a-a3a6-4d542d54a1ff@45.32.70.42:443?security=reality&encryption=none&pbk=cQZ-dTY4QSQteDYpngP2PavOsn9yY9lIP-OscwzwAio&sid=4dda4608&sni=itunes.apple.com&fp=chrome&type=ws&path=%2Fws&host=itunes.apple.com#VLESS-Reality-US-1 | VLESS Reality | US | 强混淆
-vless://501a2da5-cb22-4a3f-915e-e3b821d1d62d@87.199.205.28:443?encryption=none&flow=xtls-rprx-vision&fp=firefox&pbk=W-9zyiOq287RtXVTZlTFbSDJ0Mx8joyBLJoA7ZE7eBw&security=reality&sid=ef1d3554c652a436&sni=vkvd754.okcdn.ru&type=raw#VLESS-Reality-NL-1 | VLESS Reality | NL | 欧洲优先
-hysteria2://p7Q76LzlnS4hIzr1W3staBOnUe_WwSkR@130.49.161.70:443?sni=hy2.aspidnet.xyz&obfs=salamander&obfs-password=rG07s3COMIEvdnQipRyWzx_H_2xygNC3#Netherlands Hy2 Obfs | Hysteria2 | NL | Obfs + UDP
-vless://eafa7d0d-db1c-4c91-8fd8-587cd218008e@172.104.186.205:443?security=reality&encryption=none&pbk=dT50iKOzQz2utAi1tcwsU86hbaS78JeDY_xST0nP5D4&sid=aea01663&sni=itunes.apple.com&fp=chrome&type=ws&path=%2Fws&host=itunes.apple.com#VLESS-Reality-SG-1 | VLESS Reality | SG | 亚洲优选
-hysteria2://H7mP2xY9kJ4nQ8wR5tF6vB3z@13.36.234.11:443?insecure=1#France 01 | Hysteria2 | FR | 高通过率
-hysteria2://3a702d4d1de4949005d8431220e040fb@152.67.75.161:443?insecure=1&obfs=salamander&obfs-password=c13f29db6a638ad2b211b9ce2669ef27&sni=www.bing.com#Switzerland 01 | Hysteria2 | CH | 强混淆 Obfs UDP
-hysteria2://H7mP2xY9kJ4nQ8wR5tF6vB3z@3.76.221.4:443?insecure=1#Germany 03 | Hysteria2 | DE | 稳定欧洲
+hysteria2://H7mP2xY9kJ4nQ8wR5tF6vB3z@18.153.65.67:443?insecure=1&sni=18.153.65.67#DE Hy2 07 | Hysteria2 | DE | 稳定欧洲
 # 优先寿命稳定: 避开 CN/TW/HK/MO/VN/TH，偏好 DE/NL/FR/CH/US/JP/SG/KR
-# 协议: Hysteria2 (UDP强) 与 VLESS Reality (强伪装)
-# 免费公共节点寿命有限（小时到数日），建议配合订阅使用并定期测试。更新 2026-11-22
+# 协议: Hysteria2 (UDP强混淆) 与 VLESS Reality (强伪装)
+# 免费公共节点寿命有限（小时到数日），建议配合订阅使用并定期测试。更新 2026-11-23
