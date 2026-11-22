@@ -1,20 +1,20 @@
-https://leidahub.top/clash.yaml | Clash YAML | 节点雷达 每6h实测 JP/SG/KR/US Hysteria2优先
-https://radarhub.top/clash.yaml | Clash YAML | NodesRadar EN 每6h实测 DE/NL优先
-https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/clash.yaml | Clash YAML | Au1rxx 小时HTTP验证
-https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/by-country/clash-DE.yaml | Clash YAML | 德国专属
-https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/by-country/clash-NL.yaml | Clash YAML | 荷兰专属
-https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/by-country/clash-US.yaml | Clash YAML | 美国专属
-https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/by-country/clash-JP.yaml | Clash YAML | 日本专属
-https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/by-country/clash-SG.yaml | Clash YAML | 新加坡专属
-https://crazygeeky.com/sub/mihomo.yaml | Clash YAML | NodeHub 每2h存活检测
-https://raw.githubusercontent.com/zhuhaiuk/free-nodes/main/clash_config.yaml | Clash YAML | 每小时自动更新
-https://raw.githubusercontent.com/danmaifu/mianfeijiedian/main/feed/clash-20261122.yaml | Clash YAML | 每日爬取最新 20261122
-https://cdn.jsdelivr.net/gh/TelegaVPN/free-vpn-keys@main/sub/clash/all.yaml | Clash YAML | TelegaVPN 全局多地区 DE/NL/FI/US/SG Reality/Hy2
+https://radarhub.top/clash.yaml | Clash YAML | NodesRadar EN 每6h实测 高稳定 DE/NL/FR/CH 优先 避开封锁区
+https://leidahub.top/clash.yaml | Clash YAML | 节点雷达中文 每6h实测 JP/SG/KR 优先
+https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/clash.yaml | Clash YAML | Au1rxx HTTP真测 小时更新 高可靠
+https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/by-country/clash-DE.yaml | Clash YAML | 德国专属 欧洲高稳定
+https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/by-country/clash-NL.yaml | Clash YAML | 荷兰专属 低延迟优先
+https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/by-country/clash-JP.yaml | Clash YAML | 日本专属 亚洲优选
+https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/by-country/clash-SG.yaml | Clash YAML | 新加坡专属 亚洲优选
+https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/by-country/clash-KR.yaml | Clash YAML | 韩国专属 相对稳定
+https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/by-country/clash-US.yaml | Clash YAML | 美国专属 大容量
+https://cdn.jsdelivr.net/gh/LeilaoMi/AutoMergePublicNodes-Optimized@main/output/verified.yaml | Clash YAML | LeilaoMi 真测verified 高通过率
+https://raw.githubusercontent.com/python-net-dev/anytls-vless-reality-hysteria2-tuic-ss/refs/heads/main/.github/links/clash.yaml | Clash YAML | Reality/Hy2/TUIC 每日优选
+https://raw.githubusercontent.com/mfuu/FreeProxies/master/sub.yaml | Clash YAML | FreeProxies 每8h更新
 https://raw.githubusercontent.com/0xRadikal/Free-v2ray-Configs/main/verified/clash.yaml | Clash YAML | 15min验证 Reality/Hy2
-https://cdn.jsdelivr.net/gh/0xRadikal/Free-v2ray-Configs@main/verified/clash.yaml | Clash YAML | 0xRadikal CDN
-https://raw.githubusercontent.com/python-net-dev/anytls-vless-reality-hysteria2-tuic-ss/refs/heads/main/.github/links/clash.yaml | Clash YAML | Reality/Hy2/TUIC 优选
-https://raw.githubusercontent.com/yy1588133/proxy-pool/main/clash.yaml | Clash YAML | Proxy Pool 聚合 每6h
+https://cdn.jsdelivr.net/gh/0xRadikal/Free-v2ray-Configs@main/verified/clash.yaml | Clash YAML | 0xRadikal CDN镜像
 https://raw.githubusercontent.com/free18/v2ray/refs/heads/main/c.yaml | Clash YAML | free18 每日刷新
 https://raw.githubusercontent.com/awesome-vpn/awesome-vpn/master/clash.yaml | Clash YAML | Awesome VPN 每日更新
 https://cdn.jsdelivr.net/gh/awesome-vpn/awesome-vpn@master/clash.yaml | Clash YAML | Awesome VPN CDN
-https://raw.githubusercontent.com/ermaozi/get_subscribe/main/subscribe/clash.yml | Clash YAML | 常见公益源
+https://raw.githubusercontent.com/ermaozi/get_subscribe/main/subscribe/clash.yml | Clash YAML | 公益源 长期稳定
+https://cdn.jsdelivr.net/gh/TelegaVPN/free-vpn-keys@main/sub/clash/all.yaml | Clash YAML | TelegaVPN 多地区 Reality/Hy2
+https://radarhub.top/by-protocol/hysteria2.txt | Base64 | NodesRadar Hy2专属 强混淆UDP
