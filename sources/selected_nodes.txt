@@ -1,77 +1,81 @@
-1. Hysteria2 Japan (UDP/强混淆)
-hysteria2://oracle_hy2_pass_2026@129.225.181.46:8443?insecure=1&sni=bing.com#Japan-Hy2-01
-协议: Hysteria2 | 地区: JP | 特点: UDP, obfs, 适合大陆稳定
+1. VLESS Reality (from jiedianshouce)
+vless://b7791707-83d9-444b-9d05-f5c99e90acd4@n1.sklserv.com:443?security=reality&type=tcp&sni=n1.sklserv.com&fp=firefox&flow=xtls-rprx-vision&sid=38e0c84b27d01e0d&pbk=GqhAFTkRQ1HkNXyF2dUl3wUzJDHfgx3O9qocK01SLWU#Reality-Stable-01
+协议: VLESS+Reality | 地区: 欧洲 | 特点: XTLS-Vision, 强伪装
 
-2. Hysteria2 Germany
-hysteria2://57beeeb0-03fc-4fc9-94da-7604488a7134@dga1de.mateflora.com:40120?insecure=1&obfs=salamander&obfs-password=pz7lyeav76a5wqzb&sni=psstatic.cdn.bcebos.com#Germany-Hy2-01
-协议: Hysteria2 | 地区: DE | 特点: salamander obfs, 欧洲稳定
+2. VLESS Reality US-like
+vless://14c80e0e-f7ce-4991-94fc-99a1db4a9b1e@159.89.87.21:28190?security=reality&type=tcp&sni=aws.amazon.com&fp=chrome&flow=xtls-rprx-vision&sid=&pbk=ZJRnFU-1s1JOnO8E9uZ7b00l1fPEh63fGRbdBANFRno#US-Reality-01
+协议: VLESS+Reality | 地区: US | 特点: 伪装Amazon
 
-3. Hysteria2 Netherlands
-hysteria2://04920673-035c-410d-94e4-5b1469d3fb6f@171.22.183.158:42848?insecure=1&sni=171.22.183.158#NL-Hy2-01
-协议: Hysteria2 | 地区: NL | 特点: 低延迟欧洲节点
+3. Hysteria2 Japan (non-high-risk Asia)
+hysteria2://u63SxILNwtrQZ7Y1ZrFaZfsA@8.211.175.236:8443?insecure=1&sni=bing.com#JP-Hy2-Stable
+协议: Hysteria2 | 地区: JP | 特点: UDP, 强混淆
 
-4. VLESS Reality Japan
-vless://66171cbe-0b4b-4b24-99f6-d5a822f4dc9a@158.101.151.157:443?security=reality&type=tcp&sni=www.microsoft.com&fp=chrome&flow=xtls-rprx-vision&sid=684c7531e599dec0&pbk=99eQkMBHqOEKororOWKFlmH8M0o9VaVpV9w1vQIxhz8#JP-Reality-01
-协议: VLESS+Reality | 地区: JP | 特点: XTLS-Vision, 强伪装
+4. Hysteria2 Germany
+hysteria2://57beeeb0-03fc-4fc9-94da-7604488a7134@dga1de.mateflora.com:40120?insecure=1&obfs=salamander&obfs-password=pz7lyeav76a5wqzb&sni=psstatic.cdn.bcebos.com#DE-Hy2-01
+协议: Hysteria2 | 地区: DE | 特点: salamander obfs
 
-5. VLESS Reality Germany
-vless://4201786b-d99b-4147-a5f0-20d47acddb81@185.255.115.103:443?security=reality&type=tcp&packetEncoding=xudp&sni=4935e4t.de25.h1clayd.click&fp=chrome&flow=xtls-rprx-vision&sid=6976d670818644cc&pbk=MzgB17ZFbKqs8pbC3EscTzHid_ENc-k_Cp6nXl-2knw#DE-Reality-01
-协议: VLESS+Reality | 地区: DE | 特点: 支持UDP, 欧洲
+5. VLESS Reality NL
+vless://cda0862a-0f87-4be9-8ed8-1d0c9e382839@9.247.54.228:443?security=reality&type=xhttp&sni=fc82dfx.nl8.h1clayd.click&fp=chrome&sid=7b2b1a14a6e0630d&pbk=dtO7khFLUkpFDQOtNzo4Th4hJKLoPSY2VtD_9k4Hgiw#NL-Reality-01
+协议: VLESS+Reality | 地区: NL | 特点: xhttp传输
 
-6. VLESS Reality Germany 2
-vless://9015f0bc-2053-4ca1-9b9b-a018b97b32d2@144.31.125.60:443?security=reality&type=tcp&packetEncoding=xudp&sni=www.intel.com&fp=chrome&flow=xtls-rprx-vision&sid=85c86a9863&pbk=SVgtyuD9khylgHuB0treGekxVSHPOS-wPZTNHUf6zj8#DE-Reality-02
-协议: VLESS+Reality | 地区: DE | 特点: 长期稳定偏好
-
-7. Hysteria2 Japan 2
-hysteria2://u63SxILNwtrQZ7Y1ZrFaZfsA@8.211.175.236:8443?insecure=1&sni=bing.com#JP-Hy2-02
-协议: Hysteria2 | 地区: JP | 特点: 高速UDP
-
-8. Hysteria2 Germany 2
-hysteria2://fa937345-6d3e-4ff4-8127-1a836987a0db@195.63.128.21:5443?sni=germany.cloudhouse1.ru#DE-Hy2-02
-协议: Hysteria2 | 地区: DE | 特点: 欧洲节点
-
-9. VLESS Reality Japan 2
-vless://d508df52-3acb-483f-85d2-3fd5f6a76808@151.242.164.51:443?security=reality&flow=xtls-rprx-vision&sni=buybox.amazon.com&type=tcp&fp=chrome&pbk=dtNeCNIcRgs8_EKIJg_oTJEsiA8KBU-QaE1yVpkoX0I&sid=2c92d6#JP-Reality-02
-协议: VLESS+Reality | 地区: JP | 特点: 伪装Amazon
-
-10. Hysteria2 Netherlands 2
-hysteria2://549766c3-fa5f-471e-8031-ffc1f8d5064f@212.34.137.105:443?insecure=1&alpn=h3&sni=shorts.blog-forme.ru#NL-Hy2-02
-协议: Hysteria2 | 地区: NL | 特点: h3 ALPN
-
-11. Hysteria2 France (from earlier lists)
+6. Hysteria2 France
 hysteria2://github.com%2FAlvin9999-newpac%2Ffanqiang@62.210.7.139:60111?insecure=1&sni=bing.com#FR-Hy2-01
-协议: Hysteria2 | 地区: FR | 特点: 测试稳定28/28
+协议: Hysteria2 | 地区: FR | 特点: 测试稳定
 
-12. VLESS Reality US-like
-vless://2208b003-78b1-453c-b5ca-ce847ff0efd6@201.58.139.178:443?encryption=none&flow=xtls-rprx-vision&fp=firefox&pbk=0dAUffCns_r-xP3QP1V8qy2P29vBN5ROOoX96TxpvXA&security=reality&sid=b545243c33282b73&sni=d4a338t.pl8.h1clayd.click&type=tcp#US-Reality-01
-协议: VLESS+Reality | 地区: US | 特点: 强伪装
+7. VLESS Reality DE
+vless://4201786b-d99b-4147-a5f0-20d47acddb81@185.255.115.103:443?security=reality&type=tcp&sni=4935e4t.de25.h1clayd.click&fp=chrome&flow=xtls-rprx-vision&sid=6976d670818644cc&pbk=MzgB17ZFbKqs8pbC3EscTzHid_ENc-k_Cp6nXl-2knw#DE-Reality-02
+协议: VLESS+Reality | 地区: DE | 特点: 长期偏好
 
-13. Hysteria2 Switzerland
-hysteria2://84a506ca5aca505696a454d828420b3f@140.238.213.114:50160?insecure=1#CH-Hy2-01
-协议: Hysteria2 | 地区: CH | 特点: 欧洲低延迟
-
-14. VLESS Reality UK
-vless://55458d10-24ab-4ea6-a522-13741b546f2a@195.206.235.227:443?encryption=none&fp=chrome&pbk=hFee7zTreqlv_wccK_8zxN5v23hj9u-DshByvGf-KAA&security=reality&sid=23732d14a527990d&sni=345739t.de15.h1clayd.click&type=raw#UK-Reality-01
-协议: VLESS+Reality | 地区: UK | 特点: raw传输
-
-15. Hysteria2 US
-hysteria2:// (from list, placeholder for stability) | 注：使用订阅中筛选US
-实际使用以上测试源为准
-
-16. VLESS Reality NL
-vless:// (priority from radar DE/NL lists)
-
-17. Hysteria2 KR
+8. Hysteria2 KR
 hysteria2://maintell@152.70.237.123:2053?insecure=1&sni=bing.com#KR-Hy2-01
 协议: Hysteria2 | 地区: KR | 特点: 亚洲非高风险
 
-18. VLESS Reality DE 3
+9. VLESS Reality US
+vless://d65cc14c-f53f-4fe2-b262-97856601319c@169.40.42.202:443?security=reality&type=tcp&sni=yahoo.com&fp=chrome&flow=xtls-rprx-vision&sid=c39cc7310a&pbk=e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg#US-Reality-02
+协议: VLESS+Reality | 地区: US | 特点: 强伪装
+
+10. Hysteria2 NL
+hysteria2://04920673-035c-410d-94e4-5b1469d3fb6f@171.22.183.158:42848?insecure=1&sni=171.22.183.158#NL-Hy2-02
+协议: Hysteria2 | 地区: NL | 特点: 低延迟
+
+11. VLESS Reality JP
+vless://66171cbe-0b4b-4b24-99f6-d5a822f4dc9a@158.101.151.157:443?security=reality&type=tcp&sni=www.microsoft.com&fp=chrome&flow=xtls-rprx-vision&sid=684c7531e599dec0&pbk=99eQkMBHqOEKororOWKFlmH8M0o9VaVpV9w1vQIxhz8#JP-Reality-01
+协议: VLESS+Reality | 地区: JP | 特点: XTLS
+
+12. Hysteria2 DE 2
+hysteria2://fa937345-6d3e-4ff4-8127-1a836987a0db@195.63.128.21:5443?sni=germany.cloudhouse1.ru#DE-Hy2-02
+协议: Hysteria2 | 地区: DE | 特点: 欧洲稳定
+
+13. VLESS Reality SG
+vless://bcdb425f-80bc-4ec8-92a5-8edf53639c01@207.148.124.12:8443?security=tls&type=tcp&sni=www.bing.com&fp=chrome#SG-TLS-01
+协议: VLESS+TLS | 地区: SG | 特点: 亚洲优先
+
+14. Hysteria2 CH
+hysteria2://84a506ca5aca505696a454d828420b3f@140.238.213.114:50160?insecure=1#CH-Hy2-01
+协议: Hysteria2 | 地区: CH | 特点: 低延迟
+
+15. VLESS Reality UK
+vless://55458d10-24ab-4ea6-a522-13741b546f2a@195.206.235.227:443?encryption=none&fp=chrome&pbk=hFee7zTreqlv_wccK_8zxN5v23hj9u-DshByvGf-KAA&security=reality&sid=23732d14a527990d&sni=345739t.de15.h1clayd.click&type=raw#UK-Reality-01
+协议: VLESS+Reality | 地区: UK | 特点: raw
+
+16. Hysteria2 US
+hysteria2://7c9c7f52-5a8c-43e0-b6d1-c8552289f230@us.mi11o4ka.com:443?insecure=1&sni=us.mi11o4ka.com#US-Hy2-01
+协议: Hysteria2 | 地区: US | 特点: 稳定
+
+17. VLESS Reality DE 3
 vless://03786aa4-21a5-4e7c-83d6-873aafc41217@193.233.198.117:443?security=reality&type=tcp&packetEncoding=xudp&sni=de-03.neverspy.tech&fp=firefox&flow=xtls-rprx-vision&sid=5eebb4b74e873b14&pbk=zT-G11tZiOO7DFJD23MCeZC3TwaUJr6NMDHW4CLif1Y#DE-Reality-03
+协议: VLESS+Reality | 地区: DE | 特点: xudp
 
-19. Hysteria2 DE 3
+18. Hysteria2 NL 2
+hysteria2://549766c3-fa5f-471e-8031-ffc1f8d5064f@212.34.137.105:443?insecure=1&alpn=h3&sni=shorts.blog-forme.ru#NL-Hy2-03
+协议: Hysteria2 | 地区: NL | 特点: h3
+
+19. VLESS Reality JP 2
+vless://d508df52-3acb-483f-85d2-3fd5f6a76808@151.242.164.51:443?security=reality&flow=xtls-rprx-vision&sni=buybox.amazon.com&type=tcp&fp=chrome&pbk=dtNeCNIcRgs8_EKIJg_oTJEsiA8KBU-QaE1yVpkoX0I&sid=2c92d6#JP-Reality-02
+协议: VLESS+Reality | 地区: JP | 特点: 伪装Amazon
+
+20. Hysteria2 DE 3
 hysteria2://23c82941-70f4-4381-90db-bd28e9a902e9@steel7.hadsvpn.com:443?sni=steel7.hadsvpn.com#DE-Hy2-03
+协议: Hysteria2 | 地区: DE | 特点: 欧洲优先
 
-20. VLESS Reality JP 3
-vless://6cd74d40-5e35-41d7-9288-f2abb3edb9d4@20.63.221.254:38443?&security=reality&flow=xtls-rprx-vision&pbk=FODhc1QQKn8I6Zw8CbQoo66dT19NMMX2IBqZFz_EaGU&sid=0123456789abcdef&fp=chrome&sni=itunes.apple.com&type=tcp#JP-Reality-03
-
-注意：以上节点从每6小时测试源筛选，优先欧美亚非高风险地区，寿命与稳定性为最高优先。实际可用性请实时测试，推荐使用订阅自动更新。避开中国/台湾/香港/澳门/越南/泰国节点。
+注意：以上节点从每6h/每日测试源筛选，优先欧美亚非高风险地区（避开中国/台湾/香港/澳门/越南/泰国），寿命与稳定性为最高优先。实际可用性请实时测试，推荐使用订阅自动更新。
