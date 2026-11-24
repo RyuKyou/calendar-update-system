@@ -1,69 +1,13 @@
 {
-  "updated": "2026-11-24T16:09:08.188428+00:00",
+  "updated": "2026-11-24T21:29:13.054201+00:00",
   "candidates": [
-    {
-      "key": "trojan|170.101.101.19|443|0ab6c98dae3b48e8b9c4a776b6c9c19a",
-      "server": "170.101.101.19",
-      "port": 443,
-      "type": "trojan",
-      "name": "🇺🇸 United States 140",
-      "overseas_ms": 53.5
-    },
-    {
-      "key": "hysteria2|66.94.121.46|443|gf1:gfhysteria2024",
-      "server": "66.94.121.46",
-      "port": 443,
-      "type": "hysteria2",
-      "name": "🇺🇸 United States 008",
-      "overseas_ms": 57.4
-    },
-    {
-      "key": "trojan|216.152.155.131|443|0ab6c98dae3b48e8b9c4a776b6c9c19a",
-      "server": "216.152.155.131",
-      "port": 443,
-      "type": "trojan",
-      "name": "🇺🇸 United States 122",
-      "overseas_ms": 55.7
-    },
-    {
-      "key": "trojan|216.152.155.158|443|0ab6c98dae3b48e8b9c4a776b6c9c19a",
-      "server": "216.152.155.158",
-      "port": 443,
-      "type": "trojan",
-      "name": "🇺🇸 United States 132",
-      "overseas_ms": 55.3
-    },
     {
       "key": "trojan|216.152.155.176|443|0ab6c98dae3b48e8b9c4a776b6c9c19a",
       "server": "216.152.155.176",
       "port": 443,
       "type": "trojan",
       "name": "🇺🇸 United States 128",
-      "overseas_ms": 55.8
-    },
-    {
-      "key": "trojan|66.23.203.21|59689|ae7eb4dwyaz25pxwgq59",
-      "server": "66.23.203.21",
-      "port": 59689,
-      "type": "trojan",
-      "name": "🇺🇸 United States 095",
-      "overseas_ms": 59.7
-    },
-    {
-      "key": "trojan|216.152.156.65|443|0ab6c98dae3b48e8b9c4a776b6c9c19a",
-      "server": "216.152.156.65",
-      "port": 443,
-      "type": "trojan",
-      "name": "🇺🇸 United States 091",
-      "overseas_ms": 61.1
-    },
-    {
-      "key": "trojan|216.152.156.42|443|0ab6c98dae3b48e8b9c4a776b6c9c19a",
-      "server": "216.152.156.42",
-      "port": 443,
-      "type": "trojan",
-      "name": "🇺🇸 United States 134",
-      "overseas_ms": 59.5
+      "overseas_ms": 15.3
     },
     {
       "key": "trojan|216.152.155.54|443|0ab6c98dae3b48e8b9c4a776b6c9c19a",
@@ -71,31 +15,7 @@
       "port": 443,
       "type": "trojan",
       "name": "🇺🇸 United States 148",
-      "overseas_ms": 59.0
-    },
-    {
-      "key": "trojan|216.152.156.212|443|0ab6c98dae3b48e8b9c4a776b6c9c19a",
-      "server": "216.152.156.212",
-      "port": 443,
-      "type": "trojan",
-      "name": "🇺🇸 United States 129",
-      "overseas_ms": 60.4
-    },
-    {
-      "key": "trojan|216.152.156.49|443|0ab6c98dae3b48e8b9c4a776b6c9c19a",
-      "server": "216.152.156.49",
-      "port": 443,
-      "type": "trojan",
-      "name": "🇺🇸 United States 125",
-      "overseas_ms": 61.1
-    },
-    {
-      "key": "trojan|216.152.156.81|443|0ab6c98dae3b48e8b9c4a776b6c9c19a",
-      "server": "216.152.156.81",
-      "port": 443,
-      "type": "trojan",
-      "name": "🇺🇸 United States 135",
-      "overseas_ms": 60.4
+      "overseas_ms": 25.4
     },
     {
       "key": "trojan|69.164.240.85|50875|nwilryafgkyvuxauc8pz",
@@ -103,7 +23,71 @@
       "port": 50875,
       "type": "trojan",
       "name": "🇺🇸 United States 012",
-      "overseas_ms": 73.3
+      "overseas_ms": 29.4
+    },
+    {
+      "key": "trojan|216.152.156.65|443|0ab6c98dae3b48e8b9c4a776b6c9c19a",
+      "server": "216.152.156.65",
+      "port": 443,
+      "type": "trojan",
+      "name": "🇺🇸 United States 091",
+      "overseas_ms": 31.1
+    },
+    {
+      "key": "trojan|216.152.155.158|443|0ab6c98dae3b48e8b9c4a776b6c9c19a",
+      "server": "216.152.155.158",
+      "port": 443,
+      "type": "trojan",
+      "name": "🇺🇸 United States 132",
+      "overseas_ms": 29.6
+    },
+    {
+      "key": "trojan|216.152.156.42|443|0ab6c98dae3b48e8b9c4a776b6c9c19a",
+      "server": "216.152.156.42",
+      "port": 443,
+      "type": "trojan",
+      "name": "🇺🇸 United States 134",
+      "overseas_ms": 29.6
+    },
+    {
+      "key": "trojan|216.152.155.131|443|0ab6c98dae3b48e8b9c4a776b6c9c19a",
+      "server": "216.152.155.131",
+      "port": 443,
+      "type": "trojan",
+      "name": "🇺🇸 United States 122",
+      "overseas_ms": 30.4
+    },
+    {
+      "key": "trojan|216.152.156.49|443|0ab6c98dae3b48e8b9c4a776b6c9c19a",
+      "server": "216.152.156.49",
+      "port": 443,
+      "type": "trojan",
+      "name": "🇺🇸 United States 125",
+      "overseas_ms": 31.8
+    },
+    {
+      "key": "trojan|216.152.156.212|443|0ab6c98dae3b48e8b9c4a776b6c9c19a",
+      "server": "216.152.156.212",
+      "port": 443,
+      "type": "trojan",
+      "name": "🇺🇸 United States 129",
+      "overseas_ms": 31.5
+    },
+    {
+      "key": "trojan|216.152.156.81|443|0ab6c98dae3b48e8b9c4a776b6c9c19a",
+      "server": "216.152.156.81",
+      "port": 443,
+      "type": "trojan",
+      "name": "🇺🇸 United States 135",
+      "overseas_ms": 31.8
+    },
+    {
+      "key": "trojan|170.101.101.19|443|0ab6c98dae3b48e8b9c4a776b6c9c19a",
+      "server": "170.101.101.19",
+      "port": 443,
+      "type": "trojan",
+      "name": "🇺🇸 United States 140",
+      "overseas_ms": 32.9
     },
     {
       "key": "trojan|66.163.122.46|443|0ab6c98dae3b48e8b9c4a776b6c9c19a",
@@ -111,39 +95,23 @@
       "port": 443,
       "type": "trojan",
       "name": "🇺🇸 United States 147",
-      "overseas_ms": 75.2
+      "overseas_ms": 37.6
     },
     {
-      "key": "trojan|170.101.101.112|443|0ab6c98dae3b48e8b9c4a776b6c9c19a",
-      "server": "170.101.101.112",
-      "port": 443,
+      "key": "trojan|66.23.203.21|59689|ae7eb4dwyaz25pxwgq59",
+      "server": "66.23.203.21",
+      "port": 59689,
       "type": "trojan",
-      "name": "🇺🇸 United States 159",
-      "overseas_ms": 52.3
+      "name": "🇺🇸 United States 095",
+      "overseas_ms": 40.1
     },
     {
-      "key": "trojan|170.101.101.237|443|0ab6c98dae3b48e8b9c4a776b6c9c19a",
-      "server": "170.101.101.237",
+      "key": "hysteria2|66.94.121.46|443|gf1:gfhysteria2024",
+      "server": "66.94.121.46",
       "port": 443,
-      "type": "trojan",
-      "name": "🇺🇸 United States 171",
-      "overseas_ms": 51.7
-    },
-    {
-      "key": "trojan|170.101.101.131|443|0ab6c98dae3b48e8b9c4a776b6c9c19a",
-      "server": "170.101.101.131",
-      "port": 443,
-      "type": "trojan",
-      "name": "🇺🇸 United States 161",
-      "overseas_ms": 53.0
-    },
-    {
-      "key": "trojan|170.101.101.211|443|0ab6c98dae3b48e8b9c4a776b6c9c19a",
-      "server": "170.101.101.211",
-      "port": 443,
-      "type": "trojan",
-      "name": "🇺🇸 United States 174",
-      "overseas_ms": 52.9
+      "type": "hysteria2",
+      "name": "🇺🇸 United States 008",
+      "overseas_ms": 46.0
     },
     {
       "key": "trojan|66.163.122.7|443|0ab6c98dae3b48e8b9c4a776b6c9c19a",
@@ -151,31 +119,23 @@
       "port": 443,
       "type": "trojan",
       "name": "🇺🇸 United States 149",
-      "overseas_ms": 76.3
+      "overseas_ms": 34.3
     },
     {
-      "key": "trojan|66.163.122.81|443|0ab6c98dae3b48e8b9c4a776b6c9c19a",
-      "server": "66.163.122.81",
+      "key": "trojan|170.101.101.112|443|0ab6c98dae3b48e8b9c4a776b6c9c19a",
+      "server": "170.101.101.112",
       "port": 443,
       "type": "trojan",
-      "name": "🇺🇸 United States 157",
-      "overseas_ms": 76.7
+      "name": "🇺🇸 United States 159",
+      "overseas_ms": 28.1
     },
     {
-      "key": "hysteria2|5.129.235.85|443|gf1:gfhysteria2024",
-      "server": "5.129.235.85",
-      "port": 443,
-      "type": "hysteria2",
-      "name": "🇳🇱 Netherlands 41",
-      "overseas_ms": 136.3
-    },
-    {
-      "key": "trojan|66.163.122.25|443|0ab6c98dae3b48e8b9c4a776b6c9c19a",
-      "server": "66.163.122.25",
+      "key": "trojan|170.101.101.53|443|0ab6c98dae3b48e8b9c4a776b6c9c19a",
+      "server": "170.101.101.53",
       "port": 443,
       "type": "trojan",
-      "name": "🇺🇸 United States 160",
-      "overseas_ms": 75.0
+      "name": "🇺🇸 United States 156",
+      "overseas_ms": 31.7
     },
     {
       "key": "trojan|66.163.122.113|443|0ab6c98dae3b48e8b9c4a776b6c9c19a",
@@ -183,15 +143,39 @@
       "port": 443,
       "type": "trojan",
       "name": "🇺🇸 United States 164",
-      "overseas_ms": 76.4
+      "overseas_ms": 32.4
     },
     {
-      "key": "trojan|66.163.127.225|443|0ab6c98dae3b48e8b9c4a776b6c9c19a",
-      "server": "66.163.127.225",
+      "key": "trojan|66.163.122.25|443|0ab6c98dae3b48e8b9c4a776b6c9c19a",
+      "server": "66.163.122.25",
       "port": 443,
       "type": "trojan",
-      "name": "🇳🇱 Netherlands 63",
-      "overseas_ms": 142.6
+      "name": "🇺🇸 United States 160",
+      "overseas_ms": 37.2
+    },
+    {
+      "key": "trojan|66.163.122.81|443|0ab6c98dae3b48e8b9c4a776b6c9c19a",
+      "server": "66.163.122.81",
+      "port": 443,
+      "type": "trojan",
+      "name": "🇺🇸 United States 157",
+      "overseas_ms": 39.6
+    },
+    {
+      "key": "trojan|170.101.101.237|443|0ab6c98dae3b48e8b9c4a776b6c9c19a",
+      "server": "170.101.101.237",
+      "port": 443,
+      "type": "trojan",
+      "name": "🇺🇸 United States 171",
+      "overseas_ms": 33.4
+    },
+    {
+      "key": "trojan|170.101.101.131|443|0ab6c98dae3b48e8b9c4a776b6c9c19a",
+      "server": "170.101.101.131",
+      "port": 443,
+      "type": "trojan",
+      "name": "🇺🇸 United States 161",
+      "overseas_ms": 41.5
     },
     {
       "key": "trojan|66.163.122.26|443|0ab6c98dae3b48e8b9c4a776b6c9c19a",
@@ -199,71 +183,15 @@
       "port": 443,
       "type": "trojan",
       "name": "🇺🇸 United States 172",
-      "overseas_ms": 75.8
+      "overseas_ms": 34.4
     },
     {
-      "key": "vless|82.39.171.12|443|d65cc14c-f53f-4fe2-b262-97856601319c",
-      "server": "82.39.171.12",
-      "port": 443,
-      "type": "vless",
-      "name": "🇩🇪 Germany 09",
-      "overseas_ms": 152.8
-    },
-    {
-      "key": "trojan|154.90.62.70|56127|p5jTPcffLgi4gaNOJd2KUTb9YEPBBD5B",
-      "server": "154.90.62.70",
-      "port": 56127,
-      "type": "trojan",
-      "name": "🇰🇷 South Korea 22",
-      "overseas_ms": 157.2
-    },
-    {
-      "key": "trojan|170.101.101.67|443|0ab6c98dae3b48e8b9c4a776b6c9c19a",
-      "server": "170.101.101.67",
+      "key": "trojan|170.101.101.211|443|0ab6c98dae3b48e8b9c4a776b6c9c19a",
+      "server": "170.101.101.211",
       "port": 443,
       "type": "trojan",
-      "name": "🇺🇸 United States 176",
-      "overseas_ms": 53.1
-    },
-    {
-      "key": "vless|104.19.164.155|443|4e4f1f70-5e56-4a76-bb9d-db087f4690c4",
-      "server": "104.19.164.155",
-      "port": 443,
-      "type": "vless",
-      "name": "vless-1827151410",
-      "overseas_ms": 7.3
-    },
-    {
-      "key": "vless|support.zoom.us|8080|990bf436-f1b9-4e7f-857d-14378acc4ae5",
-      "server": "support.zoom.us",
-      "port": 8080,
-      "type": "vless",
-      "name": "vless-1943482613",
-      "overseas_ms": 8.4
-    },
-    {
-      "key": "hysteria2|152.67.115.203|443|633bc3be486b646190661ac2387c150a",
-      "server": "152.67.115.203",
-      "port": 443,
-      "type": "hysteria2",
-      "name": "🇦🇺 Australia 01",
-      "overseas_ms": 172.6
-    },
-    {
-      "key": "trojan|45.63.30.142|443|0ab6c98dae3b48e8b9c4a776b6c9c19a",
-      "server": "45.63.30.142",
-      "port": 443,
-      "type": "trojan",
-      "name": "🇦🇺 Australia 02",
-      "overseas_ms": 175.5
-    },
-    {
-      "key": "vless|188.114.98.0|443|4e4f1f70-5e56-4a76-bb9d-db087f4690c4",
-      "server": "188.114.98.0",
-      "port": 443,
-      "type": "vless",
-      "name": "vless-1884771865",
-      "overseas_ms": 6.9
+      "name": "🇺🇸 United States 174",
+      "overseas_ms": 31.5
     },
     {
       "key": "trojan|216.152.155.23|443|0ab6c98dae3b48e8b9c4a776b6c9c19a",
@@ -271,15 +199,47 @@
       "port": 443,
       "type": "trojan",
       "name": "🇺🇸 United States 178",
-      "overseas_ms": 57.5
+      "overseas_ms": 14.8
     },
     {
-      "key": "vless|104.19.12.94|443|4e4f1f70-5e56-4a76-bb9d-db087f4690c4",
-      "server": "104.19.12.94",
+      "key": "trojan|170.101.101.67|443|0ab6c98dae3b48e8b9c4a776b6c9c19a",
+      "server": "170.101.101.67",
+      "port": 443,
+      "type": "trojan",
+      "name": "🇺🇸 United States 176",
+      "overseas_ms": 33.6
+    },
+    {
+      "key": "hysteria2|5.129.235.85|443|gf1:gfhysteria2024",
+      "server": "5.129.235.85",
+      "port": 443,
+      "type": "hysteria2",
+      "name": "🇳🇱 Netherlands 41",
+      "overseas_ms": 113.2
+    },
+    {
+      "key": "vless|82.39.171.12|443|d65cc14c-f53f-4fe2-b262-97856601319c",
+      "server": "82.39.171.12",
       "port": 443,
       "type": "vless",
-      "name": "vless-1941532350",
-      "overseas_ms": 6.7
+      "name": "🇩🇪 Germany 09",
+      "overseas_ms": 117.6
+    },
+    {
+      "key": "trojan|66.163.127.225|443|0ab6c98dae3b48e8b9c4a776b6c9c19a",
+      "server": "66.163.127.225",
+      "port": 443,
+      "type": "trojan",
+      "name": "🇳🇱 Netherlands 63",
+      "overseas_ms": 117.6
+    },
+    {
+      "key": "vless|104.19.164.155|443|4e4f1f70-5e56-4a76-bb9d-db087f4690c4",
+      "server": "104.19.164.155",
+      "port": 443,
+      "type": "vless",
+      "name": "vless-1827151410",
+      "overseas_ms": 10.5
     },
     {
       "key": "trojan|66.163.127.154|443|0ab6c98dae3b48e8b9c4a776b6c9c19a",
@@ -287,7 +247,7 @@
       "port": 443,
       "type": "trojan",
       "name": "🇳🇱 Netherlands 73",
-      "overseas_ms": 142.8
+      "overseas_ms": 117.5
     },
     {
       "key": "hysteria2|62.210.124.146|22000|dongtaiwang.com",
@@ -295,39 +255,47 @@
       "port": 22000,
       "type": "hysteria2",
       "name": "🇫🇷 France 34",
-      "overseas_ms": 157.4
+      "overseas_ms": 123.7
     },
     {
-      "key": "vless|n04.jinggai.online|8443|91ad30e9-ab06-4b4c-9fb9-1c2aa97d8b3a",
-      "server": "n04.jinggai.online",
-      "port": 8443,
-      "type": "vless",
-      "name": "vless-1944434951",
-      "overseas_ms": 29.8
+      "key": "trojan|154.90.62.70|56127|p5jTPcffLgi4gaNOJd2KUTb9YEPBBD5B",
+      "server": "154.90.62.70",
+      "port": 56127,
+      "type": "trojan",
+      "name": "🇰🇷 South Korea 22",
+      "overseas_ms": 157.5
     },
     {
-      "key": "vless|170.114.45.6|8080|990bf436-f1b9-4e7f-857d-14378acc4ae5",
-      "server": "170.114.45.6",
+      "key": "vless|support.zoom.us|8080|990bf436-f1b9-4e7f-857d-14378acc4ae5",
+      "server": "support.zoom.us",
       "port": 8080,
       "type": "vless",
-      "name": "vless-1935807325",
-      "overseas_ms": 7.0
+      "name": "vless-1943482613",
+      "overseas_ms": 27.1
     },
     {
-      "key": "vless|3.114.220.22|18007|814bd064-544d-4255-a070-5705c03f6da9",
-      "server": "3.114.220.22",
-      "port": 18007,
+      "key": "vless|188.114.98.0|443|4e4f1f70-5e56-4a76-bb9d-db087f4690c4",
+      "server": "188.114.98.0",
+      "port": 443,
       "type": "vless",
-      "name": "vless-1851981829",
-      "overseas_ms": 98.7
+      "name": "vless-1884771865",
+      "overseas_ms": 11.3
     },
     {
-      "key": "vless|3.114.220.22|19645|814bd064-544d-4255-a070-5705c03f6da9",
-      "server": "3.114.220.22",
-      "port": 19645,
+      "key": "hysteria2|152.67.115.203|443|633bc3be486b646190661ac2387c150a",
+      "server": "152.67.115.203",
+      "port": 443,
+      "type": "hysteria2",
+      "name": "🇦🇺 Australia 01",
+      "overseas_ms": 180.6
+    },
+    {
+      "key": "vless|104.19.12.94|443|4e4f1f70-5e56-4a76-bb9d-db087f4690c4",
+      "server": "104.19.12.94",
+      "port": 443,
       "type": "vless",
-      "name": "vless-1832754572",
-      "overseas_ms": 99.4
+      "name": "vless-1941532350",
+      "overseas_ms": 6.5
     },
     {
       "key": "trojan|208.69.78.29|443|0ab6c98dae3b48e8b9c4a776b6c9c19a",
@@ -335,31 +303,15 @@
       "port": 443,
       "type": "trojan",
       "name": "🇨🇭 Switzerland 10",
-      "overseas_ms": 166.6
+      "overseas_ms": 139.1
     },
     {
-      "key": "vless|207.148.124.12|8443|bcdb425f-80bc-4ec8-92a5-8edf53639c01",
-      "server": "207.148.124.12",
+      "key": "vless|n04.jinggai.online|8443|91ad30e9-ab06-4b4c-9fb9-1c2aa97d8b3a",
+      "server": "n04.jinggai.online",
       "port": 8443,
       "type": "vless",
-      "name": "🇸🇬 Singapore 33",
-      "overseas_ms": 167.5
-    },
-    {
-      "key": "vless|3.39.4.109|13672|814bd064-544d-4255-a070-5705c03f6da9",
-      "server": "3.39.4.109",
-      "port": 13672,
-      "type": "vless",
-      "name": "vless-1883568710",
-      "overseas_ms": 115.2
-    },
-    {
-      "key": "vless|104.17.50.227|443|4e4f1f70-5e56-4a76-bb9d-db087f4690c4",
-      "server": "104.17.50.227",
-      "port": 443,
-      "type": "vless",
-      "name": "vless-1927185301",
-      "overseas_ms": 6.7
+      "name": "vless-1944434951",
+      "overseas_ms": 40.6
     },
     {
       "key": "vless|59.125.69.23|443|c1c04450-bf71-4049-ad0c-9cf6d94d9f1f",
@@ -367,23 +319,23 @@
       "port": 443,
       "type": "vless",
       "name": "🇹🇼 Taiwan 20",
-      "overseas_ms": 160.6
+      "overseas_ms": 167.7
     },
     {
-      "key": "vless|3.114.220.22|10583|814bd064-544d-4255-a070-5705c03f6da9",
-      "server": "3.114.220.22",
-      "port": 10583,
+      "key": "vless|170.114.45.6|8080|990bf436-f1b9-4e7f-857d-14378acc4ae5",
+      "server": "170.114.45.6",
+      "port": 8080,
       "type": "vless",
-      "name": "vless-1828372435",
-      "overseas_ms": 99.7
+      "name": "vless-1935807325",
+      "overseas_ms": 6.3
     },
     {
-      "key": "vless|45.76.172.197|443|b256c867-a020-48e0-be80-1b079f2613a2",
-      "server": "45.76.172.197",
-      "port": 443,
+      "key": "vless|207.148.124.12|8443|bcdb425f-80bc-4ec8-92a5-8edf53639c01",
+      "server": "207.148.124.12",
+      "port": 8443,
       "type": "vless",
-      "name": "vless-1888152403",
-      "overseas_ms": 30.8
+      "name": "🇸🇬 Singapore 33",
+      "overseas_ms": 201.0
     },
     {
       "key": "vless|139.162.27.96|2096|6e59d5c5-7aa3-4c36-a4c4-e3b899525ed2",
@@ -391,15 +343,15 @@
       "port": 2096,
       "type": "vless",
       "name": "🇸🇬 Singapore 34",
-      "overseas_ms": 175.2
+      "overseas_ms": 197.2
     },
     {
-      "key": "vless|103.106.229.37|21002|41b1c169-5905-4d98-b6a6-56896c25737c",
-      "server": "103.106.229.37",
-      "port": 21002,
+      "key": "vless|104.17.50.227|443|4e4f1f70-5e56-4a76-bb9d-db087f4690c4",
+      "server": "104.17.50.227",
+      "port": 443,
       "type": "vless",
-      "name": "🇸🇬 Singapore 37",
-      "overseas_ms": 176.7
+      "name": "vless-1927185301",
+      "overseas_ms": 7.1
     },
     {
       "key": "vless|103.106.229.177|21002|67952583-8572-42e1-943d-0602794f885b",
@@ -407,7 +359,15 @@
       "port": 21002,
       "type": "vless",
       "name": "🇸🇬 Singapore 38",
-      "overseas_ms": 175.5
+      "overseas_ms": 196.7
+    },
+    {
+      "key": "vless|103.106.229.37|21002|41b1c169-5905-4d98-b6a6-56896c25737c",
+      "server": "103.106.229.37",
+      "port": 21002,
+      "type": "vless",
+      "name": "🇸🇬 Singapore 37",
+      "overseas_ms": 199.4
     },
     {
       "key": "vless|ga1data.xyy123.bid|443|81f686e2-0700-4e7d-b3aa-2f7fc544bcc3",
@@ -415,15 +375,47 @@
       "port": 443,
       "type": "vless",
       "name": "vless-1943752974",
-      "overseas_ms": 148.9
+      "overseas_ms": 161.9
     },
     {
-      "key": "vless|3.39.4.109|18967|814bd064-544d-4255-a070-5705c03f6da9",
-      "server": "3.39.4.109",
-      "port": 18967,
+      "key": "vless|45.76.172.197|443|b256c867-a020-48e0-be80-1b079f2613a2",
+      "server": "45.76.172.197",
+      "port": 443,
       "type": "vless",
-      "name": "vless-1832754691",
-      "overseas_ms": 116.0
+      "name": "vless-1888152403",
+      "overseas_ms": 39.1
+    },
+    {
+      "key": "vless|3.114.220.22|18007|814bd064-544d-4255-a070-5705c03f6da9",
+      "server": "3.114.220.22",
+      "port": 18007,
+      "type": "vless",
+      "name": "vless-1851981829",
+      "overseas_ms": 139.4
+    },
+    {
+      "key": "vless|3.114.220.22|19645|814bd064-544d-4255-a070-5705c03f6da9",
+      "server": "3.114.220.22",
+      "port": 19645,
+      "type": "vless",
+      "name": "vless-1832754572",
+      "overseas_ms": 134.0
+    },
+    {
+      "key": "vless|3.39.4.109|13672|814bd064-544d-4255-a070-5705c03f6da9",
+      "server": "3.39.4.109",
+      "port": 13672,
+      "type": "vless",
+      "name": "vless-1883568710",
+      "overseas_ms": 163.1
+    },
+    {
+      "key": "vless|3.114.220.22|10583|814bd064-544d-4255-a070-5705c03f6da9",
+      "server": "3.114.220.22",
+      "port": 10583,
+      "type": "vless",
+      "name": "vless-1828372435",
+      "overseas_ms": 135.2
     },
     {
       "key": "trojan|15.235.184.127|443|0ab6c98dae3b48e8b9c4a776b6c9c19a",
@@ -431,15 +423,7 @@
       "port": 443,
       "type": "trojan",
       "name": "🇸🇬 Singapore 32",
-      "overseas_ms": 285.9
-    },
-    {
-      "key": "vless|134.185.81.5|47881|59b203b2-b1bc-4e9c-a9e5-ccb8f691bf72",
-      "server": "134.185.81.5",
-      "port": 47881,
-      "type": "vless",
-      "name": "vless-1929913739",
-      "overseas_ms": 179.0
+      "overseas_ms": 311.9
     },
     {
       "key": "vless|152.69.226.63|25555|27c5483f-17f4-48ae-9a04-def53d88440d",
@@ -447,15 +431,15 @@
       "port": 25555,
       "type": "vless",
       "name": "vless-1939847007",
-      "overseas_ms": 197.7
+      "overseas_ms": 168.5
     },
     {
-      "key": "vless|3.0.111.82|17623|814bd064-544d-4255-a070-5705c03f6da9",
-      "server": "3.0.111.82",
-      "port": 17623,
+      "key": "vless|3.39.4.109|18967|814bd064-544d-4255-a070-5705c03f6da9",
+      "server": "3.39.4.109",
+      "port": 18967,
       "type": "vless",
-      "name": "vless-1827153139",
-      "overseas_ms": 173.7
+      "name": "vless-1832754691",
+      "overseas_ms": 163.6
     },
     {
       "key": "vless|169.40.42.35|443|d65cc14c-f53f-4fe2-b262-97856601319c",
@@ -463,15 +447,7 @@
       "port": 443,
       "type": "vless",
       "name": "vless-1827147089",
-      "overseas_ms": 62.6
-    },
-    {
-      "key": "vless|151.245.106.49|2053|a2de9567-9646-45a9-a410-7303a43bdb6c",
-      "server": "151.245.106.49",
-      "port": 2053,
-      "type": "vless",
-      "name": "vless-1885939693",
-      "overseas_ms": 161.4
+      "overseas_ms": 32.2
     },
     {
       "key": "vless|169.40.42.74|443|d65cc14c-f53f-4fe2-b262-97856601319c",
@@ -479,7 +455,23 @@
       "port": 443,
       "type": "vless",
       "name": "vless-1891839087",
-      "overseas_ms": 61.0
+      "overseas_ms": 34.1
+    },
+    {
+      "key": "vless|3.0.111.82|17623|814bd064-544d-4255-a070-5705c03f6da9",
+      "server": "3.0.111.82",
+      "port": 17623,
+      "type": "vless",
+      "name": "vless-1827153139",
+      "overseas_ms": 204.1
+    },
+    {
+      "key": "vless|151.245.106.49|2053|a2de9567-9646-45a9-a410-7303a43bdb6c",
+      "server": "151.245.106.49",
+      "port": 2053,
+      "type": "vless",
+      "name": "vless-1885939693",
+      "overseas_ms": 200.6
     },
     {
       "key": "trojan|167.88.61.175|443|0ab6c98dae3b48e8b9c4a776b6c9c19a",
@@ -487,7 +479,7 @@
       "port": 443,
       "type": "trojan",
       "name": "trojan-1943021612",
-      "overseas_ms": 32.2
+      "overseas_ms": 56.0
     },
     {
       "key": "vless|104.21.70.21|443|4e4f1f70-5e56-4a76-bb9d-db087f4690c4",
@@ -495,7 +487,7 @@
       "port": 443,
       "type": "vless",
       "name": "vless-1853654571",
-      "overseas_ms": 6.5
+      "overseas_ms": 10.8
     },
     {
       "key": "vless|104.16.10.22|443|4e4f1f70-5e56-4a76-bb9d-db087f4690c4",
@@ -503,7 +495,7 @@
       "port": 443,
       "type": "vless",
       "name": "vless-1832764144",
-      "overseas_ms": 7.5
+      "overseas_ms": 6.6
     },
     {
       "key": "vless|104.18.40.171|443|8895be79-9817-4011-b81a-14a35a3d328e",
@@ -511,6 +503,22 @@
       "port": 443,
       "type": "vless",
       "name": "vless-1947014531",
+      "overseas_ms": 7.9
+    },
+    {
+      "key": "vless|206.206.76.75|443|32cf52f4-b8d2-4ed5-a37c-0d0a8e743309",
+      "server": "206.206.76.75",
+      "port": 443,
+      "type": "vless",
+      "name": "vless-1938581973",
+      "overseas_ms": 196.0
+    },
+    {
+      "key": "vless|188.114.97.6|443|4e4f1f70-5e56-4a76-bb9d-db087f4690c4",
+      "server": "188.114.97.6",
+      "port": 443,
+      "type": "vless",
+      "name": "vless-1828374447",
       "overseas_ms": 6.9
     },
     {
@@ -519,6 +527,22 @@
       "port": 8080,
       "type": "vless",
       "name": "vless-1930539293",
+      "overseas_ms": 9.0
+    },
+    {
+      "key": "vless|104.17.50.53|443|4e4f1f70-5e56-4a76-bb9d-db087f4690c4",
+      "server": "104.17.50.53",
+      "port": 443,
+      "type": "vless",
+      "name": "vless-1831072390",
+      "overseas_ms": 6.2
+    },
+    {
+      "key": "vless|104.21.6.186|443|4e4f1f70-5e56-4a76-bb9d-db087f4690c4",
+      "server": "104.21.6.186",
+      "port": 443,
+      "type": "vless",
+      "name": "vless-1863476159",
       "overseas_ms": 6.3
     },
     {
@@ -527,39 +551,7 @@
       "port": 10574,
       "type": "vless",
       "name": "vless-1827152952",
-      "overseas_ms": 166.3
-    },
-    {
-      "key": "vless|188.114.97.6|443|4e4f1f70-5e56-4a76-bb9d-db087f4690c4",
-      "server": "188.114.97.6",
-      "port": 443,
-      "type": "vless",
-      "name": "vless-1828374447",
-      "overseas_ms": 6.4
-    },
-    {
-      "key": "vless|104.17.50.53|443|4e4f1f70-5e56-4a76-bb9d-db087f4690c4",
-      "server": "104.17.50.53",
-      "port": 443,
-      "type": "vless",
-      "name": "vless-1831072390",
-      "overseas_ms": 7.1
-    },
-    {
-      "key": "vless|104.21.6.186|443|4e4f1f70-5e56-4a76-bb9d-db087f4690c4",
-      "server": "104.21.6.186",
-      "port": 443,
-      "type": "vless",
-      "name": "vless-1863476159",
-      "overseas_ms": 6.7
-    },
-    {
-      "key": "vless|15.204.97.214|23576|48ff2b70-e180-582f-8866-d9a2edeed5f5",
-      "server": "15.204.97.214",
-      "port": 23576,
-      "type": "vless",
-      "name": "vless-1853340740",
-      "overseas_ms": 6.8
+      "overseas_ms": 205.4
     },
     {
       "key": "vless|3.0.111.82|12972|814bd064-544d-4255-a070-5705c03f6da9",
@@ -567,7 +559,7 @@
       "port": 12972,
       "type": "vless",
       "name": "vless-1855701601",
-      "overseas_ms": 173.7
+      "overseas_ms": 204.7
     },
     {
       "key": "vless|162.159.254.3|443|4e4f1f70-5e56-4a76-bb9d-db087f4690c4",
@@ -575,63 +567,15 @@
       "port": 443,
       "type": "vless",
       "name": "vless-1827152273",
-      "overseas_ms": 7.6
+      "overseas_ms": 13.1
     },
     {
-      "key": "vless|206.206.76.75|443|32cf52f4-b8d2-4ed5-a37c-0d0a8e743309",
-      "server": "206.206.76.75",
+      "key": "vless|154.26.188.52|443|91ad30e9-ab06-4b4c-9fb9-1c2aa97d8b3a",
+      "server": "154.26.188.52",
       "port": 443,
       "type": "vless",
-      "name": "vless-1938581973",
-      "overseas_ms": 205.7
-    },
-    {
-      "key": "vless|103.106.229.37|21004|41b1c169-5905-4d98-b6a6-56896c25737c",
-      "server": "103.106.229.37",
-      "port": 21004,
-      "type": "vless",
-      "name": "vless-1844556217",
-      "overseas_ms": 176.9
-    },
-    {
-      "key": "vless|45.138.100.248|10443|ae908ff5-f749-402c-af25-e6e9aef4d6bb",
-      "server": "45.138.100.248",
-      "port": 10443,
-      "type": "vless",
-      "name": "vless-1854337870",
-      "overseas_ms": 73.8
-    },
-    {
-      "key": "vless|fast.145779.xyz|2053|c83f15bf-1817-4ec8-a19f-6393d226434c",
-      "server": "fast.145779.xyz",
-      "port": 2053,
-      "type": "vless",
-      "name": "vless-1944902761",
-      "overseas_ms": 60.5
-    },
-    {
-      "key": "vless|139.162.27.96|443|f1178fbe-1420-4eef-b087-4f33b32b4a19",
-      "server": "139.162.27.96",
-      "port": 443,
-      "type": "vless",
-      "name": "vless-1853439676",
-      "overseas_ms": 175.6
-    },
-    {
-      "key": "vless|169.40.42.231|443|d65cc14c-f53f-4fe2-b262-97856601319c",
-      "server": "169.40.42.231",
-      "port": 443,
-      "type": "vless",
-      "name": "vless-1827162772",
-      "overseas_ms": 62.8
-    },
-    {
-      "key": "vless|152.69.200.216|443|4e4f1f70-5e56-4a76-bb9d-db087f4690c4",
-      "server": "152.69.200.216",
-      "port": 443,
-      "type": "vless",
-      "name": "vless-1853489197",
-      "overseas_ms": 108.1
+      "name": "vless-1941514489",
+      "overseas_ms": 47.4
     },
     {
       "key": "vless|95.174.68.188|14430|965ffbbe-c6b6-4d5f-8dea-6d8abc55d9c0",
@@ -639,7 +583,47 @@
       "port": 14430,
       "type": "vless",
       "name": "vless-1873476710",
-      "overseas_ms": 355.9
+      "overseas_ms": 217.1
+    },
+    {
+      "key": "vless|45.138.100.248|10443|ae908ff5-f749-402c-af25-e6e9aef4d6bb",
+      "server": "45.138.100.248",
+      "port": 10443,
+      "type": "vless",
+      "name": "vless-1854337870",
+      "overseas_ms": 28.8
+    },
+    {
+      "key": "vless|15.204.97.214|23576|48ff2b70-e180-582f-8866-d9a2edeed5f5",
+      "server": "15.204.97.214",
+      "port": 23576,
+      "type": "vless",
+      "name": "vless-1853340740",
+      "overseas_ms": 56.0
+    },
+    {
+      "key": "vless|103.106.229.37|21004|41b1c169-5905-4d98-b6a6-56896c25737c",
+      "server": "103.106.229.37",
+      "port": 21004,
+      "type": "vless",
+      "name": "vless-1844556217",
+      "overseas_ms": 197.7
+    },
+    {
+      "key": "vless|fast.145779.xyz|2053|c83f15bf-1817-4ec8-a19f-6393d226434c",
+      "server": "fast.145779.xyz",
+      "port": 2053,
+      "type": "vless",
+      "name": "vless-1944902761",
+      "overseas_ms": 63.1
+    },
+    {
+      "key": "vless|169.40.42.231|443|d65cc14c-f53f-4fe2-b262-97856601319c",
+      "server": "169.40.42.231",
+      "port": 443,
+      "type": "vless",
+      "name": "vless-1827162772",
+      "overseas_ms": 37.1
     },
     {
       "key": "vless|169.40.42.89|443|d65cc14c-f53f-4fe2-b262-97856601319c",
@@ -647,7 +631,23 @@
       "port": 443,
       "type": "vless",
       "name": "vless-1828373732",
-      "overseas_ms": 62.4
+      "overseas_ms": 41.1
+    },
+    {
+      "key": "vless|139.162.27.96|443|f1178fbe-1420-4eef-b087-4f33b32b4a19",
+      "server": "139.162.27.96",
+      "port": 443,
+      "type": "vless",
+      "name": "vless-1853439676",
+      "overseas_ms": 198.5
+    },
+    {
+      "key": "vless|152.69.200.216|443|4e4f1f70-5e56-4a76-bb9d-db087f4690c4",
+      "server": "152.69.200.216",
+      "port": 443,
+      "type": "vless",
+      "name": "vless-1853489197",
+      "overseas_ms": 140.9
     },
     {
       "key": "vless|169.40.42.90|443|d65cc14c-f53f-4fe2-b262-97856601319c",
@@ -655,7 +655,7 @@
       "port": 443,
       "type": "vless",
       "name": "vless-1828293988",
-      "overseas_ms": 61.3
+      "overseas_ms": 39.3
     },
     {
       "key": "vless|169.40.42.168|443|d65cc14c-f53f-4fe2-b262-97856601319c",
@@ -663,23 +663,7 @@
       "port": 443,
       "type": "vless",
       "name": "vless-1879373946",
-      "overseas_ms": 61.2
-    },
-    {
-      "key": "vless|511.150333.xyz|21004|41b1c169-5905-4d98-b6a6-56896c25737c",
-      "server": "511.150333.xyz",
-      "port": 21004,
-      "type": "vless",
-      "name": "vless-1828137269",
-      "overseas_ms": 399.0
-    },
-    {
-      "key": "vless|511.150333.xyz|21001|41b1c169-5905-4d98-b6a6-56896c25737c",
-      "server": "511.150333.xyz",
-      "port": 21001,
-      "type": "vless",
-      "name": "vless-1853978506",
-      "overseas_ms": 409.8
+      "overseas_ms": 32.6
     },
     {
       "key": "vless|511.150333.xyz|21002|41b1c169-5905-4d98-b6a6-56896c25737c",
@@ -687,7 +671,23 @@
       "port": 21002,
       "type": "vless",
       "name": "vless-1874689087",
-      "overseas_ms": 421.2
+      "overseas_ms": 401.5
+    },
+    {
+      "key": "vless|511.150333.xyz|21001|41b1c169-5905-4d98-b6a6-56896c25737c",
+      "server": "511.150333.xyz",
+      "port": 21001,
+      "type": "vless",
+      "name": "vless-1853978506",
+      "overseas_ms": 401.1
+    },
+    {
+      "key": "vless|511.150333.xyz|21004|41b1c169-5905-4d98-b6a6-56896c25737c",
+      "server": "511.150333.xyz",
+      "port": 21004,
+      "type": "vless",
+      "name": "vless-1828137269",
+      "overseas_ms": 395.8
     },
     {
       "key": "vless|511.150333.xyz|21003|41b1c169-5905-4d98-b6a6-56896c25737c",
@@ -695,7 +695,7 @@
       "port": 21003,
       "type": "vless",
       "name": "vless-1853978665",
-      "overseas_ms": 435.9
+      "overseas_ms": 421.9
     },
     {
       "key": "vless|ww13.levikogjgfdd.ir|23576|48ff2b70-e180-582f-8866-d9a2edeed5f5",
@@ -703,47 +703,7 @@
       "port": 23576,
       "type": "vless",
       "name": "vless-1853340437",
-      "overseas_ms": 283.4
-    },
-    {
-      "key": "vless|510.150333.xyz|21004|67952583-8572-42e1-943d-0602794f885b",
-      "server": "510.150333.xyz",
-      "port": 21004,
-      "type": "vless",
-      "name": "vless-1880616613",
-      "overseas_ms": 417.7
-    },
-    {
-      "key": "vless|510.150333.xyz|21002|67952583-8572-42e1-943d-0602794f885b",
-      "server": "510.150333.xyz",
-      "port": 21002,
-      "type": "vless",
-      "name": "vless-1872916054",
-      "overseas_ms": 208.6
-    },
-    {
-      "key": "vless|510.150333.xyz|21003|67952583-8572-42e1-943d-0602794f885b",
-      "server": "510.150333.xyz",
-      "port": 21003,
-      "type": "vless",
-      "name": "vless-1882660172",
-      "overseas_ms": 176.4
-    },
-    {
-      "key": "vless|167.17.69.171|443|00144519-7e0d-476b-8d28-435576af9262",
-      "server": "167.17.69.171",
-      "port": 443,
-      "type": "vless",
-      "name": "vless-1869872045",
-      "overseas_ms": 65.5
-    },
-    {
-      "key": "vless|169.40.42.163|443|d65cc14c-f53f-4fe2-b262-97856601319c",
-      "server": "169.40.42.163",
-      "port": 443,
-      "type": "vless",
-      "name": "vless-1827319616",
-      "overseas_ms": 61.3
+      "overseas_ms": 262.7
     },
     {
       "key": "vless|185.95.231.156|443|1f8cf47a-b66a-4916-979f-26edfcf44eea",
@@ -751,7 +711,7 @@
       "port": 443,
       "type": "vless",
       "name": "vless-1854038780",
-      "overseas_ms": 73.3
+      "overseas_ms": 32.4
     },
     {
       "key": "vless|159.89.87.21|28190|14c80e0e-f7ce-4991-94fc-99a1db4a9b1e",
@@ -759,7 +719,7 @@
       "port": 28190,
       "type": "vless",
       "name": "vless-1853350171",
-      "overseas_ms": 77.4
+      "overseas_ms": 34.1
     },
     {
       "key": "vless|66.70.179.198|2053|dc620cd6-a9d8-4a0f-8f18-006b895db77e",
@@ -767,167 +727,15 @@
       "port": 2053,
       "type": "vless",
       "name": "vless-1827155346",
-      "overseas_ms": 79.1
+      "overseas_ms": 44.8
     },
     {
-      "key": "vless|169.40.42.202|443|d65cc14c-f53f-4fe2-b262-97856601319c",
-      "server": "169.40.42.202",
+      "key": "vless|167.17.69.171|443|00144519-7e0d-476b-8d28-435576af9262",
+      "server": "167.17.69.171",
       "port": 443,
       "type": "vless",
-      "name": "vless-1828293967",
-      "overseas_ms": 61.3
-    },
-    {
-      "key": "vless|189.74.114.119|443|abd5755a-8b77-4ed4-afbd-f2ccbc08e6f5",
-      "server": "189.74.114.119",
-      "port": 443,
-      "type": "vless",
-      "name": "vless-1946593165",
-      "overseas_ms": 139.0
-    },
-    {
-      "key": "trojan|167.88.61.198|443|0ab6c98dae3b48e8b9c4a776b6c9c19a",
-      "server": "167.88.61.198",
-      "port": 443,
-      "type": "trojan",
-      "name": "trojan-1941512533",
-      "overseas_ms": 31.9
-    },
-    {
-      "key": "trojan|167.88.61.20|443|0ab6c98dae3b48e8b9c4a776b6c9c19a",
-      "server": "167.88.61.20",
-      "port": 443,
-      "type": "trojan",
-      "name": "trojan-1939845099",
-      "overseas_ms": 32.6
-    },
-    {
-      "key": "trojan|167.88.61.193|443|0ab6c98dae3b48e8b9c4a776b6c9c19a",
-      "server": "167.88.61.193",
-      "port": 443,
-      "type": "trojan",
-      "name": "trojan-1941512524",
-      "overseas_ms": 32.3
-    },
-    {
-      "key": "vless|104.16.0.1|443|4e4f1f70-5e56-4a76-bb9d-db087f4690c4",
-      "server": "104.16.0.1",
-      "port": 443,
-      "type": "vless",
-      "name": "vless-1910526407",
-      "overseas_ms": 6.5
-    },
-    {
-      "key": "vless|152.228.139.33|35108|81dc0b61-f9fe-4ad6-8b4e-b8c067b73712",
-      "server": "152.228.139.33",
-      "port": 35108,
-      "type": "vless",
-      "name": "vless-1891687510",
-      "overseas_ms": 179.3
-    },
-    {
-      "key": "vless|104.16.10.185|443|4e4f1f70-5e56-4a76-bb9d-db087f4690c4",
-      "server": "104.16.10.185",
-      "port": 443,
-      "type": "vless",
-      "name": "vless-1853476976",
-      "overseas_ms": 6.1
-    },
-    {
-      "key": "vless|104.16.10.56|443|4e4f1f70-5e56-4a76-bb9d-db087f4690c4",
-      "server": "104.16.10.56",
-      "port": 443,
-      "type": "vless",
-      "name": "vless-1831066899",
-      "overseas_ms": 6.5
-    },
-    {
-      "key": "trojan|216.152.147.48|443|0ab6c98dae3b48e8b9c4a776b6c9c19a",
-      "server": "216.152.147.48",
-      "port": 443,
-      "type": "trojan",
-      "name": "trojan-1939845057",
-      "overseas_ms": 56.8
-    },
-    {
-      "key": "vless|172.67.217.240|443|4e4f1f70-5e56-4a76-bb9d-db087f4690c4",
-      "server": "172.67.217.240",
-      "port": 443,
-      "type": "vless",
-      "name": "vless-1856200577",
-      "overseas_ms": 6.8
-    },
-    {
-      "key": "vless|154.31.114.162|8443|4e4f1f70-5e56-4a76-bb9d-db087f4690c4",
-      "server": "154.31.114.162",
-      "port": 8443,
-      "type": "vless",
-      "name": "vless-1863663041",
-      "overseas_ms": 125.2
-    },
-    {
-      "key": "vless|104.16.10.2|443|4e4f1f70-5e56-4a76-bb9d-db087f4690c4",
-      "server": "104.16.10.2",
-      "port": 443,
-      "type": "vless",
-      "name": "vless-1863440028",
-      "overseas_ms": 7.5
-    },
-    {
-      "key": "vless|104.19.48.107|443|4e4f1f70-5e56-4a76-bb9d-db087f4690c4",
-      "server": "104.19.48.107",
-      "port": 443,
-      "type": "vless",
-      "name": "vless-1867102735",
-      "overseas_ms": 6.8
-    },
-    {
-      "key": "vless|15.204.97.219|23576|48ff2b70-e180-582f-8866-d9a2edeed5f5",
-      "server": "15.204.97.219",
-      "port": 23576,
-      "type": "vless",
-      "name": "vless-1853340242",
-      "overseas_ms": 6.6
-    },
-    {
-      "key": "vless|saas.sin.fan|2096|5d7b401c-78fa-4254-872e-6d42bf7e75ec",
-      "server": "saas.sin.fan",
-      "port": 2096,
-      "type": "vless",
-      "name": "vless-1942077252",
-      "overseas_ms": 139.5
-    },
-    {
-      "key": "vless|saas.sin.fan|443|5d7b401c-78fa-4254-872e-6d42bf7e75ec",
-      "server": "saas.sin.fan",
-      "port": 443,
-      "type": "vless",
-      "name": "vless-1941532362",
-      "overseas_ms": 165.5
-    },
-    {
-      "key": "trojan|170.101.101.53|443|0ab6c98dae3b48e8b9c4a776b6c9c19a",
-      "server": "170.101.101.53",
-      "port": 443,
-      "type": "trojan",
-      "name": "🇺🇸 United States 156",
-      "overseas_ms": 1075.9
-    },
-    {
-      "key": "vless|510.150333.xyz|21001|67952583-8572-42e1-943d-0602794f885b",
-      "server": "510.150333.xyz",
-      "port": 21001,
-      "type": "vless",
-      "name": "vless-1872916056",
-      "overseas_ms": 176.0
-    },
-    {
-      "key": "vless|195.123.240.65|443|ce18d0eb-5c71-41f9-96e5-1632e22456e4",
-      "server": "195.123.240.65",
-      "port": 443,
-      "type": "vless",
-      "name": "vless-1927724275",
-      "overseas_ms": 30.1
+      "name": "vless-1869872045",
+      "overseas_ms": 52.9
     },
     {
       "key": "vless|45.138.100.248|14430|ae908ff5-f749-402c-af25-e6e9aef4d6bb",
@@ -935,7 +743,207 @@
       "port": 14430,
       "type": "vless",
       "name": "vless-1853353002",
-      "overseas_ms": 2119.8
+      "overseas_ms": 33.0
+    },
+    {
+      "key": "vless|169.40.42.163|443|d65cc14c-f53f-4fe2-b262-97856601319c",
+      "server": "169.40.42.163",
+      "port": 443,
+      "type": "vless",
+      "name": "vless-1827319616",
+      "overseas_ms": 34.5
+    },
+    {
+      "key": "vless|510.150333.xyz|21002|67952583-8572-42e1-943d-0602794f885b",
+      "server": "510.150333.xyz",
+      "port": 21002,
+      "type": "vless",
+      "name": "vless-1872916054",
+      "overseas_ms": 261.5
+    },
+    {
+      "key": "vless|510.150333.xyz|21003|67952583-8572-42e1-943d-0602794f885b",
+      "server": "510.150333.xyz",
+      "port": 21003,
+      "type": "vless",
+      "name": "vless-1882660172",
+      "overseas_ms": 225.6
+    },
+    {
+      "key": "vless|510.150333.xyz|21004|67952583-8572-42e1-943d-0602794f885b",
+      "server": "510.150333.xyz",
+      "port": 21004,
+      "type": "vless",
+      "name": "vless-1880616613",
+      "overseas_ms": 485.7
+    },
+    {
+      "key": "vless|169.40.42.202|443|d65cc14c-f53f-4fe2-b262-97856601319c",
+      "server": "169.40.42.202",
+      "port": 443,
+      "type": "vless",
+      "name": "vless-1828293967",
+      "overseas_ms": 41.0
+    },
+    {
+      "key": "vless|189.74.114.119|443|abd5755a-8b77-4ed4-afbd-f2ccbc08e6f5",
+      "server": "189.74.114.119",
+      "port": 443,
+      "type": "vless",
+      "name": "vless-1946593165",
+      "overseas_ms": 116.9
+    },
+    {
+      "key": "trojan|167.88.61.20|443|0ab6c98dae3b48e8b9c4a776b6c9c19a",
+      "server": "167.88.61.20",
+      "port": 443,
+      "type": "trojan",
+      "name": "trojan-1939845099",
+      "overseas_ms": 46.5
+    },
+    {
+      "key": "trojan|167.88.61.198|443|0ab6c98dae3b48e8b9c4a776b6c9c19a",
+      "server": "167.88.61.198",
+      "port": 443,
+      "type": "trojan",
+      "name": "trojan-1941512533",
+      "overseas_ms": 55.2
+    },
+    {
+      "key": "vless|152.228.139.33|35108|81dc0b61-f9fe-4ad6-8b4e-b8c067b73712",
+      "server": "152.228.139.33",
+      "port": 35108,
+      "type": "vless",
+      "name": "vless-1891687510",
+      "overseas_ms": 131.3
+    },
+    {
+      "key": "trojan|167.88.61.193|443|0ab6c98dae3b48e8b9c4a776b6c9c19a",
+      "server": "167.88.61.193",
+      "port": 443,
+      "type": "trojan",
+      "name": "trojan-1941512524",
+      "overseas_ms": 48.3
+    },
+    {
+      "key": "vless|104.16.0.1|443|4e4f1f70-5e56-4a76-bb9d-db087f4690c4",
+      "server": "104.16.0.1",
+      "port": 443,
+      "type": "vless",
+      "name": "vless-1910526407",
+      "overseas_ms": 8.6
+    },
+    {
+      "key": "trojan|216.152.147.48|443|0ab6c98dae3b48e8b9c4a776b6c9c19a",
+      "server": "216.152.147.48",
+      "port": 443,
+      "type": "trojan",
+      "name": "trojan-1939845057",
+      "overseas_ms": 23.9
+    },
+    {
+      "key": "vless|104.16.10.185|443|4e4f1f70-5e56-4a76-bb9d-db087f4690c4",
+      "server": "104.16.10.185",
+      "port": 443,
+      "type": "vless",
+      "name": "vless-1853476976",
+      "overseas_ms": 12.3
+    },
+    {
+      "key": "vless|104.16.10.56|443|4e4f1f70-5e56-4a76-bb9d-db087f4690c4",
+      "server": "104.16.10.56",
+      "port": 443,
+      "type": "vless",
+      "name": "vless-1831066899",
+      "overseas_ms": 12.4
+    },
+    {
+      "key": "vless|172.67.217.240|443|4e4f1f70-5e56-4a76-bb9d-db087f4690c4",
+      "server": "172.67.217.240",
+      "port": 443,
+      "type": "vless",
+      "name": "vless-1856200577",
+      "overseas_ms": 7.6
+    },
+    {
+      "key": "vless|saas.sin.fan|443|5d7b401c-78fa-4254-872e-6d42bf7e75ec",
+      "server": "saas.sin.fan",
+      "port": 443,
+      "type": "vless",
+      "name": "vless-1941532362",
+      "overseas_ms": 59.2
+    },
+    {
+      "key": "vless|saas.sin.fan|2096|5d7b401c-78fa-4254-872e-6d42bf7e75ec",
+      "server": "saas.sin.fan",
+      "port": 2096,
+      "type": "vless",
+      "name": "vless-1942077252",
+      "overseas_ms": 14.0
+    },
+    {
+      "key": "vless|104.16.10.2|443|4e4f1f70-5e56-4a76-bb9d-db087f4690c4",
+      "server": "104.16.10.2",
+      "port": 443,
+      "type": "vless",
+      "name": "vless-1863440028",
+      "overseas_ms": 16.6
+    },
+    {
+      "key": "vless|104.19.48.107|443|4e4f1f70-5e56-4a76-bb9d-db087f4690c4",
+      "server": "104.19.48.107",
+      "port": 443,
+      "type": "vless",
+      "name": "vless-1867102735",
+      "overseas_ms": 7.0
+    },
+    {
+      "key": "vless|154.31.114.162|8443|4e4f1f70-5e56-4a76-bb9d-db087f4690c4",
+      "server": "154.31.114.162",
+      "port": 8443,
+      "type": "vless",
+      "name": "vless-1863663041",
+      "overseas_ms": 133.7
+    },
+    {
+      "key": "vless|15.204.97.219|23576|48ff2b70-e180-582f-8866-d9a2edeed5f5",
+      "server": "15.204.97.219",
+      "port": 23576,
+      "type": "vless",
+      "name": "vless-1853340242",
+      "overseas_ms": 51.7
+    },
+    {
+      "key": "vless|us1.oh-node.com|443|4bcf0215-f07e-4a0b-97e2-7464a565e8f1",
+      "server": "us1.oh-node.com",
+      "port": 443,
+      "type": "vless",
+      "name": "vless-1946063431",
+      "overseas_ms": 222.2
+    },
+    {
+      "key": "vless|510.150333.xyz|21001|67952583-8572-42e1-943d-0602794f885b",
+      "server": "510.150333.xyz",
+      "port": 21001,
+      "type": "vless",
+      "name": "vless-1872916056",
+      "overseas_ms": 470.6
+    },
+    {
+      "key": "vless|134.185.81.5|47881|59b203b2-b1bc-4e9c-a9e5-ccb8f691bf72",
+      "server": "134.185.81.5",
+      "port": 47881,
+      "type": "vless",
+      "name": "vless-1929913739",
+      "overseas_ms": 2259.3
+    },
+    {
+      "key": "vless|195.123.240.65|443|ce18d0eb-5c71-41f9-96e5-1632e22456e4",
+      "server": "195.123.240.65",
+      "port": 443,
+      "type": "vless",
+      "name": "vless-1927724275",
+      "overseas_ms": 1076.8
     },
     {
       "key": "vless|169.40.42.229|443|d65cc14c-f53f-4fe2-b262-97856601319c",
@@ -943,7 +951,7 @@
       "port": 443,
       "type": "vless",
       "name": "vless-1853462750",
-      "overseas_ms": 61.2
+      "overseas_ms": 36.5
     },
     {
       "key": "vless|177.7.51.29|8443|c6b1b2d0-ed5e-48ce-99e6-112ff330030d",
@@ -951,7 +959,7 @@
       "port": 8443,
       "type": "vless",
       "name": "vless-1938585287",
-      "overseas_ms": 79.5
+      "overseas_ms": 33.7
     },
     {
       "key": "vless|83.147.232.69|10459|55ad002b-6cdf-4d76-81bb-91f3f605afc5",
@@ -959,7 +967,7 @@
       "port": 10459,
       "type": "vless",
       "name": "vless-1946224535",
-      "overseas_ms": 163.6
+      "overseas_ms": 104.5
     },
     {
       "key": "vless|152.228.139.33|51671|75cc7568-abb0-46a8-88be-8137d3c647d4",
@@ -967,23 +975,7 @@
       "port": 51671,
       "type": "vless",
       "name": "vless-1827531794",
-      "overseas_ms": 166.0
-    },
-    {
-      "key": "vless|195.211.98.43|443|1b4b11d5-4c2d-4533-9a55-636757cdee94",
-      "server": "195.211.98.43",
-      "port": 443,
-      "type": "vless",
-      "name": "vless-1883103905",
-      "overseas_ms": 1101.5
-    },
-    {
-      "key": "vless|209.200.246.148|443|ca52e2b6-fb9f-4dac-b6dc-49da9923f251",
-      "server": "209.200.246.148",
-      "port": 443,
-      "type": "vless",
-      "name": "vless-1828036218",
-      "overseas_ms": 76.1
+      "overseas_ms": 130.7
     },
     {
       "key": "vless|104.24.31.89|443|4e4f1f70-5e56-4a76-bb9d-db087f4690c4",
@@ -991,79 +983,23 @@
       "port": 443,
       "type": "vless",
       "name": "vless-1853972214",
-      "overseas_ms": 6.5
+      "overseas_ms": 10.9
     },
     {
-      "key": "hysteria2|8.209.247.109|443|usqmqUKJFIlCmvkCNSY64L3k",
-      "server": "8.209.247.109",
-      "port": 443,
-      "type": "hysteria2",
-      "name": "hysteria2-1827145159",
-      "overseas_ms": 126.7
-    },
-    {
-      "key": "vless|104.21.34.106|443|4e4f1f70-5e56-4a76-bb9d-db087f4690c4",
-      "server": "104.21.34.106",
+      "key": "vless|209.200.246.148|443|ca52e2b6-fb9f-4dac-b6dc-49da9923f251",
+      "server": "209.200.246.148",
       "port": 443,
       "type": "vless",
-      "name": "vless-1863474247",
-      "overseas_ms": 6.4
+      "name": "vless-1828036218",
+      "overseas_ms": 45.7
     },
     {
-      "key": "vless|104.17.210.74|443|4e4f1f70-5e56-4a76-bb9d-db087f4690c4",
-      "server": "104.17.210.74",
+      "key": "vless|195.211.98.43|443|1b4b11d5-4c2d-4533-9a55-636757cdee94",
+      "server": "195.211.98.43",
       "port": 443,
       "type": "vless",
-      "name": "vless-1832764138",
-      "overseas_ms": 7.3
-    },
-    {
-      "key": "vless|www.speedtest.net|443|ec23f217-23a1-4f62-b98d-ba56070de89c",
-      "server": "www.speedtest.net",
-      "port": 443,
-      "type": "vless",
-      "name": "vless-1947401655",
-      "overseas_ms": 7.4
-    },
-    {
-      "key": "vless|104.21.0.87|443|4e4f1f70-5e56-4a76-bb9d-db087f4690c4",
-      "server": "104.21.0.87",
-      "port": 443,
-      "type": "vless",
-      "name": "vless-1827152152",
-      "overseas_ms": 7.3
-    },
-    {
-      "key": "vless|fast.145779.xyz|2053|e3149c82-00f6-4227-b2c0-b78f1dd81279",
-      "server": "fast.145779.xyz",
-      "port": 2053,
-      "type": "vless",
-      "name": "vless-1947389016",
-      "overseas_ms": 6.8
-    },
-    {
-      "key": "vless|47.251.108.158|443|975fc322-6e38-434b-a53c-d39fed49b9a9",
-      "server": "47.251.108.158",
-      "port": 443,
-      "type": "vless",
-      "name": "vless-1947416912",
-      "overseas_ms": 22.4
-    },
-    {
-      "key": "vless|45.63.53.81|443|c512dcbd-1847-40a2-9c99-989c8bfe4717",
-      "server": "45.63.53.81",
-      "port": 443,
-      "type": "vless",
-      "name": "vless-1835128666",
-      "overseas_ms": 30.1
-    },
-    {
-      "key": "trojan|216.152.147.93|443|0ab6c98dae3b48e8b9c4a776b6c9c19a",
-      "server": "216.152.147.93",
-      "port": 443,
-      "type": "trojan",
-      "name": "trojan-1939845081",
-      "overseas_ms": 56.3
+      "name": "vless-1883103905",
+      "overseas_ms": 3131.8
     },
     {
       "key": "trojan|216.152.155.59|443|0ab6c98dae3b48e8b9c4a776b6c9c19a",
@@ -1071,15 +1007,79 @@
       "port": 443,
       "type": "trojan",
       "name": "trojan-1929965352",
-      "overseas_ms": 56.4
+      "overseas_ms": 11.8
     },
     {
-      "key": "vless|31.76.91.31|443|7b22dce8-7ebd-425b-8ca4-7b6190321985",
-      "server": "31.76.91.31",
+      "key": "vless|104.21.34.106|443|4e4f1f70-5e56-4a76-bb9d-db087f4690c4",
+      "server": "104.21.34.106",
       "port": 443,
       "type": "vless",
-      "name": "vless-1946596126",
-      "overseas_ms": 89.9
+      "name": "vless-1863474247",
+      "overseas_ms": 7.7
+    },
+    {
+      "key": "trojan|216.152.147.93|443|0ab6c98dae3b48e8b9c4a776b6c9c19a",
+      "server": "216.152.147.93",
+      "port": 443,
+      "type": "trojan",
+      "name": "trojan-1939845081",
+      "overseas_ms": 20.2
+    },
+    {
+      "key": "vless|104.17.210.74|443|4e4f1f70-5e56-4a76-bb9d-db087f4690c4",
+      "server": "104.17.210.74",
+      "port": 443,
+      "type": "vless",
+      "name": "vless-1832764138",
+      "overseas_ms": 11.4
+    },
+    {
+      "key": "hysteria2|8.209.247.109|443|usqmqUKJFIlCmvkCNSY64L3k",
+      "server": "8.209.247.109",
+      "port": 443,
+      "type": "hysteria2",
+      "name": "hysteria2-1827145159",
+      "overseas_ms": 136.1
+    },
+    {
+      "key": "vless|104.21.0.87|443|4e4f1f70-5e56-4a76-bb9d-db087f4690c4",
+      "server": "104.21.0.87",
+      "port": 443,
+      "type": "vless",
+      "name": "vless-1827152152",
+      "overseas_ms": 8.1
+    },
+    {
+      "key": "vless|fast.145779.xyz|2053|e3149c82-00f6-4227-b2c0-b78f1dd81279",
+      "server": "fast.145779.xyz",
+      "port": 2053,
+      "type": "vless",
+      "name": "vless-1947389016",
+      "overseas_ms": 10.0
+    },
+    {
+      "key": "vless|www.speedtest.net|443|ec23f217-23a1-4f62-b98d-ba56070de89c",
+      "server": "www.speedtest.net",
+      "port": 443,
+      "type": "vless",
+      "name": "vless-1947401655",
+      "overseas_ms": 24.6
+    },
+    {
+      "key": "vless|47.251.108.158|443|975fc322-6e38-434b-a53c-d39fed49b9a9",
+      "server": "47.251.108.158",
+      "port": 443,
+      "type": "vless",
+      "name": "vless-1947416912",
+      "overseas_ms": 39.6
+    },
+    {
+      "key": "vless|45.63.53.81|443|c512dcbd-1847-40a2-9c99-989c8bfe4717",
+      "server": "45.63.53.81",
+      "port": 443,
+      "type": "vless",
+      "name": "vless-1835128666",
+      "overseas_ms": 38.9
     },
     {
       "key": "vless|195.123.235.183|443|c14ec728-3eca-4750-87fc-fd1e6aeb81d5",
@@ -1087,23 +1087,7 @@
       "port": 443,
       "type": "vless",
       "name": "vless-1883549617",
-      "overseas_ms": 82.1
-    },
-    {
-      "key": "vless|178.212.35.198|443|6bdc8320-7eae-46fc-be08-f5f54e65dfc8",
-      "server": "178.212.35.198",
-      "port": 443,
-      "type": "vless",
-      "name": "vless-1920323172",
-      "overseas_ms": 260.3
-    },
-    {
-      "key": "vless|xray1-direct-mci1-fs-ce.freesocks.work|443|d8feda9a-54c5-426f-a918-b5c9756c0464",
-      "server": "xray1-direct-mci1-fs-ce.freesocks.work",
-      "port": 443,
-      "type": "vless",
-      "name": "vless-1945975854",
-      "overseas_ms": 65.4
+      "overseas_ms": 33.4
     },
     {
       "key": "vless|5.34.178.120|443|9063f9fb-e88a-4ee0-b4a4-a92ca7316a9f",
@@ -1111,7 +1095,23 @@
       "port": 443,
       "type": "vless",
       "name": "vless-1875069672",
-      "overseas_ms": 91.7
+      "overseas_ms": 54.5
+    },
+    {
+      "key": "vless|178.212.35.198|443|6bdc8320-7eae-46fc-be08-f5f54e65dfc8",
+      "server": "178.212.35.198",
+      "port": 443,
+      "type": "vless",
+      "name": "vless-1920323172",
+      "overseas_ms": 228.9
+    },
+    {
+      "key": "vless|xray1-direct-mci1-fs-ce.freesocks.work|443|d8feda9a-54c5-426f-a918-b5c9756c0464",
+      "server": "xray1-direct-mci1-fs-ce.freesocks.work",
+      "port": 443,
+      "type": "vless",
+      "name": "vless-1945975854",
+      "overseas_ms": 58.2
     },
     {
       "key": "trojan|208.69.78.19|443|0ab6c98dae3b48e8b9c4a776b6c9c19a",
@@ -1119,15 +1119,7 @@
       "port": 443,
       "type": "trojan",
       "name": "trojan-1945021228",
-      "overseas_ms": 165.7
-    },
-    {
-      "key": "vless|us3.oh-node.com|443|4bcf0215-f07e-4a0b-97e2-7464a565e8f1",
-      "server": "us3.oh-node.com",
-      "port": 443,
-      "type": "vless",
-      "name": "vless-1947523572",
-      "overseas_ms": 231.0
+      "overseas_ms": 163.4
     },
     {
       "key": "vless|86.54.28.75|443|44ae52b9-76fc-444d-8e43-186b4384b80a",
@@ -1135,7 +1127,7 @@
       "port": 443,
       "type": "vless",
       "name": "vless-1855697563",
-      "overseas_ms": 140.0
+      "overseas_ms": 134.6
     },
     {
       "key": "vless|208.69.78.217|2053|c0dd6d59-1573-43af-8b70-1470b2632a6d",
@@ -1143,55 +1135,7 @@
       "port": 2053,
       "type": "vless",
       "name": "vless-1875103853",
-      "overseas_ms": 167.2
-    },
-    {
-      "key": "vless|free-amsterdam-node-1.cloudwidecdn.com|443|44ae52b9-76fc-444d-8e43-186b4384b80a",
-      "server": "free-amsterdam-node-1.cloudwidecdn.com",
-      "port": 443,
-      "type": "vless",
-      "name": "vless-1879638656",
-      "overseas_ms": 157.6
-    },
-    {
-      "key": "trojan|167.88.61.85|443|0ab6c98dae3b48e8b9c4a776b6c9c19a",
-      "server": "167.88.61.85",
-      "port": 443,
-      "type": "trojan",
-      "name": "trojan-1943481639",
-      "overseas_ms": 32.4
-    },
-    {
-      "key": "vless|104.21.33.59|443|4e4f1f70-5e56-4a76-bb9d-db087f4690c4",
-      "server": "104.21.33.59",
-      "port": 443,
-      "type": "vless",
-      "name": "vless-1828374596",
-      "overseas_ms": 6.4
-    },
-    {
-      "key": "vless|2.24.124.64|443|719b9354-45e2-4718-8709-d965b64554db",
-      "server": "2.24.124.64",
-      "port": 443,
-      "type": "vless",
-      "name": "vless-1831115760",
-      "overseas_ms": 267.9
-    },
-    {
-      "key": "vless|51.77.217.70|2053|bf16ee0c-8b3c-41e4-ab3a-8b48033c404e",
-      "server": "51.77.217.70",
-      "port": 2053,
-      "type": "vless",
-      "name": "vless-1832881467",
-      "overseas_ms": 157.1
-    },
-    {
-      "key": "vless|104.21.70.228|443|4e4f1f70-5e56-4a76-bb9d-db087f4690c4",
-      "server": "104.21.70.228",
-      "port": 443,
-      "type": "vless",
-      "name": "vless-1828654076",
-      "overseas_ms": 7.4
+      "overseas_ms": 147.2
     },
     {
       "key": "vless|51.89.194.151|2053|8e790f25-1d71-4601-9fb0-d503931dcfca",
@@ -1199,23 +1143,15 @@
       "port": 2053,
       "type": "vless",
       "name": "vless-1880851304",
-      "overseas_ms": 150.0
+      "overseas_ms": 97.4
     },
     {
-      "key": "vless|172.64.152.52|443|2d4b819d-6fa6-4db2-8434-61e7db0fe93c",
-      "server": "172.64.152.52",
-      "port": 443,
+      "key": "vless|51.77.217.70|2053|bf16ee0c-8b3c-41e4-ab3a-8b48033c404e",
+      "server": "51.77.217.70",
+      "port": 2053,
       "type": "vless",
-      "name": "vless-1946894790",
-      "overseas_ms": 7.1
-    },
-    {
-      "key": "vless|104.18.42.98|443|4e4f1f70-5e56-4a76-bb9d-db087f4690c4",
-      "server": "104.18.42.98",
-      "port": 443,
-      "type": "vless",
-      "name": "vless-1863464818",
-      "overseas_ms": 6.9
+      "name": "vless-1832881467",
+      "overseas_ms": 120.1
     },
     {
       "key": "vless|edge.bookmai.com|443|b9bfa54d-bc44-4592-a6d6-89a9665d286f",
@@ -1223,31 +1159,23 @@
       "port": 443,
       "type": "vless",
       "name": "vless-1853963040",
-      "overseas_ms": 195.1
+      "overseas_ms": 139.6
     },
     {
-      "key": "vless|104.16.10.234|443|4e4f1f70-5e56-4a76-bb9d-db087f4690c4",
-      "server": "104.16.10.234",
+      "key": "vless|free-amsterdam-node-1.cloudwidecdn.com|443|44ae52b9-76fc-444d-8e43-186b4384b80a",
+      "server": "free-amsterdam-node-1.cloudwidecdn.com",
       "port": 443,
       "type": "vless",
-      "name": "vless-1863440034",
-      "overseas_ms": 6.8
+      "name": "vless-1879638656",
+      "overseas_ms": 176.5
     },
     {
-      "key": "vless|saas.sin.fan|2053|5d7b401c-78fa-4254-872e-6d42bf7e75ec",
-      "server": "saas.sin.fan",
-      "port": 2053,
-      "type": "vless",
-      "name": "vless-1941532359",
-      "overseas_ms": 6.9
-    },
-    {
-      "key": "hysteria2|192.142.23.46|443|a0052f4f-4c63-0002-a16f-ab2d5d718cd3",
-      "server": "192.142.23.46",
+      "key": "vless|104.21.33.59|443|4e4f1f70-5e56-4a76-bb9d-db087f4690c4",
+      "server": "104.21.33.59",
       "port": 443,
-      "type": "hysteria2",
-      "name": "hysteria2-1945507344",
-      "overseas_ms": 169.6
+      "type": "vless",
+      "name": "vless-1828374596",
+      "overseas_ms": 7.8
     },
     {
       "key": "vless|212.227.235.66|2053|ead0dd61-d398-40ad-80d6-a0e1e516d7d3",
@@ -1255,39 +1183,71 @@
       "port": 2053,
       "type": "vless",
       "name": "vless-1827156208",
-      "overseas_ms": 193.4
+      "overseas_ms": 123.6
     },
     {
-      "key": "vless|104.19.33.25|443|4e4f1f70-5e56-4a76-bb9d-db087f4690c4",
-      "server": "104.19.33.25",
+      "key": "vless|us3.oh-node.com|443|4bcf0215-f07e-4a0b-97e2-7464a565e8f1",
+      "server": "us3.oh-node.com",
       "port": 443,
       "type": "vless",
-      "name": "vless-1863468525",
+      "name": "vless-1947523572",
+      "overseas_ms": 285.1
+    },
+    {
+      "key": "vless|104.21.70.228|443|4e4f1f70-5e56-4a76-bb9d-db087f4690c4",
+      "server": "104.21.70.228",
+      "port": 443,
+      "type": "vless",
+      "name": "vless-1828654076",
+      "overseas_ms": 10.2
+    },
+    {
+      "key": "vless|172.64.152.52|443|2d4b819d-6fa6-4db2-8434-61e7db0fe93c",
+      "server": "172.64.152.52",
+      "port": 443,
+      "type": "vless",
+      "name": "vless-1946894790",
+      "overseas_ms": 10.6
+    },
+    {
+      "key": "trojan|167.88.61.85|443|0ab6c98dae3b48e8b9c4a776b6c9c19a",
+      "server": "167.88.61.85",
+      "port": 443,
+      "type": "trojan",
+      "name": "trojan-1943481639",
+      "overseas_ms": 50.2
+    },
+    {
+      "key": "hysteria2|192.142.23.46|443|a0052f4f-4c63-0002-a16f-ab2d5d718cd3",
+      "server": "192.142.23.46",
+      "port": 443,
+      "type": "hysteria2",
+      "name": "hysteria2-1945507344",
+      "overseas_ms": 121.8
+    },
+    {
+      "key": "vless|104.18.42.98|443|4e4f1f70-5e56-4a76-bb9d-db087f4690c4",
+      "server": "104.18.42.98",
+      "port": 443,
+      "type": "vless",
+      "name": "vless-1863464818",
       "overseas_ms": 7.0
     },
     {
-      "key": "vless|104.16.10.48|443|4e4f1f70-5e56-4a76-bb9d-db087f4690c4",
-      "server": "104.16.10.48",
+      "key": "vless|104.16.10.234|443|4e4f1f70-5e56-4a76-bb9d-db087f4690c4",
+      "server": "104.16.10.234",
       "port": 443,
       "type": "vless",
-      "name": "vless-1863440009",
+      "name": "vless-1863440034",
       "overseas_ms": 6.7
     },
     {
-      "key": "vless|46.250.250.149|2053|b4caaf57-ad77-4948-a6f5-51b3513799bf",
-      "server": "46.250.250.149",
+      "key": "vless|saas.sin.fan|2053|5d7b401c-78fa-4254-872e-6d42bf7e75ec",
+      "server": "saas.sin.fan",
       "port": 2053,
       "type": "vless",
-      "name": "vless-1853989191",
-      "overseas_ms": 98.6
-    },
-    {
-      "key": "vless|208.84.100.209|8080|36c3dcc2-17b6-4478-b8a7-3978e6d5afe9",
-      "server": "208.84.100.209",
-      "port": 8080,
-      "type": "vless",
-      "name": "vless-1884945236",
-      "overseas_ms": 56.9
+      "name": "vless-1941532359",
+      "overseas_ms": 60.9
     },
     {
       "key": "vless|13.140.56.100|14430|68512eac-cd53-4de3-8d1e-08f6e04af1a9",
@@ -1295,15 +1255,31 @@
       "port": 14430,
       "type": "vless",
       "name": "vless-1853352712",
-      "overseas_ms": 251.8
+      "overseas_ms": 201.5
     },
     {
-      "key": "vless|43.170.8.95|443|4e4f1f70-5e56-4a76-bb9d-db087f4690c4",
-      "server": "43.170.8.95",
+      "key": "vless|208.84.100.209|8080|36c3dcc2-17b6-4478-b8a7-3978e6d5afe9",
+      "server": "208.84.100.209",
+      "port": 8080,
+      "type": "vless",
+      "name": "vless-1884945236",
+      "overseas_ms": 29.9
+    },
+    {
+      "key": "vless|104.19.33.25|443|4e4f1f70-5e56-4a76-bb9d-db087f4690c4",
+      "server": "104.19.33.25",
       "port": 443,
       "type": "vless",
-      "name": "vless-1841360022",
-      "overseas_ms": 110.5
+      "name": "vless-1863468525",
+      "overseas_ms": 6.8
+    },
+    {
+      "key": "vless|104.16.10.48|443|4e4f1f70-5e56-4a76-bb9d-db087f4690c4",
+      "server": "104.16.10.48",
+      "port": 443,
+      "type": "vless",
+      "name": "vless-1863440009",
+      "overseas_ms": 13.8
     },
     {
       "key": "vless|195.123.235.177|443|729dd5f2-f5ff-4070-8c10-863eceded0b1",
@@ -1311,7 +1287,23 @@
       "port": 443,
       "type": "vless",
       "name": "vless-1891858676",
-      "overseas_ms": 81.3
+      "overseas_ms": 34.8
+    },
+    {
+      "key": "vless|43.170.8.95|443|4e4f1f70-5e56-4a76-bb9d-db087f4690c4",
+      "server": "43.170.8.95",
+      "port": 443,
+      "type": "vless",
+      "name": "vless-1841360022",
+      "overseas_ms": 132.7
+    },
+    {
+      "key": "vless|46.250.250.149|2053|b4caaf57-ad77-4948-a6f5-51b3513799bf",
+      "server": "46.250.250.149",
+      "port": 2053,
+      "type": "vless",
+      "name": "vless-1853989191",
+      "overseas_ms": 144.7
     },
     {
       "key": "vless|5.34.177.164|443|ca678d26-5435-4d13-b378-06c4c3b070ff",
@@ -1319,15 +1311,15 @@
       "port": 443,
       "type": "vless",
       "name": "vless-1827155341",
-      "overseas_ms": 191.8
+      "overseas_ms": 199.4
     },
     {
-      "key": "vless|84.235.244.108|22573|39947382-3212-41c9-bc3a-589574ac8b23",
-      "server": "84.235.244.108",
-      "port": 22573,
+      "key": "vless|2.24.124.64|443|719b9354-45e2-4718-8709-d965b64554db",
+      "server": "2.24.124.64",
+      "port": 443,
       "type": "vless",
-      "name": "vless-1827267081",
-      "overseas_ms": 257.9
+      "name": "vless-1831115760",
+      "overseas_ms": 523.0
     },
     {
       "key": "vless|178.172.227.124|10443|1af36694-b548-4b18-89a0-bc076eab4ed7",
@@ -1335,15 +1327,7 @@
       "port": 10443,
       "type": "vless",
       "name": "vless-1928739793",
-      "overseas_ms": 189.6
-    },
-    {
-      "key": "vless|104.16.10.135|443|4e4f1f70-5e56-4a76-bb9d-db087f4690c4",
-      "server": "104.16.10.135",
-      "port": 443,
-      "type": "vless",
-      "name": "vless-1832764134",
-      "overseas_ms": 6.8
+      "overseas_ms": 140.9
     },
     {
       "key": "vless|45.90.57.119|8443|f5e70ce3-cfb4-4df1-b25c-d19bfae627c0",
@@ -1351,7 +1335,15 @@
       "port": 8443,
       "type": "vless",
       "name": "vless-1941511316",
-      "overseas_ms": 167.4
+      "overseas_ms": 131.7
+    },
+    {
+      "key": "vless|104.16.10.135|443|4e4f1f70-5e56-4a76-bb9d-db087f4690c4",
+      "server": "104.16.10.135",
+      "port": 443,
+      "type": "vless",
+      "name": "vless-1832764134",
+      "overseas_ms": 8.3
     },
     {
       "key": "vless|122.176.216.52|443|16ae3ea5-cf3e-6973-7bf3-2b4b28d0ea88",
@@ -1359,15 +1351,7 @@
       "port": 443,
       "type": "vless",
       "name": "vless-1934541066",
-      "overseas_ms": 242.0
-    },
-    {
-      "key": "vless|51.158.206.26|23576|48ff2b70-e180-582f-8866-d9a2edeed5f5",
-      "server": "51.158.206.26",
-      "port": 23576,
-      "type": "vless",
-      "name": "vless-1882484918",
-      "overseas_ms": 143.3
+      "overseas_ms": 224.7
     },
     {
       "key": "vless|130.12.242.106|443|bc058e69-0444-4c7b-98da-bd67f0b143da",
@@ -1375,7 +1359,15 @@
       "port": 443,
       "type": "vless",
       "name": "vless-1841767889",
-      "overseas_ms": 173.2
+      "overseas_ms": 116.1
+    },
+    {
+      "key": "vless|51.158.206.26|23576|48ff2b70-e180-582f-8866-d9a2edeed5f5",
+      "server": "51.158.206.26",
+      "port": 23576,
+      "type": "vless",
+      "name": "vless-1882484918",
+      "overseas_ms": 115.0
     },
     {
       "key": "vless|51.158.206.80|23576|48ff2b70-e180-582f-8866-d9a2edeed5f5",
@@ -1383,23 +1375,7 @@
       "port": 23576,
       "type": "vless",
       "name": "vless-1832650249",
-      "overseas_ms": 157.4
-    },
-    {
-      "key": "trojan|216.152.147.85|443|0ab6c98dae3b48e8b9c4a776b6c9c19a",
-      "server": "216.152.147.85",
-      "port": 443,
-      "type": "trojan",
-      "name": "trojan-1943481635",
-      "overseas_ms": 57.5
-    },
-    {
-      "key": "trojan|216.152.147.79|443|0ab6c98dae3b48e8b9c4a776b6c9c19a",
-      "server": "216.152.147.79",
-      "port": 443,
-      "type": "trojan",
-      "name": "trojan-1947400782",
-      "overseas_ms": 58.7
+      "overseas_ms": 114.3
     },
     {
       "key": "vless|178.172.227.124|14430|1af36694-b548-4b18-89a0-bc076eab4ed7",
@@ -1407,7 +1383,23 @@
       "port": 14430,
       "type": "vless",
       "name": "vless-1832691494",
-      "overseas_ms": 198.5
+      "overseas_ms": 143.1
+    },
+    {
+      "key": "trojan|216.152.147.79|443|0ab6c98dae3b48e8b9c4a776b6c9c19a",
+      "server": "216.152.147.79",
+      "port": 443,
+      "type": "trojan",
+      "name": "trojan-1947400782",
+      "overseas_ms": 27.9
+    },
+    {
+      "key": "trojan|216.152.147.201|443|0ab6c98dae3b48e8b9c4a776b6c9c19a",
+      "server": "216.152.147.201",
+      "port": 443,
+      "type": "trojan",
+      "name": "trojan-1939845052",
+      "overseas_ms": 23.1
     },
     {
       "key": "trojan|172.67.203.46|443|humanity",
@@ -1415,7 +1407,7 @@
       "port": 443,
       "type": "trojan",
       "name": "trojan-1923819684",
-      "overseas_ms": 6.7
+      "overseas_ms": 9.1
     },
     {
       "key": "trojan|104.19.95.153|443|humanity",
@@ -1423,7 +1415,7 @@
       "port": 443,
       "type": "trojan",
       "name": "trojan-1934984141",
-      "overseas_ms": 6.7
+      "overseas_ms": 7.6
     },
     {
       "key": "trojan|104.18.8.83|443|humanity",
@@ -1431,7 +1423,7 @@
       "port": 443,
       "type": "trojan",
       "name": "trojan-1858673309",
-      "overseas_ms": 6.3
+      "overseas_ms": 14.0
     },
     {
       "key": "trojan|www.calmlunch.com|443|humanity",
@@ -1439,7 +1431,7 @@
       "port": 443,
       "type": "trojan",
       "name": "trojan-1856634545",
-      "overseas_ms": 33.8
+      "overseas_ms": 48.7
     },
     {
       "key": "vless|104.16.111.102|443|4e4f1f70-5e56-4a76-bb9d-db087f4690c4",
@@ -1447,7 +1439,7 @@
       "port": 443,
       "type": "vless",
       "name": "vless-1856199614",
-      "overseas_ms": 6.3
+      "overseas_ms": 13.7
     },
     {
       "key": "vless|104.24.0.1|443|4e4f1f70-5e56-4a76-bb9d-db087f4690c4",
@@ -1455,15 +1447,7 @@
       "port": 443,
       "type": "vless",
       "name": "vless-1921748885",
-      "overseas_ms": 7.0
-    },
-    {
-      "key": "vless|15.204.97.206|23576|48ff2b70-e180-582f-8866-d9a2edeed5f5",
-      "server": "15.204.97.206",
-      "port": 23576,
-      "type": "vless",
-      "name": "vless-1853340423",
-      "overseas_ms": 7.1
+      "overseas_ms": 8.1
     },
     {
       "key": "vless|172.67.199.126|2053|c83f15bf-1817-4ec8-a19f-6393d226434c",
@@ -1471,7 +1455,7 @@
       "port": 2053,
       "type": "vless",
       "name": "vless-1946224541",
-      "overseas_ms": 6.7
+      "overseas_ms": 6.3
     },
     {
       "key": "vless|104.16.111.195|443|4e4f1f70-5e56-4a76-bb9d-db087f4690c4",
@@ -1479,7 +1463,7 @@
       "port": 443,
       "type": "vless",
       "name": "vless-1827962637",
-      "overseas_ms": 6.7
+      "overseas_ms": 6.9
     },
     {
       "key": "vless|172.67.156.147|443|4e4f1f70-5e56-4a76-bb9d-db087f4690c4",
@@ -1487,7 +1471,15 @@
       "port": 443,
       "type": "vless",
       "name": "vless-1832764140",
-      "overseas_ms": 6.6
+      "overseas_ms": 8.7
+    },
+    {
+      "key": "vless|15.204.97.206|23576|48ff2b70-e180-582f-8866-d9a2edeed5f5",
+      "server": "15.204.97.206",
+      "port": 23576,
+      "type": "vless",
+      "name": "vless-1853340423",
+      "overseas_ms": 53.6
     },
     {
       "key": "vless|62.210.91.10|23576|48ff2b70-e180-582f-8866-d9a2edeed5f5",
@@ -1495,15 +1487,7 @@
       "port": 23576,
       "type": "vless",
       "name": "vless-1853341185",
-      "overseas_ms": 159.0
-    },
-    {
-      "key": "vless|api.mediaklenov.cc|443|abd5755a-8b77-4ed4-afbd-f2ccbc08e6f5",
-      "server": "api.mediaklenov.cc",
-      "port": 443,
-      "type": "vless",
-      "name": "vless-1947250691",
-      "overseas_ms": 196.9
+      "overseas_ms": 119.2
     },
     {
       "key": "vless|51.158.206.93|23576|48ff2b70-e180-582f-8866-d9a2edeed5f5",
@@ -1511,15 +1495,7 @@
       "port": 23576,
       "type": "vless",
       "name": "vless-1853340230",
-      "overseas_ms": 143.7
-    },
-    {
-      "key": "vless|uae.unixzone.us|22573|39947382-3212-41c9-bc3a-589574ac8b23",
-      "server": "uae.unixzone.us",
-      "port": 22573,
-      "type": "vless",
-      "name": "vless-1856611531",
-      "overseas_ms": 268.8
+      "overseas_ms": 116.5
     },
     {
       "key": "vless|138.124.70.41|14430|6cc745e3-4eb9-46c8-a4a1-85dee7b87edc",
@@ -1527,7 +1503,7 @@
       "port": 14430,
       "type": "vless",
       "name": "vless-1853352733",
-      "overseas_ms": 135.3
+      "overseas_ms": 112.8
     },
     {
       "key": "vless|194.61.31.126|2053|1d4e18bd-1f26-4915-b35a-7ace4826e76a",
@@ -1535,7 +1511,7 @@
       "port": 2053,
       "type": "vless",
       "name": "vless-1856636614",
-      "overseas_ms": 253.4
+      "overseas_ms": 214.3
     },
     {
       "key": "vless|51.158.206.8|23576|48ff2b70-e180-582f-8866-d9a2edeed5f5",
@@ -1543,7 +1519,7 @@
       "port": 23576,
       "type": "vless",
       "name": "vless-1853341249",
-      "overseas_ms": 149.4
+      "overseas_ms": 113.8
     },
     {
       "key": "vless|2.27.118.10|443|d9fe2431-8351-41eb-b956-75d96dec5d4a",
@@ -1551,7 +1527,7 @@
       "port": 443,
       "type": "vless",
       "name": "vless-1929291585",
-      "overseas_ms": 152.2
+      "overseas_ms": 117.6
     },
     {
       "key": "vless|46.28.67.55|443|d1a6a033-fdbd-46a6-a177-3370ba042b9f",
@@ -1559,15 +1535,7 @@
       "port": 443,
       "type": "vless",
       "name": "vless-1853984818",
-      "overseas_ms": 204.4
-    },
-    {
-      "key": "vless|45.90.59.15|443|3950b45e-740d-4dca-ac95-505ec8534592",
-      "server": "45.90.59.15",
-      "port": 443,
-      "type": "vless",
-      "name": "vless-1929491252",
-      "overseas_ms": 162.6
+      "overseas_ms": 147.8
     },
     {
       "key": "vless|in.smrtai.top|443|6bdc8320-7eae-46fc-be08-f5f54e65dfc8",
@@ -1575,7 +1543,31 @@
       "port": 443,
       "type": "vless",
       "name": "vless-1894626282",
-      "overseas_ms": 323.0
+      "overseas_ms": 247.3
+    },
+    {
+      "key": "vless|45.90.59.15|443|3950b45e-740d-4dca-ac95-505ec8534592",
+      "server": "45.90.59.15",
+      "port": 443,
+      "type": "vless",
+      "name": "vless-1929491252",
+      "overseas_ms": 136.3
+    },
+    {
+      "key": "trojan|216.152.147.85|443|0ab6c98dae3b48e8b9c4a776b6c9c19a",
+      "server": "216.152.147.85",
+      "port": 443,
+      "type": "trojan",
+      "name": "trojan-1943481635",
+      "overseas_ms": 1077.4
+    },
+    {
+      "key": "vless|82.118.16.189|443|d5e5f5a1-0f23-4c49-af9f-4be445bf9d8e",
+      "server": "82.118.16.189",
+      "port": 443,
+      "type": "vless",
+      "name": "vless-1840614222",
+      "overseas_ms": 132.2
     },
     {
       "key": "vless|57.131.38.163|2053|d4b08cd6-0903-411a-9dac-45dbdf5c9712",
@@ -1583,7 +1575,15 @@
       "port": 2053,
       "type": "vless",
       "name": "vless-1828373350",
-      "overseas_ms": 176.1
+      "overseas_ms": 123.7
+    },
+    {
+      "key": "vless|84.235.244.108|22573|39947382-3212-41c9-bc3a-589574ac8b23",
+      "server": "84.235.244.108",
+      "port": 22573,
+      "type": "vless",
+      "name": "vless-1827267081",
+      "overseas_ms": 2257.9
     },
     {
       "key": "hysteria2|store.blog-forme.ru|443|6da2c981-8c77-4340-bda3-93399b7aea26",
@@ -1591,15 +1591,15 @@
       "port": 443,
       "type": "hysteria2",
       "name": "hysteria2-1946064383",
-      "overseas_ms": 358.9
+      "overseas_ms": 288.6
     },
     {
-      "key": "trojan|mx001.zestapp778.com|15083|5t6i121em5lkmsmk",
-      "server": "mx001.zestapp778.com",
-      "port": 15083,
-      "type": "trojan",
-      "name": "trojan-1943481632",
-      "overseas_ms": 2068.8
+      "key": "vless|uae.unixzone.us|22573|39947382-3212-41c9-bc3a-589574ac8b23",
+      "server": "uae.unixzone.us",
+      "port": 22573,
+      "type": "vless",
+      "name": "vless-1856611531",
+      "overseas_ms": 2270.2
     },
     {
       "key": "trojan|216.152.147.152|443|0ab6c98dae3b48e8b9c4a776b6c9c19a",
@@ -1607,7 +1607,7 @@
       "port": 443,
       "type": "trojan",
       "name": "trojan-1939845075",
-      "overseas_ms": 56.8
+      "overseas_ms": 33.6
     },
     {
       "key": "trojan|216.152.147.74|443|0ab6c98dae3b48e8b9c4a776b6c9c19a",
@@ -1615,71 +1615,7 @@
       "port": 443,
       "type": "trojan",
       "name": "trojan-1939845055",
-      "overseas_ms": 56.5
-    },
-    {
-      "key": "trojan|104.17.121.9|443|humanity",
-      "server": "104.17.121.9",
-      "port": 443,
-      "type": "trojan",
-      "name": "trojan-1908518028",
-      "overseas_ms": 6.6
-    },
-    {
-      "key": "trojan|45.130.125.126|443|humanity",
-      "server": "45.130.125.126",
-      "port": 443,
-      "type": "trojan",
-      "name": "trojan-1894622732",
-      "overseas_ms": 6.9
-    },
-    {
-      "key": "trojan|45.130.125.75|443|humanity",
-      "server": "45.130.125.75",
-      "port": 443,
-      "type": "trojan",
-      "name": "trojan-1853348743",
-      "overseas_ms": 6.9
-    },
-    {
-      "key": "trojan|104.16.7.70|443|humanity",
-      "server": "104.16.7.70",
-      "port": 443,
-      "type": "trojan",
-      "name": "trojan-1827148954",
-      "overseas_ms": 6.8
-    },
-    {
-      "key": "trojan|104.21.103.254|443|humanity",
-      "server": "104.21.103.254",
-      "port": 443,
-      "type": "trojan",
-      "name": "trojan-1827148859",
-      "overseas_ms": 6.7
-    },
-    {
-      "key": "trojan|162.159.91.211|443|humanity",
-      "server": "162.159.91.211",
-      "port": 443,
-      "type": "trojan",
-      "name": "trojan-1827938592",
-      "overseas_ms": 6.7
-    },
-    {
-      "key": "trojan|172.67.231.254|443|humanity",
-      "server": "172.67.231.254",
-      "port": 443,
-      "type": "trojan",
-      "name": "trojan-1827149560",
-      "overseas_ms": 6.3
-    },
-    {
-      "key": "trojan|104.17.121.43|443|humanity",
-      "server": "104.17.121.43",
-      "port": 443,
-      "type": "trojan",
-      "name": "trojan-1857007066",
-      "overseas_ms": 6.6
+      "overseas_ms": 38.7
     },
     {
       "key": "trojan|208.69.78.60|443|0ab6c98dae3b48e8b9c4a776b6c9c19a",
@@ -1687,7 +1623,71 @@
       "port": 443,
       "type": "trojan",
       "name": "trojan-1943480647",
-      "overseas_ms": 166.0
+      "overseas_ms": 136.2
+    },
+    {
+      "key": "trojan|104.17.121.9|443|humanity",
+      "server": "104.17.121.9",
+      "port": 443,
+      "type": "trojan",
+      "name": "trojan-1908518028",
+      "overseas_ms": 6.9
+    },
+    {
+      "key": "trojan|45.130.125.126|443|humanity",
+      "server": "45.130.125.126",
+      "port": 443,
+      "type": "trojan",
+      "name": "trojan-1894622732",
+      "overseas_ms": 15.6
+    },
+    {
+      "key": "trojan|45.130.125.75|443|humanity",
+      "server": "45.130.125.75",
+      "port": 443,
+      "type": "trojan",
+      "name": "trojan-1853348743",
+      "overseas_ms": 9.0
+    },
+    {
+      "key": "trojan|104.16.7.70|443|humanity",
+      "server": "104.16.7.70",
+      "port": 443,
+      "type": "trojan",
+      "name": "trojan-1827148954",
+      "overseas_ms": 13.8
+    },
+    {
+      "key": "trojan|104.21.103.254|443|humanity",
+      "server": "104.21.103.254",
+      "port": 443,
+      "type": "trojan",
+      "name": "trojan-1827148859",
+      "overseas_ms": 7.8
+    },
+    {
+      "key": "trojan|162.159.91.211|443|humanity",
+      "server": "162.159.91.211",
+      "port": 443,
+      "type": "trojan",
+      "name": "trojan-1827938592",
+      "overseas_ms": 6.3
+    },
+    {
+      "key": "trojan|172.67.231.254|443|humanity",
+      "server": "172.67.231.254",
+      "port": 443,
+      "type": "trojan",
+      "name": "trojan-1827149560",
+      "overseas_ms": 9.2
+    },
+    {
+      "key": "trojan|104.17.121.43|443|humanity",
+      "server": "104.17.121.43",
+      "port": 443,
+      "type": "trojan",
+      "name": "trojan-1857007066",
+      "overseas_ms": 9.6
     },
     {
       "key": "trojan|8.6.112.206|443|humanity",
@@ -1695,7 +1695,7 @@
       "port": 443,
       "type": "trojan",
       "name": "trojan-1940455323",
-      "overseas_ms": 6.5
+      "overseas_ms": 8.0
     },
     {
       "key": "trojan|104.25.240.193|443|humanity",
@@ -1711,7 +1711,7 @@
       "port": 443,
       "type": "trojan",
       "name": "trojan-1939845059",
-      "overseas_ms": 7.0
+      "overseas_ms": 6.8
     },
     {
       "key": "trojan|104.27.0.1|443|humanity",
@@ -1719,7 +1719,7 @@
       "port": 443,
       "type": "trojan",
       "name": "trojan-1944218172",
-      "overseas_ms": 7.6
+      "overseas_ms": 6.8
     },
     {
       "key": "trojan|188.114.97.6|443|humanity",
@@ -1727,7 +1727,7 @@
       "port": 443,
       "type": "trojan",
       "name": "trojan-1827188168",
-      "overseas_ms": 6.6
+      "overseas_ms": 7.1
     },
     {
       "key": "vless|47.251.25.74|443|18805ff3-b420-45de-af18-93be14024ae8",
@@ -1735,23 +1735,7 @@
       "port": 443,
       "type": "vless",
       "name": "vless-1939221436",
-      "overseas_ms": 23.9
-    },
-    {
-      "key": "vless|82.118.16.189|443|d5e5f5a1-0f23-4c49-af9f-4be445bf9d8e",
-      "server": "82.118.16.189",
-      "port": 443,
-      "type": "vless",
-      "name": "vless-1840614222",
-      "overseas_ms": 1192.9
-    },
-    {
-      "key": "vless|103.106.229.37|21001|41b1c169-5905-4d98-b6a6-56896c25737c",
-      "server": "103.106.229.37",
-      "port": 21001,
-      "type": "vless",
-      "name": "vless-1946595159",
-      "overseas_ms": 176.0
+      "overseas_ms": 47.2
     },
     {
       "key": "vless|104.27.46.35|443|4e4f1f70-5e56-4a76-bb9d-db087f4690c4",
@@ -1759,15 +1743,7 @@
       "port": 443,
       "type": "vless",
       "name": "vless-1831081766",
-      "overseas_ms": 6.8
-    },
-    {
-      "key": "trojan|216.152.147.201|443|0ab6c98dae3b48e8b9c4a776b6c9c19a",
-      "server": "216.152.147.201",
-      "port": 443,
-      "type": "trojan",
-      "name": "trojan-1939845052",
-      "overseas_ms": 2109.3
+      "overseas_ms": 15.1
     },
     {
       "key": "vless|104.16.10.104|443|4e4f1f70-5e56-4a76-bb9d-db087f4690c4",
@@ -1775,7 +1751,15 @@
       "port": 443,
       "type": "vless",
       "name": "vless-1854335913",
-      "overseas_ms": 7.1
+      "overseas_ms": 11.2
+    },
+    {
+      "key": "vless|103.106.229.37|21001|41b1c169-5905-4d98-b6a6-56896c25737c",
+      "server": "103.106.229.37",
+      "port": 21001,
+      "type": "vless",
+      "name": "vless-1946595159",
+      "overseas_ms": 199.1
     },
     {
       "key": "vless|104.16.10.72|443|4e4f1f70-5e56-4a76-bb9d-db087f4690c4",
@@ -1783,7 +1767,7 @@
       "port": 443,
       "type": "vless",
       "name": "vless-1843512959",
-      "overseas_ms": 6.4
+      "overseas_ms": 10.3
     },
     {
       "key": "vless|195.123.221.36|443|9c60369d-e5f9-4cec-9e63-1560e88e119a",
@@ -1791,7 +1775,7 @@
       "port": 443,
       "type": "vless",
       "name": "vless-1827153851",
-      "overseas_ms": 146.1
+      "overseas_ms": 108.7
     },
     {
       "key": "vless|51.158.206.25|23576|48ff2b70-e180-582f-8866-d9a2edeed5f5",
@@ -1799,7 +1783,7 @@
       "port": 23576,
       "type": "vless",
       "name": "vless-1853341457",
-      "overseas_ms": 148.8
+      "overseas_ms": 114.5
     },
     {
       "key": "vless|185.14.30.98|8443|f5e70ce3-cfb4-4df1-b25c-d19bfae627c0",
@@ -1807,7 +1791,7 @@
       "port": 8443,
       "type": "vless",
       "name": "vless-1935750593",
-      "overseas_ms": 145.1
+      "overseas_ms": 104.2
     },
     {
       "key": "vless|138.124.125.193|10444|e57ce64d-5a1a-4a90-96df-9e1bd3ad26e4",
@@ -1815,7 +1799,7 @@
       "port": 10444,
       "type": "vless",
       "name": "vless-1934551297",
-      "overseas_ms": 145.0
+      "overseas_ms": 113.0
     },
     {
       "key": "vless|54.37.136.194|2053|e8a432c8-5d84-49a5-b822-67ed761a58f9",
@@ -1823,7 +1807,7 @@
       "port": 2053,
       "type": "vless",
       "name": "vless-1827155588",
-      "overseas_ms": 193.1
+      "overseas_ms": 136.7
     },
     {
       "key": "vless|46.29.255.123|59539|30572b57-f5ab-4eb8-82d4-a24d399b99f6",
@@ -1831,23 +1815,7 @@
       "port": 59539,
       "type": "vless",
       "name": "vless-1947501543",
-      "overseas_ms": 157.9
-    },
-    {
-      "key": "vless|178.172.227.228|14430|b6e5dc56-836f-48c1-9163-b0b0b43b647d",
-      "server": "178.172.227.228",
-      "port": 14430,
-      "type": "vless",
-      "name": "vless-1828140795",
-      "overseas_ms": 198.8
-    },
-    {
-      "key": "vless|178.172.227.228|10444|b6e5dc56-836f-48c1-9163-b0b0b43b647d",
-      "server": "178.172.227.228",
-      "port": 10444,
-      "type": "vless",
-      "name": "vless-1935966863",
-      "overseas_ms": 186.4
+      "overseas_ms": 136.2
     },
     {
       "key": "vless|51.158.206.86|23576|48ff2b70-e180-582f-8866-d9a2edeed5f5",
@@ -1855,7 +1823,23 @@
       "port": 23576,
       "type": "vless",
       "name": "vless-1853340978",
-      "overseas_ms": 157.2
+      "overseas_ms": 151.2
+    },
+    {
+      "key": "vless|178.172.227.228|14430|b6e5dc56-836f-48c1-9163-b0b0b43b647d",
+      "server": "178.172.227.228",
+      "port": 14430,
+      "type": "vless",
+      "name": "vless-1828140795",
+      "overseas_ms": 254.4
+    },
+    {
+      "key": "vless|178.172.227.228|10444|b6e5dc56-836f-48c1-9163-b0b0b43b647d",
+      "server": "178.172.227.228",
+      "port": 10444,
+      "type": "vless",
+      "name": "vless-1935966863",
+      "overseas_ms": 252.1
     },
     {
       "key": "trojan|167.82.64.120|443|MiTiVPN",
@@ -1863,7 +1847,7 @@
       "port": 443,
       "type": "trojan",
       "name": "trojan-1946894181",
-      "overseas_ms": 7.4
+      "overseas_ms": 12.9
     },
     {
       "key": "trojan|185.18.250.245|443|humanity",
@@ -1871,39 +1855,7 @@
       "port": 443,
       "type": "trojan",
       "name": "trojan-1853462719",
-      "overseas_ms": 7.4
-    },
-    {
-      "key": "trojan|172.67.223.48|443|humanity",
-      "server": "172.67.223.48",
-      "port": 443,
-      "type": "trojan",
-      "name": "trojan-1939845073",
-      "overseas_ms": 6.9
-    },
-    {
-      "key": "trojan|104.18.32.47|443|humanity",
-      "server": "104.18.32.47",
-      "port": 443,
-      "type": "trojan",
-      "name": "trojan-1853491995",
-      "overseas_ms": 7.6
-    },
-    {
-      "key": "trojan|104.16.71.213|443|humanity",
-      "server": "104.16.71.213",
-      "port": 443,
-      "type": "trojan",
-      "name": "trojan-1853461582",
-      "overseas_ms": 6.6
-    },
-    {
-      "key": "trojan|185.18.250.252|443|humanity",
-      "server": "185.18.250.252",
-      "port": 443,
-      "type": "trojan",
-      "name": "trojan-1827149109",
-      "overseas_ms": 7.3
+      "overseas_ms": 10.1
     },
     {
       "key": "vless|51.158.206.97|23576|48ff2b70-e180-582f-8866-d9a2edeed5f5",
@@ -1911,15 +1863,39 @@
       "port": 23576,
       "type": "vless",
       "name": "vless-1882484986",
-      "overseas_ms": 149.9
+      "overseas_ms": 113.3
     },
     {
-      "key": "trojan|45.128.76.242|443|humanity",
-      "server": "45.128.76.242",
+      "key": "trojan|172.67.223.48|443|humanity",
+      "server": "172.67.223.48",
       "port": 443,
       "type": "trojan",
-      "name": "trojan-1937399876",
-      "overseas_ms": 6.8
+      "name": "trojan-1939845073",
+      "overseas_ms": 8.0
+    },
+    {
+      "key": "trojan|104.16.71.213|443|humanity",
+      "server": "104.16.71.213",
+      "port": 443,
+      "type": "trojan",
+      "name": "trojan-1853461582",
+      "overseas_ms": 7.7
+    },
+    {
+      "key": "trojan|185.18.250.252|443|humanity",
+      "server": "185.18.250.252",
+      "port": 443,
+      "type": "trojan",
+      "name": "trojan-1827149109",
+      "overseas_ms": 10.2
+    },
+    {
+      "key": "trojan|104.18.32.47|443|humanity",
+      "server": "104.18.32.47",
+      "port": 443,
+      "type": "trojan",
+      "name": "trojan-1853491995",
+      "overseas_ms": 12.0
     },
     {
       "key": "trojan|104.17.206.147|443|humanity",
@@ -1927,7 +1903,15 @@
       "port": 443,
       "type": "trojan",
       "name": "trojan-1947413506",
-      "overseas_ms": 6.8
+      "overseas_ms": 6.3
+    },
+    {
+      "key": "trojan|45.128.76.242|443|humanity",
+      "server": "45.128.76.242",
+      "port": 443,
+      "type": "trojan",
+      "name": "trojan-1937399876",
+      "overseas_ms": 9.4
     },
     {
       "key": "trojan|172.66.40.99|443|humanity",
@@ -1935,15 +1919,7 @@
       "port": 443,
       "type": "trojan",
       "name": "trojan-1827188005",
-      "overseas_ms": 6.5
-    },
-    {
-      "key": "trojan|104.25.0.1|443|humanity",
-      "server": "104.25.0.1",
-      "port": 443,
-      "type": "trojan",
-      "name": "trojan-1944218170",
-      "overseas_ms": 6.8
+      "overseas_ms": 6.9
     },
     {
       "key": "trojan|104.16.72.50|443|humanity",
@@ -1951,47 +1927,15 @@
       "port": 443,
       "type": "trojan",
       "name": "trojan-1828472626",
-      "overseas_ms": 6.7
+      "overseas_ms": 6.2
     },
     {
-      "key": "vless|cf.090227.xyz|2095|86c50e3a-5b87-49dd-bd20-03c7f2735e40",
-      "server": "cf.090227.xyz",
-      "port": 2095,
-      "type": "vless",
-      "name": "自动优选",
-      "overseas_ms": 16.1
-    },
-    {
-      "key": "vless|cloudflare-dns.com|2095|86c50e3a-5b87-49dd-bd20-03c7f2735e40",
-      "server": "cloudflare-dns.com",
-      "port": 2095,
-      "type": "vless",
-      "name": "Cloudflare DNS",
-      "overseas_ms": 7.9
-    },
-    {
-      "key": "vless|docs.cloudflare.com|2095|86c50e3a-5b87-49dd-bd20-03c7f2735e40",
-      "server": "docs.cloudflare.com",
-      "port": 2095,
-      "type": "vless",
-      "name": "Cloudflare Docs",
-      "overseas_ms": 17.0
-    },
-    {
-      "key": "vless|itarmy.com.ua|2095|86c50e3a-5b87-49dd-bd20-03c7f2735e40",
-      "server": "itarmy.com.ua",
-      "port": 2095,
-      "type": "vless",
-      "name": "itarmy.com.ua",
-      "overseas_ms": 16.0
-    },
-    {
-      "key": "vless|www.shopify.com|2095|86c50e3a-5b87-49dd-bd20-03c7f2735e40",
-      "server": "www.shopify.com",
-      "port": 2095,
-      "type": "vless",
-      "name": "Shopify",
-      "overseas_ms": 16.6
+      "key": "trojan|104.25.0.1|443|humanity",
+      "server": "104.25.0.1",
+      "port": 443,
+      "type": "trojan",
+      "name": "trojan-1944218170",
+      "overseas_ms": 9.6
     },
     {
       "key": "vless|69.48.201.136|30016|03dc60cb-a8d4-4226-93fe-0e6cbf77fe5a",
@@ -1999,15 +1943,23 @@
       "port": 30016,
       "type": "vless",
       "name": "vless-1863754037",
-      "overseas_ms": 58.5
+      "overseas_ms": 26.3
     },
     {
-      "key": "vless|www.fbi.gov|2095|86c50e3a-5b87-49dd-bd20-03c7f2735e40",
-      "server": "www.fbi.gov",
+      "key": "vless|cf.090227.xyz|2095|86c50e3a-5b87-49dd-bd20-03c7f2735e40",
+      "server": "cf.090227.xyz",
       "port": 2095,
       "type": "vless",
-      "name": "FBI",
-      "overseas_ms": 15.2
+      "name": "自动优选",
+      "overseas_ms": 26.8
+    },
+    {
+      "key": "vless|cloudflare-dns.com|2095|86c50e3a-5b87-49dd-bd20-03c7f2735e40",
+      "server": "cloudflare-dns.com",
+      "port": 2095,
+      "type": "vless",
+      "name": "Cloudflare DNS",
+      "overseas_ms": 23.6
     },
     {
       "key": "vless|uspanel.unixzone.us|30016|03dc60cb-a8d4-4226-93fe-0e6cbf77fe5a",
@@ -2015,7 +1967,15 @@
       "port": 30016,
       "type": "vless",
       "name": "vless-1827148936",
-      "overseas_ms": 66.3
+      "overseas_ms": 49.4
+    },
+    {
+      "key": "vless|www.shopify.com|2095|86c50e3a-5b87-49dd-bd20-03c7f2735e40",
+      "server": "www.shopify.com",
+      "port": 2095,
+      "type": "vless",
+      "name": "Shopify",
+      "overseas_ms": 16.9
     },
     {
       "key": "vless|www.wto.org|2095|86c50e3a-5b87-49dd-bd20-03c7f2735e40",
@@ -2023,119 +1983,15 @@
       "port": 2095,
       "type": "vless",
       "name": "WTO",
-      "overseas_ms": 8.9
+      "overseas_ms": 16.0
     },
     {
-      "key": "vless|www.epicgames.com|2095|86c50e3a-5b87-49dd-bd20-03c7f2735e40",
-      "server": "www.epicgames.com",
+      "key": "vless|www.fbi.gov|2095|86c50e3a-5b87-49dd-bd20-03c7f2735e40",
+      "server": "www.fbi.gov",
       "port": 2095,
       "type": "vless",
-      "name": "Epicgames",
-      "overseas_ms": 7.3
-    },
-    {
-      "key": "vless|blog.cloudflare.com|2095|86c50e3a-5b87-49dd-bd20-03c7f2735e40",
-      "server": "blog.cloudflare.com",
-      "port": 2095,
-      "type": "vless",
-      "name": "Cloudflare blog",
-      "overseas_ms": 7.6
-    },
-    {
-      "key": "vless|openai.com|2095|86c50e3a-5b87-49dd-bd20-03c7f2735e40",
-      "server": "openai.com",
-      "port": 2095,
-      "type": "vless",
-      "name": "openai",
-      "overseas_ms": 8.4
-    },
-    {
-      "key": "vless|ns.cloudflare.com|2095|86c50e3a-5b87-49dd-bd20-03c7f2735e40",
-      "server": "ns.cloudflare.com",
-      "port": 2095,
-      "type": "vless",
-      "name": "Cloudflare ns",
-      "overseas_ms": 14.3
-    },
-    {
-      "key": "vless|developers.cloudflare.com|2095|86c50e3a-5b87-49dd-bd20-03c7f2735e40",
-      "server": "developers.cloudflare.com",
-      "port": 2095,
-      "type": "vless",
-      "name": "Cloudflare Developers",
-      "overseas_ms": 15.0
-    },
-    {
-      "key": "vless|www.npmjs.com|2095|86c50e3a-5b87-49dd-bd20-03c7f2735e40",
-      "server": "www.npmjs.com",
-      "port": 2095,
-      "type": "vless",
-      "name": "npmjs",
-      "overseas_ms": 7.5
-    },
-    {
-      "key": "vless|www.udemy.com|2095|86c50e3a-5b87-49dd-bd20-03c7f2735e40",
-      "server": "www.udemy.com",
-      "port": 2095,
-      "type": "vless",
-      "name": "Udemy",
-      "overseas_ms": 8.9
-    },
-    {
-      "key": "vless|support.cloudflare.com|2095|86c50e3a-5b87-49dd-bd20-03c7f2735e40",
-      "server": "support.cloudflare.com",
-      "port": 2095,
-      "type": "vless",
-      "name": "Cloudflare Support",
-      "overseas_ms": 30.1
-    },
-    {
-      "key": "vless|cdnjs.com|2095|86c50e3a-5b87-49dd-bd20-03c7f2735e40",
-      "server": "cdnjs.com",
-      "port": 2095,
-      "type": "vless",
-      "name": "Cdnjs",
-      "overseas_ms": 14.8
-    },
-    {
-      "key": "vless|www.whatismyip.net|2095|86c50e3a-5b87-49dd-bd20-03c7f2735e40",
-      "server": "www.whatismyip.net",
-      "port": 2095,
-      "type": "vless",
-      "name": "whatismyip",
-      "overseas_ms": 30.2
-    },
-    {
-      "key": "vless|www.csgo.net|2095|86c50e3a-5b87-49dd-bd20-03c7f2735e40",
-      "server": "www.csgo.net",
-      "port": 2095,
-      "type": "vless",
-      "name": "Csgo",
-      "overseas_ms": 51.4
-    },
-    {
-      "key": "vless|717252g.nl8.h1clayd.click|443|cda0862a-0f87-4be9-8ed8-1d0c9e382839",
-      "server": "717252g.nl8.h1clayd.click",
-      "port": 443,
-      "type": "vless",
-      "name": "🟡 法國 [Be] FR 🇫🇷 Raydikalx A8EF4E",
-      "overseas_ms": 186.0
-    },
-    {
-      "key": "vless|gr1.vpnjantit.com|8443|a688bbe2-e455-11f1-a2d1-0f56c102b673",
-      "server": "gr1.vpnjantit.com",
-      "port": 8443,
-      "type": "vless",
-      "name": "🟢 德國 [Be] DE 🇩🇪 Raydikalx 98095E",
-      "overseas_ms": 199.4
-    },
-    {
-      "key": "vless|43.163.112.174|443|0dedd47d-47b9-4ed1-9c9f-cbeecad57a68",
-      "server": "43.163.112.174",
-      "port": 443,
-      "type": "vless",
-      "name": "🟠 新加坡 [Be] SG 🇸🇬 Raydikalx 0437BE",
-      "overseas_ms": 223.3
+      "name": "FBI",
+      "overseas_ms": 32.6
     },
     {
       "key": "trojan|208.69.78.208|443|0ab6c98dae3b48e8b9c4a776b6c9c19a",
@@ -2143,7 +1999,111 @@
       "port": 443,
       "type": "trojan",
       "name": "trojan-1946951303",
-      "overseas_ms": 419.3
+      "overseas_ms": 139.6
+    },
+    {
+      "key": "vless|www.epicgames.com|2095|86c50e3a-5b87-49dd-bd20-03c7f2735e40",
+      "server": "www.epicgames.com",
+      "port": 2095,
+      "type": "vless",
+      "name": "Epicgames",
+      "overseas_ms": 19.8
+    },
+    {
+      "key": "vless|support.cloudflare.com|2095|86c50e3a-5b87-49dd-bd20-03c7f2735e40",
+      "server": "support.cloudflare.com",
+      "port": 2095,
+      "type": "vless",
+      "name": "Cloudflare Support",
+      "overseas_ms": 19.7
+    },
+    {
+      "key": "vless|blog.cloudflare.com|2095|86c50e3a-5b87-49dd-bd20-03c7f2735e40",
+      "server": "blog.cloudflare.com",
+      "port": 2095,
+      "type": "vless",
+      "name": "Cloudflare blog",
+      "overseas_ms": 19.0
+    },
+    {
+      "key": "vless|openai.com|2095|86c50e3a-5b87-49dd-bd20-03c7f2735e40",
+      "server": "openai.com",
+      "port": 2095,
+      "type": "vless",
+      "name": "openai",
+      "overseas_ms": 11.3
+    },
+    {
+      "key": "vless|ns.cloudflare.com|2095|86c50e3a-5b87-49dd-bd20-03c7f2735e40",
+      "server": "ns.cloudflare.com",
+      "port": 2095,
+      "type": "vless",
+      "name": "Cloudflare ns",
+      "overseas_ms": 18.4
+    },
+    {
+      "key": "vless|developers.cloudflare.com|2095|86c50e3a-5b87-49dd-bd20-03c7f2735e40",
+      "server": "developers.cloudflare.com",
+      "port": 2095,
+      "type": "vless",
+      "name": "Cloudflare Developers",
+      "overseas_ms": 24.3
+    },
+    {
+      "key": "vless|cdnjs.com|2095|86c50e3a-5b87-49dd-bd20-03c7f2735e40",
+      "server": "cdnjs.com",
+      "port": 2095,
+      "type": "vless",
+      "name": "Cdnjs",
+      "overseas_ms": 19.9
+    },
+    {
+      "key": "vless|www.npmjs.com|2095|86c50e3a-5b87-49dd-bd20-03c7f2735e40",
+      "server": "www.npmjs.com",
+      "port": 2095,
+      "type": "vless",
+      "name": "npmjs",
+      "overseas_ms": 26.7
+    },
+    {
+      "key": "vless|www.udemy.com|2095|86c50e3a-5b87-49dd-bd20-03c7f2735e40",
+      "server": "www.udemy.com",
+      "port": 2095,
+      "type": "vless",
+      "name": "Udemy",
+      "overseas_ms": 33.2
+    },
+    {
+      "key": "vless|www.csgo.net|2095|86c50e3a-5b87-49dd-bd20-03c7f2735e40",
+      "server": "www.csgo.net",
+      "port": 2095,
+      "type": "vless",
+      "name": "Csgo",
+      "overseas_ms": 36.5
+    },
+    {
+      "key": "vless|docs.cloudflare.com|2095|86c50e3a-5b87-49dd-bd20-03c7f2735e40",
+      "server": "docs.cloudflare.com",
+      "port": 2095,
+      "type": "vless",
+      "name": "Cloudflare Docs",
+      "overseas_ms": 129.9
+    },
+    {
+      "key": "vless|www.whatismyip.net|2095|86c50e3a-5b87-49dd-bd20-03c7f2735e40",
+      "server": "www.whatismyip.net",
+      "port": 2095,
+      "type": "vless",
+      "name": "whatismyip",
+      "overseas_ms": 76.1
+    },
+    {
+      "key": "vless|itarmy.com.ua|2095|86c50e3a-5b87-49dd-bd20-03c7f2735e40",
+      "server": "itarmy.com.ua",
+      "port": 2095,
+      "type": "vless",
+      "name": "itarmy.com.ua",
+      "overseas_ms": 214.3
     },
     {
       "key": "vless|162.35.101.177|443|cda0862a-0f87-4be9-8ed8-1d0c9e382839",
@@ -2151,7 +2111,15 @@
       "port": 443,
       "type": "vless",
       "name": "🟡 美國 [Be] 🇺🇸_美国 (4)",
-      "overseas_ms": 101.2
+      "overseas_ms": 111.0
+    },
+    {
+      "key": "vless|gr1.vpnjantit.com|8443|a688bbe2-e455-11f1-a2d1-0f56c102b673",
+      "server": "gr1.vpnjantit.com",
+      "port": 8443,
+      "type": "vless",
+      "name": "🟢 德國 [Be] DE 🇩🇪 Raydikalx 98095E",
+      "overseas_ms": 180.4
     },
     {
       "key": "vless|69.17.3.150|2001|140d6fc9-2c6d-41bd-a487-182b52c0184f",
@@ -2159,7 +2127,7 @@
       "port": 2001,
       "type": "vless",
       "name": "🟡 美國 [Be] 🇺🇸 229.4ms +/-3ms 4Jadi-2771566bce",
-      "overseas_ms": 29.0
+      "overseas_ms": 55.8
     },
     {
       "key": "vless|13.141.36.10|443|cda0862a-0f87-4be9-8ed8-1d0c9e382839",
@@ -2167,31 +2135,7 @@
       "port": 443,
       "type": "vless",
       "name": "🟠 荷蘭 [Be] RO 🇷🇴 Raydikalx 827077",
-      "overseas_ms": 179.4
-    },
-    {
-      "key": "anytls|a54ge.df6h451rh.xin|443|0324fbc29561",
-      "server": "a54ge.df6h451rh.xin",
-      "port": 443,
-      "type": "anytls",
-      "name": "🟢 台灣 [Be] 🇹🇼 台湾 TWN 5",
-      "overseas_ms": 418.4
-    },
-    {
-      "key": "vless|188.114.98.0|443|88e79aa6-f431-4453-8dcc-652a0c747198",
-      "server": "188.114.98.0",
-      "port": 443,
-      "type": "vless",
-      "name": "🟢 加拿大 [Be] CA 🇨🇦 Raydikalx 580B5F",
-      "overseas_ms": 6.3
-    },
-    {
-      "key": "vless|189.30.65.203|2083|490dc3b4-8d1d-49fd-840e-bd5277b41557",
-      "server": "189.30.65.203",
-      "port": 2083,
-      "type": "vless",
-      "name": "🟡 德國 [Be] GB 🇬🇧 Raydikalx DE410D",
-      "overseas_ms": 176.8
+      "overseas_ms": 115.8
     },
     {
       "key": "vless|196.196.148.85|443|cda0862a-0f87-4be9-8ed8-1d0c9e382839",
@@ -2199,583 +2143,7 @@
       "port": 443,
       "type": "vless",
       "name": "🟡 荷蘭 [Be] 🇸🇨_塞舌尔 (3)",
-      "overseas_ms": 212.3
-    },
-    {
-      "key": "vless|172.67.197.170|443|88e79aa6-f431-4453-8dcc-652a0c747198",
-      "server": "172.67.197.170",
-      "port": 443,
-      "type": "vless",
-      "name": "🟢 加拿大 [Be] CA 🇨🇦 Raydikalx D83465",
-      "overseas_ms": 6.6
-    },
-    {
-      "key": "vless|201.51.12.98|443|38308ff1-5aa9-494f-a25a-0f2870d56b3e",
-      "server": "201.51.12.98",
-      "port": 443,
-      "type": "vless",
-      "name": "🟡 俄羅斯 [Be] 🇷🇺 599.9ms +/-22ms meliproxyy",
-      "overseas_ms": 189.8
-    },
-    {
-      "key": "anytls|212.189.31.45|50000|09cac7f2-2480-485f-affc-35aebdb21cb8",
-      "server": "212.189.31.45",
-      "port": 50000,
-      "type": "anytls",
-      "name": "🟢 美國 AutoMerge 020 🇺🇸 美国 USA 8",
-      "overseas_ms": 29.6
-    },
-    {
-      "key": "vless|196.245.52.187|443|cda0862a-0f87-4be9-8ed8-1d0c9e382839",
-      "server": "196.245.52.187",
-      "port": 443,
-      "type": "vless",
-      "name": "🟠 美國 [Be] 🇸🇨_塞舌尔",
-      "overseas_ms": 402.8
-    },
-    {
-      "key": "vless|201.24.116.192|443|38308ff1-5aa9-494f-a25a-0f2870d56b3e",
-      "server": "201.24.116.192",
-      "port": 443,
-      "type": "vless",
-      "name": "🟡 俄羅斯 [Be] 🇷🇺 625.8ms +/-28ms Tel- ProxyMtAlpha…",
-      "overseas_ms": 199.4
-    },
-    {
-      "key": "vless|vps3.nemnogogo.com|443|38308ff1-5aa9-494f-a25a-0f2870d56b3e",
-      "server": "vps3.nemnogogo.com",
-      "port": 443,
-      "type": "vless",
-      "name": "🟡 俄羅斯 [Be] RU 🇷🇺 Raydikalx 211062",
-      "overseas_ms": 220.3
-    },
-    {
-      "key": "vless|136.148.83.71|443|00000000-0000-0001-0000-000000000000",
-      "server": "136.148.83.71",
-      "port": 443,
-      "type": "vless",
-      "name": "🟡 法國 [Be] FR 🇫🇷 Raydikalx AC3C15",
-      "overseas_ms": 199.2
-    },
-    {
-      "key": "vless|148.135.86.162|10000|327b1113-049e-4256-8d72-8815643dbb65",
-      "server": "148.135.86.162",
-      "port": 10000,
-      "type": "vless",
-      "name": "🟡 美國 US 🇺🇸 Raydikalx C3E9DB",
-      "overseas_ms": 27.4
-    },
-    {
-      "key": "hysteria2|hysteria.udpgw.com|8443|HowdyHysteria2023w0W",
-      "server": "hysteria.udpgw.com",
-      "port": 8443,
-      "type": "hysteria2",
-      "name": "🟡 荷蘭 NL 🇳🇱 Raydikalx 3ACE09",
-      "overseas_ms": 163.7
-    },
-    {
-      "key": "vless|15.204.97.195|23576|48ff2b70-e180-582f-8866-d9a2edeed5f5",
-      "server": "15.204.97.195",
-      "port": 23576,
-      "type": "vless",
-      "name": "🟡 美國 US 🇺🇸 Raydikalx 4CDCFE",
-      "overseas_ms": 6.8
-    },
-    {
-      "key": "vless|15.204.97.198|23576|48ff2b70-e180-582f-8866-d9a2edeed5f5",
-      "server": "15.204.97.198",
-      "port": 23576,
-      "type": "vless",
-      "name": "🟡 美國 US 🇺🇸 Raydikalx 91D02A",
-      "overseas_ms": 6.7
-    },
-    {
-      "key": "vless|179.254.94.184|443|2f12e5b5-6ce7-47ab-88b9-6110c1a3fc60",
-      "server": "179.254.94.184",
-      "port": 443,
-      "type": "vless",
-      "name": "🟡 美國 US 🇺🇸 Raydikalx 1A1EC8",
-      "overseas_ms": 29.8
-    },
-    {
-      "key": "vless|15.204.97.216|23576|48ff2b70-e180-582f-8866-d9a2edeed5f5",
-      "server": "15.204.97.216",
-      "port": 23576,
-      "type": "vless",
-      "name": "🟡 美國 US 🇺🇸 Raydikalx 66830B",
-      "overseas_ms": 7.0
-    },
-    {
-      "key": "vless|199.7.140.201|443|a52ac672-0f5f-4070-b8fd-6b5685fc8004",
-      "server": "199.7.140.201",
-      "port": 443,
-      "type": "vless",
-      "name": "🟡 美國 US 🇺🇸 Raydikalx B25A0F",
-      "overseas_ms": 29.7
-    },
-    {
-      "key": "vless|15.204.97.209|23576|48ff2b70-e180-582f-8866-d9a2edeed5f5",
-      "server": "15.204.97.209",
-      "port": 23576,
-      "type": "vless",
-      "name": "🟡 美國 US 🇺🇸 Raydikalx 1FD863",
-      "overseas_ms": 6.5
-    },
-    {
-      "key": "vless|15.204.97.197|23576|48ff2b70-e180-582f-8866-d9a2edeed5f5",
-      "server": "15.204.97.197",
-      "port": 23576,
-      "type": "vless",
-      "name": "🟡 美國 US 🇺🇸 Raydikalx 8BA744",
-      "overseas_ms": 6.9
-    },
-    {
-      "key": "vless|136.148.83.70|443|00000000-0000-0001-0000-000000000000",
-      "server": "136.148.83.70",
-      "port": 443,
-      "type": "vless",
-      "name": "🟡 德國 [Be] FR 🇫🇷 Raydikalx 431DE8",
-      "overseas_ms": 204.6
-    },
-    {
-      "key": "hysteria2|206.189.229.48|443|YV1sd3tfCZngTtnvRmy7",
-      "server": "206.189.229.48",
-      "port": 443,
-      "type": "hysteria2",
-      "name": "🔴 美國 🇺🇸 United States 183",
-      "overseas_ms": 77.4
-    },
-    {
-      "key": "hysteria2|136.148.83.69|443|87bb2ac4-b7a1-0001-b11d-2107709ea6cb",
-      "server": "136.148.83.69",
-      "port": 443,
-      "type": "hysteria2",
-      "name": "🟠 俄羅斯 🇵🇱 PL 04 • HYSTERIA2 TLS (3045ms)",
-      "overseas_ms": 198.3
-    },
-    {
-      "key": "vless|205.186.112.19|443|f1a04d4c-56b3-4f93-a4ec-91a5039a48bd",
-      "server": "205.186.112.19",
-      "port": 443,
-      "type": "vless",
-      "name": "🟠 美國 US 🇺🇸 Raydikalx 391138",
-      "overseas_ms": 40.1
-    },
-    {
-      "key": "vless|45.138.100.248|10444|ae908ff5-f749-402c-af25-e6e9aef4d6bb",
-      "server": "45.138.100.248",
-      "port": 10444,
-      "type": "vless",
-      "name": "🟡 美國 US 🇺🇸 Raydikalx 846675",
-      "overseas_ms": 72.6
-    },
-    {
-      "key": "hysteria2|87.121.112.83|443|9a9f167d-b461-466f-be50-f0ffd598a6f8",
-      "server": "87.121.112.83",
-      "port": 443,
-      "type": "hysteria2",
-      "name": "🟠 未知 未知 未知 未知 未知 未知 未知 未知 未知 未知 NodeHub 🇧…",
-      "overseas_ms": 193.7
-    },
-    {
-      "key": "hysteria2|185.156.44.99|443|gf1:gfhysteria2024",
-      "server": "185.156.44.99",
-      "port": 443,
-      "type": "hysteria2",
-      "name": "🟠 未知 未知 未知 未知 未知 未知 未知 未知 未知 未知 NodeHub 🇷…",
-      "overseas_ms": 174.3
-    },
-    {
-      "key": "vless|51.158.206.12|23576|48ff2b70-e180-582f-8866-d9a2edeed5f5",
-      "server": "51.158.206.12",
-      "port": 23576,
-      "type": "vless",
-      "name": "🟠 荷蘭 NL 🇳🇱 Raydikalx B828E6",
-      "overseas_ms": 143.3
-    },
-    {
-      "key": "vless|136.176.68.34|443|dbf3f074-3b18-43f3-b82a-debd8c879c69",
-      "server": "136.176.68.34",
-      "port": 443,
-      "type": "vless",
-      "name": "🟠 英國 🇬🇧 GB 04 • VLESS Reality (378ms)",
-      "overseas_ms": 151.3
-    },
-    {
-      "key": "vless|51.158.206.19|23576|48ff2b70-e180-582f-8866-d9a2edeed5f5",
-      "server": "51.158.206.19",
-      "port": 23576,
-      "type": "vless",
-      "name": "🟠 荷蘭 NL 🇳🇱 Raydikalx 439B23",
-      "overseas_ms": 150.4
-    },
-    {
-      "key": "vless|94.183.164.176|443|b4192dfb-f458-4303-b877-29a41a6d8416",
-      "server": "94.183.164.176",
-      "port": 443,
-      "type": "vless",
-      "name": "🟠 未知 未知 未知 未知 IR 🇮🇷 Raydikalx 63B499",
-      "overseas_ms": 182.1
-    },
-    {
-      "key": "vless|leviko-ru4448.shopingggg.ir|443|38308ff1-5aa9-494f-a25a-0f2870d56b3e",
-      "server": "leviko-ru4448.shopingggg.ir",
-      "port": 443,
-      "type": "vless",
-      "name": "🟡 俄羅斯 [Be] RU 🇷🇺 Raydikalx 497083",
-      "overseas_ms": 443.3
-    },
-    {
-      "key": "vless|51.158.206.29|23576|48ff2b70-e180-582f-8866-d9a2edeed5f5",
-      "server": "51.158.206.29",
-      "port": 23576,
-      "type": "vless",
-      "name": "🟠 荷蘭 NL 🇳🇱 Raydikalx A7F212",
-      "overseas_ms": 151.2
-    },
-    {
-      "key": "vless|51.158.206.20|23576|48ff2b70-e180-582f-8866-d9a2edeed5f5",
-      "server": "51.158.206.20",
-      "port": 23576,
-      "type": "vless",
-      "name": "🟠 荷蘭 NL 🇳🇱 Raydikalx E66F76",
-      "overseas_ms": 159.7
-    },
-    {
-      "key": "anytls|er8u54dh.df6h451rh.xin|443|2902c46c8493",
-      "server": "er8u54dh.df6h451rh.xin",
-      "port": 443,
-      "type": "anytls",
-      "name": "🟡 台灣 [Be] 🇹🇼 台湾 TWN 4",
-      "overseas_ms": 909.5
-    },
-    {
-      "key": "vless|51.158.206.34|23576|48ff2b70-e180-582f-8866-d9a2edeed5f5",
-      "server": "51.158.206.34",
-      "port": 23576,
-      "type": "vless",
-      "name": "🟠 荷蘭 NL 🇳🇱 Raydikalx 2A97EE",
-      "overseas_ms": 150.7
-    },
-    {
-      "key": "vless|45.144.112.55|443|d65cc14c-f53f-4fe2-b262-97856601319c",
-      "server": "45.144.112.55",
-      "port": 443,
-      "type": "vless",
-      "name": "🟠 美國 US 🇺🇸 Raydikalx A0E25A",
-      "overseas_ms": 62.0
-    },
-    {
-      "key": "vless|51.158.206.87|23576|48ff2b70-e180-582f-8866-d9a2edeed5f5",
-      "server": "51.158.206.87",
-      "port": 23576,
-      "type": "vless",
-      "name": "🟠 荷蘭 NL 🇳🇱 Raydikalx AA6F51",
-      "overseas_ms": 156.9
-    },
-    {
-      "key": "vless|51.158.206.96|23576|48ff2b70-e180-582f-8866-d9a2edeed5f5",
-      "server": "51.158.206.96",
-      "port": 23576,
-      "type": "vless",
-      "name": "🟠 荷蘭 NL 🇳🇱 Raydikalx 36A918",
-      "overseas_ms": 143.1
-    },
-    {
-      "key": "vless|51.158.206.98|23576|48ff2b70-e180-582f-8866-d9a2edeed5f5",
-      "server": "51.158.206.98",
-      "port": 23576,
-      "type": "vless",
-      "name": "🟠 荷蘭 NL 🇳🇱 Raydikalx 739E83",
-      "overseas_ms": 144.8
-    },
-    {
-      "key": "vless|179.254.126.86|25201|e89a2a0e-7803-447e-b050-3ba67962ed95",
-      "server": "179.254.126.86",
-      "port": 25201,
-      "type": "vless",
-      "name": "🟠 荷蘭 EE 🇪🇪 Raydikalx FD1903",
-      "overseas_ms": 227.7
-    },
-    {
-      "key": "vless|88.216.60.73|443|a30903dc-1bf0-4be5-8b1b-603a3a56211c",
-      "server": "88.216.60.73",
-      "port": 443,
-      "type": "vless",
-      "name": "🟠 瑞典 SE 🇸🇪 Raydikalx AB89F8",
-      "overseas_ms": 150.5
-    },
-    {
-      "key": "vless|217.60.94.115|443|a346c521-7a7f-452b-9356-a4893feb5982",
-      "server": "217.60.94.115",
-      "port": 443,
-      "type": "vless",
-      "name": "🟠 德國 DE 🇩🇪 Raydikalx B3A2FF",
-      "overseas_ms": 172.9
-    },
-    {
-      "key": "vless|jpg1api.jumpernode.site|443|d508df52-3acb-483f-85d2-3fd5f6a76808",
-      "server": "jpg1api.jumpernode.site",
-      "port": 443,
-      "type": "vless",
-      "name": "🟠 日本 JP 🇯🇵 Raydikalx 21FD7C",
-      "overseas_ms": 137.0
-    },
-    {
-      "key": "vless|191.217.215.228|2053|fbe22815-0718-4eae-816f-e91c67d15b54",
-      "server": "191.217.215.228",
-      "port": 2053,
-      "type": "vless",
-      "name": "🟠 俄羅斯 RU 🇷🇺 Raydikalx 2CF696",
-      "overseas_ms": 147.8
-    },
-    {
-      "key": "vless|62.210.91.2|23576|48ff2b70-e180-582f-8866-d9a2edeed5f5",
-      "server": "62.210.91.2",
-      "port": 23576,
-      "type": "vless",
-      "name": "🟠 法國 FR 🇫🇷 Raydikalx 165A21",
-      "overseas_ms": 158.6
-    },
-    {
-      "key": "vless|177.177.215.45|444|254f28cb-d0c1-41e9-a06b-f2155213ff04",
-      "server": "177.177.215.45",
-      "port": 444,
-      "type": "vless",
-      "name": "🟠 德國 NL 🇳🇱 Raydikalx C4DE22",
-      "overseas_ms": 137.7
-    },
-    {
-      "key": "vless|151.242.164.51|443|d508df52-3acb-483f-85d2-3fd5f6a76808",
-      "server": "151.242.164.51",
-      "port": 443,
-      "type": "vless",
-      "name": "🟠 日本 JP 🇯🇵 Raydikalx B20FBA",
-      "overseas_ms": 132.3
-    },
-    {
-      "key": "vless|51.158.206.103|23576|48ff2b70-e180-582f-8866-d9a2edeed5f5",
-      "server": "51.158.206.103",
-      "port": 23576,
-      "type": "vless",
-      "name": "🟠 荷蘭 NL 🇳🇱 Raydikalx 52B720",
-      "overseas_ms": 144.2
-    },
-    {
-      "key": "vless|158.101.151.157|443|66171cbe-0b4b-4b24-99f6-d5a822f4dc9a",
-      "server": "158.101.151.157",
-      "port": 443,
-      "type": "vless",
-      "name": "🟠 日本 JP 🇯🇵 Raydikalx AA31A8",
-      "overseas_ms": 108.6
-    },
-    {
-      "key": "vless|82.118.19.153|443|adcaa148-7c66-4282-a81a-99ec8afa029d",
-      "server": "82.118.19.153",
-      "port": 443,
-      "type": "vless",
-      "name": "🟠 德國 DE 🇩🇪 Raydikalx 82D48F",
-      "overseas_ms": 164.1
-    },
-    {
-      "key": "vless|ams2.shtil.io|444|254f28cb-d0c1-41e9-a06b-f2155213ff04",
-      "server": "ams2.shtil.io",
-      "port": 444,
-      "type": "vless",
-      "name": "🟠 荷蘭 NL 🇳🇱 Raydikalx B54981",
-      "overseas_ms": 162.8
-    },
-    {
-      "key": "vless|84.32.83.197|443|a30903dc-1bf0-4be5-8b1b-603a3a56211c",
-      "server": "84.32.83.197",
-      "port": 443,
-      "type": "vless",
-      "name": "🟠 未知 未知 未知 未知 LT 🇱🇹 Raydikalx A5B1B1",
-      "overseas_ms": 170.1
-    },
-    {
-      "key": "vless|45.86.158.53|443|082ff568-e0f1-42af-ad7c-2c46adde1273",
-      "server": "45.86.158.53",
-      "port": 443,
-      "type": "vless",
-      "name": "🟠 德國 DE 🇩🇪 Raydikalx 4D0596",
-      "overseas_ms": 198.2
-    },
-    {
-      "key": "vless|146.103.43.82|9543|920b3cd9-4f82-4669-bbd2-d4a28b9052c6",
-      "server": "146.103.43.82",
-      "port": 9543,
-      "type": "vless",
-      "name": "🟠 德國 DE 🇩🇪 Raydikalx 26C1A1",
-      "overseas_ms": 197.0
-    },
-    {
-      "key": "vless|132.243.66.220|443|cda0862a-0f87-4be9-8ed8-1d0c9e382839",
-      "server": "132.243.66.220",
-      "port": 443,
-      "type": "vless",
-      "name": "🟠 荷蘭 EE 🇪🇪 Raydikalx 3F5223",
-      "overseas_ms": 211.1
-    },
-    {
-      "key": "vless|179.254.126.86|25135|e89a2a0e-7803-447e-b050-3ba67962ed95",
-      "server": "179.254.126.86",
-      "port": 25135,
-      "type": "vless",
-      "name": "🟠 荷蘭 EE 🇪🇪 Raydikalx 270F0F",
-      "overseas_ms": 216.5
-    },
-    {
-      "key": "vless|185.255.115.181|443|4201786b-d99b-4147-a5f0-20d47acddb81",
-      "server": "185.255.115.181",
-      "port": 443,
-      "type": "vless",
-      "name": "🔴 德國 DE 🇩🇪 Raydikalx DC7D0D",
-      "overseas_ms": 171.2
-    },
-    {
-      "key": "vless|206.206.78.36|443|e3f0c894-0f76-4683-a751-6a93da8fd14d",
-      "server": "206.206.78.36",
-      "port": 443,
-      "type": "vless",
-      "name": "🔴 新加坡 SG 🇸🇬 Raydikalx F16081",
-      "overseas_ms": 198.4
-    },
-    {
-      "key": "vless|45.61.186.3|443|140d6fc9-2c6d-41bd-a487-182b52c0184f",
-      "server": "45.61.186.3",
-      "port": 443,
-      "type": "vless",
-      "name": "🔴 美國 US 🇺🇸 Raydikalx B9F164",
-      "overseas_ms": 99.4
-    },
-    {
-      "key": "vless|155.248.175.201|23169|3eb053cb-d6f8-4b31-8180-222e1cc6f8ff",
-      "server": "155.248.175.201",
-      "port": 23169,
-      "type": "vless",
-      "name": "🔴 日本 JP 🇯🇵 Raydikalx 6F74B8",
-      "overseas_ms": 130.6
-    },
-    {
-      "key": "vless|46.250.240.80|2053|f7fa5a16-1279-46ba-ac18-001b41884080",
-      "server": "46.250.240.80",
-      "port": 2053,
-      "type": "vless",
-      "name": "🔴 澳洲 AU 🇦🇺 Raydikalx 452DFB",
-      "overseas_ms": 246.2
-    },
-    {
-      "key": "vless|sg.fasti.win|443|a16bd0e2-ff2e-4e4c-a955-0c684255a065",
-      "server": "sg.fasti.win",
-      "port": 443,
-      "type": "vless",
-      "name": "🔴 新加坡 SG 🇸🇬 Raydikalx 5E38D8",
-      "overseas_ms": 263.6
-    },
-    {
-      "key": "vless|195.206.235.74|443|cda0862a-0f87-4be9-8ed8-1d0c9e382839",
-      "server": "195.206.235.74",
-      "port": 443,
-      "type": "vless",
-      "name": "🔴 英國 GB 🇬🇧 Raydikalx 3F5530",
-      "overseas_ms": 315.9
-    },
-    {
-      "key": "vless|82.118.16.187|443|dc2259c4-388e-4285-ba18-df619b6672b6",
-      "server": "82.118.16.187",
-      "port": 443,
-      "type": "vless",
-      "name": "🔴 義大利 IT 🇮🇹 Raydikalx 8AF267",
-      "overseas_ms": 153.9
-    },
-    {
-      "key": "vless|164.37.224.245|443|cda0862a-0f87-4be9-8ed8-1d0c9e382839",
-      "server": "164.37.224.245",
-      "port": 443,
-      "type": "vless",
-      "name": "🔴 荷蘭 NL 🇳🇱 Raydikalx 21D4E0",
-      "overseas_ms": 172.1
-    },
-    {
-      "key": "vless|193.233.89.130|8443|7bd7c4aa-52c4-482c-bdcc-e7380fa6b5fe",
-      "server": "193.233.89.130",
-      "port": 8443,
-      "type": "vless",
-      "name": "🔴 俄羅斯 RU 🇷🇺 Raydikalx F540D4",
-      "overseas_ms": 191.6
-    },
-    {
-      "key": "vless|198.247.127.131|443|59548d2d-5d7c-4328-aa81-0d5614da0c1b",
-      "server": "198.247.127.131",
-      "port": 443,
-      "type": "vless",
-      "name": "🔴 美國 US 🇺🇸 Raydikalx 5B619D",
-      "overseas_ms": 22.8
-    },
-    {
-      "key": "vless|47.84.226.221|443|49b91402-f8e3-4390-9d7b-b7eddc2684a4",
-      "server": "47.84.226.221",
-      "port": 443,
-      "type": "vless",
-      "name": "🔴 新加坡 SG 🇸🇬 Raydikalx 013386",
-      "overseas_ms": 198.6
-    },
-    {
-      "key": "vless|103.106.229.177|21001|67952583-8572-42e1-943d-0602794f885b",
-      "server": "103.106.229.177",
-      "port": 21001,
-      "type": "vless",
-      "name": "🔴 新加坡 SG 🇸🇬 Raydikalx 2FE620",
-      "overseas_ms": 175.6
-    },
-    {
-      "key": "vless|103.106.229.177|21004|67952583-8572-42e1-943d-0602794f885b",
-      "server": "103.106.229.177",
-      "port": 21004,
-      "type": "vless",
-      "name": "🔴 新加坡 SG 🇸🇬 Raydikalx B9FAFF",
-      "overseas_ms": 176.0
-    },
-    {
-      "key": "vless|152.70.58.201|443|8892e34a-339b-4526-b88d-cf68c516231c",
-      "server": "152.70.58.201",
-      "port": 443,
-      "type": "vless",
-      "name": "🔴 荷蘭 NL 🇳🇱 Raydikalx C70F26",
-      "overseas_ms": 150.2
-    },
-    {
-      "key": "vless|103.106.229.177|21003|67952583-8572-42e1-943d-0602794f885b",
-      "server": "103.106.229.177",
-      "port": 21003,
-      "type": "vless",
-      "name": "🔴 新加坡 SG 🇸🇬 Raydikalx 6E2A07",
-      "overseas_ms": 188.6
-    },
-    {
-      "key": "vless|103.106.229.37|21003|41b1c169-5905-4d98-b6a6-56896c25737c",
-      "server": "103.106.229.37",
-      "port": 21003,
-      "type": "vless",
-      "name": "🔴 新加坡 SG 🇸🇬 Raydikalx 868C10",
-      "overseas_ms": 175.8
-    },
-    {
-      "key": "vless|164.37.224.246|443|cda0862a-0f87-4be9-8ed8-1d0c9e382839",
-      "server": "164.37.224.246",
-      "port": 443,
-      "type": "vless",
-      "name": "🔴 荷蘭 NL 🇳🇱 Raydikalx 540CB9",
-      "overseas_ms": 155.8
-    },
-    {
-      "key": "vless|jpg1tts.jumpernode.site|443|dfa9bd91-35ad-4163-bf32-eaaaab64a043",
-      "server": "jpg1tts.jumpernode.site",
-      "port": 443,
-      "type": "vless",
-      "name": "🔴 日本 JP 🇯🇵 Raydikalx 8BB9FD",
-      "overseas_ms": 130.0
+      "overseas_ms": 182.0
     },
     {
       "key": "vless|89.124.122.19|443|cda0862a-0f87-4be9-8ed8-1d0c9e382839",
@@ -2783,23 +2151,199 @@
       "port": 443,
       "type": "vless",
       "name": "🟠 美國 [Be] NL 🇳🇱 Raydikalx 37BDF8",
-      "overseas_ms": 1379.3
+      "overseas_ms": 317.1
     },
     {
-      "key": "vless|leviko-nl4680.shopingggg.ir|443|a346c521-7a7f-452b-9356-a4893feb5982",
-      "server": "leviko-nl4680.shopingggg.ir",
-      "port": 443,
+      "key": "vless|189.30.65.203|2083|490dc3b4-8d1d-49fd-840e-bd5277b41557",
+      "server": "189.30.65.203",
+      "port": 2083,
       "type": "vless",
-      "name": "🔴 美國 US 🇺🇸 Raydikalx 5F021D",
-      "overseas_ms": 184.9
+      "name": "🟡 德國 [Be] GB 🇬🇧 Raydikalx DE410D",
+      "overseas_ms": 125.6
     },
     {
-      "key": "vless|185.255.115.118|443|4201786b-d99b-4147-a5f0-20d47acddb81",
-      "server": "185.255.115.118",
+      "key": "vless|43.163.112.174|443|0dedd47d-47b9-4ed1-9c9f-cbeecad57a68",
+      "server": "43.163.112.174",
       "port": 443,
       "type": "vless",
-      "name": "🔴 德國 DE 🇩🇪 Raydikalx F7BBF2",
-      "overseas_ms": 169.5
+      "name": "🟠 新加坡 [Be] SG 🇸🇬 Raydikalx 0437BE",
+      "overseas_ms": 198.3
+    },
+    {
+      "key": "vless|196.245.52.187|443|cda0862a-0f87-4be9-8ed8-1d0c9e382839",
+      "server": "196.245.52.187",
+      "port": 443,
+      "type": "vless",
+      "name": "🟠 美國 [Be] 🇸🇨_塞舌尔",
+      "overseas_ms": 334.0
+    },
+    {
+      "key": "vless|api.mediaklenov.cc|443|abd5755a-8b77-4ed4-afbd-f2ccbc08e6f5",
+      "server": "api.mediaklenov.cc",
+      "port": 443,
+      "type": "vless",
+      "name": "vless-1947250691",
+      "overseas_ms": 6188.2
+    },
+    {
+      "key": "anytls|212.189.31.45|50000|09cac7f2-2480-485f-affc-35aebdb21cb8",
+      "server": "212.189.31.45",
+      "port": 50000,
+      "type": "anytls",
+      "name": "🟡 美國 AutoMerge 020 🇺🇸 美国 USA 8",
+      "overseas_ms": 42.8
+    },
+    {
+      "key": "hysteria2|206.189.229.48|443|YV1sd3tfCZngTtnvRmy7",
+      "server": "206.189.229.48",
+      "port": 443,
+      "type": "hysteria2",
+      "name": "🟡 美國 🇺🇸 United States 183",
+      "overseas_ms": 33.7
+    },
+    {
+      "key": "vless|vps3.nemnogogo.com|443|38308ff1-5aa9-494f-a25a-0f2870d56b3e",
+      "server": "vps3.nemnogogo.com",
+      "port": 443,
+      "type": "vless",
+      "name": "🟡 俄羅斯 [Be] RU 🇷🇺 Raydikalx 211062",
+      "overseas_ms": 200.5
+    },
+    {
+      "key": "vless|201.51.12.98|443|38308ff1-5aa9-494f-a25a-0f2870d56b3e",
+      "server": "201.51.12.98",
+      "port": 443,
+      "type": "vless",
+      "name": "🟡 俄羅斯 [Be] 🇷🇺 599.9ms +/-22ms meliproxyy",
+      "overseas_ms": 155.7
+    },
+    {
+      "key": "vless|15.204.97.209|23576|48ff2b70-e180-582f-8866-d9a2edeed5f5",
+      "server": "15.204.97.209",
+      "port": 23576,
+      "type": "vless",
+      "name": "🟢 美國 US 🇺🇸 Raydikalx 1FD863",
+      "overseas_ms": 52.4
+    },
+    {
+      "key": "vless|136.148.83.71|443|00000000-0000-0001-0000-000000000000",
+      "server": "136.148.83.71",
+      "port": 443,
+      "type": "vless",
+      "name": "🟡 法國 [Be] FR 🇫🇷 Raydikalx AC3C15",
+      "overseas_ms": 152.9
+    },
+    {
+      "key": "vless|201.24.116.192|443|38308ff1-5aa9-494f-a25a-0f2870d56b3e",
+      "server": "201.24.116.192",
+      "port": 443,
+      "type": "vless",
+      "name": "🟡 俄羅斯 [Be] 🇷🇺 625.8ms +/-28ms Tel- ProxyMtAlpha…",
+      "overseas_ms": 149.3
+    },
+    {
+      "key": "vless|15.204.97.216|23576|48ff2b70-e180-582f-8866-d9a2edeed5f5",
+      "server": "15.204.97.216",
+      "port": 23576,
+      "type": "vless",
+      "name": "🟢 美國 US 🇺🇸 Raydikalx 66830B",
+      "overseas_ms": 57.5
+    },
+    {
+      "key": "vless|15.204.97.197|23576|48ff2b70-e180-582f-8866-d9a2edeed5f5",
+      "server": "15.204.97.197",
+      "port": 23576,
+      "type": "vless",
+      "name": "🟢 美國 US 🇺🇸 Raydikalx 8BA744",
+      "overseas_ms": 57.5
+    },
+    {
+      "key": "vless|15.204.97.195|23576|48ff2b70-e180-582f-8866-d9a2edeed5f5",
+      "server": "15.204.97.195",
+      "port": 23576,
+      "type": "vless",
+      "name": "🟢 美國 US 🇺🇸 Raydikalx 4CDCFE",
+      "overseas_ms": 54.5
+    },
+    {
+      "key": "hysteria2|136.148.83.69|443|87bb2ac4-b7a1-0001-b11d-2107709ea6cb",
+      "server": "136.148.83.69",
+      "port": 443,
+      "type": "hysteria2",
+      "name": "🔴 俄羅斯 🇵🇱 PL 04 • HYSTERIA2 TLS (3045ms)",
+      "overseas_ms": 149.4
+    },
+    {
+      "key": "hysteria2|185.156.44.99|443|gf1:gfhysteria2024",
+      "server": "185.156.44.99",
+      "port": 443,
+      "type": "hysteria2",
+      "name": "🔴 未知 未知 未知 未知 未知 未知 未知 未知 未知 未知 未知 NodeHu…",
+      "overseas_ms": 149.9
+    },
+    {
+      "key": "vless|leviko-ru4448.shopingggg.ir|443|38308ff1-5aa9-494f-a25a-0f2870d56b3e",
+      "server": "leviko-ru4448.shopingggg.ir",
+      "port": 443,
+      "type": "vless",
+      "name": "🟡 俄羅斯 [Be] RU 🇷🇺 Raydikalx 497083",
+      "overseas_ms": 361.2
+    },
+    {
+      "key": "vless|148.135.86.162|10000|327b1113-049e-4256-8d72-8815643dbb65",
+      "server": "148.135.86.162",
+      "port": 10000,
+      "type": "vless",
+      "name": "🟡 美國 US 🇺🇸 Raydikalx C3E9DB",
+      "overseas_ms": 39.1
+    },
+    {
+      "key": "vless|15.204.97.198|23576|48ff2b70-e180-582f-8866-d9a2edeed5f5",
+      "server": "15.204.97.198",
+      "port": 23576,
+      "type": "vless",
+      "name": "🟢 美國 US 🇺🇸 Raydikalx 91D02A",
+      "overseas_ms": 56.9
+    },
+    {
+      "key": "vless|179.254.94.184|443|2f12e5b5-6ce7-47ab-88b9-6110c1a3fc60",
+      "server": "179.254.94.184",
+      "port": 443,
+      "type": "vless",
+      "name": "🟡 美國 US 🇺🇸 Raydikalx 1A1EC8",
+      "overseas_ms": 47.4
+    },
+    {
+      "key": "anytls|a54ge.df6h451rh.xin|443|0324fbc29561",
+      "server": "a54ge.df6h451rh.xin",
+      "port": 443,
+      "type": "anytls",
+      "name": "🟢 台灣 [Be] 🇹🇼 台湾 TWN 5",
+      "overseas_ms": 629.1
+    },
+    {
+      "key": "vless|198.247.127.131|443|59548d2d-5d7c-4328-aa81-0d5614da0c1b",
+      "server": "198.247.127.131",
+      "port": 443,
+      "type": "vless",
+      "name": "🟡 美國 US 🇺🇸 Raydikalx 5B619D",
+      "overseas_ms": 49.7
+    },
+    {
+      "key": "vless|199.7.140.201|443|a52ac672-0f5f-4070-b8fd-6b5685fc8004",
+      "server": "199.7.140.201",
+      "port": 443,
+      "type": "vless",
+      "name": "🟡 美國 US 🇺🇸 Raydikalx B25A0F",
+      "overseas_ms": 51.2
+    },
+    {
+      "key": "vless|45.138.100.248|10444|ae908ff5-f749-402c-af25-e6e9aef4d6bb",
+      "server": "45.138.100.248",
+      "port": 10444,
+      "type": "vless",
+      "name": "🟠 美國 US 🇺🇸 Raydikalx 846675",
+      "overseas_ms": 30.8
     },
     {
       "key": "anytls|rtifgjdr.df6h451rh.xin|443|2902c46c8493",
@@ -2807,223 +2351,55 @@
       "port": 443,
       "type": "anytls",
       "name": "🟡 台灣 [Be] 🇹🇼 台湾 TWN 3",
-      "overseas_ms": 1585.4
+      "overseas_ms": 659.2
     },
     {
-      "key": "vless|146.103.42.138|9543|920b3cd9-4f82-4669-bbd2-d4a28b9052c6",
-      "server": "146.103.42.138",
-      "port": 9543,
-      "type": "vless",
-      "name": "🔴 德國 DE 🇩🇪 Raydikalx 2842F5",
-      "overseas_ms": 173.0
-    },
-    {
-      "key": "vless|93.123.101.198|443|a346c521-7a7f-452b-9356-a4893feb5982",
-      "server": "93.123.101.198",
+      "key": "vless|45.61.186.3|443|140d6fc9-2c6d-41bd-a487-182b52c0184f",
+      "server": "45.61.186.3",
       "port": 443,
       "type": "vless",
-      "name": "🔴 德國 DE 🇩🇪 Raydikalx D2858D",
-      "overseas_ms": 172.5
+      "name": "🟠 美國 US 🇺🇸 Raydikalx B9F164",
+      "overseas_ms": 67.3
     },
     {
-      "key": "vless|78.17.215.141|443|a346c521-7a7f-452b-9356-a4893feb5982",
-      "server": "78.17.215.141",
+      "key": "anytls|er8u54dh.df6h451rh.xin|443|2902c46c8493",
+      "server": "er8u54dh.df6h451rh.xin",
+      "port": 443,
+      "type": "anytls",
+      "name": "🟡 台灣 [Be] 🇹🇼 台湾 TWN 4",
+      "overseas_ms": 719.8
+    },
+    {
+      "key": "vless|94.183.164.176|443|b4192dfb-f458-4303-b877-29a41a6d8416",
+      "server": "94.183.164.176",
       "port": 443,
       "type": "vless",
-      "name": "🔴 德國 DE 🇩🇪 Raydikalx 481E00",
-      "overseas_ms": 159.4
+      "name": "🟠 未知 未知 未知 未知 未知 IR 🇮🇷 Raydikalx 63B499",
+      "overseas_ms": 121.2
     },
     {
-      "key": "vless|50.117.15.225|443|67eb6b17-7797-4ded-bf52-423c4c5f6cbd",
-      "server": "50.117.15.225",
+      "key": "vless|51.158.206.34|23576|48ff2b70-e180-582f-8866-d9a2edeed5f5",
+      "server": "51.158.206.34",
+      "port": 23576,
+      "type": "vless",
+      "name": "🟠 荷蘭 NL 🇳🇱 Raydikalx 2A97EE",
+      "overseas_ms": 108.1
+    },
+    {
+      "key": "vless|51.158.206.29|23576|48ff2b70-e180-582f-8866-d9a2edeed5f5",
+      "server": "51.158.206.29",
+      "port": 23576,
+      "type": "vless",
+      "name": "🟠 荷蘭 NL 🇳🇱 Raydikalx A7F212",
+      "overseas_ms": 113.4
+    },
+    {
+      "key": "vless|158.101.151.157|443|66171cbe-0b4b-4b24-99f6-d5a822f4dc9a",
+      "server": "158.101.151.157",
       "port": 443,
       "type": "vless",
-      "name": "🔴 德國 DE 🇩🇪 Raydikalx C09160",
-      "overseas_ms": 147.7
-    },
-    {
-      "key": "vless|leviko-nl9472.shopingggg.ir|9543|920b3cd9-4f82-4669-bbd2-d4a28b9052c6",
-      "server": "leviko-nl9472.shopingggg.ir",
-      "port": 9543,
-      "type": "vless",
-      "name": "🔴 荷蘭 CY 🇨🇾 Raydikalx EBB184",
-      "overseas_ms": 608.0
-    },
-    {
-      "key": "vless|195.216.168.101|9543|920b3cd9-4f82-4669-bbd2-d4a28b9052c6",
-      "server": "195.216.168.101",
-      "port": 9543,
-      "type": "vless",
-      "name": "🔴 西班牙 ES 🇪🇸 Raydikalx 991DF6",
-      "overseas_ms": 136.1
-    },
-    {
-      "key": "vless|79.182.70.192|443|26843758-24de-4f76-b5d0-624038e353c4",
-      "server": "79.182.70.192",
-      "port": 443,
-      "type": "vless",
-      "name": "🔴 荷蘭 NL 🇳🇱 Raydikalx 8DAF4B",
-      "overseas_ms": 152.6
-    },
-    {
-      "key": "vless|79.182.70.220|443|cda0862a-0f87-4be9-8ed8-1d0c9e382839",
-      "server": "79.182.70.220",
-      "port": 443,
-      "type": "vless",
-      "name": "🔴 荷蘭 NL 🇳🇱 Raydikalx 6636B7",
-      "overseas_ms": 158.1
-    },
-    {
-      "key": "vless|196.245.153.156|443|cda0862a-0f87-4be9-8ed8-1d0c9e382839",
-      "server": "196.245.153.156",
-      "port": 443,
-      "type": "vless",
-      "name": "🔴 荷蘭 SK 🇸🇰 Raydikalx 1FEFEA",
-      "overseas_ms": 208.4
-    },
-    {
-      "key": "vless|132.243.163.174|443|26843758-24de-4f76-b5d0-624038e353c4",
-      "server": "132.243.163.174",
-      "port": 443,
-      "type": "vless",
-      "name": "🔴 荷蘭 FI 🇫🇮 Raydikalx AB0A8F",
-      "overseas_ms": 200.5
-    },
-    {
-      "key": "vless|195.206.235.202|443|4201786b-d99b-4147-a5f0-20d47acddb81",
-      "server": "195.206.235.202",
-      "port": 443,
-      "type": "vless",
-      "name": "🔴 德國 GB 🇬🇧 Raydikalx 55EC06",
-      "overseas_ms": 165.0
-    },
-    {
-      "key": "vless|201.8.64.254|443|cda0862a-0f87-4be9-8ed8-1d0c9e382839",
-      "server": "201.8.64.254",
-      "port": 443,
-      "type": "vless",
-      "name": "🔴 美國 US 🇺🇸 Raydikalx 3242C0",
-      "overseas_ms": 175.0
-    },
-    {
-      "key": "vless|153.52.85.198|443|26843758-24de-4f76-b5d0-624038e353c4",
-      "server": "153.52.85.198",
-      "port": 443,
-      "type": "vless",
-      "name": "🔴 德國 DE 🇩🇪 Raydikalx 9A5F03",
-      "overseas_ms": 176.4
-    },
-    {
-      "key": "vless|51.15.16.68|2053|2e7c6265-6933-4a91-bd43-b4fd2e9566c8",
-      "server": "51.15.16.68",
-      "port": 2053,
-      "type": "vless",
-      "name": "🟠 荷蘭 NL 🇳🇱 Raydikalx 70E494",
-      "overseas_ms": 1151.6
-    },
-    {
-      "key": "vless|178.172.227.124|10444|1af36694-b548-4b18-89a0-bc076eab4ed7",
-      "server": "178.172.227.124",
-      "port": 10444,
-      "type": "vless",
-      "name": "🔴 俄羅斯 BY 🇧🇾 Raydikalx 3F1B1B",
-      "overseas_ms": 195.1
-    },
-    {
-      "key": "vless|lists.soloramtin.cyou|443|67eb6b17-7797-4ded-bf52-423c4c5f6cbd",
-      "server": "lists.soloramtin.cyou",
-      "port": 443,
-      "type": "vless",
-      "name": "🔴 德國 DE 🇩🇪 Raydikalx F48A65",
-      "overseas_ms": 357.3
-    },
-    {
-      "key": "vless|79.182.70.232|443|cda0862a-0f87-4be9-8ed8-1d0c9e382839",
-      "server": "79.182.70.232",
-      "port": 443,
-      "type": "vless",
-      "name": "🔴 荷蘭 NL 🇳🇱 Raydikalx 142380",
-      "overseas_ms": 160.2
-    },
-    {
-      "key": "vless|196.245.153.92|443|cda0862a-0f87-4be9-8ed8-1d0c9e382839",
-      "server": "196.245.153.92",
-      "port": 443,
-      "type": "vless",
-      "name": "🔴 荷蘭 SK 🇸🇰 Raydikalx 99D403",
-      "overseas_ms": 204.9
-    },
-    {
-      "key": "vless|185.255.115.96|443|4201786b-d99b-4147-a5f0-20d47acddb81",
-      "server": "185.255.115.96",
-      "port": 443,
-      "type": "vless",
-      "name": "🔴 德國 DE 🇩🇪 Raydikalx 47D069",
-      "overseas_ms": 168.7
-    },
-    {
-      "key": "vless|196.245.153.104|443|cda0862a-0f87-4be9-8ed8-1d0c9e382839",
-      "server": "196.245.153.104",
-      "port": 443,
-      "type": "vless",
-      "name": "🔴 荷蘭 SK 🇸🇰 Raydikalx 8AF71C",
-      "overseas_ms": 203.0
-    },
-    {
-      "key": "vless|48.103.231.2|443|a346c521-7a7f-452b-9356-a4893feb5982",
-      "server": "48.103.231.2",
-      "port": 443,
-      "type": "vless",
-      "name": "🔴 美國 US 🇺🇸 Raydikalx 9FED75",
-      "overseas_ms": 169.7
-    },
-    {
-      "key": "trojan|167.88.61.52|443|0ab6c98dae3b48e8b9c4a776b6c9c19a",
-      "server": "167.88.61.52",
-      "port": 443,
-      "type": "trojan",
-      "name": "🟡 美國 US 🇺🇸 Raydikalx D327E5",
-      "overseas_ms": 32.4
-    },
-    {
-      "key": "vless|195.206.235.139|443|cda0862a-0f87-4be9-8ed8-1d0c9e382839",
-      "server": "195.206.235.139",
-      "port": 443,
-      "type": "vless",
-      "name": "🔴 英國 GB 🇬🇧 Raydikalx 961F89",
-      "overseas_ms": 154.4
-    },
-    {
-      "key": "vless|185.255.115.103|443|4201786b-d99b-4147-a5f0-20d47acddb81",
-      "server": "185.255.115.103",
-      "port": 443,
-      "type": "vless",
-      "name": "🔴 德國 DE 🇩🇪 Raydikalx D04611",
-      "overseas_ms": 171.7
-    },
-    {
-      "key": "vless|217.69.174.175|443|cda0862a-0f87-4be9-8ed8-1d0c9e382839",
-      "server": "217.69.174.175",
-      "port": 443,
-      "type": "vless",
-      "name": "🔴 美國 🇩🇪_德国",
-      "overseas_ms": 408.5
-    },
-    {
-      "key": "vless|196.245.153.111|443|cda0862a-0f87-4be9-8ed8-1d0c9e382839",
-      "server": "196.245.153.111",
-      "port": 443,
-      "type": "vless",
-      "name": "🔴 荷蘭 SK 🇸🇰 Raydikalx 9EC026",
-      "overseas_ms": 194.2
-    },
-    {
-      "key": "trojan|168.107.51.32|20045|463f7453753f4d47",
-      "server": "168.107.51.32",
-      "port": 20045,
-      "type": "trojan",
-      "name": "🔴 韓國 KR 🇰🇷 Raydikalx 54D837",
-      "overseas_ms": 140.5
+      "name": "🟠 日本 JP 🇯🇵 Raydikalx AA31A8",
+      "overseas_ms": 138.3
     },
     {
       "key": "vless|45.9.120.53|443|cda0862a-0f87-4be9-8ed8-1d0c9e382839",
@@ -3031,183 +2407,247 @@
       "port": 443,
       "type": "vless",
       "name": "🟠 德國 🇩🇪 德国 DEU 9",
-      "overseas_ms": 1211.3
+      "overseas_ms": 132.7
     },
     {
-      "key": "trojan|77.93.89.2|443|57beeeb0-03fc-4fc9-94da-7604488a7134",
-      "server": "77.93.89.2",
-      "port": 443,
-      "type": "trojan",
-      "name": "🔴 新加坡 SG 🇸🇬 Raydikalx D08154",
-      "overseas_ms": 206.2
-    },
-    {
-      "key": "vless|66.163.113.9|443|03fcc618-b93d-6796-6aed-8a38c975d581",
-      "server": "66.163.113.9",
-      "port": 443,
+      "key": "vless|51.158.206.87|23576|48ff2b70-e180-582f-8866-d9a2edeed5f5",
+      "server": "51.158.206.87",
+      "port": 23576,
       "type": "vless",
-      "name": "🟡 加拿大 CA 🇨🇦 Raydikalx B95E69",
-      "overseas_ms": 65.5
+      "name": "🟠 荷蘭 NL 🇳🇱 Raydikalx AA6F51",
+      "overseas_ms": 114.1
     },
     {
-      "key": "trojan|ikr200.zxom.eu.org|20045|463f7453753f4d47",
-      "server": "ikr200.zxom.eu.org",
-      "port": 20045,
-      "type": "trojan",
-      "name": "🔴 韓國 KR 🇰🇷 Raydikalx 32554C",
-      "overseas_ms": 269.6
-    },
-    {
-      "key": "trojan|208.69.78.222|443|0ab6c98dae3b48e8b9c4a776b6c9c19a",
-      "server": "208.69.78.222",
-      "port": 443,
-      "type": "trojan",
-      "name": "🔴 瑞士 🇨🇭 Switzerland 14",
-      "overseas_ms": 167.1
-    },
-    {
-      "key": "trojan|208.69.78.33|443|0ab6c98dae3b48e8b9c4a776b6c9c19a",
-      "server": "208.69.78.33",
-      "port": 443,
-      "type": "trojan",
-      "name": "🔴 瑞士 🇨🇭 Switzerland 10",
-      "overseas_ms": 167.1
-    },
-    {
-      "key": "trojan|xvxn1hkzf.mateflora.com|443|57beeeb0-03fc-4fc9-94da-7604488a7134",
-      "server": "xvxn1hkzf.mateflora.com",
-      "port": 443,
-      "type": "trojan",
-      "name": "🔴 越南 越南 ripaojiedian",
-      "overseas_ms": 206.1
-    },
-    {
-      "key": "vless|kuruish.org|443|03fcc618-b93d-6796-6aed-8a38c975d581",
-      "server": "kuruish.org",
-      "port": 443,
+      "key": "vless|51.158.206.20|23576|48ff2b70-e180-582f-8866-d9a2edeed5f5",
+      "server": "51.158.206.20",
+      "port": 23576,
       "type": "vless",
-      "name": "🟡 美國 US 🇺🇸 Raydikalx 60EC2D",
-      "overseas_ms": 84.1
+      "name": "🟠 荷蘭 NL 🇳🇱 Raydikalx E66F76",
+      "overseas_ms": 104.9
     },
     {
-      "key": "vless|216.106.185.158|443|03fcc618-b93d-6796-6aed-8a38c975d581",
-      "server": "216.106.185.158",
-      "port": 443,
+      "key": "vless|51.158.206.12|23576|48ff2b70-e180-582f-8866-d9a2edeed5f5",
+      "server": "51.158.206.12",
+      "port": 23576,
       "type": "vless",
-      "name": "🟡 美國 🇺🇸_美国 (17) (2)",
-      "overseas_ms": 32.9
+      "name": "🟠 荷蘭 NL 🇳🇱 Raydikalx B828E6",
+      "overseas_ms": 118.7
     },
     {
-      "key": "trojan|139.84.231.142|443|0ab6c98dae3b48e8b9c4a776b6c9c19a",
-      "server": "139.84.231.142",
-      "port": 443,
-      "type": "trojan",
-      "name": "🔴 南非 ZA 🇿🇦 Raydikalx AF6AB4",
-      "overseas_ms": 315.3
-    },
-    {
-      "key": "vless|216.24.57.1|2095|ed809ef1-338d-4355-b9e8-2de0e522202f",
-      "server": "216.24.57.1",
-      "port": 2095,
+      "key": "vless|51.158.206.19|23576|48ff2b70-e180-582f-8866-d9a2edeed5f5",
+      "server": "51.158.206.19",
+      "port": 23576,
       "type": "vless",
-      "name": "🟠 美國 US 🇺🇸 Raydikalx A3B6B4",
-      "overseas_ms": 6.7
+      "name": "🟠 荷蘭 NL 🇳🇱 Raydikalx 439B23",
+      "overseas_ms": 126.5
     },
     {
-      "key": "vless|138.124.86.230|48115|b2fe1fa4-6a79-4938-a3f4-63b54ae7f16b",
-      "server": "138.124.86.230",
-      "port": 48115,
+      "key": "vless|51.158.206.98|23576|48ff2b70-e180-582f-8866-d9a2edeed5f5",
+      "server": "51.158.206.98",
+      "port": 23576,
       "type": "vless",
-      "name": "🟡 阿聯酋 SE 🇸🇪 Raydikalx EC1AE7",
-      "overseas_ms": 173.6
+      "name": "🟠 荷蘭 NL 🇳🇱 Raydikalx 739E83",
+      "overseas_ms": 111.1
     },
     {
-      "key": "vless|render.com|2095|ed809ef1-338d-4355-b9e8-2de0e522202f",
-      "server": "render.com",
-      "port": 2095,
+      "key": "vless|51.158.206.103|23576|48ff2b70-e180-582f-8866-d9a2edeed5f5",
+      "server": "51.158.206.103",
+      "port": 23576,
       "type": "vless",
-      "name": "🟠 美國 US 🇺🇸 Raydikalx C7201D",
-      "overseas_ms": 7.6
+      "name": "🟠 荷蘭 NL 🇳🇱 Raydikalx 52B720",
+      "overseas_ms": 115.4
     },
     {
-      "key": "vless|94.177.131.113|443|03fcc618-b93d-6796-6aed-8a38c975d581",
-      "server": "94.177.131.113",
+      "key": "vless|51.158.206.96|23576|48ff2b70-e180-582f-8866-d9a2edeed5f5",
+      "server": "51.158.206.96",
+      "port": 23576,
+      "type": "vless",
+      "name": "🟠 荷蘭 NL 🇳🇱 Raydikalx 36A918",
+      "overseas_ms": 106.1
+    },
+    {
+      "key": "vless|62.210.91.2|23576|48ff2b70-e180-582f-8866-d9a2edeed5f5",
+      "server": "62.210.91.2",
+      "port": 23576,
+      "type": "vless",
+      "name": "🟠 法國 FR 🇫🇷 Raydikalx 165A21",
+      "overseas_ms": 115.3
+    },
+    {
+      "key": "vless|191.217.215.228|2053|fbe22815-0718-4eae-816f-e91c67d15b54",
+      "server": "191.217.215.228",
+      "port": 2053,
+      "type": "vless",
+      "name": "🟠 俄羅斯 RU 🇷🇺 Raydikalx 2CF696",
+      "overseas_ms": 129.7
+    },
+    {
+      "key": "vless|jpg1api.jumpernode.site|443|d508df52-3acb-483f-85d2-3fd5f6a76808",
+      "server": "jpg1api.jumpernode.site",
       "port": 443,
       "type": "vless",
-      "name": "🟠 日本 JP 🇯🇵 Raydikalx 42E793",
-      "overseas_ms": 98.6
+      "name": "🟠 日本 JP 🇯🇵 Raydikalx 21FD7C",
+      "overseas_ms": 168.0
     },
     {
-      "key": "vless|leviko-us0433.shopingggg.ir|2095|ed809ef1-338d-4355-b9e8-2de0e522202f",
-      "server": "leviko-us0433.shopingggg.ir",
-      "port": 2095,
-      "type": "vless",
-      "name": "🟠 美國 US 🇺🇸 Raydikalx DE4F71",
-      "overseas_ms": 14.6
-    },
-    {
-      "key": "vless|132.243.66.153|443|4201786b-d99b-4147-a5f0-20d47acddb81",
-      "server": "132.243.66.153",
+      "key": "vless|151.242.164.51|443|d508df52-3acb-483f-85d2-3fd5f6a76808",
+      "server": "151.242.164.51",
       "port": 443,
       "type": "vless",
-      "name": "🔴 加拿大 EE 🇪🇪 Raydikalx CA738D",
-      "overseas_ms": 1226.6
+      "name": "🟠 日本 JP 🇯🇵 Raydikalx B20FBA",
+      "overseas_ms": 136.4
     },
     {
-      "key": "vless|leviko-se6979.shopingggg.ir|48115|b2fe1fa4-6a79-4938-a3f4-63b54ae7f16b",
-      "server": "leviko-se6979.shopingggg.ir",
-      "port": 48115,
-      "type": "vless",
-      "name": "🟡 瑞典 SE 🇸🇪 Raydikalx 14E858",
-      "overseas_ms": 184.2
-    },
-    {
-      "key": "vless|leviko-de1011.shopingggg.ir|50955|5ab065b0-2c7a-45a0-829d-9af9af7d8e05",
-      "server": "leviko-de1011.shopingggg.ir",
-      "port": 50955,
-      "type": "vless",
-      "name": "🟠 德國 DE 🇩🇪 Raydikalx 999228",
-      "overseas_ms": 188.5
-    },
-    {
-      "key": "vless|200.169.179.233|443|38308ff1-5aa9-494f-a25a-0f2870d56b3e",
-      "server": "200.169.179.233",
+      "key": "vless|84.32.83.197|443|a30903dc-1bf0-4be5-8b1b-603a3a56211c",
+      "server": "84.32.83.197",
       "port": 443,
       "type": "vless",
-      "name": "🟠 俄羅斯 RU 🇷🇺 Raydikalx F82E71",
-      "overseas_ms": 200.7
+      "name": "🟠 未知 未知 未知 未知 未知 LT 🇱🇹 Raydikalx A5B1B1",
+      "overseas_ms": 137.9
     },
     {
-      "key": "vless|88.216.70.125|443|88e79aa6-f431-4453-8dcc-652a0c747198",
-      "server": "88.216.70.125",
+      "key": "vless|177.177.215.45|444|254f28cb-d0c1-41e9-a06b-f2155213ff04",
+      "server": "177.177.215.45",
+      "port": 444,
+      "type": "vless",
+      "name": "🟠 德國 NL 🇳🇱 Raydikalx C4DE22",
+      "overseas_ms": 118.1
+    },
+    {
+      "key": "vless|136.176.68.34|443|dbf3f074-3b18-43f3-b82a-debd8c879c69",
+      "server": "136.176.68.34",
       "port": 443,
       "type": "vless",
-      "name": "🟠 德國 DE 🇩🇪 Raydikalx DE6C9D",
-      "overseas_ms": 135.7
+      "name": "🟠 英國 🇬🇧 GB 04 • VLESS Reality (378ms)",
+      "overseas_ms": 154.3
     },
     {
-      "key": "vless|o685y.save-node.com|443|88e79aa6-f431-4453-8dcc-652a0c747198",
-      "server": "o685y.save-node.com",
+      "key": "vless|ams2.shtil.io|444|254f28cb-d0c1-41e9-a06b-f2155213ff04",
+      "server": "ams2.shtil.io",
+      "port": 444,
+      "type": "vless",
+      "name": "🟠 荷蘭 NL 🇳🇱 Raydikalx B54981",
+      "overseas_ms": 168.1
+    },
+    {
+      "key": "vless|217.60.94.115|443|a346c521-7a7f-452b-9356-a4893feb5982",
+      "server": "217.60.94.115",
       "port": 443,
       "type": "vless",
-      "name": "🟠 德國 DE 🇩🇪 Raydikalx B754A4",
-      "overseas_ms": 155.4
+      "name": "🟠 德國 DE 🇩🇪 Raydikalx B3A2FF",
+      "overseas_ms": 109.2
     },
     {
-      "key": "vless|185.71.216.94|2092|ca21222b-caf1-4418-b404-345ea713daa4",
-      "server": "185.71.216.94",
-      "port": 2092,
-      "type": "vless",
-      "name": "🔴 土耳其 TR 🇹🇷 Raydikalx BAC35C",
-      "overseas_ms": 828.2
-    },
-    {
-      "key": "vless|sajed.kdns.fr|443|cffa0e31-7cce-4541-8a2e-4e115873090b",
-      "server": "sajed.kdns.fr",
+      "key": "vless|93.123.101.198|443|a346c521-7a7f-452b-9356-a4893feb5982",
+      "server": "93.123.101.198",
       "port": 443,
       "type": "vless",
-      "name": "🟠 法國 SE 🇸🇪 Raydikalx C9E74A",
-      "overseas_ms": 312.2
+      "name": "🟠 德國 DE 🇩🇪 Raydikalx D2858D",
+      "overseas_ms": 113.1
+    },
+    {
+      "key": "vless|164.37.224.245|443|cda0862a-0f87-4be9-8ed8-1d0c9e382839",
+      "server": "164.37.224.245",
+      "port": 443,
+      "type": "vless",
+      "name": "🔴 荷蘭 NL 🇳🇱 Raydikalx 21D4E0",
+      "overseas_ms": 121.2
+    },
+    {
+      "key": "vless|leviko-nl9472.shopingggg.ir|9543|920b3cd9-4f82-4669-bbd2-d4a28b9052c6",
+      "server": "leviko-nl9472.shopingggg.ir",
+      "port": 9543,
+      "type": "vless",
+      "name": "🟠 荷蘭 CY 🇨🇾 Raydikalx EBB184",
+      "overseas_ms": 247.5
+    },
+    {
+      "key": "vless|146.103.43.82|9543|920b3cd9-4f82-4669-bbd2-d4a28b9052c6",
+      "server": "146.103.43.82",
+      "port": 9543,
+      "type": "vless",
+      "name": "🔴 德國 DE 🇩🇪 Raydikalx 26C1A1",
+      "overseas_ms": 132.8
+    },
+    {
+      "key": "vless|195.123.226.21|443|6589c320-db68-43cd-a273-b46299bab355",
+      "server": "195.123.226.21",
+      "port": 443,
+      "type": "vless",
+      "name": "🔴 未知 未知 未知 未知 未知 未知 BG 🇧🇬 Raydikalx 02BB6…",
+      "overseas_ms": 147.7
+    },
+    {
+      "key": "vless|164.37.224.246|443|cda0862a-0f87-4be9-8ed8-1d0c9e382839",
+      "server": "164.37.224.246",
+      "port": 443,
+      "type": "vless",
+      "name": "🔴 荷蘭 NL 🇳🇱 Raydikalx 540CB9",
+      "overseas_ms": 115.6
+    },
+    {
+      "key": "vless|185.255.115.118|443|4201786b-d99b-4147-a5f0-20d47acddb81",
+      "server": "185.255.115.118",
+      "port": 443,
+      "type": "vless",
+      "name": "🔴 德國 DE 🇩🇪 Raydikalx F7BBF2",
+      "overseas_ms": 123.5
+    },
+    {
+      "key": "vless|179.254.126.86|25201|e89a2a0e-7803-447e-b050-3ba67962ed95",
+      "server": "179.254.126.86",
+      "port": 25201,
+      "type": "vless",
+      "name": "🔴 荷蘭 EE 🇪🇪 Raydikalx FD1903",
+      "overseas_ms": 186.9
+    },
+    {
+      "key": "vless|47.84.226.221|443|49b91402-f8e3-4390-9d7b-b7eddc2684a4",
+      "server": "47.84.226.221",
+      "port": 443,
+      "type": "vless",
+      "name": "🔴 新加坡 SG 🇸🇬 Raydikalx 013386",
+      "overseas_ms": 199.9
+    },
+    {
+      "key": "vless|185.255.115.103|443|4201786b-d99b-4147-a5f0-20d47acddb81",
+      "server": "185.255.115.103",
+      "port": 443,
+      "type": "vless",
+      "name": "🔴 德國 DE 🇩🇪 Raydikalx D04611",
+      "overseas_ms": 128.7
+    },
+    {
+      "key": "vless|206.206.78.36|443|e3f0c894-0f76-4683-a751-6a93da8fd14d",
+      "server": "206.206.78.36",
+      "port": 443,
+      "type": "vless",
+      "name": "🔴 新加坡 SG 🇸🇬 Raydikalx F16081",
+      "overseas_ms": 224.4
+    },
+    {
+      "key": "vless|leviko-nl4680.shopingggg.ir|443|a346c521-7a7f-452b-9356-a4893feb5982",
+      "server": "leviko-nl4680.shopingggg.ir",
+      "port": 443,
+      "type": "vless",
+      "name": "🔴 美國 US 🇺🇸 Raydikalx 5F021D",
+      "overseas_ms": 264.1
+    },
+    {
+      "key": "vless|196.245.153.92|443|cda0862a-0f87-4be9-8ed8-1d0c9e382839",
+      "server": "196.245.153.92",
+      "port": 443,
+      "type": "vless",
+      "name": "🔴 荷蘭 SK 🇸🇰 Raydikalx 99D403",
+      "overseas_ms": 151.7
+    },
+    {
+      "key": "vless|103.106.229.177|21004|67952583-8572-42e1-943d-0602794f885b",
+      "server": "103.106.229.177",
+      "port": 21004,
+      "type": "vless",
+      "name": "🔴 新加坡 SG 🇸🇬 Raydikalx B9FAFF",
+      "overseas_ms": 196.6
     },
     {
       "key": "vless|201.8.71.230|443|cda0862a-0f87-4be9-8ed8-1d0c9e382839",
@@ -3215,39 +2655,375 @@
       "port": 443,
       "type": "vless",
       "name": "🔴 美國 US 🇺🇸 Raydikalx B8765E",
-      "overseas_ms": 1197.7
+      "overseas_ms": 138.6
     },
     {
-      "key": "vless|136.148.83.69|443|7dff1be7-b930-0001-a8ad-dc7850168215",
-      "server": "136.148.83.69",
+      "key": "vless|88.216.60.73|443|a30903dc-1bf0-4be5-8b1b-603a3a56211c",
+      "server": "88.216.60.73",
       "port": 443,
       "type": "vless",
-      "name": "🟠 法國 FR 🇫🇷 Raydikalx 063638",
-      "overseas_ms": 198.4
+      "name": "🔴 瑞典 SE 🇸🇪 Raydikalx AB89F8",
+      "overseas_ms": 125.8
     },
     {
-      "key": "vless|31.76.3.52|443|58e22afd-bf74-4736-984d-63a8ca03d7f0",
-      "server": "31.76.3.52",
-      "port": 443,
+      "key": "vless|103.106.229.177|21003|67952583-8572-42e1-943d-0602794f885b",
+      "server": "103.106.229.177",
+      "port": 21003,
       "type": "vless",
-      "name": "🟠 瑞典 SE 🇸🇪 Raydikalx C9B2BB",
-      "overseas_ms": 187.0
+      "name": "🔴 新加坡 SG 🇸🇬 Raydikalx 6E2A07",
+      "overseas_ms": 196.9
     },
     {
-      "key": "vless|31.76.3.51|443|58e22afd-bf74-4736-984d-63a8ca03d7f0",
-      "server": "31.76.3.51",
+      "key": "vless|153.52.85.198|443|26843758-24de-4f76-b5d0-624038e353c4",
+      "server": "153.52.85.198",
       "port": 443,
       "type": "vless",
-      "name": "🔴 瑞典 SE 🇸🇪 Raydikalx 630C06",
-      "overseas_ms": 191.5
+      "name": "🔴 德國 DE 🇩🇪 Raydikalx 9A5F03",
+      "overseas_ms": 130.9
     },
     {
-      "key": "vless|136.148.83.69|443|666821a2-5c3d-0001-a56f-5a3a562d7324",
-      "server": "136.148.83.69",
+      "key": "vless|195.206.235.74|443|cda0862a-0f87-4be9-8ed8-1d0c9e382839",
+      "server": "195.206.235.74",
       "port": 443,
       "type": "vless",
-      "name": "🟠 俄羅斯 🇪🇪 www.v2nodes.com vless-EE-1...",
-      "overseas_ms": 197.6
+      "name": "🔴 英國 GB 🇬🇧 Raydikalx 3F5530",
+      "overseas_ms": 116.6
+    },
+    {
+      "key": "vless|103.106.229.37|21003|41b1c169-5905-4d98-b6a6-56896c25737c",
+      "server": "103.106.229.37",
+      "port": 21003,
+      "type": "vless",
+      "name": "🔴 新加坡 SG 🇸🇬 Raydikalx 868C10",
+      "overseas_ms": 201.5
+    },
+    {
+      "key": "vless|103.106.229.177|21001|67952583-8572-42e1-943d-0602794f885b",
+      "server": "103.106.229.177",
+      "port": 21001,
+      "type": "vless",
+      "name": "🔴 新加坡 SG 🇸🇬 Raydikalx 2FE620",
+      "overseas_ms": 196.6
+    },
+    {
+      "key": "vless|185.255.115.96|443|4201786b-d99b-4147-a5f0-20d47acddb81",
+      "server": "185.255.115.96",
+      "port": 443,
+      "type": "vless",
+      "name": "🔴 德國 DE 🇩🇪 Raydikalx 47D069",
+      "overseas_ms": 120.1
+    },
+    {
+      "key": "vless|132.243.66.153|443|4201786b-d99b-4147-a5f0-20d47acddb81",
+      "server": "132.243.66.153",
+      "port": 443,
+      "type": "vless",
+      "name": "🔴 加拿大 EE 🇪🇪 Raydikalx CA738D",
+      "overseas_ms": 168.8
+    },
+    {
+      "key": "vless|132.243.66.220|443|cda0862a-0f87-4be9-8ed8-1d0c9e382839",
+      "server": "132.243.66.220",
+      "port": 443,
+      "type": "vless",
+      "name": "🔴 荷蘭 EE 🇪🇪 Raydikalx 3F5223",
+      "overseas_ms": 173.7
+    },
+    {
+      "key": "vless|51.15.16.68|2053|2e7c6265-6933-4a91-bd43-b4fd2e9566c8",
+      "server": "51.15.16.68",
+      "port": 2053,
+      "type": "vless",
+      "name": "🔴 荷蘭 NL 🇳🇱 Raydikalx 70E494",
+      "overseas_ms": 130.7
+    },
+    {
+      "key": "vless|132.243.163.174|443|26843758-24de-4f76-b5d0-624038e353c4",
+      "server": "132.243.163.174",
+      "port": 443,
+      "type": "vless",
+      "name": "🔴 荷蘭 FI 🇫🇮 Raydikalx AB0A8F",
+      "overseas_ms": 185.6
+    },
+    {
+      "key": "vless|50.117.15.225|443|67eb6b17-7797-4ded-bf52-423c4c5f6cbd",
+      "server": "50.117.15.225",
+      "port": 443,
+      "type": "vless",
+      "name": "🔴 德國 DE 🇩🇪 Raydikalx C09160",
+      "overseas_ms": 127.1
+    },
+    {
+      "key": "vless|195.206.235.139|443|cda0862a-0f87-4be9-8ed8-1d0c9e382839",
+      "server": "195.206.235.139",
+      "port": 443,
+      "type": "vless",
+      "name": "🔴 英國 GB 🇬🇧 Raydikalx 961F89",
+      "overseas_ms": 112.6
+    },
+    {
+      "key": "vless|46.250.240.80|2053|f7fa5a16-1279-46ba-ac18-001b41884080",
+      "server": "46.250.240.80",
+      "port": 2053,
+      "type": "vless",
+      "name": "🔴 澳洲 AU 🇦🇺 Raydikalx 452DFB",
+      "overseas_ms": 208.2
+    },
+    {
+      "key": "vless|179.254.126.86|25135|e89a2a0e-7803-447e-b050-3ba67962ed95",
+      "server": "179.254.126.86",
+      "port": 25135,
+      "type": "vless",
+      "name": "🔴 荷蘭 EE 🇪🇪 Raydikalx 270F0F",
+      "overseas_ms": 180.8
+    },
+    {
+      "key": "vless|45.86.158.53|443|082ff568-e0f1-42af-ad7c-2c46adde1273",
+      "server": "45.86.158.53",
+      "port": 443,
+      "type": "vless",
+      "name": "🔴 德國 DE 🇩🇪 Raydikalx 4D0596",
+      "overseas_ms": 155.9
+    },
+    {
+      "key": "vless|79.182.70.220|443|cda0862a-0f87-4be9-8ed8-1d0c9e382839",
+      "server": "79.182.70.220",
+      "port": 443,
+      "type": "vless",
+      "name": "🔴 荷蘭 NL 🇳🇱 Raydikalx 6636B7",
+      "overseas_ms": 115.7
+    },
+    {
+      "key": "vless|201.8.64.254|443|cda0862a-0f87-4be9-8ed8-1d0c9e382839",
+      "server": "201.8.64.254",
+      "port": 443,
+      "type": "vless",
+      "name": "🔴 美國 US 🇺🇸 Raydikalx 3242C0",
+      "overseas_ms": 114.5
+    },
+    {
+      "key": "vless|48.103.231.2|443|a346c521-7a7f-452b-9356-a4893feb5982",
+      "server": "48.103.231.2",
+      "port": 443,
+      "type": "vless",
+      "name": "🔴 美國 US 🇺🇸 Raydikalx 9FED75",
+      "overseas_ms": 130.6
+    },
+    {
+      "key": "vless|45.144.112.55|443|d65cc14c-f53f-4fe2-b262-97856601319c",
+      "server": "45.144.112.55",
+      "port": 443,
+      "type": "vless",
+      "name": "🔴 美國 US 🇺🇸 Raydikalx A0E25A",
+      "overseas_ms": 33.3
+    },
+    {
+      "key": "vless|jpg1tts.jumpernode.site|443|dfa9bd91-35ad-4163-bf32-eaaaab64a043",
+      "server": "jpg1tts.jumpernode.site",
+      "port": 443,
+      "type": "vless",
+      "name": "🔴 日本 JP 🇯🇵 Raydikalx 8BB9FD",
+      "overseas_ms": 176.6
+    },
+    {
+      "key": "vless|196.245.153.156|443|cda0862a-0f87-4be9-8ed8-1d0c9e382839",
+      "server": "196.245.153.156",
+      "port": 443,
+      "type": "vless",
+      "name": "🔴 荷蘭 SK 🇸🇰 Raydikalx 1FEFEA",
+      "overseas_ms": 145.9
+    },
+    {
+      "key": "vless|79.182.70.192|443|26843758-24de-4f76-b5d0-624038e353c4",
+      "server": "79.182.70.192",
+      "port": 443,
+      "type": "vless",
+      "name": "🔴 荷蘭 NL 🇳🇱 Raydikalx 8DAF4B",
+      "overseas_ms": 119.7
+    },
+    {
+      "key": "vless|195.206.235.202|443|4201786b-d99b-4147-a5f0-20d47acddb81",
+      "server": "195.206.235.202",
+      "port": 443,
+      "type": "vless",
+      "name": "🔴 德國 GB 🇬🇧 Raydikalx 55EC06",
+      "overseas_ms": 122.2
+    },
+    {
+      "key": "vless|lists.soloramtin.cyou|443|67eb6b17-7797-4ded-bf52-423c4c5f6cbd",
+      "server": "lists.soloramtin.cyou",
+      "port": 443,
+      "type": "vless",
+      "name": "🔴 德國 DE 🇩🇪 Raydikalx F48A65",
+      "overseas_ms": 289.7
+    },
+    {
+      "key": "vless|79.182.70.232|443|cda0862a-0f87-4be9-8ed8-1d0c9e382839",
+      "server": "79.182.70.232",
+      "port": 443,
+      "type": "vless",
+      "name": "🔴 荷蘭 NL 🇳🇱 Raydikalx 142380",
+      "overseas_ms": 123.4
+    },
+    {
+      "key": "vless|185.255.115.181|443|4201786b-d99b-4147-a5f0-20d47acddb81",
+      "server": "185.255.115.181",
+      "port": 443,
+      "type": "vless",
+      "name": "🔴 德國 DE 🇩🇪 Raydikalx DC7D0D",
+      "overseas_ms": 130.7
+    },
+    {
+      "key": "vless|78.17.215.141|443|a346c521-7a7f-452b-9356-a4893feb5982",
+      "server": "78.17.215.141",
+      "port": 443,
+      "type": "vless",
+      "name": "🔴 德國 DE 🇩🇪 Raydikalx 481E00",
+      "overseas_ms": 111.3
+    },
+    {
+      "key": "hysteria2|hysteria.udpgw.com|8443|HowdyHysteria2023w0W",
+      "server": "hysteria.udpgw.com",
+      "port": 8443,
+      "type": "hysteria2",
+      "name": "🟡 荷蘭 NL 🇳🇱 Raydikalx 3ACE09",
+      "overseas_ms": 1197.6
+    },
+    {
+      "key": "trojan|167.88.61.52|443|0ab6c98dae3b48e8b9c4a776b6c9c19a",
+      "server": "167.88.61.52",
+      "port": 443,
+      "type": "trojan",
+      "name": "🟡 美國 US 🇺🇸 Raydikalx D327E5",
+      "overseas_ms": 50.5
+    },
+    {
+      "key": "vless|82.118.19.153|443|adcaa148-7c66-4282-a81a-99ec8afa029d",
+      "server": "82.118.19.153",
+      "port": 443,
+      "type": "vless",
+      "name": "🔴 德國 DE 🇩🇪 Raydikalx 82D48F",
+      "overseas_ms": 118.1
+    },
+    {
+      "key": "vless|82.118.16.187|443|dc2259c4-388e-4285-ba18-df619b6672b6",
+      "server": "82.118.16.187",
+      "port": 443,
+      "type": "vless",
+      "name": "🔴 義大利 IT 🇮🇹 Raydikalx 8AF267",
+      "overseas_ms": 144.9
+    },
+    {
+      "key": "vless|178.172.227.124|10444|1af36694-b548-4b18-89a0-bc076eab4ed7",
+      "server": "178.172.227.124",
+      "port": 10444,
+      "type": "vless",
+      "name": "🔴 俄羅斯 BY 🇧🇾 Raydikalx 3F1B1B",
+      "overseas_ms": 145.6
+    },
+    {
+      "key": "vless|196.245.153.111|443|cda0862a-0f87-4be9-8ed8-1d0c9e382839",
+      "server": "196.245.153.111",
+      "port": 443,
+      "type": "vless",
+      "name": "🔴 荷蘭 SK 🇸🇰 Raydikalx 9EC026",
+      "overseas_ms": 158.4
+    },
+    {
+      "key": "vless|66.163.113.9|443|03fcc618-b93d-6796-6aed-8a38c975d581",
+      "server": "66.163.113.9",
+      "port": 443,
+      "type": "vless",
+      "name": "🟡 加拿大 CA 🇨🇦 Raydikalx B95E69",
+      "overseas_ms": 43.7
+    },
+    {
+      "key": "vless|196.245.153.104|443|cda0862a-0f87-4be9-8ed8-1d0c9e382839",
+      "server": "196.245.153.104",
+      "port": 443,
+      "type": "vless",
+      "name": "🔴 荷蘭 SK 🇸🇰 Raydikalx 8AF71C",
+      "overseas_ms": 320.4
+    },
+    {
+      "key": "trojan|168.107.51.32|20045|463f7453753f4d47",
+      "server": "168.107.51.32",
+      "port": 20045,
+      "type": "trojan",
+      "name": "🟠 韓國 KR 🇰🇷 Raydikalx 54D837",
+      "overseas_ms": 171.6
+    },
+    {
+      "key": "trojan|208.69.78.33|443|0ab6c98dae3b48e8b9c4a776b6c9c19a",
+      "server": "208.69.78.33",
+      "port": 443,
+      "type": "trojan",
+      "name": "🔴 瑞士 🇨🇭 Switzerland 10-2",
+      "overseas_ms": 140.8
+    },
+    {
+      "key": "vless|kuruish.org|443|03fcc618-b93d-6796-6aed-8a38c975d581",
+      "server": "kuruish.org",
+      "port": 443,
+      "type": "vless",
+      "name": "🟡 美國 US 🇺🇸 Raydikalx 60EC2D",
+      "overseas_ms": 105.3
+    },
+    {
+      "key": "vless|216.24.57.1|2095|ed809ef1-338d-4355-b9e8-2de0e522202f",
+      "server": "216.24.57.1",
+      "port": 2095,
+      "type": "vless",
+      "name": "🔴 美國 US 🇺🇸 Raydikalx A3B6B4",
+      "overseas_ms": 7.6
+    },
+    {
+      "key": "trojan|139.84.231.142|443|0ab6c98dae3b48e8b9c4a776b6c9c19a",
+      "server": "139.84.231.142",
+      "port": 443,
+      "type": "trojan",
+      "name": "🔴 南非 ZA 🇿🇦 Raydikalx AF6AB4",
+      "overseas_ms": 242.3
+    },
+    {
+      "key": "vless|138.124.86.230|48115|b2fe1fa4-6a79-4938-a3f4-63b54ae7f16b",
+      "server": "138.124.86.230",
+      "port": 48115,
+      "type": "vless",
+      "name": "🟡 阿聯酋 SE 🇸🇪 Raydikalx EC1AE7",
+      "overseas_ms": 134.1
+    },
+    {
+      "key": "trojan|xvxn1hkzf.mateflora.com|443|57beeeb0-03fc-4fc9-94da-7604488a7134",
+      "server": "xvxn1hkzf.mateflora.com",
+      "port": 443,
+      "type": "trojan",
+      "name": "🔴 越南 越南 ripaojiedian",
+      "overseas_ms": 265.4
+    },
+    {
+      "key": "vless|94.177.131.113|443|03fcc618-b93d-6796-6aed-8a38c975d581",
+      "server": "94.177.131.113",
+      "port": 443,
+      "type": "vless",
+      "name": "🟠 日本 JP 🇯🇵 Raydikalx 42E793",
+      "overseas_ms": 140.6
+    },
+    {
+      "key": "vless|200.169.179.233|443|38308ff1-5aa9-494f-a25a-0f2870d56b3e",
+      "server": "200.169.179.233",
+      "port": 443,
+      "type": "vless",
+      "name": "🟠 俄羅斯 RU 🇷🇺 Raydikalx F82E71",
+      "overseas_ms": 154.6
+    },
+    {
+      "key": "vless|81.200.158.26|443|0b6a7fe0-206b-4071-9f96-cd397d1ec01a",
+      "server": "81.200.158.26",
+      "port": 443,
+      "type": "vless",
+      "name": "🟠 俄羅斯 RU 🇷🇺 Raydikalx FA0809",
+      "overseas_ms": 161.1
     },
     {
       "key": "vless|88.151.197.87|2025|1697852e-cd5c-472d-b377-0def0f301d98",
@@ -3255,23 +3031,7 @@
       "port": 2025,
       "type": "vless",
       "name": "🔴 法國 FR 🇫🇷 Raydikalx 42332A",
-      "overseas_ms": 144.3
-    },
-    {
-      "key": "vless|60.248.219.78|443|c1c04450-bf71-4049-ad0c-9cf6d94d9f1f",
-      "server": "60.248.219.78",
-      "port": 443,
-      "type": "vless",
-      "name": "🔴 台灣 🇹🇼TW_37 417KB/s R002-260618 a5aa2e8d…",
-      "overseas_ms": 152.8
-    },
-    {
-      "key": "vless|81.200.158.26|443|0b6a7fe0-206b-4071-9f96-cd397d1ec01a",
-      "server": "81.200.158.26",
-      "port": 443,
-      "type": "vless",
-      "name": "🔴 俄羅斯 RU 🇷🇺 Raydikalx FA0809",
-      "overseas_ms": 187.1
+      "overseas_ms": 123.8
     },
     {
       "key": "vless|152.53.120.90|50955|5ab065b0-2c7a-45a0-829d-9af9af7d8e05",
@@ -3279,31 +3039,71 @@
       "port": 50955,
       "type": "vless",
       "name": "🔴 德國 DE 🇩🇪 Raydikalx 023B41",
-      "overseas_ms": 190.2
+      "overseas_ms": 125.8
     },
     {
-      "key": "vless|195.123.226.21|443|6589c320-db68-43cd-a273-b46299bab355",
-      "server": "195.123.226.21",
+      "key": "vless|31.76.3.52|443|58e22afd-bf74-4736-984d-63a8ca03d7f0",
+      "server": "31.76.3.52",
       "port": 443,
       "type": "vless",
-      "name": "🔴 未知 未知 未知 未知 未知 BG 🇧🇬 Raydikalx 02BB68",
-      "overseas_ms": 1223.7
+      "name": "🔴 瑞典 SE 🇸🇪 Raydikalx C9B2BB",
+      "overseas_ms": 153.0
     },
     {
-      "key": "vless|185.71.216.177|2089|e1eaef08-e4ff-4843-9926-c0c84a034bad",
-      "server": "185.71.216.177",
-      "port": 2089,
+      "key": "vless|60.248.219.78|443|c1c04450-bf71-4049-ad0c-9cf6d94d9f1f",
+      "server": "60.248.219.78",
+      "port": 443,
       "type": "vless",
-      "name": "🔴 土耳其 TR 🇹🇷 Raydikalx 7D9270",
-      "overseas_ms": 1017.2
+      "name": "🔴 台灣 🇹🇼TW_37 417KB/s R002-260618 a5aa2e8d…",
+      "overseas_ms": 168.2
     },
     {
-      "key": "vless|185.71.216.177|2194|128bd8ad-4f6c-4d70-af13-15a2cec331d2",
-      "server": "185.71.216.177",
-      "port": 2194,
+      "key": "vless|render.com|2095|ed809ef1-338d-4355-b9e8-2de0e522202f",
+      "server": "render.com",
+      "port": 2095,
       "type": "vless",
-      "name": "🔴 土耳其 TR 🇹🇷 Raydikalx 57833A",
-      "overseas_ms": 1959.9
+      "name": "🔴 美國 US 🇺🇸 Raydikalx C7201D",
+      "overseas_ms": 46.0
+    },
+    {
+      "key": "vless|leviko-us0433.shopingggg.ir|2095|ed809ef1-338d-4355-b9e8-2de0e522202f",
+      "server": "leviko-us0433.shopingggg.ir",
+      "port": 2095,
+      "type": "vless",
+      "name": "🔴 美國 US 🇺🇸 Raydikalx DE4F71",
+      "overseas_ms": 222.5
+    },
+    {
+      "key": "vless|leviko-se6979.shopingggg.ir|48115|b2fe1fa4-6a79-4938-a3f4-63b54ae7f16b",
+      "server": "leviko-se6979.shopingggg.ir",
+      "port": 48115,
+      "type": "vless",
+      "name": "🟡 瑞典 SE 🇸🇪 Raydikalx 14E858",
+      "overseas_ms": 333.4
+    },
+    {
+      "key": "vless|31.76.3.51|443|58e22afd-bf74-4736-984d-63a8ca03d7f0",
+      "server": "31.76.3.51",
+      "port": 443,
+      "type": "vless",
+      "name": "🔴 瑞典 SE 🇸🇪 Raydikalx 630C06",
+      "overseas_ms": 154.1
+    },
+    {
+      "key": "vless|155.248.175.201|23169|3eb053cb-d6f8-4b31-8180-222e1cc6f8ff",
+      "server": "155.248.175.201",
+      "port": 23169,
+      "type": "vless",
+      "name": "🔴 日本 JP 🇯🇵 Raydikalx 6F74B8",
+      "overseas_ms": 1221.8
+    },
+    {
+      "key": "vless|leviko-de1011.shopingggg.ir|50955|5ab065b0-2c7a-45a0-829d-9af9af7d8e05",
+      "server": "leviko-de1011.shopingggg.ir",
+      "port": 50955,
+      "type": "vless",
+      "name": "🔴 德國 DE 🇩🇪 Raydikalx 999228",
+      "overseas_ms": 255.6
     },
     {
       "key": "vless|uuyjnfbv.localip.ir|2087|92a188aa-2e86-4557-bd30-b2079a70f824",
@@ -3311,55 +3111,55 @@
       "port": 2087,
       "type": "vless",
       "name": "🔴 德國 DE 🇩🇪 Raydikalx 35F5BD",
-      "overseas_ms": 982.5
+      "overseas_ms": 712.9
     },
     {
-      "key": "vless|honeycomb.merlano.monster|443|0b6a7fe0-206b-4071-9f96-cd397d1ec01a",
-      "server": "honeycomb.merlano.monster",
+      "key": "vless|217.69.174.175|443|cda0862a-0f87-4be9-8ed8-1d0c9e382839",
+      "server": "217.69.174.175",
       "port": 443,
       "type": "vless",
-      "name": "🟠 俄羅斯 RU 🇷🇺 Raydikalx FD7602",
-      "overseas_ms": 2282.8
+      "name": "🔴 美國 🇩🇪_德国",
+      "overseas_ms": 1330.1
+    },
+    {
+      "key": "vless|216.106.185.158|443|03fcc618-b93d-6796-6aed-8a38c975d581",
+      "server": "216.106.185.158",
+      "port": 443,
+      "type": "vless",
+      "name": "🟡 美國 🇺🇸_美国 (17) (2)",
+      "overseas_ms": 1090.3
+    },
+    {
+      "key": "vless|136.148.83.70|443|00000000-0000-0001-0000-000000000000",
+      "server": "136.148.83.70",
+      "port": 443,
+      "type": "vless",
+      "name": "🟡 德國 [Be] FR 🇫🇷 Raydikalx 431DE8",
+      "overseas_ms": 3527.7
+    },
+    {
+      "key": "trojan|ikr200.zxom.eu.org|20045|463f7453753f4d47",
+      "server": "ikr200.zxom.eu.org",
+      "port": 20045,
+      "type": "trojan",
+      "name": "🟠 韓國 KR 🇰🇷 Raydikalx 32554C",
+      "overseas_ms": 2463.9
+    },
+    {
+      "key": "vless|152.70.58.201|443|8892e34a-339b-4526-b88d-cf68c516231c",
+      "server": "152.70.58.201",
+      "port": 443,
+      "type": "vless",
+      "name": "🔴 荷蘭 NL 🇳🇱 Raydikalx C70F26",
+      "overseas_ms": 4254.1
     },
     {
       "key": "vless|155.248.175.201|23169|f67b1159-a61f-4ae4-9844-0701b716a290",
       "server": "155.248.175.201",
       "port": 23169,
       "type": "vless",
-      "name": "🟠 日本 JP 🇯🇵 Raydikalx B8450B",
-      "overseas_ms": 4247.2
-    },
-    {
-      "key": "vless|185.71.216.177|2092|ca21222b-caf1-4418-b404-345ea713daa4",
-      "server": "185.71.216.177",
-      "port": 2092,
-      "type": "vless",
-      "name": "🔴 土耳其 TR 🇹🇷 Raydikalx 633D2F",
-      "overseas_ms": 3931.2
-    },
-    {
-      "key": "vless|185.71.216.177|2090|f131d292-d3c2-42b3-bcea-f9712c31b303",
-      "server": "185.71.216.177",
-      "port": 2090,
-      "type": "vless",
-      "name": "🔴 土耳其 TR 🇹🇷 Raydikalx 41980F",
-      "overseas_ms": 4196.0
-    },
-    {
-      "key": "vless|185.71.216.94|2194|128bd8ad-4f6c-4d70-af13-15a2cec331d2",
-      "server": "185.71.216.94",
-      "port": 2194,
-      "type": "vless",
-      "name": "🔴 土耳其 TR 🇹🇷 Raydikalx DAAF31",
-      "overseas_ms": 4922.4
-    },
-    {
-      "key": "vless|185.71.216.95|2194|128bd8ad-4f6c-4d70-af13-15a2cec331d2",
-      "server": "185.71.216.95",
-      "port": 2194,
-      "type": "vless",
-      "name": "🔴 土耳其 TR 🇹🇷 Raydikalx 0C49D0",
-      "overseas_ms": 4942.0
+      "name": "🔴 日本 JP 🇯🇵 Raydikalx B8450B",
+      "overseas_ms": 5321.9
     }
   ],
   "drop_types": [
@@ -3374,6 +3174,6 @@
   ],
   "skipped_path_probe_count": 0,
   "source_url_count": 140,
-  "sticky_seed": 354,
+  "sticky_seed": 317,
   "upload_direct": 108
 }
