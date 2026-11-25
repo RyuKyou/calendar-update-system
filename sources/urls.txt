@@ -1,20 +1,20 @@
-https://leidahub.top/clash.yaml | Clash YAML 每6h真实测试，含Hy2/Reality，优先非高风险地区
-https://raw.githubusercontent.com/Au1rxx/free-vpn-subscriptions/main/output/clash.yaml | Au1rxx实时验证Clash订阅
-https://raw.githubusercontent.com/0xRadikal/Free-v2ray-Configs/main/verified/clash.yaml | Raydikalx 15min验证Clash订阅
-https://jiedianshouce.com/free-nodes/latest.yaml | 节点手册每日核验YAML
-https://raw.githubusercontent.com/python-net-dev/anytls-vless-reality-hysteria2-tuic-ss/refs/heads/main/.github/links/clash.yaml | AnyTLS全协议优选Clash
-https://raw.githubusercontent.com/MrErrorSan/free-v2ray-clash-verge-config/main/clash/profile.yaml | 按国家自动最快节点
-https://cdn.jsdelivr.net/gh/TelegaVPN/free-vpn-keys@main/sub/clash/all.yaml | Telega全球验证订阅
-https://leidahub.top/by-protocol/hysteria2.txt | Hysteria2专用测试节点
-https://leidahub.top/by-protocol/vless.txt | VLESS/Reality专用测试
-https://raw.githubusercontent.com/Subzio/subzio/main/sub/hysteria2.txt | Subzio最近72h Hy2
-https://raw.githubusercontent.com/0xRadikal/Free-v2ray-Configs/main/protocols/hysteria2.txt | 15min更新Hy2
-https://raw.githubusercontent.com/0xRadikal/Free-v2ray-Configs/main/protocols/vless.txt | 15min更新VLESS
-https://raw.githubusercontent.com/morpheusadam/v2ray-config/main/subs/bundles/reality.txt | Reality专用订阅
-https://raw.githubusercontent.com/Alirewa/V2ray-Configs/main/sub1.txt | Top100 TLS/Reality优先
-https://raw.githubusercontent.com/mehrtat/vless-collector/main/sub.txt | 每小时xray测试VLESS
-https://raw.githubusercontent.com/patterniha/Free-Configs/main/configs.txt | 多源测试混合配置
-https://raw.githubusercontent.com/hamedcode/port-based-v2ray-configs/main/sub/vless-443.txt | 端口443 VLESS专用
-https://raw.githubusercontent.com/danmaifu/mianfeijiedian/main/feed/clash.yaml | 每日更新Clash订阅
-https://raw.githubusercontent.com/nodesradar/nodesradar-en/main/README.md | 注：从雷达主页获取筛选订阅
-https://raw.githubusercontent.com/crossxx-labs/free-proxy/main/README.md | 注：从页面获取当前每4h更新订阅
+https://radarhub.top/clash.yaml | Free Nodes Radar daily tested Clash multi-protocol (Hy2/SS/VMess) Europe/US heavy, high stability focus
+https://leidahub.top/clash.yaml | Nodes Radar ZH daily update Clash, mixed regions filter carefully for non-TW/HK
+https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/clash.yaml | Au1rxx HTTP-verified hourly Clash, VLESS/Reality priority, multi-country
+https://raw.githubusercontent.com/python-net-dev/anytls-vless-reality-hysteria2-tuic-ss/refs/heads/main/.github/links/clash.yaml | Reality+Hy2+TUIC focused auto-preferred Clash
+https://raw.githubusercontent.com/yy1588133/proxy-pool/main/clash.yaml | Proxy-pool aggregated every 6h Clash multi-source
+https://raw.githubusercontent.com/Ruk1ng001/freeSub/main/clash.yaml | freeSub CN-tested frequent update Clash
+https://raw.githubusercontent.com/kooker/FreeSubsCheck/main/mihomo.yaml | FreeSubsCheck frequent Mihomo/Clash Meta
+https://raw.githubusercontent.com/clashv2ray-hub/clashfree/refs/heads/main/clash.yaml | clashfree hourly free Clash
+https://blog.ermao.net/sub/clash/ermao.net | Ermaozi free airport ~12h update Clash
+https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/by-country/clash-US.yaml | Au1rxx US-only verified Clash
+https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/by-country/clash-NL.yaml | Au1rxx Netherlands-only
+https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/by-country/clash-JP.yaml | Au1rxx Japan (other Asia) verified
+https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/by-country/clash-SG.yaml | Au1rxx Singapore verified
+https://raw.githubusercontent.com/danmaifu/mianfeijiedian/main/feed/clash-20261124.yaml | Daily crawl Clash (check date)
+https://jiedianshouce.com/free-nodes/latest.yaml | Daily verified 20-node YAML batch
+https://raw.githubusercontent.com/anaer/Sub/main/clash.yaml | Anaer Sub Clash
+https://raw.githubusercontent.com/ermaozi/get_subscribe/main/subscribe/clash.yml | Ermaozi get_subscribe Clash
+https://www.xrayvip.com/free.yaml | XrayVIP free YAML
+https://raw.githubusercontent.com/zhuhaiuk/free-nodes/main/clash_config.yaml | Zhuhai free nodes Clash
+https://raw.githubusercontent.com/free18/v2ray/main/c.yaml | free18 Clash
