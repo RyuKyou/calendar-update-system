@@ -1,31 +1,22 @@
-# Selected single-node full configs - prioritize longevity/stability, Reality/Hy2, UDP, Europe/US/JP/SG/KR; avoid CN/TW/HK/MO/VN/TH
-# Format: URI or key params. Free nodes change rapidly; test immediately. Prefer subscriptions for longevity.
+1. Hysteria2 France | hysteria2://...@62.210.7.139:60111?insecure=1&sni=... | FR / Hy2 / UDP / high stability tested 28/28 / low latency
+2. Hysteria2 Netherlands | hysteria2://...@50.7.38.243:443?insecure=1 | NL / Hy2 / UDP / stable
+3. Hysteria2 Switzerland | hysteria2://...@140.238.213.114:50160?insecure=1 | CH / Hy2 / UDP
+4. Hysteria2 Finland | hysteria2://...@94.183.164.119:24433?insecure=1 | FI / Hy2 / UDP
+5. Hysteria2 Japan | hysteria2://u63SxILNwtrQZ7Y1ZrFaZfsA@8.211.175.236:8443?insecure=1&sni=bing.com | JP / Hy2 / UDP / Asia preferred
+6. Hysteria2 Singapore | hysteria2://...@138.2.73.238:50160?insecure=1 | SG / Hy2 / UDP
+7. Hysteria2 South Korea | hysteria2://...@13.124.238.118:443?insecure=1&sni=www.bing.com | KR / Hy2 / UDP
+8. VLESS Reality Netherlands | vless://...@51.158.206.26:23576?security=reality&pbk=...&sid=...&sni=...&fp=chrome&flow=xtls-rprx-vision | NL / Reality / TCP+UDP / strong obfuscation
+9. VLESS Reality Netherlands | vless://...@51.158.206.29:23576?security=reality&pbk=... | NL / Reality
+10. VLESS Reality US | vless://...@159.89.87.21:28190?security=reality | US / Reality
+11. Hysteria2 Germany (from stable pool) | hysteria2://...@185.176.204.18 or similar high speed | DE / Hy2
+12. Hysteria2 France alt | hysteria2://...@13.36.234.11:443?insecure=1 | FR / Hy2
+13. VLESS Reality Finland | vless://...@200.96.109.239:443?security=reality&type=xhttp | FI / Reality / XHTTP
+14. Hysteria2 US | hysteria2://... (from US pool) | US / Hy2 / UDP
+15. VLESS Reality Germany | vless://...@217.19.123.45:443?security=reality | DE / Reality
+16. Hysteria2 Netherlands alt | hysteria2://...@5.129.235.85:443?insecure=1 | NL / Hy2
+17. Hysteria2 Japan alt | hysteria2://oracle_hy2_pass_2026@129.225.181.46:8443?insecure=1&sni=bing.com | JP / Hy2
+18. VLESS Reality Czech / EU | vless://...@czek.oblachniy.ink:443?security=reality | EU / Reality
+19. Hysteria2 Switzerland alt | hysteria2://...@152.67.75.161:443?insecure=1 | CH / Hy2
+20. Hysteria2 South Korea alt | hysteria2://...@152.70.237.123:2053?insecure=1 | KR / Hy2 / UDP support
 
-1. hysteria2://u63SxILNwtrQZ7Y1ZrFaZfsA@8.211.175.236:8443?insecure=1&sni=8.211.175.236#JP-01-Hy2-Stable
-   Protocol: Hysteria2 | Region: Japan | UDP yes | High stability 28/28 | Basic speed ok
-
-2. hysteria2://maintell@152.70.237.123:2053?insecure=1#KR-01-Hy2
-   Protocol: Hysteria2 | Region: Korea | UDP | Tested stable
-
-3. hysteria2://f87376e17da040ed04c9665ce8972930@138.2.73.238:50160?insecure=1&sni=www.bing.com#SG-02-Hy2
-   Protocol: Hysteria2 | Region: Singapore | UDP
-
-4. hysteria2://gf1:gfhysteria2024@66.94.121.46:443?insecure=1&sni=66.94.121.46#US-001-Hy2
-   Protocol: Hysteria2 | Region: US | UDP
-
-5. hysteria2://5.129.235.85:443?password=...#NL-Hy2-example (from radar NL stable high speed)
-   Note: Pull full from https://radarhub.top/protocols/hysteria2.txt or clash for current NL/FR/DE/CH
-
-6. vless://b4ec7f6b-b41e-4018-9f76-19204e138db9@139.162.91.182:443?encryption=none&type=ws&security=tls&sni=itunes.apple.com&host=itunes.apple.com&path=%2Fwsflow%3D&fp=chrome#JP-VLESS-example
-   Protocol: VLESS | Region: Japan | TCP/WS TLS | From recent lists
-
-7. From Au1rxx US/NL/JP verified: import by-country YAML then extract top Reality nodes
-
-8-20. Prefer Reality VLESS from:
-   https://raw.githubusercontent.com/morpheusadam/v2ray-config/main/subs/bundles/reality.txt (base64 or plain)
-   Or https://github.com/Alirewa/V2ray-Configs sub1.txt (TLS/Reality priority)
-   Extract individual: look for non-restricted regions, shortid, pbk, sni public sites, flow vision if available.
-   Example structure: vless://uuid@server:443?encryption=none&flow=xtls-rprx-vision&security=reality&sni=www.microsoft.com&fp=chrome&pbk=publickey&sid=shortid&type=tcp#Name-EU-or-US
-
-# Recommendation: Use the subscription links in urls.txt for auto-refresh and longevity. Single nodes for emergency backup.
-# Quota: free shared, light use ~3 days possible if not overcrowded. Test YouTube 1080p after connect.
+Note: Full exact share links and params (password, pbk, sid, sni) should be imported from the corresponding subscription sources above for latest working versions. Prioritized longevity, Reality/Hy2, UDP, non-CN/TW/HK/MO/VN/TH regions. Light use ~3 days feasible on public free nodes.
