@@ -1,20 +1,20 @@
-https://radarhub.top/clash.yaml | Free Nodes Radar daily tested Clash multi-protocol (Hy2/SS/VMess) Europe/US heavy, high stability focus
-https://leidahub.top/clash.yaml | Nodes Radar ZH daily update Clash, mixed regions filter carefully for non-TW/HK
-https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/clash.yaml | Au1rxx HTTP-verified hourly Clash, VLESS/Reality priority, multi-country
-https://raw.githubusercontent.com/python-net-dev/anytls-vless-reality-hysteria2-tuic-ss/refs/heads/main/.github/links/clash.yaml | Reality+Hy2+TUIC focused auto-preferred Clash
-https://raw.githubusercontent.com/yy1588133/proxy-pool/main/clash.yaml | Proxy-pool aggregated every 6h Clash multi-source
-https://raw.githubusercontent.com/Ruk1ng001/freeSub/main/clash.yaml | freeSub CN-tested frequent update Clash
-https://raw.githubusercontent.com/kooker/FreeSubsCheck/main/mihomo.yaml | FreeSubsCheck frequent Mihomo/Clash Meta
-https://raw.githubusercontent.com/clashv2ray-hub/clashfree/refs/heads/main/clash.yaml | clashfree hourly free Clash
-https://blog.ermao.net/sub/clash/ermao.net | Ermaozi free airport ~12h update Clash
-https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/by-country/clash-US.yaml | Au1rxx US-only verified Clash
-https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/by-country/clash-NL.yaml | Au1rxx Netherlands-only
-https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/by-country/clash-JP.yaml | Au1rxx Japan (other Asia) verified
-https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/by-country/clash-SG.yaml | Au1rxx Singapore verified
-https://raw.githubusercontent.com/danmaifu/mianfeijiedian/main/feed/clash-20261124.yaml | Daily crawl Clash (check date)
-https://jiedianshouce.com/free-nodes/latest.yaml | Daily verified 20-node YAML batch
-https://raw.githubusercontent.com/anaer/Sub/main/clash.yaml | Anaer Sub Clash
-https://raw.githubusercontent.com/ermaozi/get_subscribe/main/subscribe/clash.yml | Ermaozi get_subscribe Clash
-https://www.xrayvip.com/free.yaml | XrayVIP free YAML
-https://raw.githubusercontent.com/zhuhaiuk/free-nodes/main/clash_config.yaml | Zhuhai free nodes Clash
-https://raw.githubusercontent.com/free18/v2ray/main/c.yaml | free18 Clash
+https://radarhub.top/clash.yaml | Clash YAML / multi-region tested / Hysteria2+Reality mixed / high stability / every 6h
+https://leidahub.top/clash.yaml | Clash YAML / nodesradar ZH mirror / frequent update / mixed protocols
+https://raw.githubusercontent.com/Au1rxx/free-vpn-subscriptions/main/output/clash.yaml | Clash YAML / hourly verified / multi protocol
+https://raw.githubusercontent.com/Au1rxx/free-vpn-subscriptions/main/output/clash-NL.yaml | Clash YAML / Netherlands focus / EU stable
+https://raw.githubusercontent.com/Au1rxx/free-vpn-subscriptions/main/output/clash-DE.yaml | Clash YAML / Germany focus
+https://raw.githubusercontent.com/Au1rxx/free-vpn-subscriptions/main/output/clash-FR.yaml | Clash YAML / France focus
+https://raw.githubusercontent.com/Au1rxx/free-vpn-subscriptions/main/output/clash-US.yaml | Clash YAML / United States
+https://raw.githubusercontent.com/Au1rxx/free-vpn-subscriptions/main/output/clash-JP.yaml | Clash YAML / Japan / Asia non-restricted
+https://raw.githubusercontent.com/Au1rxx/free-vpn-subscriptions/main/output/clash-SG.yaml | Clash YAML / Singapore
+https://raw.githubusercontent.com/0xRadikal/Free-v2ray-Configs/main/verified/clash.yaml | Clash YAML / verified every 15min / Reality+Hy2
+https://raw.githubusercontent.com/0xRadikal/Free-v2ray-Configs/main/fast/clash.yaml | Clash YAML / fast verified subset
+https://raw.githubusercontent.com/MatinGhanbari/v2ray-configs/main/subscriptions/filtered/subs/hysteria2.txt | Base64 Hysteria2 / every 15min update
+https://raw.githubusercontent.com/MatinGhanbari/v2ray-configs/main/subscriptions/v2ray/super-sub.txt | Super tested multi-protocol
+https://raw.githubusercontent.com/mfuu/FreeProxies/master/sub.yaml | Clash YAML / every 8h update
+https://freevpnkeys.com/sub/all | Smart multi-format / VLESS Reality priority / auto update
+https://radarhub.top/by-protocol/hysteria2.txt | Pure Hysteria2 base64 / tested every 6h
+https://raw.githubusercontent.com/hvwin8/autojiedian/master/clash.yaml | Aggregated Clash / controlled distribution
+https://raw.githubusercontent.com/danmaifu/mianfeijiedian/main/feed/clash-20261127.yaml | Daily Clash update
+https://github.com/TelegaVPN/free-vpn-keys | Base64 VLESS Reality focused
+https://raw.githubusercontent.com/3inker/v2ray-subscription/main/subs/all_not_ru.txt | Non-RU tested nodes / multi protocol
