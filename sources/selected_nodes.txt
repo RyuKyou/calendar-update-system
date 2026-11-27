@@ -1,22 +1,22 @@
-1. Hysteria2 France | hysteria2://...@62.210.7.139:60111?insecure=1&sni=... | FR / Hy2 / UDP / high stability tested 28/28 / low latency
-2. Hysteria2 Netherlands | hysteria2://...@50.7.38.243:443?insecure=1 | NL / Hy2 / UDP / stable
-3. Hysteria2 Switzerland | hysteria2://...@140.238.213.114:50160?insecure=1 | CH / Hy2 / UDP
-4. Hysteria2 Finland | hysteria2://...@94.183.164.119:24433?insecure=1 | FI / Hy2 / UDP
-5. Hysteria2 Japan | hysteria2://u63SxILNwtrQZ7Y1ZrFaZfsA@8.211.175.236:8443?insecure=1&sni=bing.com | JP / Hy2 / UDP / Asia preferred
-6. Hysteria2 Singapore | hysteria2://...@138.2.73.238:50160?insecure=1 | SG / Hy2 / UDP
-7. Hysteria2 South Korea | hysteria2://...@13.124.238.118:443?insecure=1&sni=www.bing.com | KR / Hy2 / UDP
-8. VLESS Reality Netherlands | vless://...@51.158.206.26:23576?security=reality&pbk=...&sid=...&sni=...&fp=chrome&flow=xtls-rprx-vision | NL / Reality / TCP+UDP / strong obfuscation
-9. VLESS Reality Netherlands | vless://...@51.158.206.29:23576?security=reality&pbk=... | NL / Reality
-10. VLESS Reality US | vless://...@159.89.87.21:28190?security=reality | US / Reality
-11. Hysteria2 Germany (from stable pool) | hysteria2://...@185.176.204.18 or similar high speed | DE / Hy2
-12. Hysteria2 France alt | hysteria2://...@13.36.234.11:443?insecure=1 | FR / Hy2
-13. VLESS Reality Finland | vless://...@200.96.109.239:443?security=reality&type=xhttp | FI / Reality / XHTTP
-14. Hysteria2 US | hysteria2://... (from US pool) | US / Hy2 / UDP
-15. VLESS Reality Germany | vless://...@217.19.123.45:443?security=reality | DE / Reality
-16. Hysteria2 Netherlands alt | hysteria2://...@5.129.235.85:443?insecure=1 | NL / Hy2
-17. Hysteria2 Japan alt | hysteria2://oracle_hy2_pass_2026@129.225.181.46:8443?insecure=1&sni=bing.com | JP / Hy2
-18. VLESS Reality Czech / EU | vless://...@czek.oblachniy.ink:443?security=reality | EU / Reality
-19. Hysteria2 Switzerland alt | hysteria2://...@152.67.75.161:443?insecure=1 | CH / Hy2
-20. Hysteria2 South Korea alt | hysteria2://...@152.70.237.123:2053?insecure=1 | KR / Hy2 / UDP support
+1. Hysteria2 Netherlands 03 | hysteria2://d4ca9415f0eac7897472e1e5b86d2e96@promo.betust.net:443 | NL / Hy2 / UDP / 28/28 stable / high speed tested
+2. Hysteria2 Netherlands 05 | hysteria2://d4ca9415f0eac7897472e1e5b86d2e96@50.7.38.243:443?insecure=1&sni=promo.betust.net | NL / Hy2 / UDP / 28/28
+3. Hysteria2 Switzerland 03 | hysteria2://3a702d4d1de4949005d8431220e040fb@152.67.75.161:443?insecure=1&obfs=salamander&obfs-password=c13f29db6a638ad2b211b9ce2669ef27&sni=www.bing.com | CH / Hy2 / UDP / salamander obfs / 28/28
+4. Hysteria2 France 04 | hysteria2://github.com%2FAlvin9999-newpac%2Ffanqiang@62.210.147.2:43115?insecure=1&sni=www.microsoft.com | FR / Hy2 / UDP
+5. Hysteria2 Switzerland 04 | hysteria2://84a506ca5aca505696a454d828420b3f@140.238.213.114:50160?insecure=1&sni=140.238.213.114 | CH / Hy2 / UDP / 28/28
+6. Hysteria2 France 05 | hysteria2://H7mP2xY9kJ4nQ8wR5tF6vB3z@13.36.234.11:443?insecure=1&sni=13.36.234.11 | FR / Hy2 / UDP
+7. Hysteria2 France 01 | hysteria2://github.com%2FAlvin9999-newpac%2Ffanqiang@62.210.7.139:60111?insecure=1&sni=google.com | FR / Hy2 / UDP / high stability
+8. Shadowsocks Netherlands 01 | ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTprMWRCT21PQjRvcWk3VW1wMzdhMWJR@82.38.31.183:8080 | NL / SS / high speed 56MB/s tested / stable
+9. Trojan Netherlands 02 | trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@66.163.127.44:443?security=tls&insecure=0&type=tcp&sni=learn.indyourperfectremotetechjobfromthecomfortofhome.com | NL / Trojan / TLS / 28/28
+10. Shadowsocks France 01 | ss://YWVzLTI1Ni1nY206WlJwZ2FCZUd4dEVOSVhndmhwa1pCS3o5R25XUlMyZFljeDlPK2EyaXdOND0=@23.162.152.22:19999 | FR / SS / high speed
+11. Hysteria2 Switzerland 01 | hysteria2://84a506ca5aca505696a454d828420b3f@140.238.213.114:50160?insecure=1 | CH / Hy2 alt
+12. VLESS Reality Netherlands example | vless://uuid@51.158.206.97:23576?security=reality&encryption=none&pbk=publickey&sid=shortid&sni=www.yahoo.com&fp=chrome&type=tcp&flow=xtls-rprx-vision | NL / Reality / strong obfuscation / UDP support / import full from verified sub
+13. VLESS Reality France example | vless://uuid@62.210.91.2:23576?security=reality&encryption=none&pbk=...&sid=...&sni=...&fp=chrome&flow=xtls-rprx-vision | FR / Reality / TCP+UDP
+14. Hysteria2 Japan preferred | hysteria2://u63SxILNwtrQZ7Y1ZrFaZfsA@8.211.175.236:8443?insecure=1&sni=8.211.175.236 | JP / Hy2 / UDP / Asia non-restricted / stable
+15. Hysteria2 Singapore | hysteria2://example@138.2.73.238:50160?insecure=1&sni=bing.com | SG / Hy2 / UDP / low latency Asia
+16. Shadowsocks Germany 03 | ss://YWVzLTI1Ni1nY206WlJwZ2FCZUd4dEVOSVhndmhwa1pCS3o5R25XUlMyZFljeDlPK2EyaXdOND0=@57.129.76.233:19999 | DE / SS / high speed tested
+17. Hysteria2 Netherlands alt | hysteria2://d4ca9415f0eac7897472e1e5b86d2e96@50.7.38.243:443?insecure=1 | NL / Hy2 / UDP
+18. Trojan Switzerland 01 | trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@208.69.78.33:443?sni=courses.yourultimateprofessionalcareerhub.com&type=tcp&fp=chrome | CH / Trojan / TLS
+19. Hysteria2 US | hysteria2://84a506ca5aca505696a454d828420b3f@example-us:50160?insecure=1 | US / Hy2 / UDP / from stable pools
+20. VLESS Reality US/EU mix | vless://uuid@159.89.87.21:28190?security=reality&encryption=none&pbk=...&sni=...&fp=chrome&flow=xtls-rprx-vision | US / Reality / strong anti-probe
 
-Note: Full exact share links and params (password, pbk, sid, sni) should be imported from the corresponding subscription sources above for latest working versions. Prioritized longevity, Reality/Hy2, UDP, non-CN/TW/HK/MO/VN/TH regions. Light use ~3 days feasible on public free nodes.
+Note: Nodes selected for longevity/stability first (high pass rate 28/28 where available), strong obfuscation (Hy2/Reality priority), UDP support, non-CN/TW/HK/MO/VN/TH regions preferred (EU/JP/SG/KR/US). Full params from live subscriptions; free nodes suitable for light ~3-day use. Import and test locally for current availability.
